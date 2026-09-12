@@ -5,9 +5,9 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `1c890ec22d6d46ca3e56734e5c18de54da3b5f5b`
+- Top-level commit: `5e9166e14238242f783eb0d81cdee26310891e90`
 - Pinned submodule: `neurocontainers@f50c2fbc4377e4a19312019488e4323a189ef453`
-- Submodule checkout: `arm64/dwidenoise2`, clean at candidate `fb140e557113c668e65cd86060aa8ab1a8573a6a` based on the accepted pin, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/panoptica`, clean at candidate `0e06c16b83f8597d4d68f9496f3f8631e5a56c89` based on the accepted pin, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 59 of 247 recipes declare ARM64 support at accepted source `f50c2fbc`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -232,6 +232,7 @@ deadline `2026-09-13T00:29:15Z`.
 | `gimp` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693583287](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693583287) | [#8](https://github.com/Vbitz/neurocontainers-arm64/issues/8) | in progress: exact accepted-pin recheck |
 | `openrefine` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693584794](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693584794) | [#11](https://github.com/Vbitz/neurocontainers-arm64/issues/11) | in progress: exact accepted-pin recheck |
 | `dwidenoise2` | candidate `fb140e557113c668e65cd86060aa8ab1a8573a6a` based on accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/dwidenoise2` | [34693799839](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693799839) | pending | in progress: exact candidate build and fulltest |
+| `panoptica` | candidate `0e06c16b83f8597d4d68f9496f3f8631e5a56c89` based on accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/panoptica` | pending | pending | candidate ready; waiting for a runner slot |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
 | `datalad` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685666449](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685666449) | [#12](https://github.com/Vbitz/neurocontainers-arm64/issues/12) | verified: 10 passed; retain as accepted pin evidence |
