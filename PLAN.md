@@ -5,12 +5,12 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `d9c4e45bfc7ccb6214190eec2d57bb1f1e2887eb`
+- Top-level commit: `11f81f7232d4223e6f7d0cabb366e09872bbdd1b`
 - Pinned submodule: `neurocontainers@f50c2fbc4377e4a19312019488e4323a189ef453`
 - Submodule checkout: `arm64/brainlifecli-on-brkraw`, clean at accepted candidate, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
-- Existing verified pipeline check: `workshopdemo` / `arm64`, run [34684189569](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34684189569), 4 passed, source `87e1c726`
-- Coverage snapshot: tracker refresh pending after accepting Brainlife CLI; prior snapshot was 58 of 247 at source `35e45882`. Tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
+- Coverage snapshot: 59 of 247 recipes declare ARM64 support at accepted source `f50c2fbc`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Queue
 
@@ -194,14 +194,18 @@ integrated commit `f50c2fbc4377e4a19312019488e4323a189ef453` based on accepted
 source `35e458827fb6522c147e4bd99121d1ed631dd6f7` was dispatched at
 `2026-09-12T12:13:26Z` as run `34693086744`.
 
-The next accepted-pin rechecks use source
-`35e458827fb6522c147e4bd99121d1ed631dd6f7`: `dcm2bids` and `niistat` are
-queued after this checkpoint and their run IDs will be recorded here.
+The exact accepted-pin rechecks for `dcm2bids` and `niistat` used source
+`35e458827fb6522c147e4bd99121d1ed631dd6f7`; both passed. Their issue comments
+record the tested source and counts. The HeuDiConv recheck uses the same source
+and is still active.
 `dcm2bids` started at `2026-09-12T12:15:09Z` as run `34693164459`; `niistat`
 started at `2026-09-12T12:15:11Z` as run `34693166308`.
-The next available slot is assigned to the exact `heudiconv` recheck on source
-`35e458827fb6522c147e4bd99121d1ed631dd6f7`; dispatch it after this checkpoint
-and record its run ID here.
+`heudiconv` started at `2026-09-12T12:18:42Z` as run `34693323676` and is in
+fulltest.
+
+The next two slots are assigned to exact accepted-pin checks for `gimp` and
+`openrefine`, using current source `f50c2fbc4377e4a19312019488e4323a189ef453`.
+Dispatch them after this checkpoint and record their run IDs here.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -210,8 +214,8 @@ and record its run ID here.
 | `niftyreg` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` (prior `87e1c726`) | pinned accepted branch | [34692465359](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692465359) | [#10](https://github.com/Vbitz/neurocontainers-arm64/issues/10) | verified: 89 passed |
 | `vina` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` (prior `87e1c726`) | pinned accepted branch | [34692325207](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692325207) | [#3](https://github.com/Vbitz/neurocontainers-arm64/issues/3) | verified: 8 passed |
 | `dcm2bids` | accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7` (prior `87e1c726`) | pinned accepted branch | [34693164459](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693164459) | [#5](https://github.com/Vbitz/neurocontainers-arm64/issues/5) | verified: 61 passed |
-| `niistat` | accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7` (prior `87e1c726`) | pinned accepted branch | [34693166308](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693166308) | [#7](https://github.com/Vbitz/neurocontainers-arm64/issues/7) | in progress: exact accepted-pin recheck |
-| `heudiconv` | accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7` (prior `87e1c726`) | pinned accepted branch | pending | [#9](https://github.com/Vbitz/neurocontainers-arm64/issues/9) | queued exact accepted-pin recheck |
+| `niistat` | accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7` (prior `87e1c726`) | pinned accepted branch | [34693166308](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693166308) | [#7](https://github.com/Vbitz/neurocontainers-arm64/issues/7) | verified: 93 passed |
+| `heudiconv` | accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7` (prior `87e1c726`) | pinned accepted branch | [34693323676](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693323676) | [#9](https://github.com/Vbitz/neurocontainers-arm64/issues/9) | in progress: exact accepted-pin recheck |
 | `gimp` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685484205](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685484205) | [#8](https://github.com/Vbitz/neurocontainers-arm64/issues/8) | verified: 7 passed; retain as accepted pin evidence |
 | `openrefine` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685556897](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685556897) | [#11](https://github.com/Vbitz/neurocontainers-arm64/issues/11) | verified: 2 passed; retain as accepted pin evidence |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
@@ -272,6 +276,7 @@ and record its run ID here.
 - `dcm2bids` / `arm64`: run `34693164459`, source `35e45882`, 61 passed, 0 failed, 0 skipped; issue [#5](https://github.com/Vbitz/neurocontainers-arm64/issues/5).
 - `niimath` / `arm64`: run `34692464125`, source `c6d782cd`, 115 passed, 0 failed, 0 skipped; issue [#6](https://github.com/Vbitz/neurocontainers-arm64/issues/6).
 - `niistat` / `arm64`: run `34685269554`, source `87e1c726`, 93 passed, 0 failed, 0 skipped; issue [#7](https://github.com/Vbitz/neurocontainers-arm64/issues/7).
+- `niistat` / `arm64`: accepted-pin run `34693166308`, source `35e45882`, 93 passed, 0 failed, 0 skipped; issue [#7](https://github.com/Vbitz/neurocontainers-arm64/issues/7).
 - `niftyreg` / `arm64`: run `34692465359`, source `c6d782cd`, 89 passed, 0 failed, 0 skipped; issue [#10](https://github.com/Vbitz/neurocontainers-arm64/issues/10).
 - `heudiconv` / `arm64`: run `34685389090`, source `87e1c726`, 69 passed, 0 failed, 0 skipped; issue [#9](https://github.com/Vbitz/neurocontainers-arm64/issues/9).
 - `gimp` / `arm64`: run `34685484205`, source `87e1c726`, 7 passed, 0 failed, 0 skipped; issue [#8](https://github.com/Vbitz/neurocontainers-arm64/issues/8).
@@ -320,15 +325,15 @@ and record its run ID here.
 - `topaz` / `arm64`: run `34690938300`, source `c6d782cd`, 126 passed, 0 failed, 0 skipped; issue [#55](https://github.com/Vbitz/neurocontainers-arm64/issues/55).
 
 - `hnncore` / `arm64`: run `34690701313`, source `c6d782cd`, 73 passed, 0 failed, 0 skipped; issue [#49](https://github.com/Vbitz/neurocontainers-arm64/issues/49).
+- `prostatefiducialseg` / `arm64`: run `34691824091`, source `c6d782cd`, 4 passed, 0 failed, 0 skipped; issue [#57](https://github.com/Vbitz/neurocontainers-arm64/issues/57).
+- `brkraw` / `arm64`: run `34692637652`, accepted source `35e45882`, 84 passed, 0 failed, 0 skipped; issue [#58](https://github.com/Vbitz/neurocontainers-arm64/issues/58). Candidate is integrated into the accepted pin.
+- `brainlifecli` / `arm64`: run `34693086744`, accepted source `f50c2fbc`, 74 passed, 0 failed, 0 skipped; issue [#59](https://github.com/Vbitz/neurocontainers-arm64/issues/59). Candidate is integrated into the accepted pin.
 
 ## Blocked or failed results
 
 - `dafne` / `arm64`: run `34690518800`, source `c6d782cd`, 10 passed and 1 failed in the fulltest runner; native headless GUI startup exited 139. Issue [#48](https://github.com/Vbitz/neurocontainers-arm64/issues/48) records the upstream blocker and revisit condition.
 - `tinyrange` / `arm64`: no run; validation and both architecture generations passed, but its essential fulltest requires QEMU. Issue [#53](https://github.com/Vbitz/neurocontainers-arm64/issues/53) records the prerequisite blocker.
 - `neurodesktop-lite` / `arm64`: run `34691454730`, source `c6d782cd`, build failed before SIF conversion and fulltest because the pinned `jupyterlab-slurm` source could not resolve `@jupyterlab/core-meta` 4.0.x. Issue [#56](https://github.com/Vbitz/neurocontainers-arm64/issues/56) records the upstream blocker.
-- `prostatefiducialseg` / `arm64`: run `34691824091`, source `c6d782cd`, 4 passed, 0 failed, 0 skipped; issue [#57](https://github.com/Vbitz/neurocontainers-arm64/issues/57).
-- `brkraw` / `arm64`: run `34692637652`, accepted source `35e45882`, 84 passed, 0 failed, 0 skipped; issue [#58](https://github.com/Vbitz/neurocontainers-arm64/issues/58). Candidate is integrated into the accepted pin.
-- `brainlifecli` / `arm64`: run `34693086744`, accepted source `f50c2fbc`, 74 passed, 0 failed, 0 skipped; issue [#59](https://github.com/Vbitz/neurocontainers-arm64/issues/59). Candidate is integrated into the accepted pin.
 
 ## Integration
 
@@ -337,6 +342,7 @@ and record its run ID here.
 
 ## Next action
 
-Monitor GOUHFI and the Brainlife CLI candidate, record each result, and
-continue exact accepted-pin rechecks for every older-source success before
-ending the run.
+Monitor GOUHFI and HeuDiConv, record each result, and continue exact
+accepted-pin rechecks for the remaining declared recipes as runner slots free.
+The next dispatches are GIMP and OpenRefine at source `f50c2fbc`; after the
+declared inventory is assessed, continue screening practical undeclared ports.
