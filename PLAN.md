@@ -5,12 +5,12 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `a00b450` (accepts the tested PCNtoolkit candidate)
-- Pinned submodule: `neurocontainers@70118cbab3e931402a951dae5ba66b63e30f051d`
-- Submodule checkout: `arm64/integrate-meganorm-pcntoolkit`, clean at candidate `31091ade121699a43a8745a2633e325f47c99061` based on accepted source, origin `Vbitz/neurocontainers`
+- Top-level commit: `ffee1ee` (accepts the tested MeGANorm candidate)
+- Pinned submodule: `neurocontainers@31091ade121699a43a8745a2633e325f47c99061`
+- Submodule checkout: `arm64/integrate-meganorm-pcntoolkit`, clean at accepted candidate `31091ade121699a43a8745a2633e325f47c99061`, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 63 of 247 recipes declare ARM64 support at accepted source `70118cba`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 64 of 247 recipes declare ARM64 support at accepted source `31091ade`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Queue
 
@@ -291,7 +291,8 @@ submodule SHA.
 | `panoptica` | serial candidate `9b1f7d7a2c2d3decae0de23cb3bfff124e821e80` based on accepted source `a9a30dd5` (prior integrated candidate `72dd4d35`) | `arm64/integrate-panoptica-fsqc` | prior [34694588175](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694588175), serial [34694920638](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694920638) | [#63](https://github.com/Vbitz/neurocontainers-arm64/issues/63) | in progress: exact serial integration recheck |
 | `pcntoolkit` | serial candidate `70118cbab3e931402a951dae5ba66b63e30f051d` based on accepted source `9b1f7d7a` (prior integrated candidate `94903684`) | `arm64/integrate-pcntoolkit-panoptica` | prior [34694590006](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694590006), serial [34695171335](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34695171335) | [#62](https://github.com/Vbitz/neurocontainers-arm64/issues/62) | in progress: exact serial integration recheck |
 | `fsqc` | accepted candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5` based on accepted source `fb140e55` | `arm64/fsqc` | [34694302517](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694302517) | [#64](https://github.com/Vbitz/neurocontainers-arm64/issues/64) | accepted: 109 passed; integrated |
-| `meganorm` | serial candidate `31091ade121699a43a8745a2633e325f47c99061` based on accepted source `70118cba` (prior candidate `f2a8fc48`) | `arm64/integrate-meganorm-pcntoolkit` | prior [34694878402](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694878402), serial [34695477795](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34695477795) | [#65](https://github.com/Vbitz/neurocontainers-arm64/issues/65) | in progress: exact serial integration recheck |
+| `meganorm` | accepted candidate `31091ade121699a43a8745a2633e325f47c99061` based on accepted source `70118cba` (prior candidate `f2a8fc48`) | `arm64/integrate-meganorm-pcntoolkit` | prior [34694878402](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694878402), serial [34695477795](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34695477795) | [#65](https://github.com/Vbitz/neurocontainers-arm64/issues/65) | accepted: 11 passed; integrated |
+| `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
 | `datalad` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685666449](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685666449) | [#12](https://github.com/Vbitz/neurocontainers-arm64/issues/12) | verified: 10 passed; retain as accepted pin evidence |
@@ -403,21 +404,22 @@ submodule SHA.
 - `brainlifecli` / `arm64`: run `34693086744`, accepted source `f50c2fbc`, 74 passed, 0 failed, 0 skipped; issue [#59](https://github.com/Vbitz/neurocontainers-arm64/issues/59). Candidate is integrated into the accepted pin.
 - `dwidenoise2` / `arm64`: run `34693799839`, accepted source `fb140e55`, 5 passed, 0 failed, 0 skipped; issue [#61](https://github.com/Vbitz/neurocontainers-arm64/issues/61). Candidate is integrated into the accepted pin.
 - `fsqc` / `arm64`: run `34694302517`, accepted source `a9a30dd5`, 109 passed, 0 failed, 0 skipped; issue [#64](https://github.com/Vbitz/neurocontainers-arm64/issues/64). Candidate is integrated into the accepted pin.
+- `meganorm` / `arm64`: run `34695477795`, accepted source `31091ade`, 11 passed, 0 failed, 0 skipped; issue [#65](https://github.com/Vbitz/neurocontainers-arm64/issues/65). Candidate is integrated into the accepted pin.
 
 ## Blocked or failed results
 
 - `dafne` / `arm64`: run `34690518800`, source `c6d782cd`, 10 passed and 1 failed in the fulltest runner; native headless GUI startup exited 139. Issue [#48](https://github.com/Vbitz/neurocontainers-arm64/issues/48) records the upstream blocker and revisit condition.
 - `tinyrange` / `arm64`: no run; validation and both architecture generations passed, but its essential fulltest requires QEMU. Issue [#53](https://github.com/Vbitz/neurocontainers-arm64/issues/53) records the prerequisite blocker.
 - `neurodesktop-lite` / `arm64`: run `34691454730`, source `c6d782cd`, build failed before SIF conversion and fulltest because the pinned `jupyterlab-slurm` source could not resolve `@jupyterlab/core-meta` 4.0.x. Issue [#56](https://github.com/Vbitz/neurocontainers-arm64/issues/56) records the upstream blocker.
+- `openadscpu` / `arm64`: no run; the pinned `antspyx==0.5.4` release has no Linux ARM64 wheel, so a supported result would require porting that native dependency. Issue [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) records the preflight blocker.
 
 ## Integration
 
-- Accepted integration SHA: `70118cbab3e931402a951dae5ba66b63e30f051d`
-- Top-level submodule pointer advances from `9b1f7d7a` to the tested PCNtoolkit candidate; BrkRaw, Brainlife CLI, dicomtools, radtract, rapidtide, dwidenoise2, FSQC, and Panoptica remain included.
+- Accepted integration SHA: `31091ade121699a43a8745a2633e325f47c99061`
+- Top-level submodule pointer advances from `70118cba` to the tested MeGANorm candidate; BrkRaw, Brainlife CLI, dicomtools, radtract, rapidtide, dwidenoise2, FSQC, Panoptica, and PCNtoolkit remain included.
 
 ## Next action
 
-Monitor the exact MeGANorm serial recheck and the GOUHFI infrastructure retry.
-Accept MeGANorm only after its exact integrated SHA passes. Then continue
-screening practical undeclared ports from the accepted `70118cba` pin as slots
-allow.
+Monitor the GOUHFI infrastructure retry. After it resolves, continue screening
+practical undeclared ports and record preflight blockers from the accepted
+`31091ade` pin as slots allow.
