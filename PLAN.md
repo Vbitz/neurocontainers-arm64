@@ -5,9 +5,9 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `4c2aea15942b2d968eb855f11266a823d95421d9`
+- Top-level commit: `61f8954f33cbf143999e40bf40197002b802e0fd`
 - Pinned submodule: `neurocontainers@35e458827fb6522c147e4bd99121d1ed631dd6f7`
-- Submodule checkout: `arm64/brkraw`, clean at accepted candidate, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/brainlifecli-on-brkraw`, clean at integrated candidate `f50c2fbc`, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34684189569](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34684189569), 4 passed, source `87e1c726`
 - Coverage snapshot: tracker refresh pending after accepting BrkRaw; prior snapshot was 57 of 247 at source `c6d782cd`. Tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -189,9 +189,9 @@ BrkRaw passed that run with 84 tests and is ready for serial integration.
 Prepared candidate awaiting rebase: `brainlifecli` branch
 `arm64/brainlifecli`, candidate `5b401fe0` based on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086`. Its one-line `aarch64`
-declaration passed validation and ARM64/x86_64 Dockerfile generation; rebase
-its exact change onto accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7`
-before dispatch.
+declaration passed validation and ARM64/x86_64 Dockerfile generation; its
+integrated commit `f50c2fbc4377e4a19312019488e4323a189ef453` based on accepted
+source `35e458827fb6522c147e4bd99121d1ed631dd6f7` is ready for dispatch.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -252,6 +252,7 @@ before dispatch.
 | `neurodesktop-lite` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691454730](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691454730) | [#56](https://github.com/Vbitz/neurocontainers-arm64/issues/56) | blocked-upstream: jupyterlab-slurm frontend metadata mismatch |
 | `prostatefiducialseg` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691824091](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691824091) | [#57](https://github.com/Vbitz/neurocontainers-arm64/issues/57) | verified: 4 passed |
 | `brkraw` | accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7` (prior `c6d782cd`) | `arm64/brkraw` | [34692637652](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692637652) | [#58](https://github.com/Vbitz/neurocontainers-arm64/issues/58) | accepted: 84 passed |
+| `brainlifecli` | integrated candidate `f50c2fbc4377e4a19312019488e4323a189ef453` based on accepted source `35e45882` | `arm64/brainlifecli-on-brkraw` | pending | pending | ready to dispatch |
 | `tinyrange` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | preflight on accepted branch | no run | [#53](https://github.com/Vbitz/neurocontainers-arm64/issues/53) | blocked-prerequisite: essential fulltest requires QEMU |
 
 ## Verified results
