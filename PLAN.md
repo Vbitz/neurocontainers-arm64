@@ -182,8 +182,8 @@ here. `niimath` was dispatched at `2026-09-12T11:59:46Z` as run
 Candidate port ready for dispatch: `brkraw` branch `arm64/brkraw`, candidate
 `35e45882` based on accepted source `c6d782cd73cf88ccc44b837f705967b810519086`.
 The one-line `aarch64` declaration passed validation and ARM64/x86_64
-Dockerfile generation; dispatch its exact candidate after this checkpoint
-when a workflow slot is available.
+Dockerfile generation; its exact candidate was dispatched at
+`2026-09-12T12:03:28Z` as run `34692637652`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -243,6 +243,7 @@ when a workflow slot is available.
 | `gouhfi` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691452949](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691452949) | pending | in progress |
 | `neurodesktop-lite` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691454730](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691454730) | [#56](https://github.com/Vbitz/neurocontainers-arm64/issues/56) | blocked-upstream: jupyterlab-slurm frontend metadata mismatch |
 | `prostatefiducialseg` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691824091](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691824091) | [#57](https://github.com/Vbitz/neurocontainers-arm64/issues/57) | verified: 4 passed |
+| `brkraw` | candidate `35e45882` based on accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | `arm64/brkraw` | [34692637652](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692637652) | pending | in progress: ARM64 candidate port |
 | `tinyrange` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | preflight on accepted branch | no run | [#53](https://github.com/Vbitz/neurocontainers-arm64/issues/53) | blocked-prerequisite: essential fulltest requires QEMU |
 | `workshopdemo` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241) | [#1](https://github.com/Vbitz/neurocontainers-arm64/issues/1) | verified: 4 passed |
 | `vina` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34692325207](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692325207) | [#3](https://github.com/Vbitz/neurocontainers-arm64/issues/3) | verified: 8 passed |
