@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `31bea9b586f93c2be2c98d12a09f6ded817ccf32`
+- Top-level commit: `ec4dc1a55edec5c191c3c6513d04b28104bd00c2`
 - Pinned submodule: `neurocontainers@c6d782cd73cf88ccc44b837f705967b810519086`
 - Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -129,6 +129,12 @@ as run `34690122795`.
 The BLAST-CT verification on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T11:08:13Z`
 as run `34690252022`.
+The Nighres verification on accepted source
+`c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T11:10:34Z`
+as run `34690354693`.
+The XNAT verification on accepted source
+`c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T11:13:15Z`
+as run `34690473020`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -174,7 +180,9 @@ as run `34690252022`.
 | `glmsingle` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689909788](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689909788) | [#43](https://github.com/Vbitz/neurocontainers-arm64/issues/43) | verified: 77 passed |
 | `batchheudiconv` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690023102](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690023102) | [#42](https://github.com/Vbitz/neurocontainers-arm64/issues/42) | verified: 108 passed |
 | `bidsme` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690122795](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690122795) | [#44](https://github.com/Vbitz/neurocontainers-arm64/issues/44) | verified: 82 passed |
-| `blastct` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690252022](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690252022) | pending | queued |
+| `blastct` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690252022](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690252022) | pending | in progress |
+| `nighres` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690354693](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690354693) | pending | in progress |
+| `xnat` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690473020](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690473020) | pending | queued |
 
 ## Verified results
 
