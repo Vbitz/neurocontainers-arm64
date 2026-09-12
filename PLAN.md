@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `5e070b7` (ANTs dispatch checkpoint)
+- Top-level commit: `4813d0e` (PALM acceptance and coverage refresh checkpoint)
 - Pinned submodule: `neurocontainers@6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85` (PALM accepted)
 - Submodule checkout: `arm64/integrate-palm-synthstrip`, candidate `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85` from accepted source `e90ee1a49ec687dd8582d10e7fb68546a008ecd4`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: pending refresh after accepting PALM (expected 83 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 83 of 247 declarations, refreshed from accepted source; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Latest checkpoint
 
