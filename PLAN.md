@@ -28,8 +28,13 @@ issue per recipe/variant and record durable evidence in comments.
 Prepared port candidate: `dicomtools` branch `arm64/dicomtools`, candidate
 `e430edb9d9a595878a619cb4bb00a68056665daf`.
 The only recipe change is declaring `aarch64`; recipe validation and ARM64 and
-x86_64 Dockerfile generation passed. Dispatch is pending an available runner
-slot.
+x86_64 Dockerfile generation passed. It was dispatched as run
+`34687413104`; the current accepted checkout is restored after dispatch.
+
+Prepared and dispatched `rapidtide` from branch `arm64/rapidtide`, candidate
+`5c3a60d0e9e906b24441bc8279f2766c7795887e`, as run `34687554873`. Its only
+recipe change is declaring `aarch64`; validation and both architecture
+Dockerfile generations passed.
 
 ## Active attempts
 
@@ -77,6 +82,7 @@ at `2026-09-12T09:49:34Z` and passed on attempt 1. The `bidsmanager` and
 | `cbsb0stats` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687077011](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687077011) | [#25](https://github.com/Vbitz/neurocontainers-arm64/issues/25) | verified: 6 passed |
 | `functionnectome` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687208365](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687208365) | [#26](https://github.com/Vbitz/neurocontainers-arm64/issues/26) | verified: 4 passed |
 | `dicomtools` | candidate `e430edb9d9a595878a619cb4bb00a68056665daf` | `arm64/dicomtools` | [34687413104](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687413104) | pending | candidate verification in progress |
+| `rapidtide` | candidate `5c3a60d0e9e906b24441bc8279f2766c7795887e` | `arm64/rapidtide` | [34687554873](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687554873) | pending | candidate verification queued |
 
 ## Verified results
 
