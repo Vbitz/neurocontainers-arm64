@@ -5,9 +5,9 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `e8955b6` (accepts the tested DeepDisco candidate)
+- Top-level commit: `0e93da0` (accepts DeepDisco and records active QSMxT investigation)
 - Pinned submodule: `neurocontainers@fbce330df22a4152be2a2be2e67ae5e959f8148c`
-- Submodule checkout: `arm64/deepdisco`, clean at accepted candidate `fbce330df22a4152be2a2be2e67ae5e959f8148c`, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/qsmxt`, clean at candidate `b7c54813713c74d6c707b800d8e26c622bcbb3f1` based on accepted `fbce330df22a4152be2a2be2e67ae5e959f8148c`, origin `Vbitz/neurocontainers`; top-level pointer remains at the accepted source during investigation
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 65 of 247 recipes declare ARM64 support at accepted source `fbce330df22a4152be2a2be2e67ae5e959f8148c`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -125,6 +125,11 @@ QSMxT investigation started at `2026-09-12T13:29:02Z` on attempt 1 with a
 `fbce330df22a4152be2a2be2e67ae5e959f8148c`. The existing recipe already
 selects the official upstream `aarch64` release archive for architecture
 conditional builds, and the pinned v9.17.0 release contains that asset.
+
+QSMxT candidate `b7c54813713c74d6c707b800d8e26c622bcbb3f1` was validated,
+generated for both architectures, pushed to `arm64/qsmxt`, and dispatched as
+run `34696583728` at `2026-09-12T13:29:51Z`; its per-container issue is pending
+workflow creation.
 The segmentator current-pin recheck on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:37:36Z`
 as run `34688945692`.
@@ -323,7 +328,7 @@ submodule SHA.
 | `meganorm` | accepted candidate `31091ade121699a43a8745a2633e325f47c99061` based on accepted source `70118cba` (prior candidate `f2a8fc48`) | `arm64/integrate-meganorm-pcntoolkit` | prior [34694878402](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694878402), serial [34695477795](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34695477795) | [#65](https://github.com/Vbitz/neurocontainers-arm64/issues/65) | accepted: 11 passed; integrated |
 | `deepdisco` | accepted candidate `fbce330df22a4152be2a2be2e67ae5e959f8148c` based on accepted source `31091ade121699a43a8745a2633e325f47c99061` | `arm64/deepdisco` | [34696205436](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696205436) | [#67](https://github.com/Vbitz/neurocontainers-arm64/issues/67) | accepted: 2 passed; integrated |
 | `flames` | candidate `9614409505d9d6102528c33f972290572e655bf4` based on accepted source `31091ade121699a43a8745a2633e325f47c99061` | `arm64/flames` | [34696329756](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696329756) | pending workflow creation | in progress: exact ARM64 build and fulltest |
-| `qsmxt` | baseline accepted source `fbce330df22a4152be2a2be2e67ae5e959f8148c` | `arm64/qsmxt` | pending | pending dispatch | in progress: declare ARM64 support, validate both generations, then dispatch exact candidate |
+| `qsmxt` | candidate `b7c54813713c74d6c707b800d8e26c622bcbb3f1` based on accepted source `fbce330df22a4152be2a2be2e67ae5e959f8148c` | `arm64/qsmxt` | [34696583728](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696583728) | pending workflow creation | in progress: exact ARM64 build and fulltest |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
