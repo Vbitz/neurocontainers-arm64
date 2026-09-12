@@ -7,7 +7,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 - Top-level branch: `main`
 - Top-level commit: `6883d5d` (SynthStrip coverage refresh checkpoint)
 - Pinned submodule: `neurocontainers@e90ee1a49ec687dd8582d10e7fb68546a008ecd4` (SynthStrip accepted)
-- Submodule checkout: `arm64/palm`, candidate `57b11078062dbf7735fe0e76afd513db17f3b5f1` from accepted source `e90ee1a49ec687dd8582d10e7fb68546a008ecd4`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/ants`, candidate `f48620a9503c3f532fa16c1b1e9ccc96778a86c6` from accepted source `e90ee1a49ec687dd8582d10e7fb68546a008ecd4`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 82 of 247 declarations, refreshed from accepted source; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -90,6 +90,17 @@ on branch `arm64/palm` adds only `aarch64`. The upstream payload is
 architecture independent Octave/MATLAB code, and the existing fulltest runs
 real PALM permutation analyses against generated NIfTI data. Validation and
 both architecture generations passed. Exact run `34706614272` was dispatched
+with `upload_image=false` and is queued; attempt budget is 1/6.
+
+ANTs investigation started at `2026-09-12T16:57:23Z` on attempt 1 from
+accepted source `e90ee1a49ec687dd8582d10e7fb68546a008ecd4`; deadline
+`2026-09-13T04:57:23Z`. Candidate `f48620a9503c3f532fa16c1b1e9ccc96778a86c6`
+on branch `arm64/ants` adds `aarch64` and makes the existing source-build
+compiler flags conditional: the x86_64 path retains its generic x86 flags,
+while ARM64 uses the compiler defaults. Upstream ANTs source is built by the
+existing Neurodocker template, and the fulltest runs version checks, image
+conversion, denoising, thresholding, and smoothing operations. Validation and
+both architecture generations passed. Exact run `34706765954` was dispatched
 with `upload_image=false` and is queued; attempt budget is 1/6.
 
 ## Queue
@@ -682,6 +693,7 @@ submodule SHA.
 | `epirecon` | accepted candidate `89d8112a1b8b7f2c4bca58e61be30e72d7790f26` based on accepted source `0e0f6329` | `arm64/integrate-epirecon-qmrlab` | exact [34705779719](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34705779719) | [#86](https://github.com/Vbitz/neurocontainers-arm64/issues/86) | accepted: 7 passed; integrated |
 | `sodiumgriddingptpi` | accepted candidate `15a0dd8efbaf96fe820c8f09658aea41629f805b` based on accepted source `89d8112a` | `arm64/integrate-sodiumgriddingptpi-epirecon` | exact [34705851195](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34705851195) | [#87](https://github.com/Vbitz/neurocontainers-arm64/issues/87) | accepted: 7 passed; integrated |
 | `palm` | candidate `57b11078062dbf7735fe0e76afd513db17f3b5f1` based on accepted source `e90ee1a4` | `arm64/palm` | exact [34706614272](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34706614272) | pending workflow issue | in progress |
+| `ants` | candidate `f48620a9503c3f532fa16c1b1e9ccc96778a86c6` based on accepted source `e90ee1a4` | `arm64/ants` | exact [34706765954](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34706765954) | pending workflow issue | in progress |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
@@ -819,8 +831,8 @@ submodule SHA.
   MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
   and SynthStrip integrations. The earlier SynthStrip exact candidate run
   passed and was integrated by ancestry; its stale duplicate integration run
-  remains active only for bookkeeping. PALM has an exact native ARM64 run in
-  progress.
+  remains active only for bookkeeping. PALM and ANTs have exact native ARM64
+  runs in progress.
   CLEARSWI and Spinal Cord Toolbox are blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
@@ -829,8 +841,9 @@ submodule SHA.
 
 ## Next action
 
-Monitor PALM run `34706614272` and the stale SynthStrip run `34703210392`.
-If PALM passes, record its report and integrate the tested recipe commit onto
-the current accepted pin without a duplicate run; if it fails, classify the
-first actionable error within the recorded budget. Refresh issue #2 after
-acceptance, then continue screening the next eligible undeclared recipe.
+Monitor PALM run `34706614272`, ANTs run `34706765954`, and stale SynthStrip
+run `34703210392`. For either new recipe, record the report and integrate the
+tested commit onto the current accepted pin without a duplicate run when it
+passes; classify the first actionable error within its recorded budget when it
+fails. Refresh issue #2 after acceptance, then continue screening the next
+eligible undeclared recipe.
