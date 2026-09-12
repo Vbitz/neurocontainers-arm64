@@ -5,12 +5,12 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `89a058897dc662b9a3d92a564c8e30ed309d2f44`
-- Pinned submodule: `neurocontainers@f50c2fbc4377e4a19312019488e4323a189ef453`
-- Submodule checkout: `arm64/pcntoolkit`, clean at candidate `6d232dc0827985a17117c56a7b19cd199207102b` based on the accepted pin, origin `Vbitz/neurocontainers`
+- Top-level commit: `90118b80f48a8a4e7e24ee7d183c4dc972d602ad`
+- Pinned submodule: `neurocontainers@fb140e557113c668e65cd86060aa8ab1a8573a6a`
+- Submodule checkout: `arm64/dwidenoise2`, clean at accepted candidate, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 59 of 247 recipes declare ARM64 support at accepted source `f50c2fbc`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 60 of 247 recipes declare ARM64 support at accepted source `fb140e55`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Queue
 
@@ -211,14 +211,11 @@ The exact accepted-pin checks for `gimp` and `openrefine` used current source
 `f50c2fbc4377e4a19312019488e4323a189ef453` and passed. Their issue comments
 record the tested source and counts.
 
-Candidate port ready for dispatch: `dwidenoise2` branch `arm64/dwidenoise2`,
-candidate `fb140e557113c668e65cd86060aa8ab1a8573a6a` based on accepted source
-`f50c2fbc4377e4a19312019488e4323a189ef453`. The only recipe change is
-declaring `aarch64`; validation and ARM64/x86_64 Dockerfile generation passed.
-An invalid unverified ref was dispatched once and cancelled before source
-checkout; it produced no build evidence. The exact candidate was then
-dispatched at `2026-09-12T12:29:15Z` as run `34693799839`, attempt 1, with
-deadline `2026-09-13T00:29:15Z`.
+The `dwidenoise2` port declared `aarch64` with no other recipe changes.
+Validation and ARM64/x86_64 Dockerfile generation passed. Its exact candidate
+`fb140e557113c668e65cd86060aa8ab1a8573a6a` passed run `34693799839` and is
+now the accepted submodule pin. An invalid unverified ref was dispatched once
+and cancelled before source checkout; it produced no build evidence.
 
 GOUHFI attempt 1 failed after the native ARM64 image built because the runner
 ran out of disk while exporting the Docker archive; SIF conversion and tests
@@ -246,7 +243,7 @@ deadline `2026-09-13T00:34:28Z`.
 | `heudiconv` | accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7` (prior `87e1c726`) | pinned accepted branch | [34693323676](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693323676) | [#9](https://github.com/Vbitz/neurocontainers-arm64/issues/9) | verified: 69 passed |
 | `gimp` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693583287](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693583287) | [#8](https://github.com/Vbitz/neurocontainers-arm64/issues/8) | verified: 7 passed |
 | `openrefine` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693584794](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693584794) | [#11](https://github.com/Vbitz/neurocontainers-arm64/issues/11) | verified: 2 passed |
-| `dwidenoise2` | candidate `fb140e557113c668e65cd86060aa8ab1a8573a6a` based on accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/dwidenoise2` | [34693799839](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693799839) | pending | in progress: exact candidate build and fulltest |
+| `dwidenoise2` | accepted candidate `fb140e557113c668e65cd86060aa8ab1a8573a6a` based on `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/dwidenoise2` | [34693799839](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693799839) | [#61](https://github.com/Vbitz/neurocontainers-arm64/issues/61) | accepted: 5 passed; integrated |
 | `panoptica` | candidate `0e06c16b83f8597d4d68f9496f3f8631e5a56c89` based on accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/panoptica` | [34694040721](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694040721) | pending | in progress: exact candidate build and fulltest |
 | `pcntoolkit` | candidate `6d232dc0827985a17117c56a7b19cd199207102b` based on accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/pcntoolkit` | [34694042021](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694042021) | pending | in progress: exact candidate build and fulltest |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
@@ -358,6 +355,7 @@ deadline `2026-09-13T00:34:28Z`.
 - `prostatefiducialseg` / `arm64`: run `34691824091`, source `c6d782cd`, 4 passed, 0 failed, 0 skipped; issue [#57](https://github.com/Vbitz/neurocontainers-arm64/issues/57).
 - `brkraw` / `arm64`: run `34692637652`, accepted source `35e45882`, 84 passed, 0 failed, 0 skipped; issue [#58](https://github.com/Vbitz/neurocontainers-arm64/issues/58). Candidate is integrated into the accepted pin.
 - `brainlifecli` / `arm64`: run `34693086744`, accepted source `f50c2fbc`, 74 passed, 0 failed, 0 skipped; issue [#59](https://github.com/Vbitz/neurocontainers-arm64/issues/59). Candidate is integrated into the accepted pin.
+- `dwidenoise2` / `arm64`: run `34693799839`, accepted source `fb140e55`, 5 passed, 0 failed, 0 skipped; issue [#61](https://github.com/Vbitz/neurocontainers-arm64/issues/61). Candidate is integrated into the accepted pin.
 
 ## Blocked or failed results
 
@@ -367,12 +365,12 @@ deadline `2026-09-13T00:34:28Z`.
 
 ## Integration
 
-- Accepted integration SHA: `f50c2fbc4377e4a19312019488e4323a189ef453`
-- Top-level submodule pointer advances from `35e45882` to the tested Brainlife CLI candidate; BrkRaw, dicomtools, radtract, and rapidtide remain included.
+- Accepted integration SHA: `fb140e557113c668e65cd86060aa8ab1a8573a6a`
+- Top-level submodule pointer advances from `f50c2fbc` to the tested dwidenoise2 candidate; BrkRaw, Brainlife CLI, dicomtools, radtract, and rapidtide remain included.
 
 ## Next action
 
-Monitor GOUHFI and HeuDiConv, record each result, and continue exact
-accepted-pin rechecks for the remaining declared recipes as runner slots free.
-The next dispatches are GIMP and OpenRefine at source `f50c2fbc`; after the
-declared inventory is assessed, continue screening practical undeclared ports.
+Monitor the GOUHFI retry, Panoptica, and PCNtoolkit, record each result, and
+continue exact accepted-pin rechecks for the remaining declared recipes as
+runner slots free. After these candidates, continue screening practical
+undeclared ports from the accepted `fb140e55` pin.
