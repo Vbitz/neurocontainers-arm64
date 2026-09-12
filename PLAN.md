@@ -108,6 +108,9 @@ started at `2026-09-12T10:48:44Z` as run `34689424126`; irkernel started at
 `2026-09-12T10:48:46Z` as run `34689425438`.
 The hdbet verification on accepted source `c6d782cd73cf88ccc44b837f705967b810519086`
 started at `2026-09-12T10:50:52Z` as run `34689514789`.
+The totalsegmentator verification on accepted source
+`c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:52:07Z`
+as run `34689567635`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -147,6 +150,7 @@ started at `2026-09-12T10:50:52Z` as run `34689514789`.
 | `cosmomvpa` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689424126](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689424126) | pending | verification queued |
 | `irkernel` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689425438](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689425438) | pending | verification queued |
 | `hdbet` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689514789](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689514789) | pending | verification queued |
+| `totalsegmentator` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689567635](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689567635) | pending | verification queued |
 
 ## Verified results
 
