@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `bf80173` (accepts the tested MNE integration)
+- Top-level commit: `f983fc2` (checkpoint after dispatching the Spinal Cord Toolbox retry)
 - Pinned submodule: `neurocontainers@f8a66f994161507e1399826980f78c90fcec6e19`
 - Submodule checkout: `arm64/spinalcordtoolbox`, clean at retry candidate `3dac0979b1d71e7f4a5d2a9e8d5c8dc08e9a5b0`, based on accepted `f8a66f994161507e1399826980f78c90fcec6e19`, origin `Vbitz/neurocontainers`; top-level pointer remains at accepted `f8a66f99` during active rechecks
 - Fork Actions: disabled (`enabled: false`)
