@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `5b8b6b0` (checkpoint after dispatching the Spinal Cord Toolbox retry)
+- Top-level commit: `baecab6` (checkpoint after dispatching the SynthStroke serial recheck)
 - Pinned submodule: `neurocontainers@f8a66f994161507e1399826980f78c90fcec6e19`
 - Submodule checkout: `arm64/integrate-synthstroke`, clean at candidate `bb3f660d9c3ec0718df2f558cd15450eaffd8260`, based on accepted `f8a66f994161507e1399826980f78c90fcec6e19`, origin `Vbitz/neurocontainers`; top-level pointer remains at accepted `f8a66f99` during active rechecks
 - Fork Actions: disabled (`enabled: false`)
