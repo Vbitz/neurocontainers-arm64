@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `dd8f8d4` (Epirecon and Sodiumgriddingptpi dispatch checkpoint)
+- Top-level commit: `890d966` (qMRLab acceptance and coverage refresh checkpoint)
 - Pinned submodule: `neurocontainers@0e0f6329f18d4ff60628dfe2fedf16a8a6f6871b` (qMRLab accepted)
 - Submodule checkout: `arm64/integrate-qmrlab-sodiumnufft`, candidate `0e0f6329f18d4ff60628dfe2fedf16a8a6f6871b` from accepted source `9602df1a290918704615776c8c52916c374fd0c4`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: pending refresh after accepting qMRLab (expected 79 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 79 of 247 declarations, refreshed from accepted source; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Latest checkpoint
 
