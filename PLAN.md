@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `18d0fba` (MipView acceptance checkpoint)
+- Top-level commit: `417cd2a` (MipView acceptance checkpoint)
 - Pinned submodule: `neurocontainers@d7de67d4647d4bfb50eb14f799afd34fd57d3c34` (MipView accepted)
-- Submodule checkout: `arm64/mipview`, candidate `d7de67d4647d4bfb50eb14f799afd34fd57d3c34` from accepted source `fd60cfea817a54dd286f386fef251b07d41dc192`; origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/sodiumgridding`, candidate `cd7950c0c13bce3ee0ef7d2a5442e4e1f82c6814` from accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: pending refresh after accepting MipView (expected 76 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -28,6 +28,15 @@ a further replay if it passes after the MipView pin advances.
 SynthStrip stale integration run `34703210392` and the final qMRLab run are
 still active. Do not accept their older-base results without replaying onto the
 current accepted pin.
+
+Sodiumgridding investigation started at `2026-09-13T02:24:10Z` on attempt 1
+from accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`. Candidate
+`cd7950c0c13bce3ee0ef7d2a5442e4e1f82c6814` on branch `arm64/sodiumgridding`
+adds only `aarch64`. The OpenRecon source build is already covered by the
+accepted OpenRecon I2I result, and the pinned numba, pyFFTW, and SimpleITK
+releases publish Linux ARM64 wheels. Validation and both architecture
+generations passed. Exact run `34705129164` was dispatched with
+`upload_image=false`; it is queued/in progress.
 
 ## Queue
 
