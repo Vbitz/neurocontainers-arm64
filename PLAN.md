@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `7bd789f` (Template accepted-pin integration checkpoint)
+- Top-level commit: `ebbabb4` (GingerALE final current-pin dispatch checkpoint)
 - Pinned submodule: `neurocontainers@ffe5f289da8da47c006835876a86dcd07138b208`
-- Submodule checkout: `arm64/integrate-template-dqe`, integrated candidate `ffe5f289da8da47c006835876a86dcd07138b208` from accepted source `46d1a5ae9bb1881b7ecb7d36f41fdff27af5818a`; origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/integrate-gingerale-template`, integrated candidate `7592907bb1caf8c3da996156e87f765a727c8719` from accepted source `ffe5f289da8da47c006835876a86dcd07138b208`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: pending refresh after accepting Template (expected 73 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -343,11 +343,13 @@ dispatched at `2026-09-12T15:33:56Z` with `upload_image=false`; it passed with
 `5534389f`; serial run `34703078533` passed with the same counts. After DQE was
 accepted, corrected integrated candidate
 `448b1de188704f7270a16b9217ad28ad38c33f1b` replayed the recipe commit onto the
-new accepted source; validation and both architecture generations passed, and
-exact serial run `34703452146` was dispatched at `2026-09-12T15:50:43Z` with
-`upload_image=false`; the run remains in progress. Because Template is now
-accepted at `ffe5f289`, this candidate will require a final replay onto the new
-accepted pin before integration.
+DQE accepted source; its exact serial run `34703452146` passed with 51 passed,
+0 failed, and 0 skipped, but became stale when Template advanced the accepted
+pin. Final integrated candidate `7592907bb1caf8c3da996156e87f765a727c8719`
+replays the recipe commit onto accepted Template source `ffe5f289`; validation
+and both architecture generations passed. Exact serial run `34703768813` was
+dispatched at `2026-09-12T15:57:20Z` with `upload_image=false` and is in
+progress.
 The segmentator current-pin recheck on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:37:36Z`
 as run `34688945692`.
@@ -560,7 +562,7 @@ submodule SHA.
 | `vertexwiser` | accepted candidate `5534389f33c579fc39cb307c43fbf7d30b980478` cherry-picked from `881380dbc85bbf7460e8071c1334c9d8ac6c51c5` onto accepted `fb92480d` | `arm64/integrate-vertexwiser` | prior [34701117134](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701117134), serial [34701810565](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701810565) | [#77](https://github.com/Vbitz/neurocontainers-arm64/issues/77) | accepted: 10 passed; integrated |
 | `deep-quality-estimation` | accepted candidate `46d1a5ae9bb1881b7ecb7d36f41fdff27af5818a` replaying `74dd8ca6` and `891296e9` onto accepted `5534389f` | `arm64/integrate-deep-quality-estimation` | candidate [34702315565](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702315565), serial [34702770551](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702770551) | [#78](https://github.com/Vbitz/neurocontainers-arm64/issues/78) | accepted: 11 passed; integrated |
 | `template` | accepted candidate `ffe5f289da8da47c006835876a86dcd07138b208` based on accepted source `46d1a5ae` (prior `0d53a8c8`) | `arm64/integrate-template-dqe` | candidate [34702446198](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702446198), prior serial [34703023438](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703023438), current serial [34703327433](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703327433) | [#79](https://github.com/Vbitz/neurocontainers-arm64/issues/79) | accepted: 2 passed; integrated |
-| `gingerale` | integrated candidate `448b1de188704f7270a16b9217ad28ad38c33f1b` based on accepted source `46d1a5ae` (prior `d2f84a20`) | `arm64/integrate-gingerale-dqe` | candidate [34702611171](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702611171), prior serial [34703078533](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703078533), stale serial [34703452146](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703452146) | [#80](https://github.com/Vbitz/neurocontainers-arm64/issues/80) | stale serial run in progress; final replay required from current accepted pin |
+| `gingerale` | integrated candidate `7592907bb1caf8c3da996156e87f765a727c8719` based on accepted source `ffe5f289` (prior `448b1de1`) | `arm64/integrate-gingerale-template` | candidate [34702611171](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702611171), prior serial [34703078533](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703078533), stale serial [34703452146](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703452146), final serial [34703768813](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703768813) | [#80](https://github.com/Vbitz/neurocontainers-arm64/issues/80) | in progress: final current accepted-pin serial recheck |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
@@ -705,7 +707,8 @@ submodule SHA.
 
 ## Next action
 
-Refresh issue #2 for the Template acceptance. Let the in-progress GingerALE and
-SynthStrip runs finish for evidence, then replay and revalidate them onto the
-current accepted pin, dispatch exact serial runs, and accept them one at a time.
-Continue screening practical undeclared ports with recorded preflight blockers.
+Wait for GingerALE final serial run `34703768813` and the stale SynthStrip run
+`34703210392`. Accept GingerALE if its exact current-pin run passes, refresh
+issue #2, then replay SynthStrip onto the resulting accepted pin and dispatch
+its final serial run. Continue screening practical undeclared ports with
+recorded preflight blockers.
