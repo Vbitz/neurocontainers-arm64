@@ -207,9 +207,9 @@ GIMP started at `2026-09-12T12:24:27Z` as run `34693583287` on attempt 1 with
 deadline `2026-09-13T00:24:27Z`. OpenRefine started at `2026-09-12T12:24:30Z`
 as run `34693584794` on attempt 1 with deadline `2026-09-13T00:24:30Z`.
 
-The next two slots are assigned to exact accepted-pin checks for `gimp` and
-`openrefine`, using current source `f50c2fbc4377e4a19312019488e4323a189ef453`.
-Dispatch them after this checkpoint and record their run IDs here.
+The exact accepted-pin checks for `gimp` and `openrefine` used current source
+`f50c2fbc4377e4a19312019488e4323a189ef453` and passed. Their issue comments
+record the tested source and counts.
 
 Candidate port ready for dispatch: `dwidenoise2` branch `arm64/dwidenoise2`,
 candidate `fb140e557113c668e65cd86060aa8ab1a8573a6a` based on accepted source
@@ -244,8 +244,8 @@ deadline `2026-09-13T00:34:28Z`.
 | `dcm2bids` | accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7` (prior `87e1c726`) | pinned accepted branch | [34693164459](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693164459) | [#5](https://github.com/Vbitz/neurocontainers-arm64/issues/5) | verified: 61 passed |
 | `niistat` | accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7` (prior `87e1c726`) | pinned accepted branch | [34693166308](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693166308) | [#7](https://github.com/Vbitz/neurocontainers-arm64/issues/7) | verified: 93 passed |
 | `heudiconv` | accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7` (prior `87e1c726`) | pinned accepted branch | [34693323676](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693323676) | [#9](https://github.com/Vbitz/neurocontainers-arm64/issues/9) | verified: 69 passed |
-| `gimp` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693583287](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693583287) | [#8](https://github.com/Vbitz/neurocontainers-arm64/issues/8) | in progress: exact accepted-pin recheck |
-| `openrefine` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693584794](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693584794) | [#11](https://github.com/Vbitz/neurocontainers-arm64/issues/11) | in progress: exact accepted-pin recheck |
+| `gimp` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693583287](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693583287) | [#8](https://github.com/Vbitz/neurocontainers-arm64/issues/8) | verified: 7 passed |
+| `openrefine` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693584794](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693584794) | [#11](https://github.com/Vbitz/neurocontainers-arm64/issues/11) | verified: 2 passed |
 | `dwidenoise2` | candidate `fb140e557113c668e65cd86060aa8ab1a8573a6a` based on accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/dwidenoise2` | [34693799839](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693799839) | pending | in progress: exact candidate build and fulltest |
 | `panoptica` | candidate `0e06c16b83f8597d4d68f9496f3f8631e5a56c89` based on accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/panoptica` | [34694040721](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694040721) | pending | in progress: exact candidate build and fulltest |
 | `pcntoolkit` | candidate `6d232dc0827985a17117c56a7b19cd199207102b` based on accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/pcntoolkit` | [34694042021](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694042021) | pending | in progress: exact candidate build and fulltest |
@@ -309,8 +309,8 @@ deadline `2026-09-13T00:34:28Z`.
 - `niistat` / `arm64`: accepted-pin run `34693166308`, source `35e45882`, 93 passed, 0 failed, 0 skipped; issue [#7](https://github.com/Vbitz/neurocontainers-arm64/issues/7). This supersedes the earlier source `87e1c726` check.
 - `niftyreg` / `arm64`: run `34692465359`, source `c6d782cd`, 89 passed, 0 failed, 0 skipped; issue [#10](https://github.com/Vbitz/neurocontainers-arm64/issues/10).
 - `heudiconv` / `arm64`: accepted-pin run `34693323676`, source `35e45882`, 69 passed, 0 failed, 0 skipped; issue [#9](https://github.com/Vbitz/neurocontainers-arm64/issues/9). This supersedes the earlier source `87e1c726` check.
-- `gimp` / `arm64`: run `34685484205`, source `87e1c726`, 7 passed, 0 failed, 0 skipped; issue [#8](https://github.com/Vbitz/neurocontainers-arm64/issues/8).
-- `openrefine` / `arm64`: run `34685556897`, source `87e1c726`, 2 passed, 0 failed, 0 skipped; issue [#11](https://github.com/Vbitz/neurocontainers-arm64/issues/11).
+- `gimp` / `arm64`: accepted-pin run `34693583287`, source `f50c2fbc`, 7 passed, 0 failed, 0 skipped; issue [#8](https://github.com/Vbitz/neurocontainers-arm64/issues/8). This supersedes the earlier source `87e1c726` check.
+- `openrefine` / `arm64`: accepted-pin run `34693584794`, source `f50c2fbc`, 2 passed, 0 failed, 0 skipped; issue [#11](https://github.com/Vbitz/neurocontainers-arm64/issues/11). This supersedes the earlier source `87e1c726` check.
 - `datalad` / `arm64`: run `34685666449`, source `87e1c726`, 10 passed, 0 failed, 0 skipped; issue [#12](https://github.com/Vbitz/neurocontainers-arm64/issues/12).
 - `mricron` / `arm64`: run `34685692303`, source `87e1c726`, 105 passed, 0 failed, 0 skipped; issue [#13](https://github.com/Vbitz/neurocontainers-arm64/issues/13).
 - `julia` / `arm64`: run `34685647289`, source `87e1c726`, 137 passed, 0 failed, 0 skipped; issue [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17).
