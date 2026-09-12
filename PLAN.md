@@ -107,6 +107,19 @@ conversion, denoising, thresholding, and smoothing operations. Validation and
 both architecture generations passed. Exact run `34706765954` was dispatched
 with `upload_image=false` and is queued; attempt budget is 1/6.
 
+wfTFI investigation started at `2026-09-12T17:07:17Z` from accepted source
+`6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85`; the 12-hour deadline is
+`2026-09-13T05:07:17Z`. Candidate `aad7a88be81b47665b319d1fa6cffbf66b6a8aa3`
+on branch `arm64/wftfi` adds only `aarch64`. The build uses the existing
+architecture-aware Miniconda template, which generated the ARM64 installer
+URL, and its conda-forge environment contains portable Python numerical
+dependencies plus the upstream cbviewer source. Local validation and both
+architecture generations passed. An initial dispatch `34707269633` used a
+short, invalid source ref and is metadata-only; corrected exact run
+`34707282986` uses the full candidate SHA, with `upload_image=false`, and is
+pending. Count the malformed dispatch as attempt 1 and the corrected run as
+attempt 2/6; it produced no recipe evidence.
+
 ## Queue
 
 Initial verification batch, using the current accepted pin and no recipe edits:
