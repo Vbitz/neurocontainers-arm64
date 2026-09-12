@@ -6,8 +6,8 @@ Updated: 2026-09-12 (Australia/Brisbane)
 
 - Top-level branch: `main`
 - Top-level commit: `b5a10f00dac4945275123b37e84d00da3288be7e`
-- Pinned submodule: `neurocontainers@7bd4f9ee9734c4dd3a449290c39955f009f081d3`
-- Submodule checkout: `arm64/globus`, clean, origin `Vbitz/neurocontainers`
+- Pinned submodule: `neurocontainers@e430edb9d9a595878a619cb4bb00a68056665daf`
+- Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34684189569](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34684189569), 4 passed, source `87e1c726`
 - Coverage snapshot: 54 of 247 recipes declare ARM64 support; the tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -25,11 +25,11 @@ After reviewing each result, refill up to four available slots with the next
 eligible declared recipe, then assess practical undeclared recipes. Keep one
 issue per recipe/variant and record durable evidence in comments.
 
-Prepared port candidate: `dicomtools` branch `arm64/dicomtools`, candidate
-`e430edb9d9a595878a619cb4bb00a68056665daf`.
-The only recipe change is declaring `aarch64`; recipe validation and ARM64 and
-x86_64 Dockerfile generation passed. It was dispatched as run
-`34687413104`; the current accepted checkout is restored after dispatch.
+Integrated port: `dicomtools` branch `arm64/dicomtools`, candidate
+`e430edb9d9a595878a619cb4bb00a68056665daf`. The only recipe change is
+declaring `aarch64`; validation and ARM64 and x86_64 Dockerfile generation
+passed. Run `34687413104` passed all gates and the current accepted checkout
+now points to this tested commit.
 
 Prepared and dispatched `rapidtide` from branch `arm64/rapidtide`, candidate
 `5c3a60d0e9e906b24441bc8279f2766c7795887e`, as run `34687554873`. Its only
@@ -54,6 +54,10 @@ attempt 1 with a deadline of `2026-09-12T21:52:16Z`. The `arfiproc` run started
 at `2026-09-12T09:49:34Z` and passed on attempt 1. The `bidsmanager` and
 `cbsb0stats` runs started at `2026-09-12T09:55:01Z` and
 `2026-09-12T09:55:03Z`, respectively, on attempt 1.
+
+The lqt verification started at `2026-09-12T09:57:17Z`; dicomtools started at
+`2026-09-12T10:02:51Z` and passed on attempt 1. The rapidtide port started at
+`2026-09-12T10:06:07Z` on attempt 1 with a deadline of `2026-09-12T22:06:07Z`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -81,7 +85,7 @@ at `2026-09-12T09:49:34Z` and passed on attempt 1. The `bidsmanager` and
 | `bidsmanager` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687075563](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687075563) | [#24](https://github.com/Vbitz/neurocontainers-arm64/issues/24) | verified: 9 passed |
 | `cbsb0stats` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687077011](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687077011) | [#25](https://github.com/Vbitz/neurocontainers-arm64/issues/25) | verified: 6 passed |
 | `functionnectome` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687208365](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687208365) | [#26](https://github.com/Vbitz/neurocontainers-arm64/issues/26) | verified: 4 passed |
-| `dicomtools` | candidate `e430edb9d9a595878a619cb4bb00a68056665daf` | `arm64/dicomtools` | [34687413104](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687413104) | pending | candidate verification in progress |
+| `dicomtools` | `e430edb9d9a595878a619cb4bb00a68056665daf` | `arm64/dicomtools` | [34687413104](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687413104) | [#27](https://github.com/Vbitz/neurocontainers-arm64/issues/27) | verified: 179 passed; integrated into accepted pin |
 | `rapidtide` | candidate `5c3a60d0e9e906b24441bc8279f2766c7795887e` | `arm64/rapidtide` | [34687554873](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687554873) | pending | candidate verification queued |
 
 ## Verified results
@@ -110,13 +114,14 @@ at `2026-09-12T09:49:34Z` and passed on attempt 1. The `bidsmanager` and
 - `bidsmanager` / `arm64`: accepted-pin run `34687075563`, source `7bd4f9ee`, 9 passed, 0 failed, 0 skipped; issue [#24](https://github.com/Vbitz/neurocontainers-arm64/issues/24).
 - `cbsb0stats` / `arm64`: accepted-pin run `34687077011`, source `7bd4f9ee`, 6 passed, 0 failed, 0 skipped; issue [#25](https://github.com/Vbitz/neurocontainers-arm64/issues/25).
 - `functionnectome` / `arm64`: accepted-pin run `34687208365`, source `7bd4f9ee`, 4 passed, 0 failed, 0 skipped; issue [#26](https://github.com/Vbitz/neurocontainers-arm64/issues/26).
+- `dicomtools` / `arm64`: run `34687413104`, candidate source `e430edb9`, 179 passed, 0 failed, 0 skipped; issue [#27](https://github.com/Vbitz/neurocontainers-arm64/issues/27).
 
 ## Integration
 
-- Accepted integration SHA: `7bd4f9ee9734c4dd3a449290c39955f009f081d3`
-- Top-level submodule pointer advances from `87e1c726` to the tested Globus candidate.
+- Accepted integration SHA: `e430edb9d9a595878a619cb4bb00a68056665daf`
+- Top-level submodule pointer advances from `7bd4f9ee` to the tested dicomtools candidate.
 
 ## Next action
 
-Review lqt and `dicomtools`, record their final issue outcomes, then continue
-with the next eligible recipes while keeping this queue synchronized.
+Review lqt and rapidtide, record their final issue outcomes, then continue with
+the next eligible recipes while keeping this queue synchronized.
