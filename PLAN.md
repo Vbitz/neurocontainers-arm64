@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `d6581b46f9cc1a3d31fade73fbe2d2db4217e24c`
+- Top-level commit: `6b2bb97c9b18fcade96b6fbe90148d80713bf6fd`
 - Pinned submodule: `neurocontainers@7bd4f9ee9734c4dd3a449290c39955f009f081d3`
 - Submodule checkout: `arm64/globus`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -66,9 +66,10 @@ at `2026-09-12T09:49:34Z` and passed on attempt 1. The `bidsmanager` and
 | `eharmonize` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` (baseline `87e1c726`) | pinned accepted branch | baseline [34686283058](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686283058); accepted [34686618053](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686618053) | [#18](https://github.com/Vbitz/neurocontainers-arm64/issues/18) | verified: 6 passed |
 | `afib1` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34686701687](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686701687) | [#21](https://github.com/Vbitz/neurocontainers-arm64/issues/21) | verified: 5 passed |
 | `arfiproc` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34686847933](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686847933) | [#22](https://github.com/Vbitz/neurocontainers-arm64/issues/22) | verified: 6 passed |
-| `b0map` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34686964891](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686964891) | pending | current-pin verification in progress |
+| `b0map` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34686964891](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686964891) | [#23](https://github.com/Vbitz/neurocontainers-arm64/issues/23) | verified: 8 passed |
 | `bidsmanager` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687075563](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687075563) | pending | current-pin verification in progress |
 | `cbsb0stats` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687077011](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687077011) | pending | current-pin verification queued |
+| `functionnectome` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687208365](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687208365) | pending | current-pin verification queued |
 
 ## Verified results
 
@@ -92,9 +93,10 @@ at `2026-09-12T09:49:34Z` and passed on attempt 1. The `bidsmanager` and
 - `eharmonize` / `arm64`: accepted-pin run `34686618053`, source `7bd4f9ee`, 6 passed, 0 failed, 0 skipped; issue [#18](https://github.com/Vbitz/neurocontainers-arm64/issues/18).
 - `afib1` / `arm64`: accepted-pin run `34686701687`, source `7bd4f9ee`, 5 passed, 0 failed, 0 skipped; issue [#21](https://github.com/Vbitz/neurocontainers-arm64/issues/21).
 - `arfiproc` / `arm64`: accepted-pin run `34686847933`, source `7bd4f9ee`, 6 passed, 0 failed, 0 skipped; issue [#22](https://github.com/Vbitz/neurocontainers-arm64/issues/22).
-- `b0map` / `arm64`: accepted-pin run [34686964891](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686964891) pending; issue to be created by the workflow reporter.
+- `b0map` / `arm64`: accepted-pin run `34686964891`, source `7bd4f9ee`, 8 passed, 0 failed, 0 skipped; issue [#23](https://github.com/Vbitz/neurocontainers-arm64/issues/23).
 - `bidsmanager` / `arm64`: accepted-pin run [34687075563](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687075563) pending; issue to be created by the workflow reporter.
 - `cbsb0stats` / `arm64`: accepted-pin run [34687077011](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687077011) pending; issue to be created by the workflow reporter.
+- `functionnectome` / `arm64`: accepted-pin run [34687208365](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687208365) pending; issue to be created by the workflow reporter.
 
 ## Integration
 
@@ -103,6 +105,6 @@ at `2026-09-12T09:49:34Z` and passed on attempt 1. The `bidsmanager` and
 
 ## Next action
 
-Review `b0map`, `bidsmanager`, and `cbsb0stats`, record their final issue
-outcomes, then continue with the next eligible declared recipes while keeping
-this queue synchronized.
+Review `bidsmanager`, `cbsb0stats`, lqt, and `functionnectome`, record their
+final issue outcomes, then continue with the next eligible recipes while
+keeping this queue synchronized.
