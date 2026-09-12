@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `8159ec3bd9ca58df88b214be500a0b73b1ba0ae4`
+- Top-level commit: `478148e898cb76414250fb7ae0c8386b5bc70c91`
 - Pinned submodule: `neurocontainers@e430edb9d9a595878a619cb4bb00a68056665daf`
 - Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -36,6 +36,11 @@ Prepared and dispatched `rapidtide` from branch `arm64/rapidtide`, candidate
 recipe change is declaring `aarch64`; validation and both architecture
 Dockerfile generations passed.
 
+Prepared and dispatched `radtract` from branch `arm64/radtract`, candidate
+`df8153f509a2f9d838b3e1715ca14492a070a701`, as run `34687615746`. Its only
+recipe change is declaring `aarch64`; validation and both architecture
+Dockerfile generations passed.
+
 ## Active attempts
 
 Initial verification started at `2026-09-12T09:09:37Z`; each recipe is on
@@ -58,6 +63,8 @@ at `2026-09-12T09:49:34Z` and passed on attempt 1. The `bidsmanager` and
 The lqt verification started at `2026-09-12T09:57:17Z`; dicomtools started at
 `2026-09-12T10:02:51Z` and passed on attempt 1. The rapidtide port started at
 `2026-09-12T10:06:07Z` on attempt 1 with a deadline of `2026-09-12T22:06:07Z`.
+The radtract port started at `2026-09-12T10:07:29Z` on attempt 1 with a
+deadline of `2026-09-12T22:07:29Z`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -86,7 +93,8 @@ The lqt verification started at `2026-09-12T09:57:17Z`; dicomtools started at
 | `cbsb0stats` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687077011](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687077011) | [#25](https://github.com/Vbitz/neurocontainers-arm64/issues/25) | verified: 6 passed |
 | `functionnectome` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687208365](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687208365) | [#26](https://github.com/Vbitz/neurocontainers-arm64/issues/26) | verified: 4 passed |
 | `dicomtools` | `e430edb9d9a595878a619cb4bb00a68056665daf` | `arm64/dicomtools` | [34687413104](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687413104) | [#27](https://github.com/Vbitz/neurocontainers-arm64/issues/27) | verified: 179 passed; integrated into accepted pin |
-| `rapidtide` | candidate `5c3a60d0e9e906b24441bc8279f2766c7795887e` | `arm64/rapidtide` | [34687554873](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687554873) | pending | candidate verification queued |
+| `rapidtide` | candidate `5c3a60d0e9e906b24441bc8279f2766c7795887e` | `arm64/rapidtide` | [34687554873](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687554873) | pending | candidate verification in progress |
+| `radtract` | candidate `df8153f509a2f9d838b3e1715ca14492a070a701` | `arm64/radtract` | [34687615746](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687615746) | pending | candidate verification in progress |
 
 ## Verified results
 
@@ -123,5 +131,5 @@ The lqt verification started at `2026-09-12T09:57:17Z`; dicomtools started at
 
 ## Next action
 
-Review lqt and rapidtide, record their final issue outcomes, then continue with
-the next eligible recipes while keeping this queue synchronized.
+Review lqt, rapidtide, and radtract, record their final issue outcomes, then
+continue with the next eligible recipes while keeping this queue synchronized.
