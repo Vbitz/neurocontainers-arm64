@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `e92bb55` (checkpoint after accepting the tested SynthStroke integration)
+- Top-level commit: `da15d8c` (checkpoint after accepting the tested SynthStroke integration)
 - Pinned submodule: `neurocontainers@bb3f660d9c3ec0718df2f558cd15450eaffd8260`
 - Submodule checkout: `arm64/integrate-synthstroke`, clean at accepted candidate `bb3f660d9c3ec0718df2f558cd15450eaffd8260`, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -235,6 +235,11 @@ candidate `3dac0979b1d71e7f4a5d2a9e8d5c8dc08e9a5b0` was dispatched as exact run
 `34699607997` at `2026-09-12T14:32:56Z`. Issue
 [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74) records the
 first error, hypothesis, and retry.
+The retry installed qmake and resolved the ARM64 dependency set, but the pinned
+PyQt5 5.15.11 source distribution stayed in `Preparing metadata` for about 13
+minutes before the build process ended with exit 143. No SIF or fulltest ran;
+this is blocked-upstream pending a supported PyQt5 ARM64 wheel or documented
+ARM64 source-build path.
 The segmentator current-pin recheck on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:37:36Z`
 as run `34688945692`.
@@ -441,7 +446,7 @@ submodule SHA.
 | `mneextended` | candidate `91ac9396f876ee9835d13cb72903ad17a8f95d5a` based on prior accepted source `fbce330d` (prior `108f2d4a`, `f31fde3e`) | `arm64/mneextended` | prior [34697506684](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34697506684), retry [34697784145](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34697784145), ref-failure [34698178019](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698178019), exact [34698395577](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698395577) | [#70](https://github.com/Vbitz/neurocontainers-arm64/issues/70) | blocked-upstream: cascading trame constraints (`trame-server<4` required, 4.0.0 installed) |
 | `synthstrip` | candidate `d166adbd7ef00e723a322f03e8232b1de4d2cf57` based on accepted source `56253af1` | `arm64/synthstrip` | ref-failure [34698365483](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698365483), exact [34698395635](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698395635) | [#72](https://github.com/Vbitz/neurocontainers-arm64/issues/72) | in progress: exact ARM64 candidate |
 | `synthstroke` | accepted candidate `bb3f660d9c3ec0718df2f558cd15450eaffd8260` based on accepted source `f8a66f99` (prior `9e66780d`) | `arm64/integrate-synthstroke` | ref-failure [34698867860](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698867860), first exact [34698887077](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698887077), exact [34699377187](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699377187), serial [34699910413](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699910413) | [#73](https://github.com/Vbitz/neurocontainers-arm64/issues/73) | accepted: 4 passed; integrated at bb3f660d |
-| `spinalcordtoolbox` | retry candidate `3dac0979b1d71e7f4a5d2a9e8d5c8dc08e9a5b0` based on accepted source `f8a66f99` (prior `2e72afcc`) | `arm64/spinalcordtoolbox` | first exact [34699323574](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699323574), retry exact [34699607997](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699607997) | [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74) | in progress: exact retry with qmake dependency |
+| `spinalcordtoolbox` | retry candidate `3dac0979b1d71e7f4a5d2a9e8d5c8dc08e9a5b0` based on accepted source `f8a66f99` (prior `2e72afcc`) | `arm64/spinalcordtoolbox` | first exact [34699323574](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699323574), retry exact [34699607997](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699607997) | [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74) | blocked-upstream: PyQt5 ARM64 source metadata build terminated with exit 143 after qmake fix |
 | `clearswi` | candidate `86c62b32` based on accepted source `f8a66f99` | `arm64/clearswi` | exact [34699875754](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699875754) | pending workflow issue | in progress: exact ARM64 candidate |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
@@ -569,14 +574,15 @@ submodule SHA.
 - `openadscpu` / `arm64`: no run; the pinned `antspyx==0.5.4` release has no Linux ARM64 wheel, so a supported result would require porting that native dependency. Issue [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) records the preflight blocker.
 - `gouhfi` / `arm64`: runs `34691452949` and `34694039302` both built the native ARM64 image but failed exporting it with `no space left on device`; SIF conversion and fulltest did not run. Issue [#60](https://github.com/Vbitz/neurocontainers-arm64/issues/60) records the exhausted unchanged retry and revisit condition.
 - `mneextended` / `arm64`: exact run `34698395577`, candidate `91ac9396`, reached the native ARM64 Docker build but failed before SIF conversion and fulltest. After the pyedflib wheel and `trame-client<4` fix, `pip check` reported `trame 3.13.2` requires `trame-server<4,>=3.12.2` while `trame-server 4.0.0` is installed. Issue [#70](https://github.com/Vbitz/neurocontainers-arm64/issues/70) records the three-attempt investigation and upstream blocker.
+- `spinalcordtoolbox` / `arm64`: exact retry `34699607997`, candidate `3dac0979`, installed qmake and resolved ARM64 packages but the pinned PyQt5 5.15.11 source metadata build was terminated with exit 143 after about 13 minutes. Issue [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74) records the two-attempt upstream blocker and revisit condition.
 
 ## Integration
 
 - Accepted integration SHA: `bb3f660d9c3ec0718df2f558cd15450eaffd8260`
 - Top-level submodule pointer accepts the tested MNE and SynthStroke
-  integrations. SynthStrip, Spinal Cord Toolbox, and CLEARSWI are in exact
-  rechecks from earlier accepted bases and require serial integration from this
-  pin;
+  integrations. SynthStrip and CLEARSWI are in exact rechecks from earlier
+  accepted bases and require serial integration from this pin; Spinal Cord
+  Toolbox is blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
   rapidtide, dwidenoise2, FSQC, Panoptica, PCNtoolkit, MeGANorm, DeepDisco, and
@@ -584,7 +590,7 @@ submodule SHA.
 
 ## Next action
 
-Monitor the SynthStrip, Spinal Cord Toolbox retry, and CLEARSWI runs. Accept
-only exact integrated runs from the current pin, then
+Monitor the SynthStrip and CLEARSWI runs. Accept only exact integrated runs
+from the current pin, then
 refresh issue #2 and continue screening practical
 undeclared ports with recorded preflight blockers.
