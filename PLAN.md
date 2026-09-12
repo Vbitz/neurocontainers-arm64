@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `890d966` (qMRLab acceptance and coverage refresh checkpoint)
-- Pinned submodule: `neurocontainers@0e0f6329f18d4ff60628dfe2fedf16a8a6f6871b` (qMRLab accepted)
-- Submodule checkout: `arm64/integrate-qmrlab-sodiumnufft`, candidate `0e0f6329f18d4ff60628dfe2fedf16a8a6f6871b` from accepted source `9602df1a290918704615776c8c52916c374fd0c4`; origin `Vbitz/neurocontainers`
+- Top-level commit: `cd9e07a` (qMRLab coverage refresh checkpoint)
+- Pinned submodule: `neurocontainers@89d8112a80230f1d8052dcd2b269b0a1296b41de` (Epirecon accepted)
+- Submodule checkout: `arm64/integrate-epirecon-qmrlab`, candidate `89d8112a80230f1d8052dcd2b269b0a1296b41de` from accepted source `0e0f6329f18d4ff60628dfe2fedf16a8a6f6871b`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 79 of 247 declarations, refreshed from accepted source; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: pending refresh after accepting Epirecon (expected 80 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Latest checkpoint
 
@@ -63,7 +63,10 @@ only `aarch64`. It reuses the accepted OpenRecon source build and the pinned
 portable `twixtools` dependency; its fulltest includes a synthetic Cartesian
 FFT point-source reconstruction assertion. Validation and both architecture
 generations passed. Exact run `34705779719` was dispatched with
-`upload_image=false` and is queued.
+`upload_image=false` and passed with 7 passed, 0 failed, and 0 skipped. The
+same recipe commit is prepared on the qMRLab accepted ancestry as
+`89d8112a80230f1d8052dcd2b269b0a1296b41de`; local validation and both
+architecture generations passed.
 
 Sodiumgriddingptpi investigation started at `2026-09-13T02:38:23Z` on attempt
 1 from accepted source `9602df1a290918704615776c8c52916c374fd0c4`. Candidate
@@ -71,7 +74,9 @@ Sodiumgriddingptpi investigation started at `2026-09-13T02:38:23Z` on attempt
 `arm64/sodiumgriddingptpi` adds only `aarch64`. Its pinned Python dependencies
 publish Linux ARM64 wheels, and the existing fulltest exercises the source
 gridding CLI. Validation and both architecture generations passed. Exact run
-`34705851195` was dispatched with `upload_image=false` and is in progress.
+`34705851195` was dispatched with `upload_image=false` and passed with 7
+passed, 0 failed, and 0 skipped. The unchanged recipe commit is ready for
+ancestry integration after Epirecon.
 
 ## Queue
 
@@ -660,8 +665,8 @@ submodule SHA.
 | `gingerale` | accepted candidate `7592907bb1caf8c3da996156e87f765a727c8719` based on accepted source `ffe5f289` (prior `448b1de1`) | `arm64/integrate-gingerale-template` | candidate [34702611171](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702611171), prior serial [34703078533](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703078533), stale serial [34703452146](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703452146), final serial [34703768813](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703768813) | [#80](https://github.com/Vbitz/neurocontainers-arm64/issues/80) | accepted: 51 passed; integrated |
 | `sodiumgridding` | accepted candidate `cd7950c00e93503648e96270f58104fae11f5718` based on accepted source `d7de67d4` | `arm64/sodiumgridding` | exact [34705231419](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34705231419) | [#84](https://github.com/Vbitz/neurocontainers-arm64/issues/84) | accepted: 7 passed; integrated |
 | `sodiumnufft` | accepted candidate `9602df1a290918704615776c8c52916c374fd0c4` based on accepted source `cd7950c0` | `arm64/integrate-sodiumnufft-sodiumgridding` | exact [34705290732](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34705290732) | [#85](https://github.com/Vbitz/neurocontainers-arm64/issues/85) | accepted: 5 passed; integrated |
-| `epirecon` | candidate `313f47d4958cd5f69d718edd05656f9f41526d28` based on accepted source `9602df1a` | `arm64/epirecon` | exact [34705779719](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34705779719) | [#86](https://github.com/Vbitz/neurocontainers-arm64/issues/86) | in progress |
-| `sodiumgriddingptpi` | candidate `8cd40433b186f4a71ea98dd04815ecf6fcd3385c` based on accepted source `9602df1a` | `arm64/sodiumgriddingptpi` | exact [34705851195](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34705851195) | pending workflow issue | in progress |
+| `epirecon` | accepted candidate `89d8112a1b8b7f2c4bca58e61be30e72d7790f26` based on accepted source `0e0f6329` | `arm64/integrate-epirecon-qmrlab` | exact [34705779719](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34705779719) | [#86](https://github.com/Vbitz/neurocontainers-arm64/issues/86) | accepted: 7 passed; integrated |
+| `sodiumgriddingptpi` | candidate `8cd40433b186f4a71ea98dd04815ecf6fcd3385c` based on accepted source `9602df1a` | `arm64/sodiumgriddingptpi` | exact [34705851195](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34705851195) | [#87](https://github.com/Vbitz/neurocontainers-arm64/issues/87) | verified: 7 passed; integration pending |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
@@ -793,11 +798,12 @@ submodule SHA.
 
 ## Integration
 
-- Accepted integration SHA: `0e0f6329f18d4ff60628dfe2fedf16a8a6f6871b`
+- Accepted integration SHA: `89d8112a80230f1d8052dcd2b269b0a1296b41de`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly,
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, OpenRecon I2I,
-  MipView, Sodiumgridding, Sodiumnufft, and qMRLab integrations. Epirecon and
-  Sodiumgriddingptpi have exact native ARM64 runs in progress. SynthStrip has
+  MipView, Sodiumgridding, Sodiumnufft, qMRLab, and Epirecon integrations.
+  Sodiumgriddingptpi has an exact native ARM64 run passed and is pending
+  integration. SynthStrip has
   a stale run in progress; its earlier exact candidate run already passed and
   will be integrated by ancestry after the active run is accounted for.
   CLEARSWI and Spinal Cord Toolbox are blocked upstream;
@@ -808,10 +814,9 @@ submodule SHA.
 
 ## Next action
 
-Monitor Epirecon `34705779719`, Sodiumgriddingptpi `34705851195`, and stale
-SynthStrip `34703210392`. If Epirecon or Sodiumgriddingptpi passes, record the
-report and integrate its unchanged recipe commit onto the then-current accepted
-pin without a duplicate run. Account for SynthStrip’s prior exact pass and
+Integrate Sodiumgriddingptpi run `34705851195` onto the current accepted pin
+without a duplicate run, then refresh issue #2. Account for SynthStrip’s prior
+exact pass and
 integrate its recipe change by ancestry once the active stale run finishes or
 times out. Refresh issue #2 after each accepted pin, then screen the next
 eligible undeclared recipe when a build slot is available.
