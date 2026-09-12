@@ -58,6 +58,10 @@ The declared `segmentator` verification against accepted pin
 `e430edb9d9a595878a619cb4bb00a68056665daf` is run `34688060966`. Its suite
 includes CLI help, imports, and a synthetic NIfTI histogram output assertion.
 
+The declared `spant` verification against accepted pin `031ff4750b9097aa0a552eb2efcccef00ab38a3b`
+is run `34688352312`; the declared `condaenvs` verification is run
+`34688353976`.
+
 ## Active attempts
 
 Initial verification started at `2026-09-12T09:09:37Z`; each recipe is on
@@ -86,6 +90,8 @@ The radtract current-pin recheck started at `2026-09-12T10:15:12Z`; the lqt
 current-pin recheck started at `2026-09-12T10:15:30Z`; and the rapidtide
 current-pin recheck started at `2026-09-12T10:16:41Z`.
 The segmentator verification started at `2026-09-12T10:17:38Z`.
+The spant verification started at `2026-09-12T10:24:13Z`; condaenvs started at
+`2026-09-12T10:24:15Z`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -118,6 +124,8 @@ The segmentator verification started at `2026-09-12T10:17:38Z`.
 | `radtract` | `031ff4750b9097aa0a552eb2efcccef00ab38a3b` | `arm64/dicomtools` | [34687953581](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687953581) | [#29](https://github.com/Vbitz/neurocontainers-arm64/issues/29) | verified: 3 passed; integrated into accepted pin |
 | `lqt` | accepted pin `e430edb9d9a595878a619cb4bb00a68056665daf` | pinned accepted branch | [34687969649](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687969649) | [#28](https://github.com/Vbitz/neurocontainers-arm64/issues/28) | current-pin recheck in progress |
 | `segmentator` | accepted pin `e430edb9d9a595878a619cb4bb00a68056665daf` | pinned accepted branch | [34688060966](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688060966) | [#31](https://github.com/Vbitz/neurocontainers-arm64/issues/31) | verified: 5 passed |
+| `spant` | accepted pin `031ff4750b9097aa0a552eb2efcccef00ab38a3b` | pinned accepted branch | [34688352312](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688352312) | pending | verification in progress |
+| `condaenvs` | accepted pin `031ff4750b9097aa0a552eb2efcccef00ab38a3b` | pinned accepted branch | [34688353976](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688353976) | pending | verification queued |
 
 ## Verified results
 
