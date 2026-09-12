@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `b36247a` (wfTFI retry checkpoint)
-- Pinned submodule: `neurocontainers@6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85` (PALM accepted)
-- Submodule checkout: `arm64/wftfi`, candidate `9a383b0d951f71725f2a2dade16a12e372bd6253` from accepted source `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85`; origin `Vbitz/neurocontainers`
+- Top-level commit: `02e20a5` (wfTFI retry checkpoint)
+- Pinned submodule: `neurocontainers@9a383b0d951f71725f2a2dade16a12e372bd6253` (wfTFI accepted in this checkpoint)
+- Submodule checkout: `arm64/wftfi`, accepted candidate `9a383b0d951f71725f2a2dade16a12e372bd6253` from accepted source `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 83 of 247 declarations, refreshed from accepted source; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 83 of 247 declarations, refreshed from accepted source; tracker refresh after wfTFI acceptance is pending; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Latest checkpoint
 
@@ -96,6 +96,16 @@ ancestry as `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85`; local validation and bot
 architecture generations passed, so no duplicate run was dispatched. Attempt
 budget used: 1/6.
 
+wfTFI candidate `9a383b0d951f71725f2a2dade16a12e372bd6253` passed exact native
+ARM64 run `34707462294` with 21 passed, 0 failed, and 0 skipped. The candidate
+adds `aarch64` and changes the base from Ubuntu 16.04 to Ubuntu 18.04 after the
+first exact build showed that the ARM64 Miniconda installer requires GLIBC
+2.25. The candidate is a direct descendant of the accepted PALM pin, so it is
+accepted here without a duplicate native run; local validation and both
+architecture generations passed. Issue [#89](https://github.com/Vbitz/neurocontainers-arm64/issues/89)
+contains the durable result and artifact link. Attempt budget used: 3/6,
+including one metadata-only short-ref dispatch.
+
 ANTs investigation started at `2026-09-12T16:57:23Z` on attempt 1 from
 accepted source `e90ee1a49ec687dd8582d10e7fb68546a008ecd4`; deadline
 `2026-09-13T04:57:23Z`. Candidate `f48620a9503c3f532fa16c1b1e9ccc96778a86c6`
@@ -128,7 +138,10 @@ on `arm64/wftfi` changes only the base image from Ubuntu 16.04 to Ubuntu 18.04,
 which supplies the required glibc while preserving the conda environment and
 both x86_64 and ARM64 paths. Validation and both architecture generations
 passed. Exact retry `34707462294` was dispatched with `upload_image=false`;
-attempt budget is 3/6.
+attempt budget is 3/6. The exact retry passed all build, SIF, deploy, and
+fulltest gates; issue [#89](https://github.com/Vbitz/neurocontainers-arm64/issues/89)
+records 21 passed, 0 failed, and 0 skipped. The candidate is accepted by
+ancestry in this checkpoint.
 
 ## Queue
 
@@ -720,6 +733,7 @@ submodule SHA.
 | `epirecon` | accepted candidate `89d8112a1b8b7f2c4bca58e61be30e72d7790f26` based on accepted source `0e0f6329` | `arm64/integrate-epirecon-qmrlab` | exact [34705779719](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34705779719) | [#86](https://github.com/Vbitz/neurocontainers-arm64/issues/86) | accepted: 7 passed; integrated |
 | `sodiumgriddingptpi` | accepted candidate `15a0dd8efbaf96fe820c8f09658aea41629f805b` based on accepted source `89d8112a` | `arm64/integrate-sodiumgriddingptpi-epirecon` | exact [34705851195](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34705851195) | [#87](https://github.com/Vbitz/neurocontainers-arm64/issues/87) | accepted: 7 passed; integrated |
 | `palm` | accepted candidate `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85` based on accepted source `e90ee1a4` | `arm64/integrate-palm-synthstrip` | exact [34706614272](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34706614272) | [#88](https://github.com/Vbitz/neurocontainers-arm64/issues/88) | accepted: 56 passed; integrated |
+| `wftfi` | accepted candidate `9a383b0d951f71725f2a2dade16a12e372bd6253` based on accepted source `6fe8f9f2` | `arm64/wftfi` | exact [34707462294](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34707462294) | [#89](https://github.com/Vbitz/neurocontainers-arm64/issues/89) | accepted: 21 passed; integrated by ancestry |
 | `ants` | candidate `f48620a9503c3f532fa16c1b1e9ccc96778a86c6` based on accepted source `e90ee1a4` | `arm64/ants` | exact [34706765954](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34706765954) | pending workflow issue | in progress |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
@@ -838,6 +852,7 @@ submodule SHA.
 - `flames` / `arm64`: run `34696992986`, accepted source `1c6bd96c`, 9 passed, 0 failed, 0 skipped; issue [#69](https://github.com/Vbitz/neurocontainers-arm64/issues/69). Candidate is integrated into the accepted pin.
 - `qsmxt` / `arm64`: serial run `34697632034`, accepted source `56253af1`, 9 passed, 0 failed, 0 skipped; issue [#68](https://github.com/Vbitz/neurocontainers-arm64/issues/68). Candidate is integrated into the accepted pin.
 - `mne` / `arm64`: serial run `34698033237`, accepted source `f8a66f99`, 6 passed, 0 failed, 0 skipped; issue [#70](https://github.com/Vbitz/neurocontainers-arm64/issues/70). Candidate is integrated into the accepted pin.
+- `wftfi` / `arm64`: run `34707462294`, accepted source `9a383b0d`, 21 passed, 0 failed, 0 skipped; issue [#89](https://github.com/Vbitz/neurocontainers-arm64/issues/89). Candidate is integrated into the accepted pin by direct ancestry.
 
 ## Blocked or failed results
 
@@ -852,11 +867,11 @@ submodule SHA.
 
 ## Integration
 
-- Accepted integration SHA: `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85`
+- Accepted integration SHA: `9a383b0d951f71725f2a2dade16a12e372bd6253`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly,
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, OpenRecon I2I,
   MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
-  SynthStrip, and PALM integrations. The earlier SynthStrip exact candidate run
+  SynthStrip, PALM, and wfTFI integrations. The earlier SynthStrip exact candidate run
   passed and was integrated by ancestry; its stale duplicate integration run
   remains active only for bookkeeping. PALM is integrated; ANTs has an exact
   native ARM64 run in progress.
@@ -868,8 +883,10 @@ submodule SHA.
 
 ## Next action
 
-Monitor ANTs run `34706765954` and stale SynthStrip run `34703210392`. Record
-the ANTs report and integrate its tested commit onto the current accepted pin
-without a duplicate run when it passes; classify the first actionable error
-within its recorded budget when it fails. Refresh issue #2 after acceptance,
-then continue screening the next eligible undeclared recipe.
+Refresh issue #2 after the wfTFI acceptance, then monitor ANTs run
+`34706765954` and stale SynthStrip run `34703210392`. Record the ANTs report
+and integrate its tested commit onto the current accepted pin; because its
+candidate is based on an older accepted source, dispatch one exact integrated
+recheck if it passes. Classify the first actionable error within its recorded
+budget if it fails, then continue screening the next eligible undeclared
+recipe.
