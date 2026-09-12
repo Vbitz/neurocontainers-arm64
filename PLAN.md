@@ -5,12 +5,12 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `fc20a7781f2eebbf687daa209c59243421c0724d`
-- Pinned submodule: `neurocontainers@fb140e557113c668e65cd86060aa8ab1a8573a6a`
-- Submodule checkout: `arm64/integrate-pcntoolkit`, clean at integrated candidate `94903684137e1f47b8eb69a65525061cfbf1766c` based on accepted source, origin `Vbitz/neurocontainers`
+- Top-level commit: `64544e7` (accepts the tested FSQC candidate)
+- Pinned submodule: `neurocontainers@a9a30dd58530ec002184c2217ba8fcf3ed43c1c5`
+- Submodule checkout: `arm64/fsqc`, clean at accepted candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5`, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 60 of 247 recipes declare ARM64 support at accepted source `fb140e55`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 61 of 247 recipes declare ARM64 support at accepted source `a9a30dd5`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Queue
 
@@ -234,11 +234,22 @@ deadline `2026-09-13T00:34:28Z`.
 
 The panoptica commit was replayed onto accepted source `fb140e55` as
 `72dd4d35a21dc701301565c7cc8d8c60afaea542`; validation and both architecture
-generations passed. Its exact integrated recheck started at
-`2026-09-12T12:41:16Z` as run `34694351552`. The pcntoolkit commit was replayed
-onto the same accepted source as `94903684137e1f47b8eb69a65525061cfbf1766c`;
-validation and both architecture generations passed. Its exact integrated
-recheck was queued at `2026-09-12T12:41:47Z` as run `34694375047`.
+generations passed. Its first integrated recheck, run `34694351552`, failed
+before checkout because the local commit had not yet been published. The exact
+commit was then pushed to `arm64/integrate-panoptica` and dispatched as retry
+run `34694588175` at `2026-09-12T12:46:21Z`.
+
+The pcntoolkit commit was replayed onto accepted source `fb140e55` as
+`94903684137e1f47b8eb69a65525061cfbf1766c`; validation and both architecture
+generations passed. Its first integrated recheck, run `34694375047`, failed
+before checkout for the same unpublished-commit reason. The exact commit was
+then pushed to `arm64/integrate-pcntoolkit` and dispatched as retry run
+`34694590006` at `2026-09-12T12:46:24Z`.
+
+FSQC candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5` passed run
+`34694302517` with 109 tests and was accepted serially. Its top-level pointer
+commit is `64544e7`; the maintained accepted fork branch now points to the same
+submodule SHA.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -252,9 +263,9 @@ recheck was queued at `2026-09-12T12:41:47Z` as run `34694375047`.
 | `gimp` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693583287](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693583287) | [#8](https://github.com/Vbitz/neurocontainers-arm64/issues/8) | verified: 7 passed |
 | `openrefine` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693584794](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693584794) | [#11](https://github.com/Vbitz/neurocontainers-arm64/issues/11) | verified: 2 passed |
 | `dwidenoise2` | accepted candidate `fb140e557113c668e65cd86060aa8ab1a8573a6a` based on `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/dwidenoise2` | [34693799839](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693799839) | [#61](https://github.com/Vbitz/neurocontainers-arm64/issues/61) | accepted: 5 passed; integrated |
-| `panoptica` | integrated candidate `72dd4d35a21dc701301565c7cc8d8c60afaea542` based on accepted source `fb140e557113c668e65cd86060aa8ab1a8573a6` (prior candidate `0e06c16b`) | `arm64/integrate-panoptica` | [34694351552](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694351552) | [#63](https://github.com/Vbitz/neurocontainers-arm64/issues/63) | in progress: exact integrated recheck |
-| `pcntoolkit` | integrated candidate `94903684137e1f47b8eb69a65525061cfbf1766c` based on accepted source `fb140e557113c668e65cd86060aa8ab1a8573a6` (prior candidate `6d232dc0`) | `arm64/integrate-pcntoolkit` | [34694375047](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694375047) | [#62](https://github.com/Vbitz/neurocontainers-arm64/issues/62) | queued: exact integrated recheck |
-| `fsqc` | candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5` based on accepted source `fb140e557113c668e65cd86060aa8ab1a8573a6` | `arm64/fsqc` | [34694302517](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694302517) | pending | in progress: exact candidate build and fulltest |
+| `panoptica` | integrated candidate `72dd4d35a21dc701301565c7cc8d8c60afaea542` based on accepted source `fb140e557113c668e65cd86060aa8ab1a8573a6` (prior candidate `0e06c16b`) | `arm64/integrate-panoptica` | first [34694351552](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694351552), retry [34694588175](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694588175) | [#63](https://github.com/Vbitz/neurocontainers-arm64/issues/63) | retry in progress: exact integrated recheck |
+| `pcntoolkit` | integrated candidate `94903684137e1f47b8eb69a65525061cfbf1766c` based on accepted source `fb140e557113c668e65cd86060aa8ab1a8573a6` (prior candidate `6d232dc0`) | `arm64/integrate-pcntoolkit` | first [34694375047](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694375047), retry [34694590006](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694590006) | [#62](https://github.com/Vbitz/neurocontainers-arm64/issues/62) | retry in progress: exact integrated recheck |
+| `fsqc` | accepted candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5` based on accepted source `fb140e557113c668e65cd86060aa8ab1a8573a6` | `arm64/fsqc` | [34694302517](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694302517) | [#64](https://github.com/Vbitz/neurocontainers-arm64/issues/64) | accepted: 109 passed; integrated |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
 | `datalad` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685666449](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685666449) | [#12](https://github.com/Vbitz/neurocontainers-arm64/issues/12) | verified: 10 passed; retain as accepted pin evidence |
@@ -365,6 +376,7 @@ recheck was queued at `2026-09-12T12:41:47Z` as run `34694375047`.
 - `brkraw` / `arm64`: run `34692637652`, accepted source `35e45882`, 84 passed, 0 failed, 0 skipped; issue [#58](https://github.com/Vbitz/neurocontainers-arm64/issues/58). Candidate is integrated into the accepted pin.
 - `brainlifecli` / `arm64`: run `34693086744`, accepted source `f50c2fbc`, 74 passed, 0 failed, 0 skipped; issue [#59](https://github.com/Vbitz/neurocontainers-arm64/issues/59). Candidate is integrated into the accepted pin.
 - `dwidenoise2` / `arm64`: run `34693799839`, accepted source `fb140e55`, 5 passed, 0 failed, 0 skipped; issue [#61](https://github.com/Vbitz/neurocontainers-arm64/issues/61). Candidate is integrated into the accepted pin.
+- `fsqc` / `arm64`: run `34694302517`, accepted source `a9a30dd5`, 109 passed, 0 failed, 0 skipped; issue [#64](https://github.com/Vbitz/neurocontainers-arm64/issues/64). Candidate is integrated into the accepted pin.
 
 ## Blocked or failed results
 
@@ -374,12 +386,12 @@ recheck was queued at `2026-09-12T12:41:47Z` as run `34694375047`.
 
 ## Integration
 
-- Accepted integration SHA: `fb140e557113c668e65cd86060aa8ab1a8573a6a`
-- Top-level submodule pointer advances from `f50c2fbc` to the tested dwidenoise2 candidate; BrkRaw, Brainlife CLI, dicomtools, radtract, and rapidtide remain included.
+- Accepted integration SHA: `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5`
+- Top-level submodule pointer advances from `fb140e55` to the tested FSQC candidate; BrkRaw, Brainlife CLI, dicomtools, radtract, rapidtide, and dwidenoise2 remain included.
 
 ## Next action
 
-Monitor the GOUHFI retry, Panoptica, and PCNtoolkit, record each result, and
-continue exact accepted-pin rechecks for the remaining declared recipes as
-runner slots free. After these candidates, continue screening practical
-undeclared ports from the accepted `fb140e55` pin.
+Monitor the GOUHFI retry and the exact Panoptica and PCNtoolkit integration
+retries, record each result, and accept only passing integrated SHAs. After
+these candidates, continue screening practical undeclared ports from the
+accepted `a9a30dd5` pin.
