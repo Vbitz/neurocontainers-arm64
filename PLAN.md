@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `a5a58c205f4a806e5c764c3791a936800a7ed956`
+- Top-level commit: `fa859cbdffe71e2385f07a268429b7b8a80476b4`
 - Pinned submodule: `neurocontainers@c6d782cd73cf88ccc44b837f705967b810519086`
 - Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -166,6 +166,9 @@ as run `34691454730`.
 The ProstateFiducialSeg verification on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T11:44:19Z`
 as run `34691824091`.
+The next exact accepted-pin rechecks are `workshopdemo` and `vina`, both using
+source `c6d782cd73cf88ccc44b837f705967b810519086`; dispatch them after this
+checkpoint commit and record their run IDs here.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -226,7 +229,8 @@ as run `34691824091`.
 | `neurodesktop-lite` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691454730](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691454730) | [#56](https://github.com/Vbitz/neurocontainers-arm64/issues/56) | blocked-upstream: jupyterlab-slurm frontend metadata mismatch |
 | `prostatefiducialseg` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691824091](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691824091) | pending | in progress |
 | `tinyrange` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | preflight on accepted branch | no run | [#53](https://github.com/Vbitz/neurocontainers-arm64/issues/53) | blocked-prerequisite: essential fulltest requires QEMU |
-| `mede` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691245302](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691245302) | pending | queued |
+| `workshopdemo` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | pending | [#1](https://github.com/Vbitz/neurocontainers-arm64/issues/1) | queued exact accepted-pin recheck |
+| `vina` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | pending | [#3](https://github.com/Vbitz/neurocontainers-arm64/issues/3) | queued exact accepted-pin recheck |
 
 ## Verified results
 
