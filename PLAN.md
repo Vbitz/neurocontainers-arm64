@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `50dc4cd` (accepts the tested MeGANorm candidate and records the DeepDisco dispatch)
+- Top-level commit: `7ef1f0c` (accepts the tested MeGANorm candidate and records active candidate investigations)
 - Pinned submodule: `neurocontainers@31091ade121699a43a8745a2633e325f47c99061`
 - Submodule checkout: `arm64/deepdisco`, clean at candidate `fbce330df22a4152be2a2be2e67ae5e959f8148c` based on accepted `31091ade121699a43a8745a2633e325f47c99061`, origin `Vbitz/neurocontainers`; top-level pointer remains at the accepted source during investigation
 - Fork Actions: disabled (`enabled: false`)
@@ -114,6 +114,11 @@ FLAMeS investigation started at `2026-09-12T13:22:48Z` on attempt 1 with a
 `31091ade121699a43a8745a2633e325f47c99061`. The proposed change is an
 architecture-conditional Miniforge installer while retaining the existing CPU
 PyTorch and runtime fulltest.
+
+FLAMeS candidate `9614409505d9d6102528c33f972290572e655bf4` was validated,
+generated for both architectures, pushed to `arm64/flames`, and dispatched as
+run `34696329756` at `2026-09-12T13:24:11Z`; its per-container issue is pending
+workflow creation.
 The segmentator current-pin recheck on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:37:36Z`
 as run `34688945692`.
@@ -311,7 +316,7 @@ submodule SHA.
 | `fsqc` | accepted candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5` based on accepted source `fb140e55` | `arm64/fsqc` | [34694302517](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694302517) | [#64](https://github.com/Vbitz/neurocontainers-arm64/issues/64) | accepted: 109 passed; integrated |
 | `meganorm` | accepted candidate `31091ade121699a43a8745a2633e325f47c99061` based on accepted source `70118cba` (prior candidate `f2a8fc48`) | `arm64/integrate-meganorm-pcntoolkit` | prior [34694878402](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694878402), serial [34695477795](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34695477795) | [#65](https://github.com/Vbitz/neurocontainers-arm64/issues/65) | accepted: 11 passed; integrated |
 | `deepdisco` | candidate `fbce330df22a4152be2a2be2e67ae5e959f8148c` based on accepted source `31091ade121699a43a8745a2633e325f47c99061` | `arm64/deepdisco` | [34696205436](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696205436) | pending workflow creation | in progress: exact ARM64 build and fulltest |
-| `flames` | baseline accepted source `31091ade121699a43a8745a2633e325f47c99061` | `arm64/flames` | pending | pending dispatch | in progress: add architecture-conditional Miniforge asset, validate both generations, then dispatch exact candidate |
+| `flames` | candidate `9614409505d9d6102528c33f972290572e655bf4` based on accepted source `31091ade121699a43a8745a2633e325f47c99061` | `arm64/flames` | [34696329756](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696329756) | pending workflow creation | in progress: exact ARM64 build and fulltest |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
