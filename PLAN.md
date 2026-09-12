@@ -6,11 +6,11 @@ Updated: 2026-09-13 (Australia/Brisbane)
 
 - Top-level branch: `main`
 - Top-level commit: `5d1fe2b` (qMRLab integration recheck checkpoint)
-- Pinned submodule: `neurocontainers@cd7950c00e93503648e96270f58104fae11f5718` (Sodiumgridding accepted; top-level acceptance commit pending)
-- Submodule checkout: `arm64/sodiumgridding`, candidate `cd7950c00e93503648e96270f58104fae11f5718` from accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`; origin `Vbitz/neurocontainers`
+- Pinned submodule: `neurocontainers@9602df1a290918704615776c8c52916c374fd0c4` (Sodiumnufft accepted; top-level acceptance commit pending)
+- Submodule checkout: `arm64/integrate-sodiumnufft-sodiumgridding`, candidate `9602df1a290918704615776c8c52916c374fd0c4` from accepted source `cd7950c00e93503648e96270f58104fae11f5718`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: pending refresh after accepting Sodiumgridding (expected 77 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: pending refresh after accepting Sodiumnufft (expected 78 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Latest checkpoint
 
@@ -30,10 +30,9 @@ passed run `34704924482` with 51 passed, 0 failed, and 0 skipped, but is stale
 for integration. Current-pin candidate
 `8fdfbd5a814d113d895a8c75a0ad95ca1d7b2873` is queued as run `34705439660`.
 
-SynthStrip stale integration run `34703210392`, qMRLab run `34705439660`, and
-sodiumnufft run `34705290732` are still active. qMRLab and sodiumnufft are now
-stale because Sodiumgridding is being accepted; do not accept their results
-without replaying onto the current accepted pin.
+SynthStrip stale integration run `34703210392` and qMRLab run `34705439660`
+remain active. Sodiumnufft run `34705290732` passed and its independent recipe
+commit is accepted on the current serial pin.
 
 Sodiumgridding investigation started at `2026-09-13T02:24:10Z` on attempt 1
 from accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`. Candidate
@@ -55,7 +54,9 @@ uses the same ARM64-tested OpenRecon source build. Validation and both
 architecture generations passed. Run `34705192559` was dispatched with an
 incorrect ref string and failed during source checkout; no recipe evidence was
 produced. Corrected exact candidate run `34705290732` was dispatched with
-`upload_image=false` and is queued.
+`upload_image=false` and passed with 5 passed, 0 failed, and 0 skipped. The
+recipe commit is accepted at the top-level submodule pointer after this
+checkpoint commit.
 
 ## Queue
 
