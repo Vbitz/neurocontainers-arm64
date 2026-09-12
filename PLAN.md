@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `b8eecb1` (Deep Quality Estimation serial checkpoint)
-- Pinned submodule: `neurocontainers@626fcf8705eb46228251f7b41b63b6c3e949acb7`
-- Submodule checkout: `arm64/integrate-template`, integrated candidate `626fcf8705eb46228251f7b41b63b6c3e949acb7` from accepted source `5534389f33c579fc39cb307c43fbf7d30b980478`; origin `Vbitz/neurocontainers`
+- Top-level commit: `65e9f0e` (Template stale-base correction checkpoint)
+- Pinned submodule: `neurocontainers@5534389f33c579fc39cb307c43fbf7d30b980478`
+- Submodule checkout: `arm64/integrate-template-vertexwiser`, corrected integrated candidate `0d53a8c8cdebd167e6eff657f7e1ef3ed636a24d` from accepted source `5534389f33c579fc39cb307c43fbf7d30b980478`; top-level pointer restored to the accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 72 of 247 recipes declare ARM64 support at accepted source `626fcf8705eb46228251f7b41b63b6c3e949acb7`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 71 of 247 recipes declare ARM64 support at accepted source `5534389f33c579fc39cb307c43fbf7d30b980478`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Queue
 
@@ -309,17 +309,19 @@ command and the corrected exact run `34702315565` was dispatched at
 failure and correction.
 
 Template (DataLad) investigation started at `2026-09-12T15:30:43Z` on attempt
-1 with a 12-hour deadline of `2026-09-13T03:30:43Z`, from accepted source
-`5534389f33c579fc39cb307c43fbf7d30b980478`. Candidate
+1 with a 12-hour deadline of `2026-09-13T03:30:43Z`. Candidate
 `626fcf8705eb46228251f7b41b63b6c3e949acb7` on `arm64/template` declares
 `aarch64` and adds a version-output assertion to the existing DataLad fulltest.
 The pinned NeuroDebian Bookworm image is a multi-architecture manifest with a
-native Linux ARM64 image. Validation and both architecture generations passed.
-Exact run `34702446198` was dispatched at `2026-09-12T15:30:43Z` with
-`upload_image=false`; issue creation is pending the workflow report.
-The candidate passed with 2 passed, 0 failed, and 0 skipped. Serial exact run
-`34702657955` was dispatched at `2026-09-12T15:34:51Z` from the same SHA after
-revalidation and both architecture generations passed.
+native Linux ARM64 image. Validation and both architecture generations passed;
+candidate run `34702446198` passed with 2 passed, 0 failed, and 0 skipped.
+The first serial run `34702657955` also passed with 2 passed, 0 failed, and 0
+skipped, but its branch descended from stale pre-Vertex accepted source
+`fb92480d`, so it is retained as recipe evidence and not accepted integration
+evidence. Corrected integrated candidate `0d53a8c8cdebd167e6eff657f7e1ef3ed636a24d`
+replays the recipe commit onto current accepted source `5534389f`; validation
+and both architecture generations passed, and corrected serial run dispatch is
+the next action.
 
 GingerALE investigation started at `2026-09-12T15:33:56Z` on attempt 1 with a
 12-hour deadline of `2026-09-13T03:33:56Z`, from accepted source
@@ -540,7 +542,7 @@ submodule SHA.
 | `qsmbly` | accepted candidate `fb92480d3132c936de1c3cd4b88cb9e6cc61cb11` based on `bb3f660d` | `arm64/integrate-qsmbly` | ref-failure [34700948284](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34700948284), corrected exact [34701138583](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701138583), serial [34701432576](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701432576) | [#76](https://github.com/Vbitz/neurocontainers-arm64/issues/76) | accepted: 2 passed; integrated at fb92480d |
 | `vertexwiser` | accepted candidate `5534389f33c579fc39cb307c43fbf7d30b980478` cherry-picked from `881380dbc85bbf7460e8071c1334c9d8ac6c51c5` onto accepted `fb92480d` | `arm64/integrate-vertexwiser` | prior [34701117134](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701117134), serial [34701810565](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701810565) | [#77](https://github.com/Vbitz/neurocontainers-arm64/issues/77) | accepted: 10 passed; integrated |
 | `deep-quality-estimation` | integrated candidate `46d1a5ae9bb1881b7ecb7d36f41fdff27af5818a` replaying `74dd8ca6` and `891296e9` onto accepted `5534389f` | `arm64/integrate-deep-quality-estimation` | candidate [34702315565](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702315565), serial [34702770551](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702770551) | [#78](https://github.com/Vbitz/neurocontainers-arm64/issues/78) | in progress: serial integration recheck |
-| `template` | accepted candidate `626fcf8705eb46228251f7b41b63b6c3e949acb7` based on accepted source `5534389f` | `arm64/integrate-template` | candidate [34702446198](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702446198), serial [34702657955](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702657955) | [#79](https://github.com/Vbitz/neurocontainers-arm64/issues/79) | accepted: 2 passed; integrated |
+| `template` | corrected integrated candidate `0d53a8c8cdebd167e6eff657f7e1ef3ed636a24d` based on accepted source `5534389f` (prior stale-base candidate `626fcf87`) | `arm64/integrate-template-vertexwiser` | candidate [34702446198](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702446198), stale-base serial [34702657955](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702657955), corrected serial pending | [#79](https://github.com/Vbitz/neurocontainers-arm64/issues/79) | in progress: corrected serial integration recheck |
 | `gingerale` | candidate `aee640961d9c5abab1b9a7257310a75c32b3def8` based on accepted source `5534389f` | `arm64/gingerale` | exact [34702611171](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702611171) | pending workflow issue | in progress: native ARM64 build and runtime test |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
@@ -673,12 +675,11 @@ submodule SHA.
 
 ## Integration
 
-- Accepted integration SHA: `626fcf8705eb46228251f7b41b63b6c3e949acb7`
+- Accepted integration SHA: `5534389f33c579fc39cb307c43fbf7d30b980478`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly, and
-  VertexWiseR, and template integrations. SynthStrip is in an exact recheck
-  from an earlier accepted
-  base. Deep Quality Estimation is in a corrected candidate run and template is
-  in its first candidate run.
+  VertexWiseR integration. SynthStrip is in an exact recheck from an earlier
+  accepted base. Deep Quality Estimation is in a corrected serial integration
+  run and Template is in a corrected serial integration recheck.
   CLEARSWI and Spinal Cord Toolbox are blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
@@ -687,7 +688,8 @@ submodule SHA.
 
 ## Next action
 
-Monitor the corrected Deep Quality Estimation and template runs while monitoring
-the healthy SynthStrip run. Accept only serial exact candidates before advancing
-the top-level pointer; refresh issue #2 after acceptance and continue screening
-practical undeclared ports with recorded preflight blockers.
+Dispatch the corrected Template serial run, then monitor it alongside the Deep
+Quality Estimation serial run, GingerALE, and the healthy SynthStrip run. Accept
+only serial exact candidates before advancing the top-level pointer; refresh
+issue #2 after acceptance and continue screening practical undeclared ports with
+recorded preflight blockers.
