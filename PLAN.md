@@ -114,6 +114,12 @@ as run `34689567635`.
 The MIPAV verification on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:54:52Z`
 as run `34689681947`.
+The AMICO verification on accepted source
+`c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:59:51Z`
+as run `34689875666`.
+The GLMsingle verification on accepted source
+`c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T11:00:32Z`
+as run `34689909788`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -155,6 +161,8 @@ as run `34689681947`.
 | `hdbet` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689514789](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689514789) | pending | in progress |
 | `totalsegmentator` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689567635](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689567635) | pending | in progress |
 | `mipav` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689681947](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689681947) | [#38](https://github.com/Vbitz/neurocontainers-arm64/issues/38) | verified: 7 passed |
+| `amico` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689875666](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689875666) | pending | in progress |
+| `glmsingle` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689909788](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689909788) | pending | queued |
 
 ## Verified results
 
@@ -202,6 +210,6 @@ as run `34689681947`.
 
 ## Next action
 
-Monitor the HDBET, TotalSegmentator, and MIPAV runs, record each result in its
-issue and this plan, then refill a slot with the next eligible recipe while
-keeping the queue synchronized.
+Monitor the HDBET, TotalSegmentator, AMICO, and GLMsingle runs, record each
+result in its issue and this plan, then refill a slot with the next eligible
+recipe while keeping the queue synchronized.
