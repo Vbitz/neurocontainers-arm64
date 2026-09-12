@@ -5,7 +5,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `a01c38b` (VertexWiseR acceptance checkpoint)
+- Top-level commit: `b84a38c` (VertexWiseR ARM64 port accepted)
 - Pinned submodule: `neurocontainers@5534389f33c579fc39cb307c43fbf7d30b980478`
 - Submodule checkout: `arm64/integrate-vertexwiser`, integrated candidate `5534389f33c579fc39cb307c43fbf7d30b980478` from accepted source `fb92480d3132c936de1c3cd4b88cb9e6cc61cb11`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
