@@ -25,6 +25,11 @@ qMRLab replay `7aa7af42bca5d84ed18d99e89f004d9d447d945f` passed exact run
 pin before MipView acceptance, is queued as run `34704924482`; it will require
 a further replay if it passes after the MipView pin advances.
 
+The pre-MipView candidate `a13acdb05a569f9de2e4fff9f03e1ae5416d7ef9` also
+passed run `34704924482` with 51 passed, 0 failed, and 0 skipped, but is stale
+for integration. Current-pin candidate
+`8fdfbd5a814d113d895a8c75a0ad95ca1d7b2873` is queued as run `34705439660`.
+
 SynthStrip stale integration run `34703210392` and the final qMRLab run are
 still active. Do not accept their older-base results without replaying onto the
 current accepted pin.
