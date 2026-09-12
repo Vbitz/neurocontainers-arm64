@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `e9049e0` (OpenRecon I2I pointer correction checkpoint)
+- Top-level commit: `9445804` (OpenRecon I2I pointer correction checkpoint)
 - Pinned submodule: `neurocontainers@fd60cfea817a54dd286f386fef251b07d41dc192`
-- Submodule checkout: `arm64/integrate-openreconi2iexample-gingerale`, integrated candidate `fd60cfea817a54dd286f386fef251b07d41dc192`; top-level pointer is corrected to the tested accepted source, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/integrate-qmrlab-openrecon`, final candidate `a13acdb05a569f9de2e4fff9f03e1ae5416d7ef9` from accepted source `fd60cfea817a54dd286f386fef251b07d41dc192`; top-level pointer remains at the tested accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: pending refresh after accepting OpenRecon I2I (expected 75 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
