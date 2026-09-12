@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `9445804` (OpenRecon I2I pointer correction checkpoint)
+- Top-level commit: `4c3e10b` (MipView dispatch checkpoint)
 - Pinned submodule: `neurocontainers@fd60cfea817a54dd286f386fef251b07d41dc192`
-- Submodule checkout: `arm64/integrate-qmrlab-openrecon`, final candidate `a13acdb05a569f9de2e4fff9f03e1ae5416d7ef9` from accepted source `fd60cfea817a54dd286f386fef251b07d41dc192`; top-level pointer remains at the tested accepted source, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/mipview`, candidate `d7de67d4647d4bfb50eb14f799afd34fd57d3c34` from accepted source `fd60cfea817a54dd286f386fef251b07d41dc192`; top-level pointer remains at the tested accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: pending refresh after accepting OpenRecon I2I (expected 75 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -370,6 +370,14 @@ accepted source to `fd60cfea`. Final candidate
 new accepted pin; validation and both architecture generations passed. It is
 pushed and awaits completion of the stale run before duplicate dispatch.
 
+MipView investigation started at `2026-09-13T02:15:21Z` on attempt 1 from
+accepted source `fd60cfea817a54dd286f386fef251b07d41dc192`. Candidate
+`d7de67d4647d4bfb50eb14f799afd34fd57d3c34` on `arm64/mipview` adds `aarch64`
+to the source Python/Qt recipe and extends the fulltest with a package import
+and synthetic NIfTI construction assertion. Validation and both architecture
+generations passed. Exact serial run `34704666186` was dispatched with
+`upload_image=false` and is queued.
+
 OpenRecon I2I investigation is prepared from accepted source
 `7592907bb1caf8c3da996156e87f765a727c8719`. Final candidate
 `fd60cfea817a54dd286f386fef251b07d41dc192` on
@@ -591,6 +599,7 @@ submodule SHA.
 | `deep-quality-estimation` | accepted candidate `46d1a5ae9bb1881b7ecb7d36f41fdff27af5818a` replaying `74dd8ca6` and `891296e9` onto accepted `5534389f` | `arm64/integrate-deep-quality-estimation` | candidate [34702315565](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702315565), serial [34702770551](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702770551) | [#78](https://github.com/Vbitz/neurocontainers-arm64/issues/78) | accepted: 11 passed; integrated |
 | `template` | accepted candidate `ffe5f289da8da47c006835876a86dcd07138b208` based on accepted source `46d1a5ae` (prior `0d53a8c8`) | `arm64/integrate-template-dqe` | candidate [34702446198](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702446198), prior serial [34703023438](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703023438), current serial [34703327433](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703327433) | [#79](https://github.com/Vbitz/neurocontainers-arm64/issues/79) | accepted: 2 passed; integrated |
 | `qmrlab` | final candidate `a13acdb05a569f9de2e4fff9f03e1ae5416d7ef9` based on accepted source `fd60cfea` (prior `7aa7af42`) | `arm64/integrate-qmrlab-openrecon` | stale serial [34703869679](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703869679), stale serial [34704391338](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34704391338), final serial pending stale completion | [#81](https://github.com/Vbitz/neurocontainers-arm64/issues/81) | ready: final replay validated and pushed |
+| `mipview` | candidate `d7de67d4647d4bfb50eb14f799afd34fd57d3c34` based on accepted source `fd60cfea` | `arm64/mipview` | serial [34704666186](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34704666186) | pending workflow issue | in progress: exact current accepted-pin run queued |
 | `openreconi2iexample` | accepted candidate `fd60cfea817a54dd286f386fef251b07d41dc192` based on accepted source `7592907b` (prior `56f4fe3`) | `arm64/integrate-openreconi2iexample-gingerale` | serial [34704212512](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34704212512) | [#82](https://github.com/Vbitz/neurocontainers-arm64/issues/82) | accepted: 5 passed; integrated |
 | `gingerale` | accepted candidate `7592907bb1caf8c3da996156e87f765a727c8719` based on accepted source `ffe5f289` (prior `448b1de1`) | `arm64/integrate-gingerale-template` | candidate [34702611171](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702611171), prior serial [34703078533](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703078533), stale serial [34703452146](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703452146), final serial [34703768813](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703768813) | [#80](https://github.com/Vbitz/neurocontainers-arm64/issues/80) | accepted: 51 passed; integrated |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
@@ -728,8 +737,9 @@ submodule SHA.
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly, and
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, and OpenRecon I2I
   integrations. qMRLab has a stale exact run in progress and a final replay
-  candidate ready from the new accepted pin. SynthStrip has a stale run and
-  requires a final replay after these current-pin integrations.
+  candidate ready from the accepted pin; MipView has an exact run queued.
+  SynthStrip has a stale run and requires a final replay after current-pin
+  integrations.
   CLEARSWI and Spinal Cord Toolbox are blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
@@ -739,8 +749,8 @@ submodule SHA.
 ## Next action
 
 Let qMRLab’s stale run `34704391338` and SynthStrip `34703210392` finish for
-recipe evidence. Dispatch qMRLab final candidate `a13acdb0` after the stale
-run completes, then accept it if the exact current-pin run passes and refresh
-issue #2. Replay SynthStrip onto the resulting accepted pin and dispatch its
-final serial run. Continue screening practical undeclared ports with recorded
-preflight blockers.
+recipe evidence while MipView `34704666186` runs. Dispatch qMRLab final
+candidate `a13acdb0` after its stale run completes, then accept successful
+current-pin candidates serially and refresh issue #2. Replay SynthStrip onto
+the resulting accepted pin and dispatch its final serial run. Continue
+screening practical undeclared ports with recorded preflight blockers.
