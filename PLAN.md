@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `fa859cbdffe71e2385f07a268429b7b8a80476b4`
+- Top-level commit: `47b0ee4aa1e46ea727ec0b15665d5dd4b7511483`
 - Pinned submodule: `neurocontainers@c6d782cd73cf88ccc44b837f705967b810519086`
 - Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -168,7 +168,8 @@ The ProstateFiducialSeg verification on accepted source
 as run `34691824091`.
 The next exact accepted-pin rechecks are `workshopdemo` and `vina`, both using
 source `c6d782cd73cf88ccc44b837f705967b810519086`; dispatch them after this
-checkpoint commit and record their run IDs here.
+checkpoint commit. `workshopdemo` started at `2026-09-12T11:56:11Z` as run
+`34692323241`; `vina` started at `2026-09-12T11:56:13Z` as run `34692325207`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -227,10 +228,10 @@ checkpoint commit and record their run IDs here.
 | `bidscoin` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691304372](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691304372) | [#54](https://github.com/Vbitz/neurocontainers-arm64/issues/54) | verified: 96 passed |
 | `gouhfi` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691452949](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691452949) | pending | in progress |
 | `neurodesktop-lite` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691454730](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691454730) | [#56](https://github.com/Vbitz/neurocontainers-arm64/issues/56) | blocked-upstream: jupyterlab-slurm frontend metadata mismatch |
-| `prostatefiducialseg` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691824091](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691824091) | pending | in progress |
+| `prostatefiducialseg` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691824091](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691824091) | [#57](https://github.com/Vbitz/neurocontainers-arm64/issues/57) | verified: 4 passed |
 | `tinyrange` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | preflight on accepted branch | no run | [#53](https://github.com/Vbitz/neurocontainers-arm64/issues/53) | blocked-prerequisite: essential fulltest requires QEMU |
-| `workshopdemo` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | pending | [#1](https://github.com/Vbitz/neurocontainers-arm64/issues/1) | queued exact accepted-pin recheck |
-| `vina` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | pending | [#3](https://github.com/Vbitz/neurocontainers-arm64/issues/3) | queued exact accepted-pin recheck |
+| `workshopdemo` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241) | [#1](https://github.com/Vbitz/neurocontainers-arm64/issues/1) | in progress: exact accepted-pin recheck |
+| `vina` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34692325207](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692325207) | [#3](https://github.com/Vbitz/neurocontainers-arm64/issues/3) | in progress: exact accepted-pin recheck |
 
 ## Verified results
 
@@ -293,6 +294,7 @@ checkpoint commit and record their run IDs here.
 - `dafne` / `arm64`: run `34690518800`, source `c6d782cd`, 10 passed and 1 failed in the fulltest runner; native headless GUI startup exited 139. Issue [#48](https://github.com/Vbitz/neurocontainers-arm64/issues/48) records the upstream blocker and revisit condition.
 - `tinyrange` / `arm64`: no run; validation and both architecture generations passed, but its essential fulltest requires QEMU. Issue [#53](https://github.com/Vbitz/neurocontainers-arm64/issues/53) records the prerequisite blocker.
 - `neurodesktop-lite` / `arm64`: run `34691454730`, source `c6d782cd`, build failed before SIF conversion and fulltest because the pinned `jupyterlab-slurm` source could not resolve `@jupyterlab/core-meta` 4.0.x. Issue [#56](https://github.com/Vbitz/neurocontainers-arm64/issues/56) records the upstream blocker.
+- `prostatefiducialseg` / `arm64`: run `34691824091`, source `c6d782cd`, 4 passed, 0 failed, 0 skipped; issue [#57](https://github.com/Vbitz/neurocontainers-arm64/issues/57).
 
 ## Integration
 
@@ -301,6 +303,6 @@ checkpoint commit and record their run IDs here.
 
 ## Next action
 
-Monitor Topaz, GOUHFI, Neurodesktop-lite, and ProstateFiducialSeg, record each
-result in its issue and this plan, then reconcile the remaining declared
-inventory before ending the run.
+Monitor GOUHFI and the workshopdemo/vina accepted-pin rechecks, record each
+result in its issue and this plan, then continue exact accepted-pin rechecks
+for every older-source success before ending the run.
