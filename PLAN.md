@@ -7,7 +7,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 - Top-level branch: `main`
 - Top-level commit: `116eb6e` (wfTFI accepted)
 - Pinned submodule: `neurocontainers@9a383b0d951f71725f2a2dade16a12e372bd6253` (wfTFI accepted in this checkpoint)
-- Submodule checkout: `arm64/wftfi`, accepted candidate `9a383b0d951f71725f2a2dade16a12e372bd6253` from accepted source `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85`; origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/blochsiegertb1mapping`, candidate `93a11a16` from accepted source `9a383b0d951f71725f2a2dade16a12e372bd6253`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 84 of 247 declarations, refreshed from accepted source `9a383b0d`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -105,6 +105,22 @@ accepted here without a duplicate native run; local validation and both
 architecture generations passed. Issue [#89](https://github.com/Vbitz/neurocontainers-arm64/issues/89)
 contains the durable result and artifact link. Attempt budget used: 3/6,
 including one metadata-only short-ref dispatch.
+
+`openreconexample` investigation started at `2026-09-12T17:23:50Z` from
+accepted source `9a383b0d951f71725f2a2dade16a12e372bd6253`; deadline
+`2026-09-13T05:23:50Z`. Candidate `2eaed273` on branch
+`arm64/openreconexample` adds only `aarch64`. It reuses the OpenRecon source
+build and FSL-BET2 build already exercised by the accepted OpenRecon I2I
+recipe. Validation and both architecture generations passed; exact dispatch
+is pending. Attempt budget: 0/6.
+
+`blochsiegertb1mapping` investigation started at `2026-09-12T17:23:50Z` from
+accepted source `9a383b0d951f71725f2a2dade16a12e372bd6253`; deadline
+`2026-09-13T05:23:50Z`. Candidate `93a11a16` on branch
+`arm64/blochsiegertb1mapping` adds only `aarch64`. It reuses the same accepted
+OpenRecon source build, and its fulltest performs numerical Bloch-Siegert map
+assertions over synthetic ISMRMRD images. Validation and both architecture
+generations passed; exact dispatch is pending. Attempt budget: 0/6.
 
 ANTs investigation started at `2026-09-12T16:57:23Z` on attempt 1 from
 accepted source `e90ee1a49ec687dd8582d10e7fb68546a008ecd4`; deadline
@@ -734,6 +750,8 @@ submodule SHA.
 | `sodiumgriddingptpi` | accepted candidate `15a0dd8efbaf96fe820c8f09658aea41629f805b` based on accepted source `89d8112a` | `arm64/integrate-sodiumgriddingptpi-epirecon` | exact [34705851195](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34705851195) | [#87](https://github.com/Vbitz/neurocontainers-arm64/issues/87) | accepted: 7 passed; integrated |
 | `palm` | accepted candidate `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85` based on accepted source `e90ee1a4` | `arm64/integrate-palm-synthstrip` | exact [34706614272](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34706614272) | [#88](https://github.com/Vbitz/neurocontainers-arm64/issues/88) | accepted: 56 passed; integrated |
 | `wftfi` | accepted candidate `9a383b0d951f71725f2a2dade16a12e372bd6253` based on accepted source `6fe8f9f2` | `arm64/wftfi` | exact [34707462294](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34707462294) | [#89](https://github.com/Vbitz/neurocontainers-arm64/issues/89) | accepted: 21 passed; integrated by ancestry |
+| `openreconexample` | candidate `2eaed273` based on accepted source `9a383b0d` | `arm64/openreconexample` | pending dispatch | pending workflow issue | in progress |
+| `blochsiegertb1mapping` | candidate `93a11a16` based on accepted source `9a383b0d` | `arm64/blochsiegertb1mapping` | pending dispatch | pending workflow issue | in progress |
 | `ants` | candidate `f48620a9503c3f532fa16c1b1e9ccc96778a86c6` based on accepted source `e90ee1a4` | `arm64/ants` | exact [34706765954](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34706765954) | pending workflow issue | in progress |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
@@ -884,10 +902,13 @@ submodule SHA.
 ## Next action
 
 Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed
-from accepted source `9a383b0d`. Monitor ANTs run `34706765954` and stale
-SynthStrip run `34703210392`. Record the ANTs report
-and integrate its tested commit onto the current accepted pin; because its
-candidate is based on an older accepted source, dispatch one exact integrated
-recheck if it passes. Classify the first actionable error within its recorded
-budget if it fails, then continue screening the next eligible undeclared
-recipe.
+from accepted source `9a383b0d`. Dispatch exact native runs for
+`openreconexample` candidate `2eaed273` and `blochsiegertb1mapping` candidate
+`93a11a16`, then monitor those runs alongside ANTs run `34706765954`. The stale
+SynthStrip run `34703210392` completed successfully and needs bookkeeping only.
+Record reports and integrate passing tested commits serially; the OpenRecon
+candidates descend from the current accepted pin and need no duplicate native
+integration run, while ANTs is based on an older source and needs one exact
+integrated recheck if it passes. Classify the first actionable error within
+each recorded budget if a run fails, then continue screening the next eligible
+undeclared recipe.
