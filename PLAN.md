@@ -120,6 +120,9 @@ as run `34689875666`.
 The GLMsingle verification on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T11:00:32Z`
 as run `34689909788`.
+The batchheudiconv verification on accepted source
+`c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T11:03:01Z`
+as run `34690023102`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -163,6 +166,7 @@ as run `34689909788`.
 | `mipav` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689681947](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689681947) | [#38](https://github.com/Vbitz/neurocontainers-arm64/issues/38) | verified: 7 passed |
 | `amico` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689875666](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689875666) | pending | in progress |
 | `glmsingle` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689909788](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689909788) | pending | queued |
+| `batchheudiconv` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690023102](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690023102) | pending | queued |
 
 ## Verified results
 
@@ -211,6 +215,6 @@ as run `34689909788`.
 
 ## Next action
 
-Monitor the HDBET, AMICO, and GLMsingle runs, record each result in its issue
-and this plan, then refill the available slot with the next eligible recipe
-while keeping the queue synchronized.
+Monitor the HDBET, AMICO, GLMsingle, and Batchheudiconv runs, record each
+result in its issue and this plan, then refill a slot with the next eligible
+recipe while keeping the queue synchronized.
