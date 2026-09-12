@@ -13,10 +13,35 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 
 
+def latest_arm64_release(directories):
+    from builder.release_artifact import read_release_metadata, ReleaseArtifactError
+
+    releases = []
+    for directory in directories:
+        for path in sorted(directory.glob('*.json')):
+            data = json.loads(path.read_text())
+            architecture = data.get('architecture')
+            if architecture:
+                arm64 = architecture in ('aarch64', 'arm64')
+            else:
+                apps = list((data.get('apps') or {}).values())
+                arm64 = bool(apps) and all(
+                    isinstance(app, dict) and app.get('architecture') in ('aarch64', 'arm64')
+                    for app in apps
+                )
+            if not arm64:
+                continue
+            try:
+                date, _ = read_release_metadata(path)
+            except ReleaseArtifactError:
+                continue
+            releases.append((date, path.stem, path))
+    return max(releases) if releases else None
+
+
 def render(checkout, issues):
     sys.path.insert(0, str(checkout))
     from builder.variants import concrete_variant_specs
-    from builder.release_artifact import find_latest_release_file
 
     sha = subprocess.check_output(
         ['git', '-C', str(checkout), 'rev-parse', 'HEAD'], text=True,
@@ -46,16 +71,15 @@ def render(checkout, issues):
             line += ' — ARM64 variants: ' + ', '.join(f'`{v}`' for v in variants)
         if not recipe_file.with_name('fulltest.yaml').is_file():
             line += ' — missing fulltest.yaml'
-        releases = []
-        for container in sorted({recipe, *(spec['name'] for spec in specs)}):
-            path, version, date = find_latest_release_file(checkout / 'releases' / container)
-            if path:
-                releases.append((date or '', version, path))
-        if releases:
-            _, version, path = max(releases)
+        containers = {recipe, f'{recipe}_arm64', *(spec['name'] for spec in specs)}
+        release = latest_arm64_release(
+            [checkout / 'releases' / container for container in sorted(containers)]
+        )
+        if release:
+            _, version, path = release
             relative = quote(path.relative_to(checkout).as_posix(), safe='/')
             line += (
-                f' — [release JSON ({version})]'
+                f' — [ARM64 release JSON ({version})]'
                 f'(https://github.com/Vbitz/neurocontainers/blob/{sha}/{relative})'
             )
         if recipe in links:
@@ -76,12 +100,13 @@ def render(checkout, issues):
         'using the builder’s architecture resolver. It does **not** mean its '
         'ARM64 build and runtime tests have passed. Unchecked means no declared '
         'ARM64 variant, not that porting is impossible.\n\n'
-        'Release JSON links point to the latest available metadata across the '
-        'recipe and its declared variant directories, **on any architecture**. '
+        'Release JSON links point only to the latest **ARM64** metadata, including '
+        'legacy releases stored in the base recipe directory. Architecture must '
+        'be explicitly ARM64 in the release metadata. '
         'Selection uses the builder’s newest-build-date ordering (version string '
         'breaks ties). Links are pinned to the source commit above; absence means '
-        'no valid release metadata was found. A release link does not establish '
-        'ARM64 support.\n\n'
+        'no valid ARM64 release metadata was found. A historical release does not '
+        'prove that the current recipe passes its ARM64 tests.\n\n'
         'Build/test evidence lives in the linked per-container issues; '
         '[all result issues](https://github.com/Vbitz/neurocontainers-arm64/issues?q=is%3Aissue+label%3Aarm64-container). '
         'Each run records its own source revision. `workshopdemo` is only a '

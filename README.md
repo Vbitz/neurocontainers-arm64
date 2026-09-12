@@ -104,8 +104,8 @@ gh api --method PUT repos/Vbitz/neurocontainers/actions/permissions -F enabled=f
 
 After committing recipe changes and updating the submodule pin, regenerate the
 checklist from the fork's architecture resolver. This includes named variants
-and links the latest available release JSON and existing container result issues.
-Release links cover any architecture and are pinned to the source revision.
+and links the latest available ARM64 release JSON and existing container result issues.
+Release links require explicit ARM64 metadata and are pinned to the source revision.
 The tracker is a snapshot, not
 automatically updated by builds; checkboxes do not imply verified runtime support.
 
