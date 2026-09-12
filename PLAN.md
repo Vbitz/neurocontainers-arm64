@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `5508316e1f2ad06ce86ce6ad3bf85d89efaa1931`
+- Top-level commit: `6d4aa07f8dcb778ecdf414723317c5ac8ba21315`
 - Pinned submodule: `neurocontainers@c6d782cd73cf88ccc44b837f705967b810519086`
 - Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -111,6 +111,9 @@ started at `2026-09-12T10:50:52Z` as run `34689514789`.
 The totalsegmentator verification on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:52:07Z`
 as run `34689567635`.
+The MIPAV verification on accepted source
+`c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:54:52Z`
+as run `34689681947`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -148,9 +151,10 @@ as run `34689567635`.
 | `fitlins` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689060946](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689060946) | [#33](https://github.com/Vbitz/neurocontainers-arm64/issues/33) | verified: 7 passed |
 | `spmpython` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689239216](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689239216) | [#35](https://github.com/Vbitz/neurocontainers-arm64/issues/35) | verified: 82 passed |
 | `cosmomvpa` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689424126](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689424126) | [#36](https://github.com/Vbitz/neurocontainers-arm64/issues/36) | verified: 6 passed |
-| `irkernel` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689425438](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689425438) | pending | verification queued |
-| `hdbet` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689514789](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689514789) | pending | verification queued |
-| `totalsegmentator` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689567635](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689567635) | pending | verification queued |
+| `irkernel` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689425438](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689425438) | [#37](https://github.com/Vbitz/neurocontainers-arm64/issues/37) | verified: 5 passed |
+| `hdbet` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689514789](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689514789) | pending | in progress |
+| `totalsegmentator` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689567635](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689567635) | pending | in progress |
+| `mipav` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689681947](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689681947) | pending | in progress |
 
 ## Verified results
 
@@ -188,6 +192,7 @@ as run `34689567635`.
 - `spmpython` / `arm64`: run `34689239216`, source `c6d782cd`, 82 passed, 0 failed, 0 skipped; issue [#35](https://github.com/Vbitz/neurocontainers-arm64/issues/35).
 - `cosmomvpa` / `arm64`: run `34689424126`, source `c6d782cd`, 6 passed, 0 failed, 0 skipped; issue [#36](https://github.com/Vbitz/neurocontainers-arm64/issues/36).
 - `condaenvs` / `arm64`: run `34688353976`, source `031ff475`, 3 passed, 0 failed, 0 skipped; issue [#32](https://github.com/Vbitz/neurocontainers-arm64/issues/32).
+- `irkernel` / `arm64`: run `34689425438`, source `c6d782cd`, 5 passed, 0 failed, 0 skipped; issue [#37](https://github.com/Vbitz/neurocontainers-arm64/issues/37).
 
 ## Integration
 
@@ -196,6 +201,6 @@ as run `34689567635`.
 
 ## Next action
 
-Review the lqt, radtract, and rapidtide current-pin rechecks, integrate each
-passing recipe serially, refresh issue #2, then continue with the next eligible
-recipes while keeping this queue synchronized.
+Monitor the HDBET, TotalSegmentator, and MIPAV runs, record each result in its
+issue and this plan, then refill a slot with the next eligible recipe while
+keeping the queue synchronized.
