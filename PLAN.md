@@ -25,6 +25,12 @@ After reviewing each result, refill up to four available slots with the next
 eligible declared recipe, then assess practical undeclared recipes. Keep one
 issue per recipe/variant and record durable evidence in comments.
 
+Prepared port candidate: `dicomtools` branch `arm64/dicomtools`, candidate
+`e430edb9d9a595878a619cb4bb00a68056665daf`.
+The only recipe change is declaring `aarch64`; recipe validation and ARM64 and
+x86_64 Dockerfile generation passed. Dispatch is pending an available runner
+slot.
+
 ## Active attempts
 
 Initial verification started at `2026-09-12T09:09:37Z`; each recipe is on
@@ -105,6 +111,7 @@ at `2026-09-12T09:49:34Z` and passed on attempt 1. The `bidsmanager` and
 
 ## Next action
 
-Review `bidsmanager`, `cbsb0stats`, lqt, and `functionnectome`, record their
-final issue outcomes, then continue with the next eligible recipes while
-keeping this queue synchronized.
+Review `bidsmanager`, `cbsb0stats`, lqt, and `functionnectome`, dispatch the
+prepared `dicomtools` candidate when a slot opens, then record final issue
+outcomes and continue with the next eligible recipes while keeping this queue
+synchronized.
