@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `6b2bb97c9b18fcade96b6fbe90148d80713bf6fd`
+- Top-level commit: `b5a10f00dac4945275123b37e84d00da3288be7e`
 - Pinned submodule: `neurocontainers@7bd4f9ee9734c4dd3a449290c39955f009f081d3`
 - Submodule checkout: `arm64/globus`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -73,9 +73,10 @@ at `2026-09-12T09:49:34Z` and passed on attempt 1. The `bidsmanager` and
 | `afib1` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34686701687](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686701687) | [#21](https://github.com/Vbitz/neurocontainers-arm64/issues/21) | verified: 5 passed |
 | `arfiproc` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34686847933](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686847933) | [#22](https://github.com/Vbitz/neurocontainers-arm64/issues/22) | verified: 6 passed |
 | `b0map` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34686964891](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686964891) | [#23](https://github.com/Vbitz/neurocontainers-arm64/issues/23) | verified: 8 passed |
-| `bidsmanager` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687075563](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687075563) | pending | current-pin verification in progress |
-| `cbsb0stats` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687077011](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687077011) | pending | current-pin verification queued |
-| `functionnectome` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687208365](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687208365) | pending | current-pin verification queued |
+| `bidsmanager` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687075563](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687075563) | [#24](https://github.com/Vbitz/neurocontainers-arm64/issues/24) | verified: 9 passed |
+| `cbsb0stats` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687077011](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687077011) | [#25](https://github.com/Vbitz/neurocontainers-arm64/issues/25) | verified: 6 passed |
+| `functionnectome` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687208365](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687208365) | [#26](https://github.com/Vbitz/neurocontainers-arm64/issues/26) | verified: 4 passed |
+| `dicomtools` | candidate `e430edb9d9a595878a619cb4bb00a68056665daf` | `arm64/dicomtools` | [34687413104](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687413104) | pending | candidate verification in progress |
 
 ## Verified results
 
@@ -100,9 +101,9 @@ at `2026-09-12T09:49:34Z` and passed on attempt 1. The `bidsmanager` and
 - `afib1` / `arm64`: accepted-pin run `34686701687`, source `7bd4f9ee`, 5 passed, 0 failed, 0 skipped; issue [#21](https://github.com/Vbitz/neurocontainers-arm64/issues/21).
 - `arfiproc` / `arm64`: accepted-pin run `34686847933`, source `7bd4f9ee`, 6 passed, 0 failed, 0 skipped; issue [#22](https://github.com/Vbitz/neurocontainers-arm64/issues/22).
 - `b0map` / `arm64`: accepted-pin run `34686964891`, source `7bd4f9ee`, 8 passed, 0 failed, 0 skipped; issue [#23](https://github.com/Vbitz/neurocontainers-arm64/issues/23).
-- `bidsmanager` / `arm64`: accepted-pin run [34687075563](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687075563) pending; issue to be created by the workflow reporter.
-- `cbsb0stats` / `arm64`: accepted-pin run [34687077011](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687077011) pending; issue to be created by the workflow reporter.
-- `functionnectome` / `arm64`: accepted-pin run [34687208365](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687208365) pending; issue to be created by the workflow reporter.
+- `bidsmanager` / `arm64`: accepted-pin run `34687075563`, source `7bd4f9ee`, 9 passed, 0 failed, 0 skipped; issue [#24](https://github.com/Vbitz/neurocontainers-arm64/issues/24).
+- `cbsb0stats` / `arm64`: accepted-pin run `34687077011`, source `7bd4f9ee`, 6 passed, 0 failed, 0 skipped; issue [#25](https://github.com/Vbitz/neurocontainers-arm64/issues/25).
+- `functionnectome` / `arm64`: accepted-pin run `34687208365`, source `7bd4f9ee`, 4 passed, 0 failed, 0 skipped; issue [#26](https://github.com/Vbitz/neurocontainers-arm64/issues/26).
 
 ## Integration
 
@@ -111,7 +112,5 @@ at `2026-09-12T09:49:34Z` and passed on attempt 1. The `bidsmanager` and
 
 ## Next action
 
-Review `bidsmanager`, `cbsb0stats`, lqt, and `functionnectome`, dispatch the
-prepared `dicomtools` candidate when a slot opens, then record final issue
-outcomes and continue with the next eligible recipes while keeping this queue
-synchronized.
+Review lqt and `dicomtools`, record their final issue outcomes, then continue
+with the next eligible recipes while keeping this queue synchronized.
