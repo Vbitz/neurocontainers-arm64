@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `1edd0a0` (OpenRecon coverage checkpoint; this PLAN update is the next checkpoint)
-- Pinned submodule: `neurocontainers@2884a0e6a7d23e43fc51f58e32302ecc3689c27e` (OpenRecon example and Bloch-Siegert accepted in this checkpoint)
-- Submodule checkout: `arm64/integrate-openrecon-blochsiegert`, integrated candidate `2884a0e6a7d23e43fc51f58e32302ecc3689c27e` from accepted source `9a383b0d951f71725f2a2dade16a12e372bd6253`; origin `Vbitz/neurocontainers`
+- Top-level commit: `ad0720d` (ANTs ARM64 recipe accepted; this PLAN update is the next checkpoint)
+- Pinned submodule: `neurocontainers@88fb85137ac628e23542a923dfc005f8918bf306` (ANTs, OpenRecon example, and Bloch-Siegert accepted in this checkpoint)
+- Submodule checkout: `arm64/integrate-ants-openrecon`, integrated candidate `88fb85137ac628e23542a923dfc005f8918bf306` from accepted source `2884a0e6a7d23e43fc51f58e32302ecc3689c27e`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 86 of 247 declarations, refreshed from accepted source `2884a0e6`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 87 of 247 declarations, refreshed from accepted source `88fb8513`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Latest checkpoint
 
@@ -147,7 +147,12 @@ while ARM64 uses the compiler defaults. Upstream ANTs source is built by the
 existing Neurodocker template, and the fulltest runs version checks, image
 conversion, denoising, thresholding, and smoothing operations. Validation and
 both architecture generations passed. Exact run `34706765954` was dispatched
-with `upload_image=false` and is still building; attempt budget is 1/6.
+with `upload_image=false` and passed all gates with 103 passed, 0 failed, and 0
+skipped. The recipe commit was replayed onto the current accepted source as
+`88fb85137ac628e23542a923dfc005f8918bf306`; local validation and both
+architecture generations passed, and it is accepted without a duplicate native
+integration run. Issue [#93](https://github.com/Vbitz/neurocontainers-arm64/issues/93)
+contains the report, logs, and artifact links. Attempt budget: 1/6.
 
 Elastix preflight completed on 2026-09-13. The pinned 5.1.0 recipe downloads
 only the upstream Ubuntu 20.04 Linux binary, with no ARM64 Linux asset
@@ -184,6 +189,33 @@ records 21 passed, 0 failed, and 0 skipped. The candidate is accepted by
 ancestry in this checkpoint.
 
 ## Queue
+
+The accepted source contains 160 undeclared recipes after the ANTs
+integration. A full preflight screen on 2026-09-13 found no additional bounded
+candidate with an official ARM64 asset, a usable multi-architecture base, or a
+documented portable source build. The remaining inventory falls into these
+groups:
+
+- fixed x86_64 or amd64 downloads and containers, including AFNI, ASHS, BIDS
+  Apps, BrainSuite, Cartool, Connectome Workbench, Convert3D, DSI Studio,
+  FreeSurfer, FSL, LAYNII, MATLAB/SPM, MRIcroGL, MRtrix bundles, RStudio,
+  Slicer, SPM variants, TrackVis, and the standalone proprietary tools;
+- GPU-only or GPU-weighted recipes whose pinned CUDA images, wheels, or model
+  assets have no native ARM64 path, including BraTS, DeepRetinotopy, DeepWMH,
+  FastCSR, GlioMODA, OpenMSK, PeTu, RELION, SynthSeg, TopoFit, and VesselBoost;
+- multi-architecture base images or package environments without an ARM64
+  release path established during screening, including ASLPrep, BIDS Apps,
+  fMRIPrep, Halfpipe, Nibabies, NiftyMIC, qsiprep/qsirecon, rsHRF, and xcp-d;
+- native dependency or prerequisite blockers already recorded for OpenADS,
+  MNEextended, Spinal Cord Toolbox, CLEARSWI, GOUHFI, DAFNE, NeuroDesktop
+  Lite, and TinyRange; and
+- source bundles that embed one of those x86 or GPU dependencies, or require
+  a broad compiler/library port. Elastix was the only remaining source-build
+  candidate worth an explicit upstream check and is recorded in issue [#92](https://github.com/Vbitz/neurocontainers-arm64/issues/92).
+
+No speculative changes were made to these recipes. Revisit them only when the
+upstream asset, base image, package, license prerequisite, or documented ARM64
+build path changes.
 
 Initial verification batch, using the current accepted pin and no recipe edits:
 
@@ -776,8 +808,8 @@ submodule SHA.
 | `wftfi` | accepted candidate `9a383b0d951f71725f2a2dade16a12e372bd6253` based on accepted source `6fe8f9f2` | `arm64/wftfi` | exact [34707462294](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34707462294) | [#89](https://github.com/Vbitz/neurocontainers-arm64/issues/89) | accepted: 21 passed; integrated by ancestry |
 | `openreconexample` | accepted candidate `2884a0e6a7d23e43fc51f58e32302ecc3689c27e` integrating `2eaed2732a85fa475cb823a336c62f682b8df90b` on accepted `9a383b0d` | `arm64/integrate-openrecon-blochsiegert` | cancelled ref [34708172513](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34708172513); exact [34708194854](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34708194854) | [#90](https://github.com/Vbitz/neurocontainers-arm64/issues/90) | accepted: 6 passed; integrated without duplicate run |
 | `blochsiegertb1mapping` | accepted candidate `2884a0e6a7d23e43fc51f58e32302ecc3689c27e` integrating `93a11a16885aec3a548584bb9f3f332fe726df1b` on accepted `9a383b0d` | `arm64/integrate-openrecon-blochsiegert` | exact [34708203749](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34708203749) | [#91](https://github.com/Vbitz/neurocontainers-arm64/issues/91) | accepted: 2 passed; integrated without duplicate run |
-| `ants` | candidate `f48620a9503c3f532fa16c1b1e9ccc96778a86c6` based on accepted source `e90ee1a4` | `arm64/ants` | exact [34706765954](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34706765954) | pending workflow issue | in progress |
-| `elastix` | accepted source `2884a0e6a7d23e43fc51f58e32302ecc3689c27e`; no candidate | preflight | no run | [#92](https://github.com/Vbitz/neurocontainers-arm64/issues/92) | blocked-upstream: no ARM64 Linux release asset; source build requires ITK 5.3 |
+| `ants` | accepted candidate `88fb85137ac628e23542a923dfc005f8918bf306` replaying `f48620a9503c3f532fa16c1b1e9ccc96778a86c6` onto accepted source `2884a0e6` | `arm64/integrate-ants-openrecon` | exact [34706765954](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34706765954) | [#93](https://github.com/Vbitz/neurocontainers-arm64/issues/93) | accepted: 103 passed; integrated without duplicate run |
+| `elastix` | accepted source `88fb85137ac628e23542a923dfc005f8918bf306`; no candidate | preflight | no run | [#92](https://github.com/Vbitz/neurocontainers-arm64/issues/92) | blocked-upstream: no ARM64 Linux release asset; source build requires ITK 5.3 |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
@@ -898,6 +930,7 @@ submodule SHA.
 - `wftfi` / `arm64`: run `34707462294`, accepted source `9a383b0d`, 21 passed, 0 failed, 0 skipped; issue [#89](https://github.com/Vbitz/neurocontainers-arm64/issues/89). Candidate is integrated into the accepted pin by direct ancestry.
 - `openreconexample` / `arm64`: run `34708194854`, tested source `2eaed273`, 6 passed, 0 failed, 0 skipped; issue [#90](https://github.com/Vbitz/neurocontainers-arm64/issues/90). Candidate is integrated at `2884a0e6` without a duplicate native run.
 - `blochsiegertb1mapping` / `arm64`: run `34708203749`, tested source `93a11a16`, 2 passed, 0 failed, 0 skipped; issue [#91](https://github.com/Vbitz/neurocontainers-arm64/issues/91). Candidate is integrated at `2884a0e6` without a duplicate native run.
+- `ants` / `arm64`: run `34706765954`, tested source `f48620a9`, 103 passed, 0 failed, 0 skipped; issue [#93](https://github.com/Vbitz/neurocontainers-arm64/issues/93). Candidate is integrated at `88fb8513` without a duplicate native run.
 
 ## Blocked or failed results
 
@@ -909,18 +942,19 @@ submodule SHA.
 - `mneextended` / `arm64`: exact run `34698395577`, candidate `91ac9396`, reached the native ARM64 Docker build but failed before SIF conversion and fulltest. After the pyedflib wheel and `trame-client<4` fix, `pip check` reported `trame 3.13.2` requires `trame-server<4,>=3.12.2` while `trame-server 4.0.0` is installed. Issue [#70](https://github.com/Vbitz/neurocontainers-arm64/issues/70) records the three-attempt investigation and upstream blocker.
 - `spinalcordtoolbox` / `arm64`: exact retry `34699607997`, candidate `3dac0979`, installed qmake and resolved ARM64 packages but the pinned PyQt5 5.15.11 source metadata build was terminated with exit 143 after about 13 minutes. Issue [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74) records the two-attempt upstream blocker and revisit condition.
 - `clearswi` / `arm64`: exact run `34699875754`, candidate `86c62b32`, installed and precompiled the Julia dependency set but failed during PackageCompiler sysimage generation with the ARM64 LLVM `vscale` instruction-selection error in `HostCPUFeatures`. No SIF or fulltest ran. Issue [#75](https://github.com/Vbitz/neurocontainers-arm64/issues/75) records the upstream blocker and revisit condition.
+- `elastix` / `arm64`: no run; the pinned 5.1.0 release has no identified ARM64 Linux asset, and its source build requires ITK 5.3. Issue [#92](https://github.com/Vbitz/neurocontainers-arm64/issues/92) records the blocked-upstream preflight and revisit condition.
 
 ## Integration
 
-- Accepted integration SHA: `2884a0e6a7d23e43fc51f58e32302ecc3689c27e`
+- Accepted integration SHA: `88fb85137ac628e23542a923dfc005f8918bf306`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly,
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, OpenRecon I2I,
   MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
-  SynthStrip, PALM, wfTFI, OpenRecon example, and Bloch-Siegert integrations. The earlier SynthStrip exact candidate run
+  SynthStrip, PALM, wfTFI, OpenRecon example, Bloch-Siegert, and ANTs integrations. The earlier SynthStrip exact candidate run
   passed and was integrated by ancestry; its stale duplicate integration run
-  also passed 70 tests and is bookkeeping only. PALM is integrated; ANTs has an exact
-  native ARM64 run in progress. Elastix is recorded as a preflight upstream
-  blocker.
+  also passed 70 tests and is bookkeeping only. PALM and ANTs are integrated;
+  the ANTs exact native ARM64 run passed 103 tests. Elastix is recorded as a
+  preflight upstream blocker.
   CLEARSWI and Spinal Cord Toolbox are blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
@@ -930,13 +964,13 @@ submodule SHA.
 ## Next action
 
 Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed
-from accepted source `2884a0e6` and now reports 86 of 247 declarations.
+from accepted source `88fb8513` and now reports 87 of 247 declarations.
 The exact native runs `34708194854` and `34708203749` verified
 `openreconexample` and `blochsiegertb1mapping`, respectively, and their
-independent declarations are integrated at `2884a0e6`. Monitor ANTs run
-`34706765954`; if it passes, integrate its isolated recipe commit onto the
-current accepted pin without a duplicate native run, following the user's
-instruction to reuse successful independent recipe evidence. If it fails,
-classify the first actionable error within its recorded budget and continue
-with the remaining preflight inventory. Elastix is already recorded as blocked
+independent declarations are integrated at `2884a0e6`. ANTs run
+`34706765954` passed 103 tests and its isolated commit is integrated at
+`88fb8513` without a duplicate native run. Elastix is recorded as blocked
 upstream, and the stale SynthStrip run `34703210392` needs bookkeeping only.
+There are no healthy or unaccounted running jobs; the next review is the
+remaining undeclared preflight inventory for a newly available upstream ARM64
+asset or documented portable build.
