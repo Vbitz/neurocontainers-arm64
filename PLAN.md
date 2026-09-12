@@ -35,6 +35,9 @@ The `bidstools`, `dicompare`, and `eharmonize` baseline runs started at
 started at `2026-09-12T09:44:07Z` and use the full accepted source SHA
 `7bd4f9ee9734c4dd3a449290c39955f009f081d3`.
 
+The `afib1` current-pin verification started at `2026-09-12T09:46:06Z` on
+attempt 1 with a deadline of `2026-09-12T21:46:06Z`.
+
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
 | `dcm2niix` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685110310](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685110310) | [#4](https://github.com/Vbitz/neurocontainers-arm64/issues/4) | verified: 106 passed; retain as accepted pin evidence |
@@ -55,6 +58,7 @@ started at `2026-09-12T09:44:07Z` and use the full accepted source SHA
 | `bidstools` | accepted recheck `7bd4f9ee` (baseline `87e1c726`) | pinned `main` | baseline [34686282914](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686282914); recheck [34686613888](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686613888) | [#20](https://github.com/Vbitz/neurocontainers-arm64/issues/20) | accepted-pin recheck in progress; baseline 12 passed |
 | `dicompare` | accepted recheck `7bd4f9ee` (baseline `87e1c726`) | pinned `main` | baseline [34686283152](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686283152); recheck [34686615747](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686615747) | [#19](https://github.com/Vbitz/neurocontainers-arm64/issues/19) | accepted-pin recheck queued; baseline 105 passed |
 | `eharmonize` | accepted recheck `7bd4f9ee` (baseline `87e1c726`) | pinned `main` | baseline [34686283058](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686283058); recheck [34686618053](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686618053) | [#18](https://github.com/Vbitz/neurocontainers-arm64/issues/18) | accepted-pin recheck queued; baseline 6 passed |
+| `afib1` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34686701687](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686701687) | pending | current-pin verification in progress |
 
 ## Verified results
 
@@ -76,6 +80,7 @@ started at `2026-09-12T09:44:07Z` and use the full accepted source SHA
 - `bidstools` / `arm64`: baseline run `34686282914`, source `87e1c726`, 12 passed, 0 failed, 0 skipped; accepted-pin recheck [34686613888](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686613888) pending; issue [#20](https://github.com/Vbitz/neurocontainers-arm64/issues/20).
 - `dicompare` / `arm64`: baseline run `34686283152`, source `87e1c726`, 105 passed, 0 failed, 0 skipped; accepted-pin recheck [34686615747](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686615747) pending; issue [#19](https://github.com/Vbitz/neurocontainers-arm64/issues/19).
 - `eharmonize` / `arm64`: baseline run `34686283058`, source `87e1c726`, 6 passed, 0 failed, 0 skipped; accepted-pin recheck [34686618053](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686618053) pending; issue [#18](https://github.com/Vbitz/neurocontainers-arm64/issues/18).
+- `afib1` / `arm64`: accepted-pin run [34686701687](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686701687) pending; issue to be created by the workflow reporter.
 
 ## Integration
 
@@ -84,6 +89,6 @@ started at `2026-09-12T09:44:07Z` and use the full accepted source SHA
 
 ## Next action
 
-Review the three accepted-pin rechecks, record their final issue outcomes, then
-continue with the next eligible declared recipes while keeping this queue
-synchronized.
+Review the three accepted-pin rechecks and `afib1`, record their final issue
+outcomes, then continue with the next eligible declared recipes while keeping
+this queue synchronized.
