@@ -5,12 +5,12 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `b636751d6e9c31a55a2d06e2bb36ee6a8b4ad7d4`
-- Pinned submodule: `neurocontainers@35e458827fb6522c147e4bd99121d1ed631dd6f7`
-- Submodule checkout: `arm64/brainlifecli-on-brkraw`, clean at integrated candidate `f50c2fbc`, origin `Vbitz/neurocontainers`
+- Top-level commit: `d9c4e45bfc7ccb6214190eec2d57bb1f1e2887eb`
+- Pinned submodule: `neurocontainers@f50c2fbc4377e4a19312019488e4323a189ef453`
+- Submodule checkout: `arm64/brainlifecli-on-brkraw`, clean at accepted candidate, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34684189569](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34684189569), 4 passed, source `87e1c726`
-- Coverage snapshot: tracker refresh pending after accepting BrkRaw; prior snapshot was 57 of 247 at source `c6d782cd`. Tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: tracker refresh pending after accepting Brainlife CLI; prior snapshot was 58 of 247 at source `35e45882`. Tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Queue
 
@@ -262,7 +262,7 @@ and record its run ID here.
 | `neurodesktop-lite` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691454730](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691454730) | [#56](https://github.com/Vbitz/neurocontainers-arm64/issues/56) | blocked-upstream: jupyterlab-slurm frontend metadata mismatch |
 | `prostatefiducialseg` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34691824091](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34691824091) | [#57](https://github.com/Vbitz/neurocontainers-arm64/issues/57) | verified: 4 passed |
 | `brkraw` | accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7` (prior `c6d782cd`) | `arm64/brkraw` | [34692637652](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692637652) | [#58](https://github.com/Vbitz/neurocontainers-arm64/issues/58) | accepted: 84 passed |
-| `brainlifecli` | integrated candidate `f50c2fbc4377e4a19312019488e4323a189ef453` based on accepted source `35e45882` | `arm64/brainlifecli-on-brkraw` | [34693086744](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693086744) | pending | in progress: ARM64 candidate port |
+| `brainlifecli` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `35e45882`) | `arm64/brainlifecli-on-brkraw` | [34693086744](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693086744) | [#59](https://github.com/Vbitz/neurocontainers-arm64/issues/59) | accepted: 74 passed |
 | `tinyrange` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | preflight on accepted branch | no run | [#53](https://github.com/Vbitz/neurocontainers-arm64/issues/53) | blocked-prerequisite: essential fulltest requires QEMU |
 
 ## Verified results
@@ -328,11 +328,12 @@ and record its run ID here.
 - `neurodesktop-lite` / `arm64`: run `34691454730`, source `c6d782cd`, build failed before SIF conversion and fulltest because the pinned `jupyterlab-slurm` source could not resolve `@jupyterlab/core-meta` 4.0.x. Issue [#56](https://github.com/Vbitz/neurocontainers-arm64/issues/56) records the upstream blocker.
 - `prostatefiducialseg` / `arm64`: run `34691824091`, source `c6d782cd`, 4 passed, 0 failed, 0 skipped; issue [#57](https://github.com/Vbitz/neurocontainers-arm64/issues/57).
 - `brkraw` / `arm64`: run `34692637652`, accepted source `35e45882`, 84 passed, 0 failed, 0 skipped; issue [#58](https://github.com/Vbitz/neurocontainers-arm64/issues/58). Candidate is integrated into the accepted pin.
+- `brainlifecli` / `arm64`: run `34693086744`, accepted source `f50c2fbc`, 74 passed, 0 failed, 0 skipped; issue [#59](https://github.com/Vbitz/neurocontainers-arm64/issues/59). Candidate is integrated into the accepted pin.
 
 ## Integration
 
-- Accepted integration SHA: `35e458827fb6522c147e4bd99121d1ed631dd6f7`
-- Top-level submodule pointer advances from `c6d782cd` to the tested BrkRaw candidate; dicomtools, radtract, and rapidtide remain included.
+- Accepted integration SHA: `f50c2fbc4377e4a19312019488e4323a189ef453`
+- Top-level submodule pointer advances from `35e45882` to the tested Brainlife CLI candidate; BrkRaw, dicomtools, radtract, and rapidtide remain included.
 
 ## Next action
 
