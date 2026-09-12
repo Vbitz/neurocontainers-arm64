@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `908a7b5` (Epirecon acceptance checkpoint)
-- Pinned submodule: `neurocontainers@15a0dd8efbaf96fe820c8f09658aea41629f805b` (Sodiumgriddingptpi accepted)
-- Submodule checkout: `arm64/integrate-sodiumgriddingptpi-epirecon`, candidate `15a0dd8efbaf96fe820c8f09658aea41629f805b` from accepted source `89d8112a80230f1d8052dcd2b269b0a1296b41de`; origin `Vbitz/neurocontainers`
+- Top-level commit: `0f8e061` (Sodiumgriddingptpi acceptance checkpoint)
+- Pinned submodule: `neurocontainers@e90ee1a49ec687dd8582d10e7fb68546a008ecd4` (SynthStrip accepted)
+- Submodule checkout: `arm64/integrate-synthstrip-current`, candidate `e90ee1a49ec687dd8582d10e7fb68546a008ecd4` from accepted source `15a0dd8efbaf96fe820c8f09658aea41629f805b`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: pending refresh after accepting Sodiumgriddingptpi (expected 81 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: pending refresh after accepting SynthStrip (expected 82 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Latest checkpoint
 
@@ -28,9 +28,13 @@ the independent Sodiumgridding and Sodiumnufft acceptances. Earlier qMRLab
 candidates also passed, but are retained as prior evidence because their base
 pins were older.
 
-SynthStrip stale integration run `34703210392` remains active. Sodiumnufft run
-`34705290732` passed and its independent recipe commit is accepted on the
-current serial pin.
+SynthStrip candidate `d166adbd7ef00e723a322f03e8232b1de4d2cf57` passed exact
+native ARM64 run `34698395635` with 70 passed, 0 failed, and 0 skipped. The
+same one line recipe commit was applied to the current accepted ancestry as
+`e90ee1a49ec687dd8582d10e7fb68546a008ecd4`; local validation and both
+architecture generations passed, so no duplicate run was dispatched. Stale
+integration run `34703210392` remains active and will be accounted for
+separately.
 
 Sodiumgridding investigation started at `2026-09-13T02:24:10Z` on attempt 1
 from accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`. Candidate
@@ -652,7 +656,7 @@ submodule SHA.
 | `qsmxt` | accepted candidate `56253af124371ff19dd7c82cf97e82a60e10fcaf` based on accepted source `1c6bd96c84cd75dc52aae6598cf363e24e7a37aa` (prior verified `a0c486f7`) | `arm64/integrate-qsmxt-flames` | prior [34696916528](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696916528), serial [34697632034](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34697632034) | [#68](https://github.com/Vbitz/neurocontainers-arm64/issues/68) | accepted: 9 passed; integrated |
 | `mne` | accepted candidate `f8a66f994161507e1399826980f78c90fcec6e19` based on accepted source `56253af1` (prior verified `953c23b9`) | `arm64/integrate-mne-qsmxt` | prior [34696735862](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696735862), serial [34698033237](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698033237) | [#70](https://github.com/Vbitz/neurocontainers-arm64/issues/70) | accepted: 6 passed; integrated |
 | `mneextended` | candidate `91ac9396f876ee9835d13cb72903ad17a8f95d5a` based on prior accepted source `fbce330d` (prior `108f2d4a`, `f31fde3e`) | `arm64/mneextended` | prior [34697506684](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34697506684), retry [34697784145](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34697784145), ref-failure [34698178019](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698178019), exact [34698395577](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698395577) | [#70](https://github.com/Vbitz/neurocontainers-arm64/issues/70) | blocked-upstream: cascading trame constraints (`trame-server<4` required, 4.0.0 installed) |
-| `synthstrip` | corrected integrated candidate `8533a1468968477e25b4f685b1bf827ed219239c` based on prior accepted source `5534389f` | `arm64/integrate-synthstrip` | ref-failure [34698365483](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698365483), candidate [34698395635](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698395635), stale serial [34703210392](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703210392) | [#72](https://github.com/Vbitz/neurocontainers-arm64/issues/72) | stale serial run in progress; final replay required from current accepted pin |
+| `synthstrip` | accepted candidate `e90ee1a49ec687dd8582d10e7fb68546a008ecd4` based on accepted source `15a0dd8e` | `arm64/integrate-synthstrip-current` | exact [34698395635](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698395635), stale integration [34703210392](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703210392) | [#72](https://github.com/Vbitz/neurocontainers-arm64/issues/72) | accepted: 70 passed; integrated without duplicate run |
 | `synthstroke` | accepted candidate `bb3f660d9c3ec0718df2f558cd15450eaffd8260` based on accepted source `f8a66f99` (prior `9e66780d`) | `arm64/integrate-synthstroke` | ref-failure [34698867860](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698867860), first exact [34698887077](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698887077), exact [34699377187](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699377187), serial [34699910413](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699910413) | [#73](https://github.com/Vbitz/neurocontainers-arm64/issues/73) | accepted: 4 passed; integrated at bb3f660d |
 | `spinalcordtoolbox` | retry candidate `3dac0979b1d71e7f4a5d2a9e8d5c8dc08e9a5b0` based on accepted source `f8a66f99` (prior `2e72afcc`) | `arm64/spinalcordtoolbox` | first exact [34699323574](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699323574), retry exact [34699607997](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699607997) | [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74) | blocked-upstream: PyQt5 ARM64 source metadata build terminated with exit 143 after qmake fix |
 | `clearswi` | candidate `86c62b327f7ddc784df2eb114f7bdd3f7f8ae091` based on accepted source `f8a66f99` | `arm64/clearswi` | exact [34699875754](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699875754) | [#75](https://github.com/Vbitz/neurocontainers-arm64/issues/75) | blocked-upstream: Julia LLVM ARM64 `vscale` instruction-selection failure during PackageCompiler sysimage generation |
@@ -799,13 +803,13 @@ submodule SHA.
 
 ## Integration
 
-- Accepted integration SHA: `15a0dd8efbaf96fe820c8f09658aea41629f805b`
+- Accepted integration SHA: `e90ee1a49ec687dd8582d10e7fb68546a008ecd4`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly,
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, OpenRecon I2I,
-  MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, and
-  Sodiumgriddingptpi integrations. SynthStrip has
-  a stale run in progress; its earlier exact candidate run already passed and
-  will be integrated by ancestry after the active run is accounted for.
+  MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
+  and SynthStrip integrations. The earlier SynthStrip exact candidate run
+  passed and was integrated by ancestry; its stale duplicate integration run
+  remains active only for bookkeeping.
   CLEARSWI and Spinal Cord Toolbox are blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
@@ -814,8 +818,7 @@ submodule SHA.
 
 ## Next action
 
-Refresh issue #2 from the current accepted pin. Account for SynthStrip’s prior
-exact pass and
-integrate its recipe change by ancestry once the active stale run finishes or
-times out. Refresh issue #2 after each accepted pin, then screen the next
-eligible undeclared recipe when a build slot is available.
+Refresh issue #2 from the current accepted pin. Let the stale SynthStrip run
+`34703210392` finish or time out and record its result without dispatching a
+replacement. Then screen the next eligible undeclared recipe with the remaining
+runner capacity.
