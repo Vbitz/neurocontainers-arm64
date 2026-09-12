@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `94de05aaf0a4e4ebc8f9176174a6607800b571d9`
+- Top-level commit: `5508316e1f2ad06ce86ce6ad3bf85d89efaa1931`
 - Pinned submodule: `neurocontainers@c6d782cd73cf88ccc44b837f705967b810519086`
 - Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -103,6 +103,9 @@ The fitlins verification on accepted source `c6d782cd73cf88ccc44b837f705967b8105
 started at `2026-09-12T10:40:18Z` as run `34689060946`.
 The spmpython verification on accepted source `c6d782cd73cf88ccc44b837f705967b810519086`
 started at `2026-09-12T10:44:34Z` as run `34689239216`.
+The cosmomvpa verification on accepted source `c6d782cd73cf88ccc44b837f705967b810519086`
+started at `2026-09-12T10:48:44Z` as run `34689424126`; irkernel started at
+`2026-09-12T10:48:46Z` as run `34689425438`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -139,6 +142,8 @@ started at `2026-09-12T10:44:34Z` as run `34689239216`.
 | `condaenvs` | accepted pin `031ff4750b9097aa0a552eb2efcccef00ab38a3b` | pinned accepted branch | [34688353976](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688353976) | [#32](https://github.com/Vbitz/neurocontainers-arm64/issues/32) | verified: 3 passed |
 | `fitlins` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689060946](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689060946) | [#33](https://github.com/Vbitz/neurocontainers-arm64/issues/33) | verified: 7 passed |
 | `spmpython` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689239216](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689239216) | pending | verification queued |
+| `cosmomvpa` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689424126](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689424126) | pending | verification queued |
+| `irkernel` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34689425438](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34689425438) | pending | verification queued |
 
 ## Verified results
 
