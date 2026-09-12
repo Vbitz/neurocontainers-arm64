@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `116eb6e` (wfTFI accepted)
-- Pinned submodule: `neurocontainers@9a383b0d951f71725f2a2dade16a12e372bd6253` (wfTFI accepted in this checkpoint)
-- Submodule checkout: `arm64/blochsiegertb1mapping`, candidate `93a11a16885aec3a548584bb9f3f332fe726df1b` from accepted source `9a383b0d951f71725f2a2dade16a12e372bd6253`; origin `Vbitz/neurocontainers`
+- Top-level commit: `7835370` (OpenRecon candidates checkpoint)
+- Pinned submodule: `neurocontainers@2884a0e6a7d23e43fc51f58e32302ecc3689c27e` (OpenRecon example and Bloch-Siegert accepted in this checkpoint)
+- Submodule checkout: `arm64/integrate-openrecon-blochsiegert`, integrated candidate `2884a0e6a7d23e43fc51f58e32302ecc3689c27e` from accepted source `9a383b0d951f71725f2a2dade16a12e372bd6253`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 84 of 247 declarations, refreshed from accepted source `9a383b0d`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 84 of 247 declarations, pending refresh from accepted source `2884a0e6`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Latest checkpoint
 
@@ -125,7 +125,17 @@ on branch
 `arm64/blochsiegertb1mapping` adds only `aarch64`. It reuses the same accepted
 OpenRecon source build, and its fulltest performs numerical Bloch-Siegert map
 assertions over synthetic ISMRMRD images. Validation and both architecture
-generations passed; exact run `34708203749` is queued. Attempt budget: 1/6.
+generations passed; exact run `34708203749` passed with 2 passed, 0 failed,
+and 0 skipped. Attempt budget: 1/6. The recipe commit was replayed onto the
+accepted source as integration commit `2884a0e6`; it is accepted in this
+checkpoint without a duplicate native run.
+
+`openreconexample` exact run `34708194854` passed with 6 passed, 0 failed, and
+0 skipped. Its recipe commit was replayed as integration commit `9975caf0` and
+then combined with the Bloch-Siegert declaration in `2884a0e6`; local
+validation and both architecture generations passed. The cancelled invalid-ref
+dispatch remains metadata-only, and no duplicate native integration run was
+dispatched because the recipe changes are independent declarations.
 
 ANTs investigation started at `2026-09-12T16:57:23Z` on attempt 1 from
 accepted source `e90ee1a49ec687dd8582d10e7fb68546a008ecd4`; deadline
@@ -755,8 +765,8 @@ submodule SHA.
 | `sodiumgriddingptpi` | accepted candidate `15a0dd8efbaf96fe820c8f09658aea41629f805b` based on accepted source `89d8112a` | `arm64/integrate-sodiumgriddingptpi-epirecon` | exact [34705851195](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34705851195) | [#87](https://github.com/Vbitz/neurocontainers-arm64/issues/87) | accepted: 7 passed; integrated |
 | `palm` | accepted candidate `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85` based on accepted source `e90ee1a4` | `arm64/integrate-palm-synthstrip` | exact [34706614272](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34706614272) | [#88](https://github.com/Vbitz/neurocontainers-arm64/issues/88) | accepted: 56 passed; integrated |
 | `wftfi` | accepted candidate `9a383b0d951f71725f2a2dade16a12e372bd6253` based on accepted source `6fe8f9f2` | `arm64/wftfi` | exact [34707462294](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34707462294) | [#89](https://github.com/Vbitz/neurocontainers-arm64/issues/89) | accepted: 21 passed; integrated by ancestry |
-| `openreconexample` | candidate `2eaed2732a85fa475cb823a336c62f682b8df90b` based on accepted source `9a383b0d` | `arm64/openreconexample` | cancelled ref [34708172513](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34708172513); exact [34708194854](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34708194854) | pending workflow issue | in progress |
-| `blochsiegertb1mapping` | candidate `93a11a16885aec3a548584bb9f3f332fe726df1b` based on accepted source `9a383b0d` | `arm64/blochsiegertb1mapping` | queued [34708203749](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34708203749) | pending workflow issue | in progress |
+| `openreconexample` | accepted candidate `2884a0e6a7d23e43fc51f58e32302ecc3689c27e` integrating `2eaed2732a85fa475cb823a336c62f682b8df90b` on accepted `9a383b0d` | `arm64/integrate-openrecon-blochsiegert` | cancelled ref [34708172513](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34708172513); exact [34708194854](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34708194854) | [#90](https://github.com/Vbitz/neurocontainers-arm64/issues/90) | accepted: 6 passed; integrated without duplicate run |
+| `blochsiegertb1mapping` | accepted candidate `2884a0e6a7d23e43fc51f58e32302ecc3689c27e` integrating `93a11a16885aec3a548584bb9f3f332fe726df1b` on accepted `9a383b0d` | `arm64/integrate-openrecon-blochsiegert` | exact [34708203749](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34708203749) | [#91](https://github.com/Vbitz/neurocontainers-arm64/issues/91) | accepted: 2 passed; integrated without duplicate run |
 | `ants` | candidate `f48620a9503c3f532fa16c1b1e9ccc96778a86c6` based on accepted source `e90ee1a4` | `arm64/ants` | exact [34706765954](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34706765954) | pending workflow issue | in progress |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
@@ -876,6 +886,8 @@ submodule SHA.
 - `qsmxt` / `arm64`: serial run `34697632034`, accepted source `56253af1`, 9 passed, 0 failed, 0 skipped; issue [#68](https://github.com/Vbitz/neurocontainers-arm64/issues/68). Candidate is integrated into the accepted pin.
 - `mne` / `arm64`: serial run `34698033237`, accepted source `f8a66f99`, 6 passed, 0 failed, 0 skipped; issue [#70](https://github.com/Vbitz/neurocontainers-arm64/issues/70). Candidate is integrated into the accepted pin.
 - `wftfi` / `arm64`: run `34707462294`, accepted source `9a383b0d`, 21 passed, 0 failed, 0 skipped; issue [#89](https://github.com/Vbitz/neurocontainers-arm64/issues/89). Candidate is integrated into the accepted pin by direct ancestry.
+- `openreconexample` / `arm64`: run `34708194854`, tested source `2eaed273`, 6 passed, 0 failed, 0 skipped; issue [#90](https://github.com/Vbitz/neurocontainers-arm64/issues/90). Candidate is integrated at `2884a0e6` without a duplicate native run.
+- `blochsiegertb1mapping` / `arm64`: run `34708203749`, tested source `93a11a16`, 2 passed, 0 failed, 0 skipped; issue [#91](https://github.com/Vbitz/neurocontainers-arm64/issues/91). Candidate is integrated at `2884a0e6` without a duplicate native run.
 
 ## Blocked or failed results
 
@@ -890,11 +902,11 @@ submodule SHA.
 
 ## Integration
 
-- Accepted integration SHA: `9a383b0d951f71725f2a2dade16a12e372bd6253`
+- Accepted integration SHA: `2884a0e6a7d23e43fc51f58e32302ecc3689c27e`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly,
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, OpenRecon I2I,
   MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
-  SynthStrip, PALM, and wfTFI integrations. The earlier SynthStrip exact candidate run
+  SynthStrip, PALM, wfTFI, OpenRecon example, and Bloch-Siegert integrations. The earlier SynthStrip exact candidate run
   passed and was integrated by ancestry; its stale duplicate integration run
   also passed 70 tests and is bookkeeping only. PALM is integrated; ANTs has an exact
   native ARM64 run in progress.
@@ -906,16 +918,15 @@ submodule SHA.
 
 ## Next action
 
-Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed
-from accepted source `9a383b0d`. Exact native runs are dispatched for
-`openreconexample` candidate `2eaed2732a85fa475cb823a336c62f682b8df90b` and
-`blochsiegertb1mapping` candidate `93a11a16885aec3a548584bb9f3f332fe726df1b`;
-monitor runs `34708194854` and `34708203749` alongside ANTs run `34706765954`.
-The stale
+Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was last
+refreshed from accepted source `9a383b0d`; refresh it after this acceptance.
+The exact native runs `34708194854` and `34708203749` verified
+`openreconexample` and `blochsiegertb1mapping`, respectively, and their
+independent declarations are integrated at `2884a0e6`. Monitor ANTs run
+`34706765954`. The stale
 SynthStrip run `34703210392` completed successfully and needs bookkeeping only.
-Record reports and integrate passing tested commits serially; the OpenRecon
-candidates descend from the current accepted pin and need no duplicate native
-integration run, while ANTs is based on an older source and needs one exact
-integrated recheck if it passes. Classify the first actionable error within
-each recorded budget if a run fails, then continue screening the next eligible
-undeclared recipe.
+Record the ANTs report and integrate its tested commit onto the current
+accepted pin; because its candidate is based on an older source, dispatch one
+exact integrated recheck if it passes. Classify the first actionable error
+within its recorded budget if it fails, then continue screening the next
+eligible undeclared recipe.
