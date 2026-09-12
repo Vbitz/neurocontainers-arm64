@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `02e20a5` (wfTFI retry checkpoint)
+- Top-level commit: `116eb6e` (wfTFI accepted)
 - Pinned submodule: `neurocontainers@9a383b0d951f71725f2a2dade16a12e372bd6253` (wfTFI accepted in this checkpoint)
 - Submodule checkout: `arm64/wftfi`, accepted candidate `9a383b0d951f71725f2a2dade16a12e372bd6253` from accepted source `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 83 of 247 declarations, refreshed from accepted source; tracker refresh after wfTFI acceptance is pending; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 84 of 247 declarations, refreshed from accepted source `9a383b0d`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Latest checkpoint
 
@@ -883,8 +883,9 @@ submodule SHA.
 
 ## Next action
 
-Refresh issue #2 after the wfTFI acceptance, then monitor ANTs run
-`34706765954` and stale SynthStrip run `34703210392`. Record the ANTs report
+Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed
+from accepted source `9a383b0d`. Monitor ANTs run `34706765954` and stale
+SynthStrip run `34703210392`. Record the ANTs report
 and integrate its tested commit onto the current accepted pin; because its
 candidate is based on an older accepted source, dispatch one exact integrated
 recheck if it passes. Classify the first actionable error within its recorded
