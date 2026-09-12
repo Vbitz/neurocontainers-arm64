@@ -5,7 +5,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `784cea9` (checkpoint after recording the Spinal Cord Toolbox blocker)
+- Top-level commit: `6b8d15f` (checkpoint after recording the CLEARSWI blocker)
 - Pinned submodule: `neurocontainers@bb3f660d9c3ec0718df2f558cd15450eaffd8260`
 - Submodule checkout: `arm64/integrate-synthstroke`, clean at accepted candidate `bb3f660d9c3ec0718df2f558cd15450eaffd8260`, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
