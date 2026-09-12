@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `2bb7bbf` (accepted QSMbly ARM64 port)
+- Top-level commit: `e1373c0` (Deep Quality Estimation attempt 1 checkpoint)
 - Pinned submodule: `neurocontainers@fb92480d3132c936de1c3cd4b88cb9e6cc61cb11`
-- Submodule checkout: `arm64/deep-quality-estimation`, candidate `74dd8ca66dba65499c9751b805b0dd46be1011fd` from accepted source `fb92480d3132c936de1c3cd4b88cb9e6cc61cb11`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/deep-quality-estimation`, candidate `891296e99840fb0ba9117cb7481676a8385c8bf3` from accepted source `fb92480d3132c936de1c3cd4b88cb9e6cc61cb11`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 70 of 247 recipes declare ARM64 support at accepted source `fb92480d3132c936de1c3cd4b88cb9e6cc61cb11`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -294,14 +294,19 @@ The integration branch cherry-picked the recipe commit onto accepted source
 exact run `34701810565` was dispatched at `2026-09-12T15:18:04Z`.
 
 Deep Quality Estimation investigation started at `2026-09-12T15:24:14Z` on
-attempt 1 with a 12-hour deadline of `2026-09-13T03:24:14Z`, from accepted
+attempt 2 with a 12-hour deadline of `2026-09-13T03:24:14Z`, from accepted
 source `fb92480d3132c936de1c3cd4b88cb9e6cc61cb11`. Candidate
-`74dd8ca66dba65499c9751b805b0dd46be1011fd` on
+`891296e99840fb0ba9117cb7481676a8385c8bf3` on
 `arm64/deep-quality-estimation` declares `aarch64` and selects the official
 PyTorch CPU 2.5.1 aarch64 wheel on ARM64 while preserving the existing CUDA
 installation on x86_64. Validation and both architecture generations passed.
-Exact run `34702124198` is queued with `upload_image=false`; issue creation is
-pending the workflow report.
+Attempt 1 candidate `74dd8ca66dba65499c9751b805b0dd46be1011fd` failed before
+deploy in run `34702124198` because a multiline shell conditional was expanded
+with invalid `&&` separators. The conditional was folded into one shell
+command and the corrected exact run `34702315565` was dispatched at
+`2026-09-12T15:28:03Z` with `upload_image=false`. Issue
+[#78](https://github.com/Vbitz/neurocontainers-arm64/issues/78) records the
+failure and correction.
 The segmentator current-pin recheck on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:37:36Z`
 as run `34688945692`.
@@ -512,7 +517,7 @@ submodule SHA.
 | `clearswi` | candidate `86c62b327f7ddc784df2eb114f7bdd3f7f8ae091` based on accepted source `f8a66f99` | `arm64/clearswi` | exact [34699875754](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699875754) | [#75](https://github.com/Vbitz/neurocontainers-arm64/issues/75) | blocked-upstream: Julia LLVM ARM64 `vscale` instruction-selection failure during PackageCompiler sysimage generation |
 | `qsmbly` | accepted candidate `fb92480d3132c936de1c3cd4b88cb9e6cc61cb11` based on `bb3f660d` | `arm64/integrate-qsmbly` | ref-failure [34700948284](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34700948284), corrected exact [34701138583](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701138583), serial [34701432576](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701432576) | [#76](https://github.com/Vbitz/neurocontainers-arm64/issues/76) | accepted: 2 passed; integrated at fb92480d |
 | `vertexwiser` | integrated candidate `5534389f33c579fc39cb307c43fbf7d30b980478` cherry-picked from `881380dbc85bbf7460e8071c1334c9d8ac6c51c5` onto accepted `fb92480d` | `arm64/integrate-vertexwiser` | prior [34701117134](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701117134), serial [34701810565](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701810565) | [#77](https://github.com/Vbitz/neurocontainers-arm64/issues/77) | in progress: serial integration recheck |
-| `deep-quality-estimation` | candidate `74dd8ca66dba65499c9751b805b0dd46be1011fd` based on accepted source `fb92480d` | `arm64/deep-quality-estimation` | exact [34702124198](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702124198) | pending workflow issue | in progress: native ARM64 build and runtime test |
+| `deep-quality-estimation` | candidate `891296e99840fb0ba9117cb7481676a8385c8bf3` based on accepted source `fb92480d` (prior `74dd8ca6`) | `arm64/deep-quality-estimation` | failed [34702124198](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702124198), corrected [34702315565](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702315565) | [#78](https://github.com/Vbitz/neurocontainers-arm64/issues/78) | in progress: corrected native ARM64 build and runtime test |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
@@ -657,8 +662,8 @@ submodule SHA.
 
 ## Next action
 
-Monitor the VertexWiseR serial exact recheck and Deep Quality Estimation build
-while monitoring the healthy SynthStrip run. Accept only serial exact
+Monitor the VertexWiseR serial exact recheck and corrected Deep Quality
+Estimation build while monitoring the healthy SynthStrip run. Accept only serial exact
 candidates before advancing the top-level pointer; then refresh issue #2 and
 continue screening practical undeclared ports with recorded preflight
 blockers.
