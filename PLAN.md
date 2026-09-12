@@ -5,9 +5,9 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `64544e7` (accepts the tested FSQC candidate)
+- Top-level commit: `cce6855` (accepts the tested FSQC candidate)
 - Pinned submodule: `neurocontainers@a9a30dd58530ec002184c2217ba8fcf3ed43c1c5`
-- Submodule checkout: `arm64/fsqc`, clean at accepted candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5`, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/integrate-panoptica-fsqc`, clean at candidate `9b1f7d7a2c2d3decae0de23cb3bfff124e821e80` based on accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 61 of 247 recipes declare ARM64 support at accepted source `a9a30dd5`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -232,6 +232,13 @@ prepared `pcntoolkit` candidate `6d232dc0827985a17117c56a7b19cd199207102b`
 started at `2026-09-12T12:34:28Z` as run `34694042021`, attempt 1, with
 deadline `2026-09-13T00:34:28Z`.
 
+The meganorm port declares `aarch64` with no other recipe changes. Validation
+and ARM64/x86_64 Dockerfile generation passed on branch `arm64/meganorm` at
+candidate `f2a8fc485f02fe6c0d40a79e52264330c278b584`, based on accepted source
+`a9a30dd5`. A malformed manually reconstructed ref was dispatched as run
+`34694862262` and canceled before build; it is not evidence. The exact Git SHA
+was then dispatched as run `34694878402` at `2026-09-12T12:52:44Z`.
+
 The panoptica commit was replayed onto accepted source `fb140e55` as
 `72dd4d35a21dc701301565c7cc8d8c60afaea542`; validation and both architecture
 generations passed. Its first integrated recheck, run `34694351552`, failed
@@ -245,6 +252,12 @@ generations passed. Its first integrated recheck, run `34694375047`, failed
 before checkout for the same unpublished-commit reason. The exact commit was
 then pushed to `arm64/integrate-pcntoolkit` and dispatched as retry run
 `34694590006` at `2026-09-12T12:46:24Z`.
+
+Because FSQC advanced the accepted pin to `a9a30dd5`, the Panoptica recipe
+commit was replayed onto that current pin as
+`9b1f7d7a2c2d3decae0de23cb3bfff124e821e80`; validation and both architecture
+generations passed. Its exact serial recheck is run `34694920638`, dispatched
+at `2026-09-12T12:53:41Z`.
 
 FSQC candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5` passed run
 `34694302517` with 109 tests and was accepted serially. Its top-level pointer
@@ -263,9 +276,10 @@ submodule SHA.
 | `gimp` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693583287](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693583287) | [#8](https://github.com/Vbitz/neurocontainers-arm64/issues/8) | verified: 7 passed |
 | `openrefine` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693584794](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693584794) | [#11](https://github.com/Vbitz/neurocontainers-arm64/issues/11) | verified: 2 passed |
 | `dwidenoise2` | accepted candidate `fb140e557113c668e65cd86060aa8ab1a8573a6a` based on `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/dwidenoise2` | [34693799839](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693799839) | [#61](https://github.com/Vbitz/neurocontainers-arm64/issues/61) | accepted: 5 passed; integrated |
-| `panoptica` | integrated candidate `72dd4d35a21dc701301565c7cc8d8c60afaea542` based on accepted source `fb140e557113c668e65cd86060aa8ab1a8573a6` (prior candidate `0e06c16b`) | `arm64/integrate-panoptica` | first [34694351552](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694351552), retry [34694588175](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694588175) | [#63](https://github.com/Vbitz/neurocontainers-arm64/issues/63) | retry in progress: exact integrated recheck |
-| `pcntoolkit` | integrated candidate `94903684137e1f47b8eb69a65525061cfbf1766c` based on accepted source `fb140e557113c668e65cd86060aa8ab1a8573a6` (prior candidate `6d232dc0`) | `arm64/integrate-pcntoolkit` | first [34694375047](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694375047), retry [34694590006](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694590006) | [#62](https://github.com/Vbitz/neurocontainers-arm64/issues/62) | retry in progress: exact integrated recheck |
-| `fsqc` | accepted candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5` based on accepted source `fb140e557113c668e65cd86060aa8ab1a8573a6` | `arm64/fsqc` | [34694302517](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694302517) | [#64](https://github.com/Vbitz/neurocontainers-arm64/issues/64) | accepted: 109 passed; integrated |
+| `panoptica` | serial candidate `9b1f7d7a2c2d3decae0de23cb3bfff124e821e80` based on accepted source `a9a30dd5` (prior integrated candidate `72dd4d35`) | `arm64/integrate-panoptica-fsqc` | prior [34694588175](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694588175), serial [34694920638](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694920638) | [#63](https://github.com/Vbitz/neurocontainers-arm64/issues/63) | in progress: exact serial integration recheck |
+| `pcntoolkit` | integrated candidate `94903684137e1f47b8eb69a65525061cfbf1766c` based on accepted source `fb140e55` (prior candidate `6d232dc0`) | `arm64/integrate-pcntoolkit` | [34694590006](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694590006) | [#62](https://github.com/Vbitz/neurocontainers-arm64/issues/62) | verified on prior pin; replay onto accepted Panoptica pin after Panoptica passes |
+| `fsqc` | accepted candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5` based on accepted source `fb140e55` | `arm64/fsqc` | [34694302517](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694302517) | [#64](https://github.com/Vbitz/neurocontainers-arm64/issues/64) | accepted: 109 passed; integrated |
+| `meganorm` | candidate `f2a8fc485f02fe6c0d40a79e52264330c278b584` based on accepted source `a9a30dd5` | `arm64/meganorm` | malformed [34694862262](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694862262) canceled before build; exact [34694878402](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694878402) | [#65](https://github.com/Vbitz/neurocontainers-arm64/issues/65) | in progress: exact candidate build and fulltest |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
 | `datalad` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685666449](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685666449) | [#12](https://github.com/Vbitz/neurocontainers-arm64/issues/12) | verified: 10 passed; retain as accepted pin evidence |
@@ -391,7 +405,8 @@ submodule SHA.
 
 ## Next action
 
-Monitor the GOUHFI retry and the exact Panoptica and PCNtoolkit integration
-retries, record each result, and accept only passing integrated SHAs. After
-these candidates, continue screening practical undeclared ports from the
-accepted `a9a30dd5` pin.
+Monitor GOUHFI, meganorm, and the Panoptica serial recheck. If Panoptica
+passes, replay PCNtoolkit onto that new accepted pin, validate both generated
+architectures, and dispatch its exact SHA before accepting it. Continue
+screening practical undeclared ports from the accepted `a9a30dd5` pin as slots
+allow.
