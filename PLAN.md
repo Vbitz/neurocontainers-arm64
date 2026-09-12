@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `b5ae8e0840af9feadfed332ba073ca10a2a8f5ac`
+- Top-level commit: `138f9d65a1e496b18522539f3d1d0fa637c576a0`
 - Pinned submodule: `neurocontainers@c6d782cd73cf88ccc44b837f705967b810519086`
 - Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
