@@ -115,7 +115,7 @@ The segmentator verification started at `2026-09-12T10:17:38Z`.
 | `functionnectome` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687208365](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687208365) | [#26](https://github.com/Vbitz/neurocontainers-arm64/issues/26) | verified: 4 passed |
 | `dicomtools` | `e430edb9d9a595878a619cb4bb00a68056665daf` | `arm64/dicomtools` | [34687413104](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687413104) | [#27](https://github.com/Vbitz/neurocontainers-arm64/issues/27) | verified: 179 passed; integrated into accepted pin |
 | `rapidtide` | integrated candidate `7e6a7a4072bcad0644b06bb7a7b8433c22a38c7c` | `arm64/integrate-rapidtide` | [34688020789](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688020789) | [#30](https://github.com/Vbitz/neurocontainers-arm64/issues/30) | current-pin recheck in progress |
-| `radtract` | integrated candidate `031ff4750b9097aa0a552eb2efcccef00ab38a3b` | `arm64/integrate-radtract` | [34687953581](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687953581) | [#29](https://github.com/Vbitz/neurocontainers-arm64/issues/29) | current-pin recheck in progress |
+| `radtract` | `031ff4750b9097aa0a552eb2efcccef00ab38a3b` | `arm64/dicomtools` | [34687953581](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687953581) | [#29](https://github.com/Vbitz/neurocontainers-arm64/issues/29) | verified: 3 passed; integrated into accepted pin |
 | `lqt` | accepted pin `e430edb9d9a595878a619cb4bb00a68056665daf` | pinned accepted branch | [34687969649](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687969649) | [#28](https://github.com/Vbitz/neurocontainers-arm64/issues/28) | current-pin recheck in progress |
 | `segmentator` | accepted pin `e430edb9d9a595878a619cb4bb00a68056665daf` | pinned accepted branch | [34688060966](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688060966) | pending | verification in progress |
 
@@ -146,11 +146,12 @@ The segmentator verification started at `2026-09-12T10:17:38Z`.
 - `cbsb0stats` / `arm64`: accepted-pin run `34687077011`, source `7bd4f9ee`, 6 passed, 0 failed, 0 skipped; issue [#25](https://github.com/Vbitz/neurocontainers-arm64/issues/25).
 - `functionnectome` / `arm64`: accepted-pin run `34687208365`, source `7bd4f9ee`, 4 passed, 0 failed, 0 skipped; issue [#26](https://github.com/Vbitz/neurocontainers-arm64/issues/26).
 - `dicomtools` / `arm64`: run `34687413104`, candidate source `e430edb9`, 179 passed, 0 failed, 0 skipped; issue [#27](https://github.com/Vbitz/neurocontainers-arm64/issues/27).
+- `radtract` / `arm64`: run `34687953581`, integrated source `031ff475`, 3 passed, 0 failed, 0 skipped; issue [#29](https://github.com/Vbitz/neurocontainers-arm64/issues/29).
 
 ## Integration
 
-- Accepted integration SHA: `e430edb9d9a595878a619cb4bb00a68056665daf`
-- Top-level submodule pointer advances from `7bd4f9ee` to the tested dicomtools candidate.
+- Accepted integration SHA: `031ff4750b9097aa0a552eb2efcccef00ab38a3b`
+- Top-level submodule pointer advances from `e430edb9` to the tested radtract candidate; dicomtools remains included.
 
 ## Next action
 
