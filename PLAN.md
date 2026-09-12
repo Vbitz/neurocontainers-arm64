@@ -130,6 +130,12 @@ QSMxT candidate `b7c54813713c74d6c707b800d8e26c622bcbb3f1` was validated,
 generated for both architectures, pushed to `arm64/qsmxt`, and dispatched as
 run `34696583728` at `2026-09-12T13:29:51Z`; its per-container issue is pending
 workflow creation.
+
+MNE investigation started at `2026-09-12T13:30:58Z` on attempt 1 with a
+12-hour deadline of `2026-09-13T01:30:58Z`, from accepted source
+`fbce330df22a4152be2a2be2e67ae5e959f8148c`. The proposed change selects the
+official ARM64 VS Code Debian package on `aarch64` while preserving the x86_64
+download and the existing conda-based MNE runtime tests.
 The segmentator current-pin recheck on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:37:36Z`
 as run `34688945692`.
@@ -329,6 +335,7 @@ submodule SHA.
 | `deepdisco` | accepted candidate `fbce330df22a4152be2a2be2e67ae5e959f8148c` based on accepted source `31091ade121699a43a8745a2633e325f47c99061` | `arm64/deepdisco` | [34696205436](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696205436) | [#67](https://github.com/Vbitz/neurocontainers-arm64/issues/67) | accepted: 2 passed; integrated |
 | `flames` | candidate `9614409505d9d6102528c33f972290572e655bf4` based on accepted source `31091ade121699a43a8745a2633e325f47c99061` | `arm64/flames` | [34696329756](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696329756) | pending workflow creation | in progress: exact ARM64 build and fulltest |
 | `qsmxt` | candidate `b7c54813713c74d6c707b800d8e26c622bcbb3f1` based on accepted source `fbce330df22a4152be2a2be2e67ae5e959f8148c` | `arm64/qsmxt` | [34696583728](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696583728) | pending workflow creation | in progress: exact ARM64 build and fulltest |
+| `mne` | baseline accepted source `fbce330df22a4152be2a2be2e67ae5e959f8148c` | `arm64/mne` | pending | pending dispatch | in progress: add architecture-conditional VS Code asset, validate both generations, then dispatch exact candidate |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
