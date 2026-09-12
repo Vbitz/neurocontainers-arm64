@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `5d1fe2b` (qMRLab integration recheck checkpoint)
-- Pinned submodule: `neurocontainers@9602df1a290918704615776c8c52916c374fd0c4` (Sodiumnufft accepted; top-level acceptance commit pending)
-- Submodule checkout: `arm64/integrate-sodiumnufft-sodiumgridding`, candidate `9602df1a290918704615776c8c52916c374fd0c4` from accepted source `cd7950c00e93503648e96270f58104fae11f5718`; origin `Vbitz/neurocontainers`
+- Top-level commit: `ce5aa60` (Sodiumnufft acceptance checkpoint)
+- Pinned submodule: `neurocontainers@9602df1a290918704615776c8c52916c374fd0c4` (Sodiumnufft accepted)
+- Submodule checkout: `arm64/epirecon`, candidate `313f47d4958cd5f69d718edd05656f9f41526d28` from accepted source `9602df1a290918704615776c8c52916c374fd0c4`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: pending refresh after accepting Sodiumnufft (expected 78 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -57,6 +57,15 @@ produced. Corrected exact candidate run `34705290732` was dispatched with
 `upload_image=false` and passed with 5 passed, 0 failed, and 0 skipped. The
 recipe commit is accepted at the top-level submodule pointer after this
 checkpoint commit.
+
+Epirecon investigation started at `2026-09-13T02:36:57Z` on attempt 1 from
+accepted source `9602df1a290918704615776c8c52916c374fd0c4`. Candidate
+`313f47d4958cd5f69d718edd05656f9f41526d28` on branch `arm64/epirecon` adds
+only `aarch64`. It reuses the accepted OpenRecon source build and the pinned
+portable `twixtools` dependency; its fulltest includes a synthetic Cartesian
+FFT point-source reconstruction assertion. Validation and both architecture
+generations passed. Exact run `34705779719` was dispatched with
+`upload_image=false` and is queued.
 
 ## Queue
 
