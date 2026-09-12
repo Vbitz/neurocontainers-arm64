@@ -5,7 +5,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `4813d0e` (PALM acceptance and coverage refresh checkpoint)
+- Top-level commit: `e8470d0` (PALM acceptance and coverage refresh checkpoint)
 - Pinned submodule: `neurocontainers@6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85` (PALM accepted)
 - Submodule checkout: `arm64/integrate-palm-synthstrip`, candidate `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85` from accepted source `e90ee1a49ec687dd8582d10e7fb68546a008ecd4`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
