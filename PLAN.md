@@ -5,8 +5,8 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `1d2a6d325b25808187fec0aa3499a75587e1fe29`
-- Pinned submodule: `neurocontainers@e430edb9d9a595878a619cb4bb00a68056665daf`
+- Top-level commit: `0946b86a0c117482d5b4ab7de8ac6d6fc327326d`
+- Pinned submodule: `neurocontainers@c6d782cd73cf88ccc44b837f705967b810519086`
 - Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34684189569](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34684189569), 4 passed, source `87e1c726`
@@ -124,7 +124,7 @@ started at `2026-09-12T10:31:43Z` as run `34688683840`.
 | `cbsb0stats` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687077011](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687077011) | [#25](https://github.com/Vbitz/neurocontainers-arm64/issues/25) | verified: 6 passed |
 | `functionnectome` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687208365](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687208365) | [#26](https://github.com/Vbitz/neurocontainers-arm64/issues/26) | verified: 4 passed |
 | `dicomtools` | `e430edb9d9a595878a619cb4bb00a68056665daf` | `arm64/dicomtools` | [34687413104](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687413104) | [#27](https://github.com/Vbitz/neurocontainers-arm64/issues/27) | verified: 179 passed; integrated into accepted pin |
-| `rapidtide` | integrated candidate `c6d782cd73cf88ccc44b837f705967b810519086` | `arm64/integrate-rapidtide-radtract` | [34688458132](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688458132) | [#30](https://github.com/Vbitz/neurocontainers-arm64/issues/30) | final accepted-pin recheck in progress |
+| `rapidtide` | `c6d782cd73cf88ccc44b837f705967b810519086` | `arm64/dicomtools` | [34688458132](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688458132) | [#30](https://github.com/Vbitz/neurocontainers-arm64/issues/30) | verified: 5 passed; integrated into accepted pin |
 | `radtract` | `031ff4750b9097aa0a552eb2efcccef00ab38a3b` | `arm64/dicomtools` | [34687953581](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687953581) | [#29](https://github.com/Vbitz/neurocontainers-arm64/issues/29) | verified: 3 passed; integrated into accepted pin |
 | `lqt` | accepted pin `031ff4750b9097aa0a552eb2efcccef00ab38a3b` | pinned accepted branch | [34688683840](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688683840) | [#28](https://github.com/Vbitz/neurocontainers-arm64/issues/28) | final accepted-pin recheck in progress |
 | `segmentator` | accepted pin `e430edb9d9a595878a619cb4bb00a68056665daf` | pinned accepted branch | [34688060966](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688060966) | [#31](https://github.com/Vbitz/neurocontainers-arm64/issues/31) | verified: 5 passed |
@@ -159,12 +159,13 @@ started at `2026-09-12T10:31:43Z` as run `34688683840`.
 - `functionnectome` / `arm64`: accepted-pin run `34687208365`, source `7bd4f9ee`, 4 passed, 0 failed, 0 skipped; issue [#26](https://github.com/Vbitz/neurocontainers-arm64/issues/26).
 - `dicomtools` / `arm64`: run `34687413104`, candidate source `e430edb9`, 179 passed, 0 failed, 0 skipped; issue [#27](https://github.com/Vbitz/neurocontainers-arm64/issues/27).
 - `radtract` / `arm64`: run `34687953581`, integrated source `031ff475`, 3 passed, 0 failed, 0 skipped; issue [#29](https://github.com/Vbitz/neurocontainers-arm64/issues/29).
+- `rapidtide` / `arm64`: run `34688458132`, integrated source `c6d782cd`, 5 passed, 0 failed, 0 skipped; issue [#30](https://github.com/Vbitz/neurocontainers-arm64/issues/30).
 - `segmentator` / `arm64`: run `34688060966`, source `e430edb9`, 5 passed, 0 failed, 0 skipped; issue [#31](https://github.com/Vbitz/neurocontainers-arm64/issues/31).
 
 ## Integration
 
-- Accepted integration SHA: `031ff4750b9097aa0a552eb2efcccef00ab38a3b`
-- Top-level submodule pointer advances from `e430edb9` to the tested radtract candidate; dicomtools remains included.
+- Accepted integration SHA: `c6d782cd73cf88ccc44b837f705967b810519086`
+- Top-level submodule pointer advances from `031ff475` to the tested rapidtide candidate; dicomtools and radtract remain included.
 
 ## Next action
 
