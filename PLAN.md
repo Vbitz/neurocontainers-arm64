@@ -7,7 +7,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 - Top-level branch: `main`
 - Top-level commit: `417cd2a` (MipView acceptance checkpoint)
 - Pinned submodule: `neurocontainers@d7de67d4647d4bfb50eb14f799afd34fd57d3c34` (MipView accepted)
-- Submodule checkout: `arm64/sodiumgridding`, candidate `cd7950c0c13bce3ee0ef7d2a5442e4e1f82c6814` from accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/sodiumnufft`, candidate `444e18aea84dbd67c7e939cba1eccbeab52007bb` from accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: pending refresh after accepting MipView (expected 76 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -31,12 +31,23 @@ current accepted pin.
 
 Sodiumgridding investigation started at `2026-09-13T02:24:10Z` on attempt 1
 from accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`. Candidate
-`cd7950c0c13bce3ee0ef7d2a5442e4e1f82c6814` on branch `arm64/sodiumgridding`
+`cd7950c00e93503648e96270f58104fae11f5718` on branch `arm64/sodiumgridding`
 adds only `aarch64`. The OpenRecon source build is already covered by the
 accepted OpenRecon I2I result, and the pinned numba, pyFFTW, and SimpleITK
 releases publish Linux ARM64 wheels. Validation and both architecture
-generations passed. Exact run `34705129164` was dispatched with
-`upload_image=false`; it is queued/in progress.
+generations passed. The first dispatch `34705129164` failed before checkout
+because of an incorrect ref string and produced no recipe evidence. Corrected
+exact candidate run `34705231419` was dispatched with `upload_image=false` and
+is queued.
+
+Sodiumnufft investigation started at `2026-09-13T02:25:40Z` on attempt 1 from
+accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`. Candidate
+`444e18aea84dbd67c7e939cba1eccbeab52007bb` on branch `arm64/sodiumnufft`
+adds only `aarch64`; its pinned sigpy dependency is a pure Python wheel and it
+uses the same ARM64-tested OpenRecon source build. Validation and both
+architecture generations passed. Run `34705192559` was dispatched with an
+incorrect ref string and is failing during source checkout; after it finishes,
+record the checkout error and dispatch the corrected full SHA.
 
 ## Queue
 
