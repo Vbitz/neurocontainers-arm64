@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `25ae6096da7fb15d7cec275617e3fb88b7312eef`
+- Top-level commit: `962bf67108119a720d693a82a3428930b84553c5`
 - Pinned submodule: `neurocontainers@c6d782cd73cf88ccc44b837f705967b810519086`
 - Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -137,13 +137,17 @@ The XNAT verification on accepted source
 as run `34690473020`.
 The DAFNE verification on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T11:14:17Z`
-as run `34690518800`.
+as run `34690518800`; its native headless GUI startup returned exit 139 after
+the other checks passed, and the issue records it as blocked upstream.
 The HNN-core verification on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T11:18:17Z`
-as run `34690701313`.
+as run `34690701313` and passed 73 tests.
 The VesselVio verification on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T11:19:45Z`
 as run `34690762333`.
+The Topaz verification on accepted source
+`c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T11:23:41Z`
+as run `34690938300`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -192,9 +196,10 @@ as run `34690762333`.
 | `blastct` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690252022](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690252022) | [#45](https://github.com/Vbitz/neurocontainers-arm64/issues/45) | verified: 6 passed |
 | `nighres` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690354693](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690354693) | [#47](https://github.com/Vbitz/neurocontainers-arm64/issues/47) | verified: 70 passed |
 | `xnat` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690473020](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690473020) | [#46](https://github.com/Vbitz/neurocontainers-arm64/issues/46) | verified: 99 passed |
-| `dafne` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690518800](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690518800) | pending | queued |
-| `hnncore` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690701313](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690701313) | pending | queued |
+| `dafne` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690518800](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690518800) | [#48](https://github.com/Vbitz/neurocontainers-arm64/issues/48) | blocked-upstream: headless GUI exit 139; revisit only with a direct upstream fix |
+| `hnncore` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690701313](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690701313) | [#49](https://github.com/Vbitz/neurocontainers-arm64/issues/49) | verified: 73 passed |
 | `vesselvio` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690762333](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690762333) | pending | queued |
+| `topaz` | accepted pin `c6d782cd73cf88ccc44b837f705967b810519086` | pinned accepted branch | [34690938300](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34690938300) | pending | in progress |
 
 ## Verified results
 
@@ -244,6 +249,12 @@ as run `34690762333`.
 - `xnat` / `arm64`: run `34690473020`, source `c6d782cd`, 99 passed, 0 failed, 0 skipped; issue [#46](https://github.com/Vbitz/neurocontainers-arm64/issues/46).
 - `nighres` / `arm64`: run `34690354693`, source `c6d782cd`, 70 passed, 0 failed, 0 skipped; issue [#47](https://github.com/Vbitz/neurocontainers-arm64/issues/47).
 
+- `hnncore` / `arm64`: run `34690701313`, source `c6d782cd`, 73 passed, 0 failed, 0 skipped; issue [#49](https://github.com/Vbitz/neurocontainers-arm64/issues/49).
+
+## Blocked or failed results
+
+- `dafne` / `arm64`: run `34690518800`, source `c6d782cd`, 10 passed and 1 failed in the fulltest runner; native headless GUI startup exited 139. Issue [#48](https://github.com/Vbitz/neurocontainers-arm64/issues/48) records the upstream blocker and revisit condition.
+
 ## Integration
 
 - Accepted integration SHA: `c6d782cd73cf88ccc44b837f705967b810519086`
@@ -251,6 +262,6 @@ as run `34690762333`.
 
 ## Next action
 
-Monitor the HDBET, AMICO, GLMsingle, and Batchheudiconv runs, record each
-result in its issue and this plan, then refill a slot with the next eligible
-recipe while keeping the queue synchronized.
+Monitor VesselVio and Topaz, record each result in its issue and this plan,
+then refill available slots with the next eligible declared recipe. Reconcile
+the remaining declared inventory before ending the run.
