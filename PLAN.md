@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `0f8e061` (Sodiumgriddingptpi acceptance checkpoint)
+- Top-level commit: `f44d32e` (SynthStrip acceptance and coverage refresh checkpoint)
 - Pinned submodule: `neurocontainers@e90ee1a49ec687dd8582d10e7fb68546a008ecd4` (SynthStrip accepted)
 - Submodule checkout: `arm64/integrate-synthstrip-current`, candidate `e90ee1a49ec687dd8582d10e7fb68546a008ecd4` from accepted source `15a0dd8efbaf96fe820c8f09658aea41629f805b`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: pending refresh after accepting SynthStrip (expected 82 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 82 of 247 declarations, refreshed from accepted source; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Latest checkpoint
 
