@@ -33,8 +33,9 @@ native ARM64 run `34698395635` with 70 passed, 0 failed, and 0 skipped. The
 same one line recipe commit was applied to the current accepted ancestry as
 `e90ee1a49ec687dd8582d10e7fb68546a008ecd4`; local validation and both
 architecture generations passed, so no duplicate run was dispatched. Stale
-integration run `34703210392` remains active and will be accounted for
-separately.
+integration run `34703210392` also completed successfully with 70 passed, 0
+failed, and 0 skipped; it is bookkeeping only because its source `8533a146`
+is not the accepted pin.
 
 Sodiumgridding investigation started at `2026-09-13T02:24:10Z` on attempt 1
 from accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`. Candidate
@@ -895,7 +896,7 @@ submodule SHA.
   MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
   SynthStrip, PALM, and wfTFI integrations. The earlier SynthStrip exact candidate run
   passed and was integrated by ancestry; its stale duplicate integration run
-  remains active only for bookkeeping. PALM is integrated; ANTs has an exact
+  also passed 70 tests and is bookkeeping only. PALM is integrated; ANTs has an exact
   native ARM64 run in progress.
   CLEARSWI and Spinal Cord Toolbox are blocked upstream;
   MNEextended is blocked
