@@ -5,12 +5,12 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `7ef1f0c` (accepts the tested MeGANorm candidate and records active candidate investigations)
-- Pinned submodule: `neurocontainers@31091ade121699a43a8745a2633e325f47c99061`
-- Submodule checkout: `arm64/deepdisco`, clean at candidate `fbce330df22a4152be2a2be2e67ae5e959f8148c` based on accepted `31091ade121699a43a8745a2633e325f47c99061`, origin `Vbitz/neurocontainers`; top-level pointer remains at the accepted source during investigation
+- Top-level commit: `e8955b6` (accepts the tested DeepDisco candidate)
+- Pinned submodule: `neurocontainers@fbce330df22a4152be2a2be2e67ae5e959f8148c`
+- Submodule checkout: `arm64/deepdisco`, clean at accepted candidate `fbce330df22a4152be2a2be2e67ae5e959f8148c`, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 64 of 247 recipes declare ARM64 support at accepted source `31091ade`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 65 of 247 recipes declare ARM64 support at accepted source `fbce330df22a4152be2a2be2e67ae5e959f8148c`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Queue
 
@@ -106,8 +106,8 @@ loads a bundled model checkpoint.
 
 DeepDisco candidate `fbce330df22a4152be2a2be2e67ae5e959f8148c` was validated,
 generated for both architectures, pushed to `arm64/deepdisco`, and dispatched
-as run `34696205436` at `2026-09-12T13:21:29Z`; its per-container issue is
-pending workflow creation.
+as run `34696205436` at `2026-09-12T13:21:29Z`. It passed 2 tests and was
+accepted serially as the current pinned source; issue [#67](https://github.com/Vbitz/neurocontainers-arm64/issues/67) has the run and evidence links.
 
 FLAMeS investigation started at `2026-09-12T13:22:48Z` on attempt 1 with a
 12-hour deadline of `2026-09-13T01:22:48Z`, from accepted source
@@ -315,7 +315,7 @@ submodule SHA.
 | `pcntoolkit` | serial candidate `70118cbab3e931402a951dae5ba66b63e30f051d` based on accepted source `9b1f7d7a` (prior integrated candidate `94903684`) | `arm64/integrate-pcntoolkit-panoptica` | prior [34694590006](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694590006), serial [34695171335](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34695171335) | [#62](https://github.com/Vbitz/neurocontainers-arm64/issues/62) | in progress: exact serial integration recheck |
 | `fsqc` | accepted candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5` based on accepted source `fb140e55` | `arm64/fsqc` | [34694302517](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694302517) | [#64](https://github.com/Vbitz/neurocontainers-arm64/issues/64) | accepted: 109 passed; integrated |
 | `meganorm` | accepted candidate `31091ade121699a43a8745a2633e325f47c99061` based on accepted source `70118cba` (prior candidate `f2a8fc48`) | `arm64/integrate-meganorm-pcntoolkit` | prior [34694878402](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694878402), serial [34695477795](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34695477795) | [#65](https://github.com/Vbitz/neurocontainers-arm64/issues/65) | accepted: 11 passed; integrated |
-| `deepdisco` | candidate `fbce330df22a4152be2a2be2e67ae5e959f8148c` based on accepted source `31091ade121699a43a8745a2633e325f47c99061` | `arm64/deepdisco` | [34696205436](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696205436) | pending workflow creation | in progress: exact ARM64 build and fulltest |
+| `deepdisco` | accepted candidate `fbce330df22a4152be2a2be2e67ae5e959f8148c` based on accepted source `31091ade121699a43a8745a2633e325f47c99061` | `arm64/deepdisco` | [34696205436](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696205436) | [#67](https://github.com/Vbitz/neurocontainers-arm64/issues/67) | accepted: 2 passed; integrated |
 | `flames` | candidate `9614409505d9d6102528c33f972290572e655bf4` based on accepted source `31091ade121699a43a8745a2633e325f47c99061` | `arm64/flames` | [34696329756](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696329756) | pending workflow creation | in progress: exact ARM64 build and fulltest |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
@@ -430,6 +430,7 @@ submodule SHA.
 - `dwidenoise2` / `arm64`: run `34693799839`, accepted source `fb140e55`, 5 passed, 0 failed, 0 skipped; issue [#61](https://github.com/Vbitz/neurocontainers-arm64/issues/61). Candidate is integrated into the accepted pin.
 - `fsqc` / `arm64`: run `34694302517`, accepted source `a9a30dd5`, 109 passed, 0 failed, 0 skipped; issue [#64](https://github.com/Vbitz/neurocontainers-arm64/issues/64). Candidate is integrated into the accepted pin.
 - `meganorm` / `arm64`: run `34695477795`, accepted source `31091ade`, 11 passed, 0 failed, 0 skipped; issue [#65](https://github.com/Vbitz/neurocontainers-arm64/issues/65). Candidate is integrated into the accepted pin.
+- `deepdisco` / `arm64`: run `34696205436`, accepted source `fbce330d`, 2 passed, 0 failed, 0 skipped; issue [#67](https://github.com/Vbitz/neurocontainers-arm64/issues/67). Candidate is integrated into the accepted pin.
 
 ## Blocked or failed results
 
@@ -440,11 +441,11 @@ submodule SHA.
 
 ## Integration
 
-- Accepted integration SHA: `31091ade121699a43a8745a2633e325f47c99061`
-- Top-level submodule pointer advances from `70118cba` to the tested MeGANorm candidate; BrkRaw, Brainlife CLI, dicomtools, radtract, rapidtide, dwidenoise2, FSQC, Panoptica, and PCNtoolkit remain included.
+- Accepted integration SHA: `fbce330df22a4152be2a2be2e67ae5e959f8148c`
+- Top-level submodule pointer advances from `31091ade` to the tested DeepDisco candidate; BrkRaw, Brainlife CLI, dicomtools, radtract, rapidtide, dwidenoise2, FSQC, Panoptica, PCNtoolkit, and MeGANorm remain included.
 
 ## Next action
 
-Monitor the GOUHFI infrastructure retry. After it resolves, continue screening
+Monitor the GOUHFI infrastructure retry and the FLAMeS exact build. After they resolve, continue screening
 practical undeclared ports and record preflight blockers from the accepted
-`31091ade` pin as slots allow.
+`fbce330d` pin as slots allow.
