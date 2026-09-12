@@ -5,9 +5,9 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `f0d9f3d66451f9fdb0b7b1c1e7e08644a4d54bb5`
+- Top-level commit: `06269c8a97f294c83e19585c9e824f7609f42f3f`
 - Pinned submodule: `neurocontainers@c6d782cd73cf88ccc44b837f705967b810519086`
-- Submodule checkout: `arm64/brkraw`, clean at candidate `35e45882`, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/brainlifecli`, clean at candidate `5b401fe0`, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34684189569](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34684189569), 4 passed, source `87e1c726`
 - Coverage snapshot: 57 of 247 recipes declare ARM64 support at accepted source `c6d782cd`; the tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -184,6 +184,12 @@ Candidate port ready for dispatch: `brkraw` branch `arm64/brkraw`, candidate
 The one-line `aarch64` declaration passed validation and ARM64/x86_64
 Dockerfile generation; its exact candidate was dispatched at
 `2026-09-12T12:03:28Z` as run `34692637652`.
+
+Second candidate port ready for dispatch: `brainlifecli` branch
+`arm64/brainlifecli`, candidate `5b401fe0` based on accepted source
+`c6d782cd73cf88ccc44b837f705967b810519086`. Its one-line `aarch64`
+declaration passed validation and ARM64/x86_64 Dockerfile generation; dispatch
+its exact candidate when a workflow slot is available.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
