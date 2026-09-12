@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `7835370` (OpenRecon candidates checkpoint)
+- Top-level commit: `3600872` (OpenRecon ARM64 recipes accepted)
 - Pinned submodule: `neurocontainers@2884a0e6a7d23e43fc51f58e32302ecc3689c27e` (OpenRecon example and Bloch-Siegert accepted in this checkpoint)
 - Submodule checkout: `arm64/integrate-openrecon-blochsiegert`, integrated candidate `2884a0e6a7d23e43fc51f58e32302ecc3689c27e` from accepted source `9a383b0d951f71725f2a2dade16a12e372bd6253`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 84 of 247 declarations, pending refresh from accepted source `2884a0e6`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 86 of 247 declarations, refreshed from accepted source `2884a0e6`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Latest checkpoint
 
@@ -918,8 +918,8 @@ submodule SHA.
 
 ## Next action
 
-Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was last
-refreshed from accepted source `9a383b0d`; refresh it after this acceptance.
+Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed
+from accepted source `2884a0e6` and now reports 86 of 247 declarations.
 The exact native runs `34708194854` and `34708203749` verified
 `openreconexample` and `blochsiegertb1mapping`, respectively, and their
 independent declarations are integrated at `2884a0e6`. Monitor ANTs run
