@@ -1,11 +1,11 @@
 # ARM64 porting checkpoint
 
-Updated: 2026-09-12 (Australia/Brisbane)
+Updated: 2026-09-13 (Australia/Brisbane)
 
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `7b61cca` (checkpoint after recording the Spinal Cord Toolbox blocker)
+- Top-level commit: `784cea9` (checkpoint after recording the Spinal Cord Toolbox blocker)
 - Pinned submodule: `neurocontainers@bb3f660d9c3ec0718df2f558cd15450eaffd8260`
 - Submodule checkout: `arm64/integrate-synthstroke`, clean at accepted candidate `bb3f660d9c3ec0718df2f558cd15450eaffd8260`, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -240,6 +240,21 @@ PyQt5 5.15.11 source distribution stayed in `Preparing metadata` for about 13
 minutes before the build process ended with exit 143. No SIF or fulltest ran;
 this is blocked-upstream pending a supported PyQt5 ARM64 wheel or documented
 ARM64 source-build path.
+
+CLEARSWI investigation started at `2026-09-12T14:38:25Z` on attempt 1 with a
+12-hour deadline of `2026-09-13T02:38:25Z`, from accepted source
+`f8a66f994161507e1399826980f78c90fcec6e19`. Candidate
+`86c62b327f7ddc784df2eb114f7bdd3f7f8ae091` on `arm64/clearswi` selects the
+official Julia Linux ARM64 archive while preserving the x86_64 archive. It
+passed validation and both architecture generations. Exact run
+`34699875754` installed and precompiled the Julia dependencies, then failed
+during PackageCompiler sysimage generation with Julia LLVM instruction
+selection error `i64 = vscale Constant:i64<1>` in
+`HostCPUFeatures/src/cpu_info_aarch64.jl`, followed by signal 6. No SIF or
+fulltest ran; this is blocked-upstream pending an upstream Julia/LLVM/
+PackageCompiler ARM64 fix or documented generic sysimage path. Issue
+[#75](https://github.com/Vbitz/neurocontainers-arm64/issues/75) records the
+first error and revisit condition.
 The segmentator current-pin recheck on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:37:36Z`
 as run `34688945692`.
@@ -447,7 +462,7 @@ submodule SHA.
 | `synthstrip` | candidate `d166adbd7ef00e723a322f03e8232b1de4d2cf57` based on accepted source `56253af1` | `arm64/synthstrip` | ref-failure [34698365483](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698365483), exact [34698395635](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698395635) | [#72](https://github.com/Vbitz/neurocontainers-arm64/issues/72) | in progress: exact ARM64 candidate |
 | `synthstroke` | accepted candidate `bb3f660d9c3ec0718df2f558cd15450eaffd8260` based on accepted source `f8a66f99` (prior `9e66780d`) | `arm64/integrate-synthstroke` | ref-failure [34698867860](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698867860), first exact [34698887077](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698887077), exact [34699377187](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699377187), serial [34699910413](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699910413) | [#73](https://github.com/Vbitz/neurocontainers-arm64/issues/73) | accepted: 4 passed; integrated at bb3f660d |
 | `spinalcordtoolbox` | retry candidate `3dac0979b1d71e7f4a5d2a9e8d5c8dc08e9a5b0` based on accepted source `f8a66f99` (prior `2e72afcc`) | `arm64/spinalcordtoolbox` | first exact [34699323574](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699323574), retry exact [34699607997](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699607997) | [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74) | blocked-upstream: PyQt5 ARM64 source metadata build terminated with exit 143 after qmake fix |
-| `clearswi` | candidate `86c62b32` based on accepted source `f8a66f99` | `arm64/clearswi` | exact [34699875754](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699875754) | pending workflow issue | in progress: exact ARM64 candidate |
+| `clearswi` | candidate `86c62b327f7ddc784df2eb114f7bdd3f7f8ae091` based on accepted source `f8a66f99` | `arm64/clearswi` | exact [34699875754](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699875754) | [#75](https://github.com/Vbitz/neurocontainers-arm64/issues/75) | blocked-upstream: Julia LLVM ARM64 `vscale` instruction-selection failure during PackageCompiler sysimage generation |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
@@ -575,14 +590,15 @@ submodule SHA.
 - `gouhfi` / `arm64`: runs `34691452949` and `34694039302` both built the native ARM64 image but failed exporting it with `no space left on device`; SIF conversion and fulltest did not run. Issue [#60](https://github.com/Vbitz/neurocontainers-arm64/issues/60) records the exhausted unchanged retry and revisit condition.
 - `mneextended` / `arm64`: exact run `34698395577`, candidate `91ac9396`, reached the native ARM64 Docker build but failed before SIF conversion and fulltest. After the pyedflib wheel and `trame-client<4` fix, `pip check` reported `trame 3.13.2` requires `trame-server<4,>=3.12.2` while `trame-server 4.0.0` is installed. Issue [#70](https://github.com/Vbitz/neurocontainers-arm64/issues/70) records the three-attempt investigation and upstream blocker.
 - `spinalcordtoolbox` / `arm64`: exact retry `34699607997`, candidate `3dac0979`, installed qmake and resolved ARM64 packages but the pinned PyQt5 5.15.11 source metadata build was terminated with exit 143 after about 13 minutes. Issue [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74) records the two-attempt upstream blocker and revisit condition.
+- `clearswi` / `arm64`: exact run `34699875754`, candidate `86c62b32`, installed and precompiled the Julia dependency set but failed during PackageCompiler sysimage generation with the ARM64 LLVM `vscale` instruction-selection error in `HostCPUFeatures`. No SIF or fulltest ran. Issue [#75](https://github.com/Vbitz/neurocontainers-arm64/issues/75) records the upstream blocker and revisit condition.
 
 ## Integration
 
 - Accepted integration SHA: `bb3f660d9c3ec0718df2f558cd15450eaffd8260`
 - Top-level submodule pointer accepts the tested MNE and SynthStroke
-  integrations. SynthStrip and CLEARSWI are in exact rechecks from earlier
-  accepted bases and require serial integration from this pin; Spinal Cord
-  Toolbox is blocked upstream;
+  integrations. SynthStrip is in an exact recheck from an earlier accepted
+  base and requires serial integration from this pin if it passes. CLEARSWI
+  and Spinal Cord Toolbox are blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
   rapidtide, dwidenoise2, FSQC, Panoptica, PCNtoolkit, MeGANorm, DeepDisco, and
@@ -590,7 +606,7 @@ submodule SHA.
 
 ## Next action
 
-Monitor the SynthStrip and CLEARSWI runs. Accept only exact integrated runs
-from the current pin, then
-refresh issue #2 and continue screening practical
-undeclared ports with recorded preflight blockers.
+Monitor the healthy SynthStrip run. If it passes, rebase its recipe commit
+onto the current accepted pin and require a serial exact recheck before
+advancing the top-level pointer; then refresh issue #2 and continue screening
+practical undeclared ports with recorded preflight blockers.
