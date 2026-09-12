@@ -5,7 +5,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `3600872` (OpenRecon ARM64 recipes accepted)
+- Top-level commit: `1edd0a0` (OpenRecon coverage checkpoint; this PLAN update is the next checkpoint)
 - Pinned submodule: `neurocontainers@2884a0e6a7d23e43fc51f58e32302ecc3689c27e` (OpenRecon example and Bloch-Siegert accepted in this checkpoint)
 - Submodule checkout: `arm64/integrate-openrecon-blochsiegert`, integrated candidate `2884a0e6a7d23e43fc51f58e32302ecc3689c27e` from accepted source `9a383b0d951f71725f2a2dade16a12e372bd6253`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -115,7 +115,8 @@ accepted source `9a383b0d951f71725f2a2dade16a12e372bd6253`; deadline
 build and FSL-BET2 build already exercised by the accepted OpenRecon I2I
 recipe. Validation and both architecture generations passed. An invalid
 short-ref dispatch `34708172513` was cancelled during source checkout before
-recipe work; corrected exact run `34708194854` is in progress. Attempt budget:
+recipe work; corrected exact run `34708194854` passed with 6 passed, 0 failed,
+and 0 skipped. Attempt budget:
 2/6 including the cancelled metadata-only dispatch.
 
 `blochsiegertb1mapping` investigation started at `2026-09-12T17:23:50Z` from
@@ -147,6 +148,14 @@ existing Neurodocker template, and the fulltest runs version checks, image
 conversion, denoising, thresholding, and smoothing operations. Validation and
 both architecture generations passed. Exact run `34706765954` was dispatched
 with `upload_image=false` and is still building; attempt budget is 1/6.
+
+Elastix preflight completed on 2026-09-13. The pinned 5.1.0 recipe downloads
+only the upstream Ubuntu 20.04 Linux binary, with no ARM64 Linux asset
+identified. Its CMake source build requires an externally provisioned ITK 5.3
+installation, so this is a blocked-upstream preflight result rather than a
+bounded recipe configuration port. Issue [#92](https://github.com/Vbitz/neurocontainers-arm64/issues/92)
+records the evidence and revisit condition; no candidate branch or build was
+created.
 
 wfTFI investigation started at `2026-09-12T17:07:17Z` from accepted source
 `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85`; the 12-hour deadline is
@@ -768,6 +777,7 @@ submodule SHA.
 | `openreconexample` | accepted candidate `2884a0e6a7d23e43fc51f58e32302ecc3689c27e` integrating `2eaed2732a85fa475cb823a336c62f682b8df90b` on accepted `9a383b0d` | `arm64/integrate-openrecon-blochsiegert` | cancelled ref [34708172513](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34708172513); exact [34708194854](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34708194854) | [#90](https://github.com/Vbitz/neurocontainers-arm64/issues/90) | accepted: 6 passed; integrated without duplicate run |
 | `blochsiegertb1mapping` | accepted candidate `2884a0e6a7d23e43fc51f58e32302ecc3689c27e` integrating `93a11a16885aec3a548584bb9f3f332fe726df1b` on accepted `9a383b0d` | `arm64/integrate-openrecon-blochsiegert` | exact [34708203749](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34708203749) | [#91](https://github.com/Vbitz/neurocontainers-arm64/issues/91) | accepted: 2 passed; integrated without duplicate run |
 | `ants` | candidate `f48620a9503c3f532fa16c1b1e9ccc96778a86c6` based on accepted source `e90ee1a4` | `arm64/ants` | exact [34706765954](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34706765954) | pending workflow issue | in progress |
+| `elastix` | accepted source `2884a0e6a7d23e43fc51f58e32302ecc3689c27e`; no candidate | preflight | no run | [#92](https://github.com/Vbitz/neurocontainers-arm64/issues/92) | blocked-upstream: no ARM64 Linux release asset; source build requires ITK 5.3 |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
@@ -909,7 +919,8 @@ submodule SHA.
   SynthStrip, PALM, wfTFI, OpenRecon example, and Bloch-Siegert integrations. The earlier SynthStrip exact candidate run
   passed and was integrated by ancestry; its stale duplicate integration run
   also passed 70 tests and is bookkeeping only. PALM is integrated; ANTs has an exact
-  native ARM64 run in progress.
+  native ARM64 run in progress. Elastix is recorded as a preflight upstream
+  blocker.
   CLEARSWI and Spinal Cord Toolbox are blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
@@ -923,10 +934,9 @@ from accepted source `2884a0e6` and now reports 86 of 247 declarations.
 The exact native runs `34708194854` and `34708203749` verified
 `openreconexample` and `blochsiegertb1mapping`, respectively, and their
 independent declarations are integrated at `2884a0e6`. Monitor ANTs run
-`34706765954`. The stale
-SynthStrip run `34703210392` completed successfully and needs bookkeeping only.
-Record the ANTs report and integrate its tested commit onto the current
-accepted pin; because its candidate is based on an older source, dispatch one
-exact integrated recheck if it passes. Classify the first actionable error
-within its recorded budget if it fails, then continue screening the next
-eligible undeclared recipe.
+`34706765954`; if it passes, integrate its isolated recipe commit onto the
+current accepted pin without a duplicate native run, following the user's
+instruction to reuse successful independent recipe evidence. If it fails,
+classify the first actionable error within its recorded budget and continue
+with the remaining preflight inventory. Elastix is already recorded as blocked
+upstream, and the stale SynthStrip run `34703210392` needs bookkeeping only.
