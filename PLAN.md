@@ -5,9 +5,9 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `792ef3b9ef6ba10ed4809d2f88b53161233d83ef`
+- Top-level commit: `1c890ec22d6d46ca3e56734e5c18de54da3b5f5b`
 - Pinned submodule: `neurocontainers@f50c2fbc4377e4a19312019488e4323a189ef453`
-- Submodule checkout: `arm64/dwidenoise2`, clean at candidate `fb140e55` based on the accepted pin, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/dwidenoise2`, clean at candidate `fb140e557113c668e65cd86060aa8ab1a8573a6a` based on the accepted pin, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 59 of 247 recipes declare ARM64 support at accepted source `f50c2fbc`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -212,10 +212,13 @@ The next two slots are assigned to exact accepted-pin checks for `gimp` and
 Dispatch them after this checkpoint and record their run IDs here.
 
 Candidate port ready for dispatch: `dwidenoise2` branch `arm64/dwidenoise2`,
-candidate `fb140e55` based on accepted source
+candidate `fb140e557113c668e65cd86060aa8ab1a8573a6a` based on accepted source
 `f50c2fbc4377e4a19312019488e4323a189ef453`. The only recipe change is
 declaring `aarch64`; validation and ARM64/x86_64 Dockerfile generation passed.
-Dispatch it after this checkpoint.
+An invalid unverified ref was dispatched once and cancelled before source
+checkout; it produced no build evidence. The exact candidate was then
+dispatched at `2026-09-12T12:29:15Z` as run `34693799839`, attempt 1, with
+deadline `2026-09-13T00:29:15Z`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -228,7 +231,7 @@ Dispatch it after this checkpoint.
 | `heudiconv` | accepted source `35e458827fb6522c147e4bd99121d1ed631dd6f7` (prior `87e1c726`) | pinned accepted branch | [34693323676](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693323676) | [#9](https://github.com/Vbitz/neurocontainers-arm64/issues/9) | verified: 69 passed |
 | `gimp` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693583287](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693583287) | [#8](https://github.com/Vbitz/neurocontainers-arm64/issues/8) | in progress: exact accepted-pin recheck |
 | `openrefine` | accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` (prior `87e1c726`) | pinned accepted branch | [34693584794](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693584794) | [#11](https://github.com/Vbitz/neurocontainers-arm64/issues/11) | in progress: exact accepted-pin recheck |
-| `dwidenoise2` | candidate `fb140e55` based on accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/dwidenoise2` | pending | pending | candidate ready: dispatch exact commit |
+| `dwidenoise2` | candidate `fb140e557113c668e65cd86060aa8ab1a8573a6a` based on accepted source `f50c2fbc4377e4a19312019488e4323a189ef453` | `arm64/dwidenoise2` | [34693799839](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34693799839) | pending | in progress: exact candidate build and fulltest |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
 | `datalad` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685666449](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685666449) | [#12](https://github.com/Vbitz/neurocontainers-arm64/issues/12) | verified: 10 passed; retain as accepted pin evidence |
