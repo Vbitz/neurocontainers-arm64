@@ -5,9 +5,9 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `47b0ee4aa1e46ea727ec0b15665d5dd4b7511483`
+- Top-level commit: `f0d9f3d66451f9fdb0b7b1c1e7e08644a4d54bb5`
 - Pinned submodule: `neurocontainers@c6d782cd73cf88ccc44b837f705967b810519086`
-- Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/brkraw`, clean at candidate `35e45882`, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34684189569](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34684189569), 4 passed, source `87e1c726`
 - Coverage snapshot: 57 of 247 recipes declare ARM64 support at accepted source `c6d782cd`; the tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -178,6 +178,12 @@ and `niftyreg`; dispatch them after this checkpoint and record their run IDs
 here. `niimath` was dispatched at `2026-09-12T11:59:46Z` as run
 `34692464125`; `niftyreg` was dispatched at `2026-09-12T11:59:48Z` as run
 `34692465359`.
+
+Candidate port ready for dispatch: `brkraw` branch `arm64/brkraw`, candidate
+`35e45882` based on accepted source `c6d782cd73cf88ccc44b837f705967b810519086`.
+The one-line `aarch64` declaration passed validation and ARM64/x86_64
+Dockerfile generation; dispatch its exact candidate after this checkpoint
+when a workflow slot is available.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
