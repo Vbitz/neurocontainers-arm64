@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `80ee704` (Template corrected serial checkpoint)
+- Top-level commit: `f6d2fb5` (Template corrected serial and GingerALE checkpoint)
 - Pinned submodule: `neurocontainers@5534389f33c579fc39cb307c43fbf7d30b980478`
-- Submodule checkout: `arm64/integrate-template-vertexwiser`, corrected integrated candidate `0d53a8c8cdebd167e6eff657f7e1ef3ed636a24d` from accepted source `5534389f33c579fc39cb307c43fbf7d30b980478`; top-level pointer restored to the accepted source, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/integrate-gingerale`, integrated candidate `d2f84a203fa8db23f7bc32828d5b53c4b61f065e` from accepted source `5534389f33c579fc39cb307c43fbf7d30b980478`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 71 of 247 recipes declare ARM64 support at accepted source `5534389f33c579fc39cb307c43fbf7d30b980478`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -329,8 +329,12 @@ GingerALE investigation started at `2026-09-12T15:33:56Z` on attempt 1 with a
 `aee640961d9c5abab1b9a7257310a75c32b3def8` on `arm64/gingerale` declares
 `aarch64`; the recipe runs a portable Java JAR with Ubuntu OpenJDK. Validation
 and both architecture generations passed. Exact run `34702611171` was
-dispatched at `2026-09-12T15:33:56Z` with `upload_image=false`; issue creation
-is pending the workflow report.
+dispatched at `2026-09-12T15:33:56Z` with `upload_image=false`; it passed with
+51 passed, 0 failed, and 0 skipped. The integrated branch
+`arm64/integrate-gingerale` replays the recipe commit onto accepted source
+`5534389f`; validation and both architecture generations passed, and exact
+serial run `34703078533` was dispatched at `2026-09-12T15:43:19Z` with
+`upload_image=false`.
 The segmentator current-pin recheck on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:37:36Z`
 as run `34688945692`.
@@ -543,7 +547,7 @@ submodule SHA.
 | `vertexwiser` | accepted candidate `5534389f33c579fc39cb307c43fbf7d30b980478` cherry-picked from `881380dbc85bbf7460e8071c1334c9d8ac6c51c5` onto accepted `fb92480d` | `arm64/integrate-vertexwiser` | prior [34701117134](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701117134), serial [34701810565](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701810565) | [#77](https://github.com/Vbitz/neurocontainers-arm64/issues/77) | accepted: 10 passed; integrated |
 | `deep-quality-estimation` | integrated candidate `46d1a5ae9bb1881b7ecb7d36f41fdff27af5818a` replaying `74dd8ca6` and `891296e9` onto accepted `5534389f` | `arm64/integrate-deep-quality-estimation` | candidate [34702315565](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702315565), serial [34702770551](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702770551) | [#78](https://github.com/Vbitz/neurocontainers-arm64/issues/78) | in progress: serial integration recheck |
 | `template` | corrected integrated candidate `0d53a8c8cdebd167e6eff657f7e1ef3ed636a24d` based on accepted source `5534389f` (prior stale-base candidate `626fcf87`) | `arm64/integrate-template-vertexwiser` | candidate [34702446198](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702446198), stale-base serial [34702657955](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702657955), corrected serial [34703023438](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703023438) | [#79](https://github.com/Vbitz/neurocontainers-arm64/issues/79) | in progress: corrected serial integration recheck |
-| `gingerale` | candidate `aee640961d9c5abab1b9a7257310a75c32b3def8` based on accepted source `5534389f` | `arm64/gingerale` | exact [34702611171](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702611171) | pending workflow issue | in progress: native ARM64 build and runtime test |
+| `gingerale` | integrated candidate `d2f84a203fa8db23f7bc32828d5b53c4b61f065e` replaying `aee64096` onto accepted `5534389f` | `arm64/integrate-gingerale` | candidate [34702611171](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702611171), serial [34703078533](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703078533) | [#80](https://github.com/Vbitz/neurocontainers-arm64/issues/80) | in progress: serial integration recheck |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
