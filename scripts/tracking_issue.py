@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 import subprocess
 import sys
-from urllib.parse import unquote
+from urllib.parse import quote, unquote
 
 import yaml
 
@@ -16,15 +16,16 @@ ROOT = Path(__file__).resolve().parents[1]
 def render(checkout, issues):
     sys.path.insert(0, str(checkout))
     from builder.variants import concrete_variant_specs
+    from builder.release_artifact import find_latest_release_file
 
     sha = subprocess.check_output(
         ['git', '-C', str(checkout), 'rev-parse', 'HEAD'], text=True,
     ).strip()
     if subprocess.check_output(
-        ['git', '-C', str(checkout), 'status', '--porcelain', '--', 'recipes'],
+        ['git', '-C', str(checkout), 'status', '--porcelain', '--', 'recipes', 'releases'],
         text=True,
     ).strip():
-        raise RuntimeError('Commit recipe changes before generating a revision-based tracker')
+        raise RuntimeError('Commit recipe/release changes before generating a revision-based tracker')
     links = {}
     for issue in issues:
         match = re.search(r'<!-- arm64-container:([^:]+):([^ ]+) -->', issue.get('body') or '')
@@ -36,7 +37,8 @@ def render(checkout, issues):
     for recipe_file in sorted((checkout / 'recipes').glob('*/build.yaml')):
         recipe = recipe_file.parent.name
         data = yaml.safe_load(recipe_file.read_text())
-        variants = [spec['variant'] for spec in concrete_variant_specs(data)
+        specs = concrete_variant_specs(data)
+        variants = [spec['variant'] for spec in specs
                     if spec['architecture'] == 'aarch64']
         supported += bool(variants)
         line = f"- [{'x' if variants else ' '}] `{recipe}`"
@@ -44,6 +46,18 @@ def render(checkout, issues):
             line += ' — ARM64 variants: ' + ', '.join(f'`{v}`' for v in variants)
         if not recipe_file.with_name('fulltest.yaml').is_file():
             line += ' — missing fulltest.yaml'
+        releases = []
+        for container in sorted({recipe, *(spec['name'] for spec in specs)}):
+            path, version, date = find_latest_release_file(checkout / 'releases' / container)
+            if path:
+                releases.append((date or '', version, path))
+        if releases:
+            _, version, path = max(releases)
+            relative = quote(path.relative_to(checkout).as_posix(), safe='/')
+            line += (
+                f' — [release JSON ({version})]'
+                f'(https://github.com/Vbitz/neurocontainers/blob/{sha}/{relative})'
+            )
         if recipe in links:
             line += ' — ' + ', '.join(
                 f'[{variant} results]({url})' for variant, url in sorted(links[recipe])
@@ -62,6 +76,12 @@ def render(checkout, issues):
         'using the builder’s architecture resolver. It does **not** mean its '
         'ARM64 build and runtime tests have passed. Unchecked means no declared '
         'ARM64 variant, not that porting is impossible.\n\n'
+        'Release JSON links point to the latest available metadata across the '
+        'recipe and its declared variant directories, **on any architecture**. '
+        'Selection uses the builder’s newest-build-date ordering (version string '
+        'breaks ties). Links are pinned to the source commit above; absence means '
+        'no valid release metadata was found. A release link does not establish '
+        'ARM64 support.\n\n'
         'Build/test evidence lives in the linked per-container issues; '
         '[all result issues](https://github.com/Vbitz/neurocontainers-arm64/issues?q=is%3Aissue+label%3Aarm64-container). '
         'Each run records its own source revision. `workshopdemo` is only a '
