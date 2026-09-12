@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `e8470d0` (PALM acceptance and coverage refresh checkpoint)
+- Top-level commit: `222b0e3` (wfTFI dispatch checkpoint)
 - Pinned submodule: `neurocontainers@6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85` (PALM accepted)
-- Submodule checkout: `arm64/integrate-palm-synthstrip`, candidate `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85` from accepted source `e90ee1a49ec687dd8582d10e7fb68546a008ecd4`; origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/wftfi`, candidate `9a383b0d951f71725f2a2dade16a12e372bd6253` from accepted source `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 83 of 247 declarations, refreshed from accepted source; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -105,7 +105,7 @@ while ARM64 uses the compiler defaults. Upstream ANTs source is built by the
 existing Neurodocker template, and the fulltest runs version checks, image
 conversion, denoising, thresholding, and smoothing operations. Validation and
 both architecture generations passed. Exact run `34706765954` was dispatched
-with `upload_image=false` and is queued; attempt budget is 1/6.
+with `upload_image=false` and is still building; attempt budget is 1/6.
 
 wfTFI investigation started at `2026-09-12T17:07:17Z` from accepted source
 `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85`; the 12-hour deadline is
@@ -116,9 +116,19 @@ URL, and its conda-forge environment contains portable Python numerical
 dependencies plus the upstream cbviewer source. Local validation and both
 architecture generations passed. An initial dispatch `34707269633` used a
 short, invalid source ref and is metadata-only; corrected exact run
-`34707282986` uses the full candidate SHA, with `upload_image=false`, and is
-pending. Count the malformed dispatch as attempt 1 and the corrected run as
-attempt 2/6; it produced no recipe evidence.
+`34707282986` uses the full candidate SHA, with `upload_image=false`, and
+failed during the ARM64 Docker build. The first actionable error was
+`GLIBC_2.25 not found` from the ARM64 Miniconda installer; no SIF or runtime
+tests were produced. Count the malformed dispatch as attempt 1 and this exact
+run as attempt 2/6; it produced no recipe evidence beyond the configuration
+failure.
+
+wfTFI retry hypothesis: candidate `9a383b0d951f71725f2a2dade16a12e372bd6253`
+on `arm64/wftfi` changes only the base image from Ubuntu 16.04 to Ubuntu 18.04,
+which supplies the required glibc while preserving the conda environment and
+both x86_64 and ARM64 paths. Validation and both architecture generations
+passed. Exact retry `34707462294` was dispatched with `upload_image=false`;
+attempt budget is 3/6.
 
 ## Queue
 
