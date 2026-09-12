@@ -5,12 +5,12 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `1154d3f` (accepts the tested Panoptica candidate)
-- Pinned submodule: `neurocontainers@a9a30dd58530ec002184c2217ba8fcf3ed43c1c5`
+- Top-level commit: `cfce875` (accepts the tested Panoptica candidate)
+- Pinned submodule: `neurocontainers@9b1f7d7a2c2d3decae0de23cb3bfff124e821e80`
 - Submodule checkout: `arm64/integrate-pcntoolkit-panoptica`, clean at candidate `70118cbab3e931402a951dae5ba66b63e30f051d` based on accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 61 of 247 recipes declare ARM64 support at accepted source `a9a30dd5`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 62 of 247 recipes declare ARM64 support at accepted source `9b1f7d7a`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Queue
 
