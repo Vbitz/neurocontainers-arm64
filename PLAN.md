@@ -54,6 +54,10 @@ Dockerfile generations passed. Its exact integrated recheck is run
 The lqt accepted-pin recheck against `e430edb9d9a595878a619cb4bb00a68056665daf`
 is run `34687969649`.
 
+The declared `segmentator` verification against accepted pin
+`e430edb9d9a595878a619cb4bb00a68056665daf` is run `34688060966`. Its suite
+includes CLI help, imports, and a synthetic NIfTI histogram output assertion.
+
 ## Active attempts
 
 Initial verification started at `2026-09-12T09:09:37Z`; each recipe is on
@@ -81,6 +85,7 @@ deadline of `2026-09-12T22:07:29Z`.
 The radtract current-pin recheck started at `2026-09-12T10:15:12Z`; the lqt
 current-pin recheck started at `2026-09-12T10:15:30Z`; and the rapidtide
 current-pin recheck started at `2026-09-12T10:16:41Z`.
+The segmentator verification started at `2026-09-12T10:17:38Z`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -112,6 +117,7 @@ current-pin recheck started at `2026-09-12T10:16:41Z`.
 | `rapidtide` | integrated candidate `7e6a7a4072bcad0644b06bb7a7b8433c22a38c7c` | `arm64/integrate-rapidtide` | [34688020789](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688020789) | [#30](https://github.com/Vbitz/neurocontainers-arm64/issues/30) | current-pin recheck in progress |
 | `radtract` | integrated candidate `031ff4750b9097aa0a552eb2efcccef00ab38a3b` | `arm64/integrate-radtract` | [34687953581](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687953581) | [#29](https://github.com/Vbitz/neurocontainers-arm64/issues/29) | current-pin recheck in progress |
 | `lqt` | accepted pin `e430edb9d9a595878a619cb4bb00a68056665daf` | pinned accepted branch | [34687969649](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687969649) | [#28](https://github.com/Vbitz/neurocontainers-arm64/issues/28) | current-pin recheck in progress |
+| `segmentator` | accepted pin `e430edb9d9a595878a619cb4bb00a68056665daf` | pinned accepted branch | [34688060966](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688060966) | pending | verification in progress |
 
 ## Verified results
 
