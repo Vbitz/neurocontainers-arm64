@@ -5,7 +5,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `222b0e3` (wfTFI dispatch checkpoint)
+- Top-level commit: `b36247a` (wfTFI retry checkpoint)
 - Pinned submodule: `neurocontainers@6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85` (PALM accepted)
 - Submodule checkout: `arm64/wftfi`, candidate `9a383b0d951f71725f2a2dade16a12e372bd6253` from accepted source `6fe8f9f21abbb8ad7058b6bc26eef81b9b39db85`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
