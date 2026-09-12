@@ -7,7 +7,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 - Top-level branch: `main`
 - Top-level commit: `bf80173` (accepts the tested MNE integration)
 - Pinned submodule: `neurocontainers@f8a66f994161507e1399826980f78c90fcec6e19`
-- Submodule checkout: `arm64/synthstroke`, clean at candidate `9e66780db53cae25e95c28e55fc79b78905dff19`, based on accepted `f8a66f994161507e1399826980f78c90fcec6e19`, origin `Vbitz/neurocontainers`; top-level pointer remains at accepted `f8a66f99` during active rechecks
+- Submodule checkout: `arm64/spinalcordtoolbox`, clean at retry candidate `3dac0979b1d71e7f4a5d2a9e8d5c8dc08e9a5b0`, based on accepted `f8a66f994161507e1399826980f78c90fcec6e19`, origin `Vbitz/neurocontainers`; top-level pointer remains at accepted `f8a66f99` during active rechecks
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 68 of 247 recipes declare ARM64 support at accepted source `f8a66f994161507e1399826980f78c90fcec6e19`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -206,9 +206,28 @@ a 12-hour deadline of `2026-09-13T02:17:50Z`, from accepted source
 validation and both architecture generations, selects the architecture-matched
 official Miniconda installer, and adds a bundled baseline inference assertion.
 Its abbreviated-ref dispatch failed before checkout as run `34698867860`;
-corrected exact full-SHA run `34698887077` was dispatched at
-`2026-09-12T14:18:12Z`. Issue [#73](https://github.com/Vbitz/neurocontainers-arm64/issues/73)
-records the checkpoint.
+corrected exact full-SHA run `34698887077` built and converted successfully but
+the added assertion used an undefined output variable. Retry candidate
+`bb3f660d9c3ec0718df2f558cd15450eaffd8260` corrects that path, passed
+validation and both architecture generations, and was dispatched as exact run
+`34699377187` at `2026-09-12T14:28:16Z`. Issue
+[#73](https://github.com/Vbitz/neurocontainers-arm64/issues/73) records the
+failure, hypothesis, and retry.
+
+Spinal Cord Toolbox investigation started at `2026-09-12T14:27:11Z` on attempt
+1 with a 12-hour deadline of `2026-09-13T02:27:11Z`, from accepted source
+`f8a66f994161507e1399826980f78c90fcec6e19`. Candidate
+`2e72afcc66bab2d8076e7fb48cffaf9119cef2be` declares `aarch64` and conditionally
+rewrites the pinned upstream installer to use the official Miniforge Linux
+ARM64 asset, while preserving x86_64 and the GPU-only variant. Validation and
+both architecture generations passed. Exact run `34699323574` was dispatched
+at `2026-09-12T14:27:11Z` and failed during the pinned PyQt5 5.15.11 source
+metadata build because qmake was unavailable. The targeted fix added Ubuntu
+`qtbase5-dev`; validation and both architecture generations passed. Retry
+candidate `3dac0979b1d71e7f4a5d2a9e8d5c8dc08e9a5b0` was dispatched as exact run
+`34699607997` at `2026-09-12T14:32:56Z`. Issue
+[#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74) records the
+first error, hypothesis, and retry.
 The segmentator current-pin recheck on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:37:36Z`
 as run `34688945692`.
@@ -414,7 +433,8 @@ submodule SHA.
 | `mne` | accepted candidate `f8a66f994161507e1399826980f78c90fcec6e19` based on accepted source `56253af1` (prior verified `953c23b9`) | `arm64/integrate-mne-qsmxt` | prior [34696735862](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34696735862), serial [34698033237](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698033237) | [#70](https://github.com/Vbitz/neurocontainers-arm64/issues/70) | accepted: 6 passed; integrated |
 | `mneextended` | candidate `91ac9396f876ee9835d13cb72903ad17a8f95d5a` based on prior accepted source `fbce330d` (prior `108f2d4a`, `f31fde3e`) | `arm64/mneextended` | prior [34697506684](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34697506684), retry [34697784145](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34697784145), ref-failure [34698178019](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698178019), exact [34698395577](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698395577) | [#70](https://github.com/Vbitz/neurocontainers-arm64/issues/70) | blocked-upstream: cascading trame constraints (`trame-server<4` required, 4.0.0 installed) |
 | `synthstrip` | candidate `d166adbd7ef00e723a322f03e8232b1de4d2cf57` based on accepted source `56253af1` | `arm64/synthstrip` | ref-failure [34698365483](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698365483), exact [34698395635](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698395635) | [#72](https://github.com/Vbitz/neurocontainers-arm64/issues/72) | in progress: exact ARM64 candidate |
-| `synthstroke` | candidate `9e66780db53cae25e95c28e55fc79b78905dff19` based on accepted source `f8a66f99` | `arm64/synthstroke` | ref-failure [34698867860](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698867860), exact [34698887077](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698887077) | [#73](https://github.com/Vbitz/neurocontainers-arm64/issues/73) | in progress: exact ARM64 candidate |
+| `synthstroke` | retry candidate `bb3f660d9c3ec0718df2f558cd15450eaffd8260` based on accepted source `f8a66f99` (prior `9e66780d`) | `arm64/synthstroke` | ref-failure [34698867860](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698867860), first exact [34698887077](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698887077), retry exact [34699377187](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699377187) | [#73](https://github.com/Vbitz/neurocontainers-arm64/issues/73) | in progress: exact retry after correcting fulltest output path |
+| `spinalcordtoolbox` | retry candidate `3dac0979b1d71e7f4a5d2a9e8d5c8dc08e9a5b0` based on accepted source `f8a66f99` (prior `2e72afcc`) | `arm64/spinalcordtoolbox` | first exact [34699323574](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699323574), retry exact [34699607997](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699607997) | [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74) | in progress: exact retry with qmake dependency |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
@@ -545,14 +565,15 @@ submodule SHA.
 ## Integration
 
 - Accepted integration SHA: `f8a66f994161507e1399826980f78c90fcec6e19`
-- Top-level submodule pointer accepts the tested MNE integration. SynthStrip
-  and SynthStroke are in exact rechecks from this pin; MNEextended is blocked
+- Top-level submodule pointer accepts the tested MNE integration. SynthStrip,
+  SynthStroke, and Spinal Cord Toolbox are in exact rechecks from this pin;
+  MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
   rapidtide, dwidenoise2, FSQC, Panoptica, PCNtoolkit, MeGANorm, DeepDisco, and
   FLAMeS remain included.
 
 ## Next action
 
-Monitor the SynthStrip and SynthStroke runs. Accept only exact integrated runs
-from the current pin, then refresh issue #2 and continue screening practical
+Monitor the SynthStrip, SynthStroke, and Spinal Cord Toolbox runs. Accept only
+exact integrated runs from the current pin, then refresh issue #2 and continue screening practical
 undeclared ports with recorded preflight blockers.
