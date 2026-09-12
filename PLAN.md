@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `ebbabb4` (GingerALE final current-pin dispatch checkpoint)
+- Top-level commit: `18eee95` (qMRLab dispatch checkpoint)
 - Pinned submodule: `neurocontainers@ffe5f289da8da47c006835876a86dcd07138b208`
-- Submodule checkout: `arm64/integrate-gingerale-template`, integrated candidate `7592907bb1caf8c3da996156e87f765a727c8719` from accepted source `ffe5f289da8da47c006835876a86dcd07138b208`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/qmrlab`, candidate `bb0992471ae46822b94e8fc8200793f20efd64bf` from accepted source `ffe5f289da8da47c006835876a86dcd07138b208`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: pending refresh after accepting Template (expected 73 of 247); tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -350,6 +350,16 @@ replays the recipe commit onto accepted Template source `ffe5f289`; validation
 and both architecture generations passed. Exact serial run `34703768813` was
 dispatched at `2026-09-12T15:57:20Z` with `upload_image=false` and is in
 progress.
+
+qMRLab investigation started at `2026-09-13T01:58:46Z` on attempt 1 from
+accepted source `ffe5f289da8da47c006835876a86dcd07138b208`. Candidate
+`bb0992471ae46822b94e8fc8200793f20efd64bf` on `arm64/qmrlab` adds `aarch64`
+to the source-based qMRLab 2.4.2 recipe. The Ubuntu 24.04 base installs
+Octave and the existing fulltest exercises model listing and instantiation,
+synthetic signal simulations, and NIfTI data I/O. Validation and both
+architecture generations passed. Exact serial candidate run
+`34703869679` was dispatched at `2026-09-13T01:59:34Z` with
+`upload_image=false` and is queued.
 The segmentator current-pin recheck on accepted source
 `c6d782cd73cf88ccc44b837f705967b810519086` started at `2026-09-12T10:37:36Z`
 as run `34688945692`.
@@ -562,6 +572,7 @@ submodule SHA.
 | `vertexwiser` | accepted candidate `5534389f33c579fc39cb307c43fbf7d30b980478` cherry-picked from `881380dbc85bbf7460e8071c1334c9d8ac6c51c5` onto accepted `fb92480d` | `arm64/integrate-vertexwiser` | prior [34701117134](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701117134), serial [34701810565](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701810565) | [#77](https://github.com/Vbitz/neurocontainers-arm64/issues/77) | accepted: 10 passed; integrated |
 | `deep-quality-estimation` | accepted candidate `46d1a5ae9bb1881b7ecb7d36f41fdff27af5818a` replaying `74dd8ca6` and `891296e9` onto accepted `5534389f` | `arm64/integrate-deep-quality-estimation` | candidate [34702315565](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702315565), serial [34702770551](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702770551) | [#78](https://github.com/Vbitz/neurocontainers-arm64/issues/78) | accepted: 11 passed; integrated |
 | `template` | accepted candidate `ffe5f289da8da47c006835876a86dcd07138b208` based on accepted source `46d1a5ae` (prior `0d53a8c8`) | `arm64/integrate-template-dqe` | candidate [34702446198](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702446198), prior serial [34703023438](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703023438), current serial [34703327433](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703327433) | [#79](https://github.com/Vbitz/neurocontainers-arm64/issues/79) | accepted: 2 passed; integrated |
+| `qmrlab` | candidate `bb0992471ae46822b94e8fc8200793f20efd64bf` based on accepted source `ffe5f289` | `arm64/qmrlab` | serial [34703869679](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703869679) | pending workflow issue | in progress: exact current accepted-pin run queued |
 | `gingerale` | integrated candidate `7592907bb1caf8c3da996156e87f765a727c8719` based on accepted source `ffe5f289` (prior `448b1de1`) | `arm64/integrate-gingerale-template` | candidate [34702611171](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34702611171), prior serial [34703078533](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703078533), stale serial [34703452146](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703452146), final serial [34703768813](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34703768813) | [#80](https://github.com/Vbitz/neurocontainers-arm64/issues/80) | in progress: final current accepted-pin serial recheck |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
@@ -697,8 +708,9 @@ submodule SHA.
 - Accepted integration SHA: `ffe5f289da8da47c006835876a86dcd07138b208`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly, and
   VertexWiseR, Deep Quality Estimation, and Template integrations. GingerALE
-  has an in-progress run from the prior accepted pin and requires a serial
-  recheck from this new pin; SynthStrip is in the same state.
+  and qMRLab have in-progress exact runs from the current accepted pin;
+  SynthStrip has a stale run and requires a final replay after GingerALE and
+  qMRLab acceptance as applicable.
   CLEARSWI and Spinal Cord Toolbox are blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
@@ -707,8 +719,8 @@ submodule SHA.
 
 ## Next action
 
-Wait for GingerALE final serial run `34703768813` and the stale SynthStrip run
-`34703210392`. Accept GingerALE if its exact current-pin run passes, refresh
-issue #2, then replay SynthStrip onto the resulting accepted pin and dispatch
-its final serial run. Continue screening practical undeclared ports with
-recorded preflight blockers.
+Wait for GingerALE `34703768813`, qMRLab `34703869679`, and stale SynthStrip
+`34703210392`. Accept successful current-pin candidates serially, refreshing
+issue #2 after each accepted pin. Then replay SynthStrip onto the resulting
+accepted pin and dispatch its final serial run. Continue screening practical
+undeclared ports with recorded preflight blockers.
