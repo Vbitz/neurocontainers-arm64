@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `fb6af3895d3fc969d902f139d935318fdd64dada`
+- Top-level commit: `6e54e5c43ee3abe72ec5405dd81b2039904b499c`
 - Pinned submodule: `neurocontainers@7bd4f9ee9734c4dd3a449290c39955f009f081d3`
 - Submodule checkout: `arm64/globus`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -55,10 +55,11 @@ attempt 1 with a deadline of `2026-09-12T21:46:06Z`.
 | `mricron` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685692303](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685692303) | [#13](https://github.com/Vbitz/neurocontainers-arm64/issues/13) | verified: 105 passed; retain as accepted pin evidence |
 | `libreoffice` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685794423](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685794423) | [#16](https://github.com/Vbitz/neurocontainers-arm64/issues/16) | verified: 3 passed; retain as accepted pin evidence |
 | `globus` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` (baseline `87e1c726`) | `arm64/globus` | [34686096832](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686096832) | [#14](https://github.com/Vbitz/neurocontainers-arm64/issues/14) | verified; integrated into top-level pin |
-| `bidstools` | accepted recheck `7bd4f9ee` (baseline `87e1c726`) | pinned `main` | baseline [34686282914](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686282914); recheck [34686613888](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686613888) | [#20](https://github.com/Vbitz/neurocontainers-arm64/issues/20) | accepted-pin recheck in progress; baseline 12 passed |
-| `dicompare` | accepted recheck `7bd4f9ee` (baseline `87e1c726`) | pinned `main` | baseline [34686283152](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686283152); recheck [34686615747](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686615747) | [#19](https://github.com/Vbitz/neurocontainers-arm64/issues/19) | accepted-pin recheck queued; baseline 105 passed |
-| `eharmonize` | accepted recheck `7bd4f9ee` (baseline `87e1c726`) | pinned `main` | baseline [34686283058](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686283058); recheck [34686618053](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686618053) | [#18](https://github.com/Vbitz/neurocontainers-arm64/issues/18) | accepted-pin recheck queued; baseline 6 passed |
+| `bidstools` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` (baseline `87e1c726`) | pinned accepted branch | baseline [34686282914](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686282914); accepted [34686613888](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686613888) | [#20](https://github.com/Vbitz/neurocontainers-arm64/issues/20) | verified: 12 passed |
+| `dicompare` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` (baseline `87e1c726`) | pinned accepted branch | baseline [34686283152](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686283152); accepted [34686615747](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686615747) | [#19](https://github.com/Vbitz/neurocontainers-arm64/issues/19) | verified: 105 passed |
+| `eharmonize` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` (baseline `87e1c726`) | pinned accepted branch | baseline [34686283058](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686283058); accepted [34686618053](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686618053) | [#18](https://github.com/Vbitz/neurocontainers-arm64/issues/18) | verified: 6 passed |
 | `afib1` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34686701687](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686701687) | pending | current-pin verification in progress |
+| `arfiproc` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34686847933](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686847933) | pending | current-pin verification queued |
 
 ## Verified results
 
@@ -77,10 +78,11 @@ attempt 1 with a deadline of `2026-09-12T21:46:06Z`.
 - `apptainer` / `arm64`: run `34685647267`, source `87e1c726`, 6 passed, 0 failed, 0 skipped; issue [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15).
 - `libreoffice` / `arm64`: run `34685794423`, source `87e1c726`, 3 passed, 0 failed, 0 skipped; issue [#16](https://github.com/Vbitz/neurocontainers-arm64/issues/16).
 - `globus` / `arm64`: run `34686096832`, source `7bd4f9ee`, 72 passed, 0 failed, 0 skipped; issue [#14](https://github.com/Vbitz/neurocontainers-arm64/issues/14).
-- `bidstools` / `arm64`: baseline run `34686282914`, source `87e1c726`, 12 passed, 0 failed, 0 skipped; accepted-pin recheck [34686613888](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686613888) pending; issue [#20](https://github.com/Vbitz/neurocontainers-arm64/issues/20).
-- `dicompare` / `arm64`: baseline run `34686283152`, source `87e1c726`, 105 passed, 0 failed, 0 skipped; accepted-pin recheck [34686615747](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686615747) pending; issue [#19](https://github.com/Vbitz/neurocontainers-arm64/issues/19).
-- `eharmonize` / `arm64`: baseline run `34686283058`, source `87e1c726`, 6 passed, 0 failed, 0 skipped; accepted-pin recheck [34686618053](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686618053) pending; issue [#18](https://github.com/Vbitz/neurocontainers-arm64/issues/18).
+- `bidstools` / `arm64`: accepted-pin run `34686613888`, source `7bd4f9ee`, 12 passed, 0 failed, 0 skipped; issue [#20](https://github.com/Vbitz/neurocontainers-arm64/issues/20).
+- `dicompare` / `arm64`: accepted-pin run `34686615747`, source `7bd4f9ee`, 105 passed, 0 failed, 0 skipped; issue [#19](https://github.com/Vbitz/neurocontainers-arm64/issues/19).
+- `eharmonize` / `arm64`: accepted-pin run `34686618053`, source `7bd4f9ee`, 6 passed, 0 failed, 0 skipped; issue [#18](https://github.com/Vbitz/neurocontainers-arm64/issues/18).
 - `afib1` / `arm64`: accepted-pin run [34686701687](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686701687) pending; issue to be created by the workflow reporter.
+- `arfiproc` / `arm64`: accepted-pin run [34686847933](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34686847933) pending; issue to be created by the workflow reporter.
 
 ## Integration
 
@@ -89,6 +91,5 @@ attempt 1 with a deadline of `2026-09-12T21:46:06Z`.
 
 ## Next action
 
-Review the three accepted-pin rechecks and `afib1`, record their final issue
-outcomes, then continue with the next eligible declared recipes while keeping
-this queue synchronized.
+Review `afib1` and `arfiproc`, record their final issue outcomes, then continue
+with the next eligible declared recipes while keeping this queue synchronized.
