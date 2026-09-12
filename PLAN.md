@@ -267,6 +267,11 @@ before checkout as run `34700948284`; corrected exact run `34701138583` is now
 queued with `upload_image=false`. Issue creation is pending the workflow
 report.
 
+The corrected run built and converted successfully and passed deploy checks and
+fulltest with 2 passed, 0 failed, and 0 skipped. Issue
+[#76](https://github.com/Vbitz/neurocontainers-arm64/issues/76) records the
+verified candidate and the required serial integration recheck.
+
 VertexWiseR investigation started at `2026-09-12T15:04:18Z` on attempt 1 with
 a 12-hour deadline of `2026-09-13T03:04:18Z`, from accepted source
 `bb3f660d9c3ec0718df2f558cd15450eaffd8260`. Candidate
@@ -484,7 +489,7 @@ submodule SHA.
 | `synthstroke` | accepted candidate `bb3f660d9c3ec0718df2f558cd15450eaffd8260` based on accepted source `f8a66f99` (prior `9e66780d`) | `arm64/integrate-synthstroke` | ref-failure [34698867860](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698867860), first exact [34698887077](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34698887077), exact [34699377187](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699377187), serial [34699910413](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699910413) | [#73](https://github.com/Vbitz/neurocontainers-arm64/issues/73) | accepted: 4 passed; integrated at bb3f660d |
 | `spinalcordtoolbox` | retry candidate `3dac0979b1d71e7f4a5d2a9e8d5c8dc08e9a5b0` based on accepted source `f8a66f99` (prior `2e72afcc`) | `arm64/spinalcordtoolbox` | first exact [34699323574](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699323574), retry exact [34699607997](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699607997) | [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74) | blocked-upstream: PyQt5 ARM64 source metadata build terminated with exit 143 after qmake fix |
 | `clearswi` | candidate `86c62b327f7ddc784df2eb114f7bdd3f7f8ae091` based on accepted source `f8a66f99` | `arm64/clearswi` | exact [34699875754](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699875754) | [#75](https://github.com/Vbitz/neurocontainers-arm64/issues/75) | blocked-upstream: Julia LLVM ARM64 `vscale` instruction-selection failure during PackageCompiler sysimage generation |
-| `qsmbly` | candidate `fb92480d3132c936de1c3cd4b88cb9e6cc61cb11` based on accepted source `bb3f660d` | `arm64/qsmbly` | ref-failure [34700948284](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34700948284), corrected exact [34701138583](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701138583) | [#76](https://github.com/Vbitz/neurocontainers-arm64/issues/76) | in progress: native ARM64 build and runtime test |
+| `qsmbly` | candidate `fb92480d3132c936de1c3cd4b88cb9e6cc61cb11` based on accepted source `bb3f660d` | `arm64/qsmbly` | ref-failure [34700948284](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34700948284), corrected exact [34701138583](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701138583) | [#76](https://github.com/Vbitz/neurocontainers-arm64/issues/76) | verified candidate: 2 passed; pending serial integration recheck |
 | `vertexwiser` | candidate `881380dbc85bbf7460e8071c1334c9d8ac6c51c5` based on accepted source `bb3f660d` | `arm64/vertexwiser` | exact [34701117134](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34701117134) | pending workflow issue | in progress: native ARM64 build and runtime test |
 | `openadscpu` | accepted source `70118cba`; no candidate | preflight | no run | [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66) | blocked-upstream: pinned antspyx 0.5.4 has no Linux ARM64 wheel; revisit on upstream ARM64 support |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
@@ -619,9 +624,9 @@ submodule SHA.
 
 - Accepted integration SHA: `bb3f660d9c3ec0718df2f558cd15450eaffd8260`
 - Top-level submodule pointer accepts the tested MNE and SynthStroke
-  integrations. SynthStrip and QSMbly are in exact rechecks from accepted
-  bases and require serial integration from this pin if they pass. CLEARSWI
-  and Spinal Cord Toolbox are blocked upstream;
+  integrations. SynthStrip and VertexWiseR are in exact rechecks from accepted
+  bases. QSMbly passed its candidate run and requires a serial integration
+  recheck from this pin. CLEARSWI and Spinal Cord Toolbox are blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
   rapidtide, dwidenoise2, FSQC, Panoptica, PCNtoolkit, MeGANorm, DeepDisco, and
@@ -629,7 +634,8 @@ submodule SHA.
 
 ## Next action
 
-Monitor the healthy SynthStrip and QSMbly runs. For each pass, rebase its
-recipe commit onto the current accepted pin and require a serial exact recheck
-before advancing the top-level pointer; then refresh issue #2 and continue
-screening practical undeclared ports with recorded preflight blockers.
+Run the QSMbly serial exact recheck from the current accepted pin, while
+monitoring the healthy SynthStrip and VertexWiseR runs. Accept only serial
+exact candidates before advancing the top-level pointer; then refresh issue #2
+and continue screening practical undeclared ports with recorded preflight
+blockers.
