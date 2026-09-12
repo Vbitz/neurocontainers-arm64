@@ -5,7 +5,7 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `478148e898cb76414250fb7ae0c8386b5bc70c91`
+- Top-level commit: `dacb499313160acb17fb283fc765c314625403d1`
 - Pinned submodule: `neurocontainers@e430edb9d9a595878a619cb4bb00a68056665daf`
 - Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -41,6 +41,19 @@ Prepared and dispatched `radtract` from branch `arm64/radtract`, candidate
 recipe change is declaring `aarch64`; validation and both architecture
 Dockerfile generations passed.
 
+The radtract recipe commit was cherry-picked onto the current accepted pin as
+`031ff4750b9097aa0a552eb2efcccef00ab38a3b`; validation and both architecture
+Dockerfile generations passed. Its exact integrated recheck is run
+`34687953581`.
+
+The rapidtide recipe commit was cherry-picked onto the current accepted pin as
+`7e6a7a4072bcad0644b06bb7a7b8433c22a38c7c`; validation and both architecture
+Dockerfile generations passed. Its exact integrated recheck is run
+`34688020789`.
+
+The lqt accepted-pin recheck against `e430edb9d9a595878a619cb4bb00a68056665daf`
+is run `34687969649`.
+
 ## Active attempts
 
 Initial verification started at `2026-09-12T09:09:37Z`; each recipe is on
@@ -65,6 +78,9 @@ The lqt verification started at `2026-09-12T09:57:17Z`; dicomtools started at
 `2026-09-12T10:06:07Z` on attempt 1 with a deadline of `2026-09-12T22:06:07Z`.
 The radtract port started at `2026-09-12T10:07:29Z` on attempt 1 with a
 deadline of `2026-09-12T22:07:29Z`.
+The radtract current-pin recheck started at `2026-09-12T10:15:12Z`; the lqt
+current-pin recheck started at `2026-09-12T10:15:30Z`; and the rapidtide
+current-pin recheck started at `2026-09-12T10:16:41Z`.
 
 | Recipe | Baseline/source SHA | Fork branch | Run | Issue | Next action |
 | --- | --- | --- | --- | --- | --- |
@@ -93,8 +109,9 @@ deadline of `2026-09-12T22:07:29Z`.
 | `cbsb0stats` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687077011](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687077011) | [#25](https://github.com/Vbitz/neurocontainers-arm64/issues/25) | verified: 6 passed |
 | `functionnectome` | `7bd4f9ee9734c4dd3a449290c39955f009f081d3` | pinned accepted branch | [34687208365](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687208365) | [#26](https://github.com/Vbitz/neurocontainers-arm64/issues/26) | verified: 4 passed |
 | `dicomtools` | `e430edb9d9a595878a619cb4bb00a68056665daf` | `arm64/dicomtools` | [34687413104](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687413104) | [#27](https://github.com/Vbitz/neurocontainers-arm64/issues/27) | verified: 179 passed; integrated into accepted pin |
-| `rapidtide` | candidate `5c3a60d0e9e906b24441bc8279f2766c7795887e` | `arm64/rapidtide` | [34687554873](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687554873) | pending | candidate verification in progress |
-| `radtract` | candidate `df8153f509a2f9d838b3e1715ca14492a070a701` | `arm64/radtract` | [34687615746](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687615746) | pending | candidate verification in progress |
+| `rapidtide` | integrated candidate `7e6a7a4072bcad0644b06bb7a7b8433c22a38c7c` | `arm64/integrate-rapidtide` | [34688020789](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34688020789) | [#30](https://github.com/Vbitz/neurocontainers-arm64/issues/30) | current-pin recheck in progress |
+| `radtract` | integrated candidate `031ff4750b9097aa0a552eb2efcccef00ab38a3b` | `arm64/integrate-radtract` | [34687953581](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687953581) | [#29](https://github.com/Vbitz/neurocontainers-arm64/issues/29) | current-pin recheck in progress |
+| `lqt` | accepted pin `e430edb9d9a595878a619cb4bb00a68056665daf` | pinned accepted branch | [34687969649](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34687969649) | [#28](https://github.com/Vbitz/neurocontainers-arm64/issues/28) | current-pin recheck in progress |
 
 ## Verified results
 
@@ -131,5 +148,6 @@ deadline of `2026-09-12T22:07:29Z`.
 
 ## Next action
 
-Review lqt, rapidtide, and radtract, record their final issue outcomes, then
-continue with the next eligible recipes while keeping this queue synchronized.
+Review the lqt, radtract, and rapidtide current-pin rechecks, integrate each
+passing recipe serially, refresh issue #2, then continue with the next eligible
+recipes while keeping this queue synchronized.
