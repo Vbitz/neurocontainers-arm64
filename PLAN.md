@@ -5,12 +5,12 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `b5a10f00dac4945275123b37e84d00da3288be7e`
+- Top-level commit: `8159ec3bd9ca58df88b214be500a0b73b1ba0ae4`
 - Pinned submodule: `neurocontainers@e430edb9d9a595878a619cb4bb00a68056665daf`
 - Submodule checkout: `arm64/dicomtools`, clean, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34684189569](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34684189569), 4 passed, source `87e1c726`
-- Coverage snapshot: 54 of 247 recipes declare ARM64 support; the tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 55 of 247 recipes declare ARM64 support; the tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Queue
 
