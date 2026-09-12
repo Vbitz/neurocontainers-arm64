@@ -5,8 +5,8 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `662191e` (MipView dispatch checkpoint)
-- Pinned submodule: `neurocontainers@d7de67d4647d4bfb50eb14f799afd34fd57d3c34` (MipView accepted; top-level acceptance commit pending)
+- Top-level commit: `18d0fba` (MipView acceptance checkpoint)
+- Pinned submodule: `neurocontainers@d7de67d4647d4bfb50eb14f799afd34fd57d3c34` (MipView accepted)
 - Submodule checkout: `arm64/mipview`, candidate `d7de67d4647d4bfb50eb14f799afd34fd57d3c34` from accepted source `fd60cfea817a54dd286f386fef251b07d41dc192`; origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
@@ -17,8 +17,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 MipView candidate `d7de67d4647d4bfb50eb14f799afd34fd57d3c34` passed exact native
 ARM64 run `34704666186` with 4 passed, 0 failed, and 0 skipped. Issue
 [#83](https://github.com/Vbitz/neurocontainers-arm64/issues/83) records the
-run, report artifact, and pending serial acceptance. The top-level pointer is
-being advanced to this tested candidate now.
+run, report artifact, and acceptance at top-level commit `18d0fba`.
 
 qMRLab replay `7aa7af42bca5d84ed18d99e89f004d9d447d945f` passed exact run
 `34704391338` with 51 passed, 0 failed, and 0 skipped. Final candidate
