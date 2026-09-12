@@ -1,0 +1,157 @@
+name: Build and test one ARM64 container
+run-name: ARM64 ${{ inputs.recipe }} (${{ inputs.variant }})
+
+on:
+  workflow_dispatch:
+    inputs:
+      recipe:
+        description: Recipe directory name (one container)
+        required: true
+        type: string
+        default: workshopdemo
+      neurocontainers_ref:
+        description: Fork branch/tag/SHA; blank uses the committed submodule revision
+        required: false
+        type: string
+      variant:
+        description: ARM64 variant (arm64, or a named variant such as gpu_arm64)
+        required: true
+        type: string
+        default: arm64
+      upload_image:
+        description: Retain the built SIF as an artifact (including when tests fail)
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+concurrency:
+  group: arm64-${{ inputs.recipe }}-${{ inputs.variant }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 360
+    outputs:
+      container: ${{ steps.info.outputs.container }}
+      build_outcome: ${{ steps.build.outcome }}
+      test_outcome: ${{ steps.test.outcome }}
+    defaults:
+      run:
+        shell: bash
+        working-directory: neurocontainers
+    env:
+      PYTHONUNBUFFERED: '1'
+      RECIPE: ${{ inputs.recipe }}
+      VARIANT: ${{ inputs.variant }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Read pinned fork revision
+        id: pin
+        working-directory: .
+        run: echo "sha=$(git rev-parse HEAD:neurocontainers)" >> "$GITHUB_OUTPUT"
+      - name: Checkout recipe fork
+        uses: actions/checkout@v5
+        with:
+          repository: Vbitz/neurocontainers
+          ref: ${{ inputs.neurocontainers_ref || steps.pin.outputs.sha }}
+          path: neurocontainers
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.11'
+      - uses: astral-sh/setup-uv@v8.1.0
+      - name: Install builder dependencies
+        run: uv sync --frozen
+      - name: Validate selection and record source
+        id: info
+        run: uv run --frozen python ../scripts/arm64.py prepare
+      - name: Install test data tooling
+        run: |
+          uv pip install --python .venv/bin/python datalad
+          sudo apt-get update
+          sudo apt-get install -y git-annex
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+      - name: Install Apptainer
+        uses: ./neurocontainers/.github/actions/setup-apptainer
+        with:
+          apptainer-version: 1.4.3
+      - name: Prepare runtime
+        run: |
+          test "$(uname -m)" = aarch64
+          mkdir -p "$RUNNER_TEMP/apptainer/cache" "$RUNNER_TEMP/apptainer/tmp"
+          echo "APPTAINER_CACHEDIR=$RUNNER_TEMP/apptainer/cache" >> "$GITHUB_ENV"
+          echo "APPTAINER_TMPDIR=$RUNNER_TEMP/apptainer/tmp" >> "$GITHUB_ENV"
+          apptainer version
+          docker buildx version
+          df -h .
+      - name: Build ARM64 image and convert to SIF
+        id: build
+        run: uv run --frozen python ../scripts/arm64.py build
+      - name: Run deploy checks and fulltest
+        id: test
+        run: uv run --frozen python ../scripts/arm64.py test
+      - name: Upload build and test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: arm64-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 14
+          if-no-files-found: warn
+          path: |
+            results/metadata.json
+            results/fulltest.yaml
+            results/Dockerfile
+            results/*.log
+            results/test-results.json
+            results/test-output/*.json
+            results/test-output/*.jsonl
+            results/test-output/*.log
+      - name: Upload SIF
+        if: ${{ always() && inputs.upload_image && steps.info.outcome == 'success' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ steps.info.outputs.container }}-sif-${{ github.run_id }}-${{ github.run_attempt }}
+          path: results/*.simg
+          compression-level: 0
+          retention-days: 7
+          if-no-files-found: warn
+  report:
+    name: Update container issue
+    needs: build
+    if: always()
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - name: Download reports
+        uses: actions/download-artifact@v4
+        continue-on-error: true
+        with:
+          name: arm64-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          path: results
+      - name: Post build and test results
+        uses: actions/github-script@v7
+        env:
+          RECIPE: ${{ inputs.recipe }}
+          VARIANT: ${{ inputs.variant }}
+          SOURCE_REF: ${{ inputs.neurocontainers_ref }}
+          CONTAINER: ${{ needs.build.outputs.container }}
+          BUILD_RESULT: ${{ needs.build.result }}
+          BUILD_OUTCOME: ${{ needs.build.outputs.build_outcome }}
+          TEST_OUTCOME: ${{ needs.build.outputs.test_outcome }}
+        with:
+          script: |
+            const report = require('./scripts/report.cjs');
+            await report({ github, context, core });
