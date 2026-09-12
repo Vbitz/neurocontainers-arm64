@@ -5,6 +5,10 @@ Build and test one ARM64 container at a time while expanding
 Recipes and their tests live in [Vbitz/neurocontainers](https://github.com/Vbitz/neurocontainers),
 included here as a pinned submodule. This repository owns the manual Actions workflow.
 
+The [recipe coverage tracker](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+lists every recipe. Checkboxes indicate declared ARM64 support; linked container
+issues hold actual build/test evidence.
+
 ## Build a container
 
 Open [Build and test one ARM64 container](https://github.com/Vbitz/neurocontainers-arm64/actions/workflows/build-arm64.yml)
@@ -95,6 +99,24 @@ If restoring this setup later:
 ```sh
 gh api --method PUT repos/Vbitz/neurocontainers/actions/permissions -F enabled=false
 ```
+
+## Refresh the coverage tracker
+
+After committing recipe changes and updating the submodule pin, regenerate the
+checklist from the fork's architecture resolver. This includes named variants
+and links any existing container result issues. The tracker is a snapshot, not
+automatically updated by builds; checkboxes do not imply verified runtime support.
+
+```sh
+gh issue list -R Vbitz/neurocontainers-arm64 --state all \
+  --label arm64-container --limit 1000 --json body,url > /tmp/arm64-issues.json
+uv run --project neurocontainers --frozen python scripts/tracking_issue.py \
+  --issues-json /tmp/arm64-issues.json > /tmp/arm64-tracker.md
+gh issue edit 2 -R Vbitz/neurocontainers-arm64 --body-file /tmp/arm64-tracker.md
+```
+
+This replaces the tracker body; keep investigation notes in comments or the
+individual container issues.
 
 ## Check the orchestration locally
 
