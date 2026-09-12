@@ -5,12 +5,12 @@ Updated: 2026-09-12 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `cfce875` (accepts the tested Panoptica candidate)
-- Pinned submodule: `neurocontainers@9b1f7d7a2c2d3decae0de23cb3bfff124e821e80`
-- Submodule checkout: `arm64/integrate-pcntoolkit-panoptica`, clean at candidate `70118cbab3e931402a951dae5ba66b63e30f051d` based on accepted source, origin `Vbitz/neurocontainers`
+- Top-level commit: `a00b450` (accepts the tested PCNtoolkit candidate)
+- Pinned submodule: `neurocontainers@70118cbab3e931402a951dae5ba66b63e30f051d`
+- Submodule checkout: `arm64/integrate-meganorm-pcntoolkit`, clean at candidate `31091ade121699a43a8745a2633e325f47c99061` based on accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 62 of 247 recipes declare ARM64 support at accepted source `9b1f7d7a`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 63 of 247 recipes declare ARM64 support at accepted source `70118cba`; tracker is issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Queue
 
@@ -265,6 +265,12 @@ replayed onto that current pin as
 generations passed. Its exact serial recheck is run `34695171335`, dispatched
 at `2026-09-12T12:59:37Z`.
 
+After accepting PCNtoolkit at `70118cba`, the verified MeGANorm recipe commit
+was replayed onto that current pin as
+`31091ade121699a43a8745a2633e325f47c99061`; validation and both architecture
+generations passed. Its exact serial recheck is run `34695477795`, dispatched
+at `2026-09-12T13:06:01Z`.
+
 FSQC candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5` passed run
 `34694302517` with 109 tests and was accepted serially. Its top-level pointer
 commit is `64544e7`; the maintained accepted fork branch now points to the same
@@ -285,7 +291,7 @@ submodule SHA.
 | `panoptica` | serial candidate `9b1f7d7a2c2d3decae0de23cb3bfff124e821e80` based on accepted source `a9a30dd5` (prior integrated candidate `72dd4d35`) | `arm64/integrate-panoptica-fsqc` | prior [34694588175](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694588175), serial [34694920638](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694920638) | [#63](https://github.com/Vbitz/neurocontainers-arm64/issues/63) | in progress: exact serial integration recheck |
 | `pcntoolkit` | serial candidate `70118cbab3e931402a951dae5ba66b63e30f051d` based on accepted source `9b1f7d7a` (prior integrated candidate `94903684`) | `arm64/integrate-pcntoolkit-panoptica` | prior [34694590006](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694590006), serial [34695171335](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34695171335) | [#62](https://github.com/Vbitz/neurocontainers-arm64/issues/62) | in progress: exact serial integration recheck |
 | `fsqc` | accepted candidate `a9a30dd58530ec002184c2217ba8fcf3ed43c1c5` based on accepted source `fb140e55` | `arm64/fsqc` | [34694302517](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694302517) | [#64](https://github.com/Vbitz/neurocontainers-arm64/issues/64) | accepted: 109 passed; integrated |
-| `meganorm` | candidate `f2a8fc485f02fe6c0d40a79e52264330c278b584` based on accepted source `a9a30dd5` | `arm64/meganorm` | malformed [34694862262](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694862262) canceled before build; exact [34694878402](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694878402) | [#65](https://github.com/Vbitz/neurocontainers-arm64/issues/65) | in progress: exact candidate build and fulltest |
+| `meganorm` | serial candidate `31091ade121699a43a8745a2633e325f47c99061` based on accepted source `70118cba` (prior candidate `f2a8fc48`) | `arm64/integrate-meganorm-pcntoolkit` | prior [34694878402](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34694878402), serial [34695477795](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34695477795) | [#65](https://github.com/Vbitz/neurocontainers-arm64/issues/65) | in progress: exact serial integration recheck |
 | `julia` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647289) | [#17](https://github.com/Vbitz/neurocontainers-arm64/issues/17) | verified: 137 passed; retain as accepted pin evidence |
 | `apptainer` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685647267](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685647267) | [#15](https://github.com/Vbitz/neurocontainers-arm64/issues/15) | verified: 6 passed; retain as accepted pin evidence |
 | `datalad` | `87e1c7265e8b6c767cd3154c67caca984116711e` | pinned `main` | [34685666449](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34685666449) | [#12](https://github.com/Vbitz/neurocontainers-arm64/issues/12) | verified: 10 passed; retain as accepted pin evidence |
@@ -406,13 +412,12 @@ submodule SHA.
 
 ## Integration
 
-- Accepted integration SHA: `9b1f7d7a2c2d3decae0de23cb3bfff124e821e80`
-- Top-level submodule pointer advances from `a9a30dd5` to the tested Panoptica candidate; BrkRaw, Brainlife CLI, dicomtools, radtract, rapidtide, dwidenoise2, and FSQC remain included.
+- Accepted integration SHA: `70118cbab3e931402a951dae5ba66b63e30f051d`
+- Top-level submodule pointer advances from `9b1f7d7a` to the tested PCNtoolkit candidate; BrkRaw, Brainlife CLI, dicomtools, radtract, rapidtide, dwidenoise2, FSQC, and Panoptica remain included.
 
 ## Next action
 
-Monitor GOUHFI, meganorm, and the Panoptica serial recheck. If Panoptica
-passes, replay PCNtoolkit onto that new accepted pin, validate both generated
-architectures, and dispatch its exact SHA before accepting it. Continue
-screening practical undeclared ports from the accepted `a9a30dd5` pin as slots
+Monitor the exact MeGANorm serial recheck and the GOUHFI infrastructure retry.
+Accept MeGANorm only after its exact integrated SHA passes. Then continue
+screening practical undeclared ports from the accepted `70118cba` pin as slots
 allow.
