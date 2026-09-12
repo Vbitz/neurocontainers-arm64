@@ -5,7 +5,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `417cd2a` (MipView acceptance checkpoint)
+- Top-level commit: `aa3e054` (sodium recipe dispatch checkpoint)
 - Pinned submodule: `neurocontainers@d7de67d4647d4bfb50eb14f799afd34fd57d3c34` (MipView accepted)
 - Submodule checkout: `arm64/sodiumnufft`, candidate `444e18aea84dbd67c7e939cba1eccbeab52007bb` from accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`; top-level pointer remains at the accepted source, origin `Vbitz/neurocontainers`
 - Fork Actions: disabled (`enabled: false`)
@@ -38,7 +38,7 @@ releases publish Linux ARM64 wheels. Validation and both architecture
 generations passed. The first dispatch `34705129164` failed before checkout
 because of an incorrect ref string and produced no recipe evidence. Corrected
 exact candidate run `34705231419` was dispatched with `upload_image=false` and
-is queued.
+is in progress.
 
 Sodiumnufft investigation started at `2026-09-13T02:25:40Z` on attempt 1 from
 accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`. Candidate
@@ -46,8 +46,9 @@ accepted source `d7de67d4647d4bfb50eb14f799afd34fd57d3c34`. Candidate
 adds only `aarch64`; its pinned sigpy dependency is a pure Python wheel and it
 uses the same ARM64-tested OpenRecon source build. Validation and both
 architecture generations passed. Run `34705192559` was dispatched with an
-incorrect ref string and is failing during source checkout; after it finishes,
-record the checkout error and dispatch the corrected full SHA.
+incorrect ref string and failed during source checkout; no recipe evidence was
+produced. Corrected exact candidate run `34705290732` was dispatched with
+`upload_image=false` and is queued.
 
 ## Queue
 
