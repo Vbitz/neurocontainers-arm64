@@ -45,3 +45,16 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
   Local validation and ARM64/x86_64 generation pass. Dispatch is pending a
   runner slot; do not start another Blender attempt if this retry fails for a
   persistent data or build reason.
+
+## Implementation outcome — 2026-09-14 (continued)
+
+- The permitted unchanged retry `34773488949` reached Blender's native
+  dependency configure but failed on a missing ARM64 ALSA development library,
+  not on the earlier GMP download. CMake reported `Failed to enabled required
+  ALSA backend` with `ALSA_LIBRARY` and `ALSA_INCLUDE_DIR` missing.
+- Candidate `42b81983` adds the documented Ubuntu `libasound2-dev` package to
+  the ARM dependency set. Recipe validation and ARM64/x86_64 generation pass.
+  The exact candidate is dispatched as
+  [run 34774135689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774135689),
+  attempt 3/6. If this exposes another recipe-level dependency, it remains
+  within the bounded investigation; stop on a deep upstream build failure.

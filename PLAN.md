@@ -26,17 +26,17 @@
     attempt 2/6. The first source candidate built and passed deploy checks;
     only the five-operation phase-scaling test exceeded its 120-second test
     limit, so this retry raises that test limit to 300 seconds.
-  - Blender candidate `ad9ee486bb7898bdb2fa9e0265a876a7c5c16288`, run
-    [34773488949](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34773488949),
-    attempt 2/6. This is the one permitted unchanged retry for the prior GMP
-    download timeout; stop this investigation if the endpoint fails again or
-    exposes a non-transient blocker.
+  - Blender candidate `42b819836f9e594be0648660fb118d735b6e4c5d`, run
+    [34774135689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774135689),
+    attempt 3/6. The unchanged retry reached native dependency configure and
+    exposed a missing `libasound2-dev` package; this candidate adds it to the
+    ARM dependency set.
 - mritools is blocked-upstream after two native attempts. CompileMRI.jl v3.3.0
   reaches ARM64 Julia dependency setup but its released App bootstrap leaves
   incompatible `RomeoApp`/`ClearswiApp`/`MriResearchTools` dependencies; issue
   #156 and `plans/mritools.md` contain both runs and the exact errors.
-- Local submodule checkout is `arm64/itksnap-integrated-80a` at
-  `701e4cd9f3d0bb8dc65b65bb655975b20ba19cfe`; the active source branches and
+- Local submodule checkout is `arm64/blender-integrated` at
+  `42b819836f9e594be0648660fb118d735b6e4c5d`; the active source branches and
   exact run IDs are recorded above. PyDeface is accepted; the remaining
   candidates must be replayed onto this newer pin before their own acceptance.
 - Prepared ITK-SNAP integration candidate `f4a84c7150db1e9a35cb9f26014304a7ed0b3804`
