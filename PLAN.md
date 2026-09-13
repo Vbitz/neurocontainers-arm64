@@ -17,9 +17,11 @@
     run [34771433995](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771433995),
     attempt 1/6. The preceding candidate passed 60/60 native fulltests;
     this exact SHA is replayed onto the accepted BIDSvue pin.
-  - MIMoSA `1f1fa6ea2942b55d1c3ec01e615d38c2b777babc`, run
-    [34770095073](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770095073),
-    attempt 2/6, selecting the verified ARM FSL 6.0.7.22 route.
+  - MIMoSA `c58b71e8e7400e0beb6026201b323c5d7aa3916d`, run
+    [34773252089](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34773252089),
+    attempt 3/6. The FSL correction reached ANTsRCore but its R Makevars
+    used small `-fpic`, overflowing the ARM64 GOT at link time; this retry
+    uses large `-fPIC`.
   - CLEARSWI `256b2824f39066e26a632a754f271879c3c085e9`, run
     [34772631281](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34772631281),
     attempt 2/6. The first source candidate built and passed deploy checks;
@@ -29,8 +31,8 @@
   reaches ARM64 Julia dependency setup but its released App bootstrap leaves
   incompatible `RomeoApp`/`ClearswiApp`/`MriResearchTools` dependencies; issue
   #156 and `plans/mritools.md` contain both runs and the exact errors.
-- Local submodule checkout is `arm64/clearswi-bids` at
-  `256b2824f39066e26a632a754f271879c3c085e9`; the active source branches and
+- Local submodule checkout is `arm64/mimosa-bids` at
+  `c58b71e8e7400e0beb6026201b323c5d7aa3916d`; the active source branches and
   exact run IDs are recorded above. Do not stage the top-level pointer until
   the integrated PyDeface, ITK-SNAP, MIMoSA and CLEARSWI candidates pass their
   full gates.
