@@ -31,6 +31,12 @@
   remains `arm64/blender-integrated` at
   `171bd9b6c54a199718a24f064f5a2809df1fa6d`; the EMUSES candidate is immutable
   on its pushed branch.
+- CLEARSWI's candidate passed its pre-integration native run with 68/68 tests.
+  Its intended commits are replayed onto accepted pin `80a84327` as
+  `21382bb0421c036c87a86e29c796cfcdeb319e35` on
+  `arm64/clearswi-integrated-80a`; local validation and both architecture
+  generations pass. Exact integrated verification is queued for the next
+  native slot, and the local submodule checkout is this branch.
 - Blender run [34774135689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774135689)
   reached the bundled Flex configure and failed on missing `autopoint`. The
   six native attempt and twelve-hour investigation budgets are exhausted, so

@@ -50,3 +50,5 @@ A bounded ARM64 candidate is prepared on `arm64/clearswi-bids` at `cf9a122bc839f
   [34772631281](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34772631281)
   is queued/in progress as attempt 2/6. If it passes, replay the same one-line
   fulltest change onto the accepted integration state before accepting.
+
+The candidate passed all 68 native tests in [run 34772631281](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34772631281). Its two intended commits were replayed onto accepted pin `80a84327a6659b0ac79a44f2c1853faa9eb84f4b` as `21382bb0421c036c87a86e29c796cfcdeb319e35` on `arm64/clearswi-integrated-80a`. Local validation and both architecture generations pass; exact integrated verification is pending a native runner slot.
