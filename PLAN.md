@@ -28,8 +28,8 @@
   reaches ARM64 Julia dependency setup but its released App bootstrap leaves
   incompatible `RomeoApp`/`ClearswiApp`/`MriResearchTools` dependencies; issue
   #156 and `plans/mritools.md` contain both runs and the exact errors.
-- Local submodule checkout is `arm64/pydeface-integrated` at
-  `80a84327a6659b0ac79a44f2c1853faa9eb84f4b`; the active source branches and
+- Local submodule checkout is `arm64/itksnap-integrated` at
+  `f4a84c7150db1e9a35cb9f26014304a7ed0b3804`; the active source branches and
   exact run IDs are recorded above. Do not stage the top-level pointer until
   the integrated PyDeface, MIMoSA and CLEARSWI candidates pass their full gates.
 - Prepared transient retry: Blender commits replayed onto the accepted pin as
