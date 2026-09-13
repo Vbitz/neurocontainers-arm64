@@ -41,3 +41,7 @@ The official PyTorch CPU index now lists matching Linux `aarch64` wheels for the
 The candidate declares `aarch64`, preserves the x86_64 CUDA `cu126` path, and selects the official CPU wheel index only on ARM64. Napari, VoxTell and nnInteractive package installation plus the existing plugin discovery fulltest remain unchanged. Recipe validation and ARM64/x86_64 Dockerfile generation passed locally. Native verification is queued behind the active runner work and must pass native build, SIF conversion, deploy checks and the existing plugin tests before acceptance. This is attempt 1/6.
 
 Native dispatch is recorded as [run 34777662542](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34777662542), using the exact candidate SHA. The investigation window starts at `2026-09-13T19:25:43Z` and ends at `2026-09-14T07:25:43Z`.
+
+## Native result — 2026-09-14
+
+The exact candidate passed native ARM64 Docker build, SIF conversion, deployment checks and the existing fulltest: 4 passed, 0 failed, 0 skipped. Run [34777662542](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34777662542) and the automated evidence in [issue #219](https://github.com/Vbitz/neurocontainers-arm64/issues/219#issuecomment-5655539446) identify source `8bcc3e3dd69d25fdb16b2f3084d89cf25ddfb5dc`. It is ready for serial integration at the current accepted pin; the top-level pointer will be advanced only after the accepted candidate is recorded.

@@ -49,3 +49,9 @@ The candidate declares `aarch64`, adds the documented native build packages only
 The candidate is now dispatched as [run 34777430024](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34777430024). The investigation window is `2026-09-13T19:21:12Z`–`2026-09-14T07:21:12Z`; this remains attempt 1/6 and requires native Docker build, SIF conversion, deploy checks and the existing fulltest suite before acceptance.
 
 The first attempt failed before staging because Zenodo returned HTTP 504 for `hdbet_0_model` after three downloader retries. The one permitted unchanged retry is [run 34777631695](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34777631695), using the same candidate SHA and counted as attempt 2/6. If this retry sees another Zenodo failure, classify the recipe as infrastructure-blocked without further retries; the source build has not yet been exercised.
+
+## Bounded outcome — 2026-09-14
+
+The unchanged retry also failed before staging with HTTP 504 for the same declared `hdbet_0_model` download after three builder retries. The native source-build candidate was therefore not exercised. This is a concrete infrastructure blocker after two attempts, not evidence that the released antspyx source cannot compile on ARM64. Revisit when the Zenodo record is reachable reliably or an authorized stable mirror is available; preserve candidate `2f061f36896188f8be2d00b73519d819c8c2d164` on `arm64/brainles-preprocessing-source` and do not repeat the unchanged dispatch.
+
+The final outcome is recorded in [issue #186](https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-5655583825).
