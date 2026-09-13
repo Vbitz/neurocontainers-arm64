@@ -2542,3 +2542,8 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 
 - CLEARSWI’s two intended commits were replayed onto the accepted QuPath pin `c98a89ee6799cd32b6a2247554cf8447a37f24aa` as `b878ef4914bed658c8df82cf8d418de21d13315f` on `arm64/clearswi-qupath`. The branch is pushed; validation and ARM64/x86_64 Dockerfile generation pass.
 - The active SoopCT descendant run [34785901800](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785901800) remains in progress. Dispatch `b878ef49` only after reviewing that result and an ARM64 slot opens; acceptance requires native verification of this exact QuPath descendant.
+
+## Active implementation checkpoint — 2026-09-14 (Syncro ANTsPyX dependency retry)
+
+- Syncro run [34786938986](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34786938986) failed in the ARM64 Docker build when ANTsPyX’s bundled ITK could not find system PNG headers/library. Candidate `5c761183` adds ARM64 `libpng-dev`; local validation and ARM64/x86_64 generation pass, and the branch `arm64/syncro-antspyx-png` is pushed.
+- CLEARSWI [34785901800](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785901800), MIMoSA [34783066918](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783066918), and VesselBoost [34783650179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783650179) remain active. One native slot is available for the Syncro targeted retry; do not dispatch CLEARSWI until its current SoopCT replay is reviewed and the QuPath descendant is exact.
