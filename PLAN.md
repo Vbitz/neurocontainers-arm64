@@ -5,16 +5,16 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `a5c279a` (final ARM64 probe checkpoint)
-- Pinned submodule: `neurocontainers@6502b535` (PeTu added after BrainLes AURORA, GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
-- Submodule checkout: `arm64/brats`, candidate `166f9dac` based on `fd560efd`; origin `Vbitz/neurocontainers`. Active BraTS retry remains on its pushed branch; the BrainLesion candidate is recorded as blocked. Failed Voreen and NCT candidates and the assessed preflight branches remain available.
+- Top-level commit: `ab58a0b` (BraTS ARM64 acceptance checkpoint)
+- Pinned submodule: `neurocontainers@7282a7d3` (BraTS added after PeTu, BrainLes AURORA, GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
+- Submodule checkout: `arm64/integrate-brats`, accepted commits `7093c8f2` and `7282a7d3` replayed from tested BraTS source onto accepted `6502b535`; origin `Vbitz/neurocontainers`. No active builds remain; the BrainLesion candidate is recorded as blocked. Failed Voreen and NCT candidates and the assessed preflight branches remain available.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 95 of 247 declarations, refreshed from accepted source `6502b535`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 96 of 247 declarations, refreshed from accepted source `7282a7d3`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Second pass active work
 
-The user-directed second pass is assessing the 152 recipes without ARM64
+The user-directed second pass is assessing the 151 recipes without ARM64
 declarations. It began with `sigviewer`, which has a published Debian bullseye
 ARM64 package at the pinned `0.6.4-1` version. Investigation started at
 `2026-09-13T04:19:41Z`; deadline `2026-09-13T16:19:41Z`; attempt 1/6.
@@ -197,7 +197,7 @@ includes it at root commit `f46433d`. Issue
 [#246](https://github.com/Vbitz/neurocontainers-arm64/issues/246) records the
 result; no duplicate native run was dispatched after the isolated replay.
 
-`brats` is an active bounded orchestrator candidate. Investigation started at
+`brats` completed as a verified bounded orchestrator candidate. Investigation started at
 `2026-09-13T06:13:56Z`; deadline `2026-09-13T18:13:56Z`; attempt 1/6.
 Candidate `fd560efddeb3694b9f7319738e0dea40fa7b4dd22` on branch `arm64/brats`
 adds `aarch64`, builds Apptainer 1.4.4 from its official source tarball with
@@ -211,7 +211,13 @@ candidate `166f9dac76f26c1906acaf468665916a2b0bbca6` keeps the symlink step
 x86_64-only and leaves the shared version checks in place. Local validation and
 both architecture generations passed. Exact retry
 [34742518202](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34742518202)
-is active; attempts: 2/6; deadline `2026-09-13T18:13:56Z`.
+passed the native ARM64 build, SIF conversion, deploy checks, and fulltest with
+21 passed, 0 failed, and 0 skipped. The two commits were replayed as
+`7093c8f2` and `7282a7d3` on accepted PeTu source, and the top-level pin now
+includes them at root commit `ab58a0b`. Issue
+[#248](https://github.com/Vbitz/neurocontainers-arm64/issues/248) records both
+attempts; the candidate is integrated without a duplicate native run. Attempts:
+2/6; deadline `2026-09-13T18:13:56Z`.
 
 `brainlesion` is blocked upstream after a dependency-resolution probe. Investigation started at
 `2026-09-13T06:14:35Z`; deadline `2026-09-13T18:14:35Z`; attempt 1/6.
@@ -420,7 +426,7 @@ ancestry in this checkpoint.
 
 ## Queue
 
-The accepted source contains 152 undeclared recipes after the PeTu
+The accepted source contains 151 undeclared recipes after the BraTS
 integration. A full preflight screen on 2026-09-13 found LQT, GlioMODA,
 Lipsia, BART, PeTu, BrainLes AURORA, and BraTS as bounded source candidates;
 BrainLesion is recorded as blocked by its pinned `antspyx` dependency. The remaining
@@ -1175,6 +1181,7 @@ submodule SHA.
 - `gliomoda` / `arm64`: run `34740874041`, tested source `a9b7f267`, 17 passed, 0 failed, 0 skipped; issue [#225](https://github.com/Vbitz/neurocontainers-arm64/issues/225). Candidate is integrated at `c6371e97` without a duplicate native run.
 - `brainles-aurora` / `arm64`: run `34741297561`, tested source `dc828b57`, 15 passed, 0 failed, 0 skipped; issue [#237](https://github.com/Vbitz/neurocontainers-arm64/issues/237). Candidate is integrated at `68873023` without a duplicate native run.
 - `petu` / `arm64`: run `34741200931`, tested source `2cb7b104`, 12 passed, 0 failed, 0 skipped; issue [#246](https://github.com/Vbitz/neurocontainers-arm64/issues/246). Candidate is integrated at `6502b535` without a duplicate native run.
+- `brats` / `arm64`: retry run `34742518202`, tested source `166f9dac`, 21 passed, 0 failed, 0 skipped; issue [#248](https://github.com/Vbitz/neurocontainers-arm64/issues/248). Candidate is integrated at `7282a7d3` after one targeted configuration retry.
 
 ## Blocked or failed results
 
@@ -1202,18 +1209,18 @@ submodule SHA.
 
 ## Integration
 
-- Accepted integration SHA: `6502b535`
+- Accepted integration SHA: `7282a7d3`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly,
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, OpenRecon I2I,
   MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
   SynthStrip, PALM, wfTFI, OpenRecon example, Bloch-Siegert, ANTs, sigviewer,
-  and Code, BART, Lipsia, LQT, GlioMODA, and BrainLes AURORA integrations. The earlier SynthStrip exact candidate run
+  and Code, BART, Lipsia, LQT, GlioMODA, BrainLes AURORA, PeTu, and BraTS integrations. The earlier SynthStrip exact candidate run
   passed and was integrated by ancestry; its stale duplicate integration run
   also passed 70 tests and is bookkeeping only. PALM and ANTs are integrated;
   the ANTs exact native ARM64 run passed 103 tests, and sigviewer passed 36
   tests. Code's integrated run passed 84 tests, BART passed 117 tests, Lipsia
   and LQT each passed 101 tests, GlioMODA passed 17 tests, and BrainLes AURORA
-  passed 15 tests. Elastix, FSL, MRtrix3, CPAC, and LINDA are recorded as
+  passed 15 tests, PeTu passed 12 tests, and BraTS passed 21 tests. Elastix, FSL, MRtrix3, CPAC, and LINDA are recorded as
   preflight prerequisite blockers; emuses is blocked by its locked Triton dependency,
   MRIcroGL by unavailable ARM64 binaries, PalmettoBUG by its pinned PySide6
   dependency, and NCT by its x86-specific Conda lock.
@@ -1226,7 +1233,7 @@ submodule SHA.
 ## Next action
 
 Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed
-from accepted source `6502b535` and now reports 95 of 247 declarations.
+from accepted source `7282a7d3` and now reports 96 of 247 declarations.
 The exact native runs `34708194854` and `34708203749` verified
 `openreconexample` and `blochsiegertb1mapping`, respectively, and their
 independent declarations are integrated at `2884a0e6`. ANTs run
@@ -1235,13 +1242,16 @@ independent declarations are integrated at `2884a0e6`. ANTs run
 36 tests and is integrated at `c34a2103` without a duplicate native run.
 Elastix, emuses, MRIcroGL, OpenADS, FSL, MRtrix3, CPAC, LINDA, PalmettoBUG,
 NCT, Voreen, and BrainLesion are recorded as blocked with their revisit
-conditions. LQT, GlioMODA, BrainLes AURORA, and PeTu are integrated. BraTS run
-`34742237759` remains active. BART run `34740461864` and Lipsia run
-`34740665171` passed and are accepted.
+conditions. LQT, GlioMODA, BrainLes AURORA, PeTu, and BraTS are integrated. The
+BraTS retry `34742518202` passed after the targeted symlink fix; BART run
+`34740461864` and Lipsia run `34740665171` passed and are accepted.
 Code's integrated run `34738779168` passed and is accepted at `15337e04`.
 Lipsia is integrated at `dc20187f`, LQT at `70663ade`, GlioMODA at `c6371e97`,
-BrainLes AURORA at `68873023`, and PeTu at `6502b535`, all without duplicate
-native runs. BrainLesion is blocked at issue [#247](https://github.com/Vbitz/neurocontainers-arm64/issues/247).
-The next action is to monitor BraTS run `34742237759`, record its outcome, and
-close the remaining inventory with an explicit verified or blocked issue for
-BraTS.
+BrainLes AURORA at `68873023`, PeTu at `6502b535`, and BraTS at `7282a7d3` are
+integrated without duplicate native integration runs. BrainLesion is blocked at
+issue [#247](https://github.com/Vbitz/neurocontainers-arm64/issues/247). All 247
+recipes now have an `arm64-container` issue marker: 96 declarations are
+accepted and the remaining 151 unsupported recipes have recorded preflight
+blockers or failed ARM64 attempts. No builds are active; the next action is to
+leave this checkpoint for future upstream changes rather than duplicate any
+unchanged verification.
