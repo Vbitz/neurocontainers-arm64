@@ -1543,3 +1543,12 @@ unchanged verification.
 - ROMEO candidate `0291d268b03c1840639d452f5be7952edd73d01c` is replayed onto the accepted pin, validated for ARM64 and x86_64 generation, and is in run [34757529921](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34757529921).
 - Four runner slots are occupied. DSI Studio remains a bounded failed-runtime blocker at 79/84 checks; its issue comment records the five required AutoTrack failures. LST-AI remains blocked by its bundled x86-64 `greedy` binary.
 - Next action: reconcile the four exact runs, accept only candidates whose exact source SHA and fulltest pass are confirmed, then refill each completed slot from the next feasible research plan while replaying candidates onto any newer accepted pin.
+
+## Active implementation checkpoint — 2026-09-13 22:45 Australia/Brisbane
+
+- gigaconnectome candidate `dc1439d82ec42fd3cb5b38e85ca1d5800a3484b2` passed exact native run [34757505350](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34757505350): 94/94 checks passed. The ARM64 path uses the official Python 3.9 Bookworm base after the Bullseye mirror failure; the x86_64 image path is preserved. Integrating this tested candidate now.
+- DeepLabCut `0ed4b3c91637e7bee190bbfb66ba2ddfa0edbeeb` remains active in [34757340002](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34757340002).
+- SovaBIDS `a4757fef0ea1c5723e264a9bf6fa41e10dadcad3` remains active in [34756526235](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756526235).
+- ROMEO `0291d268b03c1840639d452f5be7952edd73d01c` remains active in [34757529921](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34757529921).
+- OpenADS CPU candidate `d351f60f31c5f6cb6e9f467b777423a8638b584f` is prepared on `arm64/openadscpu-rshrf`, validated for ARM64 and x86_64 generation, and ready for the freed slot.
+- Next action: push the integrated gigaconnectome pin, refresh coverage, dispatch OpenADS CPU, then reconcile the remaining exact runs before selecting another candidate.
