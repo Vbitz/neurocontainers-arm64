@@ -1685,3 +1685,16 @@ Recent outcomes:
 
 Next actions: monitor the four active runs; record exact outcomes; dispatch FSL and DSI Studio serially as slots open; integrate only candidates whose exact native build, SIF conversion, deploy checks, and fulltest all pass; continue through the remaining feasible inventory.
 
+
+## Active implementation checkpoint — 2026-09-14 00:42 Australia/Brisbane
+
+Goal remains active: implement and natively verify every feasible recipe from the 148-recipe research inventory; do not close while an eligible feasible route remains.
+
+- Root branch is `main` at `0ef4f866af7d6b0add82d17dace9d10628653dd0`; accepted top-level submodule pin remains `6103a923f43106c039ddf22a59c99c25352e459b`. Fork Actions remains disabled.
+- Local submodule checkout is clean on `arm64/dsistudio-openads` at candidate `0e7e2230b8e77411e03bf20431cb0488ba0902d3`; the root submodule pointer is intentionally modified while candidate work is dispatched.
+- Four native ARM64 slots are occupied: FSL corrected candidate `9a5ae40c67667a088f50f0e9885833b983893f98` in run [34762946871](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34762946871); AFNI retry `a51788253403b44c819d4273a134eedfe822aad3` in run [34763111015](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763111015); Blender attempt 3 `e885463c45c0fb902a9e6747ffcc80914045d63f` in run [34763301992](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763301992); DSI Studio attempt 2 `0e7e2230b8e77411e03bf20431cb0488ba0902d3` in run [34763301952](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763301952).
+- Quickshear run [34760141970](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34760141970) has completed with failure after build/SIF; its artifact is pending first-error review. DSI Studio run [34762948512](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34762948512) failed 23/83 because the release supplied XCB but the fulltest forced offscreen, and several checks used stale asset paths; attempt 2 tests a display-aware Xvfb route and current archive paths.
+- Elastix is recorded as blocked-upstream in issue [#92](https://github.com/Vbitz/neurocontainers-arm64/issues/92#issuecomment-5653939321) after ITK 5.3.0 failed at `uint8_t` declaration in `itkMathematicalMorphologyEnums.h` before Elastix compilation.
+- Blender attempt 3 installs the Ubuntu equivalents listed by Blender's dependency checker; AFNI attempt 2 uses the ARM archive's extracted R bundle directory. Both candidates validated for ARM64/x86_64 generation before dispatch.
+
+Next action: inspect completed Quickshear and the four active runs at normal intervals; integrate exact passing candidates serially from the current accepted pin, and refill each freed slot from the remaining feasible queue. Do not rerun recipes whose exact native evidence already passed.
