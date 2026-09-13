@@ -2,6 +2,39 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after MIMoSA FSL retry and mritools dispatch
+
+- Root commit: `ded33f4`; accepted submodule pin remains
+  `ba7af5842b2c41dbc98ffd8d1e25431acf19a7db` (BIDSvue on top of AFNI,
+  5/5 native fulltests). Fork Actions remains disabled (`enabled: false`).
+- Active exact investigations:
+  - ITK-SNAP candidate `7ceabea5d97151a98cf6655055729804870b33ee`, run
+    [34769119103](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769119103),
+    attempt 2/6, enabling VTK `RenderingExternal`.
+  - PyDeface candidate `90ee2948253826e0413ca90be894f381d10009eb`, run
+    [34769469302](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769469302),
+    attempt 4/6, pinning ARM setuptools below the `pkg_resources` warning
+    threshold.
+  - MIMoSA retry candidate `1f1fa6ea2942b55d1c3ec01e615d38c2b777babc`, run
+    [34770095073](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770095073),
+    attempt 2/6, selecting FSL 6.0.7.22 for ARM64 while preserving 6.0.7.16
+    on x86_64. The first attempt stopped because FSL 6.0.7.16 had no
+    `linux-aarch64` installer match.
+  - mritools candidate `1304e3bd5ba0694b92bcaeae838167f2767fa164`, run
+    [34770096752](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770096752),
+    attempt 1/6, using the upstream CompileMRI.jl source route with Julia
+    1.10.10 AArch64.
+- VMTK is blocked-upstream after four native attempts reached VTK 9.1
+  `vtkSEPReader.cxx` compilation errors; issue #240 records the first
+  actionable failure.
+- The two invalid-ref dispatches `34770042730` and `34770044122` were
+  cancelled during preflight; they produced no recipe build evidence.
+- Local submodule checkout is `arm64/mimosa-bids` at
+  `1f1fa6ea2942b55d1c3ec01e615d38c2b777babc`; mritools remains prepared on
+  `arm64/mritools-bids` at `1304e3bd5ba0694b92bcaeae838167f2767fa164`.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after VMTK blocker and MIMoSA dispatch
 
 - Root commit: `6548925`; accepted submodule pin remains
