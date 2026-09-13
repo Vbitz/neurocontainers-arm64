@@ -35,3 +35,10 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/sy
 ## Decision boundary
 
 A dependency/source-build investigation remains, rather than an established universal ARM incompatibility. Revisit when the exact native package set or documented source configuration is available; record any first actionable failure. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation candidate — 2026-09-14
+
+Candidate [`8dd676cecc56534da67f43997407e9237b4cb2ae8`](https://github.com/Vbitz/neurocontainers/commit/8dd676cecc56534da67f43997407e9237b4cb2ae8)
+is pushed on [`arm64/syncro-native-components`](https://github.com/Vbitz/neurocontainers/tree/arm64/syncro-native-components), based on accepted pin `8bcc3e3d`. It preserves the x86_64 SynthStrip image route and reconstructs the ARM64 path from the accepted standalone SynthStrip recipe: FreeSurfer's upstream `mri_synthstrip` script and model files, PyTorch 2.2.2 CPU, surfa, an antspyx 0.5.4 source build, and the pinned py_synthsr source with TensorFlow 2.21.0. Local validation and both architecture generations pass.
+
+The candidate is queued behind four active native jobs. Acceptance requires the exact ARM64 build, SIF conversion, deploy checks, SynthStrip output checks and the complete SYNcro/SynthSR fulltest. A native failure will distinguish an image reconstruction issue from an unsupported dependency.
