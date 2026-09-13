@@ -2,6 +2,31 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after VMTK CMake compatibility retry
+
+- Root commit: `7f36f264aae7052ee161779b3a275c091c9a1fe7`; accepted submodule
+  pin remains `8a9e48a7028b53be7b93eb6706a55a6a9ec801e6` (AFNI, 114/114
+  native checks). Fork Actions is disabled.
+- Active exact investigations:
+  - ITK-SNAP `fdf69113`, run
+    [34767223157](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767223157).
+  - PyDeface `3baa7a0662abfd352ab10f0d8342a12ef157990a`, run
+    [34767487096](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767487096).
+  - BIDSvue integrated replay `6886b829d871a3b6315660e222305dfdebf918b5`, run
+    [34767968286](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767968286),
+    attempt 4/6.
+  - VMTK `974bb14826c93d9836203186ed6335a82a4e6320`, run
+    [34768651549](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34768651549),
+    attempt 4/6, using Ubuntu CMake 3.28 for the upstream superbuild.
+- VMTK attempt 3 reached native VTK configuration but the conda CMake release
+  rejected VTK 9.1’s legacy minimum version. This candidate uses the supported
+  Ubuntu CMake while retaining the official source superbuild; further VMTK
+  source failures will be classified as upstream blockers. The local submodule
+  checkout is `arm64/vmtk-afni` at `974bb148`; the root pointer remains
+  intentionally unstaged while native runs execute.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after VMTK superbuild configuration retry
 
 - Root commit: `1ea3fffb8d6e3809c825a3a2b39c5ee5535a3b7b`; accepted submodule
