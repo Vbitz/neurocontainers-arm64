@@ -32,3 +32,16 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/bl
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation outcome — 2026-09-14
+
+- Candidate `55c2ae1a3c41a5c61da9f3763a63c5f091646819` reached the native ARM64
+  Blender dependency build, but the runner timed out while downloading GMP
+  6.3.0 from `gmplib.org`; no compiler or application failure was observed.
+  The failure is recorded in [run 34763788910](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763788910).
+- One unchanged retry is allowed for this transient download failure. The
+  candidate commits were replayed onto accepted pin `ba7af5842b2c41dbc98ffd8d1e25431acf19a7db` as
+  `ad9ee486bb7898bdb2fa9e0265a876a7c5c16288` on `arm64/blender-integrated`.
+  Local validation and ARM64/x86_64 generation pass. Dispatch is pending a
+  runner slot; do not start another Blender attempt if this retry fails for a
+  persistent data or build reason.

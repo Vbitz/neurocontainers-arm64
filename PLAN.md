@@ -32,6 +32,10 @@
   `80a84327a6659b0ac79a44f2c1853faa9eb84f4b`; the active source branches and
   exact run IDs are recorded above. Do not stage the top-level pointer until
   the integrated PyDeface, MIMoSA and CLEARSWI candidates pass their full gates.
+- Prepared transient retry: Blender commits replayed onto the accepted pin as
+  `ad9ee486bb7898bdb2fa9e0265a876a7c5c16288` on `arm64/blender-integrated`.
+  The prior run `34763788910` timed out downloading GMP 6.3.0; dispatch exactly
+  one unchanged retry when a slot opens.
 
 ## Latest implementation checkpoint — 2026-09-14
 
