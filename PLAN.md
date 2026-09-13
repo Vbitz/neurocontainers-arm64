@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `2e1b46b` (PalmettoBUG dispatch checkpoint)
+- Top-level commit: `fb2fd34` (Code result and integrated verification checkpoint)
 - Pinned submodule: `neurocontainers@c34a2103117399b31000f4d74bb378482e03f691` (sigviewer added after the ANTs, OpenRecon example, and Bloch-Siegert acceptances)
-- Submodule checkout: `arm64/palmettobug`, candidate `0482f4d71952b2a1cec16005bdcbbc50de6c92a0` from accepted source `c34a2103117399b31000f4d74bb378482e03f691`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while the Code and PalmettoBUG candidates run.
+- Submodule checkout: `arm64/integrate-code`, candidate `15337e04a04ddf0303b610d304c350008df371ea` from accepted source `c34a2103117399b31000f4d74bb378482e03f691`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while the integrated Code candidate runs.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 88 of 247 declarations, refreshed from accepted source `c34a2103`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -58,7 +58,14 @@ with the candidate source checked out. Docker build, SIF conversion, deploy
 checks, and fulltest passed with 84 passed, 0 failed, and 0 skipped. Its
 candidate predates the accepted sigviewer pin, so the next action is to replay
 only the Code recipe commit onto accepted source `c34a2103`, validate both
-architectures, and dispatch that integrated SHA once before acceptance.
+architectures, and dispatch that integrated SHA once before acceptance. The
+replay is `15337e04a04ddf0303b610d304c350008df371ea` on
+`arm64/integrate-code`; local validation and both architecture generations
+passed. Exact integrated dispatch
+[34738779168](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34738779168)
+is queued. Attempts: 3/6 including the metadata-only malformed-ref dispatch
+and the independent candidate run. Issue [#95](https://github.com/Vbitz/neurocontainers-arm64/issues/95)
+has the durable checkpoint.
 
 `mricrogl` is blocked at preflight. The pinned 1.2.20211006 release provides
 only x86_64 Linux MRIcroGL archives, and its required libqt5pas 1.2.9 release
@@ -67,20 +74,24 @@ provides only x86_64/amd64 packages. Issue
 official release assets and the revisit condition. No candidate branch or
 native build was created; attempts: 0/6.
 
-`palmettobug` is the fourth-second-pass candidate. Investigation started at
+`palmettobug` was the fourth-second-pass candidate. Investigation started at
 `2026-09-13T04:42:37Z`; deadline `2026-09-13T16:42:37Z`; attempt 1/6.
 Candidate `0482f4d71952b2a1cec16005bdcbbc50de6c92a0` on branch
 `arm64/palmettobug` adds only `aarch64`; its Miniconda template generated the
 official Linux aarch64 installer and local validation plus both architecture
 generations passed. Exact native dispatch
 [34738541920](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34738541920)
-is queued. Next action: verify its source SHA and inspect the fixed dependency
-set's native ARM64 build result.
+failed during package installation because `palmettobug==0.2.11` pins
+`PySide6==6.4.3`, which has no ARM64 distribution. SIF conversion, deploy
+checks, and fulltest did not run. Issue [#98](https://github.com/Vbitz/neurocontainers-arm64/issues/98)
+records the first error and revisit condition. Outcome: blocked-upstream;
+attempts: 1/6; no retry until an upstream-compatible PalmettoBUG dependency set
+is released.
 
 Code's successful run is recorded in issue [#95](https://github.com/Vbitz/neurocontainers-arm64/issues/95).
 The original malformed-ref dispatch remains metadata-only. PalmettoBUG run
-`34738541920` remains the only active native build; no unchanged successful
-recipe has been rerun.
+`34738541920` is recorded as blocked-upstream. The integrated Code run is the
+only active native build; no unchanged successful recipe has been rerun.
 
 ## Latest checkpoint
 
