@@ -1,5 +1,39 @@
 # ARM64 porting checkpoint
 
+## Active implementation checkpoint — 2026-09-14
+
+- Root commit: `91b0dc4` (`neurocontainers` is intentionally checked out on a
+  candidate branch; do not stage that pointer until a candidate is accepted).
+- Accepted submodule pin: `6103a923f43106c039ddf22a59c99c25352e459b`.
+- Fork Actions remains disabled (`enabled: false`).
+- Active exact ARM64 runs, all dispatched with `upload_image=false`:
+  - FSL candidate `9a5ae40c67667a088f50f0e9885833b983893f98`, run
+    [34762946871](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34762946871),
+    fixing the ARM FSL deploy path after 128/128 functional tests passed.
+  - AFNI candidate `a51788253403b44c819d4273a134eedfe822aad3`, run
+    [34763111015](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763111015),
+    selecting the official ARM AFNI and R bundles.
+  - Blender candidate `e885463c45c0fb902a9e6747ffcc80914045d63f`, run
+    [34763301992](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763301992),
+    adding the documented Linux dependency set after the first native build
+    exposed missing build tools.
+  - DSI Studio CPU ARM candidate `31c89f647a4e3427ce7ddef94a2de81c40e2ebb9`, run
+    [34763556926](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763556926),
+    switching from the GPU/full ARM release to the official CPU ARM64 archive
+    after the full release built but its CLI actions exited early.
+- Queued candidates waiting for a free runner slot:
+  - Quickshear `90a169d1cde93600af0da8d07986285e792fad32` on
+    `arm64/integrate-quickshear-fetalsynthseg`; increases only the existing
+    SynthStrip command timeout from 300 to 1200 seconds after the prior run
+    passed packaging and timed out during CPU inference.
+  - LST-AI `0a3bd626eda2eb4629437503011c0e084b3d2a3b` on
+    `arm64/lstai-openads`; builds the pinned dcm2niix source on ARM64 while
+    retaining the x86 release asset.
+- Next work after a slot opens: dispatch exactly one queued candidate, then
+  integrate any passing candidate serially from the accepted pin. Prepare
+  PyDeface only after FSL is accepted; continue with BIDSvue, MuscleMap,
+  MRIcroGL/Surf Ice and ROOT as bounded recipe investigations.
+
 Updated: 2026-09-13 (Australia/Brisbane)
 
 ## Current state
