@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `a687cb7` (ANTs ARM64 recipe accepted; this PLAN update is the next checkpoint)
+- Top-level commit: `df6c888` (sigviewer ARM64 dispatch checkpoint)
 - Pinned submodule: `neurocontainers@88fb85137ac628e23542a923dfc005f8918bf306` (ANTs, OpenRecon example, and Bloch-Siegert accepted in this checkpoint)
-- Submodule checkout: `arm64/sigviewer`, candidate `c34a2103117399b31000f4d74bb378482e03f691` from accepted source `88fb85137ac628e23542a923dfc005f8918bf306`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while this candidate runs.
+- Submodule checkout: `arm64/emuses`, candidate `d5aaf861187bdbdf92ac5ec9143be4034a9a7f37` from accepted source `88fb85137ac628e23542a923dfc005f8918bf306`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while candidates run.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 87 of 247 declarations, refreshed from accepted source `88fb8513`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -28,6 +28,17 @@ currently queued; the workflow source must be checked against the candidate SHA
 before its result is accepted. Next action: monitor this run, record its issue
 and test evidence, then integrate or classify the failure before selecting the
 next undeclared recipe. Do not duplicate any earlier verified recipe run.
+
+`emuses` is the second-pass candidate. Investigation started at
+`2026-09-13T04:24:42Z`; deadline `2026-09-13T16:24:42Z`; attempt 1/6 was a
+cancelled malformed-ref dispatch [34737820842](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34737820842)
+with no checkout or recipe evidence. The corrected candidate
+`d5aaf861187bdbdf92ac5ec9143be4034a9a7f37` on branch `arm64/emuses` adds only
+`aarch64`; local validation and both architecture generations passed. Exact
+dispatch [34737868781](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34737868781)
+is pending native runner capacity and is attempt 2/6. Next action: verify the
+corrected run's source SHA, then record the dependency outcome before choosing
+the next undeclared recipe. The malformed run is retained only as bookkeeping.
 
 ## Latest checkpoint
 
