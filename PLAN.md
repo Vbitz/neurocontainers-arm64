@@ -33,15 +33,18 @@ generation passed. The branch is pushed. Exact native ARM64 run
 was dispatched at `2026-09-13T07:28:48Z` with `upload_image=false`; inspect its
 result before considering another recipe.
 
-`networkcorrespondancetoolkit` is the second focused follow-up. Its candidate
-`5b1f1176992b3692e1187ef8223bde7a2e180803` on
-`arm64/networkcorrespondancetoolkit-arm64-lock` retains the upstream package
-and pip versions, removes only ARM-incompatible Conda build hashes, and drops
-the x86-only `ld_impl_linux-64` line during ARM64 setup. Recipe validation and
+`networkcorrespondancetoolkit` is the second focused follow-up. Its first
+candidate `5b1f1176992b3692e1187ef8223bde7a2e180803` removed only
+ARM-incompatible Conda build hashes and the x86-only `ld_impl_linux-64` line;
+native run [34745548264](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745548264)
+then exposed the pinned pip VTK wheel as unavailable on ARM64. The final
+targeted candidate `970032878c982eedc289d0f35180d4e8b21589a6` on
+`arm64/networkcorrespondancetoolkit-arm64-lock` keeps VTK 9.3.0 but selects its
+Conda-forge ARM64 package on that architecture. Recipe validation and
 ARM64/x86_64 Dockerfile generation passed. Exact native ARM64 run
-[34745548264](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745548264)
-was dispatched at `2026-09-13T07:33:59Z` with `upload_image=false`; both
-focused follow-up builds are active.
+[34745756464](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745756464)
+was created at `2026-09-13T07:39:05Z` with `upload_image=false`; it is active
+alongside MNE-Extended run [34745332614](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745332614).
 
 ## Second pass active work
 
