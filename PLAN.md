@@ -1499,3 +1499,12 @@ accepted and the remaining 151 unsupported recipes have recorded preflight
 blockers or failed ARM64 attempts. No builds are active; the next action is to
 leave this checkpoint for future upstream changes rather than duplicate any
 unchanged verification.
+
+## Active implementation checkpoint — 2026-09-13 22:15 Australia/Brisbane
+
+- Accepted submodule candidate: `1ce18a5642515bbb314ea48def4ac022c91264e8`, descended from `77b1ebe055243e309f5d5cbc0e7be279b72e9251` and verified by exact native run [34756122909](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756122909): MEGNET build, SIF, deploy, and 6/6 fulltest checks passed. The local submodule is on `arm64/integrate-megnet-terastitcher` while the root pointer is being accepted.
+- DeepLabCut integrated candidate `add4f3fe915a514d3fa4294b768b29934933b928` remains active in run [34756027424](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756027424).
+- DSI Studio final bounded candidate `fde81b639abf8a2b8a5efce3a6f8152dd2414127` remains active in run [34755647607](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34755647607); its investigation is at attempt 6/6.
+- SovaBIDS candidate `a4757fef0ea1c5723e264a9bf6fa41e10dadcad3` is pushed on `arm64/sovabids`. The prior checkout-only run [34756247757](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756247757) used an incorrect SHA and is metadata-only; the corrected exact dispatch is [34756526235](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756526235).
+- rsHRF candidate `4cb7f92901acfe61bc28321084ba02a690ff4167` is validated and pushed on `arm64/rshrf`, waiting for a runner slot. Fork Actions is confirmed disabled.
+- Next action: commit the MEGNET pointer, refresh coverage issue #2 from the new accepted pin, then monitor the three active investigations and dispatch rsHRF as soon as a slot opens. Keep each candidate’s exact source SHA tied to its run before acceptance.
