@@ -20,18 +20,20 @@
   - MIMoSA `1f1fa6ea2942b55d1c3ec01e615d38c2b777babc`, run
     [34770095073](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770095073),
     attempt 2/6, selecting the verified ARM FSL 6.0.7.22 route.
-  - CLEARSWI `cf9a122bc839f0bde01d013bdf17ef7a915541e7`, run
-    [34770539453](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770539453),
-    attempt 1/6, using official Julia Linux AArch64 and the stock ARM sysimage
-    after the prior ARM PackageCompiler failure.
+  - CLEARSWI `256b2824f39066e26a632a754f271879c3c085e9`, run
+    [34772631281](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34772631281),
+    attempt 2/6. The first source candidate built and passed deploy checks;
+    only the five-operation phase-scaling test exceeded its 120-second test
+    limit, so this retry raises that test limit to 300 seconds.
 - mritools is blocked-upstream after two native attempts. CompileMRI.jl v3.3.0
   reaches ARM64 Julia dependency setup but its released App bootstrap leaves
   incompatible `RomeoApp`/`ClearswiApp`/`MriResearchTools` dependencies; issue
   #156 and `plans/mritools.md` contain both runs and the exact errors.
-- Local submodule checkout is `arm64/itksnap-integrated` at
-  `f4a84c7150db1e9a35cb9f26014304a7ed0b3804`; the active source branches and
+- Local submodule checkout is `arm64/clearswi-bids` at
+  `256b2824f39066e26a632a754f271879c3c085e9`; the active source branches and
   exact run IDs are recorded above. Do not stage the top-level pointer until
-  the integrated PyDeface, MIMoSA and CLEARSWI candidates pass their full gates.
+  the integrated PyDeface, ITK-SNAP, MIMoSA and CLEARSWI candidates pass their
+  full gates.
 - Prepared transient retry: Blender commits replayed onto the accepted pin as
   `ad9ee486bb7898bdb2fa9e0265a876a7c5c16288` on `arm64/blender-integrated`.
   The prior run `34763788910` timed out downloading GMP 6.3.0; dispatch exactly

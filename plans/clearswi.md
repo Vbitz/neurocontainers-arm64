@@ -37,3 +37,16 @@ Keep the recorded failure as the current blocker for that candidate. A released 
 ## Implementation outcome — 2026-09-14
 
 A bounded ARM64 candidate is prepared on `arm64/clearswi-bids` at `cf9a122bc839f0bde01d013bdf17ef7a915541e7`. It adds the official Julia 1.12.6 Linux AArch64 archive and skips only the custom PackageCompiler sysimage step on ARM64, retaining the stock Julia sysimage and the same package installation, CLI, deploy and runtime assertions. Local validation and both architecture Dockerfile generations pass. Native run [34770539453](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770539453) is in progress.
+
+- The first source candidate `cf9a122bc839f0bde01d013bdf17ef7a915541e7` built
+  and converted successfully, and deploy checks passed. Its fulltest reached
+  67/68: the only failure was the existing `CLI phase scaling types` test,
+  which runs five native CLI operations and timed out at 120 seconds. The
+  individual operations were otherwise passing; the timeout occurred at the
+  aggregate test boundary after the preceding phase-scaling and strength tests.
+- Candidate `256b2824f39066e26a632a754f271879c3c085e9` raises only that test's
+  timeout to 300 seconds, preserving all commands and output assertions. Local
+  validation and ARM64/x86_64 generation pass. Exact retry
+  [34772631281](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34772631281)
+  is queued/in progress as attempt 2/6. If it passes, replay the same one-line
+  fulltest change onto the accepted integration state before accepting.
