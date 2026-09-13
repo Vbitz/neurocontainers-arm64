@@ -46,3 +46,9 @@ Candidate [`386964db1c454c002ebd562d06bd1cdcbedcdb99`](https://github.com/Vbitz/
 is pushed on [`arm64/qupath-source-arm`](https://github.com/Vbitz/neurocontainers/tree/arm64/qupath-source-arm), based on accepted pin `8bcc3e3d`. It declares ARM64 and builds QuPath v0.7.0 from the upstream Gradle source project with `jpackage`, retaining the released x86_64 archive path. It also installs Cellpose with the official ARM64 CPU PyTorch 2.6.0 wheel while preserving the x86_64 CUDA route and the existing extension/model tests. Local validation and both architecture generations pass.
 
 The candidate is queued behind four active native jobs. Acceptance requires the exact native ARM64 build, SIF conversion, deploy checks, QuPath CLI behavior and the Cellpose extension test suite. A build failure will identify whether one of the upstream native classifiers is still missing for ARM64.
+
+Before dispatch, candidate [`292b588d105673f8498d7faac750470cec58bce4`](https://github.com/Vbitz/neurocontainers/commit/292b588d105673f8498d7faac750470cec58bce4)
+superseded the prior candidate with an explicit `chmod 0755` on the extracted
+Gradle wrapper. This prevents a source archive mode bit from creating a
+spurious failure; validation and both architecture generations still pass.
+Use the corrected full SHA for native dispatch.
