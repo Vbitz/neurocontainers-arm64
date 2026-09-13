@@ -5,7 +5,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `df6c888` (sigviewer ARM64 dispatch checkpoint)
+- Top-level commit: `b3e9a06` (emuses ARM64 dispatch checkpoint)
 - Pinned submodule: `neurocontainers@88fb85137ac628e23542a923dfc005f8918bf306` (ANTs, OpenRecon example, and Bloch-Siegert accepted in this checkpoint)
 - Submodule checkout: `arm64/emuses`, candidate `d5aaf861187bdbdf92ac5ec9143be4034a9a7f37` from accepted source `88fb85137ac628e23542a923dfc005f8918bf306`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while candidates run.
 - Fork Actions: disabled (`enabled: false`)
@@ -39,6 +39,18 @@ dispatch [34737868781](https://github.com/Vbitz/neurocontainers-arm64/actions/ru
 is pending native runner capacity and is attempt 2/6. Next action: verify the
 corrected run's source SHA, then record the dependency outcome before choosing
 the next undeclared recipe. The malformed run is retained only as bookkeeping.
+
+`code` is the third-second-pass candidate. Investigation started at
+`2026-09-13T04:27:26Z`; deadline `2026-09-13T16:27:26Z`. Candidate
+`1cc5c3e34b1e3f5f1151caadb62e5b5c634133a9` on branch `arm64/code` adds
+architecture-specific official assets for VS Code, Julia 1.6.3, and Go 1.17.2
+while retaining their x86_64 assets. Local validation and both architecture
+generations passed. Attempt 1 [34738038980](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34738038980)
+was cancelled before recipe checkout after a malformed ref was detected and
+has no recipe evidence. Corrected attempt 2/6 is
+[34738072738](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34738072738),
+queued for native ARM64 capacity. Next action: verify its source SHA and
+assess the build/runtime result.
 
 ## Latest checkpoint
 
