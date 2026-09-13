@@ -63,3 +63,5 @@ uses exact atlas IDs that produced non-empty tracts in the native report and
 keeps the connectivity output and current error-message fixes. Validation and
 both architecture generations pass. This is the candidate to dispatch when a
 slot opens; no DSI run has been started for this final local revision yet.
+
+Exact native retry [34774820860](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774820860) is now dispatched as attempt 2/6. It is based on the accepted PyDeface pin and must pass Docker build, architecture verification, SIF conversion, deploy checks and the fulltest before integration.

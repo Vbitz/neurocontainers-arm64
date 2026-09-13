@@ -18,6 +18,12 @@
   `685f5f4d9636d34aa8237646535d2a7dfc3a525d`; the root working tree therefore
   intentionally shows the submodule pointer modified. Do not accept that
   pointer until this exact candidate passes all gates.
+- DSI Studio candidate `bdb427db440ea72de1e6fc50fc7a115c41fef5aa` was
+  dispatched as attempt 2/6 in [run 34774820860](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774820860)
+  after CLEARSWI completed successfully. Issue
+  [#195](https://github.com/Vbitz/neurocontainers-arm64/issues/195) has the
+  retry evidence. The run is queued/in progress; EMUSES remains the next
+  queued candidate after another slot opens.
 
 - Top-level parent commit: `6da579a`; accepted submodule pin is now
   `80a84327a6659b0ac79a44f2c1853faa9eb84f4b` (PyDeface integrated on BIDSvue;
