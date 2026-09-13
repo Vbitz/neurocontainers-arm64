@@ -7,7 +7,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 - Top-level branch: `main`
 - Top-level commit before this checkpoint: `c8652d9` (accepted SynthSeg pin)
 - Pinned submodule: `neurocontainers@77b1ebe055243e309f5d5cbc0e7be279b72e9251` (TeraStitcher added after NFTsim)
-- Submodule checkout: `arm64/integrate-terastitcher-nftsim`, accepted NFTsim run `34754095890` passed 68/68 and exact TeraStitcher replay `34754970340` passed 5/5 through build, SIF conversion, deploy checks and fulltest. Exact integrated verification is active for DSI Studio `34754629806`, LST-AI `34754990704`, and DeepLabCut `34755044427`; their candidates are recorded below. Earlier blocked outcomes remain recorded in their per-recipe issues. Origin `Vbitz/neurocontainers`.
+- Submodule checkout: `arm64/integrate-terastitcher-nftsim`, accepted NFTsim run `34754095890` passed 68/68 and exact TeraStitcher replay `34754970340` passed 5/5 through build, SIF conversion, deploy checks and fulltest. Exact integrated verification is active for DSI Studio `34755647607` and DeepLabCut `34755044427`; LST-AI is blocked on its required x86-64 Greedy binary. Prepared candidates are MEGNET `142d2671`, SovaBIDS `f1ec330f`, and rsHRF `4cb7f929`. Earlier blocked outcomes remain recorded in their per-recipe issues. Origin `Vbitz/neurocontainers`.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 102 of 247 declarations, refreshed from accepted source `77b1ebe055243e309f5d5cbc0e7be279b72e9251`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -89,11 +89,13 @@ The following candidates are being tested from exact immutable submodule SHAs:
   [34753242671](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753242671)
   also passed on its prior baseline; the integrated run is the acceptance evidence.
 - DSI Studio is being verified at integrated candidate
-  `66fa4294c8a16333f0bb0167deeaa26146a53b51` on branch
-  `arm64/integrate-dsistudio-synthseg`; run
-  [34754629806](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34754629806)
-  is in progress after updating release-specific CLI assertions and preserving
-  real output checks.
+  `fde81b639abf8a2b8a5efce3a6f8152dd2414127` on branch
+  `arm64/integrate-dsistudio-terastitcher`; final bounded run
+  [34755647607](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34755647607)
+  is in progress after switching affected AutoTrack checks to the current
+  FIB-derived defaults and correcting endpoint connectivity output naming. The
+  preceding integrated run [34754629806](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34754629806)
+  passed 77/83.
 - TeraStitcher is accepted at integrated candidate
   `77b1ebe055243e309f5d5cbc0e7be279b72e9251` on branch
   `arm64/integrate-terastitcher-nftsim`; exact run
@@ -102,10 +104,11 @@ The following candidates are being tested from exact immutable submodule SHAs:
   preceding candidate run [34754399137](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34754399137)
   also passed on its prior baseline.
 - LST-AI candidate `c992e97d08411e21cf4c55863030272563c1722e` on branch
-  `arm64/lstai` validates and generates for both architectures. Its ARM path
-  builds pinned dcm2niix source; exact native run
-  [34754990704](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34754990704)
-  is in progress.
+  `arm64/lstai` built and converted successfully, passing 10/11 checks. It is
+  blocked because the required v1.1.0 `greedy` registration binary is x86-64
+  and no ARM64 release or documented portable build route was found; issue
+  [#207](https://github.com/Vbitz/neurocontainers-arm64/issues/207#issuecomment-5653090650)
+  records the exact failure.
 
 DeepLabCut passed an earlier candidate run, but its candidate was based on the
 previous accepted pin and still requires the exact integrated run above before
@@ -121,10 +124,10 @@ records the source-completeness blocker. TeraStitcher’s first two source-build
 candidates failed as described above; its third candidate passed all 5 fulltest
 checks and still requires serial replay onto the accepted NFTsim pin.
 Coverage issue #2 will be refreshed after this accepted TeraStitcher pin. The
-top-level submodule pointer must remain at this accepted SHA while the four
-integrated verifications finish. When a run completes, record its exact source
-and test counts, then integrate successful candidates serially from the latest
-accepted pin (currently `77b1ebe055243e309f5d5cbc0e7be279b72e9251`); retain failed
+top-level submodule pointer must remain at this accepted SHA while DSI Studio
+and DeepLabCut finish. When a run completes, record its exact source and test
+counts, then integrate successful candidates serially from the latest accepted
+pin (currently `77b1ebe055243e309f5d5cbc0e7be279b72e9251`); retain failed
 branches and record the first actionable error before selecting the next plan.
 
 ## Remaining unsupported inventory audit
