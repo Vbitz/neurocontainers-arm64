@@ -91,3 +91,5 @@ and both architecture generations, and is dispatched in exact retry [run
 34779151809](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34779151809),
 attempt 3/6. Stop if the next failure is a dependency port rather than a
 localized Qt compatibility issue.
+
+Because TopoFit advanced the accepted pin to `88e6776aeb27f16ef43e015acb426b7e87fe0d1c`, the complete current recipe change set was replayed as candidate [`141af5d6843fb84bedb1224851f5cc6601a7e034`](https://github.com/Vbitz/neurocontainers/commit/141af5d6843fb84bedb1224851f5cc6601a7e034) on [`arm64/itksnap-topofit`](https://github.com/Vbitz/neurocontainers/tree/arm64/itksnap-topofit). Validation and ARM64/x86_64 Dockerfile generation passed. If run 34779151809 passes, dispatch this exact current-pin candidate for required integrated verification before acceptance; otherwise use it as the base for the remaining bounded fix.
