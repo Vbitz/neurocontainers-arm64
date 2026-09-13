@@ -61,33 +61,49 @@ were queued.
 
 ## Implementation goal checkpoint — 2026-09-13
 
-The current top-level checkpoint is `871da45`, pinning the accepted submodule
-source `815cf1b3e10b0b4b6003dc728f4300c54ccc3116`. Modsort remains integrated
-and proven by native run [34751788247](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751788247)
-with 8 passed, 0 failed and 0 skipped. SynthSeg is now also accepted after
+The current top-level checkpoint is root commit `769d79f`, pinning the accepted
+submodule source `815cf1b3e10b0b4b6003dc728f4300c54ccc3116`. Modsort remains
+integrated and proven by native run [34751788247](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751788247)
+with 8 passed, 0 failed and 0 skipped. SynthSeg is also accepted after
 integrated native run [34753249262](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753249262)
 passed build, SIF conversion, deploy checks and all 18 fulltest checks.
 
 The following candidates are being tested from exact immutable submodule SHAs:
 
-- DeepLabCut integrated onto the accepted pin at `e39f1c055f4c4d77faa5d024c719ca36f7727797`,
-  run [34753282289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753282289),
-  in progress.
-- NFTsim at `ece7ec407a83cf27a2fbd0d53248b544c883425e`,
-  run [34753242671](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753242671),
-  in progress. Its earlier run [34753146569](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753146569)
+- DeepLabCut has been replayed onto the accepted pin at
+  `f6062fd22d248ae449eff707c27e836f3191737c` on branch
+  `arm64/integrate-deeplabcut-synthseg`; integrated run
+  [34754184841](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34754184841)
+  is in progress. The preceding candidate run
+  [34753282289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753282289)
+  passed 101/101 but was based on the prior accepted pin.
+- NFTsim has been replayed onto the accepted pin at
+  `ce058afece0774f0fe915f3bc07c04507c7665bc` on branch
+  `arm64/integrate-nftsim-synthseg`; integrated run
+  [34754095890](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34754095890)
+  is in progress. The preceding candidate run
+  [34753242671](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753242671)
+  passed 68/68 on its prior baseline. Its earlier run
+  [34753146569](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753146569)
   failed before source checkout because a shortened SHA was supplied and is not
   application build evidence.
 - DSI Studio at `89ee8274f71662f0222dbde3f1f3a5b4ef5e6826`,
   run [34753556106](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753556106),
-  queued. This candidate supplements the current ARM64 executable with the
+  in progress. This candidate supplements the current ARM64 executable with the
   architecture-independent legacy atlas, neonate, network, and color-map data
   omitted from the current upstream archive; issue [#195](https://github.com/Vbitz/neurocontainers-arm64/issues/195#issuecomment-5652878390)
   records the bounded retry hypothesis.
 
-DeepLabCut passed an earlier candidate run, but that candidate was based on the
-previous accepted pin, so it requires the exact integrated run above before the
-top-level pointer advances. Convert3D reached
+- TeraStitcher retry candidate `e171d9f0305d8e863c0f85274e99536c9dee575a` on
+  branch `arm64/terastitcher` is in progress as run
+  [34754153127](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34754153127),
+  attempt 2/6. The first run [34753895323](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753895323)
+  reached the native build and failed on C++17 dynamic exception specifications;
+  the retry forces C++11 in CMake.
+
+DeepLabCut and NFTsim passed earlier candidate runs, but those candidates were
+based on the previous accepted pin, so each requires the exact integrated run
+above before the top-level pointer advances. Convert3D reached
 the native build but is blocked because Debian Bookworm has no ARM64
 `libinsighttoolkit5-dev` package and building ITK itself exceeds recipe scope;
 run [34752548314](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34752548314)
@@ -95,9 +111,8 @@ and issue [#133](https://github.com/Vbitz/neurocontainers-arm64/issues/133) reco
 that outcome. LCModel is blocked at source audit because the public source
 contains only the core executable while the recipe requires unavailable
 ancillary tools; issue [#205](https://github.com/Vbitz/neurocontainers-arm64/issues/205)
-records the source-completeness blocker. TeraStitcher is running from candidate
-`ec7503cb8ee31f9d40ff3097adfac895bcfbb4ec`, based on the prior accepted pin, in
-run [34753895323](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753895323).
+records the source-completeness blocker. TeraStitcher’s first source-build
+candidate failed as described above; its C++11 retry is now running.
 Coverage issue #2 was refreshed after accepting SynthSeg; its body now reflects
 the current declarations. The top-level submodule pointer must still remain at
 the accepted SHA while DeepLabCut, DSI Studio, and TeraStitcher runs finish.
