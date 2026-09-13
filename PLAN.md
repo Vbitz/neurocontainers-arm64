@@ -41,15 +41,16 @@ DSI Studio (released ARM asset requiring a version mapping/update), LCModel
 (source build), and SynthSeg (documented CPU path and ARM TensorFlow wheels).
 Check each existing investigation budget and issue before any new attempt.
 The current implementation goal supersedes the research-only checkpoint below.
-The first implementation candidate is `modsort` on branch `arm64/modsort`,
-candidate `bbc7a343`, dispatched as native run
-[34751546979](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751546979).
+The first implementation candidate, `modsort`, is proven on branch
+`arm64/modsort` at candidate `c38fa11e`, with native run
+[34751788247](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751788247)
+passing build, SIF conversion, deploy checks and all 8 fulltest checks after
+one targeted zlib linker-package fix.
 Its issue [#155](https://github.com/Vbitz/neurocontainers-arm64/issues/155)
-contains the hypothesis and run checkpoint. The accepted submodule pin remains
-`457c5a31b9830587801a06e7d6f81f18293135e8`; do not accept the candidate until
-the exact commit passes build, SIF conversion, deploy checks and fulltest.
-The remaining implementation queue begins with DSI Studio, LCModel, SynthSeg
-and DeepLabCut after reviewing their existing budgets and current issues.
+contains the full attempt history. The accepted submodule pin is being advanced
+serially to `c38fa11e2377ad2a9775fdd5fc3993c8b44155de` before accepting another
+candidate. DSI Studio, SynthSeg and DeepLabCut are active; LCModel remains next
+after reviewing its source/runtime completeness.
 Research files were committed and pushed as `aade145`. Essential corrections
 were mirrored in [coverage issue #2](https://github.com/Vbitz/neurocontainers-arm64/issues/2#issuecomment-5652645856)
 and the existing modsort, DSI Studio, LCModel, FSL, DeepLabCut, LSTAI, SynthSeg
