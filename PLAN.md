@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit before this checkpoint: `c8652d9` (accepted SynthSeg pin)
+- Top-level commit before this checkpoint: `96bc2e1` (DSI Studio retry and LST-AI blocker checkpoint)
 - Pinned submodule: `neurocontainers@77b1ebe055243e309f5d5cbc0e7be279b72e9251` (TeraStitcher added after NFTsim)
-- Submodule checkout: `arm64/integrate-terastitcher-nftsim`, accepted NFTsim run `34754095890` passed 68/68 and exact TeraStitcher replay `34754970340` passed 5/5 through build, SIF conversion, deploy checks and fulltest. Exact integrated verification is active for DSI Studio `34755647607` and DeepLabCut `34755044427`; LST-AI is blocked on its required x86-64 Greedy binary. Prepared candidates are MEGNET `142d2671`, SovaBIDS `f1ec330f`, and rsHRF `4cb7f929`. Earlier blocked outcomes remain recorded in their per-recipe issues. Origin `Vbitz/neurocontainers`.
+- Submodule checkout: `arm64/integrate-terastitcher-nftsim`, accepted NFTsim run `34754095890` passed 68/68 and exact TeraStitcher replay `34754970340` passed 5/5 through build, SIF conversion, deploy checks and fulltest. Current exact integrated verification is active for DSI Studio `34755647607`, DeepLabCut `34756027424`, SovaBIDS `34756025699`, and MEGNET `34756122909` (queued). LST-AI is blocked on its required x86-64 Greedy binary. Prepared rsHRF candidate: `4cb7f929`. Earlier blocked outcomes remain recorded in their per-recipe issues. Origin `Vbitz/neurocontainers`.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 102 of 247 declarations, refreshed from accepted source `77b1ebe055243e309f5d5cbc0e7be279b72e9251`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -1439,6 +1439,17 @@ submodule SHA.
 - `networkcorrespondancetoolkit` / `arm64`: exact run `34739158124`, candidate `95e84c71`, failed during Conda environment creation because the upstream lock pins `ca-certificates==2024.6.2=hbcca054_0`, unavailable for `linux-aarch64`. Issue [#99](https://github.com/Vbitz/neurocontainers-arm64/issues/99) records the blocked-upstream result and revisit condition.
 - `voreen` / `arm64`: exact runs `34739742820` and `34739991537`, candidates `bb08bc1c` and `151c8c5d`, both stopped in native ARM64 CMake configuration before compilation. Voreen 5.3.0's bundled `FindBoostVRN.cmake` requests `math_c99l` and `math_tr1l`, unavailable from Ubuntu 24.04's ARM64 Boost 1.83.0 packages; package mode and module mode both fail. Issue [#117](https://github.com/Vbitz/neurocontainers-arm64/issues/117) records the blocked-upstream result and revisit condition.
 - `bart` / `arm64`: exact dispatch `34740461864`, candidate `e3f721a7`, passed all gates with 117 passed, 0 failed, and 0 skipped. The ARM64 path uses upstream BART's `CUDA=0` CPU build; the x86_64 CUDA path is preserved. Issue [#180](https://github.com/Vbitz/neurocontainers-arm64/issues/180) records the verified result; the candidate is accepted at `e3f721a7`.
+
+## Latest implementation checkpoint — 2026-09-13 22:05 Australia/Brisbane
+
+The accepted submodule pin remains `77b1ebe055243e309f5d5cbc0e7be279b72e9251`; the local checkout is back on `arm64/integrate-terastitcher-nftsim` and is clean. Fork Actions remains disabled. Four runner slots are occupied by the following exact candidates:
+
+- DeepLabCut: prior candidate run `34755044427` passed 101/101. Replay candidate `add4f3fe915a514d3fa4294b768b29934933b928` is on `arm64/integrate-deeplabcut-terastitcher`, with exact run `34756027424` active.
+- SovaBIDS: first candidate run `34755714902` failed during the indirect PyQt5 source metadata build because SIP could not find qmake. Retry candidate `7a9deaee23242820fb6fbd5c27df862e67975a9d` adds ARM Qt development packages and configures qmake for the pinned PyQt5 source build; exact run `34756025699` is active. The earlier malformed-source dispatch `34755995546` was cancelled before build.
+- MEGNET: prior candidate run `34755697611` passed 6/6. Replay candidate `1ce18a5642515bbb314ea48def4ac022c91264e8` is on `arm64/integrate-megnet-terastitcher`; exact run `34756122909` is queued.
+- DSI Studio: final bounded candidate `fde81b639abf8a2b8a5efce3a6f8152dd2414127` is on `arm64/integrate-dsistudio-terastitcher`; exact run `34755647607` remains in its runtime test phase. The prior integrated run passed 77/83; if the five named AutoTrack bundles still fail, the six-attempt budget is exhausted and the release/runtime mismatch will be recorded as the blocker.
+
+The rsHRF source-build candidate `4cb7f92901acfe61bc28321084ba02a690ff4167` is pushed on `arm64/rshrf`, validated, and ready for dispatch when a slot opens. No additional recipe is queued until one of the four active investigations completes. A prior DeepLabCut malformed-source dispatch `34755840907` failed during checkout and is metadata-only; its exact replacement is the active run above.
 
 ## Integration
 
