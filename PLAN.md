@@ -7,7 +7,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 - Top-level branch: `main`
 - Top-level commit: `a5c279a` (final ARM64 probe checkpoint)
 - Pinned submodule: `neurocontainers@6502b535` (PeTu added after BrainLes AURORA, GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
-- Submodule checkout: `arm64/brainlesion`, candidate `83f5dc95` based on accepted `6502b535`; origin `Vbitz/neurocontainers`. Active BraTS candidate `fd560efd` remains on its pushed branch; the BrainLesion candidate is recorded as blocked. Failed Voreen and NCT candidates and the assessed preflight branches remain available.
+- Submodule checkout: `arm64/brats`, candidate `166f9dac` based on `fd560efd`; origin `Vbitz/neurocontainers`. Active BraTS retry remains on its pushed branch; the BrainLesion candidate is recorded as blocked. Failed Voreen and NCT candidates and the assessed preflight branches remain available.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 95 of 247 declarations, refreshed from accepted source `6502b535`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -204,7 +204,14 @@ adds `aarch64`, builds Apptainer 1.4.4 from its official source tarball with
 Go 1.23.6 on ARM64, and preserves the x86_64 Debian package path. Local
 validation and both architecture generations passed. Exact native dispatch
 [34742237759](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34742237759)
-is active.
+failed during the final ARM64 image setup because the source-built Apptainer
+already installed `/usr/local/bin/singularity` and the recipe then tried to
+create the same symlink. The x86_64 package path was unaffected. Retry
+candidate `166f9dac76f26c1906acaf468665916a2b0bbca6` keeps the symlink step
+x86_64-only and leaves the shared version checks in place. Local validation and
+both architecture generations passed. Exact retry
+[34742518202](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34742518202)
+is active; attempts: 2/6; deadline `2026-09-13T18:13:56Z`.
 
 `brainlesion` is blocked upstream after a dependency-resolution probe. Investigation started at
 `2026-09-13T06:14:35Z`; deadline `2026-09-13T18:14:35Z`; attempt 1/6.
