@@ -33,3 +33,7 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/cl
 ## Decision boundary
 
 Keep the recorded failure as the current blocker for that candidate. A released upstream fix or documented configuration addressing its first error is the condition for a justified retry. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation outcome — 2026-09-14
+
+A bounded ARM64 candidate is prepared on `arm64/clearswi-bids` at `cf9a122bc839f0bde01d013bdf17ef7a915541e7`. It adds the official Julia 1.12.6 Linux AArch64 archive and skips only the custom PackageCompiler sysimage step on ARM64, retaining the stock Julia sysimage and the same package installation, CLI, deploy and runtime assertions. Local validation and both architecture Dockerfile generations pass. Native run [34770539453](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770539453) is in progress.
