@@ -59,6 +59,36 @@ presence, local links and unchanged accepted pin were checked; all 148 plans
 are accounted for. One ARM64 recipe run is active; no other new runner jobs
 were queued.
 
+## Implementation goal checkpoint — 2026-09-13
+
+The accepted top-level commit is `770fa87`, pinning submodule source
+`c38fa11e2377ad2a9775fdd5fc3993c8b44155de`. Modsort is integrated and proven
+by native run [34751788247](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751788247)
+with 8 passed, 0 failed and 0 skipped. SynthSeg candidate
+`2bd94fdea81eb995c10a6ae5cd8064890e61a5a8` passed native build, SIF conversion,
+deploy checks and 18 fulltest checks in run
+[34751886197](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751886197);
+it still needs serial integration and verification from the current accepted
+pin before the top-level pointer advances.
+
+Active exact-SHA investigations are DSI Studio `720808c1d2f504ece9c9669ca37ee952369eed52`
+on run [34752545566](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34752545566),
+DeepLabCut `df0e6e811ca6fbbe7f6e496cb4944bcfb417fa90` on run
+[34752546864](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34752546864),
+and Convert3D `d9d5ba1b67b76294faa83cd7fc471db1df05f11b` on queued run
+[34752548314](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34752548314).
+The earlier short-ref dispatches failed before source checkout and were not
+application build evidence; each candidate was unchanged and redispatched with
+its complete SHA. DSI Studio's current candidate restores the 2026 archive's
+renamed atlas paths. DeepLabCut's current candidate omits its ARM-incompatible
+optional GUI extra while retaining the core/modelzoo/TensorFlow stack. Convert3D
+uses its public ITK/CMake source on ARM64 and retains the x86 nightly binary.
+Do not dispatch another attempt for these recipes until these exact runs are
+reviewed. On completion, integrate successful candidates serially from the
+accepted pin `c38fa11e`; retain failed branches and record the first actionable
+error in their issue comments. LCModel is the next candidate after a completion
+frees a runner slot.
+
 ## Remaining unsupported inventory audit
 
 At accepted source `457c5a31b9830587801a06e7d6f81f18293135e8`, 149 recipes
