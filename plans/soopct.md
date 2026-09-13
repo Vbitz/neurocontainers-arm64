@@ -37,3 +37,10 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/so
 ## Decision boundary
 
 A dependency/source-build investigation remains, rather than an established universal ARM incompatibility. Revisit when the exact native package set or documented source configuration is available; record any first actionable failure. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation candidate — 2026-09-14
+
+Candidate [`d4566cb95d73717f55176350179fb8cb8f1f776f`](https://github.com/Vbitz/neurocontainers/commit/d4566cb95d73717f55176350179fb8cb8f1f776f)
+is pushed on [`arm64/soopct-antspyx-source`](https://github.com/Vbitz/neurocontainers/tree/arm64/soopct-antspyx-source), based on accepted pin `8bcc3e3d`. It declares ARM64, preserves the Python 3.13 x86_64 template unchanged, and uses the known working Python 3.11 ARM route with native `build-essential`, CMake and image-library packages. ARM explicitly installs antspyx 0.5.4 from source; the pure Python SOOP-CT, BrainChop, NumPy, SciPy and NiBabel dependencies remain unchanged. Local validation and both architecture generations pass.
+
+This candidate is queued behind the four active native runs. Acceptance requires the exact ARM64 build, SIF conversion, deploy checks and the full SOOP-CT conversion, BrainChop CLI and dependency fulltests. A concrete first build error will determine whether the source route is feasible or blocked upstream.
