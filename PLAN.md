@@ -182,6 +182,15 @@ generations passed. Exact native dispatch
 [34741200931](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34741200931)
 is active in the native ARM64 build stage.
 
+`brainles-aurora` is the fourth active bounded CPU candidate. Investigation
+started at `2026-09-13T05:50:32Z`; deadline `2026-09-13T17:50:32Z`; attempt
+1/6. Candidate `dc828b57afcfaf21f4613d731b5676dcb16cacaa` on branch
+`arm64/brainles-aurora` adds `aarch64` and selects the official PyPI ARM64 CPU
+torch package while preserving the x86_64 CUDA 12.4 path. Local validation and
+both architecture generations passed. Exact native dispatch
+[34741297561](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34741297561)
+is active in the native ARM64 build stage.
+
 ## Latest checkpoint
 
 MipView candidate `d7de67d4647d4bfb50eb14f799afd34fd57d3c34` passed exact native
@@ -362,7 +371,8 @@ ancestry in this checkpoint.
 
 The accepted source contains 156 undeclared recipes after the Lipsia
 integration. A full preflight screen on 2026-09-13 found LQT, GlioMODA, Lipsia,
-BART, and PeTu as bounded source candidates; the remaining inventory falls into
+BART, PeTu, and BrainLes AURORA as bounded source candidates; the remaining
+inventory falls into
 these groups:
 
 - fixed x86_64 or amd64 downloads and containers, including AFNI, ASHS, BIDS
@@ -1157,10 +1167,11 @@ independent declarations are integrated at `2884a0e6`. ANTs run
 36 tests and is integrated at `c34a2103` without a duplicate native run.
 Elastix, emuses, MRIcroGL, PalmettoBUG, NCT, and Voreen are recorded as blocked
 with their revisit conditions. LQT run `34740546339`, GlioMODA run
-`34740874041`, and PeTu run `34741200931` are active. BART run `34740461864`
-and Lipsia run `34740665171` passed and are accepted.
+`34740874041`, PeTu run `34741200931`, and BrainLes AURORA run `34741297561`
+are active. BART run `34740461864` and Lipsia run `34740665171` passed and are
+accepted.
 Code's
 integrated run `34738779168` passed and is accepted at `15337e04`. Lipsia is
 integrated at `dc20187f` without a duplicate native run. The next action is to
-monitor LQT and GlioMODA and continue the remaining undeclared inventory
+monitor the four active native builds and continue the remaining undeclared inventory
 without rerunning verified recipes.
