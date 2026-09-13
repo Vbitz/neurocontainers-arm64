@@ -1,5 +1,37 @@
 # ARM64 porting checkpoint
 
+## Latest implementation checkpoint — 2026-09-14
+
+- Root commit: `ce55490`; accepted submodule pin remains
+  `9a5ae40c67667a088f50f0e9885833b983893f98` (FSL, 129/129 native checks).
+  Fork Actions remains disabled. The local submodule pointer is intentionally
+  unstaged while candidate runs execute.
+- Active exact investigations:
+  - AFNI `a51788253403b44c819d4273a134eedfe822aad3`, run
+    [34763111015](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763111015),
+    attempt 2, correcting the official ARM R-bundle extraction directory.
+  - Quickshear `90a169d1cde93600af0da8d07986285e792fad32`, run
+    [34764132084](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34764132084),
+    attempt 2, extending only the existing CPU SynthStrip timeout.
+  - ROOT `3bdd670d17eb6aae64902d1aed8091b2c464a79a`, run
+    [34764973586](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34764973586),
+    attempt 2, selecting `apt` for the Ubuntu ARM64 base while retaining `yum`
+    for the x86_64 ROOT base.
+  - MRIcroGL `0838b0602c221df151c16d12e1764e23a0bcffb9`, run
+    [34765237503](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34765237503),
+    attempt 2, fixing the ARM dcm2niix output path after its source build
+    succeeded.
+- LST-AI is blocked by the required x86-only Greedy binary and exhausted one
+  permitted unchanged Zenodo retry. Surf Ice is blocked by the upstream
+  FreePascal ARM64 compiler internal error. DSI Studio and Blender remain
+  failed-runtime and data/build-download investigations respectively; their
+  branches are preserved without speculative retries.
+- Prepared next candidate: PyDeface `ef08d99accaff64e04c2352da607e1ba6f94fafa`
+  on `arm64/pydeface-fsl`, based on the accepted FSL pin and validated for both
+  ARM64 and x86_64 generation. Dispatch it when one of the four active slots
+  opens. The current local submodule branch is `arm64/mricrogl-fsl` at
+  `0838b060`.
+
 ## Active implementation checkpoint — 2026-09-14
 
 - Root acceptance commit: `5af67a2`; accepted submodule pin:
