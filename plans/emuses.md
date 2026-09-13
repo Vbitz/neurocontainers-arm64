@@ -38,3 +38,9 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/em
 ## Decision boundary
 
 A dependency/source-build investigation remains, rather than an established universal ARM incompatibility. Revisit when the exact native package set or documented source configuration is available; record any first actionable failure. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation outcome — 2026-09-14
+
+- The earlier native candidate stopped during `pip-sync` because the x86-generated lock pinned `triton==3.3.1`, which had no ARM64 distribution. The pinned PyTorch 2.7.1 release publishes a native Linux aarch64 wheel and declares its NVIDIA/Triton closure for x86_64 only.
+- Candidate `685f5f4d9636d34aa8237646535d2a7dfc3a525d` on `arm64/emuses-integrated-80a` preserves the exact x86 lock and, only on native aarch64, removes the generated NVIDIA/Triton lock entries before the unchanged `pip-sync` step. Local validation and ARM64/x86_64 Dockerfile generation pass.
+- The candidate is pushed and waiting for a native runner slot. Exact dispatch, SIF conversion, deploy checks and the existing EMUSES fulltest remain required before acceptance.

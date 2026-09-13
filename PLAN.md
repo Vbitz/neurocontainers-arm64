@@ -4,6 +4,21 @@
 
 ### Checkpoint after ITK-SNAP Qt source retry dispatch
 
+- Root checkpoint commit before this edit: `32e4ade`; accepted submodule pin remains
+  `80a84327a6659b0ac79a44f2c1853faa9eb84f4b` (PyDeface integrated on BIDSvue;
+  native 60/60 fulltests in [run 34771433995](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771433995)).
+- Prepared EMUSES candidate `685f5f4d9636d34aa8237646535d2a7dfc3a525d` on
+  `arm64/emuses-integrated-80a`, based on the accepted pin. It removes only
+  the x86-generated NVIDIA/Triton lock entries on native aarch64 so the
+  published PyTorch 2.7.1 ARM64 wheel can resolve; the x86 path remains
+  unchanged. Local validation and both architecture generations pass. Issue
+  [#94](https://github.com/Vbitz/neurocontainers-arm64/issues/94) records the
+  hypothesis and the candidate. Dispatch after a native slot opens.
+- The local submodule checkout is now `arm64/emuses-integrated-80a` at
+  `685f5f4d9636d34aa8237646535d2a7dfc3a525d`; the root working tree therefore
+  intentionally shows the submodule pointer modified. Do not accept that
+  pointer until this exact candidate passes all gates.
+
 - Top-level parent commit: `6da579a`; accepted submodule pin is now
   `80a84327a6659b0ac79a44f2c1853faa9eb84f4b` (PyDeface integrated on BIDSvue;
   native 60/60 fulltests in [run 34771433995](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771433995)).
