@@ -2,6 +2,35 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after mritools blocker and CLEARSWI dispatch
+
+- Root commit: `26cb92c`; accepted submodule pin remains
+  `ba7af5842b2c41dbc98ffd8d1e25431acf19a7db` (BIDSvue on top of AFNI,
+  5/5 native fulltests). Fork Actions remains disabled.
+- Active exact investigations:
+  - ITK-SNAP candidate `7ceabea5d97151a98cf6655055729804870b33ee`, run
+    [34769119103](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769119103),
+    attempt 2/6.
+  - PyDeface candidate `90ee2948253826e0413ca90be894f381d10009eb`, run
+    [34769469302](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769469302),
+    attempt 4/6.
+  - MIMoSA `1f1fa6ea2942b55d1c3ec01e615d38c2b777babc`, run
+    [34770095073](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770095073),
+    attempt 2/6.
+  - CLEARSWI `cf9a122bc839f0bde01d013bdf17ef7a915541e7`, run
+    [34770539453](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770539453),
+    attempt 1/6; queued after adding Julia Linux AArch64 and bypassing the
+    failing ARM64 custom sysimage step.
+- mritools is blocked-upstream after two native attempts. CompileMRI.jl v3.3.0
+  reaches ARM64 Julia dependency setup but its released App bootstrap leaves
+  incompatible `RomeoApp`/`ClearswiApp`/`MriResearchTools` dependencies; issue
+  #156 and `plans/mritools.md` contain both runs and the exact errors.
+- Local submodule checkout is `arm64/mritools-bids` at
+  `bec588b5d45ad87e68ab5ccb4a19ea8ab969975a`; CLEARSWI remains prepared on
+  `arm64/clearswi-bids` at `cf9a122bc839f0bde01d013bdf17ef7a915541e7`.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after mritools bootstrap retry and CLEARSWI preparation
 
 - Root commit: `edce8c3`; accepted submodule pin remains
