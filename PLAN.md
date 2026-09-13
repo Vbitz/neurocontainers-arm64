@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `9767ce6` (sigviewer ARM64 acceptance checkpoint)
+- Top-level commit: `8d0d507` (sigviewer and second-pass blocker checkpoint)
 - Pinned submodule: `neurocontainers@c34a2103117399b31000f4d74bb378482e03f691` (sigviewer added after the ANTs, OpenRecon example, and Bloch-Siegert acceptances)
-- Submodule checkout: `arm64/code`, candidate `1cc5c3e34b1e3f5f1151caadb62e5b5c634133a9` from accepted source `88fb85137ac628e23542a923dfc005f8918bf306`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while the Code candidate runs.
+- Submodule checkout: `arm64/palmettobug`, candidate `0482f4d71952b2a1cec16005bdcbbc50de6c92a0` from accepted source `c34a2103117399b31000f4d74bb378482e03f691`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while the Code and PalmettoBUG candidates run.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 88 of 247 declarations, refreshed from accepted source `c34a2103`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -62,6 +62,16 @@ provides only x86_64/amd64 packages. Issue
 [#97](https://github.com/Vbitz/neurocontainers-arm64/issues/97) records the
 official release assets and the revisit condition. No candidate branch or
 native build was created; attempts: 0/6.
+
+`palmettobug` is the fourth-second-pass candidate. Investigation started at
+`2026-09-13T04:42:37Z`; deadline `2026-09-13T16:42:37Z`; attempt 1/6.
+Candidate `0482f4d71952b2a1cec16005bdcbbc50de6c92a0` on branch
+`arm64/palmettobug` adds only `aarch64`; its Miniconda template generated the
+official Linux aarch64 installer and local validation plus both architecture
+generations passed. Exact native dispatch
+[34738541920](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34738541920)
+is queued. Next action: verify its source SHA and inspect the fixed dependency
+set's native ARM64 build result.
 
 ## Latest checkpoint
 
