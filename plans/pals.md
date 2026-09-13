@@ -39,3 +39,9 @@ This is a native candidate, not a verification claim. Dispatch only when a runne
 ## Decision boundary
 
 A dependency/source-build investigation remains, rather than an established universal ARM incompatibility. Revisit when the exact native package set or documented source configuration is available; record any first actionable failure. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation outcome — 2026-09-14
+
+The exact native run [34782446828](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34782446828) built the ARM64 image and SIF and passed the source revision and FSL launcher checks. The new lesion-overlap fulltest initially failed because its configured output directory did not exist; PALS then raised `NameError: name 'add_to_log' is not defined` while reporting that missing path.
+
+Candidate [`ee0cba5b7c5d95f7cc89e12c68dfcedd70cff006`](https://github.com/Vbitz/neurocontainers/commit/ee0cba5b7c5d95f7cc89e12c68dfcedd70cff006) creates the output directory in the test fixture before invoking PALS. Recipe code and x86_64 behavior are unchanged. Local validation and both architecture generations pass. The corrected exact retry is [run 34782946174](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34782946174), attempt 2/6.
