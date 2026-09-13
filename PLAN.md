@@ -31,7 +31,10 @@ fallback, and `trame-client<4` correction, plus the new direct
 generation passed. The branch is pushed. Exact native ARM64 run
 [34745332614](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745332614)
 was dispatched at `2026-09-13T07:28:48Z` with `upload_image=false`; inspect its
-result before considering another recipe.
+result before considering another recipe. It passed native ARM64 build, SIF
+conversion, deploy checks, and fulltest with 111 passed, 0 failed, and 0
+skipped. Issue #71 records the verified candidate; serial replay onto the
+accepted pin is the next action.
 
 `networkcorrespondancetoolkit` is the second focused follow-up. Its first
 candidate `5b1f1176992b3692e1187ef8223bde7a2e180803` removed only
@@ -45,8 +48,11 @@ Conda-forge ARM64 package on that architecture and unlocks the three compiler
 runtime pins that conflict with VTK's `libgcc-ng>=12` requirement. Recipe
 validation and ARM64/x86_64 Dockerfile generation passed. Exact native ARM64
 run [34745899127](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745899127)
-was created at `2026-09-13T07:42:35Z` with `upload_image=false`; it is active
-alongside MNE-Extended run [34745332614](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745332614).
+was created at `2026-09-13T07:42:35Z` with `upload_image=false` and failed
+before SIF conversion because the ARM64 Qt stack required unavailable Wayland
+1.26 or OpenSSL newer than the locked 3.0.13. NCT is blocked-upstream after
+four real attempts total; issue #99 records the three focused follow-ups and
+the revisit condition. No active builds remain.
 
 ## Second pass active work
 
