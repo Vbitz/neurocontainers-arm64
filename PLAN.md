@@ -61,7 +61,7 @@ were queued.
 
 ## Implementation goal checkpoint — 2026-09-13
 
-The current top-level checkpoint is `cb94653`, pinning the accepted submodule
+The current top-level checkpoint is `871da45`, pinning the accepted submodule
 source `815cf1b3e10b0b4b6003dc728f4300c54ccc3116`. Modsort remains integrated
 and proven by native run [34751788247](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751788247)
 with 8 passed, 0 failed and 0 skipped. SynthSeg is now also accepted after
@@ -98,6 +98,9 @@ ancillary tools; issue [#205](https://github.com/Vbitz/neurocontainers-arm64/iss
 records the source-completeness blocker. TeraStitcher is running from candidate
 `ec7503cb8ee31f9d40ff3097adfac895bcfbb4ec`, based on the prior accepted pin, in
 run [34753895323](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753895323).
+Coverage issue #2 was refreshed after accepting SynthSeg; its body now reflects
+the current declarations. The top-level submodule pointer must still remain at
+the accepted SHA while DeepLabCut, DSI Studio, and TeraStitcher runs finish.
 When a run completes, record its exact source and test counts, then integrate
 successful candidates serially from the latest accepted pin (currently
 `815cf1b3e10b0b4b6003dc728f4300c54ccc3116`); retain failed
