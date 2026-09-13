@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `0f2e5a8` (focused ARM64 outcomes checkpoint)
-- Pinned submodule: `neurocontainers@7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0` (MNE-Extended added after BraTS, PeTu, BrainLes AURORA, GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
-- Submodule checkout: `arm64/integrate-mneextended-trame`, accepted pin `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`; MNE-Extended run `34746559924` passed. BrainLesion run `34747574400` is recorded as blocked-upstream after its bounded toolchain follow-up. Origin `Vbitz/neurocontainers`. NCT and the earlier BrainLesion candidate are blocked; failed Voreen candidates and assessed preflight branches remain available.
+- Top-level commit before this checkpoint: `aabbd05` (inventory dispatch outcomes)
+- Pinned submodule: `neurocontainers@457c5a31b9830587801a06e7d6f81f18293135e8` (LAYNII added after MNE-Extended)
+- Submodule checkout: `arm64/integrate-mneextended-trame`, accepted pin `457c5a31b9830587801a06e7d6f81f18293135e8`; MNE-Extended run `34746559924` and LAYNII run `34749541502` passed. BrainLesion run `34747574400` is recorded as blocked-upstream after its bounded toolchain follow-up. NeuroCommand is recorded as blocked-infrastructure after two dispatch failures; NCT and the earlier BrainLesion candidate are blocked; failed Voreen candidates and assessed preflight branches remain available. Origin `Vbitz/neurocontainers`.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 97 of 247 declarations, refreshed from accepted source `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 98 of 247 declarations, refreshed from accepted source `457c5a31b9830587801a06e7d6f81f18293135e8`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Remaining unsupported inventory audit
 
@@ -36,26 +36,23 @@ unchanged from its recorded baseline, avoiding duplicate builds for fixed
 x86_64-only assets, unavailable image manifests, GPU or license prerequisites,
 and native dependency blockers already demonstrated by an exact ARM64 run.
 
-The first new recipe-level candidate is `neurocommand` 1.0.0. Investigation
-started 2026-09-13T09:23:22Z; deadline 2026-09-13T21:23:22Z; attempt 1/6. The
-candidate `438050de3f8e251edf8a6f8ae454e15731e15984` on
-`arm64/neurocommand` preserves the amd64 Apptainer package and builds upstream
-Apptainer 1.4.4 from its release source with the official Go 1.23.6 ARM64
-toolchain on `aarch64`. Validation and both Dockerfile generations passed. The
-exact native run is [34749429556](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34749429556),
-currently queued. Issue [#158](https://github.com/Vbitz/neurocontainers-arm64/issues/158)
-contains the in-progress hypothesis and checkpoint. The local checkout is
-back on the accepted source while the immutable candidate runs.
+The first new recipe-level candidate was `neurocommand` 1.0.0. Investigation
+started 2026-09-13T09:23:22Z; deadline 2026-09-13T21:23:22Z. Candidate
+`438050de3f8e251edf8a6f8ae454e15731e15984` on `arm64/neurocommand` preserved
+the amd64 Apptainer package and built upstream Apptainer 1.4.4 from its release
+source with the official Go 1.23.6 ARM64 toolchain on `aarch64`. Validation and
+both Dockerfile generations passed. Run [34749429556](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34749429556)
+failed at workflow startup, and the single unchanged retry returned HTTP 500
+without creating a run. Issue [#158](https://github.com/Vbitz/neurocontainers-arm64/issues/158)
+records the `blocked-infrastructure` outcome and revisit condition. The
+candidate branch remains available and is not pinned.
 
-The first `neurocommand` dispatch [34749429556](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34749429556)
-ended in workflow `startup_failure` before checkout. The one unchanged retry
-then returned HTTP 500 from the workflow dispatch API and created no run. Issue
-[#158](https://github.com/Vbitz/neurocontainers-arm64/issues/158) records the
-candidate as `blocked-infrastructure`; its source branch remains available and
-must not be treated as verified. The LAYNII dispatch initially returned HTTP
-500 as well, but its permitted unchanged retry succeeded as
-[34749541502](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34749541502)
-and is now running the native ARM64 deploy checks and fulltest.
+The LAYNII dispatch initially returned HTTP 500, but its permitted unchanged
+retry succeeded as [34749541502](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34749541502).
+The exact candidate `457c5a31b9830587801a06e7d6f81f18293135e8` passed native
+ARM64 Docker build, SIF conversion, deploy checks, and fulltest with 60 passed,
+0 failed, and 0 skipped. It was fast-forwarded into the accepted fork branch
+and the top-level pointer is advanced in this checkpoint.
 
 ## Focused follow-up outcomes
 
