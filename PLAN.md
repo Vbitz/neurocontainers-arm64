@@ -2505,5 +2505,10 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 
 ## Active implementation checkpoint — 2026-09-14 (QuPath dispatch)
 
-- QuPath current-pin candidate `d2230cc663289fef127a943989e0de5db7df0aea` is dispatched in [34785066541](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785066541), using accepted SoopCT pin `e3d7996e`; local validation and both architecture generations pass.
+- QuPath current-pin candidate `d2230cc663289fef127a943989e0de5db7df0aea` reached a successful Gradle build but failed at the versioned app-image copy path in [34785066541](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785066541). Targeted candidate `c98a89ee6799cd32b6a2247554cf8447a37f24aa` corrects that path, passes local validation and both architecture generations, and is dispatched in [34785400495](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785400495), attempt 2/6.
 - Active native jobs are CLEARSWI [34783811469](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783811469), MIMoSA [34783066918](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783066918), VesselBoost [34783650179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783650179), and QuPath [34785066541](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785066541). Syncro `c91eb0e5de57ad5dc6efd4cca25081983bfc9758` remains the next queued exact candidate.
+
+## Active implementation checkpoint — 2026-09-14 (QuPath path fix)
+
+- QuPath’s first current-pin build reached upstream Gradle success and failed only because the recipe expected a versioned Linux app-image directory. Candidate `c98a89ee6799cd32b6a2247554cf8447a37f24aa` corrects the copy path and is running in [34785400495](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785400495).
+- Active native jobs are CLEARSWI [34783811469](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783811469), MIMoSA [34783066918](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783066918), VesselBoost [34783650179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783650179), and QuPath retry [34785400495](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785400495). Syncro `c91eb0e5de57ad5dc6efd4cca25081983bfc9758` remains queued.

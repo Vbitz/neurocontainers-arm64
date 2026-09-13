@@ -60,3 +60,5 @@ After PALS advanced the accepted pin to `ee0cba5b7c5d95f7cc89e12c68dfcedd70cff00
 After SoopCT advanced the accepted pin to `e3d7996e606f92bb8d4fa292bb7a8b8e7987d3a5`, both QuPath commits were replayed as candidate `d2230cc663289fef127a943989e0de5db7df0aea` on `arm64/qupath-soopct`. Validation and ARM64/x86_64 Dockerfile generation passed. Dispatch this exact candidate when a native slot opens.
 
 The exact current-pin candidate is dispatched in native ARM64 [run 34785066541](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785066541). Acceptance remains pending the complete QuPath and Cellpose fulltest suite.
+
+Run `34785066541` reached a successful Gradle `jpackage` build but failed at the recipe's copy step because upstream emits `/opt/qupath-source/build/dist/QuPath`, not a version-suffixed directory. Candidate `c98a89ee6799cd32b6a2247554cf8447a37f24aa` changes only that path, passes local validation and both architecture generations, and is dispatched for attempt 2/6 in [run 34785400495](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785400495).
