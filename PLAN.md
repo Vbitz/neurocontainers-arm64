@@ -2563,3 +2563,8 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 - QuPath-based descendant `b878ef4914bed658c8df82cf8d418de21d13315f` is pushed and locally validated. Dispatch it in the newly free slot; acceptance requires this exact newest-pin run.
 
 - Exact CLEARSWI QuPath descendant `b878ef4914bed658c8df82cf8d418de21d13315f` is dispatched in [run 34787990978](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34787990978). Current native work is CLEARSWI [34787990978](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34787990978), MIMoSA [34787670497](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34787670497), Syncro [34787372368](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34787372368), and VesselBoost [34783650179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783650179).
+
+## Active implementation checkpoint — 2026-09-14 (VesselBoost replay prepared after QuPath)
+
+- VesselBoost PALS-based timeout candidate [34783650179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783650179) passed 46/46 fulltests with no skips. Its two intended commits were replayed onto accepted QuPath pin `c98a89ee6799cd32b6a2247554cf8447a37f24aa` as `0d952620` on `arm64/vesselboost-qupath`; validation and both architecture generations pass, and the branch is pushed.
+- Dispatch the exact candidate `0d952620` in the newly free native slot. Acceptance requires its complete native build, SIF, deploy and fulltest evidence.
