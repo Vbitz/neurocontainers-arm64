@@ -48,6 +48,13 @@
   `arm64/clearswi-integrated-emuses` and dispatched in [run 34775763906](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34775763906)
   for exact integrated verification. The local checkout is this branch;
   accept it only after all 68 native fulltests pass.
+- DSI Studio run [34774820860](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774820860)
+  built and converted successfully but failed five required AutoTrack tests
+  (78/83 executed checks passed). The release-aligned test corrections did not
+  resolve the official ARM64 CPU runtime's exit-1 behavior for those bundle
+  operations. The bounded investigation is exhausted; issue
+  [#195](https://github.com/Vbitz/neurocontainers-arm64/issues/195) records the
+  concrete upstream runtime/data revisit condition. No pin change.
 - Blender run [34774135689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774135689)
   reached the bundled Flex configure and failed on missing `autopoint`. The
   six native attempt and twelve-hour investigation budgets are exhausted, so
