@@ -1660,3 +1660,28 @@ Waiting, validated candidates based on the accepted FetalSynthSeg pin are FSL `6
 - Completed outcomes: Convert3D candidate `11d634d6270ec6ffa0303c46219427b72178630b`, run `34761033940`, blocked-upstream after ITK 5.3/C3D C++11-vs-C++14 incompatibility; CIVET candidate `dfc9bb57a627cf6fa4c35b0fa2e95d6c6148fcad`, run `34761692429`, blocked-upstream after pinned Netpbm 10.35.94 ARM64 build failures and legacy HDF5 1.8.8/NetCDF 3.6.1 configure failures. Issue comments record exact errors and revisit conditions.
 - Issue checkpoints: Convert3D blocker `https://github.com/Vbitz/neurocontainers-arm64/issues/133#issuecomment-5653798905`; CIVET blocker `https://github.com/Vbitz/neurocontainers-arm64/issues/130#issuecomment-5653806029`; Elastix dispatch `https://github.com/Vbitz/neurocontainers-arm64/issues/92#issuecomment-5653806019`; Blender SHA correction/dispatch `https://github.com/Vbitz/neurocontainers-arm64/issues/122#issuecomment-5653806021`.
 - Next action: inspect the four active runs at normal intervals; meanwhile switch the local submodule to the accepted pin and prepare the next bounded source or package route from the promising queue (AFNI, BIDSvue, ITK-SNAP, ROOT, MuscleMap, SurfIce, or PyDeface after FSL's shared template result). Keep completed/blocked recipes out of the queue.
+
+## Active implementation checkpoint — 2026-09-14 00:35 Australia/Brisbane
+
+Goal remains active: implement and natively verify every feasible ARM64 recipe; do not close while eligible feasible recipes remain.
+
+Current root commit: f3f6cdc. Accepted top-level submodule pin: 6103a923f43106c039ddf22a59c99c25352e459b. Fork Actions permission remains disabled.
+
+Current local submodule checkout: branch arm64/dsistudio-openads, clean, candidate a261c44525bf7e16a607363d862248c985501828, based directly on the accepted pin. AFNI candidate 24dabfa115f94bf7ad569c8771392b23610a818e and Blender retry 3a54628be2fc312f43ae8aa45646e882330c8cd4 are pushed. FSL deploy correction 9a5ae40c67667a088f50f0e9885833b983893f98 is pushed and waiting for a slot.
+
+Active native ARM64 runs:
+- Quickshear: 34760141970, candidate 78b50a88e34e9942f5d90ac95e2cc093f8d49b4a; runtime/fulltest active.
+- Elastix: 34762067564, candidate cd8bbc9679b2b80535d20d61fbb5fcbe54ab9dc3; build active.
+- AFNI: 34762470058, candidate 24dabfa115f94bf7ad569c8771392b23610a818e; exact dispatch active.
+- Blender: 34762534470, candidate 3a54628be2fc312f43ae8aa45646e882330c8cd4; exact retry active.
+
+Recent outcomes:
+- Convert3D blocked-upstream after five attempts: C3D 61753cca with ITK 5.3.0 remains forced to C++11 despite recipe flags; issue comment https://github.com/Vbitz/neurocontainers-arm64/issues/133#issuecomment-5653798905.
+- CIVET blocked-upstream: legacy Netpbm, HDF5 1.8.8, and NetCDF 3.6.1 fail on aarch64; issue comment https://github.com/Vbitz/neurocontainers-arm64/issues/130#issuecomment-5653806029.
+- ROMEO failed-runtime after three attempts: upstream Julia dependency precompile error remains after CLI and instantiate fixes; issue comment https://github.com/Vbitz/neurocontainers-arm64/issues/164#issuecomment-5653761465.
+- FSL candidate 376177f3214085eb471f03054f9e8d8adaba65be built and passed 128 functional tests; only the deploy path failed, now corrected in 9a5ae40c.
+- Blender first candidate failed because the official dependency installer required sudo/doas; retry adds sudo as an ARM build prerequisite.
+- DSI Studio candidate a261c445 is prepared and waiting; it updates to official 2026.7.25 archives and normalizes the fulltest to the upstream atlas/tract layout. Issue: https://github.com/Vbitz/neurocontainers-arm64/issues/195.
+
+Next actions: monitor the four active runs; record exact outcomes; dispatch FSL and DSI Studio serially as slots open; integrate only candidates whose exact native build, SIF conversion, deploy checks, and fulltest all pass; continue through the remaining feasible inventory.
+
