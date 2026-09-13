@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `b1917bc` (BART and LQT dispatch checkpoint)
+- Top-level commit: `778609b` (LQT and Lipsia dispatch checkpoint; BART acceptance pending)
 - Pinned submodule: `neurocontainers@15337e04a04ddf0303b610d304c350008df371ea` (Code added after the ANTs, OpenRecon example, Bloch-Siegert, and sigviewer acceptances)
-- Submodule checkout: `arm64/lesionquantificationtoolkit`, candidate `afc5c52d0d5d32e3d02c3fa1a94562274016f803` from accepted source `15337e04a04ddf0303b610d304c350008df371ea`; origin `Vbitz/neurocontainers`. The active BART candidate and failed Voreen and NCT candidates remain unaccepted on their pushed branches.
+- Submodule checkout: `arm64/bart`, tested candidate `e3f721a72f6e1b1f23d5962118f2873abbcdd203` from accepted source `15337e04a04ddf0303b610d304c350008df371ea`; origin `Vbitz/neurocontainers`. The active LQT and Lipsia candidates and failed Voreen and NCT candidates remain unaccepted on their pushed branches.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 89 of 247 declarations, refreshed from accepted source `15337e04`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -136,7 +136,10 @@ retains the NVIDIA CUDA base and `CUDA=1` build for x86_64. The ARM64 command
 uses BART's documented `CUDA=0` CPU build. Local validation and ARM64 and
 x86_64 Dockerfile generation passed. Exact native dispatch
 [34740461864](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34740461864)
-is queued.
+passed Docker build, SIF conversion, deploy checks, and fulltest with 117
+passed, 0 failed, and 0 skipped. Issue [#180](https://github.com/Vbitz/neurocontainers-arm64/issues/180)
+records the verified result. The candidate is accepted at the next top-level
+checkpoint without a duplicate native run.
 
 `lesionquantificationtoolkit` is the second active bounded source candidate.
 Investigation started at `2026-09-13T05:31:57Z`; deadline
@@ -326,7 +329,7 @@ ancestry in this checkpoint.
 
 ## Queue
 
-The accepted source contains 158 undeclared recipes after the sigviewer
+The accepted source contains 157 undeclared recipes after the BART
 integration. A full preflight screen on 2026-09-13 found BART as a bounded CPU
 source candidate; the remaining inventory falls into these groups:
 
@@ -1084,12 +1087,12 @@ submodule SHA.
 - `palmettobug` / `arm64`: exact run `34738541920`, candidate `0482f4d7`, failed during package installation because the pinned `PySide6==6.4.3` has no ARM64 distribution. Issue [#98](https://github.com/Vbitz/neurocontainers-arm64/issues/98) records the blocked-upstream result and revisit condition.
 - `networkcorrespondancetoolkit` / `arm64`: exact run `34739158124`, candidate `95e84c71`, failed during Conda environment creation because the upstream lock pins `ca-certificates==2024.6.2=hbcca054_0`, unavailable for `linux-aarch64`. Issue [#99](https://github.com/Vbitz/neurocontainers-arm64/issues/99) records the blocked-upstream result and revisit condition.
 - `voreen` / `arm64`: exact runs `34739742820` and `34739991537`, candidates `bb08bc1c` and `151c8c5d`, both stopped in native ARM64 CMake configuration before compilation. Voreen 5.3.0's bundled `FindBoostVRN.cmake` requests `math_c99l` and `math_tr1l`, unavailable from Ubuntu 24.04's ARM64 Boost 1.83.0 packages; package mode and module mode both fail. Issue [#117](https://github.com/Vbitz/neurocontainers-arm64/issues/117) records the blocked-upstream result and revisit condition.
-- `bart` / `arm64`: exact dispatch `34740461864`, candidate `e3f721a7`, is queued after local validation and both architecture generations passed. The ARM64 path uses upstream BART's `CUDA=0` CPU build; the x86_64 CUDA path is preserved.
-- `lesionquantificationtoolkit` / `arm64`: exact dispatch `34740546339`, candidate `afc5c52d`, is queued after local validation and both architecture generations passed. The change only declares ARM64 for the existing Ubuntu 24.04 R source build.
+- `bart` / `arm64`: exact dispatch `34740461864`, candidate `e3f721a7`, passed all gates with 117 passed, 0 failed, and 0 skipped. The ARM64 path uses upstream BART's `CUDA=0` CPU build; the x86_64 CUDA path is preserved. Issue [#180](https://github.com/Vbitz/neurocontainers-arm64/issues/180) records the verified result; the candidate is accepted at the next top-level checkpoint.
+- `lesionquantificationtoolkit` / `arm64`: exact dispatch `34740546339`, candidate `afc5c52d`, remains active after local validation and both architecture generations passed. The change only declares ARM64 for the existing Ubuntu 24.04 R source build.
 
 ## Integration
 
-- Accepted integration SHA: `15337e04a04ddf0303b610d304c350008df371ea`
+- Accepted integration SHA: `e3f721a72f6e1b1f23d5962118f2873abbcdd203` (BART acceptance pending this checkpoint)
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly,
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, OpenRecon I2I,
   MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
