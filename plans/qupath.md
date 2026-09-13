@@ -52,3 +52,5 @@ superseded the prior candidate with an explicit `chmod 0755` on the extracted
 Gradle wrapper. This prevents a source archive mode bit from creating a
 spurious failure; validation and both architecture generations still pass.
 Use the corrected full SHA for native dispatch.
+
+Because TopoFit advanced the accepted pin to `88e6776aeb27f16ef43e015acb426b7e87fe0d1c`, both QuPath commits were replayed onto that pin. Candidate [`9f347a012fc015fe9af9b5d798bece0bd6c7152c`](https://github.com/Vbitz/neurocontainers/commit/9f347a012fc015fe9af9b5d798bece0bd6c7152c) is pushed on [`arm64/qupath-source-arm-topofit`](https://github.com/Vbitz/neurocontainers/tree/arm64/qupath-source-arm-topofit). Validation and ARM64/x86_64 Dockerfile generation passed. It remains queued until a native slot opens.
