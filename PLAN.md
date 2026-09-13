@@ -2,6 +2,32 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after ITK-SNAP VTK module retry dispatch
+
+- Root commit: `acb1258c022e5c46bf3071424e1dc5fb7d4822fb`; accepted submodule
+  pin remains `8a9e48a7028b53be7b93eb6706a55a6a9ec801e6` (AFNI, 114/114
+  native checks). Fork Actions is disabled.
+- Active exact investigations:
+  - ITK-SNAP candidate `7ceabea5d97151a98cf6655055729804870b33ee`, run
+    [34769017498](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769017498),
+    attempt 2/6, explicitly enabling VTK `RenderingExternal` after the prior
+    VTK package configuration omitted that required component.
+  - PyDeface `3baa7a0662abfd352ab10f0d8342a12ef157990a`, run
+    [34767487096](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767487096).
+  - VMTK `974bb14826c93d9836203186ed6335a82a4e6320`, run
+    [34768651549](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34768651549),
+    attempt 4/6.
+  - BIDSvue `ba7af5842b2c41dbc98ffd8d1e25431acf19a7db`, run
+    [34768724186](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34768724186),
+    attempt 5/6.
+- ITK-SNAP’s previous candidate `fdf69113` built ITK and VTK but stopped at
+  the final CMake configure because `RenderingExternal` was absent from the
+  installed VTK package. The local submodule checkout is now
+  `arm64/itksnap-root` at `7ceabea5`; the root pointer remains intentionally
+  unstaged while native runs execute.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after BIDSvue launcher-path retry dispatch
 
 - Root commit: `9a9cd6fc3b7baae48913afd53e66a64c75f64b8c`; accepted submodule
