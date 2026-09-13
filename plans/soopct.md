@@ -56,3 +56,7 @@ Candidate [`3185beb81152728d6abc16cda172ca06270535b1`](https://github.com/Vbitz/
 After PALS advanced the accepted pin to `ee0cba5b7c5d95f7cc89e12c68dfcedd70cff006`, the two SOOP-CT commits were replayed as candidate [`e3d7996e606f92bb8d4fa292bb7a8b8e7987d3a5`](https://github.com/Vbitz/neurocontainers/commit/e3d7996e606f92bb8d4fa292bb7a8b8e7987d3a5) on [`arm64/soopct-pals`](https://github.com/Vbitz/neurocontainers/tree/arm64/soopct-pals). Validation and both architecture generations pass. Dispatch this exact descendant for integrated verification only after the active SoopCT run establishes that the runtime fix is effective.
 
 The pre-PALS candidate passed all 7 native fulltests in [run 34782488956](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34782488956). The current-pin replay `e3d7996e606f92bb8d4fa292bb7a8b8e7987d3a5` was dispatched in [run 34783752296](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783752296) for integrated verification before acceptance.
+
+## Accepted outcome — 2026-09-14
+
+The current-pin candidate passed the exact integrated native run [34783752296](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783752296): ARM64 Docker build, architecture verification, SIF conversion, deploy checks, and all 7 fulltests passed with 0 failures and 0 skips. The top-level pin is advancing to `e3d7996e606f92bb8d4fa292bb7a8b8e7987d3a5`.
