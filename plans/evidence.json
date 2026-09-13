@@ -1,0 +1,4820 @@
+{
+  "date": "2026-09-13",
+  "recipe_source": "457c5a31b9830587801a06e7d6f81f18293135e8",
+  "recipes": [
+    {
+      "recipe": "afni",
+      "version": "26.0.07",
+      "assessment": "candidate",
+      "issue": 118,
+      "sources": [
+        {
+          "title": "afni/afni upstream documentation",
+          "url": "https://github.com/afni/afni/blob/master/README.rst"
+        },
+        {
+          "title": "afni/afni CMakeLists.txt",
+          "url": "https://github.com/afni/afni/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "AFNI source-build documentation",
+          "url": "https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/download_links.html"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "afni_wrapper.sh",
+        "build.yaml",
+        "dependencies.R",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "aidamri",
+      "version": "3.0",
+      "assessment": "dependency-stack",
+      "issue": 119,
+      "sources": [
+        {
+          "title": "Aswendt-Lab/AIDAmri upstream documentation",
+          "url": "https://github.com/Aswendt-Lab/AIDAmri/blob/master/README.md"
+        },
+        {
+          "title": "Aswendt-Lab/AIDAmri Dockerfile",
+          "url": "https://github.com/Aswendt-Lab/AIDAmri/blob/master/Dockerfile"
+        },
+        {
+          "title": "Aswendt-Lab/AIDAmri requirements.txt",
+          "url": "https://github.com/Aswendt-Lab/AIDAmri/blob/master/requirements.txt"
+        },
+        {
+          "title": "Aswendt-Lab/AIDAmri release v3.0",
+          "url": "https://github.com/Aswendt-Lab/AIDAmri/releases/tag/v3.0"
+        },
+        {
+          "title": "KCL-BMEIS/niftyreg upstream documentation",
+          "url": "https://github.com/KCL-BMEIS/niftyreg/blob/master/README.md"
+        },
+        {
+          "title": "KCL-BMEIS/niftyreg CMakeLists.txt",
+          "url": "https://github.com/KCL-BMEIS/niftyreg/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "KCL-BMEIS/niftyreg release v2.0.0",
+          "url": "https://github.com/KCL-BMEIS/niftyreg/releases/tag/v2.0.0"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "ashs",
+      "version": "2.0.0",
+      "assessment": "dependency-stack",
+      "issue": 183,
+      "sources": [
+        {
+          "title": "pyushkevich/ashs upstream documentation",
+          "url": "https://github.com/pyushkevich/ashs/blob/master/README.md"
+        },
+        {
+          "title": "pyushkevich/ashs CMakeLists.txt",
+          "url": "https://github.com/pyushkevich/ashs/blob/master/CMakeLists.txt"
+        }
+      ],
+      "local_files_inspected": [
+        "Readme.md",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "aslprep",
+      "version": "26.0.3",
+      "assessment": "dependency-stack",
+      "issue": 100,
+      "sources": [
+        {
+          "title": "pennlinc/aslprep upstream documentation",
+          "url": "https://github.com/PennLINC/aslprep/blob/main/README.rst"
+        },
+        {
+          "title": "pennlinc/aslprep Dockerfile",
+          "url": "https://github.com/PennLINC/aslprep/blob/main/Dockerfile"
+        },
+        {
+          "title": "pennlinc/aslprep pyproject.toml",
+          "url": "https://github.com/PennLINC/aslprep/blob/main/pyproject.toml"
+        },
+        {
+          "title": "pennlinc/aslprep release 26.0.3",
+          "url": "https://github.com/PennLINC/aslprep/releases/tag/26.0.3"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/pennlinc/aslprep/manifests/26.0.3"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `pennlinc/aslprep:26.0.3`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "bcbtoolkit",
+      "version": "0.0.0",
+      "assessment": "dependency-stack",
+      "issue": 120,
+      "sources": [
+        {
+          "title": "chrisfoulon/BCBToolKit upstream documentation",
+          "url": "https://github.com/chrisfoulon/BCBToolKit/blob/master/README.md"
+        },
+        {
+          "title": "data-others/atlas upstream documentation",
+          "url": "https://github.com/data-others/atlas/blob/main/README.md"
+        },
+        {
+          "title": "data-others/atlas release hcp1065",
+          "url": "https://github.com/data-others/atlas/releases/tag/hcp1065"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "bidsappaa",
+      "version": "0.2.0.post2",
+      "assessment": "vendor-runtime",
+      "issue": 127,
+      "sources": [
+        {
+          "title": "bids-apps/aa upstream documentation",
+          "url": "https://github.com/bids-apps/aa/blob/master/README.md"
+        },
+        {
+          "title": "bids-apps/aa Dockerfile",
+          "url": "https://github.com/bids-apps/aa/blob/master/Dockerfile"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Registry inspection was inconclusive ('config'); no new platform-availability claim is derived from that request."
+      ]
+    },
+    {
+      "recipe": "bidsappbaracus",
+      "version": "1.1.4.post1",
+      "assessment": "dependency-stack",
+      "issue": 128,
+      "sources": [
+        {
+          "title": "bids-apps/baracus upstream documentation",
+          "url": "https://github.com/bids-apps/baracus/blob/master/README.md"
+        },
+        {
+          "title": "bids-apps/baracus Dockerfile",
+          "url": "https://github.com/bids-apps/baracus/blob/master/Dockerfile"
+        },
+        {
+          "title": "bids-apps/baracus setup.py",
+          "url": "https://github.com/bids-apps/baracus/blob/master/setup.py"
+        },
+        {
+          "title": "bids-apps/baracus release v1.1.4",
+          "url": "https://github.com/bids-apps/baracus/releases/tag/v1.1.4"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/bids/baracus/manifests/v1.1.4"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `bids/baracus:v1.1.4`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "bidsappbrainsuite",
+      "version": "23a",
+      "assessment": "vendor-runtime",
+      "issue": 101,
+      "sources": [
+        {
+          "title": "bids-apps/BrainSuite upstream documentation",
+          "url": "https://github.com/bids-apps/BrainSuite/blob/master/README.md"
+        },
+        {
+          "title": "bids-apps/BrainSuite Dockerfile",
+          "url": "https://github.com/bids-apps/BrainSuite/blob/master/Dockerfile"
+        },
+        {
+          "title": "bids-apps/BrainSuite release v23a",
+          "url": "https://github.com/bids-apps/BrainSuite/releases/tag/v23a"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/bids/brainsuite/manifests/v23a"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `bids/brainsuite:v23a`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "bidsapphcppipelines",
+      "version": "4.3.0",
+      "assessment": "vendor-runtime",
+      "issue": 184,
+      "sources": [
+        {
+          "title": "bids-apps/HCPPipelines upstream documentation",
+          "url": "https://github.com/bids-apps/HCPPipelines/blob/master/README.md"
+        },
+        {
+          "title": "bids-apps/HCPPipelines Dockerfile",
+          "url": "https://github.com/bids-apps/HCPPipelines/blob/master/Dockerfile"
+        },
+        {
+          "title": "bids-apps/HCPPipelines release v4.3.0-3",
+          "url": "https://github.com/bids-apps/HCPPipelines/releases/tag/v4.3.0-3"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/bids/hcppipelines/manifests/v4.3.0-3"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `bids/hcppipelines:v4.3.0-3`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "bidsappmrtrix3connectome",
+      "version": "0.6.0",
+      "assessment": "dependency-stack",
+      "issue": 102,
+      "sources": [
+        {
+          "title": "bids-apps/MRtrix3_connectome upstream documentation",
+          "url": "https://github.com/bids-apps/MRtrix3_connectome/blob/master/README.md"
+        },
+        {
+          "title": "bids-apps/MRtrix3_connectome Dockerfile",
+          "url": "https://github.com/bids-apps/MRtrix3_connectome/blob/master/Dockerfile"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/bids/mrtrix3_connectome/manifests/0.6.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `bids/mrtrix3_connectome:0.6.0`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "bidsapppymvpa",
+      "version": "2.0.2",
+      "assessment": "dependency-stack",
+      "issue": 103,
+      "sources": [
+        {
+          "title": "bids-apps/PyMVPA upstream documentation",
+          "url": "https://github.com/bids-apps/PyMVPA/blob/master/README.md"
+        },
+        {
+          "title": "bids-apps/PyMVPA Dockerfile",
+          "url": "https://github.com/bids-apps/PyMVPA/blob/master/Dockerfile"
+        },
+        {
+          "title": "bids-apps/PyMVPA release v4.0.3",
+          "url": "https://github.com/bids-apps/PyMVPA/releases/tag/v4.0.3"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/bids/pymvpa/manifests/v2.0.2"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `bids/pymvpa:v2.0.2`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "bidsappspm",
+      "version": "0.0.20",
+      "assessment": "vendor-runtime",
+      "issue": 104,
+      "sources": [
+        {
+          "title": "bids-apps/SPM upstream documentation",
+          "url": "https://github.com/bids-apps/SPM/blob/master/README.md"
+        },
+        {
+          "title": "bids-apps/SPM Dockerfile",
+          "url": "https://github.com/bids-apps/SPM/blob/master/Dockerfile"
+        },
+        {
+          "title": "bids-apps/SPM release v0.0.21",
+          "url": "https://github.com/bids-apps/SPM/releases/tag/v0.0.21"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/bids/spm/manifests/v0.0.20"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `bids/spm:v0.0.20`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "bidsvue",
+      "version": "0.1.20260704",
+      "assessment": "candidate",
+      "issue": 121,
+      "sources": [
+        {
+          "title": "niivue/BIDSvue upstream documentation",
+          "url": "https://github.com/niivue/BIDSvue/blob/main/README.md"
+        },
+        {
+          "title": "niivue/BIDSvue package.json",
+          "url": "https://github.com/niivue/BIDSvue/blob/main/package.json"
+        },
+        {
+          "title": "niivue/BIDSvue release v0.1.20260704",
+          "url": "https://github.com/niivue/BIDSvue/releases/tag/v0.1.20260704"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Release `v0.1.20260704` lists: `BIDSvue_0.1.20260704_aarch64.dmg`, `BIDSvue_0.1.20260715_aarch64.dmg`. This release metadata establishes asset availability, not a passed native test."
+      ]
+    },
+    {
+      "recipe": "blender",
+      "version": "5.0.1",
+      "assessment": "candidate",
+      "issue": 122,
+      "sources": [
+        {
+          "title": "blender/blender upstream documentation",
+          "url": "https://github.com/blender/blender/blob/main/.github/README.md"
+        },
+        {
+          "title": "blender/blender CMakeLists.txt",
+          "url": "https://github.com/blender/blender/blob/main/CMakeLists.txt"
+        },
+        {
+          "title": "blender/blender pyproject.toml",
+          "url": "https://github.com/blender/blender/blob/main/pyproject.toml"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "braid",
+      "version": "1.0.0",
+      "assessment": "dependency-stack",
+      "issue": 185,
+      "sources": [
+        {
+          "title": "MASILab/BRAID upstream documentation",
+          "url": "https://github.com/MASILab/BRAID/blob/main/README.md"
+        },
+        {
+          "title": "MASILab/BRAID pyproject.toml",
+          "url": "https://github.com/MASILab/BRAID/blob/main/pyproject.toml"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "brainager",
+      "version": "2.1.0.post1",
+      "assessment": "vendor-runtime",
+      "issue": 123,
+      "sources": [
+        {
+          "title": "james-cole/brainageR upstream documentation",
+          "url": "https://github.com/james-cole/brainageR/blob/master/README.md"
+        },
+        {
+          "title": "james-cole/brainageR release 2.1",
+          "url": "https://github.com/james-cole/brainageR/releases/tag/2.1"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "brainager_segment.py",
+        "build.yaml",
+        "dependencies.R",
+        "fulltest.yaml",
+        "predict_age_patched.py"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "brainles-preprocessing",
+      "version": "0.6.10.post1",
+      "assessment": "dependency-source",
+      "issue": 186,
+      "sources": [
+        {
+          "title": "BrainLesion/preprocessing upstream documentation",
+          "url": "https://github.com/BrainLesion/preprocessing/blob/main/README.md"
+        },
+        {
+          "title": "BrainLesion/preprocessing pyproject.toml",
+          "url": "https://github.com/BrainLesion/preprocessing/blob/main/pyproject.toml"
+        },
+        {
+          "title": "BrainLesion/preprocessing release v0.6.13",
+          "url": "https://github.com/BrainLesion/preprocessing/releases/tag/v0.6.13"
+        },
+        {
+          "title": "antspyx-0.5.4 published package metadata",
+          "url": "https://pypi.org/pypi/antspyx/0.5.4/json"
+        },
+        {
+          "title": "antspyx-0.6.1 published package metadata",
+          "url": "https://pypi.org/pypi/antspyx/0.6.1/json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fix_hdbet_cli.py",
+        "fix_preprocessor_cli.py",
+        "fix_synthstrip_device.py",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `antspyx-0.5.4`: 0 Linux ARM wheel filenames, 1 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies.",
+        "Package `antspyx-0.6.1`: 0 Linux ARM wheel filenames, 1 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "brainlesion",
+      "version": "1.0.0",
+      "assessment": "observed-build-failure",
+      "issue": 247,
+      "sources": [
+        {
+          "title": "BrainLesion/preprocessing upstream documentation",
+          "url": "https://github.com/BrainLesion/preprocessing/blob/main/README.md"
+        },
+        {
+          "title": "BrainLesion/preprocessing pyproject.toml",
+          "url": "https://github.com/BrainLesion/preprocessing/blob/main/pyproject.toml"
+        },
+        {
+          "title": "BrainLesion/preprocessing release v0.6.13",
+          "url": "https://github.com/BrainLesion/preprocessing/releases/tag/v0.6.13"
+        },
+        {
+          "title": "antspyx-0.5.4 published package metadata",
+          "url": "https://pypi.org/pypi/antspyx/0.5.4/json"
+        },
+        {
+          "title": "antspyx-0.6.1 published package metadata",
+          "url": "https://pypi.org/pypi/antspyx/0.6.1/json"
+        }
+      ],
+      "local_files_inspected": [
+        "bake_atlases.py",
+        "bls_writable_weights.py",
+        "build.yaml",
+        "fix_aurora_import.py",
+        "fix_hd_bet_cli.py",
+        "fix_map_labels_dtype.py",
+        "fix_preprocessor_cli.py",
+        "fulltest.yaml",
+        "pin_atlases.py"
+      ],
+      "observations": [
+        "Package `antspyx-0.5.4`: 0 Linux ARM wheel filenames, 1 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies.",
+        "Package `antspyx-0.6.1`: 0 Linux ARM wheel filenames, 1 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "brainnetviewer",
+      "version": "1.7.20191031.post1",
+      "assessment": "vendor-runtime",
+      "issue": 124,
+      "sources": [
+        {
+          "title": "mingruixia/BrainNetViewer upstream documentation",
+          "url": "https://github.com/mingruixia/BrainNet-Viewer/blob/master/README.md"
+        },
+        {
+          "title": "mingruixia/BrainNetViewer release v1.6",
+          "url": "https://github.com/mingruixia/BrainNet-Viewer/releases/tag/v1.6"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "brainstorm",
+      "version": "3.211130.post1",
+      "assessment": "vendor-runtime",
+      "issue": 125,
+      "sources": [
+        {
+          "title": "brainstorm-tools/brainstorm3 upstream documentation",
+          "url": "https://github.com/brainstorm-tools/brainstorm3/blob/master/README.md"
+        },
+        {
+          "title": "brainstorm-tools/brainstorm3 release 3.260601",
+          "url": "https://github.com/brainstorm-tools/brainstorm3/releases/tag/3.260601"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "brainsuite",
+      "version": "23a",
+      "assessment": "vendor-runtime",
+      "issue": 126,
+      "sources": [
+        {
+          "title": "bids-apps/BrainSuite upstream documentation",
+          "url": "https://github.com/bids-apps/BrainSuite/blob/master/README.md"
+        },
+        {
+          "title": "bids-apps/BrainSuite Dockerfile",
+          "url": "https://github.com/bids-apps/BrainSuite/blob/master/Dockerfile"
+        },
+        {
+          "title": "bids-apps/BrainSuite release v23a",
+          "url": "https://github.com/bids-apps/BrainSuite/releases/tag/v23a"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/bids/brainsuite/manifests/v23a"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `bids/brainsuite:v23a`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "brainvisa",
+      "version": "6.0.38",
+      "assessment": "dependency-stack",
+      "issue": 187,
+      "sources": [
+        {
+          "title": "brainvisa/brainvisa-cmake upstream documentation",
+          "url": "https://github.com/brainvisa/brainvisa-cmake/blob/master/README.md"
+        },
+        {
+          "title": "brainvisa/brainvisa-cmake CMakeLists.txt",
+          "url": "https://github.com/brainvisa/brainvisa-cmake/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "ARM channel probe (404 on research date)",
+          "url": "https://brainvisa.info/neuro-forge/linux-aarch64/repodata.json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "cartool",
+      "version": "5.06.04",
+      "assessment": "platform-port",
+      "issue": 188,
+      "sources": [
+        {
+          "title": "DenisBrunet/Cartool upstream documentation",
+          "url": "https://github.com/DenisBrunet/Cartool/blob/main/README.md"
+        },
+        {
+          "title": "DenisBrunet/Cartool release 5.06.05",
+          "url": "https://github.com/DenisBrunet/Cartool/releases/tag/5.06.05"
+        },
+        {
+          "title": "Upstream build requirements",
+          "url": "https://github.com/DenisBrunet/Cartool/blob/main/BUILDING.md"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "cat12",
+      "version": "26.0.rc3.post1",
+      "assessment": "vendor-runtime",
+      "issue": 129,
+      "sources": [
+        {
+          "title": "ChristianGaser/cat12 upstream documentation",
+          "url": "https://github.com/ChristianGaser/cat12/blob/main/README.md"
+        },
+        {
+          "title": "ChristianGaser/cat12 release 26.0.rc4",
+          "url": "https://github.com/ChristianGaser/cat12/releases/tag/26.0.rc4"
+        },
+        {
+          "title": "m-wierzba/cat-container upstream documentation",
+          "url": "https://github.com/m-wierzba/cat-container/blob/master/README.md"
+        },
+        {
+          "title": "m-wierzba/cat-container release v0.1.0",
+          "url": "https://github.com/m-wierzba/cat-container/releases/tag/v0.1.0"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Release `26.0.rc4` lists: `cat-standalone-Linux.zip`, `cat-standalone-Mac_arm64.zip`. This release metadata establishes asset availability, not a passed native test.",
+        "Release `v0.1.0` lists: . This release metadata establishes asset availability, not a passed native test."
+      ]
+    },
+    {
+      "recipe": "civet",
+      "version": "2.1.1",
+      "assessment": "candidate",
+      "issue": 130,
+      "sources": [
+        {
+          "title": "aces/CIVET_Full_Project upstream documentation",
+          "url": "https://github.com/aces/CIVET_Full_Project/blob/master/README.md"
+        },
+        {
+          "title": "aces/CIVET_Full_Project Dockerfile",
+          "url": "https://github.com/aces/CIVET_Full_Project/blob/master/Dockerfile"
+        },
+        {
+          "title": "aces/CIVET_Full_Project release CIVET_2_1_1",
+          "url": "https://github.com/aces/CIVET_Full_Project/releases/tag/CIVET_2_1_1"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "clearswi",
+      "version": "1.6.1",
+      "assessment": "observed-build-failure",
+      "issue": 75,
+      "sources": [
+        {
+          "title": "korbinian90/CLEARSWI.jl upstream documentation",
+          "url": "https://github.com/korbinian90/CLEARSWI.jl/blob/master/README.md"
+        },
+        {
+          "title": "korbinian90/CLEARSWI.jl Project.toml",
+          "url": "https://github.com/korbinian90/CLEARSWI.jl/blob/master/Project.toml"
+        },
+        {
+          "title": "korbinian90/CLEARSWI.jl release v1.7.0",
+          "url": "https://github.com/korbinian90/CLEARSWI.jl/releases/tag/v1.7.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "clinica",
+      "version": "0.10.0",
+      "assessment": "dependency-stack",
+      "issue": 189,
+      "sources": [
+        {
+          "title": "aramis-lab/clinica upstream documentation",
+          "url": "https://github.com/aramis-lab/clinica/blob/dev/README.md"
+        },
+        {
+          "title": "aramis-lab/clinica environment.yml",
+          "url": "https://github.com/aramis-lab/clinica/blob/dev/environment.yml"
+        },
+        {
+          "title": "aramis-lab/clinica pyproject.toml",
+          "url": "https://github.com/aramis-lab/clinica/blob/dev/pyproject.toml"
+        },
+        {
+          "title": "aramis-lab/clinica release v0.11.3",
+          "url": "https://github.com/aramis-lab/clinica/releases/tag/v0.11.3"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "clinicadl",
+      "version": "1.6.1",
+      "assessment": "dependency-stack",
+      "issue": 190,
+      "sources": [
+        {
+          "title": "aramis-lab/clinicadl upstream documentation",
+          "url": "https://github.com/aramis-lab/clinicadl/blob/dev/README.md"
+        },
+        {
+          "title": "aramis-lab/clinicadl environment.yml",
+          "url": "https://github.com/aramis-lab/clinicadl/blob/dev/environment.yml"
+        },
+        {
+          "title": "aramis-lab/clinicadl pyproject.toml",
+          "url": "https://github.com/aramis-lab/clinicadl/blob/dev/pyproject.toml"
+        },
+        {
+          "title": "aramis-lab/clinicadl release v2.0.0",
+          "url": "https://github.com/aramis-lab/clinicadl/releases/tag/v2.0.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "conn",
+      "version": "22a",
+      "assessment": "vendor-runtime",
+      "issue": 131,
+      "sources": [
+        {
+          "title": "alfnie/conn upstream documentation",
+          "url": "https://github.com/alfnie/conn/blob/master/readme.txt"
+        },
+        {
+          "title": "alfnie/conn release v25b",
+          "url": "https://github.com/alfnie/conn/releases/tag/v25b"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "connectomemapper3",
+      "version": "3.2.0",
+      "assessment": "vendor-runtime",
+      "issue": 191,
+      "sources": [
+        {
+          "title": "connectomicslab/connectomemapper3 upstream documentation",
+          "url": "https://github.com/connectomicslab/connectomemapper3/blob/master/README.md"
+        },
+        {
+          "title": "connectomicslab/connectomemapper3 Dockerfile",
+          "url": "https://github.com/connectomicslab/connectomemapper3/blob/master/Dockerfile"
+        },
+        {
+          "title": "connectomicslab/connectomemapper3 setup.py",
+          "url": "https://github.com/connectomicslab/connectomemapper3/blob/master/setup.py"
+        },
+        {
+          "title": "connectomicslab/connectomemapper3 release v3.2.0",
+          "url": "https://github.com/connectomicslab/connectomemapper3/releases/tag/v3.2.0"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "connectomeworkbench",
+      "version": "2.1.0",
+      "assessment": "dependency-stack",
+      "issue": 132,
+      "sources": [
+        {
+          "title": "Washington-University/workbench upstream documentation",
+          "url": "https://github.com/Washington-University/workbench/blob/master/README"
+        },
+        {
+          "title": "Washington-University/workbench release v2.2.1",
+          "url": "https://github.com/Washington-University/workbench/releases/tag/v2.2.1"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "convert3d",
+      "version": "1.1.0",
+      "assessment": "candidate",
+      "issue": 133,
+      "sources": [
+        {
+          "title": "pyushkevich/c3d upstream documentation",
+          "url": "https://github.com/pyushkevich/c3d/blob/master/README.md"
+        },
+        {
+          "title": "pyushkevich/c3d CMakeLists.txt",
+          "url": "https://github.com/pyushkevich/c3d/blob/master/CMakeLists.txt"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "cpac",
+      "version": "1.8.7",
+      "assessment": "dependency-stack",
+      "issue": 244,
+      "sources": [
+        {
+          "title": "FCP-INDI/C-PAC upstream documentation",
+          "url": "https://github.com/FCP-INDI/C-PAC/blob/main/README.md"
+        },
+        {
+          "title": "FCP-INDI/C-PAC Dockerfile",
+          "url": "https://github.com/FCP-INDI/C-PAC/blob/main/Dockerfile"
+        },
+        {
+          "title": "FCP-INDI/C-PAC requirements.txt",
+          "url": "https://github.com/FCP-INDI/C-PAC/blob/main/requirements.txt"
+        },
+        {
+          "title": "FCP-INDI/C-PAC setup.py",
+          "url": "https://github.com/FCP-INDI/C-PAC/blob/main/setup.py"
+        },
+        {
+          "title": "FCP-INDI/C-PAC release v1.3.0.post2",
+          "url": "https://github.com/FCP-INDI/C-PAC/releases/tag/v1.3.0.post2"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/fcpindi/c-pac/manifests/release-v1.8.7.post1.dev3"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `fcpindi/c-pac:release-v1.8.7.post1.dev3`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "deepisles",
+      "version": "1.1",
+      "assessment": "gpu-prerequisite",
+      "issue": 134,
+      "sources": [
+        {
+          "title": "ezequieldlrosa/DeepIsles upstream documentation",
+          "url": "https://github.com/ezequieldlrosa/DeepIsles/blob/main/README.md"
+        },
+        {
+          "title": "ezequieldlrosa/DeepIsles Dockerfile",
+          "url": "https://github.com/ezequieldlrosa/DeepIsles/blob/main/Dockerfile"
+        },
+        {
+          "title": "ezequieldlrosa/DeepIsles requirements.txt",
+          "url": "https://github.com/ezequieldlrosa/DeepIsles/blob/main/requirements.txt"
+        },
+        {
+          "title": "ezequieldlrosa/DeepIsles release v1.1",
+          "url": "https://github.com/ezequieldlrosa/DeepIsles/releases/tag/v1.1"
+        },
+        {
+          "title": "torch-1.11.0 published package metadata",
+          "url": "https://pypi.org/pypi/torch/1.11.0/json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `torch-1.11.0`: 4 Linux ARM wheel filenames, 0 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "deeplabcut",
+      "version": "2.3.11",
+      "assessment": "candidate",
+      "issue": 192,
+      "sources": [
+        {
+          "title": "DeepLabCut/DeepLabCut upstream documentation",
+          "url": "https://github.com/DeepLabCut/DeepLabCut/blob/main/README.md"
+        },
+        {
+          "title": "DeepLabCut/DeepLabCut pyproject.toml",
+          "url": "https://github.com/DeepLabCut/DeepLabCut/blob/main/pyproject.toml"
+        },
+        {
+          "title": "DeepLabCut/DeepLabCut setup.py",
+          "url": "https://github.com/DeepLabCut/DeepLabCut/blob/main/setup.py"
+        },
+        {
+          "title": "DeepLabCut/DeepLabCut release v3.0.1",
+          "url": "https://github.com/DeepLabCut/DeepLabCut/releases/tag/v3.0.1"
+        },
+        {
+          "title": "tensorflow-2.12.0 published package metadata",
+          "url": "https://pypi.org/pypi/tensorflow/2.12.0/json"
+        },
+        {
+          "title": "tensorflow-cpu-aws-2.12.0 published package metadata",
+          "url": "https://pypi.org/pypi/tensorflow-cpu-aws/2.12.0/json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `tensorflow-2.12.0`: 4 Linux ARM wheel filenames, 0 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies.",
+        "Package `tensorflow-cpu-aws-2.12.0`: 4 Linux ARM wheel filenames, 0 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "deepretinotopy",
+      "version": "1.0.19",
+      "assessment": "dependency-stack",
+      "issue": 193,
+      "sources": [
+        {
+          "title": "felenitaribeiro/deepRetinotopy_TheToolbox upstream documentation",
+          "url": "https://github.com/felenitaribeiro/deepRetinotopy_TheToolbox/blob/main/README.md"
+        },
+        {
+          "title": "felenitaribeiro/deepRetinotopy_TheToolbox environment.yml",
+          "url": "https://github.com/felenitaribeiro/deepRetinotopy_TheToolbox/blob/main/environment.yml"
+        },
+        {
+          "title": "felenitaribeiro/deepRetinotopy_TheToolbox release v1.0.19",
+          "url": "https://github.com/felenitaribeiro/deepRetinotopy_TheToolbox/releases/tag/v1.0.19"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://ghcr.io/v2/neurodesk/freesurfer_7.3.2/manifests/20230216"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `ghcr.io/neurodesk/freesurfer_7.3.2:20230216`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "deepsif",
+      "version": "0.0.1.post1",
+      "assessment": "gpu-prerequisite",
+      "issue": 135,
+      "sources": [
+        {
+          "title": "bfinl/DeepSIF upstream documentation",
+          "url": "https://github.com/bfinl/DeepSIF/blob/main/README.md"
+        },
+        {
+          "title": "bfinl/DeepSIF requirements.txt",
+          "url": "https://github.com/bfinl/DeepSIF/blob/main/requirements.txt"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "deepwmh",
+      "version": "1.0.1",
+      "assessment": "dependency-stack",
+      "issue": 136,
+      "sources": [
+        {
+          "title": "lchdl/DeepWMH upstream documentation",
+          "url": "https://github.com/lchdl/DeepWMH/blob/develop/README.md"
+        },
+        {
+          "title": "lchdl/DeepWMH setup.py",
+          "url": "https://github.com/lchdl/DeepWMH/blob/develop/setup.py"
+        },
+        {
+          "title": "lchdl/DeepWMH release v1.0.1",
+          "url": "https://github.com/lchdl/DeepWMH/releases/tag/v1.0.1"
+        },
+        {
+          "title": "ANTsX/ANTs upstream documentation",
+          "url": "https://github.com/ANTsX/ANTs/blob/main/README.md"
+        },
+        {
+          "title": "ANTsX/ANTs CMakeLists.txt",
+          "url": "https://github.com/ANTsX/ANTs/blob/main/CMakeLists.txt"
+        },
+        {
+          "title": "ANTsX/ANTs Dockerfile",
+          "url": "https://github.com/ANTsX/ANTs/blob/main/Dockerfile"
+        },
+        {
+          "title": "ANTsX/ANTs release v2.6.5",
+          "url": "https://github.com/ANTsX/ANTs/releases/tag/v2.6.5"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "delphi",
+      "version": "0.0.2.post1",
+      "assessment": "dependency-source",
+      "issue": 137,
+      "sources": [
+        {
+          "title": "yexincheng/delphi upstream documentation",
+          "url": "https://github.com/yexincheng/delphi/blob/master/README.md"
+        },
+        {
+          "title": "mc2-project/delphi upstream documentation",
+          "url": "https://github.com/mc2-project/delphi/blob/master/README.md"
+        },
+        {
+          "title": "tensorflow-1.15.0 published package metadata",
+          "url": "https://pypi.org/pypi/tensorflow/1.15.0/json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `tensorflow-1.15.0`: 0 Linux ARM wheel filenames, 0 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "dhcpstructuralpipeline",
+      "version": "1.1",
+      "assessment": "dependency-stack",
+      "issue": 194,
+      "sources": [
+        {
+          "title": "BioMedIA/dhcp-structural-pipeline upstream documentation",
+          "url": "https://github.com/BioMedIA/dhcp-structural-pipeline/blob/master/README.md"
+        },
+        {
+          "title": "BioMedIA/dhcp-structural-pipeline CMakeLists.txt",
+          "url": "https://github.com/BioMedIA/dhcp-structural-pipeline/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "BioMedIA/dhcp-structural-pipeline Dockerfile",
+          "url": "https://github.com/BioMedIA/dhcp-structural-pipeline/blob/master/Dockerfile"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/biomedia/dhcp-structural-pipeline/manifests/sha256:318a11ba9d70fdca2fb96200afabe0109722c9072bc71b9644f65c6c10de57b3"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `biomedia/dhcp-structural-pipeline:latest@sha256:318a11ba9d70fdca2fb96200afabe0109722c9072bc71b9644f65c6c10de57b3`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "diffusiontoolkit",
+      "version": "0.6.4.1",
+      "assessment": "binary-distribution",
+      "issue": 138,
+      "sources": [
+        {
+          "title": "Toolkit product documentation",
+          "url": "https://trackvis.org/dtk/"
+        },
+        {
+          "title": "Product distribution documentation",
+          "url": "https://trackvis.org/docs/?subsect=license"
+        },
+        {
+          "title": "Official download service",
+          "url": "https://trackvis.org/download/"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "dsistudio",
+      "version": "2024.06.12.post1",
+      "assessment": "candidate",
+      "issue": 195,
+      "sources": [
+        {
+          "title": "frankyeh/DSI-Studio upstream documentation",
+          "url": "https://github.com/frankyeh/DSI-Studio/blob/master/README.md"
+        },
+        {
+          "title": "frankyeh/DSI-Studio release 2026.7.25",
+          "url": "https://github.com/frankyeh/DSI-Studio/releases/tag/2026.7.25"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Release `2026.7.25` lists: `dsi_studio_linux_universal_cpu.zip`, `dsi_studio_linux_universal_cpu_arm64.zip`, `dsi_studio_linux_universal_cuda.zip`, `dsi_studio_linux_universal_cuda_arm64.zip`, `dsi_studio_linux_universal_legacy_cpu.zip`, `dsi_studio_macos-14-arm64_qt6.zip`, `dsi_studio_ubuntu2204_arm64.zip`. This release metadata establishes asset availability, not a passed native test."
+      ]
+    },
+    {
+      "recipe": "eeglab",
+      "version": "2020.0.post1",
+      "assessment": "vendor-runtime",
+      "issue": 144,
+      "sources": [
+        {
+          "title": "sccn/eeglab upstream documentation",
+          "url": "https://github.com/sccn/eeglab/blob/develop/README.md"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "elastix",
+      "version": "5.1.0",
+      "assessment": "candidate",
+      "issue": 92,
+      "sources": [
+        {
+          "title": "SuperElastix/elastix upstream documentation",
+          "url": "https://github.com/SuperElastix/elastix/blob/main/README.md"
+        },
+        {
+          "title": "SuperElastix/elastix CMakeLists.txt",
+          "url": "https://github.com/SuperElastix/elastix/blob/main/CMakeLists.txt"
+        },
+        {
+          "title": "SuperElastix/elastix Dockerfile",
+          "url": "https://github.com/SuperElastix/elastix/blob/main/Dockerfile"
+        },
+        {
+          "title": "SuperElastix/elastix release 5.3.1",
+          "url": "https://github.com/SuperElastix/elastix/releases/tag/5.3.1"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "emuses",
+      "version": "1.3.0",
+      "assessment": "dependency-source",
+      "issue": 94,
+      "sources": [
+        {
+          "title": "chrisfoulon/emuses upstream documentation",
+          "url": "https://github.com/chrisfoulon/emuses/blob/main/README.md"
+        },
+        {
+          "title": "chrisfoulon/emuses Dockerfile",
+          "url": "https://github.com/chrisfoulon/emuses/blob/main/Dockerfile"
+        },
+        {
+          "title": "chrisfoulon/emuses requirements.txt",
+          "url": "https://github.com/chrisfoulon/emuses/blob/main/requirements.txt"
+        },
+        {
+          "title": "chrisfoulon/emuses setup.py",
+          "url": "https://github.com/chrisfoulon/emuses/blob/main/setup.py"
+        },
+        {
+          "title": "chrisfoulon/emuses release v1.3.0",
+          "url": "https://github.com/chrisfoulon/emuses/releases/tag/v1.3.0"
+        },
+        {
+          "title": "triton-3.3.1 published package metadata",
+          "url": "https://pypi.org/pypi/triton/3.3.1/json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `triton-3.3.1`: 0 Linux ARM wheel filenames, 0 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "enigma-pd-wml",
+      "version": "1.1.1",
+      "assessment": "dependency-stack",
+      "issue": 139,
+      "sources": [
+        {
+          "title": "UCL/Enigma-PD-WML upstream documentation",
+          "url": "https://github.com/UCL/Enigma-PD-WML/blob/main/README.md"
+        },
+        {
+          "title": "UCL/Enigma-PD-WML Dockerfile",
+          "url": "https://github.com/UCL/Enigma-PD-WML/blob/main/Dockerfile"
+        },
+        {
+          "title": "UCL/Enigma-PD-WML environment.yml",
+          "url": "https://github.com/UCL/Enigma-PD-WML/blob/main/environment.yml"
+        },
+        {
+          "title": "UCL/Enigma-PD-WML release v1.1.1",
+          "url": "https://github.com/UCL/Enigma-PD-WML/releases/tag/v1.1.1"
+        },
+        {
+          "title": "conda-forge/miniforge upstream documentation",
+          "url": "https://github.com/conda-forge/miniforge/blob/main/README.md"
+        },
+        {
+          "title": "conda-forge/miniforge release 26.7.2-0",
+          "url": "https://github.com/conda-forge/miniforge/releases/tag/26.7.2-0"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/cvriend/pgs/manifests/latest"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `cvriend/pgs:latest`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "esilpd",
+      "version": "0.0.1.post1",
+      "assessment": "gpu-prerequisite",
+      "issue": 140,
+      "sources": [
+        {
+          "title": "mne-tools/mne-python upstream documentation",
+          "url": "https://github.com/mne-tools/mne-python/blob/main/README.rst"
+        },
+        {
+          "title": "mne-tools/mne-python environment.yml",
+          "url": "https://github.com/mne-tools/mne-python/blob/main/environment.yml"
+        },
+        {
+          "title": "mne-tools/mne-python pyproject.toml",
+          "url": "https://github.com/mne-tools/mne-python/blob/main/pyproject.toml"
+        },
+        {
+          "title": "mne-tools/mne-python release v1.13.2",
+          "url": "https://github.com/mne-tools/mne-python/releases/tag/v1.13.2"
+        },
+        {
+          "title": "mne-tools/mne-bids-pipeline upstream documentation",
+          "url": "https://github.com/mne-tools/mne-bids-pipeline/blob/main/README.md"
+        },
+        {
+          "title": "mne-tools/mne-bids-pipeline pyproject.toml",
+          "url": "https://github.com/mne-tools/mne-bids-pipeline/blob/main/pyproject.toml"
+        },
+        {
+          "title": "mne-tools/mne-bids-pipeline release v1.10.1",
+          "url": "https://github.com/mne-tools/mne-bids-pipeline/releases/tag/v1.10.1"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "exploreasl",
+      "version": "1.11.0",
+      "assessment": "vendor-runtime",
+      "issue": 143,
+      "sources": [
+        {
+          "title": "ExploreASL/ExploreASL upstream documentation",
+          "url": "https://github.com/ExploreASL/ExploreASL/blob/main/README.md"
+        },
+        {
+          "title": "ExploreASL/ExploreASL release v1.11.0",
+          "url": "https://github.com/ExploreASL/ExploreASL/releases/tag/v1.11.0"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/exploreasl/xasl/manifests/1.11.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `exploreasl/xasl:1.11.0`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "ezbids",
+      "version": "1.1.0",
+      "assessment": "dependency-stack",
+      "issue": 141,
+      "sources": [
+        {
+          "title": "openneuropet/ezbids_docker upstream documentation",
+          "url": "https://github.com/openneuropet/ezbids_docker/blob/master/README.md"
+        },
+        {
+          "title": "openneuropet/ezbids_docker Dockerfile",
+          "url": "https://github.com/openneuropet/ezbids_docker/blob/master/Dockerfile"
+        },
+        {
+          "title": "openneuropet/ezbids_docker package.json",
+          "url": "https://github.com/openneuropet/ezbids_docker/blob/master/package.json"
+        },
+        {
+          "title": "dlevitas/FSL_binaries upstream documentation",
+          "url": "https://github.com/dlevitas/FSL_binaries/blob/main/README.md"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "fastcsr",
+      "version": "1.0.post3",
+      "assessment": "dependency-stack",
+      "issue": 142,
+      "sources": [
+        {
+          "title": "IndiLab/FastCSR upstream documentation",
+          "url": "https://github.com/IndiLab/FastCSR/blob/main/README.md"
+        },
+        {
+          "title": "Upstream successor source location",
+          "url": "https://github.com/pBFSLab/FastCSR"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "fastsurfer",
+      "version": "2.5.4",
+      "assessment": "dependency-stack",
+      "issue": 196,
+      "sources": [
+        {
+          "title": "Deep-MI/FastSurfer upstream documentation",
+          "url": "https://github.com/Deep-MI/FastSurfer/blob/dev/README.md"
+        },
+        {
+          "title": "Deep-MI/FastSurfer pyproject.toml",
+          "url": "https://github.com/Deep-MI/FastSurfer/blob/dev/pyproject.toml"
+        },
+        {
+          "title": "Deep-MI/FastSurfer requirements.txt",
+          "url": "https://github.com/Deep-MI/FastSurfer/blob/dev/requirements.txt"
+        },
+        {
+          "title": "Deep-MI/FastSurfer release v2.5.4",
+          "url": "https://github.com/Deep-MI/FastSurfer/releases/tag/v2.5.4"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/deepmi/fastsurfer/manifests/cpu-v2.5.4"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `deepmi/fastsurfer:cpu-v2.5.4`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "fatsegnet",
+      "version": "1.0.gpu.post2",
+      "assessment": "dependency-source",
+      "issue": 197,
+      "sources": [
+        {
+          "title": "Deep-MI/FatSegNet upstream documentation",
+          "url": "https://github.com/Deep-MI/FatSegNet/blob/master/README.md"
+        },
+        {
+          "title": "Deep-MI/FatSegNet Dockerfile",
+          "url": "https://github.com/Deep-MI/FatSegNet/blob/master/Dockerfile"
+        },
+        {
+          "title": "tensorflow-1.6.0 published package metadata",
+          "url": "https://pypi.org/pypi/tensorflow/1.6.0/json"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `tensorflow-1.6.0`: 0 Linux ARM wheel filenames, 0 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "fetalsegmentation",
+      "version": "20241116",
+      "assessment": "dependency-stack",
+      "issue": 198,
+      "sources": [
+        {
+          "title": "SVRTK/SVRTK upstream documentation",
+          "url": "https://github.com/SVRTK/SVRTK/blob/master/README.md"
+        },
+        {
+          "title": "SVRTK/SVRTK CMakeLists.txt",
+          "url": "https://github.com/SVRTK/SVRTK/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "SVRTK/auto-proc-svrtk upstream documentation",
+          "url": "https://github.com/SVRTK/auto-proc-svrtk/blob/main/README.md"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/fetalsvrtk/segmentation/manifests/sha256:d0b3e19f7dd0b3d01fef6a41464487b5c127867646b5238c4eee79b02eecc268"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `fetalsvrtk/segmentation:general_auto_amd@sha256:d0b3e19f7dd0b3d01fef6a41464487b5c127867646b5238c4eee79b02eecc268`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "fetalsynthseg",
+      "version": "1.0.0",
+      "assessment": "candidate",
+      "issue": 199,
+      "sources": [
+        {
+          "title": "Medical-Image-Analysis-Laboratory/FetalSynthSeg upstream documentation",
+          "url": "https://github.com/Medical-Image-Analysis-Laboratory/FetalSynthSeg/blob/main/README.md"
+        },
+        {
+          "title": "Medical-Image-Analysis-Laboratory/FetalSynthSeg requirements.txt",
+          "url": "https://github.com/Medical-Image-Analysis-Laboratory/FetalSynthSeg/blob/main/requirements.txt"
+        },
+        {
+          "title": "torch-2.1.2 published package metadata",
+          "url": "https://pypi.org/pypi/torch/2.1.2/json"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/vzalevskyi/fetalsynthseg/manifests/sha256:380b4ce81cb13f67ce8a09391e557f964eb6b1befbdbb405dd8e08dc474c620f"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `torch-2.1.2`: 4 Linux ARM wheel filenames, 0 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies.",
+        "Fresh registry inspection of `vzalevskyi/fetalsynthseg:latest@sha256:380b4ce81cb13f67ce8a09391e557f964eb6b1befbdbb405dd8e08dc474c620f`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "fieldtrip",
+      "version": "20220617.post1",
+      "assessment": "vendor-runtime",
+      "issue": 145,
+      "sources": [
+        {
+          "title": "fieldtrip/fieldtrip upstream documentation",
+          "url": "https://github.com/fieldtrip/fieldtrip/blob/master/README.md"
+        },
+        {
+          "title": "fieldtrip/fieldtrip release 20251218",
+          "url": "https://github.com/fieldtrip/fieldtrip/releases/tag/20251218"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "fmriprep",
+      "version": "25.2.5",
+      "assessment": "dependency-stack",
+      "issue": 105,
+      "sources": [
+        {
+          "title": "nipreps/fmriprep upstream documentation",
+          "url": "https://github.com/nipreps/fmriprep/blob/master/README.rst"
+        },
+        {
+          "title": "nipreps/fmriprep Dockerfile",
+          "url": "https://github.com/nipreps/fmriprep/blob/master/Dockerfile"
+        },
+        {
+          "title": "nipreps/fmriprep pyproject.toml",
+          "url": "https://github.com/nipreps/fmriprep/blob/master/pyproject.toml"
+        },
+        {
+          "title": "nipreps/fmriprep release 25.2.5",
+          "url": "https://github.com/nipreps/fmriprep/releases/tag/25.2.5"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/nipreps/fmriprep/manifests/25.2.5"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `nipreps/fmriprep:25.2.5`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "freesurfer",
+      "version": "8.2.0",
+      "assessment": "vendor-runtime",
+      "issue": 200,
+      "sources": [
+        {
+          "title": "freesurfer/freesurfer upstream documentation",
+          "url": "https://github.com/freesurfer/freesurfer/blob/dev/README.md"
+        },
+        {
+          "title": "freesurfer/freesurfer CMakeLists.txt",
+          "url": "https://github.com/freesurfer/freesurfer/blob/dev/CMakeLists.txt"
+        },
+        {
+          "title": "freesurfer/freesurfer Dockerfile",
+          "url": "https://github.com/freesurfer/freesurfer/blob/dev/Dockerfile"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "fsl",
+      "version": "6.0.7.22.post1",
+      "assessment": "candidate",
+      "issue": 242,
+      "sources": [
+        {
+          "title": "ReproNim/neurodocker upstream documentation",
+          "url": "https://github.com/ReproNim/neurodocker/blob/master/README.md"
+        },
+        {
+          "title": "ReproNim/neurodocker Dockerfile",
+          "url": "https://github.com/ReproNim/neurodocker/blob/master/Dockerfile"
+        },
+        {
+          "title": "ReproNim/neurodocker pyproject.toml",
+          "url": "https://github.com/ReproNim/neurodocker/blob/master/pyproject.toml"
+        },
+        {
+          "title": "ReproNim/neurodocker release 2.1.2",
+          "url": "https://github.com/ReproNim/neurodocker/releases/tag/2.1.2"
+        },
+        {
+          "title": "physimals/oxasl_mp upstream documentation",
+          "url": "https://github.com/physimals/oxasl_mp/blob/master/README.md"
+        },
+        {
+          "title": "physimals/oxasl_mp requirements.txt",
+          "url": "https://github.com/physimals/oxasl_mp/blob/master/requirements.txt"
+        },
+        {
+          "title": "physimals/oxasl_mp setup.py",
+          "url": "https://github.com/physimals/oxasl_mp/blob/master/setup.py"
+        },
+        {
+          "title": "Official ARM package index",
+          "url": "https://fsl.fmrib.ox.ac.uk/fsldownloads/fslconda/public/linux-aarch64/repodata.json"
+        },
+        {
+          "title": "FSL architecture/build documentation",
+          "url": "https://fsl.fmrib.ox.ac.uk/fsl/docs/development/management/build_system.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "gigaconnectome",
+      "version": "0.6.0",
+      "assessment": "candidate",
+      "issue": 106,
+      "sources": [
+        {
+          "title": "bids-apps/giga_connectome upstream documentation",
+          "url": "https://github.com/bids-apps/giga_connectome/blob/main/README.md"
+        },
+        {
+          "title": "bids-apps/giga_connectome Dockerfile",
+          "url": "https://github.com/bids-apps/giga_connectome/blob/main/Dockerfile"
+        },
+        {
+          "title": "bids-apps/giga_connectome pyproject.toml",
+          "url": "https://github.com/bids-apps/giga_connectome/blob/main/pyproject.toml"
+        },
+        {
+          "title": "bids-apps/giga_connectome requirements.txt",
+          "url": "https://github.com/bids-apps/giga_connectome/blob/main/requirements.txt"
+        },
+        {
+          "title": "bids-apps/giga_connectome release 0.6.0",
+          "url": "https://github.com/bids-apps/giga_connectome/releases/tag/0.6.0"
+        },
+        {
+          "title": "nilearn/nilearn upstream documentation",
+          "url": "https://github.com/nilearn/nilearn/blob/main/README.rst"
+        },
+        {
+          "title": "nilearn/nilearn package.json",
+          "url": "https://github.com/nilearn/nilearn/blob/main/package.json"
+        },
+        {
+          "title": "nilearn/nilearn pyproject.toml",
+          "url": "https://github.com/nilearn/nilearn/blob/main/pyproject.toml"
+        },
+        {
+          "title": "nilearn/nilearn release 0.14.1",
+          "url": "https://github.com/nilearn/nilearn/releases/tag/0.14.1"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/bids/giga_connectome/manifests/0.6.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `bids/giga_connectome:0.6.0`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "halfpipe",
+      "version": "1.2.3",
+      "assessment": "dependency-stack",
+      "issue": 107,
+      "sources": [
+        {
+          "title": "HALFpipe/HALFpipe upstream documentation",
+          "url": "https://github.com/HALFpipe/HALFpipe/blob/main/README.rst"
+        },
+        {
+          "title": "HALFpipe/HALFpipe Dockerfile",
+          "url": "https://github.com/HALFpipe/HALFpipe/blob/main/Dockerfile"
+        },
+        {
+          "title": "HALFpipe/HALFpipe pyproject.toml",
+          "url": "https://github.com/HALFpipe/HALFpipe/blob/main/pyproject.toml"
+        },
+        {
+          "title": "HALFpipe/HALFpipe release 1.3.2",
+          "url": "https://github.com/HALFpipe/HALFpipe/releases/tag/1.3.2"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/halfpipe/halfpipe/manifests/1.2.3"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `halfpipe/halfpipe:1.2.3`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "hcpasl",
+      "version": "0.2.0",
+      "assessment": "dependency-stack",
+      "issue": 201,
+      "sources": [
+        {
+          "title": "physimals/hcp-asl upstream documentation",
+          "url": "https://github.com/physimals/hcp-asl/blob/master/README.md"
+        },
+        {
+          "title": "physimals/hcp-asl requirements.txt",
+          "url": "https://github.com/physimals/hcp-asl/blob/master/requirements.txt"
+        },
+        {
+          "title": "physimals/hcp-asl setup.py",
+          "url": "https://github.com/physimals/hcp-asl/blob/master/setup.py"
+        },
+        {
+          "title": "Washington-University/HCPpipelines upstream documentation",
+          "url": "https://github.com/Washington-University/HCPpipelines/blob/master/README.md"
+        },
+        {
+          "title": "Washington-University/HCPpipelines environment.yml",
+          "url": "https://github.com/Washington-University/HCPpipelines/blob/master/environment.yml"
+        },
+        {
+          "title": "Washington-University/HCPpipelines release v6.0.0",
+          "url": "https://github.com/Washington-University/HCPpipelines/releases/tag/v6.0.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "hmri",
+      "version": "1.0.0",
+      "assessment": "vendor-runtime",
+      "issue": 146,
+      "sources": [
+        {
+          "title": "hMRI-group/hMRI-toolbox upstream documentation",
+          "url": "https://github.com/hMRI-group/hMRI-toolbox/blob/master/README.md"
+        },
+        {
+          "title": "hMRI-group/hMRI-toolbox release v1.0.0",
+          "url": "https://github.com/hMRI-group/hMRI-toolbox/releases/tag/v1.0.0"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "hypermapp3r",
+      "version": "0.1.0",
+      "assessment": "dependency-source",
+      "issue": 202,
+      "sources": [
+        {
+          "title": "AICONSlab/HyperMapp3r upstream documentation",
+          "url": "https://github.com/AICONSlab/HyperMapp3r/blob/master/README.md"
+        },
+        {
+          "title": "AICONSlab/HyperMapp3r Dockerfile",
+          "url": "https://github.com/AICONSlab/HyperMapp3r/blob/master/Dockerfile"
+        },
+        {
+          "title": "AICONSlab/HyperMapp3r requirements.txt",
+          "url": "https://github.com/AICONSlab/HyperMapp3r/blob/master/requirements.txt"
+        },
+        {
+          "title": "AICONSlab/HyperMapp3r setup.py",
+          "url": "https://github.com/AICONSlab/HyperMapp3r/blob/master/setup.py"
+        },
+        {
+          "title": "keras-team/keras-contrib upstream documentation",
+          "url": "https://github.com/keras-team/keras-contrib/blob/master/README.md"
+        },
+        {
+          "title": "keras-team/keras-contrib setup.py",
+          "url": "https://github.com/keras-team/keras-contrib/blob/master/setup.py"
+        },
+        {
+          "title": "tensorflow-1.15.5 published package metadata",
+          "url": "https://pypi.org/pypi/tensorflow/1.15.5/json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `tensorflow-1.15.5`: 0 Linux ARM wheel filenames, 0 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "ilastik",
+      "version": "1.4.0",
+      "assessment": "dependency-stack",
+      "issue": 147,
+      "sources": [
+        {
+          "title": "ilastik/ilastik upstream documentation",
+          "url": "https://github.com/ilastik/ilastik/blob/main/Readme.md"
+        },
+        {
+          "title": "ilastik/ilastik pyproject.toml",
+          "url": "https://github.com/ilastik/ilastik/blob/main/pyproject.toml"
+        },
+        {
+          "title": "ilastik/ilastik release 1.5.0a1",
+          "url": "https://github.com/ilastik/ilastik/releases/tag/1.5.0a1"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "itksnap",
+      "version": "4.4.0",
+      "assessment": "candidate",
+      "issue": 148,
+      "sources": [
+        {
+          "title": "pyushkevich/itksnap upstream documentation",
+          "url": "https://github.com/pyushkevich/itksnap/blob/master/README.md"
+        },
+        {
+          "title": "pyushkevich/itksnap CMakeLists.txt",
+          "url": "https://github.com/pyushkevich/itksnap/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "pyushkevich/itksnap release v4.4.0-beta2",
+          "url": "https://github.com/pyushkevich/itksnap/releases/tag/v4.4.0-beta2"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "jamovi",
+      "version": "2.7.4",
+      "assessment": "dependency-stack",
+      "issue": 203,
+      "sources": [
+        {
+          "title": "jamovi/jamovi upstream documentation",
+          "url": "https://github.com/jamovi/jamovi/blob/main/README.md"
+        },
+        {
+          "title": "jamovi/jamovi pyproject.toml",
+          "url": "https://github.com/jamovi/jamovi/blob/main/pyproject.toml"
+        },
+        {
+          "title": "jamovi/jamovi release v2.7.30",
+          "url": "https://github.com/jamovi/jamovi/releases/tag/v2.7.30"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/jamovi/jamovi/manifests/2.7.4"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `jamovi/jamovi:2.7.4`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "jidt",
+      "version": "1.6",
+      "assessment": "dependency-stack",
+      "issue": 149,
+      "sources": [
+        {
+          "title": "jlizier/jidt upstream documentation",
+          "url": "https://github.com/jlizier/jidt/blob/master/README.md"
+        },
+        {
+          "title": "jlizier/jidt release v1.6.1",
+          "url": "https://github.com/jlizier/jidt/releases/tag/v1.6.1"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "dependencies.R",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "lashis",
+      "version": "2.0.0",
+      "assessment": "dependency-stack",
+      "issue": 204,
+      "sources": [
+        {
+          "title": "thomshaw92/LASHiS upstream documentation",
+          "url": "https://github.com/thomshaw92/LASHiS/blob/master/README.md"
+        },
+        {
+          "title": "thomshaw92/LASHiS Dockerfile",
+          "url": "https://github.com/thomshaw92/LASHiS/blob/master/Dockerfile"
+        },
+        {
+          "title": "thomshaw92/LASHiS pyproject.toml",
+          "url": "https://github.com/thomshaw92/LASHiS/blob/master/pyproject.toml"
+        },
+        {
+          "title": "thomshaw92/LASHiS release v1.2",
+          "url": "https://github.com/thomshaw92/LASHiS/releases/tag/v1.2"
+        },
+        {
+          "title": "pyushkevich/ashs upstream documentation",
+          "url": "https://github.com/pyushkevich/ashs/blob/master/README.md"
+        },
+        {
+          "title": "pyushkevich/ashs CMakeLists.txt",
+          "url": "https://github.com/pyushkevich/ashs/blob/master/CMakeLists.txt"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "lcmodel",
+      "version": "6.3.post1",
+      "assessment": "candidate",
+      "issue": 205,
+      "sources": [
+        {
+          "title": "schorschinho/LCModel upstream documentation",
+          "url": "https://github.com/schorschinho/LCModel/blob/main/README.md"
+        },
+        {
+          "title": "mr-science-lab/mrs-basis-sets upstream documentation",
+          "url": "https://github.com/mr-science-lab/mrs-basis-sets/blob/main/README.md"
+        },
+        {
+          "title": "Author source download and Linux Makefile links",
+          "url": "https://lcmodel.com/lcmodel.shtml"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml",
+        "setup_lcmodel.sh"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "lesymap",
+      "version": "0.0.0.9222.post1",
+      "assessment": "dependency-source",
+      "issue": 206,
+      "sources": [
+        {
+          "title": "dorianps/LESYMAP upstream documentation",
+          "url": "https://github.com/dorianps/LESYMAP/blob/master/README.md"
+        },
+        {
+          "title": "dorianps/LESYMAP release v0.0.0.9222",
+          "url": "https://github.com/dorianps/LESYMAP/releases/tag/v0.0.0.9222"
+        },
+        {
+          "title": "dorianps/docker upstream documentation",
+          "url": "https://github.com/dorianps/docker/blob/master/README.md"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/dorianps/lesymap/manifests/20220701"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `dorianps/lesymap:20220701`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "linda",
+      "version": "0.5.1",
+      "assessment": "dependency-source",
+      "issue": 245,
+      "sources": [
+        {
+          "title": "dorianps/LINDA upstream documentation",
+          "url": "https://github.com/dorianps/LINDA/blob/master/README.md"
+        },
+        {
+          "title": "dorianps/LINDA release 0.5.1",
+          "url": "https://github.com/dorianps/LINDA/releases/tag/0.5.1"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/dorianps/linda/manifests/sha256:abe94d551bf6f7f2937f04a2bb5a1b3b7cd25a0f6e2cf684602ea9fa397c78a3"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `dorianps/linda:latest@sha256:abe94d551bf6f7f2937f04a2bb5a1b3b7cd25a0f6e2cf684602ea9fa397c78a3`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "lstai",
+      "version": "1.1.0",
+      "assessment": "candidate",
+      "issue": 207,
+      "sources": [
+        {
+          "title": "CompImg/LST-AI upstream documentation",
+          "url": "https://github.com/CompImg/LST-AI/blob/main/README.md"
+        },
+        {
+          "title": "CompImg/LST-AI setup.py",
+          "url": "https://github.com/CompImg/LST-AI/blob/main/setup.py"
+        },
+        {
+          "title": "CompImg/LST-AI release v2.0.0rc1",
+          "url": "https://github.com/CompImg/LST-AI/releases/tag/v2.0.0rc1"
+        },
+        {
+          "title": "rordenlab/dcm2niix upstream documentation",
+          "url": "https://github.com/rordenlab/dcm2niix/blob/master/README.md"
+        },
+        {
+          "title": "rordenlab/dcm2niix CMakeLists.txt",
+          "url": "https://github.com/rordenlab/dcm2niix/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "rordenlab/dcm2niix Dockerfile",
+          "url": "https://github.com/rordenlab/dcm2niix/blob/master/Dockerfile"
+        },
+        {
+          "title": "rordenlab/dcm2niix pyproject.toml",
+          "url": "https://github.com/rordenlab/dcm2niix/blob/master/pyproject.toml"
+        },
+        {
+          "title": "rordenlab/dcm2niix release v1.0.20260724",
+          "url": "https://github.com/rordenlab/dcm2niix/releases/tag/v1.0.20260724"
+        },
+        {
+          "title": "tensorflow-2.13.1 published package metadata",
+          "url": "https://pypi.org/pypi/tensorflow/2.13.1/json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "configure_hdbet.py",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `tensorflow-2.13.1`: 4 Linux ARM wheel filenames, 0 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "matlab",
+      "version": "2025b",
+      "assessment": "vendor-runtime",
+      "issue": 208,
+      "sources": [
+        {
+          "title": "mathworks-ref-arch/matlab-dockerfile upstream documentation",
+          "url": "https://github.com/mathworks-ref-arch/matlab-dockerfile/blob/main/README.md"
+        },
+        {
+          "title": "mathworks-ref-arch/matlab-dockerfile Dockerfile",
+          "url": "https://github.com/mathworks-ref-arch/matlab-dockerfile/blob/main/Dockerfile"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/mathworks/matlab/manifests/R2025b"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml",
+        "module.sh"
+      ],
+      "observations": [
+        "Fresh registry inspection of `mathworks/matlab:R2025b`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "matlabruntime",
+      "version": "2025b",
+      "assessment": "vendor-runtime",
+      "issue": 209,
+      "sources": [
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "megnet",
+      "version": "1.0.1.post1",
+      "assessment": "candidate",
+      "issue": 210,
+      "sources": [
+        {
+          "title": "miao-cao/MEGNET_pipeline upstream documentation",
+          "url": "https://github.com/miao-cao/MEGNET_pipeline/blob/main/README.md"
+        },
+        {
+          "title": "Conda-forge native Qt package metadata",
+          "url": "https://api.anaconda.org/package/conda-forge/pyqt"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "meica",
+      "version": "4.0.1",
+      "assessment": "dependency-stack",
+      "issue": 151,
+      "sources": [
+        {
+          "title": "ME-ICA/me-ica upstream documentation",
+          "url": "https://github.com/ME-ICA/me-ica/blob/main/README.md"
+        },
+        {
+          "title": "ME-ICA/me-ica Dockerfile",
+          "url": "https://github.com/ME-ICA/me-ica/blob/main/Dockerfile"
+        },
+        {
+          "title": "ME-ICA/me-ica requirements.txt",
+          "url": "https://github.com/ME-ICA/me-ica/blob/main/requirements.txt"
+        },
+        {
+          "title": "ME-ICA/me-ica release 4.0.1",
+          "url": "https://github.com/ME-ICA/me-ica/releases/tag/4.0.1"
+        },
+        {
+          "title": "ME-ICA/meica-afni upstream documentation",
+          "url": "https://github.com/ME-ICA/meica-afni/blob/master/README.md"
+        },
+        {
+          "title": "ME-ICA/meica-afni release 4.0.1",
+          "url": "https://github.com/ME-ICA/meica-afni/releases/tag/4.0.1"
+        }
+      ],
+      "local_files_inspected": [
+        "OpenReconLabel.json",
+        "OpenReconREADME.md",
+        "build.yaml",
+        "fulltest.yaml",
+        "meica.py"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "metabody",
+      "version": "1.0.5",
+      "assessment": "dependency-stack",
+      "issue": 211,
+      "sources": [
+        {
+          "title": "thomshaw92/BodyLocaliser upstream documentation",
+          "url": "https://github.com/thomshaw92/BodyLocaliser/blob/main/README.md"
+        },
+        {
+          "title": "thomshaw92/BodyLocaliser requirements.txt",
+          "url": "https://github.com/thomshaw92/BodyLocaliser/blob/main/requirements.txt"
+        }
+      ],
+      "local_files_inspected": [
+        "OpenReconLabel.json",
+        "OpenReconREADME.md",
+        "afni_processing.sh",
+        "build.yaml",
+        "fulltest.yaml",
+        "metabody.py",
+        "nifti2mrd.py",
+        "test_metabody.py"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "mfcsc",
+      "version": "1.1.post1",
+      "assessment": "vendor-runtime",
+      "issue": 152,
+      "sources": [
+        {
+          "title": "civier/mfcsc upstream documentation",
+          "url": "https://github.com/civier/mfcsc/blob/main/README.md"
+        },
+        {
+          "title": "civier/mfcsc release 1.1",
+          "url": "https://github.com/civier/mfcsc/releases/tag/1.1"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "app_test.sh",
+        "app_version.sh",
+        "build.yaml",
+        "fix_bash.sh",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "mgltools",
+      "version": "1.5.7.post2",
+      "assessment": "dependency-stack",
+      "issue": 153,
+      "sources": [
+        {
+          "title": "Official downloads",
+          "url": "https://ccsb.scripps.edu/mgltools/downloads/"
+        },
+        {
+          "title": "Upstream component description",
+          "url": "https://ccsb.scripps.edu/mgltools/"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "micapipe",
+      "version": "v0.2.3",
+      "assessment": "vendor-runtime",
+      "issue": 108,
+      "sources": [
+        {
+          "title": "MICA-MNI/micapipe upstream documentation",
+          "url": "https://github.com/MICA-MNI/micapipe/blob/master/readme.md"
+        },
+        {
+          "title": "MICA-MNI/micapipe Dockerfile",
+          "url": "https://github.com/MICA-MNI/micapipe/blob/master/Dockerfile"
+        },
+        {
+          "title": "MICA-MNI/micapipe release v0.2.3",
+          "url": "https://github.com/MICA-MNI/micapipe/releases/tag/v0.2.3"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/micalab/micapipe/manifests/v0.2.3"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `micalab/micapipe:v0.2.3`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "mimosa",
+      "version": "0.5.8",
+      "assessment": "dependency-source",
+      "issue": 212,
+      "sources": [
+        {
+          "title": "avalcarcel9/mimosa upstream documentation",
+          "url": "https://github.com/avalcarcel9/mimosa/blob/master/README.md"
+        },
+        {
+          "title": "avalcarcel9/mimosa Dockerfile",
+          "url": "https://github.com/avalcarcel9/mimosa/blob/master/Dockerfile"
+        },
+        {
+          "title": "ANTsX/ANTsRCore upstream documentation",
+          "url": "https://github.com/ANTsX/ANTsRCore/blob/master/README.md"
+        },
+        {
+          "title": "ANTsX/ANTsRCore release v0.8.0",
+          "url": "https://github.com/ANTsX/ANTsRCore/releases/tag/v0.8.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "minc",
+      "version": "1.9.18",
+      "assessment": "dependency-stack",
+      "issue": 154,
+      "sources": [
+        {
+          "title": "BIC-MNI/minc-toolkit upstream documentation",
+          "url": "https://github.com/BIC-MNI/minc-toolkit/blob/master/README.md"
+        },
+        {
+          "title": "BIC-MNI/minc-toolkit CMakeLists.txt",
+          "url": "https://github.com/BIC-MNI/minc-toolkit/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "BIC-MNI/minc-toolkit release release-1.0.09",
+          "url": "https://github.com/BIC-MNI/minc-toolkit/releases/tag/release-1.0.09"
+        },
+        {
+          "title": "CAIsr/volgenmodel-nipype upstream documentation",
+          "url": "https://github.com/CAIsr/volgenmodel-nipype/blob/master/README.md"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "mitkdiffusion",
+      "version": "1.2.0.post1",
+      "assessment": "dependency-stack",
+      "issue": 213,
+      "sources": [
+        {
+          "title": "MIC-DKFZ/MITK-Diffusion upstream documentation",
+          "url": "https://github.com/MIC-DKFZ/MITK-Diffusion/blob/master/README.md"
+        },
+        {
+          "title": "MIC-DKFZ/MITK-Diffusion release v2.0.1",
+          "url": "https://github.com/MIC-DKFZ/MITK-Diffusion/releases/tag/v2.0.1"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "modsort",
+      "version": "0.0.2",
+      "assessment": "candidate",
+      "issue": 155,
+      "sources": [
+        {
+          "title": "BrainLesion/modsort upstream documentation",
+          "url": "https://github.com/BrainLesion/modsort/blob/main/README.md"
+        },
+        {
+          "title": "BrainLesion/modsort release v0.0.2",
+          "url": "https://github.com/BrainLesion/modsort/releases/tag/v0.0.2"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Release `v0.0.2` lists: `modsort-Linux-arm64-0.0.2.AppImage`, `modsort-Linux-x86_64-0.0.2.AppImage`, `modsort-Mac-arm64-0.0.2-Installer.dmg`, `modsort-Windows-arm64-0.0.2-Setup.exe`. This release metadata establishes asset availability, not a passed native test."
+      ]
+    },
+    {
+      "recipe": "mricrogl",
+      "version": "1.2.20211006",
+      "assessment": "candidate",
+      "issue": 97,
+      "sources": [
+        {
+          "title": "rordenlab/MRIcroGL upstream documentation",
+          "url": "https://github.com/rordenlab/MRIcroGL/blob/master/README.md"
+        },
+        {
+          "title": "rordenlab/MRIcroGL release v1.2.20220720",
+          "url": "https://github.com/rordenlab/MRIcroGL/releases/tag/v1.2.20220720"
+        },
+        {
+          "title": "davidbannon/libqt5pas upstream documentation",
+          "url": "https://github.com/davidbannon/libqt5pas/blob/master/README.md"
+        },
+        {
+          "title": "davidbannon/libqt5pas release v1.2.16",
+          "url": "https://github.com/davidbannon/libqt5pas/releases/tag/v1.2.16"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "mriqc",
+      "version": "24.0.2",
+      "assessment": "dependency-stack",
+      "issue": 214,
+      "sources": [
+        {
+          "title": "nipreps/mriqc upstream documentation",
+          "url": "https://github.com/nipreps/mriqc/blob/master/README.rst"
+        },
+        {
+          "title": "nipreps/mriqc Dockerfile",
+          "url": "https://github.com/nipreps/mriqc/blob/master/Dockerfile"
+        },
+        {
+          "title": "nipreps/mriqc pyproject.toml",
+          "url": "https://github.com/nipreps/mriqc/blob/master/pyproject.toml"
+        },
+        {
+          "title": "nipreps/mriqc release 25.0.0rc0",
+          "url": "https://github.com/nipreps/mriqc/releases/tag/25.0.0rc0"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/nipreps/mriqc/manifests/24.0.2"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `nipreps/mriqc:24.0.2`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "mritools",
+      "version": "3.3.0",
+      "assessment": "dependency-source",
+      "issue": 156,
+      "sources": [
+        {
+          "title": "korbinian90/CompileMRI.jl upstream documentation",
+          "url": "https://github.com/korbinian90/CompileMRI.jl/blob/master/README.md"
+        },
+        {
+          "title": "korbinian90/CompileMRI.jl Project.toml",
+          "url": "https://github.com/korbinian90/CompileMRI.jl/blob/master/Project.toml"
+        },
+        {
+          "title": "korbinian90/CompileMRI.jl release v4.9.0",
+          "url": "https://github.com/korbinian90/CompileMRI.jl/releases/tag/v4.9.0"
+        },
+        {
+          "title": "korbinian90/romeo upstream documentation",
+          "url": "https://github.com/korbinian90/ROMEO/blob/master/README.md"
+        },
+        {
+          "title": "korbinian90/romeo release newReleases",
+          "url": "https://github.com/korbinian90/ROMEO/releases/tag/newReleases"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "mrsimetabolicconnectome",
+      "version": "1.0.0",
+      "assessment": "dependency-stack",
+      "issue": 215,
+      "sources": [
+        {
+          "title": "MRSI-Psychosis-UP/MRSI-Metabolic-Connectome upstream documentation",
+          "url": "https://github.com/MRSI-Psychosis-UP/MRSI-Metabolic-Connectome/blob/main/README.md"
+        },
+        {
+          "title": "MRSI-Psychosis-UP/MRSI-Metabolic-Connectome pyproject.toml",
+          "url": "https://github.com/MRSI-Psychosis-UP/MRSI-Metabolic-Connectome/blob/main/pyproject.toml"
+        },
+        {
+          "title": "MRSI-Psychosis-UP/MRSI-Metabolic-Connectome requirements.txt",
+          "url": "https://github.com/MRSI-Psychosis-UP/MRSI-Metabolic-Connectome/blob/main/requirements.txt"
+        },
+        {
+          "title": "MRSI-Psychosis-UP/MRSI-Metabolic-Connectome setup.py",
+          "url": "https://github.com/MRSI-Psychosis-UP/MRSI-Metabolic-Connectome/blob/main/setup.py"
+        },
+        {
+          "title": "MRSI-Psychosis-UP/MRSI-Metabolic-Connectome release v1.0.2",
+          "url": "https://github.com/MRSI-Psychosis-UP/MRSI-Metabolic-Connectome/releases/tag/v1.0.2"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "mrsiproc",
+      "version": "0.2.0.post1",
+      "assessment": "vendor-runtime",
+      "issue": 157,
+      "sources": [
+        {
+          "title": "korbinian90/mrsi_pipeline_neurodesk upstream documentation",
+          "url": "https://github.com/korbinian90/mrsi_pipeline_neurodesk/blob/main/README.md"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/vnmd/fsl_6.0.7.1/manifests/latest"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "configure_hdbet.py",
+        "fulltest.yaml",
+        "setup_lcmodel.sh",
+        "update_mrsi.sh"
+      ],
+      "observations": [
+        "Fresh registry inspection of `vnmd/fsl_6.0.7.1`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "mrtrix3",
+      "version": "3.0.8",
+      "assessment": "dependency-stack",
+      "issue": 243,
+      "sources": [
+        {
+          "title": "MRtrix3/mrtrix3 upstream documentation",
+          "url": "https://github.com/MRtrix3/mrtrix3/blob/master/README.md"
+        },
+        {
+          "title": "MRtrix3/mrtrix3 Dockerfile",
+          "url": "https://github.com/MRtrix3/mrtrix3/blob/master/Dockerfile"
+        },
+        {
+          "title": "MRtrix3/mrtrix3 release nightly-dev",
+          "url": "https://github.com/MRtrix3/mrtrix3/releases/tag/nightly-dev"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "mrtrix3src",
+      "version": "latest",
+      "assessment": "dependency-stack",
+      "issue": 216,
+      "sources": [
+        {
+          "title": "MRtrix3/mrtrix3 upstream documentation",
+          "url": "https://github.com/MRtrix3/mrtrix3/blob/master/README.md"
+        },
+        {
+          "title": "MRtrix3/mrtrix3 Dockerfile",
+          "url": "https://github.com/MRtrix3/mrtrix3/blob/master/Dockerfile"
+        },
+        {
+          "title": "MRtrix3/mrtrix3 release nightly-dev",
+          "url": "https://github.com/MRtrix3/mrtrix3/releases/tag/nightly-dev"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/vnmd/fsl_6.0.5.1/manifests/20221016"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `vnmd/fsl_6.0.5.1:20221016`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "mrtrix3tissue",
+      "version": "5.2.9",
+      "assessment": "dependency-stack",
+      "issue": 217,
+      "sources": [
+        {
+          "title": "3Tissue/MRtrix3Tissue upstream documentation",
+          "url": "https://github.com/3Tissue/MRtrix3Tissue/blob/master/README.md"
+        },
+        {
+          "title": "3Tissue/MRtrix3Tissue release 3Tissue_v5.2.9",
+          "url": "https://github.com/3Tissue/MRtrix3Tissue/releases/tag/3Tissue_v5.2.9"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://ghcr.io/v2/neurodesk/caid/fsl_6.0.3/manifests/20200905"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `ghcr.io/neurodesk/caid/fsl_6.0.3:20200905`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "musclemap",
+      "version": "1.4.0",
+      "assessment": "candidate",
+      "issue": 218,
+      "sources": [
+        {
+          "title": "MuscleMap/MuscleMap upstream documentation",
+          "url": "https://github.com/MuscleMap/MuscleMap/blob/main/README.md"
+        },
+        {
+          "title": "MuscleMap/MuscleMap requirements.txt",
+          "url": "https://github.com/MuscleMap/MuscleMap/blob/main/requirements.txt"
+        },
+        {
+          "title": "MuscleMap/MuscleMap setup.py",
+          "url": "https://github.com/MuscleMap/MuscleMap/blob/main/setup.py"
+        },
+        {
+          "title": "MuscleMap/MuscleMap release 2.0",
+          "url": "https://github.com/MuscleMap/MuscleMap/releases/tag/2.0"
+        },
+        {
+          "title": "spinalcordtoolbox/spinalcordtoolbox upstream documentation",
+          "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/blob/master/README.rst"
+        },
+        {
+          "title": "spinalcordtoolbox/spinalcordtoolbox Dockerfile",
+          "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/blob/master/Dockerfile"
+        },
+        {
+          "title": "spinalcordtoolbox/spinalcordtoolbox requirements.txt",
+          "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/blob/master/requirements.txt"
+        },
+        {
+          "title": "spinalcordtoolbox/spinalcordtoolbox setup.py",
+          "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/blob/master/setup.py"
+        },
+        {
+          "title": "spinalcordtoolbox/spinalcordtoolbox release 7.3",
+          "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/releases/tag/7.3"
+        }
+      ],
+      "local_files_inspected": [
+        "OpenReconLabel.json",
+        "OpenReconREADME.md",
+        "analyze_composer_output_naming.py",
+        "build.yaml",
+        "enhanceddicom2mrd.py",
+        "full_body_exam_research.md",
+        "fulltest.yaml",
+        "musclemap.py",
+        "nifti2mrd.py",
+        "output_naming_investigation.md",
+        "test_musclemap_openrecon.py",
+        "upstream_v1.4_investigation.md",
+        "verify_musclemap_install.py"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "napari",
+      "version": "0.8.0",
+      "assessment": "dependency-stack",
+      "issue": 219,
+      "sources": [
+        {
+          "title": "napari/napari upstream documentation",
+          "url": "https://github.com/napari/napari/blob/main/README.md"
+        },
+        {
+          "title": "napari/napari pyproject.toml",
+          "url": "https://github.com/napari/napari/blob/main/pyproject.toml"
+        },
+        {
+          "title": "napari/napari release v0.9.1",
+          "url": "https://github.com/napari/napari/releases/tag/v0.9.1"
+        },
+        {
+          "title": "MIC-DKFZ/napari-voxtell upstream documentation",
+          "url": "https://github.com/MIC-DKFZ/napari-voxtell/blob/main/README.md"
+        },
+        {
+          "title": "MIC-DKFZ/napari-voxtell pyproject.toml",
+          "url": "https://github.com/MIC-DKFZ/napari-voxtell/blob/main/pyproject.toml"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "nesvor",
+      "version": "0.5.0",
+      "assessment": "gpu-prerequisite",
+      "issue": 220,
+      "sources": [
+        {
+          "title": "daviddmc/NeSVoR upstream documentation",
+          "url": "https://github.com/daviddmc/NeSVoR/blob/master/README.md"
+        },
+        {
+          "title": "daviddmc/NeSVoR Dockerfile",
+          "url": "https://github.com/daviddmc/NeSVoR/blob/master/Dockerfile"
+        },
+        {
+          "title": "daviddmc/NeSVoR setup.py",
+          "url": "https://github.com/daviddmc/NeSVoR/blob/master/setup.py"
+        },
+        {
+          "title": "daviddmc/NeSVoR release v0.5.0",
+          "url": "https://github.com/daviddmc/NeSVoR/releases/tag/v0.5.0"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/junshenxu/nesvor/manifests/v0.5.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `junshenxu/nesvor:v0.5.0`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "networkcorrespondancetoolkit",
+      "version": "0.3.3.post2",
+      "assessment": "observed-build-failure",
+      "issue": 99,
+      "sources": [
+        {
+          "title": "rubykong/cbig_network_correspondence upstream documentation",
+          "url": "https://github.com/rubykong/cbig_network_correspondence/blob/master/README.md"
+        },
+        {
+          "title": "rubykong/cbig_network_correspondence pyproject.toml",
+          "url": "https://github.com/rubykong/cbig_network_correspondence/blob/master/pyproject.toml"
+        },
+        {
+          "title": "rubykong/cbig_network_correspondence release 0.3.3",
+          "url": "https://github.com/rubykong/cbig_network_correspondence/releases/tag/0.3.3"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml",
+        "prepare_data.py"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "neurodock",
+      "version": "1.0.0.post1",
+      "assessment": "dependency-stack",
+      "issue": 221,
+      "sources": [
+        {
+          "title": "muscbridge/PyDesigner upstream documentation",
+          "url": "https://github.com/muscbridge/PyDKE/blob/master/README.rst"
+        },
+        {
+          "title": "muscbridge/PyDesigner Dockerfile",
+          "url": "https://github.com/muscbridge/PyDKE/blob/master/Dockerfile"
+        },
+        {
+          "title": "muscbridge/PyDesigner pyproject.toml",
+          "url": "https://github.com/muscbridge/PyDKE/blob/master/pyproject.toml"
+        },
+        {
+          "title": "muscbridge/PyDesigner requirements.txt",
+          "url": "https://github.com/muscbridge/PyDKE/blob/master/requirements.txt"
+        },
+        {
+          "title": "muscbridge/PyDesigner release v2.0.0",
+          "url": "https://github.com/muscbridge/PyDKE/releases/tag/v2.0.0"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/dmri/neurodock/manifests/v1.0.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `dmri/neurodock:v1.0.0`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "nftsim",
+      "version": "1.0.2",
+      "assessment": "candidate",
+      "issue": 222,
+      "sources": [
+        {
+          "title": "BrainDynamicsUSYD/nftsim upstream documentation",
+          "url": "https://github.com/BrainDynamicsUSYD/nftsim/blob/master/README.md"
+        },
+        {
+          "title": "BrainDynamicsUSYD/nftsim release v.1.1.0",
+          "url": "https://github.com/BrainDynamicsUSYD/nftsim/releases/tag/v.1.1.0"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://ghcr.io/v2/farwa-abbas/nftsim/manifests/1.0.2"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `ghcr.io/farwa-abbas/nftsim:1.0.2`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "nibabies",
+      "version": "24.0.0",
+      "assessment": "dependency-stack",
+      "issue": 109,
+      "sources": [
+        {
+          "title": "nipreps/nibabies upstream documentation",
+          "url": "https://github.com/nipreps/nibabies/blob/master/README.md"
+        },
+        {
+          "title": "nipreps/nibabies Dockerfile",
+          "url": "https://github.com/nipreps/nibabies/blob/master/Dockerfile"
+        },
+        {
+          "title": "nipreps/nibabies pyproject.toml",
+          "url": "https://github.com/nipreps/nibabies/blob/master/pyproject.toml"
+        },
+        {
+          "title": "nipreps/nibabies release 26.0.1",
+          "url": "https://github.com/nipreps/nibabies/releases/tag/26.0.1"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/nipreps/nibabies/manifests/24.0.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `nipreps/nibabies:24.0.0`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "niftymic",
+      "version": "0.9",
+      "assessment": "dependency-source",
+      "issue": 110,
+      "sources": [
+        {
+          "title": "gift-surg/NiftyMIC upstream documentation",
+          "url": "https://github.com/gift-surg/NiftyMIC/blob/master/README.md"
+        },
+        {
+          "title": "gift-surg/NiftyMIC requirements.txt",
+          "url": "https://github.com/gift-surg/NiftyMIC/blob/master/requirements.txt"
+        },
+        {
+          "title": "gift-surg/NiftyMIC setup.py",
+          "url": "https://github.com/gift-surg/NiftyMIC/blob/master/setup.py"
+        },
+        {
+          "title": "gift-surg/NiftyMIC release v0.6",
+          "url": "https://github.com/gift-surg/NiftyMIC/releases/tag/v0.6"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/renbem/niftymic/manifests/v0.9"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `renbem/niftymic:v0.9`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "nipype",
+      "version": "1.8.5.post1",
+      "assessment": "vendor-runtime",
+      "issue": 159,
+      "sources": [
+        {
+          "title": "nipy/nipype upstream documentation",
+          "url": "https://github.com/nipy/nipype/blob/master/README.rst"
+        },
+        {
+          "title": "nipy/nipype pyproject.toml",
+          "url": "https://github.com/nipy/nipype/blob/master/pyproject.toml"
+        },
+        {
+          "title": "nipy/nipype release 1.11.0",
+          "url": "https://github.com/nipy/nipype/releases/tag/1.11.0"
+        },
+        {
+          "title": "sylabs/singularity upstream documentation",
+          "url": "https://github.com/sylabs/singularity/blob/main/README.md"
+        },
+        {
+          "title": "sylabs/singularity release v4.5.1",
+          "url": "https://github.com/sylabs/singularity/releases/tag/v4.5.1"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "noddi",
+      "version": "1.0",
+      "assessment": "vendor-runtime",
+      "issue": 160,
+      "sources": [
+        {
+          "title": "CyclotronResearchCentre/NODDI_singularity upstream documentation",
+          "url": "https://github.com/CyclotronResearchCentre/NODDI_singularity/blob/main/README.md"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "openads",
+      "version": "1.0.0",
+      "assessment": "gpu-prerequisite",
+      "issue": 241,
+      "sources": [
+        {
+          "title": "farialab/OpenADS upstream documentation",
+          "url": "https://github.com/farialab/OpenADS/blob/main/README.md"
+        },
+        {
+          "title": "farialab/OpenADS setup.py",
+          "url": "https://github.com/farialab/OpenADS/blob/main/setup.py"
+        },
+        {
+          "title": "antspyx-0.5.4 published package metadata",
+          "url": "https://pypi.org/pypi/antspyx/0.5.4/json"
+        },
+        {
+          "title": "antspyx-0.6.1 published package metadata",
+          "url": "https://pypi.org/pypi/antspyx/0.6.1/json"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/sljhlab/openads/manifests/sha256:bd3508a0278538bbf10b7b0a090085b7b584860cef7f3c1fed6183707fc6223d"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `antspyx-0.5.4`: 0 Linux ARM wheel filenames, 1 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies.",
+        "Package `antspyx-0.6.1`: 0 Linux ARM wheel filenames, 1 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies.",
+        "Fresh registry inspection of `docker.io/sljhlab/openads:gpu@sha256:bd3508a0278538bbf10b7b0a090085b7b584860cef7f3c1fed6183707fc6223d`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "openadscpu",
+      "version": "1.0.0",
+      "assessment": "dependency-source",
+      "issue": 66,
+      "sources": [
+        {
+          "title": "farialab/OpenADS upstream documentation",
+          "url": "https://github.com/farialab/OpenADS/blob/main/README.md"
+        },
+        {
+          "title": "farialab/OpenADS setup.py",
+          "url": "https://github.com/farialab/OpenADS/blob/main/setup.py"
+        },
+        {
+          "title": "antspyx-0.5.4 published package metadata",
+          "url": "https://pypi.org/pypi/antspyx/0.5.4/json"
+        },
+        {
+          "title": "antspyx-0.6.1 published package metadata",
+          "url": "https://pypi.org/pypi/antspyx/0.6.1/json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `antspyx-0.5.4`: 0 Linux ARM wheel filenames, 1 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies.",
+        "Package `antspyx-0.6.1`: 0 Linux ARM wheel filenames, 1 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "openmsk",
+      "version": "0.2.0",
+      "assessment": "gpu-prerequisite",
+      "issue": 223,
+      "sources": [
+        {
+          "title": "gattia/nsm upstream documentation",
+          "url": "https://github.com/gattia/nsm/blob/main/README.md"
+        },
+        {
+          "title": "gattia/nsm pyproject.toml",
+          "url": "https://github.com/gattia/nsm/blob/main/pyproject.toml"
+        },
+        {
+          "title": "gattia/nsm requirements.txt",
+          "url": "https://github.com/gattia/nsm/blob/main/requirements.txt"
+        },
+        {
+          "title": "gattia/nsm setup.py",
+          "url": "https://github.com/gattia/nsm/blob/main/setup.py"
+        },
+        {
+          "title": "gattia/DOSMA upstream documentation",
+          "url": "https://github.com/gattia/DOSMA/blob/master/README.md"
+        },
+        {
+          "title": "gattia/DOSMA pyproject.toml",
+          "url": "https://github.com/gattia/DOSMA/blob/master/pyproject.toml"
+        },
+        {
+          "title": "gattia/DOSMA requirements.txt",
+          "url": "https://github.com/gattia/DOSMA/blob/master/requirements.txt"
+        },
+        {
+          "title": "gattia/DOSMA setup.py",
+          "url": "https://github.com/gattia/DOSMA/blob/master/setup.py"
+        },
+        {
+          "title": "tensorflow-2.14.0 published package metadata",
+          "url": "https://pypi.org/pypi/tensorflow/2.14.0/json"
+        }
+      ],
+      "local_files_inspected": [
+        "MODEL_PROVENANCE.md",
+        "OpenReconLabel.json",
+        "OpenReconREADME.md",
+        "build.yaml",
+        "dicom-gradient-tags.md",
+        "enhanced2singleframe.py",
+        "enhanceddicom2mrd.py",
+        "fulltest.yaml",
+        "nifti2mrd.py",
+        "nnunet_numpy_compat.py",
+        "openmsk.py",
+        "openmsk_nnunet_worker_patch.py",
+        "test_openmsk.py"
+      ],
+      "observations": [
+        "Package `tensorflow-2.14.0`: 3 Linux ARM wheel filenames, 0 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "oshyx",
+      "version": "0.4",
+      "assessment": "dependency-stack",
+      "issue": 224,
+      "sources": [
+        {
+          "title": "Cadaei-Yuvxvs/OSHy-X upstream documentation",
+          "url": "https://github.com/Cadaei-Yuvxvs/OSHy-X/blob/main/README.md"
+        },
+        {
+          "title": "Cadaei-Yuvxvs/OSHy-X release 0.4",
+          "url": "https://github.com/Cadaei-Yuvxvs/OSHy-X/releases/tag/0.4"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/jerync/oshyx_0.4/manifests/20220614"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `jerync/oshyx_0.4:20220614`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "osprey",
+      "version": "2.9.0",
+      "assessment": "vendor-runtime",
+      "issue": 176,
+      "sources": [
+        {
+          "title": "schorschinho/osprey upstream documentation",
+          "url": "https://github.com/schorschinho/osprey/blob/develop/README.md"
+        },
+        {
+          "title": "schorschinho/osprey release v.2.9.0",
+          "url": "https://github.com/schorschinho/osprey/releases/tag/v.2.9.0"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "ospreybids",
+      "version": "4.2.1",
+      "assessment": "vendor-runtime",
+      "issue": 111,
+      "sources": [
+        {
+          "title": "DCAN-Labs/OSPREY_BIDS upstream documentation",
+          "url": "https://github.com/DCAN-Labs/OSPREY_BIDS/blob/main/README.md"
+        },
+        {
+          "title": "DCAN-Labs/OSPREY_BIDS Dockerfile",
+          "url": "https://github.com/DCAN-Labs/OSPREY_BIDS/blob/main/Dockerfile"
+        },
+        {
+          "title": "DCAN-Labs/OSPREY_BIDS pyproject.toml",
+          "url": "https://github.com/DCAN-Labs/OSPREY_BIDS/blob/main/pyproject.toml"
+        },
+        {
+          "title": "DCAN-Labs/OSPREY_BIDS release v4.2.1-testing",
+          "url": "https://github.com/DCAN-Labs/OSPREY_BIDS/releases/tag/v4.2.1-testing"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/dcanumn/osprey-bids/manifests/v4.2.1"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `dcanumn/osprey-bids:v4.2.1`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "palmettobug",
+      "version": "0.2.11",
+      "assessment": "dependency-stack",
+      "issue": 98,
+      "sources": [
+        {
+          "title": "BenCaiello/Palmettobug upstream documentation",
+          "url": "https://github.com/BenCaiello/PalmettoBUG/blob/main/README.md"
+        },
+        {
+          "title": "BenCaiello/Palmettobug pyproject.toml",
+          "url": "https://github.com/BenCaiello/PalmettoBUG/blob/main/pyproject.toml"
+        },
+        {
+          "title": "BenCaiello/Palmettobug release 0.2.11",
+          "url": "https://github.com/BenCaiello/PalmettoBUG/releases/tag/0.2.11"
+        },
+        {
+          "title": "palmettobug-0.2.11 published package metadata",
+          "url": "https://pypi.org/pypi/palmettobug/0.2.11/json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `palmettobug-0.2.11`: 0 Linux ARM wheel filenames, 1 source archives, 1 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "pals",
+      "version": "2.0.1",
+      "assessment": "dependency-stack",
+      "issue": 226,
+      "sources": [
+        {
+          "title": "npnl/PALS upstream documentation",
+          "url": "https://github.com/npnl/PALS/blob/main/README.md"
+        },
+        {
+          "title": "npnl/PALS requirements.txt",
+          "url": "https://github.com/npnl/PALS/blob/main/requirements.txt"
+        },
+        {
+          "title": "npnl/PALS release v1.1.0",
+          "url": "https://github.com/npnl/PALS/releases/tag/v1.1.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "petprep",
+      "version": "0.0.5",
+      "assessment": "dependency-stack",
+      "issue": 112,
+      "sources": [
+        {
+          "title": "nipreps/petprep upstream documentation",
+          "url": "https://github.com/nipreps/petprep/blob/main/README.rst"
+        },
+        {
+          "title": "nipreps/petprep Dockerfile",
+          "url": "https://github.com/nipreps/petprep/blob/main/Dockerfile"
+        },
+        {
+          "title": "nipreps/petprep pyproject.toml",
+          "url": "https://github.com/nipreps/petprep/blob/main/pyproject.toml"
+        },
+        {
+          "title": "nipreps/petprep requirements.txt",
+          "url": "https://github.com/nipreps/petprep/blob/main/requirements.txt"
+        },
+        {
+          "title": "nipreps/petprep release 0.0.10",
+          "url": "https://github.com/nipreps/petprep/releases/tag/0.0.10"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/nipreps/petprep/manifests/0.0.5"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `nipreps/petprep:0.0.5`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "physio",
+      "version": "r2021a",
+      "assessment": "vendor-runtime",
+      "issue": 177,
+      "sources": [
+        {
+          "title": "translationalneuromodeling/tapas upstream documentation",
+          "url": "https://github.com/translationalneuromodeling/tapas/blob/master/README.md"
+        },
+        {
+          "title": "translationalneuromodeling/tapas release v6.1.0",
+          "url": "https://github.com/translationalneuromodeling/tapas/releases/tag/v6.1.0"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "prequal",
+      "version": "1.1.0",
+      "assessment": "dependency-stack",
+      "issue": 227,
+      "sources": [
+        {
+          "title": "MASILab/PreQual upstream documentation",
+          "url": "https://github.com/MASILab/PreQual/blob/master/README.md"
+        },
+        {
+          "title": "MASILab/PreQual release v1.1.0",
+          "url": "https://github.com/MASILab/PreQual/releases/tag/v1.1.0"
+        },
+        {
+          "title": "scilus/scilpy upstream documentation",
+          "url": "https://github.com/scilus/scilpy/blob/master/README.md"
+        },
+        {
+          "title": "scilus/scilpy pyproject.toml",
+          "url": "https://github.com/scilus/scilpy/blob/master/pyproject.toml"
+        },
+        {
+          "title": "scilus/scilpy setup.py",
+          "url": "https://github.com/scilus/scilpy/blob/master/setup.py"
+        },
+        {
+          "title": "scilus/scilpy release 2.3.0",
+          "url": "https://github.com/scilus/scilpy/releases/tag/2.3.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "pydeface",
+      "version": "2.0.2",
+      "assessment": "candidate",
+      "issue": 161,
+      "sources": [
+        {
+          "title": "poldracklab/pydeface upstream documentation",
+          "url": "https://github.com/poldracklab/pydeface/blob/master/README.md"
+        },
+        {
+          "title": "poldracklab/pydeface Dockerfile",
+          "url": "https://github.com/poldracklab/pydeface/blob/master/Dockerfile"
+        },
+        {
+          "title": "poldracklab/pydeface pyproject.toml",
+          "url": "https://github.com/poldracklab/pydeface/blob/master/pyproject.toml"
+        },
+        {
+          "title": "poldracklab/pydeface release v2.1.0",
+          "url": "https://github.com/poldracklab/pydeface/releases/tag/v2.1.0"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/vnmd/fsl_6.0.3/manifests/20200905"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `vnmd/fsl_6.0.3:20200905`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "qsiprep",
+      "version": "1.0.1",
+      "assessment": "dependency-stack",
+      "issue": 113,
+      "sources": [
+        {
+          "title": "pennlinc/qsiprep upstream documentation",
+          "url": "https://github.com/PennLINC/qsiprep/blob/main/README.rst"
+        },
+        {
+          "title": "pennlinc/qsiprep Dockerfile",
+          "url": "https://github.com/PennLINC/qsiprep/blob/main/Dockerfile"
+        },
+        {
+          "title": "pennlinc/qsiprep pyproject.toml",
+          "url": "https://github.com/PennLINC/qsiprep/blob/main/pyproject.toml"
+        },
+        {
+          "title": "pennlinc/qsiprep release 26.0.0",
+          "url": "https://github.com/PennLINC/qsiprep/releases/tag/26.0.0"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/pennlinc/qsiprep/manifests/1.0.1"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `pennlinc/qsiprep:1.0.1`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "qsirecon",
+      "version": "1.1.0",
+      "assessment": "dependency-stack",
+      "issue": 114,
+      "sources": [
+        {
+          "title": "pennlinc/qsirecon upstream documentation",
+          "url": "https://github.com/PennLINC/qsirecon/blob/main/README.rst"
+        },
+        {
+          "title": "pennlinc/qsirecon Dockerfile",
+          "url": "https://github.com/PennLINC/qsirecon/blob/main/Dockerfile"
+        },
+        {
+          "title": "pennlinc/qsirecon pyproject.toml",
+          "url": "https://github.com/PennLINC/qsirecon/blob/main/pyproject.toml"
+        },
+        {
+          "title": "pennlinc/qsirecon release 26.0.0",
+          "url": "https://github.com/PennLINC/qsirecon/releases/tag/26.0.0"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/pennlinc/qsirecon/manifests/1.1.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `pennlinc/qsirecon:1.1.0`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "quickshear",
+      "version": "1.2.0",
+      "assessment": "candidate",
+      "issue": 228,
+      "sources": [
+        {
+          "title": "nipy/quickshear upstream documentation",
+          "url": "https://github.com/nipy/quickshear/blob/master/README.rst"
+        },
+        {
+          "title": "nipy/quickshear pyproject.toml",
+          "url": "https://github.com/nipy/quickshear/blob/master/pyproject.toml"
+        },
+        {
+          "title": "nipy/quickshear release v1.1.0",
+          "url": "https://github.com/nipy/quickshear/releases/tag/v1.1.0"
+        },
+        {
+          "title": "ismrmrd/ismrmrd upstream documentation",
+          "url": "https://github.com/ismrmrd/ismrmrd/blob/master/README.md"
+        },
+        {
+          "title": "ismrmrd/ismrmrd CMakeLists.txt",
+          "url": "https://github.com/ismrmrd/ismrmrd/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "ismrmrd/ismrmrd Dockerfile",
+          "url": "https://github.com/ismrmrd/ismrmrd/blob/master/Dockerfile"
+        },
+        {
+          "title": "ismrmrd/ismrmrd environment.yml",
+          "url": "https://github.com/ismrmrd/ismrmrd/blob/master/environment.yml"
+        },
+        {
+          "title": "ismrmrd/ismrmrd release v1.15.0",
+          "url": "https://github.com/ismrmrd/ismrmrd/releases/tag/v1.15.0"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/freesurfer/synthstrip/manifests/1.6"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml",
+        "invertcontrast.py"
+      ],
+      "observations": [
+        "Fresh registry inspection of `freesurfer/synthstrip:1.6`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "qupath",
+      "version": "0.7.0",
+      "assessment": "dependency-stack",
+      "issue": 229,
+      "sources": [
+        {
+          "title": "qupath/qupath upstream documentation",
+          "url": "https://github.com/qupath/qupath/blob/main/README.md"
+        },
+        {
+          "title": "qupath/qupath build.gradle.kts",
+          "url": "https://github.com/qupath/qupath/blob/main/build.gradle.kts"
+        },
+        {
+          "title": "qupath/qupath release v0.7.0",
+          "url": "https://github.com/qupath/qupath/releases/tag/v0.7.0"
+        },
+        {
+          "title": "BIOP/qupath-extension-cellpose upstream documentation",
+          "url": "https://github.com/BIOP/qupath-extension-cellpose/blob/main/README.md"
+        },
+        {
+          "title": "BIOP/qupath-extension-cellpose build.gradle.kts",
+          "url": "https://github.com/BIOP/qupath-extension-cellpose/blob/main/build.gradle.kts"
+        },
+        {
+          "title": "BIOP/qupath-extension-cellpose release v0.12.1",
+          "url": "https://github.com/BIOP/qupath-extension-cellpose/releases/tag/v0.12.1"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Release `v0.7.0` lists: `QuPath-v0.7.0-Linux.tar.xz`, `QuPath-v0.7.0-Mac-arm64.pkg`. This release metadata establishes asset availability, not a passed native test.",
+        "Release `v0.12.1` lists: . This release metadata establishes asset availability, not a passed native test."
+      ]
+    },
+    {
+      "recipe": "rabies",
+      "version": "0.5.3.post1",
+      "assessment": "dependency-stack",
+      "issue": 162,
+      "sources": [
+        {
+          "title": "CoBrALab/RABIES upstream documentation",
+          "url": "https://github.com/CoBrALab/RABIES/blob/master/README.md"
+        },
+        {
+          "title": "CoBrALab/RABIES Dockerfile",
+          "url": "https://github.com/CoBrALab/RABIES/blob/master/Dockerfile"
+        },
+        {
+          "title": "CoBrALab/RABIES setup.py",
+          "url": "https://github.com/CoBrALab/RABIES/blob/master/setup.py"
+        },
+        {
+          "title": "CoBrALab/RABIES release 0.6.1",
+          "url": "https://github.com/CoBrALab/RABIES/releases/tag/0.6.1"
+        },
+        {
+          "title": "ANTsX/ANTs upstream documentation",
+          "url": "https://github.com/ANTsX/ANTs/blob/main/README.md"
+        },
+        {
+          "title": "ANTsX/ANTs CMakeLists.txt",
+          "url": "https://github.com/ANTsX/ANTs/blob/main/CMakeLists.txt"
+        },
+        {
+          "title": "ANTsX/ANTs Dockerfile",
+          "url": "https://github.com/ANTsX/ANTs/blob/main/Dockerfile"
+        },
+        {
+          "title": "ANTsX/ANTs release v2.6.5",
+          "url": "https://github.com/ANTsX/ANTs/releases/tag/v2.6.5"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "relion",
+      "version": "4.0.1.sm75",
+      "assessment": "gpu-prerequisite",
+      "issue": 163,
+      "sources": [
+        {
+          "title": "3dem/relion upstream documentation",
+          "url": "https://github.com/3dem/relion/blob/master/README.md"
+        },
+        {
+          "title": "3dem/relion CMakeLists.txt",
+          "url": "https://github.com/3dem/relion/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "3dem/relion environment.yml",
+          "url": "https://github.com/3dem/relion/blob/master/environment.yml"
+        },
+        {
+          "title": "3dem/relion pyproject.toml",
+          "url": "https://github.com/3dem/relion/blob/master/pyproject.toml"
+        },
+        {
+          "title": "3dem/relion release 5.1.0",
+          "url": "https://github.com/3dem/relion/releases/tag/5.1.0"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml",
+        "load_topaz.sh",
+        "module.sh"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "romeo",
+      "version": "3.2.8",
+      "assessment": "candidate",
+      "issue": 164,
+      "sources": [
+        {
+          "title": "korbinian90/ROMEO.jl upstream documentation",
+          "url": "https://github.com/korbinian90/ROMEO.jl/blob/master/README.md"
+        },
+        {
+          "title": "korbinian90/ROMEO.jl Project.toml",
+          "url": "https://github.com/korbinian90/ROMEO.jl/blob/master/Project.toml"
+        },
+        {
+          "title": "korbinian90/ROMEO.jl release v1.6.0",
+          "url": "https://github.com/korbinian90/ROMEO.jl/releases/tag/v1.6.0"
+        },
+        {
+          "title": "korbinian90/ROMEO upstream documentation",
+          "url": "https://github.com/korbinian90/ROMEO/blob/master/README.md"
+        },
+        {
+          "title": "korbinian90/ROMEO release newReleases",
+          "url": "https://github.com/korbinian90/ROMEO/releases/tag/newReleases"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "root",
+      "version": "6.22.02",
+      "assessment": "candidate",
+      "issue": 116,
+      "sources": [
+        {
+          "title": "root-project/root upstream documentation",
+          "url": "https://github.com/root-project/root/blob/master/README.md"
+        },
+        {
+          "title": "root-project/root CMakeLists.txt",
+          "url": "https://github.com/root-project/root/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "root-project/root pyproject.toml",
+          "url": "https://github.com/root-project/root/blob/master/pyproject.toml"
+        },
+        {
+          "title": "root-project/root requirements.txt",
+          "url": "https://github.com/root-project/root/blob/master/requirements.txt"
+        },
+        {
+          "title": "root-project/root release v6-40-04",
+          "url": "https://github.com/root-project/root/releases/tag/v6-40-04"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/rootproject/root/manifests/6.22.02-centos7"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `rootproject/root:6.22.02-centos7`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "rshrf",
+      "version": "1.7.0",
+      "assessment": "candidate",
+      "issue": 115,
+      "sources": [
+        {
+          "title": "bids-apps/rsHRF upstream documentation",
+          "url": "https://github.com/bids-apps/rsHRF/blob/master/README.md"
+        },
+        {
+          "title": "bids-apps/rsHRF Dockerfile",
+          "url": "https://github.com/bids-apps/rsHRF/blob/master/Dockerfile"
+        },
+        {
+          "title": "bids-apps/rsHRF pyproject.toml",
+          "url": "https://github.com/bids-apps/rsHRF/blob/master/pyproject.toml"
+        },
+        {
+          "title": "bids-apps/rsHRF requirements.txt",
+          "url": "https://github.com/bids-apps/rsHRF/blob/master/requirements.txt"
+        },
+        {
+          "title": "bids-apps/rsHRF setup.py",
+          "url": "https://github.com/bids-apps/rsHRF/blob/master/setup.py"
+        },
+        {
+          "title": "bids-apps/rsHRF release v1.7.0",
+          "url": "https://github.com/bids-apps/rsHRF/releases/tag/v1.7.0"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/bids/rshrf/manifests/v1.7.0"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `bids/rshrf:v1.7.0`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "rstudio",
+      "version": "2023.12.1",
+      "assessment": "dependency-stack",
+      "issue": 230,
+      "sources": [
+        {
+          "title": "rstudio/rstudio upstream documentation",
+          "url": "https://github.com/rstudio/rstudio/blob/main/README.md"
+        },
+        {
+          "title": "rstudio/rstudio CMakeLists.txt",
+          "url": "https://github.com/rstudio/rstudio/blob/main/CMakeLists.txt"
+        },
+        {
+          "title": "rstudio/rstudio package.json",
+          "url": "https://github.com/rstudio/rstudio/blob/main/package.json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "samri",
+      "version": "0.5",
+      "assessment": "dependency-stack",
+      "issue": 165,
+      "sources": [
+        {
+          "title": "IBT-FMI/SAMRI upstream documentation",
+          "url": "https://github.com/IBT-FMI/SAMRI/blob/master/README.md"
+        },
+        {
+          "title": "IBT-FMI/SAMRI release 0.5.4",
+          "url": "https://github.com/IBT-FMI/SAMRI/releases/tag/0.5.4"
+        },
+        {
+          "title": "neurolabusc/Bru2Nii upstream documentation",
+          "url": "https://github.com/neurolabusc/Bru2Nii/blob/master/README.md"
+        },
+        {
+          "title": "neurolabusc/Bru2Nii release v1.0.20180303",
+          "url": "https://github.com/neurolabusc/Bru2Nii/releases/tag/v1.0.20180303"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/vnmd/fsl_6.0.3/manifests/20200905"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `vnmd/fsl_6.0.3:20200905`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "samsrfx",
+      "version": "v10.004",
+      "assessment": "vendor-runtime",
+      "issue": 178,
+      "sources": [
+        {
+          "title": "samsrf/samsrf upstream documentation",
+          "url": "https://github.com/samsrf/samsrf/blob/master/ReadMe.md"
+        },
+        {
+          "title": "samsrf/samsrf release v10.3",
+          "url": "https://github.com/samsrf/samsrf/releases/tag/v10.3"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "slicer",
+      "version": "5.10.0",
+      "assessment": "dependency-stack",
+      "issue": 231,
+      "sources": [
+        {
+          "title": "Slicer/Slicer upstream documentation",
+          "url": "https://github.com/Slicer/Slicer/blob/main/README.md"
+        },
+        {
+          "title": "Slicer/Slicer CMakeLists.txt",
+          "url": "https://github.com/Slicer/Slicer/blob/main/CMakeLists.txt"
+        },
+        {
+          "title": "Slicer/Slicer release docs-resources",
+          "url": "https://github.com/Slicer/Slicer/releases/tag/docs-resources"
+        },
+        {
+          "title": "Upstream superbuild and extension ABI guidance",
+          "url": "https://github.com/Slicer/Slicer/blob/main/Docs/developer_guide/build_instructions/overview.md"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml",
+        "repair_itk_metadata.py"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "slicersalt",
+      "version": "3.0.0",
+      "assessment": "dependency-stack",
+      "issue": 166,
+      "sources": [
+        {
+          "title": "Upstream source/build guide",
+          "url": "https://slicersalt.readthedocs.io/en/latest/build.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "soopct",
+      "version": "0.0.0",
+      "assessment": "dependency-source",
+      "issue": 232,
+      "sources": [
+        {
+          "title": "rordenlab/soop-ct upstream documentation",
+          "url": "https://github.com/rordenlab/soop-ct/blob/main/README.md"
+        },
+        {
+          "title": "rordenlab/soop-ct requirements.txt",
+          "url": "https://github.com/rordenlab/soop-ct/blob/main/requirements.txt"
+        },
+        {
+          "title": "antspyx-0.5.4 published package metadata",
+          "url": "https://pypi.org/pypi/antspyx/0.5.4/json"
+        },
+        {
+          "title": "antspyx-0.6.1 published package metadata",
+          "url": "https://pypi.org/pypi/antspyx/0.6.1/json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `antspyx-0.5.4`: 0 Linux ARM wheel filenames, 1 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies.",
+        "Package `antspyx-0.6.1`: 0 Linux ARM wheel filenames, 1 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "sovabids",
+      "version": "0.3.1a0.post1",
+      "assessment": "candidate",
+      "issue": 167,
+      "sources": [
+        {
+          "title": "yjmantilla/sovabids upstream documentation",
+          "url": "https://github.com/yjmantilla/sovabids/blob/main/README.rst"
+        },
+        {
+          "title": "yjmantilla/sovabids pyproject.toml",
+          "url": "https://github.com/yjmantilla/sovabids/blob/main/pyproject.toml"
+        },
+        {
+          "title": "yjmantilla/sovabids release v0.4.7",
+          "url": "https://github.com/yjmantilla/sovabids/releases/tag/v0.4.7"
+        },
+        {
+          "title": "yjmantilla/bidscoin upstream documentation",
+          "url": "https://github.com/yjmantilla/bidscoin/blob/master/README.rst"
+        },
+        {
+          "title": "yjmantilla/bidscoin pyproject.toml",
+          "url": "https://github.com/yjmantilla/bidscoin/blob/master/pyproject.toml"
+        },
+        {
+          "title": "yjmantilla/bidscoin requirements.txt",
+          "url": "https://github.com/yjmantilla/bidscoin/blob/master/requirements.txt"
+        },
+        {
+          "title": "yjmantilla/bidscoin setup.py",
+          "url": "https://github.com/yjmantilla/bidscoin/blob/master/setup.py"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml",
+        "sovabids.yml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "spinalcordtoolbox",
+      "version": "7.3.3",
+      "assessment": "observed-build-failure",
+      "issue": 74,
+      "sources": [
+        {
+          "title": "spinalcordtoolbox/spinalcordtoolbox upstream documentation",
+          "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/blob/master/README.rst"
+        },
+        {
+          "title": "spinalcordtoolbox/spinalcordtoolbox Dockerfile",
+          "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/blob/master/Dockerfile"
+        },
+        {
+          "title": "spinalcordtoolbox/spinalcordtoolbox requirements.txt",
+          "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/blob/master/requirements.txt"
+        },
+        {
+          "title": "spinalcordtoolbox/spinalcordtoolbox setup.py",
+          "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/blob/master/setup.py"
+        },
+        {
+          "title": "spinalcordtoolbox/spinalcordtoolbox release 7.3",
+          "url": "https://github.com/spinalcordtoolbox/spinalcordtoolbox/releases/tag/7.3"
+        },
+        {
+          "title": "Conda-forge native Qt package metadata",
+          "url": "https://api.anaconda.org/package/conda-forge/pyqt"
+        }
+      ],
+      "local_files_inspected": [
+        "OpenReconLabel.gpu.json",
+        "OpenReconLabel.json",
+        "OpenReconREADME.md",
+        "build.yaml",
+        "fulltest.yaml",
+        "nifti2mrd.py",
+        "spinalcordtoolbox.py",
+        "test_model_surface.py",
+        "test_spinalcordtoolbox_openrecon.py"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "spm12",
+      "version": "r7771",
+      "assessment": "vendor-runtime",
+      "issue": 173,
+      "sources": [
+        {
+          "title": "spm/spm12 upstream documentation",
+          "url": "https://github.com/spm/spm12/blob/main/README.md"
+        },
+        {
+          "title": "spm/spm12 release r7771",
+          "url": "https://github.com/spm/spm12/releases/tag/r7771"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "spm12bi",
+      "version": "latest",
+      "assessment": "vendor-runtime",
+      "issue": 174,
+      "sources": [
+        {
+          "title": "spm/spm12 upstream documentation",
+          "url": "https://github.com/spm/spm12/blob/main/README.md"
+        },
+        {
+          "title": "spm/spm12 release r7771",
+          "url": "https://github.com/spm/spm12/releases/tag/r7771"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "spm25",
+      "version": "25.01.02",
+      "assessment": "vendor-runtime",
+      "issue": 175,
+      "sources": [
+        {
+          "title": "spm/spm upstream documentation",
+          "url": "https://github.com/spm/spm/blob/main/README.md"
+        },
+        {
+          "title": "spm/spm release 26.01.rc1",
+          "url": "https://github.com/spm/spm/releases/tag/26.01.rc1"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://ghcr.io/v2/spm/spm-docker/manifests/docker-matlab-25.01.02"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `ghcr.io/spm/spm-docker:docker-matlab-25.01.02`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "startrack",
+      "version": "20250920",
+      "assessment": "vendor-runtime",
+      "issue": 179,
+      "sources": [
+        {
+          "title": "Official application downloads and runtime requirements",
+          "url": "https://nbl-research.github.io/startrack.html"
+        },
+        {
+          "title": "MathWorks Linux system requirements",
+          "url": "https://www.mathworks.com/support/requirements/matlab-linux.html"
+        },
+        {
+          "title": "MathWorks Runtime platform/release downloads",
+          "url": "https://www.mathworks.com/products/compiler/matlab-runtime.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "surfice",
+      "version": "1.0.20210730",
+      "assessment": "candidate",
+      "issue": 168,
+      "sources": [
+        {
+          "title": "neurolabusc/surf-ice upstream documentation",
+          "url": "https://github.com/neurolabusc/surf-ice/blob/master/README.md"
+        },
+        {
+          "title": "neurolabusc/surf-ice release v1.0.20211006",
+          "url": "https://github.com/neurolabusc/surf-ice/releases/tag/v1.0.20211006"
+        },
+        {
+          "title": "davidbannon/libqt5pas upstream documentation",
+          "url": "https://github.com/davidbannon/libqt5pas/blob/master/README.md"
+        },
+        {
+          "title": "davidbannon/libqt5pas release v1.2.16",
+          "url": "https://github.com/davidbannon/libqt5pas/releases/tag/v1.2.16"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "svrtk",
+      "version": "20260626",
+      "assessment": "dependency-stack",
+      "issue": 233,
+      "sources": [
+        {
+          "title": "SVRTK/SVRTK upstream documentation",
+          "url": "https://github.com/SVRTK/SVRTK/blob/master/README.md"
+        },
+        {
+          "title": "SVRTK/SVRTK CMakeLists.txt",
+          "url": "https://github.com/SVRTK/SVRTK/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "SVRTK/auto-proc-svrtk upstream documentation",
+          "url": "https://github.com/SVRTK/auto-proc-svrtk/blob/main/README.md"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/fetalsvrtk/svrtk/manifests/sha256:d0ee22d6476277d172276ca33ee2a3f6334e1bf773c789d6012c8c23804460de"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `fetalsvrtk/svrtk:general_auto_amd@sha256:d0ee22d6476277d172276ca33ee2a3f6334e1bf773c789d6012c8c23804460de`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "syncro",
+      "version": "0.1.1.post1",
+      "assessment": "dependency-source",
+      "issue": 234,
+      "sources": [
+        {
+          "title": "neurolabusc/py_synthsr upstream documentation",
+          "url": "https://github.com/neurolabusc/py_synthsr/blob/main/README.md"
+        },
+        {
+          "title": "neurolabusc/py_synthsr pyproject.toml",
+          "url": "https://github.com/neurolabusc/py_synthsr/blob/main/pyproject.toml"
+        },
+        {
+          "title": "neurolabusc/py_synthsr requirements.txt",
+          "url": "https://github.com/neurolabusc/py_synthsr/blob/main/requirements.txt"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/freesurfer/synthstrip/manifests/1.8"
+        }
+      ],
+      "local_files_inspected": [
+        "SYNcro.py",
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `freesurfer/synthstrip:1.8`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    },
+    {
+      "recipe": "synthseg",
+      "version": "8.2.0",
+      "assessment": "candidate",
+      "issue": 235,
+      "sources": [
+        {
+          "title": "BBillot/SynthSeg upstream documentation",
+          "url": "https://github.com/BBillot/SynthSeg/blob/master/README.md"
+        },
+        {
+          "title": "BBillot/SynthSeg setup.py",
+          "url": "https://github.com/BBillot/SynthSeg/blob/master/setup.py"
+        },
+        {
+          "title": "tensorflow-2.13.1 published package metadata",
+          "url": "https://pypi.org/pypi/tensorflow/2.13.1/json"
+        }
+      ],
+      "local_files_inspected": [
+        "OpenReconLabel.json",
+        "OpenReconREADME.md",
+        "build.yaml",
+        "fulltest.yaml",
+        "nifti2mrd.py",
+        "synthseg.py",
+        "test_synthseg_openrecon.py"
+      ],
+      "observations": [
+        "Package `tensorflow-2.13.1`: 4 Linux ARM wheel filenames, 0 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "terastitcher",
+      "version": "1.11.10",
+      "assessment": "candidate",
+      "issue": 170,
+      "sources": [
+        {
+          "title": "abria/TeraStitcher upstream documentation",
+          "url": "https://github.com/abria/TeraStitcher/blob/master/README.md"
+        },
+        {
+          "title": "abria/TeraStitcher release v1.10.12",
+          "url": "https://github.com/abria/TeraStitcher/releases/tag/v1.10.12"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "tgvqsm",
+      "version": "1.0.0",
+      "assessment": "dependency-source",
+      "issue": 169,
+      "sources": [
+        {
+          "title": "Original TGV QSM project and source",
+          "url": "https://www.neuroimaging.at/pages/qsm.php"
+        },
+        {
+          "title": "Pinned recipe source archive",
+          "url": "https://www.neuroimaging.at/media/qsm/TGVQSM-plus.zip"
+        }
+      ],
+      "local_files_inspected": [
+        "README.md",
+        "build.yaml",
+        "fulltest.yaml",
+        "setup.py"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "topofit",
+      "version": "0.5.1",
+      "assessment": "dependency-source",
+      "issue": 236,
+      "sources": [
+        {
+          "title": "simnibs/brainnet upstream documentation",
+          "url": "https://github.com/simnibs/brainnet/blob/main/README.md"
+        },
+        {
+          "title": "simnibs/brainnet pyproject.toml",
+          "url": "https://github.com/simnibs/brainnet/blob/main/pyproject.toml"
+        },
+        {
+          "title": "simnibs/brainnet release v0.2",
+          "url": "https://github.com/simnibs/brainnet/releases/tag/v0.2"
+        },
+        {
+          "title": "simnibs/brainsynth upstream documentation",
+          "url": "https://github.com/simnibs/brainsynth/blob/main/README.md"
+        },
+        {
+          "title": "simnibs/brainsynth pyproject.toml",
+          "url": "https://github.com/simnibs/brainsynth/blob/main/pyproject.toml"
+        },
+        {
+          "title": "simnibs/brainsynth release v0.1",
+          "url": "https://github.com/simnibs/brainsynth/releases/tag/v0.1"
+        }
+      ],
+      "local_files_inspected": [
+        "OpenReconLabel.json",
+        "OpenReconREADME.md",
+        "build.yaml",
+        "fulltest.yaml",
+        "preview_patch_qc.py",
+        "test_topofit_core.py",
+        "test_topofit_geometry.py",
+        "test_topofit_openrecon.py",
+        "topofit.py",
+        "topofit_core.py",
+        "topofit_geometry.py",
+        "verify_dicom.py"
+      ],
+      "observations": [
+        "Release `v0.2` lists: `brainnet-0.2-py3-none-any.whl`. This release metadata establishes asset availability, not a passed native test.",
+        "Release `v0.1` lists: `brainsynth-0.1-py3-none-any.whl`. This release metadata establishes asset availability, not a passed native test."
+      ]
+    },
+    {
+      "recipe": "trackvis",
+      "version": "0.6.1",
+      "assessment": "binary-distribution",
+      "issue": 171,
+      "sources": [
+        {
+          "title": "Product distribution documentation",
+          "url": "https://trackvis.org/docs/?subsect=license"
+        },
+        {
+          "title": "Official download service",
+          "url": "https://trackvis.org/download/"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "tractseg",
+      "version": "2.9.post2",
+      "assessment": "dependency-source",
+      "issue": 238,
+      "sources": [
+        {
+          "title": "MIC-DKFZ/TractSeg upstream documentation",
+          "url": "https://github.com/MIC-DKFZ/TractSeg/blob/master/Readme.md"
+        },
+        {
+          "title": "MIC-DKFZ/TractSeg setup.py",
+          "url": "https://github.com/MIC-DKFZ/TractSeg/blob/master/setup.py"
+        },
+        {
+          "title": "torch-1.6.0 published package metadata",
+          "url": "https://pypi.org/pypi/torch/1.6.0/json"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Package `torch-1.6.0`: 0 Linux ARM wheel filenames, 0 source archives, 0 universal wheel filenames in the inspected release metadata. A wheel must also match the Python ABI and resolve its dependencies."
+      ]
+    },
+    {
+      "recipe": "vesselboost",
+      "version": "2.0.64",
+      "assessment": "dependency-source",
+      "issue": 239,
+      "sources": [
+        {
+          "title": "KMarshallX/VesselBoost upstream documentation",
+          "url": "https://github.com/KMarshallX/VesselBoost/blob/master/README.md"
+        },
+        {
+          "title": "KMarshallX/VesselBoost environment.yml",
+          "url": "https://github.com/KMarshallX/VesselBoost/blob/master/environment.yml"
+        },
+        {
+          "title": "KMarshallX/VesselBoost requirements.txt",
+          "url": "https://github.com/KMarshallX/VesselBoost/blob/master/requirements.txt"
+        },
+        {
+          "title": "KMarshallX/VesselBoost release v2.0.5",
+          "url": "https://github.com/KMarshallX/VesselBoost/releases/tag/v2.0.5"
+        }
+      ],
+      "local_files_inspected": [
+        "OpenReconLabel.json",
+        "OpenReconREADME.md",
+        "build.yaml",
+        "fulltest.yaml",
+        "nifti2mrd.py",
+        "test_vesselboost_openrecon.py",
+        "vesselboost.py"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "vmtk",
+      "version": "1.5.0",
+      "assessment": "dependency-source",
+      "issue": 240,
+      "sources": [
+        {
+          "title": "vmtk/vmtk upstream documentation",
+          "url": "https://github.com/vmtk/vmtk/blob/master/README.md"
+        },
+        {
+          "title": "vmtk/vmtk CMakeLists.txt",
+          "url": "https://github.com/vmtk/vmtk/blob/master/CMakeLists.txt"
+        },
+        {
+          "title": "vmtk/vmtk pyproject.toml",
+          "url": "https://github.com/vmtk/vmtk/blob/master/pyproject.toml"
+        },
+        {
+          "title": "vmtk/vmtk setup.py",
+          "url": "https://github.com/vmtk/vmtk/blob/master/setup.py"
+        },
+        {
+          "title": "vmtk/vmtk release v1.5.0",
+          "url": "https://github.com/vmtk/vmtk/releases/tag/v1.5.0"
+        },
+        {
+          "title": "conda-forge/miniforge upstream documentation",
+          "url": "https://github.com/conda-forge/miniforge/blob/main/README.md"
+        },
+        {
+          "title": "conda-forge/miniforge release 26.7.2-0",
+          "url": "https://github.com/conda-forge/miniforge/releases/tag/26.7.2-0"
+        },
+        {
+          "title": "Conda-forge VMTK package inventory",
+          "url": "https://api.anaconda.org/package/conda-forge/vmtk"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "voreen",
+      "version": "5.3.0",
+      "assessment": "observed-build-failure",
+      "issue": 117,
+      "sources": [
+        {
+          "title": "Upstream Linux build guide",
+          "url": "https://www.uni-muenster.de/Voreen/documentation/linux.html"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": []
+    },
+    {
+      "recipe": "xcpd",
+      "version": "0.10.7",
+      "assessment": "dependency-stack",
+      "issue": 172,
+      "sources": [
+        {
+          "title": "PennLINC/xcp_d upstream documentation",
+          "url": "https://github.com/PennLINC/xcp_d/blob/main/README.rst"
+        },
+        {
+          "title": "PennLINC/xcp_d Dockerfile",
+          "url": "https://github.com/PennLINC/xcp_d/blob/main/Dockerfile"
+        },
+        {
+          "title": "PennLINC/xcp_d pyproject.toml",
+          "url": "https://github.com/PennLINC/xcp_d/blob/main/pyproject.toml"
+        },
+        {
+          "title": "PennLINC/xcp_d release 26.2.0",
+          "url": "https://github.com/PennLINC/xcp_d/releases/tag/26.2.0"
+        },
+        {
+          "title": "Registry manifest inspected",
+          "url": "https://registry-1.docker.io/v2/pennlinc/xcp_d/manifests/0.10.7"
+        }
+      ],
+      "local_files_inspected": [
+        "build.yaml",
+        "fulltest.yaml"
+      ],
+      "observations": [
+        "Fresh registry inspection of `pennlinc/xcp_d:0.10.7`: `linux/amd64`. This describes the published image only; source rebuild feasibility is assessed separately."
+      ]
+    }
+  ]
+}

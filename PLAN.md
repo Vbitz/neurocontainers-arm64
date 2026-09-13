@@ -12,6 +12,36 @@ Updated: 2026-09-13 (Australia/Brisbane)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 98 of 247 declarations, refreshed from accepted source `457c5a31b9830587801a06e7d6f81f18293135e8`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
+## Per-recipe research — 2026-09-13
+
+The user's research request covers **148 unsupported recipes**, excluding the
+separately tracked NeuroCommand infrastructure candidate. All have individual
+source-cited assessments and next steps in [plans/README.md](plans/README.md).
+Research baseline: top-level `b4725fe20333308ce9f150bf252ea11902e71a74`, accepted
+submodule `457c5a31b9830587801a06e7d6f81f18293135e8`. The submodule branch and
+accepted pin are unchanged. No recipes were edited and no builds were dispatched
+or repeated during this task; this is research, not new runtime verification.
+
+**Correction to the historical audits below:** those audits overstated the
+blockers. They must not be read as proof that every remaining application lacks
+an ARM source/build route. Published modsort ARM assets, newer DSI Studio ARM
+assets, LCModel source, official FSL ARM packages and TensorFlow ARM wheels
+contradict several earlier diagnoses. The individual plans supersede those
+blanket assessments while retaining previous native failure evidence.
+
+Research classifications: 28 plausible recipe-level candidates, 56 unresolved
+complete dependency stacks, 18 native/legacy dependency build investigations,
+31 vendor-runtime deployment blockers, 7 GPU/CPU-mode prerequisites, 5 concrete
+prior build failures, 2 binary distributions with no public source-build route
+found, and 1 Windows application port. These categories do not imply that all
+unresolved dependencies are fundamentally unportable.
+
+Next porting candidates, if resumed: modsort (same-version published ARM asset),
+DSI Studio (released ARM asset requiring a version mapping/update), LCModel
+(source build), and SynthSeg (documented CPU path and ARM TensorFlow wheels).
+Check each existing investigation budget and issue before any new attempt.
+The current request ends with researched plans; no new build queue is active.
+
 ## Remaining unsupported inventory audit
 
 At accepted source `457c5a31b9830587801a06e7d6f81f18293135e8`, 149 recipes

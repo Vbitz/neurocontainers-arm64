@@ -1,0 +1,35 @@
+# clearswi: ARM64 research plan
+
+Researched: 2026-09-13. Recipe version: `1.6.1`. Target: native Linux ARM64.
+
+**Assessment: Concrete prior build failure; not a general architecture prohibition.**
+
+The recorded native build installed Julia dependencies but LLVM failed with vscale selection while PackageCompiler generated a sysimage. Upstream also documents running Julia source directly. The demonstrated blocker is the compiled sysimage path, not all CLEARSWI execution.
+
+This is a research assessment, not a successful build or a claim that all source-build routes have been exhausted.
+
+## Pinned recipe and existing evidence
+
+- [Recipe at accepted source `457c5a31b983`](https://github.com/Vbitz/neurocontainers/blob/457c5a31b9830587801a06e7d6f81f18293135e8/recipes/clearswi/build.yaml).
+- Base image expression: `ubuntu:24.04`.
+- Declared download inputs: `julia_linux_x86_64_tar_gz`.
+- [Previous issue and investigation comments](https://github.com/Vbitz/neurocontainers-arm64/issues/75). Earlier labels are historical claims, not independent proof of a fundamental blocker.
+- [Existing native attempt](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34699875754); use the issue for exact candidate SHA and failure context.
+
+## Upstream findings
+
+The assessment above is based on the recipe and these upstream sources inspected during this pass. Current upstream documentation may describe a newer release; the plan explicitly retains the pinned-version compatibility question.
+
+- [korbinian90/CLEARSWI.jl upstream documentation](https://github.com/korbinian90/CLEARSWI.jl/blob/master/README.md).
+- [korbinian90/CLEARSWI.jl Project.toml](https://github.com/korbinian90/CLEARSWI.jl/blob/master/Project.toml).
+- [korbinian90/CLEARSWI.jl release v1.7.0](https://github.com/korbinian90/CLEARSWI.jl/releases/tag/v1.7.0).
+
+## Plan and acceptance criteria
+
+Check whether the pinned version's documented Julia CLI can preserve every deployed option without a custom sysimage; otherwise require a released Julia/HostCPUFeatures fix. Retain SWI and QSM output checks and avoid copying a compiled x86 image.
+
+Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/clearswi/fulltest.yaml) and the deployment checks. Any future acceptance requires a newly built native ARM64 image, architecture verification, SIF conversion and meaningful runtime tests. Configuration generation alone is insufficient.
+
+## Decision boundary
+
+Keep the recorded failure as the current blocker for that candidate. A released upstream fix or documented configuration addressing its first error is the condition for a justified retry. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
