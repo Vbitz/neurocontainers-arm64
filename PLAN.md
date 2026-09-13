@@ -2,6 +2,31 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after BIDSvue acceptance and PyDeface retry dispatch
+
+- Root commit: `2a9c2ab`; accepted submodule pin is now
+  `ba7af5842b2c41dbc98ffd8d1e25431acf19a7db` (BIDSvue on top of AFNI,
+  5/5 native fulltests). Fork Actions is disabled. Coverage issue #2 was
+  refreshed after acceptance.
+- Active exact investigations:
+  - ITK-SNAP candidate `7ceabea5d97151a98cf6655055729804870b33ee`, run
+    [34769119103](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769119103),
+    attempt 2/6, explicitly enabling VTK `RenderingExternal`.
+  - PyDeface candidate `90ee2948253826e0413ca90be894f381d10009eb`, run
+    [34769469302](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769469302),
+    attempt 4/6, pinning ARM setuptools below the `pkg_resources` warning
+    threshold after the previous candidate passed 58/59 tests.
+  - VMTK `974bb14826c93d9836203186ed6335a82a4e6320`, run
+    [34768651549](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34768651549),
+    attempt 4/6.
+- Prepared next candidate: MIMoSA `3ca09fbd` on branch
+  `arm64/mimosa-afni`, based on the accepted AFNI pin with the existing native
+  R/ANTsR/FSL build path declared for ARM64. Dispatch it when a slot opens.
+- The local submodule checkout is `arm64/bidsvue-afni` at the accepted
+  `ba7af584`; no candidate pointer is pending integration.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after ITK-SNAP VTK module retry dispatch
 
 - Root commit: `acb1258c022e5c46bf3071424e1dc5fb7d4822fb`; accepted submodule
@@ -13,8 +38,10 @@
     attempt 2/6, explicitly enabling VTK `RenderingExternal` after the prior
     VTK package configuration omitted that required component. An earlier
     short-SHA dispatch was rejected during checkout before the recipe ran.
-  - PyDeface `3baa7a0662abfd352ab10f0d8342a12ef157990a`, run
-    [34767487096](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767487096).
+  - PyDeface candidate `90ee29484e38e84a4b4a1f5da96ea7f2040ad2af2`, run
+    [34769427700](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769427700),
+    attempt 4/6, pinning ARM setuptools below the documented warning threshold
+    after the previous candidate passed 58/59 tests.
   - VMTK `974bb14826c93d9836203186ed6335a82a4e6320`, run
     [34768651549](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34768651549),
     attempt 4/6.
