@@ -9,9 +9,10 @@
   native checks). Fork Actions is disabled.
 - Active exact investigations:
   - ITK-SNAP candidate `7ceabea5d97151a98cf6655055729804870b33ee`, run
-    [34769017498](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769017498),
+    [34769119103](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769119103),
     attempt 2/6, explicitly enabling VTK `RenderingExternal` after the prior
-    VTK package configuration omitted that required component.
+    VTK package configuration omitted that required component. An earlier
+    short-SHA dispatch was rejected during checkout before the recipe ran.
   - PyDeface `3baa7a0662abfd352ab10f0d8342a12ef157990a`, run
     [34767487096](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767487096).
   - VMTK `974bb14826c93d9836203186ed6335a82a4e6320`, run
