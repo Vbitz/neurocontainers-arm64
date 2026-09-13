@@ -49,3 +49,13 @@ The candidate declares `aarch64`, uses the multi-architecture Ubuntu 24.04 base 
 Because Napari advanced the accepted pin to `8bcc3e3dd69d25fdb16b2f3084d89cf25ddfb5dc`, the TopoFit recipe change was replayed as integrated candidate [`c8e10fe8e0263b5ceecb53489856daf332ddf419`](https://github.com/Vbitz/neurocontainers/commit/c8e10fe8e0263b5ceecb53489856daf332ddf419) on [`arm64/topofit-cortech-arm-integrated`](https://github.com/Vbitz/neurocontainers/tree/arm64/topofit-cortech-arm-integrated). Validation and ARM64/x86_64 generation passed again. This exact integrated SHA is the candidate for native dispatch; acceptance requires its own native build, SIF, deploy and fulltest evidence.
 
 Exact native dispatch is [run 34778187761](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34778187761), attempt 1/6, started at `2026-09-13T19:36:05Z` with a deadline of `2026-09-14T07:36:05Z`.
+
+Run 34778187761 reached the ARM Cortech editable install but failed because
+`meson-python` could not find Ninja 1.8.2 or newer. Conan's native dependency
+build completed, so this was a directly actionable missing system package.
+Candidate [`1e161313793613e5c6e8b3ae086e6e5488028eac`](https://github.com/Vbitz/neurocontainers/commit/1e161313793613e5c6e8b3ae086e6e5488028eac)
+adds Debian's `ninja-build`, passes validation and both architecture
+generations, and is pushed on the same integrated branch. Exact retry [run
+34778828330](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34778828330)
+is attempt 2/6. The top-level pin remains unchanged pending native build, SIF,
+deploy and fulltest evidence.

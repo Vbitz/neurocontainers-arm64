@@ -75,3 +75,13 @@ on narrow Qt 6.4 source compatibility errors: three `QDebug` insertions passed
   passes build, SIF, deploy and fulltest.
 
 Run [34773851298](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34773851298) reached application compilation and failed on one additional `QDebug`/`std::string` conversion and a missing `QDialogButtonBox` include in `DeepLearningServerPanel.cxx`. Candidate `258f746afb80f90077beb6fb63d0a336745fbb1e` adds those narrow Qt 6.4 source fixes, passes local validation and both architecture generations, and is dispatched as the final bounded retry in [run 34776098451](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34776098451).
+
+Run 34776098451 compiled 740/751 targets and then exposed three missed
+`QDebug << std::string` expressions in the bundled `SSHTunnelTest/main.cxx`.
+Candidate [`c14b22703394ab8ed56510580ef8c381605fb9ec`](https://github.com/Vbitz/neurocontainers/commit/c14b22703394ab8ed56510580ef8c381605fb9ec)
+replays the complete source-build route onto accepted pin `8bcc3e3d` and adds
+the same explicit `QString::fromStdString` conversion to that test source.
+Validation and both architecture generations pass. Exact retry [run
+34778923438](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34778923438)
+is attempt 2/6; stop if the next failure is a dependency port rather than a
+localized Qt compatibility issue.
