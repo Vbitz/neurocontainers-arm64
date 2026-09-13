@@ -2,6 +2,34 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after AFNI acceptance and BIDSvue/VMTK dispatch
+
+- Root commit: `205b7e4`; accepted submodule pin is now
+  `8a9e48a7028b53be7b93eb6706a55a6a9ec801e6` (AFNI, 114/114 native checks)
+  on top of ROOT. Fork Actions is disabled.
+- Active exact investigations:
+  - ITK-SNAP source build `fdf69113`, run
+    [34767223157](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767223157).
+  - PyDeface setuptools compatibility retry `3baa7a0662abfd352ab10f0d8342a12ef157990a`,
+    run [34767487096](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767487096).
+  - BIDSvue integrated replay `6886b829d871a3b6315660e222305dfdebf918b5`,
+    run [34767968286](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767968286),
+    attempt 4/6, using Rust 1.88 after the prior locked Cargo graph required
+    that released toolchain.
+  - VMTK source candidate `766d5b541b8b4d41d74ce1e001cd0ca57e598ea9`, run
+    [34767998185](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767998185),
+    attempt 1/6, using native conda-forge VTK/ITK and VMTK’s system-dependency
+    CMake build.
+- BIDSvue’s Rust 1.86 retry failed at the Tauri build because `darling`,
+  `plist`, `serde_with`, and `time` require rustc 1.88. The integrated 1.88
+  candidate is the second and final dependency-toolchain adjustment.
+- The local submodule checkout is `arm64/vmtk-afni` at `766d5b54`; the root
+  pointer remains intentionally unstaged while native runs execute. Next action
+  is to reconcile the four runs, integrate only exact passing candidates onto
+  this AFNI pin, and continue through any remaining feasible plans.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after VMTK ARM source candidate preparation
 
 - Root commit: `c57b3642e18f4e8da6c85803eb33f0b215adc68f`; accepted submodule
