@@ -52,3 +52,12 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
   [34771433995](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771433995),
   currently queued/in progress. Do not advance the top-level pin until this
   exact SHA passes build, SIF, deploy and fulltest.
+
+## Accepted implementation — 2026-09-14
+
+- Integrated candidate `80a84327a6659b0ac79a44f2c1853faa9eb84f4b` on
+  `arm64/pydeface-integrated` passed the exact native ARM64 verification in
+  [run 34771433995](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771433995).
+- Docker build, architecture verification, SIF conversion, deploy checks and
+  the complete fulltest suite passed: **60 passed, 0 failed, 0 skipped**.
+- This candidate is ready for serial acceptance at the top-level submodule pin.
