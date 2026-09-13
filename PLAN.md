@@ -2367,3 +2367,18 @@ Goal remains active: implement and natively verify every feasible recipe from th
 - Blender attempt 3 installs the Ubuntu equivalents listed by Blender's dependency checker; AFNI attempt 2 uses the ARM archive's extracted R bundle directory. Both candidates validated for ARM64/x86_64 generation before dispatch.
 
 Next action: inspect completed Quickshear and the four active runs at normal intervals; integrate exact passing candidates serially from the current accepted pin, and refill each freed slot from the remaining feasible queue. Do not rerun recipes whose exact native evidence already passed.
+## Active implementation checkpoint — 2026-09-14
+
+The goal remains active: implement and natively verify every feasible recipe from the 148-recipe inventory, and record a concrete blocker for every recipe that remains infeasible. The accepted top-level submodule pin is `685f5f4d9636d34aa8237646535d2a7dfc3a525d`; fork Actions remains disabled.
+
+Current native runs to reconcile:
+
+- CLEARSWI integrated candidate `488f143223358f000b57fdc06b2693a89b896110`, run [34775763906](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34775763906).
+- ITK-SNAP integrated final source retry `258f746afb80f90077beb6fb63d0a336745fbb1e`, run [34776098451](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34776098451).
+- MIMoSA candidate `c58b71e8e7400e0beb6026201b323c5d7aa3916d`, run [34773252089](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34773252089).
+
+TractSeg candidate `a6bd2f46399657df8b56cfc12ce48f147796d1fc` is pushed on `arm64/tractseg-modern-arm`, based on the accepted pin, and waiting for a native slot. It uses the documented MRtrix3 3.0.4 source build on ARM64 because the release has no Linux ARM64 archive, and uses the native torch 2.4.1 wheel because the old torch 1.6.0 CPU path has no ARM64 wheel. Validation and both architecture generations passed. Issue checkpoint: [#238 comment](https://github.com/Vbitz/neurocontainers-arm64/issues/238#issuecomment-5655429034). Investigation window is `2026-09-13T19:06:28Z`–`2026-09-14T07:06:28Z`, attempt 1/6.
+
+Recent bounded outcomes: DSI Studio is blocked on five essential ARM64 AutoTrack runtime operations after a native build; Blender exhausted its six-attempt budget at the bundled Flex configure step (`autopoint`), with an untested dependency candidate preserved; EMUSES passed and is accepted at the current pin. Do not duplicate these runs without new upstream or integration evidence.
+
+Next actions: reconcile the three active runs, dispatch TractSeg when a slot opens, integrate exact passing candidates serially from the newest accepted pin, and continue through the remaining feasible queue. Preserve the local candidate branch and do not stage the intentional submodule pointer until a candidate is verified.

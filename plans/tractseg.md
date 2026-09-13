@@ -35,3 +35,9 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/tr
 ## Decision boundary
 
 A dependency/source-build investigation remains, rather than an established universal ARM incompatibility. Revisit when the exact native package set or documented source configuration is available; record any first actionable failure. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation attempt — 2026-09-13
+
+The first implementation candidate is pushed as [`a6bd2f46399657df8b56cfc12ce48f147796d1fc`](https://github.com/Vbitz/neurocontainers/commit/a6bd2f46399657df8b56cfc12ce48f147796d1fc) on [`arm64/tractseg-modern-arm`](https://github.com/Vbitz/neurocontainers/tree/arm64/tractseg-modern-arm), based on accepted submodule pin `685f5f4d9636d34aa8237646535d2a7dfc3a525d`. It keeps the existing x86_64 binary and Python 3.7/torch 1.6 route. The ARM64 path uses the pinned MRtrix3 3.0.4 source template and Miniconda py311 with the native `torch==2.4.1` wheel. This is an ordinary upstream source build and does not change the scientific toolchain.
+
+Recipe validation and ARM64/x86_64 Dockerfile generation passed locally. Native verification is pending; the candidate must pass the existing MRtrix, FSL, TractSeg, Tractometry and deployment fulltest assertions before acceptance. Investigation window: `2026-09-13T19:06:28Z` through `2026-09-14T07:06:28Z`, attempt 1/6. Issue checkpoint: [#238 comment](https://github.com/Vbitz/neurocontainers-arm64/issues/238#issuecomment-5655429034).
