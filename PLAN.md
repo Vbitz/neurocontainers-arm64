@@ -27,6 +27,13 @@
   `arm64/itksnap-root` at `7ceabea5`; the root pointer remains intentionally
   unstaged while native runs execute.
 
+### Prepared next candidate
+
+- MIMoSA candidate `3ca09fbd` is based on accepted pin `8a9e48a7` on branch
+  `arm64/mimosa-afni`. It adds the ARM declaration to the existing native R,
+  ANTsR and FSL build path; recipe validation and both architecture Dockerfile
+  generations pass. Dispatch it when one of the four active runs completes.
+
 ## Latest implementation checkpoint — 2026-09-14
 
 ### Checkpoint after BIDSvue launcher-path retry dispatch
