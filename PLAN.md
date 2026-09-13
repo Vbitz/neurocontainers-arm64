@@ -2,6 +2,31 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after VMTK superbuild configuration retry
+
+- Root commit: `1ea3fffb8d6e3809c825a3a2b39c5ee5535a3b7b`; accepted submodule
+  pin remains `8a9e48a7028b53be7b93eb6706a55a6a9ec801e6` (AFNI, 114/114
+  native checks). Fork Actions is disabled.
+- Active exact investigations:
+  - ITK-SNAP `fdf69113`, run
+    [34767223157](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767223157).
+  - PyDeface `3baa7a0662abfd352ab10f0d8342a12ef157990a`, run
+    [34767487096](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767487096).
+  - BIDSvue integrated replay `6886b829d871a3b6315660e222305dfdebf918b5`, run
+    [34767968286](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767968286),
+    attempt 4/6.
+  - VMTK `f6cdfb24a53e56f251a96e72f934ecfb5d68f3c8`, run
+    [34768446912](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34768446912),
+    attempt 3/6, the final configuration retry before upstream-blocker
+    classification.
+- VMTK attempt 2 reached VTK configuration but its legacy superbuild passed an
+  empty Python major version. The candidate now sets `PYTHON_VERSION_MAJOR=3`
+  explicitly while retaining the official upstream ITK/VTK source superbuild.
+  The local submodule checkout is `arm64/vmtk-afni` at `f6cdfb24`; the root
+  pointer remains intentionally unstaged while native runs execute.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after VMTK superbuild retry dispatch
 
 - Root commit: `f5eff7dd27d88eec3b312cb2416d663d12b216a6`; accepted submodule
