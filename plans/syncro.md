@@ -48,3 +48,5 @@ Because TopoFit advanced the accepted pin to `88e6776aeb27f16ef43e015acb426b7e87
 After PALS advanced the accepted pin to `ee0cba5b7c5d95f7cc89e12c68dfcedd70cff006`, the Syncro change was replayed as candidate `a186f7f89df41b56a8e3d937afd0d6eefa49d3b7` on `arm64/syncro-pals`. Validation and ARM64/x86_64 Dockerfile generation passed. Dispatch this exact candidate after a native slot opens for integrated verification.
 
 After SoopCT advanced the accepted pin to `e3d7996e606f92bb8d4fa292bb7a8b8e7987d3a5`, the Syncro change was replayed as candidate `c91eb0e5de57ad5dc6efd4cca25081983bfc9758` on `arm64/syncro-soopct`. Validation and ARM64/x86_64 Dockerfile generation passed. Dispatch this exact candidate when a native slot opens.
+
+After QuPath advanced the accepted pin to `c98a89ee6799cd32b6a2247554cf8447a37f24aa`, the Syncro change was replayed as candidate `625e8944fe195e5175fab9835a42f1b0f80c5d3c` on `arm64/syncro-qupath`. Validation and ARM64/default-architecture Dockerfile generation passed. The exact candidate is dispatched in native ARM64 [run 34786442868](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34786442868), attempt 1/6.

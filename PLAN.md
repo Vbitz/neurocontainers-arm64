@@ -2522,3 +2522,8 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 
 - QuPath candidate `c98a89ee6799cd32b6a2247554cf8447a37f24aa` passed native ARM64 Docker build, SIF conversion, deploy checks, and 125/125 fulltests with no skips in [run 34785400495](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785400495). It is ready for serial top-level pin acceptance from accepted SoopCT pin `e3d7996e606f92bb8d4fa292bb7a8b8e7987d3a5`.
 - After acceptance, replay queued Syncro and any later successful CLEARSWI, MIMoSA, and VesselBoost candidates from the new pin before integrating them.
+
+## Active implementation checkpoint — 2026-09-14 (Syncro replay dispatched)
+
+- Syncro candidate `625e8944fe195e5175fab9835a42f1b0f80c5d3c` is based on accepted QuPath pin `c98a89ee6799cd32b6a2247554cf8447a37f24aa`, passed local recipe validation and ARM64/default-architecture generation, and is queued in [run 34786442868](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34786442868).
+- Active native jobs are CLEARSWI replay [34785901800](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785901800), MIMoSA [34783066918](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783066918), VesselBoost [34783650179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783650179), and Syncro [34786442868](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34786442868). Integrate only exact candidates replayed from the newest accepted pin.
