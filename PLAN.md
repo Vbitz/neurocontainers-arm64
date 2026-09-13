@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `9fd6965` (focused MNE integration dispatch correction)
-- Pinned submodule: `neurocontainers@7282a7d3` (BraTS added after PeTu, BrainLes AURORA, GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
-- Submodule checkout: `arm64/integrate-mneextended-trame`, with integrated candidate `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0` based on accepted `7282a7d3`; origin `Vbitz/neurocontainers`. MNE-Extended integration retry `34746559924` is active after one transient VS Code extension download failure. The BrainLesion candidate is recorded as blocked; failed Voreen and NCT candidates and assessed preflight branches remain available.
+- Top-level commit: `e5aec43` (MNE-Extended ARM64 acceptance)
+- Pinned submodule: `neurocontainers@7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0` (MNE-Extended added after BraTS, PeTu, BrainLes AURORA, GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
+- Submodule checkout: `arm64/integrate-mneextended-trame`, accepted MNE-Extended integration run `34746559924` passed after one transient VS Code extension retry; origin `Vbitz/neurocontainers`. No active builds remain. The BrainLesion candidate is recorded as blocked; failed Voreen and NCT candidates and assessed preflight branches remain available.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 96 of 247 declarations, refreshed from accepted source `7282a7d3`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -46,8 +46,10 @@ Fixed branch-ref run
 resolved the correct source and reached the build, where a transient VS Code
 extension HTTP 503 failed the job. One unchanged retry
 [34746559924](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34746559924)
-was dispatched at `2026-09-13T07:59:32Z`; advance the top-level pin only after
-this exact integrated SHA passes.
+was dispatched at `2026-09-13T07:59:32Z` and passed with 111 passed, 0 failed,
+and 0 skipped. The top-level pointer was advanced to this exact integrated SHA
+in commit `e5aec43`; coverage issue #2 was refreshed from it and now reports
+97 of 247 declarations.
 
 `networkcorrespondancetoolkit` is the second focused follow-up. Its first
 candidate `5b1f1176992b3692e1187ef8223bde7a2e180803` removed only
