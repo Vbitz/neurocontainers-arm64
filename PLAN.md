@@ -5,40 +5,44 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `b3e9a06` (emuses ARM64 dispatch checkpoint)
-- Pinned submodule: `neurocontainers@88fb85137ac628e23542a923dfc005f8918bf306` (ANTs, OpenRecon example, and Bloch-Siegert accepted in this checkpoint)
-- Submodule checkout: `arm64/emuses`, candidate `d5aaf861187bdbdf92ac5ec9143be4034a9a7f37` from accepted source `88fb85137ac628e23542a923dfc005f8918bf306`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while candidates run.
+- Top-level commit: `9767ce6` (sigviewer ARM64 acceptance checkpoint)
+- Pinned submodule: `neurocontainers@c34a2103117399b31000f4d74bb378482e03f691` (sigviewer added after the ANTs, OpenRecon example, and Bloch-Siegert acceptances)
+- Submodule checkout: `arm64/code`, candidate `1cc5c3e34b1e3f5f1151caadb62e5b5c634133a9` from accepted source `88fb85137ac628e23542a923dfc005f8918bf306`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while the Code candidate runs.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 87 of 247 declarations, refreshed from accepted source `88fb8513`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 88 of 247 declarations, refreshed from accepted source `c34a2103`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Second pass active work
 
-The user-directed second pass is assessing the 160 recipes without ARM64
+The user-directed second pass is assessing the 159 recipes without ARM64
 declarations. It began with `sigviewer`, which has a published Debian bullseye
 ARM64 package at the pinned `0.6.4-1` version. Investigation started at
 `2026-09-13T04:19:41Z`; deadline `2026-09-13T16:19:41Z`; attempt 1/6.
 Candidate `c34a2103117399b31000f4d74bb378482e03f691` on branch
 `arm64/sigviewer` adds `aarch64`, tracks Debian amd64 and arm64 package indexes
 independently, and makes the libbiosig fulltest lookup multiarch-safe. Local
-validation and both architecture generations passed. Exact native dispatch is
-run [34737708431](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34737708431)
-with build job [103671946506](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34737708431/job/103671946506),
-currently queued; the workflow source must be checked against the candidate SHA
-before its result is accepted. Next action: monitor this run, record its issue
-and test evidence, then integrate or classify the failure before selecting the
-next undeclared recipe. Do not duplicate any earlier verified recipe run.
+validation and both architecture generations passed. Exact native dispatch
+[34737708431](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34737708431)
+checked out the candidate and passed the ARM64 build, SIF conversion, deploy
+checks, and fulltest with 36 passed, 0 failed, and 0 skipped. Issue
+[#96](https://github.com/Vbitz/neurocontainers-arm64/issues/96) records the
+source and report artifact. The candidate is accepted at top-level commit
+`9767ce6`; no duplicate run was dispatched after acceptance.
 
-`emuses` is the second-pass candidate. Investigation started at
+`emuses` is blocked upstream. Investigation started at
 `2026-09-13T04:24:42Z`; deadline `2026-09-13T16:24:42Z`; attempt 1/6 was a
 cancelled malformed-ref dispatch [34737820842](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34737820842)
 with no checkout or recipe evidence. The corrected candidate
 `d5aaf861187bdbdf92ac5ec9143be4034a9a7f37` on branch `arm64/emuses` adds only
 `aarch64`; local validation and both architecture generations passed. Exact
 dispatch [34737868781](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34737868781)
-is pending native runner capacity and is attempt 2/6. Next action: verify the
-corrected run's source SHA, then record the dependency outcome before choosing
-the next undeclared recipe. The malformed run is retained only as bookkeeping.
+checked out the candidate but failed during pip-sync because the lock requires
+`triton==3.3.1`, for which no ARM64 distribution was available. SIF conversion,
+deploy checks, and fulltest did not run. Issue
+[#94](https://github.com/Vbitz/neurocontainers-arm64/issues/94) records the
+error, artifact, and revisit condition. Attempts: 2/6; no retry is planned
+until upstream publishes a compatible ARM64 Triton release or updates the
+locked dependency. The malformed run is retained only as bookkeeping.
 
 `code` is the third-second-pass candidate. Investigation started at
 `2026-09-13T04:27:26Z`; deadline `2026-09-13T16:27:26Z`. Candidate
@@ -51,6 +55,13 @@ has no recipe evidence. Corrected attempt 2/6 is
 [34738072738](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34738072738),
 queued for native ARM64 capacity. Next action: verify its source SHA and
 assess the build/runtime result.
+
+`mricrogl` is blocked at preflight. The pinned 1.2.20211006 release provides
+only x86_64 Linux MRIcroGL archives, and its required libqt5pas 1.2.9 release
+provides only x86_64/amd64 packages. Issue
+[#97](https://github.com/Vbitz/neurocontainers-arm64/issues/97) records the
+official release assets and the revisit condition. No candidate branch or
+native build was created; attempts: 0/6.
 
 ## Latest checkpoint
 
@@ -230,7 +241,7 @@ ancestry in this checkpoint.
 
 ## Queue
 
-The accepted source contains 160 undeclared recipes after the ANTs
+The accepted source contains 159 undeclared recipes after the sigviewer
 integration. A full preflight screen on 2026-09-13 found no additional bounded
 candidate with an official ARM64 asset, a usable multi-architecture base, or a
 documented portable source build. The remaining inventory falls into these
@@ -250,8 +261,9 @@ groups:
   MNEextended, Spinal Cord Toolbox, CLEARSWI, GOUHFI, DAFNE, NeuroDesktop
   Lite, and TinyRange; and
 - source bundles that embed one of those x86 or GPU dependencies, or require
-  a broad compiler/library port. Elastix was the only remaining source-build
-  candidate worth an explicit upstream check and is recorded in issue [#92](https://github.com/Vbitz/neurocontainers-arm64/issues/92).
+  a broad compiler/library port. Elastix and MRIcroGL are recorded as explicit
+  upstream/prerequisite preflight blockers in issues [#92](https://github.com/Vbitz/neurocontainers-arm64/issues/92)
+  and [#97](https://github.com/Vbitz/neurocontainers-arm64/issues/97).
 
 No speculative changes were made to these recipes. Revisit them only when the
 upstream asset, base image, package, license prerequisite, or documented ARM64
@@ -971,6 +983,7 @@ submodule SHA.
 - `openreconexample` / `arm64`: run `34708194854`, tested source `2eaed273`, 6 passed, 0 failed, 0 skipped; issue [#90](https://github.com/Vbitz/neurocontainers-arm64/issues/90). Candidate is integrated at `2884a0e6` without a duplicate native run.
 - `blochsiegertb1mapping` / `arm64`: run `34708203749`, tested source `93a11a16`, 2 passed, 0 failed, 0 skipped; issue [#91](https://github.com/Vbitz/neurocontainers-arm64/issues/91). Candidate is integrated at `2884a0e6` without a duplicate native run.
 - `ants` / `arm64`: run `34706765954`, tested source `f48620a9`, 103 passed, 0 failed, 0 skipped; issue [#93](https://github.com/Vbitz/neurocontainers-arm64/issues/93). Candidate is integrated at `88fb8513` without a duplicate native run.
+- `sigviewer` / `arm64`: run `34737708431`, tested source `c34a2103`, 36 passed, 0 failed, 0 skipped; issue [#96](https://github.com/Vbitz/neurocontainers-arm64/issues/96). Candidate is integrated at `c34a2103` without a duplicate native run.
 
 ## Blocked or failed results
 
@@ -983,18 +996,21 @@ submodule SHA.
 - `spinalcordtoolbox` / `arm64`: exact retry `34699607997`, candidate `3dac0979`, installed qmake and resolved ARM64 packages but the pinned PyQt5 5.15.11 source metadata build was terminated with exit 143 after about 13 minutes. Issue [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74) records the two-attempt upstream blocker and revisit condition.
 - `clearswi` / `arm64`: exact run `34699875754`, candidate `86c62b32`, installed and precompiled the Julia dependency set but failed during PackageCompiler sysimage generation with the ARM64 LLVM `vscale` instruction-selection error in `HostCPUFeatures`. No SIF or fulltest ran. Issue [#75](https://github.com/Vbitz/neurocontainers-arm64/issues/75) records the upstream blocker and revisit condition.
 - `elastix` / `arm64`: no run; the pinned 5.1.0 release has no identified ARM64 Linux asset, and its source build requires ITK 5.3. Issue [#92](https://github.com/Vbitz/neurocontainers-arm64/issues/92) records the blocked-upstream preflight and revisit condition.
+- `emuses` / `arm64`: exact run `34737868781`, candidate `d5aaf861`, failed during pip-sync because the lock requires `triton==3.3.1`, which has no ARM64 distribution. SIF conversion and fulltest did not run. Issue [#94](https://github.com/Vbitz/neurocontainers-arm64/issues/94) records the blocked-upstream result and revisit condition.
+- `mricrogl` / `arm64`: no run; MRIcroGL 1.2.20211006 and its required libqt5pas 1.2.9 releases provide only x86_64/amd64 Linux assets. Issue [#97](https://github.com/Vbitz/neurocontainers-arm64/issues/97) records the blocked-prerequisite result and revisit condition.
 
 ## Integration
 
-- Accepted integration SHA: `88fb85137ac628e23542a923dfc005f8918bf306`
+- Accepted integration SHA: `c34a2103117399b31000f4d74bb378482e03f691`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly,
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, OpenRecon I2I,
   MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
-  SynthStrip, PALM, wfTFI, OpenRecon example, Bloch-Siegert, and ANTs integrations. The earlier SynthStrip exact candidate run
+  SynthStrip, PALM, wfTFI, OpenRecon example, Bloch-Siegert, ANTs, and sigviewer integrations. The earlier SynthStrip exact candidate run
   passed and was integrated by ancestry; its stale duplicate integration run
   also passed 70 tests and is bookkeeping only. PALM and ANTs are integrated;
-  the ANTs exact native ARM64 run passed 103 tests. Elastix is recorded as a
-  preflight upstream blocker.
+  the ANTs exact native ARM64 run passed 103 tests, and sigviewer passed 36
+  tests. Elastix is recorded as a preflight upstream blocker; emuses is blocked
+  by its locked Triton dependency and MRIcroGL by unavailable ARM64 binaries.
   CLEARSWI and Spinal Cord Toolbox are blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
@@ -1004,13 +1020,14 @@ submodule SHA.
 ## Next action
 
 Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed
-from accepted source `88fb8513` and now reports 87 of 247 declarations.
+from accepted source `c34a2103` and now reports 88 of 247 declarations.
 The exact native runs `34708194854` and `34708203749` verified
 `openreconexample` and `blochsiegertb1mapping`, respectively, and their
 independent declarations are integrated at `2884a0e6`. ANTs run
 `34706765954` passed 103 tests and its isolated commit is integrated at
-`88fb8513` without a duplicate native run. Elastix is recorded as blocked
-upstream, and the stale SynthStrip run `34703210392` needs bookkeeping only.
-There are no healthy or unaccounted running jobs; the next review is the
-remaining undeclared preflight inventory for a newly available upstream ARM64
-asset or documented portable build.
+`88fb8513` without a duplicate native run. Sigviewer run `34737708431` passed
+36 tests and is integrated at `c34a2103` without a duplicate native run.
+Elastix, emuses, and MRIcroGL are recorded as blocked with their revisit
+conditions. Code run `34738072738` remains the only healthy active build; the
+next action is to inspect its result, then continue the remaining undeclared
+inventory without rerunning verified recipes.
