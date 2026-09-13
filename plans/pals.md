@@ -32,7 +32,7 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/pa
 
 ## Implementation candidate — 2026-09-14
 
-Candidate [`d336f1b8ebc28f760c09ac8097a904d5b73d795f`](https://github.com/Vbitz/neurocontainers/commit/d336f1b8ebc28f760c09ac8097a904d5b73d795f) is based on accepted pin `88e6776aeb27f16ef43e015acb426b7e87fe0d1c` and is pushed on [`arm64/pals-miniconda-arm`](https://github.com/Vbitz/neurocontainers/tree/arm64/pals-miniconda-arm). It declares ARM64 and selects the official pinned Python 3.10 Miniconda installer for each architecture, preserving the existing x86_64 checksum and installation path. The ARM64 installer URL was confirmed reachable. Recipe validation and ARM64/x86_64 Dockerfile generation passed locally.
+Candidate [`f36e931661901018af12f9d5bc945d9aa660be76`](https://github.com/Vbitz/neurocontainers/commit/f36e931661901018af12f9d5bc945d9aa660be76) is based on accepted pin `88e6776aeb27f16ef43e015acb426b7e87fe0d1c` and is pushed on [`arm64/pals-miniconda-arm`](https://github.com/Vbitz/neurocontainers/tree/arm64/pals-miniconda-arm). It declares ARM64 and selects the official pinned Python 3.10 Miniconda installer for each architecture, preserving the existing x86_64 checksum and installation path. The ARM64 installer URL was confirmed reachable and its SHA256 is pinned. Recipe validation and ARM64/x86_64 Dockerfile generation passed locally.
 
 This is a native candidate, not a verification claim. Dispatch only when a runner slot opens; acceptance requires the ARM64 build, SIF conversion, deploy checks and the complete PALS runtime suite.
 
