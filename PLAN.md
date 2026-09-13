@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `7649fec` (PalmettoBUG blocker and NCT dispatch checkpoint)
-- Pinned submodule: `neurocontainers@c34a2103117399b31000f4d74bb378482e03f691` (sigviewer added after the ANTs, OpenRecon example, and Bloch-Siegert acceptances)
-- Submodule checkout: `arm64/networkcorrespondancetoolkit`, candidate `95e84c71ac36869953fa124f514f2a6673b96e44` from accepted source `c34a2103117399b31000f4d74bb378482e03f691`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while the integrated Code and NCT candidates run.
+- Top-level commit: `8da6e50` (accepted integrated Code ARM64 port)
+- Pinned submodule: `neurocontainers@15337e04a04ddf0303b610d304c350008df371ea` (Code added after the ANTs, OpenRecon example, Bloch-Siegert, and sigviewer acceptances)
+- Submodule checkout: `arm64/integrate-code`, clean at the accepted Code commit; origin `Vbitz/neurocontainers`. The failed NCT candidate remains unaccepted on its pushed branch `arm64/networkcorrespondancetoolkit`.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 88 of 247 declarations, refreshed from accepted source `c34a2103`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 89 of 247 declarations, refreshed from accepted source `15337e04`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Second pass active work
 
@@ -56,16 +56,16 @@ has no recipe evidence. Corrected attempt 2/6 is
 completed exact native ARM64 run [34738072738](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34738072738)
 with the candidate source checked out. Docker build, SIF conversion, deploy
 checks, and fulltest passed with 84 passed, 0 failed, and 0 skipped. Its
-candidate predates the accepted sigviewer pin, so the next action is to replay
-only the Code recipe commit onto accepted source `c34a2103`, validate both
-architectures, and dispatch that integrated SHA once before acceptance. The
-replay is `15337e04a04ddf0303b610d304c350008df371ea` on
-`arm64/integrate-code`; local validation and both architecture generations
-passed. Exact integrated dispatch
-[34738779168](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34738779168)
-is queued. Attempts: 3/6 including the metadata-only malformed-ref dispatch
-and the independent candidate run. Issue [#95](https://github.com/Vbitz/neurocontainers-arm64/issues/95)
-has the durable checkpoint.
+candidate predates the accepted sigviewer pin, so the recipe commit was
+replayed onto accepted source `c34a2103` as
+`15337e04a04ddf0303b610d304c350008df371ea` on `arm64/integrate-code`.
+Local validation and both architecture generations passed. Exact integrated
+dispatch [34738779168](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34738779168)
+passed with 84 passed, 0 failed, and 0 skipped. The integrated commit is now
+accepted at top-level commit `8da6e50`; issue
+[#95](https://github.com/Vbitz/neurocontainers-arm64/issues/95) has the durable
+verified result. Attempts: 3/6 including the metadata-only malformed-ref
+dispatch and the independent candidate run.
 
 `mricrogl` is blocked at preflight. The pinned 1.2.20211006 release provides
 only x86_64 Linux MRIcroGL archives, and its required libqt5pas 1.2.9 release
@@ -88,11 +88,11 @@ records the first error and revisit condition. Outcome: blocked-upstream;
 attempts: 1/6; no retry until an upstream-compatible PalmettoBUG dependency set
 is released.
 
-Code's successful run is recorded in issue [#95](https://github.com/Vbitz/neurocontainers-arm64/issues/95).
-The original malformed-ref dispatch remains metadata-only. PalmettoBUG run
-`34738541920` is recorded as blocked-upstream. The integrated Code run was the
-only active native build before the NCT dispatch; NCT run `34739158124` is now
-the second active native build. No unchanged successful recipe has been rerun.
+Code's successful integrated run is recorded in issue [#95](https://github.com/Vbitz/neurocontainers-arm64/issues/95),
+and the original malformed-ref dispatch remains metadata-only. PalmettoBUG
+run `34738541920` is recorded as blocked-upstream. NCT run `34739158124` is
+also recorded as blocked-upstream. No unchanged successful recipe has been
+rerun.
 
 `networkcorrespondancetoolkit` is the fifth-second-pass candidate. Investigation
 started at `2026-09-13T04:58:50Z`; deadline `2026-09-13T16:58:50Z`; attempt
@@ -101,9 +101,13 @@ started at `2026-09-13T04:58:50Z`; deadline `2026-09-13T16:58:50Z`; attempt
 Linux aarch64 Miniconda installer with its matching checksum while preserving
 the x86_64 path. Local validation and both architecture generations passed.
 Exact native dispatch [34739158124](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34739158124)
-is queued/running. The upstream NCT environment remains pinned to Linux x86
-package build strings such as `ld_impl_linux-64`; the build result will decide
-whether that lock is the actionable blocker.
+failed during Conda environment creation after the ARM64 platform was selected.
+The first actionable error is the upstream lock's x86 package build pin:
+`ca-certificates==2024.6.2=hbcca054_0` is unavailable for `linux-aarch64`.
+SIF conversion, deploy checks, and fulltest did not run. Issue
+[#99](https://github.com/Vbitz/neurocontainers-arm64/issues/99) records the
+log, artifact, attempt 1/6, and revisit condition: an upstream ARM64-compatible
+environment lock. No retry is planned.
 
 ## Latest checkpoint
 
@@ -1040,19 +1044,24 @@ submodule SHA.
 - `elastix` / `arm64`: no run; the pinned 5.1.0 release has no identified ARM64 Linux asset, and its source build requires ITK 5.3. Issue [#92](https://github.com/Vbitz/neurocontainers-arm64/issues/92) records the blocked-upstream preflight and revisit condition.
 - `emuses` / `arm64`: exact run `34737868781`, candidate `d5aaf861`, failed during pip-sync because the lock requires `triton==3.3.1`, which has no ARM64 distribution. SIF conversion and fulltest did not run. Issue [#94](https://github.com/Vbitz/neurocontainers-arm64/issues/94) records the blocked-upstream result and revisit condition.
 - `mricrogl` / `arm64`: no run; MRIcroGL 1.2.20211006 and its required libqt5pas 1.2.9 releases provide only x86_64/amd64 Linux assets. Issue [#97](https://github.com/Vbitz/neurocontainers-arm64/issues/97) records the blocked-prerequisite result and revisit condition.
+- `palmettobug` / `arm64`: exact run `34738541920`, candidate `0482f4d7`, failed during package installation because the pinned `PySide6==6.4.3` has no ARM64 distribution. Issue [#98](https://github.com/Vbitz/neurocontainers-arm64/issues/98) records the blocked-upstream result and revisit condition.
+- `networkcorrespondancetoolkit` / `arm64`: exact run `34739158124`, candidate `95e84c71`, failed during Conda environment creation because the upstream lock pins `ca-certificates==2024.6.2=hbcca054_0`, unavailable for `linux-aarch64`. Issue [#99](https://github.com/Vbitz/neurocontainers-arm64/issues/99) records the blocked-upstream result and revisit condition.
 
 ## Integration
 
-- Accepted integration SHA: `c34a2103117399b31000f4d74bb378482e03f691`
+- Accepted integration SHA: `15337e04a04ddf0303b610d304c350008df371ea`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly,
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, OpenRecon I2I,
   MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
-  SynthStrip, PALM, wfTFI, OpenRecon example, Bloch-Siegert, ANTs, and sigviewer integrations. The earlier SynthStrip exact candidate run
+  SynthStrip, PALM, wfTFI, OpenRecon example, Bloch-Siegert, ANTs, sigviewer,
+  and Code integrations. The earlier SynthStrip exact candidate run
   passed and was integrated by ancestry; its stale duplicate integration run
   also passed 70 tests and is bookkeeping only. PALM and ANTs are integrated;
   the ANTs exact native ARM64 run passed 103 tests, and sigviewer passed 36
-  tests. Elastix is recorded as a preflight upstream blocker; emuses is blocked
-  by its locked Triton dependency and MRIcroGL by unavailable ARM64 binaries.
+  tests. Code's integrated run passed 84 tests. Elastix is recorded as a
+  preflight upstream blocker; emuses is blocked by its locked Triton dependency,
+  MRIcroGL by unavailable ARM64 binaries, PalmettoBUG by its pinned PySide6
+  dependency, and NCT by its x86-specific Conda lock.
   CLEARSWI and Spinal Cord Toolbox are blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
@@ -1062,14 +1071,14 @@ submodule SHA.
 ## Next action
 
 Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed
-from accepted source `c34a2103` and now reports 88 of 247 declarations.
+from accepted source `15337e04` and now reports 89 of 247 declarations.
 The exact native runs `34708194854` and `34708203749` verified
 `openreconexample` and `blochsiegertb1mapping`, respectively, and their
 independent declarations are integrated at `2884a0e6`. ANTs run
 `34706765954` passed 103 tests and its isolated commit is integrated at
 `88fb8513` without a duplicate native run. Sigviewer run `34737708431` passed
 36 tests and is integrated at `c34a2103` without a duplicate native run.
-Elastix, emuses, and MRIcroGL are recorded as blocked with their revisit
-conditions. Code run `34738072738` remains the only healthy active build; the
-next action is to inspect its result, then continue the remaining undeclared
+Elastix, emuses, MRIcroGL, PalmettoBUG, and NCT are recorded as blocked with
+their revisit conditions. Code's integrated run `34738779168` passed and is
+accepted at `15337e04`. The next action is to continue the remaining undeclared
 inventory without rerunning verified recipes.
