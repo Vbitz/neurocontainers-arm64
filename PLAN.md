@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `ea29600` (BraTS ARM64 acceptance checkpoint)
+- Top-level commit: `9fd6965` (focused MNE integration dispatch correction)
 - Pinned submodule: `neurocontainers@7282a7d3` (BraTS added after PeTu, BrainLes AURORA, GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
-- Submodule checkout: `arm64/integrate-brats`, accepted commits `7093c8f2` and `7282a7d3` replayed from tested BraTS source onto accepted `6502b535`; origin `Vbitz/neurocontainers`. No active builds remain; the BrainLesion candidate is recorded as blocked. Failed Voreen and NCT candidates and the assessed preflight branches remain available.
+- Submodule checkout: `arm64/integrate-mneextended-trame`, with integrated candidate `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0` based on accepted `7282a7d3`; origin `Vbitz/neurocontainers`. MNE-Extended integration retry `34746559924` is active after one transient VS Code extension download failure. The BrainLesion candidate is recorded as blocked; failed Voreen and NCT candidates and assessed preflight branches remain available.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 96 of 247 declarations, refreshed from accepted source `7282a7d3`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -36,13 +36,18 @@ conversion, deploy checks, and fulltest with 111 passed, 0 failed, and 0
 skipped. Issue #71 records the verified candidate; serial replay onto the
 accepted pin produced integrated SHA `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`
 on `arm64/integrate-mneextended-trame`. Local validation and both architecture
-generations passed. Exact serial native ARM64 run
+generations passed. Raw-SHA serial runs
 [34746072594](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34746072594)
-was created at `2026-09-13T07:47:00Z` with a malformed SHA and failed before
-checkout; it is metadata-only. Corrected exact serial run
-[34746170718](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34746170718)
-was created at `2026-09-13T07:49:28Z` with `upload_image=false`; advance the
-top-level pin only after this exact integrated SHA passes.
+and [34746170718](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34746170718)
+were metadata-only source-resolution failures; the former used a malformed SHA
+and the latter used the exact SHA but GitHub still could not resolve the object.
+Fixed branch-ref run
+[34746330768](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34746330768)
+resolved the correct source and reached the build, where a transient VS Code
+extension HTTP 503 failed the job. One unchanged retry
+[34746559924](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34746559924)
+was dispatched at `2026-09-13T07:59:32Z`; advance the top-level pin only after
+this exact integrated SHA passes.
 
 `networkcorrespondancetoolkit` is the second focused follow-up. Its first
 candidate `5b1f1176992b3692e1187ef8223bde7a2e180803` removed only
