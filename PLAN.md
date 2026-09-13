@@ -2,6 +2,44 @@
 
 ## Active implementation checkpoint — 2026-09-14
 
+- Root acceptance commit: `5af67a2`; accepted submodule pin:
+  `9a5ae40c67667a088f50f0e9885833b983893f98` (FSL, 129/129 native checks).
+  Fork Actions remains disabled.
+- Active exact investigations:
+  - AFNI candidate `a51788253403b44c819d4273a134eedfe822aad3`, run
+    [34763111015](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763111015),
+    correcting the official ARM R-bundle extraction directory.
+  - Quickshear candidate `90a169d1cde93600af0da8d07986285e792fad32`, run
+    [34764132084](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34764132084),
+    extending only the existing CPU SynthStrip timeout.
+  - LST-AI candidate `0a3bd626eda2eb4629437503011c0e084b3d2a3b`, retry run
+    [34764566352](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34764566352),
+    after the first unchanged attempt hit a Zenodo HTTP 504 before staging.
+  - ROOT candidate `faa846d618b7ba7346ac768414ddd232fb33d6a8`, run
+    [34764723926](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34764723926),
+    replayed on the accepted FSL pin with the official ARM64 `6.30.02-conda`
+    base and the x86_64 Ubuntu counterpart.
+- Prepared candidates waiting for a free slot and replay onto the current pin:
+  - Surf Ice `579728b6` on `arm64/surfice-source`, documented Lazarus/Qt source
+    build with system Python 3.8 embedding.
+  - MRIcroGL `221ff266` on `arm64/mricrogl-source`, documented Lazarus/Qt
+    NoPython source build with native dcm2niix.
+- Recent outcomes requiring bookkeeping: DSI Studio run
+  [34763556926](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763556926)
+  built and converted but failed 16/83 runtime checks with the CPU ARM archive;
+  Blender run
+  [34763788910](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763788910)
+  reached the native dependency build but GMP download timed out. Neither is
+  accepted; preserve their branches and do not repeat without a concrete
+  recipe-level hypothesis or the permitted transient retry.
+- Current local submodule branch: `arm64/root-fsl` at `faa846d6`; the root
+  pointer is intentionally unstaged while remote runs execute. Next actions:
+  reconcile AFNI, Quickshear, LST-AI and ROOT; replay any passing candidate
+  serially from the accepted pin; then dispatch Surf Ice, MRIcroGL, or the next
+  feasible plan and keep the issue/plan checkpoints synchronized.
+
+## Active implementation checkpoint — 2026-09-14
+
 - Root commit: `91b0dc4` (`neurocontainers` is intentionally checked out on a
   candidate branch; do not stage that pointer until a candidate is accepted).
 - Accepted submodule pin: `6103a923f43106c039ddf22a59c99c25352e459b`.
