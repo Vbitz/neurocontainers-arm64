@@ -2537,3 +2537,8 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 
 - Syncro checkout-only run [34786862612](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34786862612) used a mistyped SHA and did not execute a build. The exact pushed candidate `7d9d2a445467b75e4b881c27aae4f049fdac5050` is running in [34786938986](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34786938986) for the SciPy index fix.
 - Active native jobs remain CLEARSWI [34785901800](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785901800), MIMoSA [34783066918](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783066918), VesselBoost [34783650179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783650179), and Syncro [34786938986](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34786938986).
+
+## Active implementation checkpoint — 2026-09-14 (CLEARSWI replay prepared after QuPath)
+
+- CLEARSWI’s two intended commits were replayed onto the accepted QuPath pin `c98a89ee6799cd32b6a2247554cf8447a37f24aa` as `b878ef4914bed658c8df82cf8d418de21d13315f` on `arm64/clearswi-qupath`. The branch is pushed; validation and ARM64/x86_64 Dockerfile generation pass.
+- The active SoopCT descendant run [34785901800](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785901800) remains in progress. Dispatch `b878ef49` only after reviewing that result and an ARM64 slot opens; acceptance requires native verification of this exact QuPath descendant.
