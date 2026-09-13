@@ -61,16 +61,15 @@ were queued.
 
 ## Implementation goal checkpoint — 2026-09-13
 
-The current top-level checkpoint is `816626e`, pinning the accepted submodule
-source `c38fa11e2377ad2a9775fdd5fc3993c8b44155de`. Modsort is integrated and
-proven by native run [34751788247](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751788247)
-with 8 passed, 0 failed and 0 skipped.
+The current top-level checkpoint is `cb94653`, pinning the accepted submodule
+source `815cf1b3e10b0b4b6003dc728f4300c54ccc3116`. Modsort remains integrated
+and proven by native run [34751788247](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751788247)
+with 8 passed, 0 failed and 0 skipped. SynthSeg is now also accepted after
+integrated native run [34753249262](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753249262)
+passed build, SIF conversion, deploy checks and all 18 fulltest checks.
 
 The following candidates are being tested from exact immutable submodule SHAs:
 
-- SynthSeg integrated onto the accepted pin at `815cf1b3e10b0b4b6003dc728f4300c54ccc3116`,
-  run [34753249262](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753249262),
-  in progress.
 - DeepLabCut integrated onto the accepted pin at `e39f1c055f4c4d77faa5d024c719ca36f7727797`,
   run [34753282289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753282289),
   in progress.
@@ -86,9 +85,9 @@ The following candidates are being tested from exact immutable submodule SHAs:
   omitted from the current upstream archive; issue [#195](https://github.com/Vbitz/neurocontainers-arm64/issues/195#issuecomment-5652878390)
   records the bounded retry hypothesis.
 
-SynthSeg and DeepLabCut each passed an earlier candidate run, but those
-candidates were based on the previous accepted pin, so they require the exact
-integrated runs above before the top-level pointer advances. Convert3D reached
+DeepLabCut passed an earlier candidate run, but that candidate was based on the
+previous accepted pin, so it requires the exact integrated run above before the
+top-level pointer advances. Convert3D reached
 the native build but is blocked because Debian Bookworm has no ARM64
 `libinsighttoolkit5-dev` package and building ITK itself exceeds recipe scope;
 run [34752548314](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34752548314)
@@ -96,12 +95,12 @@ and issue [#133](https://github.com/Vbitz/neurocontainers-arm64/issues/133) reco
 that outcome. LCModel is blocked at source audit because the public source
 contains only the core executable while the recipe requires unavailable
 ancillary tools; issue [#205](https://github.com/Vbitz/neurocontainers-arm64/issues/205)
-records the source-completeness blocker. All four runner slots are occupied.
-TeraStitcher is prepared and pushed on branch `arm64/terastitcher` at candidate
-`ec7503cb8ee31f9d40ff3097adfac895bcfbb4ec`; its recipe validation and both
-architecture generations pass. It is waiting for a slot before dispatch.
+records the source-completeness blocker. TeraStitcher is running from candidate
+`ec7503cb8ee31f9d40ff3097adfac895bcfbb4ec`, based on the prior accepted pin, in
+run [34753895323](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753895323).
 When a run completes, record its exact source and test counts, then integrate
-successful candidates serially from the latest accepted pin; retain failed
+successful candidates serially from the latest accepted pin (currently
+`815cf1b3e10b0b4b6003dc728f4300c54ccc3116`); retain failed
 branches and record the first actionable error before selecting the next plan.
 
 ## Remaining unsupported inventory audit
