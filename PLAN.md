@@ -27,6 +27,26 @@ unsupported build was queued. The final missing durable comment, for
 `openadscpu` / issue [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66),
 was added during this audit.
 
+## Full unsupported inventory investigation
+
+The prior audit is being followed by an explicit recipe-by-recipe pass under
+the current accepted source, rather than counting the audit alone as completed
+work. Existing blocker comments were retained where the affected recipe is
+unchanged from its recorded baseline, avoiding duplicate builds for fixed
+x86_64-only assets, unavailable image manifests, GPU or license prerequisites,
+and native dependency blockers already demonstrated by an exact ARM64 run.
+
+The first new recipe-level candidate is `neurocommand` 1.0.0. Investigation
+started 2026-09-13T09:23:22Z; deadline 2026-09-13T21:23:22Z; attempt 1/6. The
+candidate `438050de3f8e251edf8a6f8ae454e15731e15984` on
+`arm64/neurocommand` preserves the amd64 Apptainer package and builds upstream
+Apptainer 1.4.4 from its release source with the official Go 1.23.6 ARM64
+toolchain on `aarch64`. Validation and both Dockerfile generations passed. The
+exact native run is [34749429556](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34749429556),
+currently queued. Issue [#158](https://github.com/Vbitz/neurocontainers-arm64/issues/158)
+contains the in-progress hypothesis and checkpoint. The local checkout is
+back on the accepted source while the immutable candidate runs.
+
 ## Focused follow-up outcomes
 
 The user requested bounded follow-up on promising prior failures. The first
