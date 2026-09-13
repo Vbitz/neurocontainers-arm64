@@ -58,3 +58,9 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
   [run 34774135689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774135689),
   attempt 3/6. If this exposes another recipe-level dependency, it remains
   within the bounded investigation; stop on a deep upstream build failure.
+
+## Implementation outcome — bounded investigation checkpoint — 2026-09-14
+
+- Run [34774135689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774135689) reached the bundled Flex configure stage and failed because `autopoint` was absent: `Can't exec "autopoint"` followed by `autoreconf: error: autopoint failed`. This is an ordinary recipe dependency omission, but it was the sixth native build attempt when counting the earlier source candidates and the permitted GMP retry.
+- Candidate `171bd9b6c54a199718a24f064f5a2809df1fa6d` on `arm64/blender-integrated` adds Ubuntu `autopoint`, passes recipe validation and both architecture generations, and is pushed for a future authorized investigation window. It was not dispatched because the per-recipe six-attempt and twelve-hour limits are exhausted. A separate accidental dispatch with a mistyped ref was canceled before checkout and produced no evidence.
+- Concrete revisit condition: a new authorized investigation window or changed build environment permits testing the prepared `autopoint` candidate. Preserve the branch and do not claim Blender ARM64 support until an exact native candidate passes all gates.

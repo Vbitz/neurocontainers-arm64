@@ -24,6 +24,13 @@
   [#195](https://github.com/Vbitz/neurocontainers-arm64/issues/195) has the
   retry evidence. The run is queued/in progress; EMUSES remains the next
   queued candidate after another slot opens.
+- Blender run [34774135689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774135689)
+  reached the bundled Flex configure and failed on missing `autopoint`. The
+  six native attempt and twelve-hour investigation budgets are exhausted, so
+  no seventh run will be dispatched. Prepared candidate
+  `171bd9b6c54a199718a24f064f5a2809df1fa6d` adds the package and remains
+  pushed on `arm64/blender-integrated` for a future authorized window. The
+  local submodule checkout is that branch at this candidate.
 
 - Top-level parent commit: `6da579a`; accepted submodule pin is now
   `80a84327a6659b0ac79a44f2c1853faa9eb84f4b` (PyDeface integrated on BIDSvue;
