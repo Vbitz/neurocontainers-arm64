@@ -5,7 +5,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit before this checkpoint: `aabbd05` (inventory dispatch outcomes)
+- Top-level commit before this checkpoint: `da81507` (accepted LAYNII pin)
 - Pinned submodule: `neurocontainers@457c5a31b9830587801a06e7d6f81f18293135e8` (LAYNII added after MNE-Extended)
 - Submodule checkout: `arm64/integrate-mneextended-trame`, accepted pin `457c5a31b9830587801a06e7d6f81f18293135e8`; MNE-Extended run `34746559924` and LAYNII run `34749541502` passed. BrainLesion run `34747574400` is recorded as blocked-upstream after its bounded toolchain follow-up. NeuroCommand is recorded as blocked-infrastructure after two dispatch failures; NCT and the earlier BrainLesion candidate are blocked; failed Voreen candidates and assessed preflight branches remain available. Origin `Vbitz/neurocontainers`.
 - Fork Actions: disabled (`enabled: false`)
