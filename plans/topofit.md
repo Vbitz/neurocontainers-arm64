@@ -39,3 +39,9 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/to
 ## Decision boundary
 
 A dependency/source-build investigation remains, rather than an established universal ARM incompatibility. Revisit when the exact native package set or documented source configuration is available; record any first actionable failure. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation attempt — 2026-09-14
+
+Upstream Cortech's v0.1 documentation provides a native source build through Conan and Meson, and the released Conan profile can be selected for ARM64. Candidate [`383a955c977619a8c64d2e2340ff724f551fe8f9`](https://github.com/Vbitz/neurocontainers/commit/383a955c977619a8c64d2e2340ff724f551fe8f9) is pushed on [`arm64/topofit-cortech-arm`](https://github.com/Vbitz/neurocontainers/tree/arm64/topofit-cortech-arm), based on accepted submodule pin `685f5f4d9636d34aa8237646535d2a7dfc3a525d`.
+
+The candidate declares `aarch64`, uses the multi-architecture Ubuntu 24.04 base and official ARM64 CPU torch 2.6.0, builds Cortech v0.1 from its source archive with Conan's native `armv8` profile, and installs the unchanged pure-Python BrainNet and BrainSynth wheels. The x86_64 CUDA base and Cortech wheel path are preserved. The fulltest retains the CUDA 11.8 assertion for x86_64 and checks the ARM64 CPU runtime separately while exercising the same geometry and real CPU TopoFit workflows. Recipe validation and ARM64/x86_64 Dockerfile generation passed locally. Native verification is queued behind the four active runs; this is attempt 1/6.
