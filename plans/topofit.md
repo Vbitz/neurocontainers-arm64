@@ -59,3 +59,12 @@ generations, and is pushed on the same integrated branch. Exact retry [run
 34778828330](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34778828330)
 is attempt 2/6. The top-level pin remains unchanged pending native build, SIF,
 deploy and fulltest evidence.
+
+Retry 34778828330 passed the Ninja check but failed at Cortech's Meson
+configure because `pkg-config` was absent while locating CGAL. Candidate
+[`88e6776aeb27f16ef43e015acb426b7e87fe0d1c`](https://github.com/Vbitz/neurocontainers/commit/88e6776aeb27f16ef43e015acb426b7e87fe0d1c)
+adds that ordinary Debian prerequisite, passes validation and both
+architectures' generation, and is dispatched in exact [run
+34779394328](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34779394328),
+attempt 3/6. This is the second direct recipe dependency fix; stop if the next
+failure is an upstream native dependency issue.
