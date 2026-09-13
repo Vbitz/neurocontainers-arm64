@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `e5aec43` (MNE-Extended ARM64 acceptance)
+- Top-level commit: `57cead5` (focused ARM64 outcomes checkpoint)
 - Pinned submodule: `neurocontainers@7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0` (MNE-Extended added after BraTS, PeTu, BrainLes AURORA, GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
-- Submodule checkout: `arm64/integrate-mneextended-trame`, accepted MNE-Extended integration run `34746559924` passed after one transient VS Code extension retry; origin `Vbitz/neurocontainers`. No active builds remain. The BrainLesion candidate is recorded as blocked; failed Voreen and NCT candidates and assessed preflight branches remain available.
+- Submodule checkout: `arm64/brainlesion-build-deps`, candidate `9d8d71cbff92fcce2e79ad0c6d464f494427376e` based on accepted `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`; native run `34747415296` is active. Origin `Vbitz/neurocontainers`. MNE-Extended is accepted; NCT and the earlier BrainLesion candidate are recorded as blocked; failed Voreen candidates and assessed preflight branches remain available.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 97 of 247 declarations, refreshed from accepted source `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -68,6 +68,17 @@ before SIF conversion because the ARM64 Qt stack required unavailable Wayland
 1.26 or OpenSSL newer than the locked 3.0.13. NCT is blocked-upstream after
 four real attempts total; issue #99 records the three focused follow-ups and
 the revisit condition. No active builds remain.
+
+BrainLesion received one additional bounded recipe-level follow-up from the
+current accepted pin. Candidate `9d8d71cbff92fcce2e79ad0c6d464f494427376e` on
+`arm64/brainlesion-build-deps` adds only the Ubuntu `g++` package to address the
+previous `antspyx==0.6.3` source fallback error where CMake could not find
+`CXX=g++`; ARM64 and x86_64 validation and Dockerfile generation passed. Native
+run [34747415296](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34747415296)
+was dispatched at `2026-09-13T08:20:00Z`; issue #247 records the hypothesis,
+start/deadline, and bounded attempt. Classify the first post-compiler error
+before any further edit; stop if it requires ANTs or another upstream native
+dependency port.
 
 ## Second pass active work
 
