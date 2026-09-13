@@ -5,7 +5,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `2555722` (focused ARM64 outcomes checkpoint)
+- Top-level commit: `37be92c` (focused ARM64 outcomes checkpoint)
 - Pinned submodule: `neurocontainers@7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0` (MNE-Extended added after BraTS, PeTu, BrainLes AURORA, GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
 - Submodule checkout: `arm64/integrate-mneextended-trame`, accepted pin `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`; MNE-Extended run `34746559924` passed. BrainLesion run `34747574400` is recorded as blocked-upstream after its bounded toolchain follow-up. Origin `Vbitz/neurocontainers`. NCT and the earlier BrainLesion candidate are blocked; failed Voreen candidates and assessed preflight branches remain available.
 - Fork Actions: disabled (`enabled: false`)
@@ -48,7 +48,7 @@ extension HTTP 503 failed the job. One unchanged retry
 [34746559924](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34746559924)
 was dispatched at `2026-09-13T07:59:32Z` and passed with 111 passed, 0 failed,
 and 0 skipped. The top-level pointer was advanced to this exact integrated SHA
-in commit `e5aec43`; coverage issue #2 was refreshed from it and now reports
+in commit `37be92c`; coverage issue #2 was refreshed from it and now reports
 97 of 247 declarations.
 
 `networkcorrespondancetoolkit` is the second focused follow-up. Its first
