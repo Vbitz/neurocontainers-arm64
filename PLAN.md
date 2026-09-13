@@ -41,6 +41,12 @@ DSI Studio (released ARM asset requiring a version mapping/update), LCModel
 (source build), and SynthSeg (documented CPU path and ARM TensorFlow wheels).
 Check each existing investigation budget and issue before any new attempt.
 The current request ends with researched plans; no new build queue is active.
+Research files were committed and pushed as `aade145`. Essential corrections
+were mirrored in [coverage issue #2](https://github.com/Vbitz/neurocontainers-arm64/issues/2#issuecomment-5652645856)
+and the existing modsort, DSI Studio, LCModel, FSL, DeepLabCut, LSTAI, SynthSeg
+and TopoFit issues. Fork Actions remains disabled. Inventory, source-reference
+presence, local links and unchanged accepted pin were checked; all 148 plans
+are accounted for. No pending local recipe edits or new runner jobs remain.
 
 ## Remaining unsupported inventory audit
 
