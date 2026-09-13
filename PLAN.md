@@ -2,6 +2,38 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after mritools bootstrap retry and CLEARSWI preparation
+
+- Root commit: `edce8c3`; accepted submodule pin remains
+  `ba7af5842b2c41dbc98ffd8d1e25431acf19a7db` (BIDSvue on top of AFNI,
+  5/5 native fulltests). Fork Actions remains disabled.
+- Active exact investigations:
+  - ITK-SNAP `7ceabea5d97151a98cf6655055729804870b33ee`, run
+    [34769119103](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769119103),
+    attempt 2/6.
+  - PyDeface `90ee2948253826e0413ca90be894f381d10009eb`, run
+    [34769469302](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769469302),
+    attempt 4/6.
+  - MIMoSA `1f1fa6ea2942b55d1c3ec01e615d38c2b777babc`, run
+    [34770095073](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770095073),
+    attempt 2/6, selecting the verified ARM FSL 6.0.7.22 route.
+  - mritools retry `bec588b5d45ad87e68ab5ccb4a19ea8ab969975a`, run
+    [34770328188](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770328188),
+    attempt 2/6, suppressing CompileMRI's incomplete-project auto-precompile.
+- mritools attempt 1 reached Julia/CompileMRI dependency setup on native ARM64
+  and stopped at the App bootstrap ordering error; issue #156 records the
+  first actionable error and retry hypothesis.
+- Prepared CLEARSWI `cf9a122bc839f0bde01d013bdf17ef7a915541e7` on
+  `arm64/clearswi-bids`, based on the accepted pin. It adds the official
+  Julia Linux AArch64 archive and skips only the failing custom PackageCompiler
+  sysimage on ARM64; local validation and both architecture generations pass.
+  Dispatch after the next runner slot opens.
+- Local submodule checkout is `arm64/mritools-bids` at
+  `bec588b5d45ad87e68ab5ccb4a19ea8ab969975a`; the CLEARSWI candidate remains
+  pushed on its separate branch.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after MIMoSA FSL retry and mritools dispatch
 
 - Root commit: `ded33f4`; accepted submodule pin remains
