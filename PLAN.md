@@ -2556,3 +2556,8 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 - The exact MIMoSA QuPath descendant is ready for native dispatch when the current runner slot is confirmed free. Acceptance requires this exact candidate’s full native gates.
 
 - MIMoSA exact candidate `2c0198a51f419c07267b00ea34f408f29e7e59f5` is dispatched in [run 34787670497](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34787670497). Active jobs are CLEARSWI [34785901800](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785901800), VesselBoost [34783650179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783650179), Syncro [34787372368](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34787372368), and MIMoSA [34787670497](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34787670497).
+
+## Active implementation checkpoint — 2026-09-14 (CLEARSWI older replay passed)
+
+- CLEARSWI SoopCT-based replay [34785901800](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785901800) passed native build/SIF/deploy and 67/67 fulltests with zero failures and zero skips. The runner’s exact test count is 67 for this fulltest revision.
+- QuPath-based descendant `b878ef4914bed658c8df82cf8d418de21d13315f` is pushed and locally validated. Dispatch it in the newly free slot; acceptance requires this exact newest-pin run.
