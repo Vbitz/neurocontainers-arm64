@@ -37,13 +37,15 @@ result before considering another recipe.
 candidate `5b1f1176992b3692e1187ef8223bde7a2e180803` removed only
 ARM-incompatible Conda build hashes and the x86-only `ld_impl_linux-64` line;
 native run [34745548264](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745548264)
-then exposed the pinned pip VTK wheel as unavailable on ARM64. The final
-targeted candidate `970032878c982eedc289d0f35180d4e8b21589a6` on
+then exposed the pinned pip VTK wheel as unavailable on ARM64, and the next
+candidate reached a VTK/libgcc version conflict. The final targeted candidate
+`1de789e513cf9a1b26acda0cce6fb6acbda44662` on
 `arm64/networkcorrespondancetoolkit-arm64-lock` keeps VTK 9.3.0 but selects its
-Conda-forge ARM64 package on that architecture. Recipe validation and
-ARM64/x86_64 Dockerfile generation passed. Exact native ARM64 run
-[34745756464](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745756464)
-was created at `2026-09-13T07:39:05Z` with `upload_image=false`; it is active
+Conda-forge ARM64 package on that architecture and unlocks the three compiler
+runtime pins that conflict with VTK's `libgcc-ng>=12` requirement. Recipe
+validation and ARM64/x86_64 Dockerfile generation passed. Exact native ARM64
+run [34745899127](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745899127)
+was created at `2026-09-13T07:42:35Z` with `upload_image=false`; it is active
 alongside MNE-Extended run [34745332614](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745332614).
 
 ## Second pass active work
