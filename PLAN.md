@@ -47,6 +47,16 @@ currently queued. Issue [#158](https://github.com/Vbitz/neurocontainers-arm64/is
 contains the in-progress hypothesis and checkpoint. The local checkout is
 back on the accepted source while the immutable candidate runs.
 
+The first `neurocommand` dispatch [34749429556](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34749429556)
+ended in workflow `startup_failure` before checkout. The one unchanged retry
+then returned HTTP 500 from the workflow dispatch API and created no run. Issue
+[#158](https://github.com/Vbitz/neurocontainers-arm64/issues/158) records the
+candidate as `blocked-infrastructure`; its source branch remains available and
+must not be treated as verified. The LAYNII dispatch initially returned HTTP
+500 as well, but its permitted unchanged retry succeeded as
+[34749541502](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34749541502)
+and is now running the native ARM64 deploy checks and fulltest.
+
 ## Focused follow-up outcomes
 
 The user requested bounded follow-up on promising prior failures. The first
