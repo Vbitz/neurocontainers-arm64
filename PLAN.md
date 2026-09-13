@@ -5,12 +5,29 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `ad0720d` (ANTs ARM64 recipe accepted; this PLAN update is the next checkpoint)
+- Top-level commit: `a687cb7` (ANTs ARM64 recipe accepted; this PLAN update is the next checkpoint)
 - Pinned submodule: `neurocontainers@88fb85137ac628e23542a923dfc005f8918bf306` (ANTs, OpenRecon example, and Bloch-Siegert accepted in this checkpoint)
-- Submodule checkout: `arm64/integrate-ants-openrecon`, integrated candidate `88fb85137ac628e23542a923dfc005f8918bf306` from accepted source `2884a0e6a7d23e43fc51f58e32302ecc3689c27e`; origin `Vbitz/neurocontainers`
+- Submodule checkout: `arm64/sigviewer`, candidate `c34a2103117399b31000f4d74bb378482e03f691` from accepted source `88fb85137ac628e23542a923dfc005f8918bf306`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while this candidate runs.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 87 of 247 declarations, refreshed from accepted source `88fb8513`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+
+## Second pass active work
+
+The user-directed second pass is assessing the 160 recipes without ARM64
+declarations. It began with `sigviewer`, which has a published Debian bullseye
+ARM64 package at the pinned `0.6.4-1` version. Investigation started at
+`2026-09-13T04:19:41Z`; deadline `2026-09-13T16:19:41Z`; attempt 1/6.
+Candidate `c34a2103117399b31000f4d74bb378482e03f691` on branch
+`arm64/sigviewer` adds `aarch64`, tracks Debian amd64 and arm64 package indexes
+independently, and makes the libbiosig fulltest lookup multiarch-safe. Local
+validation and both architecture generations passed. Exact native dispatch is
+run [34737708431](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34737708431)
+with build job [103671946506](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34737708431/job/103671946506),
+currently queued; the workflow source must be checked against the candidate SHA
+before its result is accepted. Next action: monitor this run, record its issue
+and test evidence, then integrate or classify the failure before selecting the
+next undeclared recipe. Do not duplicate any earlier verified recipe run.
 
 ## Latest checkpoint
 
