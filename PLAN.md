@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `7bb4561` (Lipsia ARM64 acceptance checkpoint)
-- Pinned submodule: `neurocontainers@dc20187f` (Lipsia added after BART and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
-- Submodule checkout: `arm64/petu`, candidate `2cb7b104d99cfe2505e20882dd606f4261499cf3` from accepted source `dc20187fa9f4accf0193813fd6c6cbd17d1b2809`; origin `Vbitz/neurocontainers`. Active LQT, GlioMODA, and PeTu candidates and failed Voreen and NCT candidates remain on their pushed branches.
+- Top-level commit: `df44690` (LQT ARM64 acceptance checkpoint)
+- Pinned submodule: `neurocontainers@70663ade` (LQT added after Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
+- Submodule checkout: `arm64/integrate-lqt`, accepted candidate `70663ade` replayed from tested `afc5c52d0d5d32e3d02c3fa1a94562274016f803` onto accepted source `dc20187fa9f4accf0193813fd6c6cbd17d1b2809`; origin `Vbitz/neurocontainers`. Active GlioMODA, PeTu, and BrainLes AURORA candidates and failed Voreen and NCT candidates remain on their pushed branches.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 91 of 247 declarations, refreshed from accepted source `dc20187f`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -369,7 +369,7 @@ ancestry in this checkpoint.
 
 ## Queue
 
-The accepted source contains 156 undeclared recipes after the Lipsia
+The accepted source contains 155 undeclared recipes after the LQT
 integration. A full preflight screen on 2026-09-13 found LQT, GlioMODA, Lipsia,
 BART, PeTu, and BrainLes AURORA as bounded source candidates; the remaining
 inventory falls into
@@ -1113,6 +1113,7 @@ submodule SHA.
 - `ants` / `arm64`: run `34706765954`, tested source `f48620a9`, 103 passed, 0 failed, 0 skipped; issue [#93](https://github.com/Vbitz/neurocontainers-arm64/issues/93). Candidate is integrated at `88fb8513` without a duplicate native run.
 - `sigviewer` / `arm64`: run `34737708431`, tested source `c34a2103`, 36 passed, 0 failed, 0 skipped; issue [#96](https://github.com/Vbitz/neurocontainers-arm64/issues/96). Candidate is integrated at `c34a2103` without a duplicate native run.
 - `lipsia` / `arm64`: run `34740665171`, tested source `01ea960b`, 101 passed, 0 failed, 0 skipped; issue [#181](https://github.com/Vbitz/neurocontainers-arm64/issues/181). Candidate is integrated at `dc20187f` without a duplicate native run.
+- `lesionquantificationtoolkit` / `arm64`: run `34740546339`, tested source `afc5c52d`, 101 passed, 0 failed, 0 skipped; issue [#182](https://github.com/Vbitz/neurocontainers-arm64/issues/182). Candidate is integrated at `70663ade` without a duplicate native run.
 
 ## Blocked or failed results
 
@@ -1131,21 +1132,20 @@ submodule SHA.
 - `networkcorrespondancetoolkit` / `arm64`: exact run `34739158124`, candidate `95e84c71`, failed during Conda environment creation because the upstream lock pins `ca-certificates==2024.6.2=hbcca054_0`, unavailable for `linux-aarch64`. Issue [#99](https://github.com/Vbitz/neurocontainers-arm64/issues/99) records the blocked-upstream result and revisit condition.
 - `voreen` / `arm64`: exact runs `34739742820` and `34739991537`, candidates `bb08bc1c` and `151c8c5d`, both stopped in native ARM64 CMake configuration before compilation. Voreen 5.3.0's bundled `FindBoostVRN.cmake` requests `math_c99l` and `math_tr1l`, unavailable from Ubuntu 24.04's ARM64 Boost 1.83.0 packages; package mode and module mode both fail. Issue [#117](https://github.com/Vbitz/neurocontainers-arm64/issues/117) records the blocked-upstream result and revisit condition.
 - `bart` / `arm64`: exact dispatch `34740461864`, candidate `e3f721a7`, passed all gates with 117 passed, 0 failed, and 0 skipped. The ARM64 path uses upstream BART's `CUDA=0` CPU build; the x86_64 CUDA path is preserved. Issue [#180](https://github.com/Vbitz/neurocontainers-arm64/issues/180) records the verified result; the candidate is accepted at `e3f721a7`.
-- `lesionquantificationtoolkit` / `arm64`: exact dispatch `34740546339`, candidate `afc5c52d`, remains active after local validation and both architecture generations passed. The change only declares ARM64 for the existing Ubuntu 24.04 R source build.
 
 ## Integration
 
-- Accepted integration SHA: `dc20187fa9f4accf0193813fd6c6cbd17d1b2809`
+- Accepted integration SHA: `70663adeaca16eae8c1e0b79fef1c3c0c3cecf86`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly,
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, OpenRecon I2I,
   MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
   SynthStrip, PALM, wfTFI, OpenRecon example, Bloch-Siegert, ANTs, sigviewer,
-  and Code, BART, and Lipsia integrations. The earlier SynthStrip exact candidate run
+  and Code, BART, Lipsia, and LQT integrations. The earlier SynthStrip exact candidate run
   passed and was integrated by ancestry; its stale duplicate integration run
   also passed 70 tests and is bookkeeping only. PALM and ANTs are integrated;
   the ANTs exact native ARM64 run passed 103 tests, and sigviewer passed 36
   tests. Code's integrated run passed 84 tests, BART passed 117 tests, and
-  Lipsia passed 101 tests. Elastix is recorded as a
+  Lipsia and LQT each passed 101 tests. Elastix is recorded as a
   preflight upstream blocker; emuses is blocked by its locked Triton dependency,
   MRIcroGL by unavailable ARM64 binaries, PalmettoBUG by its pinned PySide6
   dependency, and NCT by its x86-specific Conda lock.
@@ -1172,6 +1172,7 @@ are active. BART run `34740461864` and Lipsia run `34740665171` passed and are
 accepted.
 Code's
 integrated run `34738779168` passed and is accepted at `15337e04`. Lipsia is
-integrated at `dc20187f` without a duplicate native run. The next action is to
+integrated at `dc20187f` without a duplicate native run. LQT is integrated at
+`70663ade` without a duplicate native run. The next action is to
 monitor the four active native builds and continue the remaining undeclared inventory
 without rerunning verified recipes.
