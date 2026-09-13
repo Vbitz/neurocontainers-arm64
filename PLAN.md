@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `fb2fd34` (Code result and integrated verification checkpoint)
+- Top-level commit: `7649fec` (PalmettoBUG blocker and NCT dispatch checkpoint)
 - Pinned submodule: `neurocontainers@c34a2103117399b31000f4d74bb378482e03f691` (sigviewer added after the ANTs, OpenRecon example, and Bloch-Siegert acceptances)
-- Submodule checkout: `arm64/integrate-code`, candidate `15337e04a04ddf0303b610d304c350008df371ea` from accepted source `c34a2103117399b31000f4d74bb378482e03f691`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while the integrated Code candidate runs.
+- Submodule checkout: `arm64/networkcorrespondancetoolkit`, candidate `95e84c71ac36869953fa124f514f2a6673b96e44` from accepted source `c34a2103117399b31000f4d74bb378482e03f691`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while the integrated Code and NCT candidates run.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 88 of 247 declarations, refreshed from accepted source `c34a2103`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -90,8 +90,20 @@ is released.
 
 Code's successful run is recorded in issue [#95](https://github.com/Vbitz/neurocontainers-arm64/issues/95).
 The original malformed-ref dispatch remains metadata-only. PalmettoBUG run
-`34738541920` is recorded as blocked-upstream. The integrated Code run is the
-only active native build; no unchanged successful recipe has been rerun.
+`34738541920` is recorded as blocked-upstream. The integrated Code run was the
+only active native build before the NCT dispatch; NCT run `34739158124` is now
+the second active native build. No unchanged successful recipe has been rerun.
+
+`networkcorrespondancetoolkit` is the fifth-second-pass candidate. Investigation
+started at `2026-09-13T04:58:50Z`; deadline `2026-09-13T16:58:50Z`; attempt
+1/6. Candidate `95e84c71ac36869953fa124f514f2a6673b96e44` on branch
+`arm64/networkcorrespondancetoolkit` adds `aarch64` and selects the official
+Linux aarch64 Miniconda installer with its matching checksum while preserving
+the x86_64 path. Local validation and both architecture generations passed.
+Exact native dispatch [34739158124](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34739158124)
+is queued/running. The upstream NCT environment remains pinned to Linux x86
+package build strings such as `ld_impl_linux-64`; the build result will decide
+whether that lock is the actionable blocker.
 
 ## Latest checkpoint
 
