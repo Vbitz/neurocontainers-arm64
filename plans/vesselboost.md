@@ -33,3 +33,9 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/ve
 ## Decision boundary
 
 A dependency/source-build investigation remains, rather than an established universal ARM incompatibility. Revisit when the exact native package set or documented source configuration is available; record any first actionable failure. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation attempt — 2026-09-14
+
+Candidate `0e80eb6d366ef992c52e3b6777af599ae5dc004e` is pushed on `arm64/vesselboost-cpu-arm`, based on accepted pin `8bcc3e3d`. It declares ARM64, selects the official Python 3.11 multi-architecture base and CPU PyTorch 2.5.0 stack, and builds the pinned antspyx 0.4.2 source distribution with ordinary native prerequisites. The x86 CUDA path remains unchanged. Local validation and both architecture generations pass.
+
+The exact candidate is in native run [34778576148](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34778576148), attempt 1/6, with investigation window `2026-09-13T19:43:51Z`–`2026-09-14T07:43:51Z`. Acceptance requires the native build, SIF conversion, deploy checks and complete VesselBoost fulltest.
