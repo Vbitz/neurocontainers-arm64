@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `778609b` (LQT and Lipsia dispatch checkpoint; BART acceptance pending)
-- Pinned submodule: `neurocontainers@15337e04a04ddf0303b610d304c350008df371ea` (Code added after the ANTs, OpenRecon example, Bloch-Siegert, and sigviewer acceptances)
+- Top-level commit: `80dcd50` (BART ARM64 acceptance checkpoint)
+- Pinned submodule: `neurocontainers@e3f721a72f6e1b1f23d5962118f2873abbcdd203` (BART added after the ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
 - Submodule checkout: `arm64/bart`, tested candidate `e3f721a72f6e1b1f23d5962118f2873abbcdd203` from accepted source `15337e04a04ddf0303b610d304c350008df371ea`; origin `Vbitz/neurocontainers`. The active LQT and Lipsia candidates and failed Voreen and NCT candidates remain unaccepted on their pushed branches.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 89 of 247 declarations, refreshed from accepted source `15337e04`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 90 of 247 declarations, refreshed from accepted source `e3f721a7`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Second pass active work
 
@@ -138,8 +138,8 @@ x86_64 Dockerfile generation passed. Exact native dispatch
 [34740461864](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34740461864)
 passed Docker build, SIF conversion, deploy checks, and fulltest with 117
 passed, 0 failed, and 0 skipped. Issue [#180](https://github.com/Vbitz/neurocontainers-arm64/issues/180)
-records the verified result. The candidate is accepted at the next top-level
-checkpoint without a duplicate native run.
+records the verified result. The candidate is accepted in the current
+top-level pin without a duplicate native run.
 
 `lesionquantificationtoolkit` is the second active bounded source candidate.
 Investigation started at `2026-09-13T05:31:57Z`; deadline
@@ -149,6 +149,16 @@ Investigation started at `2026-09-13T05:31:57Z`; deadline
 source build and preserves the existing R package installation and fulltest.
 Local validation and ARM64 and x86_64 Dockerfile generation passed. Exact
 native dispatch [34740546339](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34740546339)
+is queued.
+
+`lipsia` is the third active source candidate. Investigation started at
+`2026-09-13T05:34:46Z`; deadline `2026-09-13T17:34:46Z`; attempt 1/6.
+Candidate `01ea960b11e8c47698b02c93f9ce99007ca50be2` on branch `arm64/lipsia`
+adds `aarch64` to the tagged Linux source build, whose setup script selects
+the native GCC/G++ toolchain and the recipe supplies system GSL, Boost, and
+OpenBLAS. Local validation and ARM64 and x86_64 Dockerfile generation passed.
+Exact native dispatch
+[34740665171](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34740665171)
 is queued.
 
 ## Latest checkpoint
@@ -330,8 +340,8 @@ ancestry in this checkpoint.
 ## Queue
 
 The accepted source contains 157 undeclared recipes after the BART
-integration. A full preflight screen on 2026-09-13 found BART as a bounded CPU
-source candidate; the remaining inventory falls into these groups:
+integration. A full preflight screen on 2026-09-13 found BART, LQT, and Lipsia
+as bounded source candidates; the remaining inventory falls into these groups:
 
 - fixed x86_64 or amd64 downloads and containers, including AFNI, ASHS, BIDS
   Apps, BrainSuite, Cartool, Connectome Workbench, Convert3D, DSI Studio,
@@ -1092,7 +1102,7 @@ submodule SHA.
 
 ## Integration
 
-- Accepted integration SHA: `e3f721a72f6e1b1f23d5962118f2873abbcdd203` (BART acceptance pending this checkpoint)
+- Accepted integration SHA: `e3f721a72f6e1b1f23d5962118f2873abbcdd203`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly,
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, OpenRecon I2I,
   MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
@@ -1114,7 +1124,7 @@ submodule SHA.
 ## Next action
 
 Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed
-from accepted source `15337e04` and now reports 89 of 247 declarations.
+from accepted source `e3f721a7` and now reports 90 of 247 declarations.
 The exact native runs `34708194854` and `34708203749` verified
 `openreconexample` and `blochsiegertb1mapping`, respectively, and their
 independent declarations are integrated at `2884a0e6`. ANTs run
@@ -1122,8 +1132,9 @@ independent declarations are integrated at `2884a0e6`. ANTs run
 `88fb8513` without a duplicate native run. Sigviewer run `34737708431` passed
 36 tests and is integrated at `c34a2103` without a duplicate native run.
 Elastix, emuses, MRIcroGL, PalmettoBUG, NCT, and Voreen are recorded as blocked
-with their revisit conditions. BART run `34740461864` and LQT run
-`34740546339` are active. Code's
+with their revisit conditions. LQT run `34740546339` and Lipsia run
+`34740665171` are active. BART run `34740461864` passed and is accepted.
+Code's
 integrated run `34738779168` passed and is accepted at `15337e04`. The next
-action is to monitor BART and LQT and continue the remaining undeclared inventory
+action is to monitor LQT and Lipsia and continue the remaining undeclared inventory
 without rerunning verified recipes.
