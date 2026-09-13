@@ -2485,3 +2485,9 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 - SoopCT’s pre-PALS candidate passed all 7 fulltests in [34782488956](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34782488956). Current-pin replay `e3d7996e606f92bb8d4fa292bb7a8b8e7987d3a5` is dispatched in [34783752296](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783752296).
 - CLEARSWI’s prior integrated candidate passed all 68 tests; current-pin replay `98735ad44f94c9e5be7ca9ba759167eeec9f349b` is dispatched in [34783811469](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783811469).
 - Four native runs are now occupied: SoopCT [34783752296](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783752296), CLEARSWI [34783811469](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783811469), MIMoSA [34783066918](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783066918), and VesselBoost [34783650179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783650179). Review completed results before dispatching QuPath or Syncro.
+
+## Active implementation checkpoint — 2026-09-14 (next candidates prepared)
+
+- QuPath commits `540c3f69` and `9f347a01` were replayed onto accepted pin `ee0cba5b7c5d95f7cc89e12c68dfcedd70cff006` as `c6ba42ff597871788f7223f90568c83df7bc0e60` on `arm64/qupath-pals`; validation and both architecture generations pass.
+- Syncro commit `0be21900` was replayed onto the same accepted pin as `a186f7f89df41b56a8e3d937afd0d6eefa49d3b7` on `arm64/syncro-pals`; validation and both architecture generations pass.
+- Both candidates are pushed and queued. Do not dispatch until one of the four current native runs completes and its result is reviewed.

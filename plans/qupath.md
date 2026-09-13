@@ -54,3 +54,5 @@ spurious failure; validation and both architecture generations still pass.
 Use the corrected full SHA for native dispatch.
 
 Because TopoFit advanced the accepted pin to `88e6776aeb27f16ef43e015acb426b7e87fe0d1c`, both QuPath commits were replayed onto that pin. Candidate [`9f347a012fc015fe9af9b5d798bece0bd6c7152c`](https://github.com/Vbitz/neurocontainers/commit/9f347a012fc015fe9af9b5d798bece0bd6c7152c) is pushed on [`arm64/qupath-source-arm-topofit`](https://github.com/Vbitz/neurocontainers/tree/arm64/qupath-source-arm-topofit). Validation and ARM64/x86_64 Dockerfile generation passed. It remains queued until a native slot opens.
+
+After PALS advanced the accepted pin to `ee0cba5b7c5d95f7cc89e12c68dfcedd70cff006`, both QuPath commits were replayed as candidate `c6ba42ff597871788f7223f90568c83df7bc0e60` on `arm64/qupath-pals`. Validation and ARM64/x86_64 Dockerfile generation passed. Dispatch this exact candidate after a native slot opens for integrated verification.
