@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `3b6542a` (Voreen blocker and BART dispatch checkpoint)
+- Top-level commit: `b1917bc` (BART and LQT dispatch checkpoint)
 - Pinned submodule: `neurocontainers@15337e04a04ddf0303b610d304c350008df371ea` (Code added after the ANTs, OpenRecon example, Bloch-Siegert, and sigviewer acceptances)
-- Submodule checkout: `arm64/bart`, candidate `e3f721a72f6e1b1f23d5962118f2873abbcdd203` from accepted source `15337e04a04ddf0303b610d304c350008df371ea`; origin `Vbitz/neurocontainers`. The failed Voreen and NCT candidates remain unaccepted on their pushed branches `arm64/voreen` and `arm64/networkcorrespondancetoolkit`.
+- Submodule checkout: `arm64/lesionquantificationtoolkit`, candidate `afc5c52d0d5d32e3d02c3fa1a94562274016f803` from accepted source `15337e04a04ddf0303b610d304c350008df371ea`; origin `Vbitz/neurocontainers`. The active BART candidate and failed Voreen and NCT candidates remain unaccepted on their pushed branches.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 89 of 247 declarations, refreshed from accepted source `15337e04`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -136,6 +136,16 @@ retains the NVIDIA CUDA base and `CUDA=1` build for x86_64. The ARM64 command
 uses BART's documented `CUDA=0` CPU build. Local validation and ARM64 and
 x86_64 Dockerfile generation passed. Exact native dispatch
 [34740461864](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34740461864)
+is queued.
+
+`lesionquantificationtoolkit` is the second active bounded source candidate.
+Investigation started at `2026-09-13T05:31:57Z`; deadline
+`2026-09-13T17:31:57Z`; attempt 1/6. Candidate
+`afc5c52d0d5d32e3d02c3fa1a94562274016f803` on branch
+`arm64/lesionquantificationtoolkit` adds `aarch64` to the Ubuntu 24.04 R
+source build and preserves the existing R package installation and fulltest.
+Local validation and ARM64 and x86_64 Dockerfile generation passed. Exact
+native dispatch [34740546339](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34740546339)
 is queued.
 
 ## Latest checkpoint
@@ -1075,6 +1085,7 @@ submodule SHA.
 - `networkcorrespondancetoolkit` / `arm64`: exact run `34739158124`, candidate `95e84c71`, failed during Conda environment creation because the upstream lock pins `ca-certificates==2024.6.2=hbcca054_0`, unavailable for `linux-aarch64`. Issue [#99](https://github.com/Vbitz/neurocontainers-arm64/issues/99) records the blocked-upstream result and revisit condition.
 - `voreen` / `arm64`: exact runs `34739742820` and `34739991537`, candidates `bb08bc1c` and `151c8c5d`, both stopped in native ARM64 CMake configuration before compilation. Voreen 5.3.0's bundled `FindBoostVRN.cmake` requests `math_c99l` and `math_tr1l`, unavailable from Ubuntu 24.04's ARM64 Boost 1.83.0 packages; package mode and module mode both fail. Issue [#117](https://github.com/Vbitz/neurocontainers-arm64/issues/117) records the blocked-upstream result and revisit condition.
 - `bart` / `arm64`: exact dispatch `34740461864`, candidate `e3f721a7`, is queued after local validation and both architecture generations passed. The ARM64 path uses upstream BART's `CUDA=0` CPU build; the x86_64 CUDA path is preserved.
+- `lesionquantificationtoolkit` / `arm64`: exact dispatch `34740546339`, candidate `afc5c52d`, is queued after local validation and both architecture generations passed. The change only declares ARM64 for the existing Ubuntu 24.04 R source build.
 
 ## Integration
 
@@ -1108,7 +1119,8 @@ independent declarations are integrated at `2884a0e6`. ANTs run
 `88fb8513` without a duplicate native run. Sigviewer run `34737708431` passed
 36 tests and is integrated at `c34a2103` without a duplicate native run.
 Elastix, emuses, MRIcroGL, PalmettoBUG, NCT, and Voreen are recorded as blocked
-with their revisit conditions. BART run `34740461864` is active. Code's
+with their revisit conditions. BART run `34740461864` and LQT run
+`34740546339` are active. Code's
 integrated run `34738779168` passed and is accepted at `15337e04`. The next
-action is to monitor BART and continue the remaining undeclared inventory
+action is to monitor BART and LQT and continue the remaining undeclared inventory
 without rerunning verified recipes.
