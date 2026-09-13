@@ -97,6 +97,9 @@ that outcome. LCModel is blocked at source audit because the public source
 contains only the core executable while the recipe requires unavailable
 ancillary tools; issue [#205](https://github.com/Vbitz/neurocontainers-arm64/issues/205)
 records the source-completeness blocker. All four runner slots are occupied.
+TeraStitcher is prepared and pushed on branch `arm64/terastitcher` at candidate
+`ec7503cb8ee31f9d40ff3097adfac895bcfbb4ec`; its recipe validation and both
+architecture generations pass. It is waiting for a slot before dispatch.
 When a run completes, record its exact source and test counts, then integrate
 successful candidates serially from the latest accepted pin; retain failed
 branches and record the first actionable error before selecting the next plan.
