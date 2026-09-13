@@ -2,7 +2,7 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
-### Checkpoint after PyDeface acceptance and Blender retry dispatch
+### Checkpoint after ITK-SNAP Qt source retry dispatch
 
 - Top-level parent commit: `6da579a`; accepted submodule pin is now
   `80a84327a6659b0ac79a44f2c1853faa9eb84f4b` (PyDeface integrated on BIDSvue;
@@ -10,11 +10,12 @@
   Fork Actions remains disabled (`enabled: false`), and coverage issue #2 was
   refreshed after acceptance.
 - Active exact investigations (four build slots):
-  - ITK-SNAP candidate `905404b1facd8697ba2e0d3e641d0ab60c351a98`, run
-    [34771393155](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771393155),
-    attempt 3/6. This retry supplies Git metadata for the source archive,
-    adapts Qt 6.7 translation/deployment configuration to Ubuntu Qt 6.4,
-    and corrects the installed main-binary path.
+  - ITK-SNAP integrated candidate `701e4cd9f3d0bb8dc65b65bb655975b20ba19cfe`,
+    run [34773851298](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34773851298),
+    attempt 4/6. The prior retry compiled ITK/VTK and then exposed three
+    `std::string`/`QDebug` incompatibilities plus a missing `QTimeZone` include
+    in the application source; this candidate applies those narrow fixes on
+    the accepted PyDeface pin.
   - MIMoSA `c58b71e8e7400e0beb6026201b323c5d7aa3916d`, run
     [34773252089](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34773252089),
     attempt 3/6. The FSL correction reached ANTsRCore but its R Makevars
@@ -34,8 +35,8 @@
   reaches ARM64 Julia dependency setup but its released App bootstrap leaves
   incompatible `RomeoApp`/`ClearswiApp`/`MriResearchTools` dependencies; issue
   #156 and `plans/mritools.md` contain both runs and the exact errors.
-- Local submodule checkout is `arm64/blender-integrated` at
-  `ad9ee486bb7898bdb2fa9e0265a876a7c5c16288`; the active source branches and
+- Local submodule checkout is `arm64/itksnap-integrated-80a` at
+  `701e4cd9f3d0bb8dc65b65bb655975b20ba19cfe`; the active source branches and
   exact run IDs are recorded above. PyDeface is accepted; the remaining
   candidates must be replayed onto this newer pin before their own acceptance.
 - Prepared ITK-SNAP integration candidate `f4a84c7150db1e9a35cb9f26014304a7ed0b3804`
