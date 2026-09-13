@@ -58,3 +58,5 @@ Because TopoFit advanced the accepted pin to `88e6776aeb27f16ef43e015acb426b7e87
 After PALS advanced the accepted pin to `ee0cba5b7c5d95f7cc89e12c68dfcedd70cff006`, both QuPath commits were replayed as candidate `c6ba42ff597871788f7223f90568c83df7bc0e60` on `arm64/qupath-pals`. Validation and ARM64/x86_64 Dockerfile generation passed. Dispatch this exact candidate after a native slot opens for integrated verification.
 
 After SoopCT advanced the accepted pin to `e3d7996e606f92bb8d4fa292bb7a8b8e7987d3a5`, both QuPath commits were replayed as candidate `d2230cc663289fef127a943989e0de5db7df0aea` on `arm64/qupath-soopct`. Validation and ARM64/x86_64 Dockerfile generation passed. Dispatch this exact candidate when a native slot opens.
+
+The exact current-pin candidate is dispatched in native ARM64 [run 34785066541](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785066541). Acceptance remains pending the complete QuPath and Cellpose fulltest suite.
