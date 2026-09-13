@@ -2,6 +2,35 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after PyDeface compatibility retry dispatch
+
+- Root commit: `fee983c6374e541aa62a5cef37b06b2b48965055`; accepted submodule
+  pin remains `3bdd670d17eb6aae64902d1aed8091b2c464a79a` (ROOT, 102/102
+  native checks). Fork Actions is disabled.
+- Active exact investigations:
+  - AFNI integrated replay `8a9e48a7028b53be7b93eb6706a55a6a9ec801e6`, run
+    [34765634289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34765634289).
+  - ITK-SNAP source build `fdf69113`, run
+    [34767223157](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767223157).
+  - BIDSvue retry `3140e416`, run
+    [34767319894](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767319894),
+    fixing the missing `src-tauri/binaries` destination exposed after the native
+    dcm2niix build passed.
+  - PyDeface retry `3baa7a0662abfd352ab10f0d8342a12ef157990a`, branch
+    `arm64/pydeface-root`, run
+    [34767487096](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767487096),
+    attempt 3/6. It pins ARM setuptools below 81 after PyDeface’s prior
+    20-test failure due to missing `pkg_resources`.
+- MRIcroGL is blocked upstream after attempt 5/6: its final ARM64 link still
+  requires x86_64 Linux and aarch64 Darwin prebuilt objects. Quickshear remains
+  blocked at the required SynthStrip distance-transform runtime assertion.
+- The local submodule checkout is `arm64/pydeface-root` at `3baa7a06`; the root
+  pointer remains intentionally unstaged while native runs execute. Next action
+  is to reconcile these four exact runs, integrate only exact passing candidates
+  serially, and continue through the remaining feasible research plans.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after BIDSvue dispatch and MRIcroGL blocker
 
 - Root commit: `5565b0d` (`Checkpoint ARM64 implementation runs`); accepted
