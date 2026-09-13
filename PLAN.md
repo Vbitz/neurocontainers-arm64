@@ -37,6 +37,12 @@
   `arm64/clearswi-integrated-80a`; local validation and both architecture
   generations pass. Exact integrated verification is queued for the next
   native slot, and the local submodule checkout is this branch.
+- EMUSES candidate `685f5f4d9636d34aa8237646535d2a7dfc3a525d` passed native
+  Docker/SIF/deploy/fulltest in [run 34775307167](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34775307167)
+  with 2/2 fulltests passing and no skips. It descends directly from accepted
+  pin `80a84327`, so the local checkout has switched to this candidate for
+  serial top-level integration; issue [#94](https://github.com/Vbitz/neurocontainers-arm64/issues/94)
+  records the verified result.
 - Blender run [34774135689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774135689)
   reached the bundled Flex configure and failed on missing `autopoint`. The
   six native attempt and twelve-hour investigation budgets are exhausted, so
