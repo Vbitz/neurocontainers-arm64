@@ -1508,3 +1508,12 @@ unchanged verification.
 - SovaBIDS candidate `a4757fef0ea1c5723e264a9bf6fa41e10dadcad3` is pushed on `arm64/sovabids`. The prior checkout-only run [34756247757](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756247757) used an incorrect SHA and is metadata-only; the corrected exact dispatch is [34756526235](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756526235).
 - rsHRF candidate `4cb7f92901acfe61bc28321084ba02a690ff4167` is validated and pushed on `arm64/rshrf`, waiting for a runner slot. Fork Actions is confirmed disabled.
 - Next action: commit the MEGNET pointer, refresh coverage issue #2 from the new accepted pin, then monitor the three active investigations and dispatch rsHRF as soon as a slot opens. Keep each candidate’s exact source SHA tied to its run before acceptance.
+
+## Active implementation checkpoint — 2026-09-13 22:25 Australia/Brisbane
+
+- Accepted submodule pin is now `1ce18a5642515bbb314ea48def4ac022c91264e8`; the root commit accepting MEGNET is `3baa72dd26979ae61254b7d928f610deb834ad3`. The local root and submodule checkouts are clean, and fork Actions remains disabled.
+- DeepLabCut candidate `add4f3fe915a514d3fa4294b768b29934933b928` passed exact run [34756027424](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756027424) with 101/101 checks, but it was based before MEGNET acceptance. It must be replayed onto `1ce18a5` and rerun before root acceptance.
+- gigaconnectome candidate `ca080b166bdacce2d9dbd48189ec254131605603` is in run [34756916668](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756916668).
+- rsHRF candidate `9b60afc24a471a606cb2145b36a21c9b01cd089b` is in run [34756942808](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756942808), replayed onto the MEGNET accepted pin.
+- SovaBIDS corrected candidate `a4757fef0ea1c5723e264a9bf6fa41e10dadcad3` is in run [34756526235](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756526235). DSI Studio final bounded candidate `fde81b639abf8a2b8a5efce3a6f8152dd2414127` remains in run [34755647607](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34755647607), attempt 6/6.
+- Next action: reconcile active runs; on the first completed slot, replay and dispatch DeepLabCut on `1ce18a5` if needed, then continue to the next unblocked source-build plan. No active run is to be duplicated.
