@@ -24,6 +24,13 @@
   [#195](https://github.com/Vbitz/neurocontainers-arm64/issues/195) has the
   retry evidence. The run is queued/in progress; EMUSES remains the next
   queued candidate after another slot opens.
+- EMUSES candidate `685f5f4d9636d34aa8237646535d2a7dfc3a525d` is now dispatched
+  as attempt 3/6 in [run 34775307167](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34775307167).
+  Issue [#94](https://github.com/Vbitz/neurocontainers-arm64/issues/94) has
+  the lock-cleanup hypothesis and exact candidate. The current local checkout
+  remains `arm64/blender-integrated` at
+  `171bd9b6c54a199718a24f064f5a2809df1fa6d`; the EMUSES candidate is immutable
+  on its pushed branch.
 - Blender run [34774135689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774135689)
   reached the bundled Flex configure and failed on missing `autopoint`. The
   six native attempt and twelve-hour investigation budgets are exhausted, so
