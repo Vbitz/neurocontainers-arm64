@@ -33,3 +33,25 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/ds
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation outcome — 2026-09-14
+
+- The official 2026.7.25 ARM64 CPU binary built natively and passed SIF,
+  deploy, registration, export, ordinary tracking and atlas checks, but the
+  prior fulltest failed 16 of 84 checks. The first candidate's failures were
+  release-layout mismatches rather than an ARM executable failure: connectivity
+  matrices are written as `<tract>.<atlas>.connectivity.mat`, three current
+  missing-input messages say `file not exist`, and the old AutoTrack shorthand
+  IDs expand to atlas bundles that produce zero-result marker files. The
+  pipeline also passed obsolete `--export_stat=1`, which the current binary
+  reports as unrecognized. Evidence: [run 34763556926](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763556926).
+- Candidate fulltest changes use the current connectivity names, exact release
+  atlas IDs with known output, current missing-input wording, and rely on the
+  current AutoTrack statistics output after removing the obsolete option.
+  Recipe validation and ARM64/x86_64 generation pass.
+- The three ARM64 recipe commits were replayed onto accepted PyDeface pin
+  `80a84327a6659b0ac79a44f2c1853faa9eb84f4b` as candidate
+  `87f0dbb45ae3ab1d1b2b1a52ff0bcae14f18d89c` on
+  `arm64/dsistudio-integrated-80a`. Dispatch is waiting for a native runner
+  slot; this is a bounded follow-up to verify whether the release-aligned CLI
+  assertions pass.
