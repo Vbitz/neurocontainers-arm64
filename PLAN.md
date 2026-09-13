@@ -2549,3 +2549,8 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 - CLEARSWI [34785901800](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785901800), MIMoSA [34783066918](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783066918), and VesselBoost [34783650179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783650179) remain active. One native slot is available for the Syncro targeted retry; do not dispatch CLEARSWI until its current SoopCT replay is reviewed and the QuPath descendant is exact.
 
 - Syncro exact `libpng-dev` retry candidate `5c7611831036c5b0d22eab09254589031c9df017` is dispatched in [run 34787372368](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34787372368). The canceled abbreviated-SHA checkout run [34787340767](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34787340767) did no Docker or test work and is not counted.
+
+## Active implementation checkpoint — 2026-09-14 (MIMoSA replay prepared after QuPath)
+
+- MIMoSA candidate `6940147e3090cf6729d769c574614740e9bfc522` passed native ARM64 build/SIF/deploy and 20/20 fulltests in [run 34783066918](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34783066918). Its two intended commits were replayed onto accepted QuPath pin `c98a89ee6799cd32b6a2247554cf8447a37f24aa` as `2c0198a5` on `arm64/mimosa-qupath`; validation and both architecture generations pass, and the branch is pushed.
+- The exact MIMoSA QuPath descendant is ready for native dispatch when the current runner slot is confirmed free. Acceptance requires this exact candidate’s full native gates.
