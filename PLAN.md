@@ -2,6 +2,31 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after VMTK superbuild retry dispatch
+
+- Root commit: `f5eff7dd27d88eec3b312cb2416d663d12b216a6`; accepted submodule
+  pin remains `8a9e48a7028b53be7b93eb6706a55a6a9ec801e6` (AFNI, 114/114
+  native checks). Fork Actions is disabled.
+- Active exact investigations:
+  - ITK-SNAP `fdf69113`, run
+    [34767223157](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767223157).
+  - PyDeface `3baa7a0662abfd352ab10f0d8342a12ef157990a`, run
+    [34767487096](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767487096).
+  - BIDSvue integrated replay `6886b829d871a3b6315660e222305dfdebf918b5`, run
+    [34767968286](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767968286),
+    attempt 4/6.
+  - VMTK retry `c11f9b0b61e73d22fb56a4172ea9d5da6e5bac92`, run
+    [34768254230](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34768254230),
+    attempt 2/6, switching from missing conda ITK CMake metadata to VMTK’s
+    pinned upstream ITK/VTK superbuild.
+- VMTK attempt 1 stopped before compilation because conda-forge ARM `itk`
+  lacks `ITKConfig.cmake`; that does not establish an application blocker, so
+  the documented superbuild is being tested once. The local submodule checkout
+  is `arm64/vmtk-afni` at `c11f9b0b`; the root pointer remains intentionally
+  unstaged while native runs execute.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after AFNI acceptance and BIDSvue/VMTK dispatch
 
 - Root commit: `205b7e4`; accepted submodule pin is now
