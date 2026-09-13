@@ -2,32 +2,36 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
-### Checkpoint after mritools blocker and CLEARSWI dispatch
+### Checkpoint after PyDeface integration dispatch and ITK-SNAP Qt retry
 
-- Root commit: `26cb92c`; accepted submodule pin remains
+- Top-level parent commit: `2f8c410`; accepted submodule pin remains
   `ba7af5842b2c41dbc98ffd8d1e25431acf19a7db` (BIDSvue on top of AFNI,
-  5/5 native fulltests). Fork Actions remains disabled.
-- Active exact investigations:
-  - ITK-SNAP candidate `7ceabea5d97151a98cf6655055729804870b33ee`, run
-    [34769119103](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769119103),
-    attempt 2/6.
-  - PyDeface candidate `90ee2948253826e0413ca90be894f381d10009eb`, run
-    [34769469302](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769469302),
-    attempt 4/6.
+  5/5 native fulltests). Fork Actions remains disabled (`enabled: false`).
+- Active exact investigations (four build slots):
+  - ITK-SNAP candidate `905404b1facd8697ba2e0d3e641d0ab60c351a98`, run
+    [34771393155](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771393155),
+    attempt 3/6. This retry supplies Git metadata for the source archive,
+    adapts Qt 6.7 translation/deployment configuration to Ubuntu Qt 6.4,
+    and corrects the installed main-binary path.
+  - PyDeface integrated candidate `80a84327a6659b0ac79a44f2c1853faa9eb84f4b`,
+    run [34771433995](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771433995),
+    attempt 1/6. The preceding candidate passed 60/60 native fulltests;
+    this exact SHA is replayed onto the accepted BIDSvue pin.
   - MIMoSA `1f1fa6ea2942b55d1c3ec01e615d38c2b777babc`, run
     [34770095073](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770095073),
-    attempt 2/6.
+    attempt 2/6, selecting the verified ARM FSL 6.0.7.22 route.
   - CLEARSWI `cf9a122bc839f0bde01d013bdf17ef7a915541e7`, run
     [34770539453](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770539453),
-    attempt 1/6; queued after adding Julia Linux AArch64 and bypassing the
-    failing ARM64 custom sysimage step.
+    attempt 1/6, using official Julia Linux AArch64 and the stock ARM sysimage
+    after the prior ARM PackageCompiler failure.
 - mritools is blocked-upstream after two native attempts. CompileMRI.jl v3.3.0
   reaches ARM64 Julia dependency setup but its released App bootstrap leaves
   incompatible `RomeoApp`/`ClearswiApp`/`MriResearchTools` dependencies; issue
   #156 and `plans/mritools.md` contain both runs and the exact errors.
-- Local submodule checkout is `arm64/mritools-bids` at
-  `bec588b5d45ad87e68ab5ccb4a19ea8ab969975a`; CLEARSWI remains prepared on
-  `arm64/clearswi-bids` at `cf9a122bc839f0bde01d013bdf17ef7a915541e7`.
+- Local submodule checkout is `arm64/pydeface-integrated` at
+  `80a84327a6659b0ac79a44f2c1853faa9eb84f4b`; the active source branches and
+  exact run IDs are recorded above. Do not stage the top-level pointer until
+  the integrated PyDeface, MIMoSA and CLEARSWI candidates pass their full gates.
 
 ## Latest implementation checkpoint — 2026-09-14
 
