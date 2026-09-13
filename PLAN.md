@@ -14,25 +14,25 @@ Updated: 2026-09-13 (Australia/Brisbane)
 
 ## Remaining unsupported inventory audit
 
-At accepted source `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`, all 150 recipes
+At accepted source `457c5a31b9830587801a06e7d6f81f18293135e8`, 149 recipes
 without an `aarch64` declaration have a matching `arm64-container` issue and a
-durable blocker or native failure outcome. The current issue audit counts 130
-`blocked-prerequisite` outcomes and 20 `blocked-upstream` outcomes. The
-prerequisite records cover unavailable ARM64 binaries or base images, GPU or
-license requirements, and unsupported external services; the upstream records
-cover native dependency, compiler, package, or source-build limitations. A
-native build was dispatched whenever a bounded ARM64 recipe-level hypothesis
-was available. For hard preflight blockers, no speculative or inherently
-unsupported build was queued. The final missing durable comment, for
-`openadscpu` / issue [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66),
-was added during this audit.
+durable blocker or native failure outcome. The current issue audit counts 128
+`blocked-prerequisite`, 16 `blocked-upstream`, 3 legacy-format
+`blocked-upstream`, 1 bounded-follow-up `blocked-upstream`, and 1
+`blocked-infrastructure` outcome. The prerequisite records cover unavailable
+ARM64 binaries or base images, GPU or license requirements, and unsupported
+external services; the upstream records cover native dependency, compiler,
+package, or source-build limitations. A native build was dispatched whenever a
+bounded ARM64 recipe-level hypothesis was available. For hard preflight
+blockers, no speculative or inherently unsupported build was queued. The
+`openadscpu` / issue [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66)
+record was refreshed during this investigation.
 
 ## Full unsupported inventory investigation
 
-The prior audit is being followed by an explicit recipe-by-recipe pass under
-the current accepted source, rather than counting the audit alone as completed
-work. Existing blocker comments were retained where the affected recipe is
-unchanged from its recorded baseline, avoiding duplicate builds for fixed
+The prior audit was followed by an explicit recipe-by-recipe pass under the
+current accepted source. Existing blocker comments were retained where the
+affected recipe is unchanged from its recorded baseline, avoiding duplicate builds for fixed
 x86_64-only assets, unavailable image manifests, GPU or license prerequisites,
 and native dependency blockers already demonstrated by an exact ARM64 run.
 
