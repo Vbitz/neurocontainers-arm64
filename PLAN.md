@@ -28,8 +28,10 @@ Candidate `cd385b882d68ef08fafd8381b388e20f58d65c72` on
 includes the previously tested ARM64 VS Code asset selection, pyedflib wheel
 fallback, and `trame-client<4` correction, plus the new direct
 `trame-server<4` constraint. Recipe validation and ARM64/x86_64 Dockerfile
-generation passed. The branch is pushed; no build is active yet. Next action:
-dispatch this exact SHA and record the run before considering another recipe.
+generation passed. The branch is pushed. Exact native ARM64 run
+[34745332614](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745332614)
+was dispatched at `2026-09-13T07:28:48Z` with `upload_image=false`; inspect its
+result before considering another recipe.
 
 ## Second pass active work
 
