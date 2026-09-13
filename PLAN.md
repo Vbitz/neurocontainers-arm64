@@ -12,6 +12,21 @@ Updated: 2026-09-13 (Australia/Brisbane)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 97 of 247 declarations, refreshed from accepted source `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
+## Remaining unsupported inventory audit
+
+At accepted source `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`, all 150 recipes
+without an `aarch64` declaration have a matching `arm64-container` issue and a
+durable blocker or native failure outcome. The current issue audit counts 130
+`blocked-prerequisite` outcomes and 20 `blocked-upstream` outcomes. The
+prerequisite records cover unavailable ARM64 binaries or base images, GPU or
+license requirements, and unsupported external services; the upstream records
+cover native dependency, compiler, package, or source-build limitations. A
+native build was dispatched whenever a bounded ARM64 recipe-level hypothesis
+was available. For hard preflight blockers, no speculative or inherently
+unsupported build was queued. The final missing durable comment, for
+`openadscpu` / issue [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66),
+was added during this audit.
+
 ## Focused follow-up outcomes
 
 The user requested bounded follow-up on promising prior failures. The first
