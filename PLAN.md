@@ -5,7 +5,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `e00a57e` (Code acceptance, NCT blocker, and Voreen retry checkpoint)
+- Top-level commit: `14ec06c` (Voreen retry checkpoint)
 - Pinned submodule: `neurocontainers@15337e04a04ddf0303b610d304c350008df371ea` (Code added after the ANTs, OpenRecon example, Bloch-Siegert, and sigviewer acceptances)
 - Submodule checkout: `arm64/voreen`, candidate `151c8c5d7b0f7153ea9f71d2e219f8d07632f5d1` from accepted source `15337e04a04ddf0303b610d304c350008df371ea`; origin `Vbitz/neurocontainers`. The failed NCT candidate remains unaccepted on its pushed branch `arm64/networkcorrespondancetoolkit`.
 - Fork Actions: disabled (`enabled: false`)
@@ -109,7 +109,7 @@ SIF conversion, deploy checks, and fulltest did not run. Issue
 log, artifact, attempt 1/6, and revisit condition: an upstream ARM64-compatible
 environment lock. No retry is planned.
 
-`voreen` is the next source-build candidate. Investigation started at
+`voreen` was assessed as the next source-build candidate. Investigation started at
 `2026-09-13T05:12:49Z`; deadline `2026-09-13T17:12:49Z`; attempt 2/6.
 Candidate `151c8c5d7b0f7153ea9f71d2e219f8d07632f5d1` on branch `arm64/voreen`
 adds `aarch64` to the existing Ubuntu 24.04 CMake/Qt build and adds a headless
@@ -117,10 +117,16 @@ adds `aarch64` to the existing Ubuntu 24.04 CMake/Qt build and adds a headless
 validation and both architecture generations passed. Attempt 1
 [34739742820](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34739742820)
 reached native ARM64 CMake but stopped because Boost package mode could not
-find `boost_math_c99l`; no SIF or fulltest ran. Attempt 2 applies the standard
-module-mode Boost discovery setting `Boost_NO_BOOST_CMAKE=ON`. Exact native
-dispatch [34739991537](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34739991537)
-is in progress.
+find `boost_math_c99l`; no SIF or fulltest ran. Attempt 2 applied the standard
+module-mode Boost discovery setting `Boost_NO_BOOST_CMAKE=ON`, but the bundled
+Voreen `FindBoostVRN.cmake` still requested the unavailable `math_c99l` and
+`math_tr1l` components. Exact native dispatch
+[34739991537](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34739991537)
+failed before compilation with the same dependency mismatch. Outcome:
+blocked-upstream; no further retry is planned unless Voreen documents an ARM64
+fix or releases updated Boost discovery logic. Issue
+[#117](https://github.com/Vbitz/neurocontainers-arm64/issues/117) has the durable
+failure note and revisit condition.
 
 ## Latest checkpoint
 
@@ -1059,6 +1065,7 @@ submodule SHA.
 - `mricrogl` / `arm64`: no run; MRIcroGL 1.2.20211006 and its required libqt5pas 1.2.9 releases provide only x86_64/amd64 Linux assets. Issue [#97](https://github.com/Vbitz/neurocontainers-arm64/issues/97) records the blocked-prerequisite result and revisit condition.
 - `palmettobug` / `arm64`: exact run `34738541920`, candidate `0482f4d7`, failed during package installation because the pinned `PySide6==6.4.3` has no ARM64 distribution. Issue [#98](https://github.com/Vbitz/neurocontainers-arm64/issues/98) records the blocked-upstream result and revisit condition.
 - `networkcorrespondancetoolkit` / `arm64`: exact run `34739158124`, candidate `95e84c71`, failed during Conda environment creation because the upstream lock pins `ca-certificates==2024.6.2=hbcca054_0`, unavailable for `linux-aarch64`. Issue [#99](https://github.com/Vbitz/neurocontainers-arm64/issues/99) records the blocked-upstream result and revisit condition.
+- `voreen` / `arm64`: exact runs `34739742820` and `34739991537`, candidates `bb08bc1c` and `151c8c5d`, both stopped in native ARM64 CMake configuration before compilation. Voreen 5.3.0's bundled `FindBoostVRN.cmake` requests `math_c99l` and `math_tr1l`, unavailable from Ubuntu 24.04's ARM64 Boost 1.83.0 packages; package mode and module mode both fail. Issue [#117](https://github.com/Vbitz/neurocontainers-arm64/issues/117) records the blocked-upstream result and revisit condition.
 
 ## Integration
 
@@ -1075,7 +1082,7 @@ submodule SHA.
   preflight upstream blocker; emuses is blocked by its locked Triton dependency,
   MRIcroGL by unavailable ARM64 binaries, PalmettoBUG by its pinned PySide6
   dependency, and NCT by its x86-specific Conda lock.
-  CLEARSWI and Spinal Cord Toolbox are blocked upstream;
+  CLEARSWI, Spinal Cord Toolbox, and Voreen are blocked upstream;
   MNEextended is blocked
   by cascading trame dependency constraints. BrkRaw, Brainlife CLI, dicomtools, radtract,
   rapidtide, dwidenoise2, FSQC, Panoptica, PCNtoolkit, MeGANorm, DeepDisco, and
@@ -1091,7 +1098,7 @@ independent declarations are integrated at `2884a0e6`. ANTs run
 `34706765954` passed 103 tests and its isolated commit is integrated at
 `88fb8513` without a duplicate native run. Sigviewer run `34737708431` passed
 36 tests and is integrated at `c34a2103` without a duplicate native run.
-Elastix, emuses, MRIcroGL, PalmettoBUG, and NCT are recorded as blocked with
-their revisit conditions. Code's integrated run `34738779168` passed and is
+Elastix, emuses, MRIcroGL, PalmettoBUG, NCT, and Voreen are recorded as blocked
+with their revisit conditions. Code's integrated run `34738779168` passed and is
 accepted at `15337e04`. The next action is to continue the remaining undeclared
 inventory without rerunning verified recipes.
