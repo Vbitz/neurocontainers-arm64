@@ -55,3 +55,11 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
   `arm64/dsistudio-integrated-80a`. Dispatch is waiting for a native runner
   slot; this is a bounded follow-up to verify whether the release-aligned CLI
   assertions pass.
+
+Further release-alignment: the first revised candidate still selected broad
+shorthand AutoTrack names that the current human atlas expanded into
+zero-result sub-bundles. Candidate `bdb427db440ea72de1e6fc50fc7a115c41fef5aa`
+uses exact atlas IDs that produced non-empty tracts in the native report and
+keeps the connectivity output and current error-message fixes. Validation and
+both architecture generations pass. This is the candidate to dispatch when a
+slot opens; no DSI run has been started for this final local revision yet.

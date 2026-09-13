@@ -35,10 +35,16 @@
   reaches ARM64 Julia dependency setup but its released App bootstrap leaves
   incompatible `RomeoApp`/`ClearswiApp`/`MriResearchTools` dependencies; issue
   #156 and `plans/mritools.md` contain both runs and the exact errors.
-- Local submodule checkout is `arm64/blender-integrated` at
-  `42b819836f9e594be0648660fb118d735b6e4c5d`; the active source branches and
+- Local submodule checkout is `arm64/dsistudio-integrated-80a` at
+  `bdb427db440ea72de1e6fc50fc7a115c41fef5aa`; the active source branches and
   exact run IDs are recorded above. PyDeface is accepted; the remaining
   candidates must be replayed onto this newer pin before their own acceptance.
+- Prepared next slot: DSI Studio candidate
+  `bdb427db440ea72de1e6fc50fc7a115c41fef5aa` on
+  `arm64/dsistudio-integrated-80a`. Its fulltest now follows the current
+  2026.7.25 ARM64 CPU CLI's connectivity filenames, error wording and exact
+  non-empty atlas IDs; local validation and both architecture generations
+  pass. Dispatch when one of the four active runs completes.
 - Prepared ITK-SNAP integration candidate `f4a84c7150db1e9a35cb9f26014304a7ed0b3804`
   on `arm64/itksnap-integrated`, replaying the source-build fixes onto the
   prior accepted pin. Local validation and both architecture generations pass;
