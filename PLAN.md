@@ -61,40 +61,45 @@ were queued.
 
 ## Implementation goal checkpoint — 2026-09-13
 
-The accepted top-level commit is `aa54db8`, pinning submodule source
-`c38fa11e2377ad2a9775fdd5fc3993c8b44155de`. Modsort is integrated and proven
-by native run [34751788247](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751788247)
-with 8 passed, 0 failed and 0 skipped. SynthSeg candidate
-`2bd94fdea81eb995c10a6ae5cd8064890e61a5a8` passed native build, SIF conversion,
-deploy checks and 18 fulltest checks in run
-[34751886197](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751886197);
-it still needs serial integration and verification from the current accepted
-pin before the top-level pointer advances.
+The current top-level checkpoint is `816626e`, pinning the accepted submodule
+source `c38fa11e2377ad2a9775fdd5fc3993c8b44155de`. Modsort is integrated and
+proven by native run [34751788247](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751788247)
+with 8 passed, 0 failed and 0 skipped.
 
-Active exact-SHA investigations are DSI Studio `720808c1d2f504ece9c9669ca37ee952369eed52`
-on run [34752545566](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34752545566),
-DeepLabCut `df0e6e811ca6fbbe7f6e496cb4944bcfb417fa90` on run
-[34752546864](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34752546864),
-and NFTsim `ece7ec40c14d3c5a76a24700b0a50a19a2de7a7f` on run
-[34753146569](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753146569).
-The earlier short-ref dispatches failed before source checkout and were not
-application build evidence; each candidate was unchanged and redispatched with
-its complete SHA. DSI Studio's current candidate restores the 2026 archive's
-renamed atlas paths. DeepLabCut's current candidate omits its ARM-incompatible
-optional GUI extra while retaining the core/modelzoo/TensorFlow stack. Convert3D
-reached the native build but is blocked because Debian Bookworm has no ARM64
-`libinsighttoolkit5-dev` package and building ITK itself would exceed recipe
-scope; run [34752548314](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34752548314)
+The following candidates are being tested from exact immutable submodule SHAs:
+
+- SynthSeg integrated onto the accepted pin at `815cf1b3e10b0b4b6003dc728f4300c54ccc3116`,
+  run [34753249262](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753249262),
+  in progress.
+- DeepLabCut integrated onto the accepted pin at `e39f1c055f4c4d77faa5d024c719ca36f7727797`,
+  run [34753282289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753282289),
+  in progress.
+- NFTsim at `ece7ec407a83cf27a2fbd0d53248b544c883425e`,
+  run [34753242671](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753242671),
+  in progress. Its earlier run [34753146569](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753146569)
+  failed before source checkout because a shortened SHA was supplied and is not
+  application build evidence.
+- DSI Studio at `89ee8274f71662f0222dbde3f1f3a5b4ef5e6826`,
+  run [34753556106](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753556106),
+  queued. This candidate supplements the current ARM64 executable with the
+  architecture-independent legacy atlas, neonate, network, and color-map data
+  omitted from the current upstream archive; issue [#195](https://github.com/Vbitz/neurocontainers-arm64/issues/195#issuecomment-5652878390)
+  records the bounded retry hypothesis.
+
+SynthSeg and DeepLabCut each passed an earlier candidate run, but those
+candidates were based on the previous accepted pin, so they require the exact
+integrated runs above before the top-level pointer advances. Convert3D reached
+the native build but is blocked because Debian Bookworm has no ARM64
+`libinsighttoolkit5-dev` package and building ITK itself exceeds recipe scope;
+run [34752548314](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34752548314)
 and issue [#133](https://github.com/Vbitz/neurocontainers-arm64/issues/133) record
-that outcome. NFTsim keeps the x86 image and builds the public C++11 source on
-ARM64 with its x86-only SSE flags removed. LCModel is blocked at source audit:
-the public source contains only the core executable while the recipe requires
-unavailable ancillary tools; issue [#205](https://github.com/Vbitz/neurocontainers-arm64/issues/205)
-records the source-completeness blocker. All four runner slots are currently
-occupied. On completion, integrate successful candidates serially from the
-accepted pin `c38fa11e`; retain failed branches and record the first actionable
-error in their issue comments. SynthSeg remains the first integration candidate
-once a slot and clean checkout are available.
+that outcome. LCModel is blocked at source audit because the public source
+contains only the core executable while the recipe requires unavailable
+ancillary tools; issue [#205](https://github.com/Vbitz/neurocontainers-arm64/issues/205)
+records the source-completeness blocker. All four runner slots are occupied.
+When a run completes, record its exact source and test counts, then integrate
+successful candidates serially from the latest accepted pin; retain failed
+branches and record the first actionable error before selecting the next plan.
 
 ## Remaining unsupported inventory audit
 

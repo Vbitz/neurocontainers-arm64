@@ -32,3 +32,16 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/lc
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation outcome — 2026-09-13
+
+The bounded source audit established a concrete blocker before dispatch. The
+official `source.zip` and the public `schorschinho/LCModel` repository contain
+only the core `LCModel.f` program and include files. The upstream README
+explicitly states that the other LCModel tools are unavailable. The current
+recipe and fulltest require `lcmodel`, `makebasis`, `plotraw`, `kecc`, `lcmgui`,
+and the associated scripts. Those ancillary executables are present only in
+the x86 vendor payload, so building the public core would leave the ARM64
+recipe incomplete and would require weakening essential tests. Issue
+[#205](https://github.com/Vbitz/neurocontainers-arm64/issues/205) records this
+as `blocked-prerequisite`; no candidate or native run was created.
