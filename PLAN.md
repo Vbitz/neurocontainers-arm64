@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `b62212a` (Code acceptance, NCT blocker, and Voreen dispatch checkpoint)
+- Top-level commit: `e00a57e` (Code acceptance, NCT blocker, and Voreen retry checkpoint)
 - Pinned submodule: `neurocontainers@15337e04a04ddf0303b610d304c350008df371ea` (Code added after the ANTs, OpenRecon example, Bloch-Siegert, and sigviewer acceptances)
-- Submodule checkout: `arm64/voreen`, candidate `bb08bc1c049e9efe3758067abd5a1839ab76576a` from accepted source `15337e04a04ddf0303b610d304c350008df371ea`; origin `Vbitz/neurocontainers`. The failed NCT candidate remains unaccepted on its pushed branch `arm64/networkcorrespondancetoolkit`.
+- Submodule checkout: `arm64/voreen`, candidate `151c8c5d7b0f7153ea9f71d2e219f8d07632f5d1` from accepted source `15337e04a04ddf0303b610d304c350008df371ea`; origin `Vbitz/neurocontainers`. The failed NCT candidate remains unaccepted on its pushed branch `arm64/networkcorrespondancetoolkit`.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 89 of 247 declarations, refreshed from accepted source `15337e04`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -110,14 +110,17 @@ log, artifact, attempt 1/6, and revisit condition: an upstream ARM64-compatible
 environment lock. No retry is planned.
 
 `voreen` is the next source-build candidate. Investigation started at
-`2026-09-13T05:12:49Z`; deadline `2026-09-13T17:12:49Z`; attempt 1/6.
-Candidate `bb08bc1c049e9efe3758067abd5a1839ab76576a` on branch `arm64/voreen`
+`2026-09-13T05:12:49Z`; deadline `2026-09-13T17:12:49Z`; attempt 2/6.
+Candidate `151c8c5d7b0f7153ea9f71d2e219f8d07632f5d1` on branch `arm64/voreen`
 adds `aarch64` to the existing Ubuntu 24.04 CMake/Qt build and adds a headless
 `voreentool` startup and usage-output assertion to the fulltest. Local
-validation and both architecture generations passed. Exact native dispatch
+validation and both architecture generations passed. Attempt 1
 [34739742820](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34739742820)
-is queued. The result will distinguish a portable source build from a Voreen
-or graphics dependency blocker.
+reached native ARM64 CMake but stopped because Boost package mode could not
+find `boost_math_c99l`; no SIF or fulltest ran. Attempt 2 applies the standard
+module-mode Boost discovery setting `Boost_NO_BOOST_CMAKE=ON`. Exact native
+dispatch [34739991537](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34739991537)
+is in progress.
 
 ## Latest checkpoint
 
