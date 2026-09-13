@@ -54,3 +54,22 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
   `f4a84c7150db1e9a35cb9f26014304a7ed0b3804` on `arm64/itksnap-integrated`.
   Do not advance the top-level pin until the integrated candidate is also
   rebuilt and passes all gates.
+
+The exact retry `34771393155` then reached application compilation and failed
+on narrow Qt 6.4 source compatibility errors: three `QDebug` insertions passed
+`std::string` without an unambiguous overload, and `SNAPQtCommon.cxx` used
+`QTimeZone` without including its definition. ITK and VTK compiled successfully.
+
+## Implementation outcome — 2026-09-14 (continued)
+
+- Candidate `15fb3f7a0699f337fcbe30b7dd1844968f49b173` adds the three
+  `QString::fromStdString` conversions and the missing `QTimeZone` include.
+  Recipe validation and ARM64/x86_64 Dockerfile generation pass.
+- The complete ITK-SNAP change set was replayed onto accepted PyDeface pin
+  `80a84327a6659b0ac79a44f2c1853faa9eb84f4b` as integrated candidate
+  `701e4cd9f3d0bb8dc65b65bb655975b20ba19cfe` on
+  `arm64/itksnap-integrated-80a`.
+- Exact native verification is dispatched as
+  [run 34773851298](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34773851298),
+  attempt 4/6. The top-level pin remains unchanged until this exact SHA
+  passes build, SIF, deploy and fulltest.
