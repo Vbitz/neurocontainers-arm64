@@ -5,16 +5,16 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `3ab93f6` (BrainLes AURORA ARM64 acceptance checkpoint)
-- Pinned submodule: `neurocontainers@68873023` (BrainLes AURORA added after GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
-- Submodule checkout: `arm64/integrate-brainles-aurora`, accepted candidate `68873023` replayed from tested `dc828b57afcfaf21f4613d731b5676dcb16cacaa` onto accepted source `c6371e97`; origin `Vbitz/neurocontainers`. PeTu remains active; failed Voreen and NCT candidates and the assessed preflight branches remain on their pushed branches.
+- Top-level commit: `f46433d` (PeTu ARM64 acceptance checkpoint)
+- Pinned submodule: `neurocontainers@6502b535` (PeTu added after BrainLes AURORA, GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
+- Submodule checkout: `arm64/brainlesion`, candidate `83f5dc95` based on accepted `6502b535`; origin `Vbitz/neurocontainers`. Active BraTS candidate `fd560efd` and BrainLesion candidate `83f5dc95` remain on their pushed branches; failed Voreen and NCT candidates and the assessed preflight branches remain available.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 94 of 247 declarations, refreshed from accepted source `68873023`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 95 of 247 declarations, refreshed from accepted source `6502b535`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Second pass active work
 
-The user-directed second pass is assessing the 159 recipes without ARM64
+The user-directed second pass is assessing the 152 recipes without ARM64
 declarations. It began with `sigviewer`, which has a published Debian bullseye
 ARM64 package at the pinned `0.6.4-1` version. Investigation started at
 `2026-09-13T04:19:41Z`; deadline `2026-09-13T16:19:41Z`; attempt 1/6.
@@ -183,14 +183,38 @@ root commit `9ab887a`. Issue [#225](https://github.com/Vbitz/neurocontainers-arm
 records the result; no duplicate native run was dispatched after the isolated
 replay.
 
-`petu` is the third active bounded CPU candidate. Investigation started at
+`petu` completed as a verified bounded CPU candidate. Investigation started at
 `2026-09-13T05:48:11Z`; deadline `2026-09-13T17:48:11Z`; attempt 1/6.
 Candidate `2cb7b104d99cfe2505e20882dd606f4261499cf3` on branch `arm64/petu`
 adds `aarch64` and selects the official PyPI ARM64 CPU torch package while
 preserving the x86_64 CUDA 12.4 path. Local validation and both architecture
 generations passed. Exact native dispatch
 [34741200931](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34741200931)
-is active in the native ARM64 build stage.
+passed the native ARM64 build, SIF conversion, deploy checks, and fulltest with
+12 passed, 0 failed, and 0 skipped. The recipe commit was replayed as
+`6502b535` on accepted BrainLes AURORA source, and the top-level pin now
+includes it at root commit `f46433d`. Issue
+[#246](https://github.com/Vbitz/neurocontainers-arm64/issues/246) records the
+result; no duplicate native run was dispatched after the isolated replay.
+
+`brats` is an active bounded orchestrator candidate. Investigation started at
+`2026-09-13T06:13:56Z`; deadline `2026-09-13T18:13:56Z`; attempt 1/6.
+Candidate `fd560efddeb3694b9f7319738e0dea40fa7b4dd22` on branch `arm64/brats`
+adds `aarch64`, builds Apptainer 1.4.4 from its official source tarball with
+Go 1.23.6 on ARM64, and preserves the x86_64 Debian package path. Local
+validation and both architecture generations passed. Exact native dispatch
+[34742237759](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34742237759)
+is active.
+
+`brainlesion` is an active dependency-resolution probe. Investigation started at
+`2026-09-13T06:14:35Z`; deadline `2026-09-13T18:14:35Z`; attempt 1/6.
+Candidate `83f5dc9524138a524d901655d7ca9a89899f0256` on branch
+`arm64/brainlesion` adds `aarch64` to the bundle of the ARM64-tested CPU
+components. Local validation and both architecture generations passed. Exact
+native dispatch
+[34742264785](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34742264785)
+is active; the pinned `antspyx==0.6.3` has no Linux ARM64 wheel and is the
+expected first dependency boundary.
 
 `brainles-aurora` completed as a verified bounded CPU candidate. Investigation
 started at `2026-09-13T05:50:32Z`; deadline `2026-09-13T17:50:32Z`; attempt
@@ -384,9 +408,9 @@ ancestry in this checkpoint.
 
 ## Queue
 
-The accepted source contains 153 undeclared recipes after the GlioMODA and
-BrainLes AURORA integrations. A full preflight screen on 2026-09-13 found
-LQT, GlioMODA, Lipsia, BART, PeTu, and BrainLes AURORA as bounded source
+The accepted source contains 152 undeclared recipes after the PeTu
+integration. A full preflight screen on 2026-09-13 found LQT, GlioMODA,
+Lipsia, BART, PeTu, BrainLes AURORA, BraTS, and BrainLesion as bounded source
 candidates; the remaining
 inventory falls into
 these groups:
@@ -1138,6 +1162,7 @@ submodule SHA.
 - `lesionquantificationtoolkit` / `arm64`: run `34740546339`, tested source `afc5c52d`, 101 passed, 0 failed, 0 skipped; issue [#182](https://github.com/Vbitz/neurocontainers-arm64/issues/182). Candidate is integrated at `70663ade` without a duplicate native run.
 - `gliomoda` / `arm64`: run `34740874041`, tested source `a9b7f267`, 17 passed, 0 failed, 0 skipped; issue [#225](https://github.com/Vbitz/neurocontainers-arm64/issues/225). Candidate is integrated at `c6371e97` without a duplicate native run.
 - `brainles-aurora` / `arm64`: run `34741297561`, tested source `dc828b57`, 15 passed, 0 failed, 0 skipped; issue [#237](https://github.com/Vbitz/neurocontainers-arm64/issues/237). Candidate is integrated at `68873023` without a duplicate native run.
+- `petu` / `arm64`: run `34741200931`, tested source `2cb7b104`, 12 passed, 0 failed, 0 skipped; issue [#246](https://github.com/Vbitz/neurocontainers-arm64/issues/246). Candidate is integrated at `6502b535` without a duplicate native run.
 
 ## Blocked or failed results
 
@@ -1188,7 +1213,7 @@ submodule SHA.
 ## Next action
 
 Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed
-from accepted source `68873023` and now reports 94 of 247 declarations.
+from accepted source `6502b535` and now reports 95 of 247 declarations.
 The exact native runs `34708194854` and `34708203749` verified
 `openreconexample` and `blochsiegertb1mapping`, respectively, and their
 independent declarations are integrated at `2884a0e6`. ANTs run
@@ -1197,12 +1222,12 @@ independent declarations are integrated at `2884a0e6`. ANTs run
 36 tests and is integrated at `c34a2103` without a duplicate native run.
 Elastix, emuses, MRIcroGL, OpenADS, FSL, MRtrix3, CPAC, LINDA, PalmettoBUG,
 NCT, and Voreen are recorded as blocked with their revisit conditions. LQT,
-GlioMODA, and BrainLes AURORA are integrated; PeTu run `34741200931` remains
-active. BART run `34740461864` and Lipsia run `34740665171` passed and are
-accepted.
+GlioMODA, BrainLes AURORA, and PeTu are integrated. BraTS run `34742237759`
+and BrainLesion run `34742264785` remain active. BART run `34740461864` and
+Lipsia run `34740665171` passed and are accepted.
 Code's integrated run `34738779168` passed and is accepted at `15337e04`.
 Lipsia is integrated at `dc20187f`, LQT at `70663ade`, GlioMODA at `c6371e97`,
-and BrainLes AURORA at `68873023`, all without duplicate native runs. The next
-action is to monitor PeTu run `34741200931`; once it completes, record its
-outcome and assess the remaining `brats` and `brainlesion` recipes without
-rerunning verified independent work.
+BrainLes AURORA at `68873023`, and PeTu at `6502b535`, all without duplicate
+native runs. The next action is to monitor BraTS run `34742237759` and
+BrainLesion run `34742264785`, record their outcomes, and close the remaining
+inventory with an explicit verified or blocked issue for each recipe.
