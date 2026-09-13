@@ -2,6 +2,33 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after VMTK ARM source candidate preparation
+
+- Root commit: `c57b3642e18f4e8da6c85803eb33f0b215adc68f`; accepted submodule
+  pin remains `3bdd670d17eb6aae64902d1aed8091b2c464a79a` (ROOT, 102/102
+  native checks). Fork Actions is disabled.
+- Active exact investigations:
+  - AFNI integrated replay `8a9e48a7028b53be7b93eb6706a55a6a9ec801e6`, run
+    [34765634289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34765634289).
+  - ITK-SNAP source build `fdf69113`, run
+    [34767223157](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767223157).
+  - PyDeface setuptools compatibility retry `3baa7a0662abfd352ab10f0d8342a12ef157990a`,
+    run [34767487096](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767487096).
+  - BIDSvue Rust 1.86 retry `88dc77ffa13fe277c7b27c174c4b495979f35e36`, run
+    [34767566758](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767566758).
+- Prepared VMTK branch `arm64/vmtk-root` at candidate
+  `7da7a75b`. It adds the ARM Miniforge installer, uses native conda-forge
+  VTK/ITK, and builds VMTK 1.5.0 from its pinned upstream source with the
+  documented system-dependency CMake mode. Validation and both architecture
+  Dockerfile generations pass. Dispatch it when a slot opens.
+- BIDSvue attempt 2 reached the native Rust sidecar build and failed because
+  the locked `icu_*`/`idna_adapter` dependencies require rustc 1.86; that
+  supported toolchain update is now attempt 3. The local submodule checkout is
+  `arm64/vmtk-root` at `7da7a75b`; the root pointer remains intentionally
+  unstaged while native runs execute.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after PyDeface compatibility retry dispatch
 
 - Root commit: `fee983c6374e541aa62a5cef37b06b2b48965055`; accepted submodule
