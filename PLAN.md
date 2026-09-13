@@ -5,12 +5,31 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `ab58a0b` (BraTS ARM64 acceptance checkpoint)
+- Top-level commit: `ea29600` (BraTS ARM64 acceptance checkpoint)
 - Pinned submodule: `neurocontainers@7282a7d3` (BraTS added after PeTu, BrainLes AURORA, GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
 - Submodule checkout: `arm64/integrate-brats`, accepted commits `7093c8f2` and `7282a7d3` replayed from tested BraTS source onto accepted `6502b535`; origin `Vbitz/neurocontainers`. No active builds remain; the BrainLesion candidate is recorded as blocked. Failed Voreen and NCT candidates and the assessed preflight branches remain available.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 96 of 247 declarations, refreshed from accepted source `7282a7d3`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+
+## Focused follow-up active work
+
+The user requested bounded follow-up on promising prior failures. The first
+candidate is `mneextended`, whose previous native ARM64 run failed `pip check`
+because `trame 3.13.2` requires `trame-server<4,>=3.12.2` while the resolved
+server was 4.0.0. Conda-forge publishes `trame-server 3.13.0` as a noarch
+package. Follow-up started at `2026-09-13T07:26:10Z`; it is limited to this
+targeted recipe correction and one native build attempt under the prior
+investigation budget. Issue [#71](https://github.com/Vbitz/neurocontainers-arm64/issues/71)
+has the hypothesis and checkpoint.
+
+Candidate `cd385b882d68ef08fafd8381b388e20f58d65c72` on
+`arm64/mneextended-trame-server` is based on accepted source `7282a7d3` and
+includes the previously tested ARM64 VS Code asset selection, pyedflib wheel
+fallback, and `trame-client<4` correction, plus the new direct
+`trame-server<4` constraint. Recipe validation and ARM64/x86_64 Dockerfile
+generation passed. The branch is pushed; no build is active yet. Next action:
+dispatch this exact SHA and record the run before considering another recipe.
 
 ## Second pass active work
 
