@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `14ec06c` (Voreen retry checkpoint)
+- Top-level commit: `3b6542a` (Voreen blocker and BART dispatch checkpoint)
 - Pinned submodule: `neurocontainers@15337e04a04ddf0303b610d304c350008df371ea` (Code added after the ANTs, OpenRecon example, Bloch-Siegert, and sigviewer acceptances)
-- Submodule checkout: `arm64/voreen`, candidate `151c8c5d7b0f7153ea9f71d2e219f8d07632f5d1` from accepted source `15337e04a04ddf0303b610d304c350008df371ea`; origin `Vbitz/neurocontainers`. The failed NCT candidate remains unaccepted on its pushed branch `arm64/networkcorrespondancetoolkit`.
+- Submodule checkout: `arm64/bart`, candidate `e3f721a72f6e1b1f23d5962118f2873abbcdd203` from accepted source `15337e04a04ddf0303b610d304c350008df371ea`; origin `Vbitz/neurocontainers`. The failed Voreen and NCT candidates remain unaccepted on their pushed branches `arm64/voreen` and `arm64/networkcorrespondancetoolkit`.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 89 of 247 declarations, refreshed from accepted source `15337e04`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -127,6 +127,16 @@ blocked-upstream; no further retry is planned unless Voreen documents an ARM64
 fix or releases updated Boost discovery logic. Issue
 [#117](https://github.com/Vbitz/neurocontainers-arm64/issues/117) has the durable
 failure note and revisit condition.
+
+`bart` is the next bounded CPU/source candidate. Investigation started at
+`2026-09-13T05:29:28Z`; deadline `2026-09-13T17:29:28Z`; attempt 1/6.
+Candidate `e3f721a72f6e1b1f23d5962118f2873abbcdd203` on branch `arm64/bart`
+adds `aarch64`, uses the multi-architecture Ubuntu 22.04 base for ARM64, and
+retains the NVIDIA CUDA base and `CUDA=1` build for x86_64. The ARM64 command
+uses BART's documented `CUDA=0` CPU build. Local validation and ARM64 and
+x86_64 Dockerfile generation passed. Exact native dispatch
+[34740461864](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34740461864)
+is queued.
 
 ## Latest checkpoint
 
@@ -306,11 +316,9 @@ ancestry in this checkpoint.
 
 ## Queue
 
-The accepted source contains 159 undeclared recipes after the sigviewer
-integration. A full preflight screen on 2026-09-13 found no additional bounded
-candidate with an official ARM64 asset, a usable multi-architecture base, or a
-documented portable source build. The remaining inventory falls into these
-groups:
+The accepted source contains 158 undeclared recipes after the sigviewer
+integration. A full preflight screen on 2026-09-13 found BART as a bounded CPU
+source candidate; the remaining inventory falls into these groups:
 
 - fixed x86_64 or amd64 downloads and containers, including AFNI, ASHS, BIDS
   Apps, BrainSuite, Cartool, Connectome Workbench, Convert3D, DSI Studio,
@@ -1066,6 +1074,7 @@ submodule SHA.
 - `palmettobug` / `arm64`: exact run `34738541920`, candidate `0482f4d7`, failed during package installation because the pinned `PySide6==6.4.3` has no ARM64 distribution. Issue [#98](https://github.com/Vbitz/neurocontainers-arm64/issues/98) records the blocked-upstream result and revisit condition.
 - `networkcorrespondancetoolkit` / `arm64`: exact run `34739158124`, candidate `95e84c71`, failed during Conda environment creation because the upstream lock pins `ca-certificates==2024.6.2=hbcca054_0`, unavailable for `linux-aarch64`. Issue [#99](https://github.com/Vbitz/neurocontainers-arm64/issues/99) records the blocked-upstream result and revisit condition.
 - `voreen` / `arm64`: exact runs `34739742820` and `34739991537`, candidates `bb08bc1c` and `151c8c5d`, both stopped in native ARM64 CMake configuration before compilation. Voreen 5.3.0's bundled `FindBoostVRN.cmake` requests `math_c99l` and `math_tr1l`, unavailable from Ubuntu 24.04's ARM64 Boost 1.83.0 packages; package mode and module mode both fail. Issue [#117](https://github.com/Vbitz/neurocontainers-arm64/issues/117) records the blocked-upstream result and revisit condition.
+- `bart` / `arm64`: exact dispatch `34740461864`, candidate `e3f721a7`, is queued after local validation and both architecture generations passed. The ARM64 path uses upstream BART's `CUDA=0` CPU build; the x86_64 CUDA path is preserved.
 
 ## Integration
 
@@ -1099,6 +1108,7 @@ independent declarations are integrated at `2884a0e6`. ANTs run
 `88fb8513` without a duplicate native run. Sigviewer run `34737708431` passed
 36 tests and is integrated at `c34a2103` without a duplicate native run.
 Elastix, emuses, MRIcroGL, PalmettoBUG, NCT, and Voreen are recorded as blocked
-with their revisit conditions. Code's integrated run `34738779168` passed and is
-accepted at `15337e04`. The next action is to continue the remaining undeclared
-inventory without rerunning verified recipes.
+with their revisit conditions. BART run `34740461864` is active. Code's
+integrated run `34738779168` passed and is accepted at `15337e04`. The next
+action is to monitor BART and continue the remaining undeclared inventory
+without rerunning verified recipes.
