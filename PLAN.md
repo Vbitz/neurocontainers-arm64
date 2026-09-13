@@ -36,6 +36,10 @@
   `ad9ee486bb7898bdb2fa9e0265a876a7c5c16288` on `arm64/blender-integrated`.
   The prior run `34763788910` timed out downloading GMP 6.3.0; dispatch exactly
   one unchanged retry when a slot opens.
+- Prepared ITK-SNAP integration candidate `f4a84c7150db1e9a35cb9f26014304a7ed0b3804`
+  on `arm64/itksnap-integrated`, replaying the source-build fixes onto the
+  accepted pin. Local validation and both architecture generations pass; use
+  this exact SHA for the next ITK-SNAP run only if `34771393155` is green.
 
 ## Latest implementation checkpoint — 2026-09-14
 

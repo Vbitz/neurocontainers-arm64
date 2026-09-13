@@ -32,3 +32,25 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/it
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation outcome — 2026-09-14
+
+- Candidate `7ceabea5d97151a98cf6655055729804870b33ee` on
+  `arm64/itksnap-root` built ITK 5.4.3 and VTK 9.3.1 natively, including the
+  required `RenderingExternal` module, but its final ITK-SNAP configure failed
+  before compiling the application. The first actionable errors were the
+  source archive's missing Git metadata (`get_git_commit_date`) and the pinned
+  source's Qt 6.7 style translation/deployment API on Ubuntu Qt 6.4.2
+  (`qt_generate_deploy_script` was unknown; the newer translation signature
+  also produced a bad qrc input path). This is recorded in
+  [run 34769119103](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769119103).
+- A targeted recipe-level retry `905404b1facd8697ba2e0d3e641d0ab60c351a98`
+  adds an empty archive Git commit, maps the translation call to Qt 6.4's
+  `qt6_add_translations`, omits only the unavailable optional deployment helper
+  so system Qt plugins are used, and corrects the installed main executable
+  path. Local validation and ARM64/x86_64 generation pass.
+- The exact native retry is [run 34771393155](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771393155),
+  currently in progress. Its accepted-base replay is prepared as
+  `f4a84c7150db1e9a35cb9f26014304a7ed0b3804` on `arm64/itksnap-integrated`.
+  Do not advance the top-level pin until the integrated candidate is also
+  rebuilt and passes all gates.
