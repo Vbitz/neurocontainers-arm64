@@ -5,7 +5,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `8d0d507` (sigviewer and second-pass blocker checkpoint)
+- Top-level commit: `2e1b46b` (PalmettoBUG dispatch checkpoint)
 - Pinned submodule: `neurocontainers@c34a2103117399b31000f4d74bb378482e03f691` (sigviewer added after the ANTs, OpenRecon example, and Bloch-Siegert acceptances)
 - Submodule checkout: `arm64/palmettobug`, candidate `0482f4d71952b2a1cec16005bdcbbc50de6c92a0` from accepted source `c34a2103117399b31000f4d74bb378482e03f691`; origin `Vbitz/neurocontainers`. The top-level worktree has the expected unaccepted submodule pointer change while the Code and PalmettoBUG candidates run.
 - Fork Actions: disabled (`enabled: false`)
@@ -44,7 +44,7 @@ error, artifact, and revisit condition. Attempts: 2/6; no retry is planned
 until upstream publishes a compatible ARM64 Triton release or updates the
 locked dependency. The malformed run is retained only as bookkeeping.
 
-`code` is the third-second-pass candidate. Investigation started at
+`code` was the third-second-pass candidate. Investigation started at
 `2026-09-13T04:27:26Z`; deadline `2026-09-13T16:27:26Z`. Candidate
 `1cc5c3e34b1e3f5f1151caadb62e5b5c634133a9` on branch `arm64/code` adds
 architecture-specific official assets for VS Code, Julia 1.6.3, and Go 1.17.2
@@ -53,8 +53,12 @@ generations passed. Attempt 1 [34738038980](https://github.com/Vbitz/neurocontai
 was cancelled before recipe checkout after a malformed ref was detected and
 has no recipe evidence. Corrected attempt 2/6 is
 [34738072738](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34738072738),
-queued for native ARM64 capacity. Next action: verify its source SHA and
-assess the build/runtime result.
+completed exact native ARM64 run [34738072738](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34738072738)
+with the candidate source checked out. Docker build, SIF conversion, deploy
+checks, and fulltest passed with 84 passed, 0 failed, and 0 skipped. Its
+candidate predates the accepted sigviewer pin, so the next action is to replay
+only the Code recipe commit onto accepted source `c34a2103`, validate both
+architectures, and dispatch that integrated SHA once before acceptance.
 
 `mricrogl` is blocked at preflight. The pinned 1.2.20211006 release provides
 only x86_64 Linux MRIcroGL archives, and its required libqt5pas 1.2.9 release
@@ -72,6 +76,11 @@ generations passed. Exact native dispatch
 [34738541920](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34738541920)
 is queued. Next action: verify its source SHA and inspect the fixed dependency
 set's native ARM64 build result.
+
+Code's successful run is recorded in issue [#95](https://github.com/Vbitz/neurocontainers-arm64/issues/95).
+The original malformed-ref dispatch remains metadata-only. PalmettoBUG run
+`34738541920` remains the only active native build; no unchanged successful
+recipe has been rerun.
 
 ## Latest checkpoint
 
