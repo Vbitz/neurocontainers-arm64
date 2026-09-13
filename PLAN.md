@@ -2,21 +2,19 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
-### Checkpoint after PyDeface integration dispatch and ITK-SNAP Qt retry
+### Checkpoint after PyDeface acceptance and Blender retry dispatch
 
-- Top-level parent commit: `2f8c410`; accepted submodule pin remains
-  `ba7af5842b2c41dbc98ffd8d1e25431acf19a7db` (BIDSvue on top of AFNI,
-  5/5 native fulltests). Fork Actions remains disabled (`enabled: false`).
+- Top-level parent commit: `6da579a`; accepted submodule pin is now
+  `80a84327a6659b0ac79a44f2c1853faa9eb84f4b` (PyDeface integrated on BIDSvue;
+  native 60/60 fulltests in [run 34771433995](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771433995)).
+  Fork Actions remains disabled (`enabled: false`), and coverage issue #2 was
+  refreshed after acceptance.
 - Active exact investigations (four build slots):
   - ITK-SNAP candidate `905404b1facd8697ba2e0d3e641d0ab60c351a98`, run
     [34771393155](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771393155),
     attempt 3/6. This retry supplies Git metadata for the source archive,
     adapts Qt 6.7 translation/deployment configuration to Ubuntu Qt 6.4,
     and corrects the installed main-binary path.
-  - PyDeface integrated candidate `80a84327a6659b0ac79a44f2c1853faa9eb84f4b`,
-    run [34771433995](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771433995),
-    attempt 1/6. The preceding candidate passed 60/60 native fulltests;
-    this exact SHA is replayed onto the accepted BIDSvue pin.
   - MIMoSA `c58b71e8e7400e0beb6026201b323c5d7aa3916d`, run
     [34773252089](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34773252089),
     attempt 3/6. The FSL correction reached ANTsRCore but its R Makevars
@@ -27,23 +25,24 @@
     attempt 2/6. The first source candidate built and passed deploy checks;
     only the five-operation phase-scaling test exceeded its 120-second test
     limit, so this retry raises that test limit to 300 seconds.
+  - Blender candidate `ad9ee486bb7898bdb2fa9e0265a876a7c5c16288`, run
+    [34773488949](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34773488949),
+    attempt 2/6. This is the one permitted unchanged retry for the prior GMP
+    download timeout; stop this investigation if the endpoint fails again or
+    exposes a non-transient blocker.
 - mritools is blocked-upstream after two native attempts. CompileMRI.jl v3.3.0
   reaches ARM64 Julia dependency setup but its released App bootstrap leaves
   incompatible `RomeoApp`/`ClearswiApp`/`MriResearchTools` dependencies; issue
   #156 and `plans/mritools.md` contain both runs and the exact errors.
-- Local submodule checkout is `arm64/mimosa-bids` at
-  `c58b71e8e7400e0beb6026201b323c5d7aa3916d`; the active source branches and
-  exact run IDs are recorded above. Do not stage the top-level pointer until
-  the integrated PyDeface, ITK-SNAP, MIMoSA and CLEARSWI candidates pass their
-  full gates.
-- Prepared transient retry: Blender commits replayed onto the accepted pin as
-  `ad9ee486bb7898bdb2fa9e0265a876a7c5c16288` on `arm64/blender-integrated`.
-  The prior run `34763788910` timed out downloading GMP 6.3.0; dispatch exactly
-  one unchanged retry when a slot opens.
+- Local submodule checkout is `arm64/blender-integrated` at
+  `ad9ee486bb7898bdb2fa9e0265a876a7c5c16288`; the active source branches and
+  exact run IDs are recorded above. PyDeface is accepted; the remaining
+  candidates must be replayed onto this newer pin before their own acceptance.
 - Prepared ITK-SNAP integration candidate `f4a84c7150db1e9a35cb9f26014304a7ed0b3804`
   on `arm64/itksnap-integrated`, replaying the source-build fixes onto the
-  accepted pin. Local validation and both architecture generations pass; use
-  this exact SHA for the next ITK-SNAP run only if `34771393155` is green.
+  prior accepted pin. Local validation and both architecture generations pass;
+  if `34771393155` is green, replay these commits onto `80a84327` and rerun
+  that exact integrated candidate before acceptance.
 
 ## Latest implementation checkpoint — 2026-09-14
 
