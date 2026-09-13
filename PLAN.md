@@ -1533,3 +1533,13 @@ unchanged verification.
 - gigaconnectome unchanged retry [34757066283](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34757066283) reproduced the Debian Bullseye package mirror 404 before application installation. This is now a recipe/base maintenance decision, not evidence of an application dependency blocker.
 - DeepLabCut replay candidate `0b386176700eaaf42bc213de235238c8ce5f3ef8` is validated and pushed, awaiting a slot. SovaBIDS candidate `a4757fef0ea1c5723e264a9bf6fa41e10dadcad3` remains active in [34756526235](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756526235).
 - The gigaconnectome retry and rsHRF exact run are complete, so two slots are free after the rsHRF acceptance bookkeeping. Next action: commit the rsHRF pointer, refresh coverage, dispatch the exact DeepLabCut replay, and use the remaining slot for a targeted gigaconnectome base-image fix or the prepared ROMEO source route.
+
+## Active implementation checkpoint — 2026-09-13 22:38 Australia/Brisbane
+
+- Accepted submodule pin is `9b60afc24a471a606cb2145b36a21c9b01cd089b` and the root acceptance commit is `ecd3fd56d5963992ec6310c4104172d0606b6972`. The local submodule is back on `arm64/integrate-rshrf-megnet`; fork Actions remains disabled.
+- DeepLabCut candidate `0ed4b3c91637e7bee190bbfb66ba2ddfa0edbeeb` is based on the accepted pin and is in exact native run [34757340002](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34757340002).
+- SovaBIDS candidate `a4757fef0ea1c5723e264a9bf6fa41e10dadcad3` is in corrected exact run [34756526235](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756526235); the earlier mistyped-SHA run is checkout metadata only.
+- gigaconnectome candidate `dc1439d82ec42fd3cb5b38e85ca1d5800a3484b2` changes the ARM64 base from Bullseye to the official ARM64-capable Python 3.9 Bookworm image after two reproducible Debian mirror 404 failures. It is in run [34757505350](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34757505350).
+- ROMEO candidate `0291d268b03c1840639d452f5be7952edd73d01c` is replayed onto the accepted pin, validated for ARM64 and x86_64 generation, and is in run [34757529921](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34757529921).
+- Four runner slots are occupied. DSI Studio remains a bounded failed-runtime blocker at 79/84 checks; its issue comment records the five required AutoTrack failures. LST-AI remains blocked by its bundled x86-64 `greedy` binary.
+- Next action: reconcile the four exact runs, accept only candidates whose exact source SHA and fulltest pass are confirmed, then refill each completed slot from the next feasible research plan while replaying candidates onto any newer accepted pin.
