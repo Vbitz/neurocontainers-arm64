@@ -2,6 +2,29 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after VMTK blocker and MIMoSA dispatch
+
+- Root commit: `6548925`; accepted submodule pin remains
+  `ba7af5842b2c41dbc98ffd8d1e25431acf19a7db` (BIDSvue on top of AFNI,
+  5/5 native fulltests). Fork Actions is disabled.
+- Active exact investigations:
+  - ITK-SNAP candidate `7ceabea5d97151a98cf6655055729804870b33ee`, run
+    [34769119103](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769119103),
+    attempt 2/6.
+  - PyDeface candidate `90ee2948253826e0413ca90be894f381d10009eb`, run
+    [34769469302](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769469302),
+    attempt 4/6.
+  - MIMoSA candidate `3ca09fbd6a8ab952d7189bbac2d1c85860571d0f`, run
+    [34769582813](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769582813),
+    attempt 1/6, testing the existing native R/ANTsR/FSL path.
+- VMTK candidate `974bb148` is blocked-upstream after native VTK 9.1
+  compilation failed in `vtkSEPReader.cxx`; issue #240 records the exact
+  compiler errors and revisit condition. The local submodule checkout is
+  `arm64/bidsvue-afni` at the accepted `ba7af584`; no candidate pointer is
+  pending integration.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after BIDSvue acceptance and PyDeface retry dispatch
 
 - Root commit: `2a9c2ab`; accepted submodule pin is now
