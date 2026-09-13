@@ -2,6 +2,31 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after BIDSvue launcher-path retry dispatch
+
+- Root commit: `9a9cd6fc3b7baae48913afd53e66a64c75f64b8c`; accepted submodule
+  pin remains `8a9e48a7028b53be7b93eb6706a55a6a9ec801e6` (AFNI, 114/114
+  native checks). Fork Actions is disabled.
+- Active exact investigations:
+  - ITK-SNAP `fdf69113`, run
+    [34767223157](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767223157).
+  - PyDeface `3baa7a0662abfd352ab10f0d8342a12ef157990a`, run
+    [34767487096](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34767487096).
+  - VMTK `974bb14826c93d9836203186ed6335a82a4e6320`, run
+    [34768651549](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34768651549),
+    attempt 4/6.
+  - BIDSvue `ba7af5842b2c41dbc98ffd8d1e25431acf19a7db`, run
+    [34768724186](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34768724186),
+    attempt 5/6, correcting the ARM launcher path after the source build
+    reached 3/4 fulltest checks.
+- BIDSvue’s Rust 1.88 candidate built and passed desktop metadata and runtime
+  library checks; only `/usr/local/bin` versus the required `/usr/bin` launcher
+  path failed. The local submodule checkout is `arm64/bidsvue-afni` at
+  `ba7af584`; the root pointer remains intentionally unstaged while native runs
+  execute.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after VMTK CMake compatibility retry
 
 - Root commit: `7f36f264aae7052ee161779b3a275c091c9a1fe7`; accepted submodule
