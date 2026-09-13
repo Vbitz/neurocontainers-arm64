@@ -7,7 +7,7 @@ Updated: 2026-09-13 (Australia/Brisbane)
 - Top-level branch: `main`
 - Top-level commit: `7bb4561` (Lipsia ARM64 acceptance checkpoint)
 - Pinned submodule: `neurocontainers@dc20187f` (Lipsia added after BART and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
-- Submodule checkout: `arm64/integrate-lipsia`, accepted candidate `dc20187f` replayed from tested `01ea960b11e8c47698b02c93f9ce99007ca50be2` onto accepted source `e3f721a72f6e1b1f23d5962118f2873abbcdd203`; origin `Vbitz/neurocontainers`. Active LQT and GlioMODA candidates and failed Voreen and NCT candidates remain on their pushed branches.
+- Submodule checkout: `arm64/petu`, candidate `2cb7b104d99cfe2505e20882dd606f4261499cf3` from accepted source `dc20187fa9f4accf0193813fd6c6cbd17d1b2809`; origin `Vbitz/neurocontainers`. Active LQT, GlioMODA, and PeTu candidates and failed Voreen and NCT candidates remain on their pushed branches.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 91 of 247 declarations, refreshed from accepted source `dc20187f`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -171,6 +171,15 @@ Candidate `a9b7f2675cd9553388d30aa7df2bcdc053fa058d` on branch
 package while preserving the x86_64 CUDA 12.4 path. Local validation and both
 architecture generations passed. Exact native dispatch
 [34740874041](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34740874041)
+is active in the native ARM64 build stage.
+
+`petu` is the third active bounded CPU candidate. Investigation started at
+`2026-09-13T05:48:11Z`; deadline `2026-09-13T17:48:11Z`; attempt 1/6.
+Candidate `2cb7b104d99cfe2505e20882dd606f4261499cf3` on branch `arm64/petu`
+adds `aarch64` and selects the official PyPI ARM64 CPU torch package while
+preserving the x86_64 CUDA 12.4 path. Local validation and both architecture
+generations passed. Exact native dispatch
+[34741200931](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34741200931)
 is active in the native ARM64 build stage.
 
 ## Latest checkpoint
@@ -351,9 +360,10 @@ ancestry in this checkpoint.
 
 ## Queue
 
-The accepted source contains 157 undeclared recipes after the BART
-integration. A full preflight screen on 2026-09-13 found BART, LQT, and Lipsia
-as bounded source candidates; the remaining inventory falls into these groups:
+The accepted source contains 156 undeclared recipes after the Lipsia
+integration. A full preflight screen on 2026-09-13 found LQT, GlioMODA, Lipsia,
+BART, and PeTu as bounded source candidates; the remaining inventory falls into
+these groups:
 
 - fixed x86_64 or amd64 downloads and containers, including AFNI, ASHS, BIDS
   Apps, BrainSuite, Cartool, Connectome Workbench, Convert3D, DSI Studio,
@@ -361,7 +371,7 @@ as bounded source candidates; the remaining inventory falls into these groups:
   Slicer, SPM variants, TrackVis, and the standalone proprietary tools;
 - GPU-only or GPU-weighted recipes whose pinned CUDA images, wheels, or model
   assets have no native ARM64 path, including BraTS, DeepRetinotopy, DeepWMH,
-  FastCSR, GlioMODA, OpenMSK, PeTu, RELION, SynthSeg, TopoFit, and VesselBoost;
+  FastCSR, OpenMSK, RELION, SynthSeg, TopoFit, and VesselBoost;
 - multi-architecture base images or package environments without an ARM64
   release path established during screening, including ASLPrep, BIDS Apps,
   fMRIPrep, Halfpipe, Nibabies, NiftyMIC, qsiprep/qsirecon, rsHRF, and xcp-d;
@@ -1146,8 +1156,9 @@ independent declarations are integrated at `2884a0e6`. ANTs run
 `88fb8513` without a duplicate native run. Sigviewer run `34737708431` passed
 36 tests and is integrated at `c34a2103` without a duplicate native run.
 Elastix, emuses, MRIcroGL, PalmettoBUG, NCT, and Voreen are recorded as blocked
-with their revisit conditions. LQT run `34740546339` and Lipsia run
-`34740665171` are active. BART run `34740461864` passed and is accepted.
+with their revisit conditions. LQT run `34740546339`, GlioMODA run
+`34740874041`, and PeTu run `34741200931` are active. BART run `34740461864`
+and Lipsia run `34740665171` passed and are accepted.
 Code's
 integrated run `34738779168` passed and is accepted at `15337e04`. Lipsia is
 integrated at `dc20187f` without a duplicate native run. The next action is to
