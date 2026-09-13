@@ -22,6 +22,11 @@
   compiler errors and revisit condition. The local submodule checkout is
   `arm64/bidsvue-afni` at the accepted `ba7af584`; no candidate pointer is
   pending integration.
+- Prepared next candidate: mritools `1304e3bd5ba0694b92bcaeae838167f2767fa164`
+  on `arm64/mritools-bids`, based on the accepted BIDSvue pin. It uses the
+  upstream CompileMRI.jl source build and official Julia Linux AArch64 binary;
+  local validation and both architecture generations pass. Dispatch it after
+  MIMoSA or another active run frees a slot.
 
 ## Latest implementation checkpoint — 2026-09-14
 
