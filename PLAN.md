@@ -5,9 +5,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `57cead5` (focused ARM64 outcomes checkpoint)
+- Top-level commit: `957063c` (BrainLesion follow-up checkpoint)
 - Pinned submodule: `neurocontainers@7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0` (MNE-Extended added after BraTS, PeTu, BrainLes AURORA, GlioMODA, LQT, Lipsia, BART, and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
-- Submodule checkout: `arm64/brainlesion-build-deps`, candidate `9d8d71cbff92fcce2e79ad0c6d464f494427376e` based on accepted `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`; native run `34747415296` is active. Origin `Vbitz/neurocontainers`. MNE-Extended is accepted; NCT and the earlier BrainLesion candidate are recorded as blocked; failed Voreen candidates and assessed preflight branches remain available.
+- Submodule checkout: `arm64/brainlesion-build-deps`, candidate `fc0e838959b69665233dac90b63bdf9c3c4797c9` based on accepted `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`; native run `34747574400` is active. Origin `Vbitz/neurocontainers`. MNE-Extended is accepted; NCT and the earlier BrainLesion candidate are recorded as blocked; failed Voreen candidates and assessed preflight branches remain available.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
 - Coverage snapshot: 97 of 247 declarations, refreshed from accepted source `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
@@ -75,10 +75,14 @@ current accepted pin. Candidate `9d8d71cbff92fcce2e79ad0c6d464f494427376e` on
 previous `antspyx==0.6.3` source fallback error where CMake could not find
 `CXX=g++`; ARM64 and x86_64 validation and Dockerfile generation passed. Native
 run [34747415296](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34747415296)
-was dispatched at `2026-09-13T08:20:00Z`; issue #247 records the hypothesis,
-start/deadline, and bounded attempt. Classify the first post-compiler error
-before any further edit; stop if it requires ANTs or another upstream native
-dependency port.
+was dispatched at `2026-09-13T08:20:00Z` and confirmed that g++ was found, but
+the antspyx source setup also needed git and make. Candidate
+`fc0e838959b69665233dac90b63bdf9c3c4797c9` replaces the standalone compiler
+with `build-essential` and adds git. Its native run
+[34747574400](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34747574400)
+was dispatched at `2026-09-13T08:23:45Z`; issue #247 records the hypothesis,
+start/deadline, and bounded attempt. Classify the first post-toolchain error;
+stop if it requires ANTs or another upstream native dependency port.
 
 ## Second pass active work
 
