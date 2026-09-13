@@ -5,12 +5,12 @@ Updated: 2026-09-13 (Australia/Brisbane)
 ## Current state
 
 - Top-level branch: `main`
-- Top-level commit: `80dcd50` (BART ARM64 acceptance checkpoint)
-- Pinned submodule: `neurocontainers@e3f721a72f6e1b1f23d5962118f2873abbcdd203` (BART added after the ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
-- Submodule checkout: `arm64/bart`, tested candidate `e3f721a72f6e1b1f23d5962118f2873abbcdd203` from accepted source `15337e04a04ddf0303b610d304c350008df371ea`; origin `Vbitz/neurocontainers`. The active LQT and Lipsia candidates and failed Voreen and NCT candidates remain unaccepted on their pushed branches.
+- Top-level commit: `7bb4561` (Lipsia ARM64 acceptance checkpoint)
+- Pinned submodule: `neurocontainers@dc20187f` (Lipsia added after BART and the earlier ANTs, OpenRecon example, Bloch-Siegert, sigviewer, and Code acceptances)
+- Submodule checkout: `arm64/integrate-lipsia`, accepted candidate `dc20187f` replayed from tested `01ea960b11e8c47698b02c93f9ce99007ca50be2` onto accepted source `e3f721a72f6e1b1f23d5962118f2873abbcdd203`; origin `Vbitz/neurocontainers`. Active LQT and GlioMODA candidates and failed Voreen and NCT candidates remain on their pushed branches.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 90 of 247 declarations, refreshed from accepted source `e3f721a7`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 91 of 247 declarations, refreshed from accepted source `dc20187f`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
 ## Second pass active work
 
@@ -141,7 +141,7 @@ passed, 0 failed, and 0 skipped. Issue [#180](https://github.com/Vbitz/neurocont
 records the verified result. The candidate is accepted in the current
 top-level pin without a duplicate native run.
 
-`lesionquantificationtoolkit` is the second active bounded source candidate.
+`lesionquantificationtoolkit` is the active bounded source candidate.
 Investigation started at `2026-09-13T05:31:57Z`; deadline
 `2026-09-13T17:31:57Z`; attempt 1/6. Candidate
 `afc5c52d0d5d32e3d02c3fa1a94562274016f803` on branch
@@ -149,9 +149,9 @@ Investigation started at `2026-09-13T05:31:57Z`; deadline
 source build and preserves the existing R package installation and fulltest.
 Local validation and ARM64 and x86_64 Dockerfile generation passed. Exact
 native dispatch [34740546339](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34740546339)
-is queued.
+is active in the native ARM64 build stage.
 
-`lipsia` is the third active source candidate. Investigation started at
+`lipsia` completed as a verified source candidate. Investigation started at
 `2026-09-13T05:34:46Z`; deadline `2026-09-13T17:34:46Z`; attempt 1/6.
 Candidate `01ea960b11e8c47698b02c93f9ce99007ca50be2` on branch `arm64/lipsia`
 adds `aarch64` to the tagged Linux source build, whose setup script selects
@@ -159,7 +159,19 @@ the native GCC/G++ toolchain and the recipe supplies system GSL, Boost, and
 OpenBLAS. Local validation and ARM64 and x86_64 Dockerfile generation passed.
 Exact native dispatch
 [34740665171](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34740665171)
-is queued.
+passed the native ARM64 build, SIF conversion, deploy checks, and fulltest with
+101 passed, 0 failed, and 0 skipped. Issue [#181](https://github.com/Vbitz/neurocontainers-arm64/issues/181)
+records the result. Its one-line declaration was replayed as `dc20187f` onto
+the current accepted pin and integrated without a duplicate native run.
+
+`gliomoda` is the second active bounded CPU candidate. Investigation started at
+`2026-09-13T05:38:52Z`; deadline `2026-09-13T17:38:52Z`; attempt 1/6.
+Candidate `a9b7f2675cd9553388d30aa7df2bcdc053fa058d` on branch
+`arm64/gliomoda` adds `aarch64` and selects the official PyPI ARM64 CPU torch
+package while preserving the x86_64 CUDA 12.4 path. Local validation and both
+architecture generations passed. Exact native dispatch
+[34740874041](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34740874041)
+is active in the native ARM64 build stage.
 
 ## Latest checkpoint
 
@@ -1080,6 +1092,7 @@ submodule SHA.
 - `blochsiegertb1mapping` / `arm64`: run `34708203749`, tested source `93a11a16`, 2 passed, 0 failed, 0 skipped; issue [#91](https://github.com/Vbitz/neurocontainers-arm64/issues/91). Candidate is integrated at `2884a0e6` without a duplicate native run.
 - `ants` / `arm64`: run `34706765954`, tested source `f48620a9`, 103 passed, 0 failed, 0 skipped; issue [#93](https://github.com/Vbitz/neurocontainers-arm64/issues/93). Candidate is integrated at `88fb8513` without a duplicate native run.
 - `sigviewer` / `arm64`: run `34737708431`, tested source `c34a2103`, 36 passed, 0 failed, 0 skipped; issue [#96](https://github.com/Vbitz/neurocontainers-arm64/issues/96). Candidate is integrated at `c34a2103` without a duplicate native run.
+- `lipsia` / `arm64`: run `34740665171`, tested source `01ea960b`, 101 passed, 0 failed, 0 skipped; issue [#181](https://github.com/Vbitz/neurocontainers-arm64/issues/181). Candidate is integrated at `dc20187f` without a duplicate native run.
 
 ## Blocked or failed results
 
@@ -1097,21 +1110,22 @@ submodule SHA.
 - `palmettobug` / `arm64`: exact run `34738541920`, candidate `0482f4d7`, failed during package installation because the pinned `PySide6==6.4.3` has no ARM64 distribution. Issue [#98](https://github.com/Vbitz/neurocontainers-arm64/issues/98) records the blocked-upstream result and revisit condition.
 - `networkcorrespondancetoolkit` / `arm64`: exact run `34739158124`, candidate `95e84c71`, failed during Conda environment creation because the upstream lock pins `ca-certificates==2024.6.2=hbcca054_0`, unavailable for `linux-aarch64`. Issue [#99](https://github.com/Vbitz/neurocontainers-arm64/issues/99) records the blocked-upstream result and revisit condition.
 - `voreen` / `arm64`: exact runs `34739742820` and `34739991537`, candidates `bb08bc1c` and `151c8c5d`, both stopped in native ARM64 CMake configuration before compilation. Voreen 5.3.0's bundled `FindBoostVRN.cmake` requests `math_c99l` and `math_tr1l`, unavailable from Ubuntu 24.04's ARM64 Boost 1.83.0 packages; package mode and module mode both fail. Issue [#117](https://github.com/Vbitz/neurocontainers-arm64/issues/117) records the blocked-upstream result and revisit condition.
-- `bart` / `arm64`: exact dispatch `34740461864`, candidate `e3f721a7`, passed all gates with 117 passed, 0 failed, and 0 skipped. The ARM64 path uses upstream BART's `CUDA=0` CPU build; the x86_64 CUDA path is preserved. Issue [#180](https://github.com/Vbitz/neurocontainers-arm64/issues/180) records the verified result; the candidate is accepted at the next top-level checkpoint.
+- `bart` / `arm64`: exact dispatch `34740461864`, candidate `e3f721a7`, passed all gates with 117 passed, 0 failed, and 0 skipped. The ARM64 path uses upstream BART's `CUDA=0` CPU build; the x86_64 CUDA path is preserved. Issue [#180](https://github.com/Vbitz/neurocontainers-arm64/issues/180) records the verified result; the candidate is accepted at `e3f721a7`.
 - `lesionquantificationtoolkit` / `arm64`: exact dispatch `34740546339`, candidate `afc5c52d`, remains active after local validation and both architecture generations passed. The change only declares ARM64 for the existing Ubuntu 24.04 R source build.
 
 ## Integration
 
-- Accepted integration SHA: `e3f721a72f6e1b1f23d5962118f2873abbcdd203`
+- Accepted integration SHA: `dc20187fa9f4accf0193813fd6c6cbd17d1b2809`
 - Top-level submodule pointer accepts the tested MNE, SynthStroke, QSMbly,
   VertexWiseR, Deep Quality Estimation, Template, GingerALE, OpenRecon I2I,
   MipView, Sodiumgridding, Sodiumnufft, qMRLab, Epirecon, Sodiumgriddingptpi,
   SynthStrip, PALM, wfTFI, OpenRecon example, Bloch-Siegert, ANTs, sigviewer,
-  and Code integrations. The earlier SynthStrip exact candidate run
+  and Code, BART, and Lipsia integrations. The earlier SynthStrip exact candidate run
   passed and was integrated by ancestry; its stale duplicate integration run
   also passed 70 tests and is bookkeeping only. PALM and ANTs are integrated;
   the ANTs exact native ARM64 run passed 103 tests, and sigviewer passed 36
-  tests. Code's integrated run passed 84 tests. Elastix is recorded as a
+  tests. Code's integrated run passed 84 tests, BART passed 117 tests, and
+  Lipsia passed 101 tests. Elastix is recorded as a
   preflight upstream blocker; emuses is blocked by its locked Triton dependency,
   MRIcroGL by unavailable ARM64 binaries, PalmettoBUG by its pinned PySide6
   dependency, and NCT by its x86-specific Conda lock.
@@ -1124,7 +1138,7 @@ submodule SHA.
 ## Next action
 
 Issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed
-from accepted source `e3f721a7` and now reports 90 of 247 declarations.
+from accepted source `dc20187f` and now reports 91 of 247 declarations.
 The exact native runs `34708194854` and `34708203749` verified
 `openreconexample` and `blochsiegertb1mapping`, respectively, and their
 independent declarations are integrated at `2884a0e6`. ANTs run
@@ -1135,6 +1149,7 @@ Elastix, emuses, MRIcroGL, PalmettoBUG, NCT, and Voreen are recorded as blocked
 with their revisit conditions. LQT run `34740546339` and Lipsia run
 `34740665171` are active. BART run `34740461864` passed and is accepted.
 Code's
-integrated run `34738779168` passed and is accepted at `15337e04`. The next
-action is to monitor LQT and Lipsia and continue the remaining undeclared inventory
+integrated run `34738779168` passed and is accepted at `15337e04`. Lipsia is
+integrated at `dc20187f` without a duplicate native run. The next action is to
+monitor LQT and GlioMODA and continue the remaining undeclared inventory
 without rerunning verified recipes.
