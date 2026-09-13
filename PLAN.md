@@ -34,7 +34,12 @@ was dispatched at `2026-09-13T07:28:48Z` with `upload_image=false`; inspect its
 result before considering another recipe. It passed native ARM64 build, SIF
 conversion, deploy checks, and fulltest with 111 passed, 0 failed, and 0
 skipped. Issue #71 records the verified candidate; serial replay onto the
-accepted pin is the next action.
+accepted pin produced integrated SHA `7bffacf617a8e2b65f00f9e8aa5e7e70d11cba0`
+on `arm64/integrate-mneextended-trame`. Local validation and both architecture
+generations passed. Exact serial native ARM64 run
+[34746072594](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34746072594)
+was created at `2026-09-13T07:47:00Z` with `upload_image=false`; advance the
+top-level pin only after this exact integrated SHA passes.
 
 `networkcorrespondancetoolkit` is the second focused follow-up. Its first
 candidate `5b1f1176992b3692e1187ef8223bde7a2e180803` removed only
