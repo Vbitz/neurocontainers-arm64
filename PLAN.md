@@ -2,6 +2,29 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after MRIcroGL retry dispatch
+
+- Root commit: `8bfb440`; accepted submodule pin remains
+  `9a5ae40c67667a088f50f0e9885833b983893f98` (FSL, 129/129 native checks).
+- Active exact investigations:
+  - AFNI `a51788253403b44c819d4273a134eedfe822aad3`, run
+    [34763111015](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34763111015).
+  - Quickshear `90a169d1cde93600af0da8d07986285e792fad32`, run
+    [34764132084](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34764132084).
+  - ROOT `3bdd670d17eb6aae64902d1aed8091b2c464a79a`, run
+    [34764973586](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34764973586).
+  - MRIcroGL `71dc49e023b13b9a263115e76ca9ba294df2e904`, run
+    [34765456689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34765456689),
+    after fixing the dcm2niix output path and the hardcoded Lazarus x86_64
+    project target.
+- MRIcroGL run 34765237503 is recorded as attempt 2/6; its native dcm2niix
+  build passed, then Lazarus selected unavailable `ppcx64`. The current run is
+  the targeted ARM project configuration retry. PyDeface
+  `ef08d99accaff64e04c2352da607e1ba6f94fafa` remains prepared on
+  `arm64/pydeface-fsl` for the next free slot.
+- The local submodule branch is `arm64/mricrogl-fsl` at `71dc49e0`; the root
+  pointer is intentionally unstaged. Fork Actions remains disabled.
+
 - Root commit: `ce55490`; accepted submodule pin remains
   `9a5ae40c67667a088f50f0e9885833b983893f98` (FSL, 129/129 native checks).
   Fork Actions remains disabled. The local submodule pointer is intentionally
