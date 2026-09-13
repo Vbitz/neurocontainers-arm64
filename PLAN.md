@@ -2,6 +2,40 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after BIDSvue dispatch and MRIcroGL blocker
+
+- Root commit: `5565b0d` (`Checkpoint ARM64 implementation runs`); accepted
+  submodule pin remains `3bdd670d17eb6aae64902d1aed8091b2c464a79a` (ROOT,
+  102/102 native checks). Fork Actions is disabled.
+- Active exact investigations:
+  - AFNI integrated replay `8a9e48a7028b53be7b93eb6706a55a6a9ec801e6`, run
+    [34765634289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34765634289),
+    still running from the current accepted pin.
+  - PyDeface `809b10067d2fc8b011b2758511e78e1318538e37`, run
+    [34766115338](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34766115338),
+    attempt 2/6, bootstrapping pip in the native FSL ARM64 environment.
+  - BIDSvue `2524ed481d41f0d0e8d9ab4bc82a6d17f3ea19d5`, branch
+    `arm64/bidsvue-root`, run
+    [34766831522](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34766831522),
+    attempt 1/6. The candidate builds the Tauri app and its three Linux
+    sidecars from pinned upstream source using native ARM64 dependencies.
+    Investigation started `2026-09-13T15:51:06Z`, deadline
+    `2026-09-14T03:51:06Z`.
+- MRIcroGL attempt 5/6 is blocked upstream: run
+  [34766081264](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34766081264)
+  reached the final ARM64 link, where the v1.2.20211006 archive hardcodes
+  x86_64 Linux and aarch64 Darwin object files. Issue #97 records the
+  concrete blocker and the condition for revisiting it.
+- Quickshear remains a required runtime blocker: its ARM FreeSurfer SynthStrip
+  script lacks the tested distance-transform output option (41/43 checks).
+- The local submodule checkout is `arm64/bidsvue-root` at `2524ed48`; the root
+  pointer remains intentionally unstaged while native runs execute. Next action
+  is to reconcile AFNI, PyDeface, and BIDSvue, integrate only exact passing
+  candidates serially, then select the next feasible recipe from the remaining
+  inventory.
+
+## Latest implementation checkpoint — 2026-09-14
+
 ### Checkpoint after MRIcroGL zlib and PyDeface pip fixes
 
 - Root commit: `9723f91488cd573529175fced3bbd5fec11d2f61`; accepted
