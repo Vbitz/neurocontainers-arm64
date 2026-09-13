@@ -52,3 +52,5 @@ A bounded ARM64 candidate is prepared on `arm64/clearswi-bids` at `cf9a122bc839f
   fulltest change onto the accepted integration state before accepting.
 
 The candidate passed all 68 native tests in [run 34772631281](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34772631281). Its two intended commits were replayed onto accepted pin `80a84327a6659b0ac79a44f2c1853faa9eb84f4b` as `21382bb0421c036c87a86e29c796cfcdeb319e35` on `arm64/clearswi-integrated-80a`. Local validation and both architecture generations pass; exact integrated verification is pending a native runner slot.
+
+After EMUSES advanced the accepted pin to `685f5f4d9636d34aa8237646535d2a7dfc3a525d`, the same intended commits were replayed as `488f143223358f000b57fdc06b2693a89b896110` on `arm64/clearswi-integrated-emuses`. Exact native verification is [run 34775763906](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34775763906); acceptance still requires all 68 tests on this integrated commit.

@@ -43,6 +43,11 @@
   pin `80a84327`, so the local checkout has switched to this candidate for
   serial top-level integration; issue [#94](https://github.com/Vbitz/neurocontainers-arm64/issues/94)
   records the verified result.
+- CLEARSWI was replayed onto the new accepted EMUSES pin as candidate
+  `488f143223358f000b57fdc06b2693a89b896110` on
+  `arm64/clearswi-integrated-emuses` and dispatched in [run 34775763906](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34775763906)
+  for exact integrated verification. The local checkout is this branch;
+  accept it only after all 68 native fulltests pass.
 - Blender run [34774135689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774135689)
   reached the bundled Flex configure and failed on missing `autopoint`. The
   six native attempt and twelve-hour investigation budgets are exhausted, so
