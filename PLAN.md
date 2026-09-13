@@ -10,9 +10,9 @@ Updated: 2026-09-13 (Australia/Brisbane)
 - Submodule checkout: `arm64/integrate-mneextended-trame`, accepted MNE-Extended integration run `34746559924` passed after one transient VS Code extension retry; origin `Vbitz/neurocontainers`. No active builds remain. The BrainLesion candidate is recorded as blocked; failed Voreen and NCT candidates and assessed preflight branches remain available.
 - Fork Actions: disabled (`enabled: false`)
 - Existing verified pipeline check: `workshopdemo` / `arm64`, run [34692323241](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34692323241), 4 passed, source `c6d782cd`
-- Coverage snapshot: 96 of 247 declarations, refreshed from accepted source `7282a7d3`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
+- Coverage snapshot: 97 of 247 declarations, refreshed from accepted source `7bffacf617a8e2b65f00f9e8eaa5e7e70d11cba0`; issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
 
-## Focused follow-up active work
+## Focused follow-up outcomes
 
 The user requested bounded follow-up on promising prior failures. The first
 candidate is `mneextended`, whose previous native ARM64 run failed `pip check`
