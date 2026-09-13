@@ -2,7 +2,63 @@
 
 ## Latest implementation checkpoint — 2026-09-14
 
+### Checkpoint after MRIcroGL zlib and PyDeface pip fixes
+
+- Root commit: `9723f91488cd573529175fced3bbd5fec11d2f61`; accepted
+  submodule pin remains `3bdd670d17eb6aae64902d1aed8091b2c464a79a` (ROOT,
+  102/102 native checks). Fork Actions is disabled.
+- Active exact investigations:
+  - AFNI integrated replay `8a9e48a7028b53be7b93eb6706a55a6a9ec801e6`, run
+    [34765634289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34765634289),
+    still in progress after replaying the 114/114 candidate onto the ROOT pin.
+  - MRIcroGL candidate `2a75c0b8f1461417e10bc9c45edd42d5b1fa9790`, branch
+    `arm64/mricrogl-fsl`, run
+    [34766081264](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34766081264).
+    This is attempt 5/6: it adds native `zlib1g-dev` and disables the
+    upstream Linux-only x86 Cloudflare zlib object selection so FPC links
+    against Ubuntu's ARM64 zlib after the prior source fixes.
+  - PyDeface candidate `809b10067d2fc8b011b2758511e78e1318538e37`, branch
+    `arm64/pydeface-root`, run
+    [34766115338](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34766115338).
+    This is attempt 2/6: FSL 6.0.7.22 installed successfully, then exposed
+    that its Python had no pip; the candidate runs `fslpython -m ensurepip`
+    before the existing package installation.
+- Quickshear candidate `90a169d1cde93600af0da8d07986285e792fad32`, run
+  [34764132084](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34764132084),
+  built and deployed but failed the required SynthStrip distance-transform
+  operation (41/43 raw checks). The ARM FreeSurfer 7.4.1 script has no `-d`
+  output option; issue #228 comment records this as a required runtime
+  blocker pending a compatible upstream ARM release.
+- Local submodule branch is `arm64/pydeface-root` at `809b1006`; the root
+  pointer is intentionally unstaged while the native runs execute. Next
+  action is to reconcile these exact runs, integrate only passing candidates,
+  then investigate the remaining plausible source routes (BIDSvue, ITK-SNAP,
+  and MuscleMap) without repeating completed blockers.
+
 ### Checkpoint after MRIcroGL retry dispatch
+
+### Checkpoint after ROOT acceptance and AFNI/PyDeface replay
+
+- Root commit: `9723f91`; accepted submodule pin is
+  `3bdd670d17eb6aae64902d1aed8091b2c464a79a` (ROOT, 102/102 native checks)
+  on top of FSL `9a5ae40`. Fork Actions remains disabled.
+- Active exact investigations:
+  - AFNI integrated candidate `8a9e48a7028b53be7b93eb6706a55a6a9ec801e6`,
+    run [34765634289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34765634289),
+    replayed from the passing AFNI candidate onto the accepted ROOT base.
+  - Quickshear `90a169d1cde93600af0da8d07986285e792fad32`, run
+    [34764132084](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34764132084).
+  - MRIcroGL `71dc49e023b13b9a263115e76ca9ba294df2e904`, run
+    [34765456689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34765456689),
+    targeting the hardcoded Lazarus x86_64 project metadata.
+  - PyDeface integrated candidate `b4bb772377fa516abfd7b53667936d947e874b5c`,
+    run [34765662024](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34765662024),
+    using the native FSL ARM64 environment while retaining x86_64 Miniconda.
+- ROOT is accepted from exact run 34764973586: 102 passed, 0 failed, 0
+  skipped. AFNI’s source candidate passed 114/114 before replay; acceptance is
+  deferred until the exact replay run completes. The local submodule branch is
+  `arm64/pydeface-root` at `b4bb7723`; its root pointer is intentionally
+  unstaged while the four runner slots are active.
 
 - Root commit: `8bfb440`; accepted submodule pin remains
   `9a5ae40c67667a088f50f0e9885833b983893f98` (FSL, 129/129 native checks).
