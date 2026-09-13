@@ -33,6 +33,16 @@ generation passed. The branch is pushed. Exact native ARM64 run
 was dispatched at `2026-09-13T07:28:48Z` with `upload_image=false`; inspect its
 result before considering another recipe.
 
+`networkcorrespondancetoolkit` is the second focused follow-up. Its candidate
+`5b1f1176992b3692e1187ef8223bde7a2e180803` on
+`arm64/networkcorrespondancetoolkit-arm64-lock` retains the upstream package
+and pip versions, removes only ARM-incompatible Conda build hashes, and drops
+the x86-only `ld_impl_linux-64` line during ARM64 setup. Recipe validation and
+ARM64/x86_64 Dockerfile generation passed. Exact native ARM64 run
+[34745548264](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34745548264)
+was dispatched at `2026-09-13T07:33:59Z` with `upload_image=false`; both
+focused follow-up builds are active.
+
 ## Second pass active work
 
 The user-directed second pass is assessing the 151 recipes without ARM64
