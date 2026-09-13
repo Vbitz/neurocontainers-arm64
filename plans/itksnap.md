@@ -83,5 +83,11 @@ replays the complete source-build route onto accepted pin `8bcc3e3d` and adds
 the same explicit `QString::fromStdString` conversion to that test source.
 Validation and both architecture generations pass. Exact retry [run
 34778923438](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34778923438)
-is attempt 2/6; stop if the next failure is a dependency port rather than a
+was a recipe command quoting failure before the source build: the Python
+lambda's `pair: value` was parsed as a YAML mapping and generated an invalid
+shell command. Candidate [`817d0c540376842f9b63304be53f7c7b0f1538a4`](https://github.com/Vbitz/neurocontainers/commit/817d0c540376842f9b63304be53f7c7b0f1538a4)
+replaces that expression with explicit string replacements, passes validation
+and both architecture generations, and is dispatched in exact retry [run
+34779151809](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34779151809),
+attempt 3/6. Stop if the next failure is a dependency port rather than a
 localized Qt compatibility issue.
