@@ -55,6 +55,10 @@
   operations. The bounded investigation is exhausted; issue
   [#195](https://github.com/Vbitz/neurocontainers-arm64/issues/195) records the
   concrete upstream runtime/data revisit condition. No pin change.
+- ITK-SNAP candidate `258f746afb80f90077beb6fb63d0a336745fbb1e` addresses the
+  last two Qt 6.4 source errors from run 34773851298. The final bounded retry
+  is [run 34776098451](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34776098451);
+  the local checkout is `arm64/itksnap-integrated-80a` at that candidate.
 - Blender run [34774135689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774135689)
   reached the bundled Flex configure and failed on missing `autopoint`. The
   six native attempt and twelve-hour investigation budgets are exhausted, so

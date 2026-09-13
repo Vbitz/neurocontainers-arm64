@@ -73,3 +73,5 @@ on narrow Qt 6.4 source compatibility errors: three `QDebug` insertions passed
   [run 34773851298](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34773851298),
   attempt 4/6. The top-level pin remains unchanged until this exact SHA
   passes build, SIF, deploy and fulltest.
+
+Run [34773851298](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34773851298) reached application compilation and failed on one additional `QDebug`/`std::string` conversion and a missing `QDialogButtonBox` include in `DeepLearningServerPanel.cxx`. Candidate `258f746afb80f90077beb6fb63d0a336745fbb1e` adds those narrow Qt 6.4 source fixes, passes local validation and both architecture generations, and is dispatched as the final bounded retry in [run 34776098451](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34776098451).
