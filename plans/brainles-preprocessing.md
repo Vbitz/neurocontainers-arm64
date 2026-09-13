@@ -39,3 +39,9 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/br
 ## Decision boundary
 
 A dependency/source-build investigation remains, rather than an established universal ARM incompatibility. Revisit when the exact native package set or documented source configuration is available; record any first actionable failure. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation attempt — 2026-09-14
+
+The upstream ANTsPy documentation explicitly supports installing from source with `python -m pip install .` and lists BLAS, LAPACK, Fortran, PNG, CMake and Python development packages as possible Linux prerequisites. Based on that released build route, candidate [`2f061f36896188f8be2d00b73519d819c8c2d164`](https://github.com/Vbitz/neurocontainers/commit/2f061f36896188f8be2d00b73519d819c8c2d164) is pushed on [`arm64/brainles-preprocessing-source`](https://github.com/Vbitz/neurocontainers/tree/arm64/brainles-preprocessing-source), based on accepted submodule pin `685f5f4d9636d34aa8237646535d2a7dfc3a525d`.
+
+The candidate declares `aarch64`, adds the documented native build packages only to the ARM64 image, and installs the exact compatible `antspyx==0.5.4` source distribution with `--no-binary=antspyx` before installing the unchanged BrainLesion package. The x86_64 wheel path and fulltest are preserved. Recipe validation and ARM64/x86_64 Dockerfile generation passed locally. Native verification is queued until one of the four current runs completes; it must pass the existing build, SIF, deploy and fulltest gates before acceptance. This is attempt 1/6 for the source investigation, with the window starting when dispatched and a 12-hour deadline.
