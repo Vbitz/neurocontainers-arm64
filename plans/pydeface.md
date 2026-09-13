@@ -36,3 +36,19 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/py
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Implementation outcome — 2026-09-14
+
+- Candidate `90ee2948253826e0413ca90be894f381d10009eb` on
+  `arm64/pydeface-root` passed native ARM64 build, SIF conversion, deploy checks
+  and **60/60 fulltests** in [run 34769469302](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34769469302).
+  The ARM-only setuptools pin below 67.5 removes the `pkg_resources` warning
+  that had hidden the version assertion.
+- That candidate was based on an older accepted submodule history. Its four
+  recipe commits were replayed onto accepted BIDSvue pin `ba7af5842b2c41dbc98ffd8d1e25431acf19a7db`.
+- Integrated candidate: `80a84327a6659b0ac79a44f2c1853faa9eb84f4b` on
+  `arm64/pydeface-integrated`, with validation and ARM64/x86_64 generation
+  passing locally. The exact integrated native run is
+  [34771433995](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34771433995),
+  currently queued/in progress. Do not advance the top-level pin until this
+  exact SHA passes build, SIF, deploy and fulltest.
