@@ -61,3 +61,9 @@ The QuPath-based candidate `0d952620c20a5881fc9f93c6e64adccb77d87cc3` passed the
 ## Replay after Syncro acceptance — 2026-09-14
 
 Syncro advanced the accepted pin to `54a83518034d8b164ec8290c09a2ee91e42a9996`. The VesselBoost ARM64 CPU path and timeout commits were replayed onto that exact pin as candidate [`863c447457d817156882b12a6920fd3411f68543`](https://github.com/Vbitz/neurocontainers/commit/863c447457d817156882b12a6920fd3411f68543) on [`arm64/vesselboost-syncro`](https://github.com/Vbitz/neurocontainers/tree/arm64/vesselboost-syncro). Recipe validation and ARM64/x86_64 generation pass. The b878-based verification [34792571042](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792571042) remains active; dispatch the exact `863c4474` candidate only after that same-recipe run completes.
+
+## Replay after Syncro acceptance — 2026-09-14
+
+The prior-pin replay `7f191bfa12054f8d56a5296144f263de8dcdef24` completed native ARM64 Docker build, SIF conversion, deploy checks and 47/47 fulltests with no skips in [run 34792571042](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792571042).
+
+The intended VesselBoost ARM64 commits were replayed onto accepted Syncro pin `54a83518034d8b164ec8290c09a2ee91e42a9996` as candidate [`863c447457d817156882b12a6920fd3411f68543`](https://github.com/Vbitz/neurocontainers/commit/863c447457d817156882b12a6920fd3411f68543) on [`arm64/vesselboost-syncro`](https://github.com/Vbitz/neurocontainers/tree/arm64/vesselboost-syncro). Local validation and ARM64/x86_64 generation pass. The exact current-pin replay is dispatched in [run 34797274474](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34797274474), attempt 2/6; acceptance requires its complete native gates.
