@@ -33,3 +33,17 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/nf
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Accepted implementation — 2026-09-13
+
+The ARM64 source-build route was implemented on `arm64/integrate-nftsim-synthseg`.
+Candidate `ce058afece0774f0fe915f3bc07c04507c7665bc` built the pinned C++11
+source natively, passed SIF conversion and deploy checks, and passed all **68/68**
+fulltests in [run 34754095890](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34754095890).
+The commit is an ancestor of the current accepted submodule pin
+`df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`, so the tested recipe remains in the
+accepted history without rerunning an unchanged recipe.
+
+The ARM path keeps the published x86_64 image unchanged and builds the public
+source with the ARM-compatible generic C++ flags. The numerical simulation and
+all existing runtime assertions passed on native Linux ARM64.
