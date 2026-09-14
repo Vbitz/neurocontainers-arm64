@@ -67,3 +67,7 @@ Syncro advanced the accepted pin to `54a83518034d8b164ec8290c09a2ee91e42a9996`. 
 The prior-pin replay `7f191bfa12054f8d56a5296144f263de8dcdef24` completed native ARM64 Docker build, SIF conversion, deploy checks and 47/47 fulltests with no skips in [run 34792571042](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792571042).
 
 The intended VesselBoost ARM64 commits were replayed onto accepted Syncro pin `54a83518034d8b164ec8290c09a2ee91e42a9996` as candidate [`863c447457d817156882b12a6920fd3411f68543`](https://github.com/Vbitz/neurocontainers/commit/863c447457d817156882b12a6920fd3411f68543) on [`arm64/vesselboost-syncro`](https://github.com/Vbitz/neurocontainers/tree/arm64/vesselboost-syncro). Local validation and ARM64/x86_64 generation pass. The exact current-pin replay is dispatched in [run 34797274474](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34797274474), attempt 2/6; acceptance requires its complete native gates.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `863c447457d817156882b12a6920fd3411f68543` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **47/47** fulltests in [run 34797274474](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34797274474). The ARM route uses the CPU model path and preserves the existing x86_64 route.

@@ -39,3 +39,7 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/fs
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `9a5ae40c67667a088f50f0e9885833b983893f98` passed native ARM64 Docker build, architecture verification, SIF conversion, deploy checks, and all **129/129** fulltests in [run 34762946871](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34762946871). The ARM route uses the official FSL ARM package set and correct installed prefix while preserving x86_64 packaging.

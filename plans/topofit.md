@@ -74,3 +74,7 @@ failure is an upstream native dependency issue.
 The candidate completed successfully in exact native run [34779394328](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34779394328). Source `88e6776aeb27f16ef43e015acb426b7e87fe0d1c` on `arm64/topofit-cortech-arm-integrated` was based on accepted pin `8bcc3e3dd69d25fdb16b2f3084d89cf25ddfb5dc`. ARM64 Docker build, architecture verification, SIF conversion, deploy checks, and fulltest all passed: 15 passed, 0 failed, 0 skipped, including the real CPU TopoFit workflow and output geometry checks.
 
 This candidate is accepted as the new top-level submodule pin. The investigation used 3 recipe attempts: the first exposed missing `ninja-build`, the second exposed missing `pkg-config`, and the third passed after both documented Debian prerequisites were added. No upstream dependency port was required. Future candidates must descend from the new accepted pin.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `88e6776aeb27f16ef43e015acb426b7e87fe0d1c` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **15/15** fulltests in [run 34779394328](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34779394328). The ARM route adds the documented build prerequisites and runs the real CPU geometry/output workflow while preserving x86_64 packaging.

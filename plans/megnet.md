@@ -31,3 +31,7 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/me
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `1ce18a5642515bbb314ea48def4ac022c91264e8` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **6/6** fulltests in [run 34756122909](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34756122909). The ARM route selects native conda-forge Qt bindings and preserves the existing MEGNET dependency/test contract and x86_64 path.

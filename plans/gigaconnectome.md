@@ -40,3 +40,7 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/gi
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `dc1439d82ec42fd3cb5b38e85ca1d5800a3484b2` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **94/94** fulltests in [run 34757505350](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34757505350). The ARM route rebuilds the Python/Nilearn application on the multi-architecture Bookworm base while preserving its x86_64 image route.

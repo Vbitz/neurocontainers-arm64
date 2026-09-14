@@ -64,3 +64,7 @@ The exact current-pin candidate is dispatched in native ARM64 [run 34785066541](
 Run `34785066541` reached a successful Gradle `jpackage` build but failed at the recipe's copy step because upstream emits `/opt/qupath-source/build/dist/QuPath`, not a version-suffixed directory. Candidate `c98a89ee6799cd32b6a2247554cf8447a37f24aa` changes only that path, passes local validation and both architecture generations, and is dispatched for attempt 2/6 in [run 34785400495](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785400495).
 
 Candidate `c98a89ee6799cd32b6a2247554cf8447a37f24aa` passed native ARM64 Docker build, SIF conversion, deploy checks, and all 125 QuPath/Cellpose fulltests with 0 failures and 0 skips in [run 34785400495](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785400495). It is accepted into the top-level pin.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `c98a89ee6799cd32b6a2247554cf8447a37f24aa` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **125/125** fulltests in [run 34785400495](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785400495). The ARM route builds the QuPath/Cellpose stack with the corrected upstream output path and preserves x86_64 packaging.

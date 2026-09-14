@@ -36,3 +36,7 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/fe
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `e673b917ca5a8ae6e6f7ec74da961cb62e99fc5e` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **4/4** fulltests in [run 34759079934](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34759079934). The ARM route builds the upstream source on Python 3.10 Bookworm with the official checkpoint and preserves the x86_64 image route.

@@ -33,3 +33,7 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/af
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `8a9e48a7028b53be7b93eb6706a55a6a9ec801e6` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **114/114** fulltests in [run 34765634289](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34765634289). The ARM route builds AFNI and its R bundle from the published ARM inputs while preserving the x86_64 route.

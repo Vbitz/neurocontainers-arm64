@@ -34,3 +34,7 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/sy
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `815cf1b3e10b0b4b6003dc728f4300c54ccc3116` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **18/18** fulltests in [run 34753249262](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34753249262). The ARM route uses CPU TensorFlow wheels and preserves the SynthSeg models, runtime assertions, and x86_64 path.

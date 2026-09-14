@@ -47,3 +47,7 @@ Native dispatch is recorded as [run 34777662542](https://github.com/Vbitz/neuroc
 The exact candidate passed native ARM64 Docker build, SIF conversion, deployment checks and the existing fulltest: 4 passed, 0 failed, 0 skipped. Run [34777662542](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34777662542) and the automated evidence in [issue #219](https://github.com/Vbitz/neurocontainers-arm64/issues/219#issuecomment-5655539446) identify source `8bcc3e3dd69d25fdb16b2f3084d89cf25ddfb5dc`. It is ready for serial integration at the current accepted pin; the top-level pointer will be advanced only after the accepted candidate is recorded.
 
 The candidate has now been accepted serially at the top-level submodule pin. The verified source remains `8bcc3e3dd69d25fdb16b2f3084d89cf25ddfb5dc`; final evidence is recorded in [issue #219](https://github.com/Vbitz/neurocontainers-arm64/issues/219#issuecomment-5655589051). Future candidates must use this accepted pin as their base.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `8bcc3e3dd69d25fdb16b2f3084d89cf25ddfb5dc` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **4/4** fulltests in [run 34777662542](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34777662542). The ARM route uses the official PyTorch CPU stack while preserving the x86_64 CUDA route.

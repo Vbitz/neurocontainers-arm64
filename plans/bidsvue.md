@@ -34,3 +34,7 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/bi
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `ba7af5842b2c41dbc98ffd8d1e25431acf19a7db` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **5/5** fulltests in [run 34768724186](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34768724186). The ARM route builds the Rust/Tauri application and installs its launcher at the existing deployment path while preserving x86_64 packaging.

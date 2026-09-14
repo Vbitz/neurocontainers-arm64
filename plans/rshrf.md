@@ -37,3 +37,7 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/rs
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `9b60afc24a471a606cb2145b36a21c9b01cd089b` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **2/2** fulltests in [run 34757064676](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34757064676). The ARM route builds rsHRF from source on the multi-architecture Python base while preserving the x86_64 image route.

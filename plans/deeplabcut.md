@@ -39,3 +39,7 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/de
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `4d92aaab39c59ea92490b8e456c088633467379e` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **101/101** fulltests in [run 34758030010](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34758030010). The ARM route uses the published CPU TensorFlow packages and preserves the pinned DeepLabCut 2.3.11 tests and x86_64 path.

@@ -32,3 +32,7 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/mo
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `c38fa11e2377ad2a9775fdd5fc3993c8b44155de` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **8/8** fulltests in [run 34751788247](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34751788247). The ARM route uses the published ARM64 AppImage with the required zlib linker package and preserves the x86_64 route.
