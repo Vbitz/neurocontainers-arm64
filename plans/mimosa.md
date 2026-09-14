@@ -65,3 +65,9 @@ The QuPath-based candidate `2c0198a51f419c07267b00ea34f408f29e7e59f5` passed the
 ## Replay after Syncro acceptance — 2026-09-14
 
 Syncro advanced the accepted pin to `54a83518034d8b164ec8290c09a2ee91e42a9996`. The two MIMoSA ARM64 commits were replayed onto that exact pin as candidate [`6743ded6ddadc9d5173d2d77a6cc199363ec4f52`](https://github.com/Vbitz/neurocontainers/commit/6743ded6ddadc9d5173d2d77a6cc199363ec4f52) on [`arm64/mimosa-syncro`](https://github.com/Vbitz/neurocontainers/tree/arm64/mimosa-syncro). Recipe validation and ARM64/x86_64 generation pass. The b878-based verification [34792042542](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792042542) remains active; dispatch the exact `6743ded6` candidate only after that same-recipe run completes.
+
+## Replay after Syncro acceptance — 2026-09-14
+
+The prior-pin replay `84cfd4ab2128d5598d3df71685e4d26de46a8fb4` completed native ARM64 Docker build, SIF conversion, deploy checks and 21/21 fulltests with no skips in [run 34792042542](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792042542).
+
+The two intended MIMoSA commits were replayed onto accepted Syncro pin `54a83518034d8b164ec8290c09a2ee91e42a9996` as candidate [`6743ded6ddadc9d5173d2d77a6cc199363ec4f52`](https://github.com/Vbitz/neurocontainers/commit/6743ded6ddadc9d5173d2d77a6cc199363ec4f52) on [`arm64/mimosa-syncro`](https://github.com/Vbitz/neurocontainers/tree/arm64/mimosa-syncro). Local validation and ARM64/x86_64 generation pass. The exact current-pin replay is dispatched in [run 34797053207](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34797053207), attempt 2/6; acceptance requires its complete native gates.
