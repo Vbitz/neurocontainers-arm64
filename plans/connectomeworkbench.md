@@ -37,3 +37,7 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/132#issuecomment-5651345539).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Implementation disposition — 2026-09-14
+
+Preflight stopped before a candidate because the exact recipe's package updater and download inputs are hardcoded to Debian/NeuroDebian `binary-amd64` indexes. The recipe also requires the bundled FreeSurfer 7.1.1 stack, for which no matching ARM64 release path was established. This is recorded as `blocked-prerequisite` in [issue #132](https://github.com/Vbitz/neurocontainers-arm64/issues/132#issuecomment-5651345539). Revisit when both the package input and the included native dependency stack have a supported ARM64 route.

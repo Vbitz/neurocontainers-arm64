@@ -38,3 +38,7 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/147#issuecomment-5651348519).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Implementation disposition — 2026-09-14
+
+Preflight stopped before a candidate because the pinned release is a prebuilt Linux tarball with no ARM64 payload. A source rebuild would require recreating the specialized pinned dependency stack, rather than a recipe-level asset selection. This is recorded as `blocked-prerequisite` in [issue #147](https://github.com/Vbitz/neurocontainers-arm64/issues/147#issuecomment-5651348519). Revisit when ilastik publishes an ARM64 asset/package or a supported ARM64 dependency environment for the pinned release.

@@ -42,3 +42,7 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/201#issuecomment-5651531967).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Implementation disposition — 2026-09-14
+
+Preflight stopped before a candidate because the recipe combines FSL, FreeSurfer, Connectome Workbench and HCP Pipelines, with no established ARM64 release path for the complete native dependency stack. This is recorded as `blocked-prerequisite` in [issue #201](https://github.com/Vbitz/neurocontainers-arm64/issues/201#issuecomment-5651531967). Revisit when compatible ARM64 releases cover the full HCP-ASL stack and its BBR/runtime assertions.

@@ -38,3 +38,7 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/187#issuecomment-5651528829).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Implementation disposition — 2026-09-14
+
+Preflight stopped before a candidate because the pinned Neuro-Forged package channel has no `linux-aarch64` repodata, while the source route requires a coordinated AIMS/Anatomist/Soma, Qt, Python and native dependency build. This is recorded as `blocked-prerequisite` in [issue #187](https://github.com/Vbitz/neurocontainers-arm64/issues/187#issuecomment-5651528829). Revisit when BrainVISA publishes the pinned package set for ARM64 or documents a supported native source build for the complete tested stack.

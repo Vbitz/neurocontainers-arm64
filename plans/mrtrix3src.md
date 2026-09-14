@@ -42,3 +42,7 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/216#issuecomment-5651534926).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Implementation disposition — 2026-09-14
+
+Preflight stopped before a candidate because the recipe inherits an x86 FSL base and downloads `acpcdetect_V2.1_LinuxCentOS6.7`, an embedded native prerequisite with no ARM64 payload. Building MRtrix3 itself from source would not satisfy the container's required external tool. This is recorded as `blocked-prerequisite` in [issue #216](https://github.com/Vbitz/neurocontainers-arm64/issues/216#issuecomment-5651534926). Revisit when ARM64 FSL/base and acpcdetect releases exist, or the upstream recipe removes that required x86-only prerequisite.
