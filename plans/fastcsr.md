@@ -37,3 +37,9 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/142#issuecomment-5651347511).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Implementation disposition — 2026-09-14
+
+Preflight confirms that the pinned recipe cannot produce an ARM64 candidate from its declared inputs. It requires the `Linux-centos6_x86_64` FreeSurfer 6.0 archive and a `cp38-cp38-linux_x86_64` Nighres wheel. These are executable native prerequisites for the FastCSR pipeline, so a declaration-only edit or a native runner would not establish a valid build. No candidate branch or duplicate build was created.
+
+The final [issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/142#issuecomment-5651347511) records the exact URLs and the revisit condition. Revisit only when FastCSR/Nighres/FreeSurfer provides an ARM64-compatible asset, package, base image, or documented source-build route for the pinned functionality.

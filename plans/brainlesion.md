@@ -44,3 +44,9 @@ Keep the recorded failure as the current blocker for that candidate. A released 
 - Coverage status: build **❌**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-upstream**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/247#issuecomment-5652220143).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Implementation disposition — 2026-09-14
+
+The implementation investigation is exhausted at the recipe boundary. Three native attempts were made in total: the original candidate failed because `antspyx==0.6.3` had no Linux ARM64 wheel and its source fallback could not find `g++`; candidate [`9d8d71c`](https://github.com/Vbitz/neurocontainers/commit/9d8d71cbff92fcce2e79ad0c6d464f494427376e9) added the compiler and reached the source setup, which then required `git` and `make`; candidate [`fc0e838`](https://github.com/Vbitz/neurocontainers/commit/fc0e838959b69665233dac90b63bdf9c3c4797c9) added those prerequisites and reached the bundled ITK/ANTs configuration. The final native run reported `pathspec 'master' did not match any file(s) known to git` and missing ZLIB/PNG development libraries. No SIF, deploy, or fulltest stage ran.
+
+The final [issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/247#issuecomment-5652220143) records the two targeted recipe corrections and the stop at the upstream source-build boundary. Do not retry this recipe without a released Linux ARM64 `antspyx` wheel or documented ARM64 source-build instructions that address the ITK/ANTs branch and dependency failures.
