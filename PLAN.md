@@ -2611,3 +2611,8 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 - Blender run [34792723996](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792723996) failed before compilation when its dependency bootstrap timed out on gmplib.org GMP 6.3.0. Candidate `f55f8d643b6ed36f33fef280439a385486ea5a8d` pre-seeds the same release from GNU's official FTP archive with a verified SHA-256, preserving the ARM64 `autopoint` fix and x86_64 path. Validation and ARM64/x86_64 generation pass.
 - The exact targeted retry is dispatched in [run 34793445214](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34793445214), attempt 2/6 in the reopened Blender window.
 - Four native jobs are active: Syncro [34791087179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34791087179), MIMoSA [34792042542](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792042542), VesselBoost [34792571042](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792571042), and Blender [34793445214](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34793445214).
+
+## Active implementation checkpoint — 2026-09-14 (Blender preseed path retry)
+
+- Blender run [34793445214](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34793445214) failed before `make deps` because the new GMP destination directory did not exist. Candidate `0d2d3c1a0d29454ab70300a63f86cae8842081ce` creates the directory before copying the official GNU archive; validation and ARM64/x86_64 generation pass.
+- The exact candidate is dispatched in [run 34793655215](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34793655215), attempt 3/6 in the reopened window. It is queued behind the current native work.
