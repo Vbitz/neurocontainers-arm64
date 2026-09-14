@@ -39,3 +39,9 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/243#issuecomment-5651544475).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Implementation disposition — 2026-09-14
+
+- Current Bioconda metadata now provides a native `linux-aarch64` MRtrix3 3.0.8 package, so MRtrix3 itself is not the remaining ARM64 blocker. The full recipe still requires its FSL, ANTs and FreeSurfer templates plus the declared `acpcdetect_V2.1_LinuxCentOS6.7` binary.
+- The external stack has no complete native ARM64 route: ANTs packages are available for Linux x86_64 but not Linux aarch64, FreeSurfer's Linux distribution remains x86_64-only, and acpcdetect is an embedded x86 CentOS binary. Omitting those tools would change the container's required functionality, so no partial ARM64 candidate was dispatched.
+- Outcome: **blocked-prerequisite**. Revisit when compatible Linux ARM64 releases exist for the required ANTs/FreeSurfer/acpcdetect inputs, or the upstream recipe removes those dependencies while preserving its tests. Durable evidence is recorded in [issue #243](https://github.com/Vbitz/neurocontainers-arm64/issues/243#issuecomment-5661433515).
