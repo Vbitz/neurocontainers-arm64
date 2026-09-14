@@ -36,6 +36,16 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/ne
 
 The existing GPU capability needs compatible native hardware and dependencies, or a demonstrably upstream-supported CPU mode preserving the intended scope. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
 
+## Implementation disposition — 2026-09-14
+
+Preflight stopped before a candidate because the pinned `junshenxu/nesvor:v0.5.0`
+image exposes no native ARM64 manifest. The recipe also requires the GPU
+reconstruction stack, so a CPU smoke test would not verify its declared
+functionality. This is recorded as `blocked-prerequisite` in
+[issue #220](https://github.com/Vbitz/neurocontainers-arm64/issues/220#issuecomment-5651535690).
+Revisit when NeSVoR publishes an ARM64 image or a supported complete ARM64
+GPU/CPU route.
+
 ## Tracker disposition — 2026-09-14
 
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Conditional**.

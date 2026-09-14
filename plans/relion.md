@@ -35,6 +35,16 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/re
 
 The existing GPU capability needs compatible native hardware and dependencies, or a demonstrably upstream-supported CPU mode preserving the intended scope. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
 
+## Implementation disposition — 2026-09-14
+
+Preflight stopped before a candidate because the recipe pins CUDA through an
+`amd64.deb` and is a GPU-specific environment with external helper binaries.
+The native CPU runner cannot verify that declared capability. This is recorded
+as `blocked-prerequisite` in
+[issue #163](https://github.com/Vbitz/neurocontainers-arm64/issues/163#issuecomment-5651351639).
+Revisit when the pinned GPU/helper stack publishes ARM64 assets or a supported
+CPU variant with equivalent tested functionality.
+
 ## Tracker disposition — 2026-09-14
 
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Conditional**.

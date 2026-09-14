@@ -41,6 +41,15 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/op
 
 The existing GPU capability needs compatible native hardware and dependencies, or a demonstrably upstream-supported CPU mode preserving the intended scope. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
 
+## Implementation disposition — 2026-09-14
+
+Preflight stopped before a candidate because the recipe is a CUDA-oriented
+OpenMSK/DOSMA stack with compiled native components, while no ARM64 GPU or
+documented complete CPU release path exists for the pinned combination. This
+is recorded as `blocked-prerequisite` in
+[issue #223](https://github.com/Vbitz/neurocontainers-arm64/issues/223#issuecomment-5651536256).
+Revisit when the pinned dependency stack publishes an ARM64-compatible route.
+
 ## Tracker disposition — 2026-09-14
 
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Conditional**.

@@ -40,6 +40,15 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/op
 
 The existing GPU capability needs compatible native hardware and dependencies, or a demonstrably upstream-supported CPU mode preserving the intended scope. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
 
+## Implementation disposition — 2026-09-14
+
+Preflight stopped before a candidate because the pinned `sljhlab/openads:gpu`
+image has no native ARM64 manifest and the fulltest exercises its GPU workflow.
+The separate CPU recipe does not establish ARM64 support for this GPU variant.
+This is recorded as `blocked-prerequisite` in
+[issue #241](https://github.com/Vbitz/neurocontainers-arm64/issues/241#issuecomment-5651543991).
+Revisit when an equivalent ARM64 OpenADS GPU image and runtime are released.
+
 ## Tracker disposition — 2026-09-14
 
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Conditional**.

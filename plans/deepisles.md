@@ -36,6 +36,15 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/de
 
 The existing GPU capability needs compatible native hardware and dependencies, or a demonstrably upstream-supported CPU mode preserving the intended scope. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
 
+## Implementation disposition — 2026-09-14
+
+Preflight stopped before a candidate because the pinned recipe installs a
+Linux x86_64 Miniconda distribution and the CUDA/PyTorch 1.11 inference stack
+has no supported ARM64 package combination. This is recorded as
+`blocked-prerequisite` in [issue #134](https://github.com/Vbitz/neurocontainers-arm64/issues/134#issuecomment-5651345951).
+Revisit when the pinned inference stack publishes an ARM64 package/base or an
+upstream-supported CPU configuration that preserves the tested capability.
+
 ## Tracker disposition — 2026-09-14
 
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Conditional**.
