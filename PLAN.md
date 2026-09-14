@@ -2621,3 +2621,9 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 
 - Blender attempt 3 in the reopened window used the official GMP preseed successfully but failed during native Flex installation because `makeinfo` was missing. Candidate `1df5eaae87cb2c51f4110d2ae448cb26b5872203` adds Ubuntu `texinfo`; validation and ARM64/x86_64 generation pass.
 - The exact candidate is dispatched in [run 34794572307](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34794572307), attempt 4/6. The reopened Blender window remains `2026-09-14T00:26:26Z`–`2026-09-14T12:26:26Z`.
+
+## Active implementation checkpoint — 2026-09-14 (Syncro accepted; replay queue advanced)
+
+- Syncro candidate `54a83518034d8b164ec8290c09a2ee91e42a9996` passed native ARM64 build/SIF/deploy and 37/37 fulltests with no skips in [run 34791087179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34791087179), then was accepted as the top-level submodule pin in root commit `c92f40d`. Coverage issue #2 was refreshed.
+- MIMoSA candidate `6743ded6ddadc9d5173d2d77a6cc199363ec4f52`, VesselBoost candidate `863c447457d817156882b12a6920fd3411f68543`, and Blender candidate `5464f96b8f26d20a4aafcb090b821d736b38b620` are validated replays from the new accepted pin. Their same-recipe b878-based runs [34792042542](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792042542), [34792571042](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792571042), and [34794572307](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34794572307) must complete before their exact current-pin runs are dispatched.
+- The local submodule is on `arm64/blender-syncro` at `5464f96b`; the top-level pointer remains accepted at `54a83518` until a current-pin candidate passes.
