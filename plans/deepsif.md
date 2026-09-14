@@ -32,3 +32,9 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/de
 ## Decision boundary
 
 The existing GPU capability needs compatible native hardware and dependencies, or a demonstrably upstream-supported CPU mode preserving the intended scope. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Tracker disposition — 2026-09-14
+
+- Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Conditional**.
+- Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/135#issuecomment-5651346147).
+- This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.

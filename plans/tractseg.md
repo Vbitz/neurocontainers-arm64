@@ -49,3 +49,9 @@ The first native dispatch, [run 34776715361](https://github.com/Vbitz/neuroconta
 The one permitted unchanged retry is dispatched as [run 34777140518](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34777140518) using the same candidate SHA `a6bd2f46399657df8b56cfc12ce48f147796d1fc`. It is attempt 2/6 within the original investigation window. If the same download failure recurs, record an infrastructure blocker and move to the next recipe; do not alter the scientific tests or keep retrying the data service.
 
 The unchanged retry failed in the same pre-build staging step: [run 34777140518](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34777140518) received HTTP 504 from Zenodo for `best_weights_ep266.npz` after three downloader retries. Since two different declared weight files failed identically, the recipe is blocked by the external data service for this investigation. Revisit when the Zenodo records are reachable or the project provides a stable mirrored artifact; no further unchanged retry is justified.
+
+## Tracker disposition — 2026-09-14
+
+- Coverage status: build **❌**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
+- Investigation outcome: **blocked-infrastructure**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/238#issuecomment-5655511092).
+- This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.

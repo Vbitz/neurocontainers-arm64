@@ -37,3 +37,9 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/so
 ## Decision boundary
 
 Proceed to a bounded recipe-level experiment after resolving the exact inputs above. There is presently insufficient evidence to label this recipe fundamentally blocked. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Tracker disposition — 2026-09-14
+
+- Coverage status: build **❌**, fulltest **➖ Not run**; plan assessment: **Plausible**.
+- Investigation outcome: **blocked-infrastructure**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/167#issuecomment-5653614496).
+- This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.

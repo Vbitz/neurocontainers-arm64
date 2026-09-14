@@ -32,3 +32,9 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/di
 ## Decision boundary
 
 A native upstream artifact or supported source/build route preserving the same application is required. Revisit when that concrete prerequisite changes. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Tracker disposition — 2026-09-14
+
+- Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **No route found**.
+- Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/138#issuecomment-5651346773).
+- This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.

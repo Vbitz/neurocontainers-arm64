@@ -40,3 +40,9 @@ A dependency/source-build investigation remains, rather than an established univ
 A native ARM64 source candidate was tested from `arm64/mritools-bids` using the official Julia 1.10.10 Linux AArch64 archive and CompileMRI.jl v3.3.0. Runs [34770096752](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770096752) and [34770328188](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34770328188) both reached the Julia dependency graph but failed in the released CompileMRI `deps/build.jl` bootstrap. Its generated `App` project is precompiled while dependencies are added sequentially, then `ClearswiApp` and the current `MriResearchTools` resolution are incompatible; the direct error was `Package App does not have RomeoApp in its dependencies` followed by an unsatisfiable `MriResearchTools` requirement. Disabling automatic intermediate precompile did not change the result.
 
 **Disposition: blocked-upstream.** Revisit when CompileMRI publishes a corrected App dependency bootstrap or a released ARM64-compatible mritools source/bundle. Patching the upstream application dependency graph would exceed this recipe port.
+
+## Tracker disposition — 2026-09-14
+
+- Coverage status: build **❌**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
+- Investigation outcome: **blocked-upstream**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/156#issuecomment-5654736848).
+- This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.

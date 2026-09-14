@@ -31,3 +31,9 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/vo
 ## Decision boundary
 
 Keep the recorded failure as the current blocker for that candidate. A released upstream fix or documented configuration addressing its first error is the condition for a justified retry. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Tracker disposition — 2026-09-14
+
+- Coverage status: build **❌**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
+- Investigation outcome: **blocked-upstream**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/117#issuecomment-5651386281).
+- This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.

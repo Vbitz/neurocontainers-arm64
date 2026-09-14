@@ -67,3 +67,9 @@ slot opens; no DSI run has been started for this final local revision yet.
 Exact native retry [34774820860](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774820860) is now dispatched as attempt 2/6. It is based on the accepted PyDeface pin and must pass Docker build, architecture verification, SIF conversion, deploy checks and the fulltest before integration.
 
 The native image built, converted and passed deploy checks, but [run 34774820860](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34774820860) still failed five essential AutoTrack operations: multiple bundles, superior longitudinal fasciculus, corpus callosum, thalamic radiation and the pipeline multiple-bundle export. The final result was 78/83 executed fulltests passing, with no skips. These commands exit 1 with the official ARM64 CPU runtime even after release-aligned filenames, error strings, exact atlas IDs and CLI syntax were corrected. The recipe investigation is exhausted; revisit only with a released upstream ARM64 runtime/data or documented parameter fix for these required operations.
+
+## Tracker disposition — 2026-09-14
+
+- Coverage status: build **✅**, fulltest **❌**; plan assessment: **Plausible**.
+- Investigation outcome: **failed-runtime**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/195#issuecomment-5655340599).
+- This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.

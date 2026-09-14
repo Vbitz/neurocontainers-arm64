@@ -55,3 +55,9 @@ The first attempt failed before staging because Zenodo returned HTTP 504 for `hd
 The unchanged retry also failed before staging with HTTP 504 for the same declared `hdbet_0_model` download after three builder retries. The native source-build candidate was therefore not exercised. This is a concrete infrastructure blocker after two attempts, not evidence that the released antspyx source cannot compile on ARM64. Revisit when the Zenodo record is reachable reliably or an authorized stable mirror is available; preserve candidate `2f061f36896188f8be2d00b73519d819c8c2d164` on `arm64/brainles-preprocessing-source` and do not repeat the unchanged dispatch.
 
 The final outcome is recorded in [issue #186](https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-5655583825).
+
+## Tracker disposition — 2026-09-14
+
+- Coverage status: build **❌**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
+- Investigation outcome: **blocked-infrastructure**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-5655583825).
+- This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.

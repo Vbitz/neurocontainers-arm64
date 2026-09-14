@@ -99,3 +99,9 @@ Because TopoFit advanced the accepted pin to `88e6776aeb27f16ef43e015acb426b7e87
 Run [34779151809](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34779151809) passed the ARM64 source build, SIF conversion and deploy checks, then failed 2 of 106 fulltests: `C3D extract region` and `C3D pad image`. Both terminate with `*** buffer overflow detected ***` and exit 134; the other 104 tests pass and no tests are skipped.
 
 Both commands use the pinned C3D revision's `ReadIndexVector`. In C3D `ConvertImageND.cxx:3054`, that function allocates `new char[strlen(vec_in)]` and then calls `strcpy`, omitting space for the terminating byte. The latest inspected C3D source retains this defect. Fixing it would be a third-party library source port, outside this workflow. The current-pin candidate [`141af5d6843fb84bedb1224851f5cc6601a7e034`](https://github.com/Vbitz/neurocontainers/commit/141af5d6843fb84bedb1224851f5cc6601a7e034) is preserved but not dispatched. Revisit when C3D releases an ARM64-compatible fix for this overflow; the functional tests remain required.
+
+## Tracker disposition — 2026-09-14
+
+- Coverage status: build **✅**, fulltest **❌**; plan assessment: **Plausible**.
+- Investigation outcome: **blocked-upstream**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/148#issuecomment-5656100070).
+- This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
