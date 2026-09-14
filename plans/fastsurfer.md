@@ -41,3 +41,16 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/196#issuecomment-5651530860).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Implementation disposition — 2026-09-14
+
+A follow-up audit of the official FreeSurfer downloads found ARM64 artifacts for
+macOS but only x86_64/amd64 Linux artifacts; no Linux ARM64 FreeSurfer payload is
+listed in the [official development index](https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/dev_20260102/)
+or [release download documentation](https://surfer.nmr.mgh.harvard.edu/fswiki/rel7downloads).
+Because the full FastSurfer recipe requires FreeSurfer commands for its surface
+pipeline, rebuilding only its Python components would not preserve the tested
+functionality. The exact blocker is recorded in
+[issue #196](https://github.com/Vbitz/neurocontainers-arm64/issues/196#issuecomment-5660576119).
+Revisit when a supported Linux ARM64 FreeSurfer payload or complete FastSurfer
+surface route is released.
