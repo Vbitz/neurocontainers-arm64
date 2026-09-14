@@ -37,3 +37,13 @@ Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/op
 ## Decision boundary
 
 A dependency/source-build investigation remains, rather than an established universal ARM incompatibility. Revisit when the exact native package set or documented source configuration is available; record any first actionable failure. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+
+## Accepted implementation — 2026-09-14
+
+The ARM64 source route was implemented and integrated in candidate
+`6103a923f43106c039ddf22a59c99c25352e459b`. It passed native Docker build,
+architecture verification, SIF conversion, deploy checks, and all **3/3**
+fulltests in [run 34759549792](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34759549792).
+The candidate is an ancestor of the accepted submodule pin
+`df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`, so the successful route remains
+accepted without a duplicate build.
