@@ -2616,3 +2616,8 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 
 - Blender run [34793445214](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34793445214) failed before `make deps` because the new GMP destination directory did not exist. Candidate `0d2d3c1a0d29454ab70300a63f86cae8842081ce` creates the directory before copying the official GNU archive; validation and ARM64/x86_64 generation pass.
 - The exact candidate is dispatched in [run 34793655215](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34793655215), attempt 3/6 in the reopened window. It is queued behind the current native work.
+
+## Active implementation checkpoint — 2026-09-14 (Blender Flex documentation dependency)
+
+- Blender attempt 3 in the reopened window used the official GMP preseed successfully but failed during native Flex installation because `makeinfo` was missing. Candidate `1df5eaae87cb2c51f4110d2ae448cb26b5872203` adds Ubuntu `texinfo`; validation and ARM64/x86_64 generation pass.
+- The exact candidate is dispatched in [run 34794572307](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34794572307), attempt 4/6. The reopened Blender window remains `2026-09-14T00:26:26Z`–`2026-09-14T12:26:26Z`.
