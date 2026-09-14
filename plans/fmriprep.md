@@ -41,3 +41,7 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/105#issuecomment-5651281191).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Follow-up upstream audit — 2026-09-14
+
+The upstream fMRIPrep build configuration still explicitly builds both its base and production images with `--platform linux/amd64` in [the official CI configuration](https://github.com/nipreps/fmriprep/blob/master/.circleci/config.yml). The upstream [ARM host report](https://github.com/nipreps/fmriprep/issues/3068) also records the released image being selected as `linux/amd64` on an ARM64 host. Since this recipe consumes the pinned image as its complete dependency stack, no native ARM64 candidate can be made by changing the wrapper architecture selector. Revisit only when the pinned release or a supported replacement publishes a Linux ARM64 image or complete ARM64 source build.
