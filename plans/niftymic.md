@@ -41,3 +41,10 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/110#issuecomment-5651282200).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Implementation disposition — 2026-09-14
+
+- A fresh source-route audit found no supported ARM64 candidate for the pinned NiftyMIC 0.9 stack. The upstream installation instructions require NSoL, SimpleReg, PySiTK and ITK_NiftyMIC and document development/testing against Python 2.7, 3.5 and 3.6 on Ubuntu 16.04/18.04.
+- The required repositories are legacy dependency components with no maintained ARM64 build or package route. Their current upstream metadata reports last pushes of 2022-02-15 for NiftyMIC, 2021-01-31 for NSoL, 2019-12-07 for ITK_NiftyMIC, 2019-08-11 for PySiTK and 2019-07-26 for SimpleReg. The pinned Docker image remains linux/amd64-only.
+- Outcome: **blocked-prerequisite**. No ARM64 build was dispatched because replacing the image requires porting the complete legacy ITK_NiftyMIC/WrapITK and registration stack. Revisit only when the upstream stack publishes a maintained ARM64 build, multi-architecture image or documented current Python/ITK source route.
+- Durable evidence is recorded in [issue #110](https://github.com/Vbitz/neurocontainers-arm64/issues/110#issuecomment-5661388675). The recipe remains unverified.
