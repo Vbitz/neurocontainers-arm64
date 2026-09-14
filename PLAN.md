@@ -2593,3 +2593,9 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 - MIMoSA QuPath-based candidate `2c0198a51f419c07267b00ea34f408f29e7e59f5` passed native ARM64 build/SIF/deploy and 21/21 fulltests with no skips in [run 34787670497](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34787670497), but it predates accepted CLEARSWI pin `b878ef49`.
 - The replayed current-pin candidate `84cfd4ab2128d5598d3df71685e4d26de46a8fb4` is dispatched in [run 34792042542](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792042542). It must pass the exact native gates before serial acceptance.
 - Active native jobs are Syncro [34791087179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34791087179), VesselBoost [34788113539](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34788113539), and MIMoSA current-pin verification [34792042542](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792042542).
+
+## Active implementation checkpoint — 2026-09-14 (VesselBoost current-pin verification)
+
+- VesselBoost QuPath-based candidate `0d952620c20a5881fc9f93c6e64adccb77d87cc3` passed native ARM64 build/SIF/deploy and 46/46 fulltests with no skips in [run 34788113539](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34788113539), but it predates accepted CLEARSWI pin `b878ef49`.
+- The replayed current-pin candidate `7f191bfa12054f8d56a5296144f263de8dcdef24` is dispatched in [run 34792571042](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792571042). It must pass the exact native gates before serial acceptance.
+- Active native jobs are Syncro [34791087179](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34791087179), MIMoSA current-pin [34792042542](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792042542), and VesselBoost current-pin [34792571042](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34792571042).
