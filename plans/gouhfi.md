@@ -16,3 +16,15 @@ The recipe declares ARM64, uses the native Miniconda base and has a CPU executio
 ## Blocker and next action
 
 Both attempts report `no space left on device` during `docker save`; neither produced a SIF or ran deploy/fulltest. The unchanged infrastructure retry budget is exhausted. Revisit after runner storage/export infrastructure is repaired, then dispatch the exact ARM64 candidate and require all native build, SIF, deploy and runtime gates. Do not change the recipe or weaken tests to work around storage exhaustion.
+
+## Reopened infrastructure retry — 2026-09-15
+
+Subsequent native ARM64 runs, including neurocommand run
+[34928959233](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34928959233),
+completed Docker build, SIF conversion and fulltest on the same runner class.
+That changed infrastructure evidence justifies one fresh unchanged retry of the
+already ARM64-declared recipe at accepted source
+`e74050df0e4881833ae5d8d82b4e0ef287a14179`. Investigation starts
+`2026-09-15T04:43:14Z` with a `2026-09-15T16:43:14Z` deadline. Require the
+complete native build/SIF/deploy/fulltest path; stop immediately if storage
+exhaustion recurs or if a real application blocker appears.
