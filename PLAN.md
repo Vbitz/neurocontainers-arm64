@@ -3139,3 +3139,8 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 
 - Exact candidate `1a06fd6f8b785d152df9a79fed0d25102926fe4f` was dispatched as native ARM64 run [34924143185](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34924143185), attempt 2/6. Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674109825) records the compiler-selection hypothesis.
 - Keep accepted pin `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3` unchanged pending the exact build/SIF/deploy/fulltest result.
+
+## AIDAmri runtime-fix retry checkpoint — 2026-09-15
+
+- Run [34924143185](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34924143185) passed native ARM64 build, SIF conversion and deploy checks, then reported 6/8 fulltests. NiftyReg, FSL, AIDAmri startup and asset/path checks passed. The two failures were Nipype 1.7.0 importing removed Traits 7.1.0 symbols and an x86-specific DSI Studio version prefix assertion.
+- Candidate `04970417e995232706f4ce85ddf4db23c79d4f25` pins ARM64 `traits==6.4.3` and changes the DSI assertion to the shared `DSI Studio (` output prefix. Validation and both architecture generations pass. This is attempt `3/6`; dispatch the exact SHA, with accepted pin still `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3`.

@@ -95,3 +95,13 @@ compiler-selection hypothesis before classifying the dependency blocker.
 The exact retry is dispatched as native ARM64 run
 [34924143185](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34924143185).
 The dispatch details are recorded in [issue #119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674109825).
+
+Run 34924143185 built the ARM64 image, converted it to SIF and passed deploy
+checks. The fulltest reached 6/8 checks: all NiftyReg, FSL, AIDAmri startup,
+asset and path checks passed. The Python import failed because pip selected
+Traits 7.1.0, which removed `TraitDictObject` required by Nipype 1.7.0. The
+DSI Studio executable returned `DSI Studio (doi:...)` rather than the x86-only
+`DSI Studio version:` prefix. Candidate `04970417e995232706f4ce85ddf4db23c79d4f25`
+pins ARM64 Traits 6.4.3 and updates that assertion to the stable shared output
+prefix. Validation and both architecture Dockerfile generations pass. This is
+attempt 3/6; the recipe remains within the bounded window.
