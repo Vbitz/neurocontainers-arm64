@@ -21,6 +21,19 @@ Important corrections include the published ARM modsort asset, newer DSI Studio 
 | Different operating-system application port required | 1 |
 | Required vendor runtime/standalone execution path unavailable | 31 |
 
+
+## Supplemental current ARM64 rows
+
+These rows already declared `aarch64` at the research pin and were outside the original 148-recipe unported scope. They are included here so the current tracker has a durable research assessment for every unverified row.
+
+| Recipe | Assessment |
+| --- | --- |
+| [dafne](dafne.md) | Concrete prior build failure; not a general architecture prohibition |
+| [gouhfi](gouhfi.md) | Plausible recipe-level port; no fundamental blocker established |
+| [neurocommand](neurocommand.md) | Plausible recipe-level port; no fundamental blocker established |
+| [neurodesktop-lite](neurodesktop-lite.md) | Concrete prior build failure; not a general architecture prohibition |
+| [tinyrange](tinyrange.md) | Required vendor runtime/standalone execution path unavailable |
+
 ## Recipe index
 
 | Recipe | Assessment |
