@@ -30,3 +30,14 @@ it from the ARM Conda solve. Validation and both architecture generations pass.
 
 This is attempt 2/6 in the reopened window. Require a new native build, SIF,
 deploy checks and the complete fulltest before accepting the route.
+
+## Verified — 2026-09-15
+
+Candidate `e74050df0e4881833ae5d8d82b4e0ef287a14179` passed native ARM64 run
+[34928959233](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34928959233):
+the Docker build and SIF conversion passed, deploy checks passed, and all 3
+fulltests passed with zero failures and zero skips. The Datalad ARM64 Conda
+solver issue is resolved by the ARM64-only PyPI install using native apt
+`git-annex`; the x86_64 Conda path is preserved. Issue
+[#158](https://github.com/Vbitz/neurocontainers-arm64/issues/158#issuecomment-5674814307)
+records the durable evidence. Integrate this candidate onto the accepted pin.
