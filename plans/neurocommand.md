@@ -16,3 +16,17 @@ The only identified architecture-specific input is the x86 Apptainer package. A 
 ## Plan and acceptance boundary
 
 Replay the candidate's intended recipe commit onto the current accepted pin and dispatch it now that later native workflow runs demonstrate the dispatch path is healthy. Require Docker build, architecture verification, SIF conversion, deploy checks and the complete existing fulltest. If the source build reaches a real Apptainer portability error, record that first actionable upstream blocker; do not claim ARM64 support from the earlier setup failures.
+
+## Implementation and retry — 2026-09-15
+
+The current-pin candidate `d374656887d77c959e710b8a773f7b37925bb41b` reached
+the ARM64 Apptainer build successfully in [run 34928349450](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34928349450),
+then stopped in the Miniconda template because the ARM Conda `datalad` package
+requires `git-annex`, which is absent from the Linux AArch64 Conda channel.
+The image already installs native Ubuntu `git-annex`, so this is a targeted
+recipe packaging issue. Candidate `e74050df0e4881833ae5d8d82b4e0ef287a14179`
+keeps the x86_64 Conda path and installs ARM64 Datalad from PyPI after removing
+it from the ARM Conda solve. Validation and both architecture generations pass.
+
+This is attempt 2/6 in the reopened window. Require a new native build, SIF,
+deploy checks and the complete fulltest before accepting the route.
