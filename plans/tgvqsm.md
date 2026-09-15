@@ -37,3 +37,16 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/169#issuecomment-5651352825).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Prerequisite refresh — 2026-09-15
+
+The exact pinned Miniconda2 installer URL still returns HTTP 404 for
+`Miniconda2-4.6.14-Linux-aarch64.sh`. CMake 3.31.12 does publish a native
+Linux AArch64 archive, so CMake is no longer the blocker; the pinned Python 2
+runtime remains unavailable. No supported ARM64 Python 2 replacement is
+available in this recipe, and changing the runtime to Python 3 would be a
+scientific environment change rather than a recipe-level architecture fix.
+
+The prerequisite blocker remains: revisit when TGVQSM documents a supported
+ARM64 Python/runtime dependency set or publishes a native package. No native
+dispatch is justified for the current pinned recipe.

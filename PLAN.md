@@ -3160,3 +3160,9 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - Root commit `1f3351b` pushed the tested AIDAmri submodule pointer to `04970417e995232706f4ce85ddf4db23c79d4f25`. The submodule branch `arm64/aidamri-system-libpng` is clean and pushed.
 - Tracker issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed against the new accepted pin: 128 variants have historical full passes, 0 runs are active, and AIDAmri is now `✅ Verified` with 9/0/0 latest counts. The remaining plausible unverified rows decreased from 11 to 10.
 - Fork Actions remains disabled. The overall goal remains active because the remaining unverified inventory is still tracked and will be revisited only with changed evidence or a new supported route.
+
+## Unverified inventory refresh — 2026-09-15
+
+- DSI Studio issue #195 was rechecked against the official release API. The newest release remains 2026.7.25; its ARM64 CPU assets are unchanged, and the tested runtime still fails five required AutoTrack operations. The issue and [plans/dsistudio.md](plans/dsistudio.md) record the exhausted failed-runtime outcome and the concrete upstream revisit condition.
+- TGVQSM issue #169 was rechecked against the exact pinned inputs. CMake 3.31.12 has a native AArch64 archive, but the required Miniconda2 4.6.14 AArch64 installer returns HTTP 404. The Python 2/SciPy 0.17.1 runtime remains an unavailable prerequisite; [plans/tgvqsm.md](plans/tgvqsm.md) records the refreshed blocker.
+- No native runs are active, the accepted submodule checkout remains clean at `04970417e995232706f4ce85ddf4db23c79d4f25`, and fork Actions remains disabled. The next work is a changed-evidence audit or a supported route from the remaining unverified plans; keep the goal active.

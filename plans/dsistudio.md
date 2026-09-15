@@ -73,3 +73,10 @@ The native image built, converted and passed deploy checks, but [run 34774820860
 - Coverage status: build **✅**, fulltest **❌**; plan assessment: **Plausible**.
 - Investigation outcome: **failed-runtime**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/195#issuecomment-5655340599).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+
+## Upstream refresh — 2026-09-15
+
+The official DSI Studio release API still reports `2026.7.25` as the newest release. It continues to publish `dsi_studio_linux_universal_cpu_arm64.zip` and the Ubuntu ARM64 CPU archives, but no newer ARM64 runtime or documented AutoTrack correction has appeared. The exact ARM64 candidate already passed build, SIF conversion and deploy checks, then failed the five required AutoTrack operations after the fulltest was aligned to the current release output. No changed evidence justifies another native attempt under the exhausted investigation budget.
+
+Revisit only when DSI Studio publishes an ARM64 CPU runtime/data fix or documents a supported parameter set that makes the required bundles complete.
