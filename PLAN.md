@@ -3124,3 +3124,8 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - Changed evidence: released NiftyReg v2.0.0 CMake explicitly searches for system zlib/libpng before its bundled copies. AIDAmri candidate `bd5aa3c544bec99dc83b1641fb174b6e27c43a42` on `arm64/aidamri-system-libpng` replays the prior ARM route onto accepted pin `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3` and adds only ARM64 `libpng-dev`.
 - Local recipe validation and ARM64/x86_64 Dockerfile generation pass. Dispatch the exact full candidate SHA for one fresh bounded attempt; stop at a NiftyReg or embedded dependency source port.
 - Investigation start: `2026-09-15T03:02:32Z`; deadline: `2026-09-15T15:02:32Z`; attempts `0/6`; current checkout `arm64/aidamri-system-libpng`; accepted root pin remains `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3`.
+
+## AIDAmri dispatch checkpoint — 2026-09-15
+
+- Exact candidate `bd5aa3c544bec99dc83b1641fb174b6e27c43a42` was dispatched as native ARM64 run [34923542636](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34923542636), attempt 1 in the fresh window. Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674047922) records the hypothesis, baseline, candidate and budget.
+- Run status at dispatch checkpoint: build in progress; no result or acceptance decision yet. Keep the accepted pin at `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3` until the exact candidate passes all gates.

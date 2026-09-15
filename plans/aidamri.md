@@ -77,3 +77,8 @@ This is a fresh bounded recipe investigation window authorized by the active
 porting goal. The candidate is ready for one native ARM64 build. Stop if the
 system library is not selected or if the next error requires patching NiftyReg
 or its embedded dependencies.
+
+The exact candidate was dispatched as native ARM64 run
+[34923542636](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34923542636),
+attempt 1 in this fresh window. The dispatch and hypothesis are recorded in
+[issue #119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674047922).
