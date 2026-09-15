@@ -59,3 +59,7 @@ The exact native ARM64 retry is run `34904969920`: https://github.com/Vbitz/neur
 Candidate `3df717c62b7a2cac9a4cf4c86af7e9752e2584a3` passed native ARM64 build, SIF, deploy, and all 44/44 fulltests in [run 34904969920](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34904969920). The four intended Quickshear commits were replayed onto accepted pin `bfa2364d60f7cd99e83b813a48f6c39d41c6945e` as integrated candidate `7b70cacfbf0d2c04e8ef7fd7b355da0dff4a0a2e` on `integration/quickshear-bpp`. Local validation and both architecture generations passed.
 
 The exact integrated native retest is [run 34907870046](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34907870046). The shared pin remains unchanged pending this result.
+
+## Accepted ARM64 implementation — 2026-09-15
+
+The integrated candidate passed native ARM64 build, SIF conversion, deploy checks and all 44/44 fulltests in [run 34907870046](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34907870046). The top-level accepted submodule pin is now `7b70cacfbf0d2c04e8ef7fd7b355da0dff4a0a2e`, pushed in root commit `03c823387d8147f143e098713ecfc742177e4284`. The ARM64 route uses the released FreeSurfer v8.2.0 SynthStrip script, including the distance-transform option required by the functional tests; x86_64 remains on its existing path. The verified outcome is recorded in [issue #228](https://github.com/Vbitz/neurocontainers-arm64/issues/228#issuecomment-5672485120).

@@ -92,8 +92,14 @@ The first integrated replay omitted the fourth intended commit `711220fe`, leavi
 
 The corrected exact native integration retest is [run 34910314613](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34910314613). The top-level pin remains unchanged pending this result.
 
+The corrected stale-pin candidate completed successfully: run [34910314613](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34910314613) passed native build, SIF conversion, deployment and all **121/121 fulltests**. This result is retained as recipe evidence, but the candidate was based on the prior BrainLesion pin and therefore requires the current-pin replay below before acceptance.
+
 ## Current-pin replay after QuickShear acceptance — 2026-09-15
 
 QuickShear is now the accepted submodule pin `7b70cacfbf0d2c04e8ef7fd7b355da0dff4a0a2e` in root commit `03c823387d8147f143e098713ecfc742177e4284`. Because the previously corrected TractSeg integration candidate was based on the prior pin, its four intended commits were replayed onto the current pin as `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3` on `integration/tractseg-quickshear`.
 
 Recipe validation and ARM64/x86_64 generation passed. The generated ARM64 Dockerfile keeps Qt/OpenGL installation before source MRtrix3 configuration, enables the viewer, and selects FSL 6.0.7.22; the x86_64 output retains the existing binary MRtrix and FSL 6.0.7.16 routes. Exact native ARM64 retest [run 34910862134](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34910862134) is pending. The run's top-level dispatcher SHA is expected to differ because `neurocontainers_ref` points to the full candidate SHA; source metadata must be checked before acceptance.
+
+## Accepted ARM64 implementation — 2026-09-15
+
+The current-pin candidate passed native ARM64 build, SIF conversion, deploy checks and all 121/121 fulltests in [run 34910862134](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34910862134). The accepted submodule pin is `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3`, pushed in root commit `7c2ca8322b03321a46b7c8c70d9053bf008956cd`. The ARM64 route uses native MRtrix3 source compilation with its viewer enabled, ARM64 Qt/OpenGL dependencies installed before configuration, Miniconda Python 3.11 with torch 2.4.1, and FSL 6.0.7.22. The x86_64 route remains on the existing binary MRtrix, Python 3.7/torch 1.6 and FSL 6.0.7.16 configuration. The verified outcome is recorded in [issue #238](https://github.com/Vbitz/neurocontainers-arm64/issues/238#issuecomment-5673899712).
