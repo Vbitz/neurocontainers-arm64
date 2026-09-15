@@ -3154,3 +3154,9 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 
 - Candidate `04970417e995232706f4ce85ddf4db23c79d4f25` passed exact native ARM64 run [34925938740](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34925938740): Docker build, architecture verification, SIF conversion, deploy checks and **9/9 fulltests**, with zero failures and zero skips. Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674555318) records the durable verified outcome.
 - The candidate descends directly from accepted pin `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3`. Next action: stage only the tested submodule pointer, commit/push the top-level acceptance, then refresh issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2). The overall goal remains active.
+
+## AIDAmri acceptance checkpoint — 2026-09-15
+
+- Root commit `1f3351b` pushed the tested AIDAmri submodule pointer to `04970417e995232706f4ce85ddf4db23c79d4f25`. The submodule branch `arm64/aidamri-system-libpng` is clean and pushed.
+- Tracker issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) was refreshed against the new accepted pin: 128 variants have historical full passes, 0 runs are active, and AIDAmri is now `✅ Verified` with 9/0/0 latest counts. The remaining plausible unverified rows decreased from 11 to 10.
+- Fork Actions remains disabled. The overall goal remains active because the remaining unverified inventory is still tracked and will be revisited only with changed evidence or a new supported route.
