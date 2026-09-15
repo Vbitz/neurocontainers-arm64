@@ -91,11 +91,12 @@ def build(info, results):
         raise RuntimeError('Built image is not Linux ARM64')
     info['docker_image_id'] = image['Id']
     (results / 'metadata.json').write_text(json.dumps(info, indent=2) + '\n')
-    archive = results / info['docker_archive']
-    run('docker', 'save', info['candidate_tag'], '--output', archive)
+    # Convert directly from the Docker daemon. Writing a docker-save tar first
+    # duplicates the image on disk and can exhaust the runner before Apptainer
+    # starts, especially for large model containers.
+    docker_source = f"docker-daemon:{info['candidate_tag']}"
     run('apptainer', 'build', results / info['sif'],
-        f'docker-archive://{archive}', log=results / 'apptainer.log')
-    archive.unlink()  # Keep the SIF, avoiding a second large artifact on disk.
+        docker_source, log=results / 'apptainer.log')
 
 
 def test(info, results):
