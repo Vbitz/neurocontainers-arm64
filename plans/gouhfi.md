@@ -28,3 +28,9 @@ already ARM64-declared recipe at accepted source
 `2026-09-15T04:43:14Z` with a `2026-09-15T16:43:14Z` deadline. Require the
 complete native build/SIF/deploy/fulltest path; stop immediately if storage
 exhaustion recurs or if a real application blocker appears.
+
+## Reopened retry result — 2026-09-15
+
+Run [34929965852](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34929965852) used the exact accepted source `e74050df0e4881833ae5d8d82b4e0ef287a14179` on native ARM64. The Docker build completed, including the native ARM64 `antspyx` build and model installation, but `docker save` failed before SIF conversion with `no space left on device` while writing the temporary archive. Deploy checks and fulltest did not run.
+
+This is attempt 1 in the reopened window (`2026-09-15T04:43:14Z`–`2026-09-15T16:43:14Z`). The repeated export failure after changed evidence makes GOUHFI **blocked-infrastructure** for the current runner capacity. Revisit only after runner storage or the Docker-to-SIF export path is repaired; then rerun the unchanged candidate and require the complete native SIF, deploy and fulltest gates. No recipe change is justified by this result.
