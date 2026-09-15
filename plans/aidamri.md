@@ -105,3 +105,7 @@ DSI Studio executable returned `DSI Studio (doi:...)` rather than the x86-only
 pins ARM64 Traits 6.4.3 and updates that assertion to the stable shared output
 prefix. Validation and both architecture Dockerfile generations pass. This is
 attempt 3/6; the recipe remains within the bounded window.
+
+The exact candidate is dispatched as native ARM64 run
+[34925938740](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34925938740).
+The dispatch details are recorded in [issue #119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674387518).
