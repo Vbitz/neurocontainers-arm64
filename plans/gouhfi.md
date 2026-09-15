@@ -34,3 +34,9 @@ exhaustion recurs or if a real application blocker appears.
 Run [34929965852](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34929965852) used the exact accepted source `e74050df0e4881833ae5d8d82b4e0ef287a14179` on native ARM64. The Docker build completed, including the native ARM64 `antspyx` build and model installation, but `docker save` failed before SIF conversion with `no space left on device` while writing the temporary archive. Deploy checks and fulltest did not run.
 
 This is attempt 1 in the reopened window (`2026-09-15T04:43:14Z`–`2026-09-15T16:43:14Z`). The repeated export failure after changed evidence makes GOUHFI **blocked-infrastructure** for the current runner capacity. Revisit only after runner storage or the Docker-to-SIF export path is repaired; then rerun the unchanged candidate and require the complete native SIF, deploy and fulltest gates. No recipe change is justified by this result.
+
+## Direct Docker-daemon conversion retry — 2026-09-15
+
+The repeated `docker save` storage failure is addressable in the orchestration path. Top-level commit `3980760` changes `scripts/arm64.py` to pass the loaded candidate directly to Apptainer as `docker-daemon:<tag>`, avoiding a second full-size tar on the runner. The required Python tests (16), report test, actionlint and diff checks pass.
+
+This is attempt 4/6 for GOUHFI, with investigation window `2026-09-15T05:51:29Z`–`2026-09-15T17:51:29Z`. Dispatch the unchanged recipe source `e74050df0e4881833ae5d8d82b4e0ef287a14179` using the updated orchestration. Require native Docker build, architecture verification, direct SIF conversion, deploy checks and the complete fulltest. If direct daemon conversion fails independently or the application fails, record that first actionable result and stop within the recipe budget.

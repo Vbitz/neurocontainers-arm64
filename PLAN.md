@@ -3191,3 +3191,8 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 
 - Run [34929965852](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34929965852) completed the native ARM64 Docker build, including the ARM64 `antspyx` source build and model extraction, but failed during `docker save` before SIF conversion with `no space left on device`. Deploy checks and fulltest did not run.
 - This exhausts the one unchanged infrastructure retry in the reopened window (`2026-09-15T04:43:14Z`–`2026-09-15T16:43:14Z`). Record GOUHFI as `blocked-infrastructure`; revisit only after runner storage or Docker-to-SIF export capacity changes. The accepted submodule pin remains `e74050df0e4881833ae5d8d82b4e0ef287a14179`, and the overall goal remains active.
+
+## GOUHFI direct daemon conversion retry — 2026-09-15
+
+- The repeated `docker save` storage blocker is addressable in top-level orchestration. Commit `3980760` changes `scripts/arm64.py` to convert from `docker-daemon:<candidate>` directly, avoiding a duplicate Docker archive; 16 Python tests, the report test, actionlint and diff checks pass.
+- This is GOUHFI attempt 4/6, investigation window `2026-09-15T05:51:29Z`–`2026-09-15T17:51:29Z`. Dispatch the unchanged accepted recipe source `e74050df0e4881833ae5d8d82b4e0ef287a14179` with the updated root orchestration. Require native build, architecture check, SIF, deploy and fulltest; keep the accepted submodule pin unchanged until exact evidence passes.
