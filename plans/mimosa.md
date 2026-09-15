@@ -75,3 +75,7 @@ The two intended MIMoSA commits were replayed onto accepted Syncro pin `54a83518
 ## Replay after VesselBoost acceptance — 2026-09-14
 
 The Syncro-based replay [34797053207](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34797053207) completed native ARM64 Docker build, SIF conversion, deploy checks and 21/21 fulltests with no skips. The two intended MIMoSA commits were replayed onto the accepted VesselBoost pin `863c447457d817156882b12a6920fd3411f68543` as candidate [`df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`](https://github.com/Vbitz/neurocontainers/commit/df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1) on [`arm64/mimosa-vesselboost`](https://github.com/Vbitz/neurocontainers/tree/arm64/mimosa-vesselboost). Recipe validation and ARM64/x86_64 generation pass. The exact candidate is dispatched in [run 34802537055](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34802537055), attempt 3/6; acceptance requires its complete native gates.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1` passed its native ARM64 Docker build, SIF conversion, deploy checks, and 21/21 fulltests with no skips in [run 34802537055](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34802537055). The ARM route uses the released ARM FSL package and the large PIC model for ANTsRCore. That candidate is an ancestor of the accepted submodule pin `41ddfbf5010657e0185ab1d7730b42149e8fb744`; no additional MIMoSA build is required.

@@ -6,8 +6,8 @@ Recipes and their tests live in [Vbitz/neurocontainers](https://github.com/Vbitz
 included here as a pinned submodule. This repository owns the manual Actions workflow.
 
 The [recipe coverage tracker](https://github.com/Vbitz/neurocontainers-arm64/issues/2)
-lists every recipe. Checkboxes indicate declared ARM64 support; linked container
-issues hold actual build/test evidence.
+lists every recipe in a table with native ARM64 build results, full test results,
+plan feasibility, and evidence links. Summary counts appear below the table.
 
 ## Build a container
 
@@ -102,23 +102,39 @@ gh api --method PUT repos/Vbitz/neurocontainers/actions/permissions -F enabled=f
 
 ## Refresh the coverage tracker
 
-After committing recipe changes and updating the submodule pin, regenerate the
-checklist from the fork's architecture resolver. This includes named variants
-and links the latest available ARM64 release JSON and existing container result issues.
-Release links require explicit ARM64 metadata and are pinned to the source revision.
-The tracker is a snapshot, not
-automatically updated by builds; checkboxes do not imply verified runtime support.
+The Python script fetches all `build-arm64.yml` runs, all `arm64-container` issues
+(including closed issues), and their full comment history. It recovers job-step
+outcomes for attempts missing a report. It reads the recipe inventory from the
+committed submodule pin and research assessments from committed `plans/*.md`, so
+an agent's checked-out candidate does not change the inventory. It requires only
+Python's standard library and an authenticated `gh` CLI.
 
 ```sh
-gh issue list -R Vbitz/neurocontainers-arm64 --state all \
-  --label arm64-container --limit 1000 --json body,url > /tmp/arm64-issues.json
-uv run --project neurocontainers --frozen python scripts/tracking_issue.py \
-  --issues-json /tmp/arm64-issues.json > /tmp/arm64-tracker.md
-gh issue edit 2 -R Vbitz/neurocontainers-arm64 --body-file /tmp/arm64-tracker.md
+# Generate the table and update issue #2 in one command.
+python3 scripts/tracking_issue.py --write
+
+# Preview and save the GitHub evidence for repeatable offline review.
+python3 scripts/tracking_issue.py --snapshot /tmp/arm64-evidence.json \
+  --output /tmp/arm64-tracker.md
+python3 scripts/tracking_issue.py --from-snapshot /tmp/arm64-evidence.json \
+  --output /tmp/arm64-tracker.md
 ```
 
-This replaces the tracker body; keep investigation notes in comments or the
-individual container issues.
+Without `--write`, the script only generates Markdown (stdout or `--output`).
+With `--write`, it replaces the tracker body and verifies the update by reading it
+back; comments are preserved. The issue must have the coverage tracker marker.
+Saved snapshots include the documentation revision and accepted recipe pin's
+parent revision, so offline replay uses the same inventory and plans.
+
+Build/test columns use the latest completed attempt per recipe/variant and link
+active runs and earlier fully passing results separately. A test success requires
+a positive count, no failures and no skips; missing counts remain unknown. A
+setup failure is not evidence that the application cannot build. Results describe
+the linked tested commit, not a published release or automatic verification of
+the current accepted pin. Plan assessments distinguish plausible routes,
+unresolved dependencies and prerequisites; they do not infer impossibility from
+an absent ARM64 declaration. New assessment wording must be added explicitly to
+the script's mapping. The tracker is a snapshot and is not updated by builds.
 
 ## Check the orchestration locally
 

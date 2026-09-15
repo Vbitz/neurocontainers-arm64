@@ -39,3 +39,7 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
 - Coverage status: build **❌**, fulltest **➖ Not run**; plan assessment: **Plausible**.
 - Investigation outcome: **blocked-upstream**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/168#issuecomment-5654126677).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Upstream refresh — 2026-09-15
+
+The latest official Surf Ice release remains `v1.0.20211006` and publishes Linux, macOS and Windows assets without a Linux ARM64 package. The documented source build remains available, but the native ARM64 attempt stopped in the pinned OpenGL Pascal source with FreePascal `ppca64` internal error 2009112903. No released source or compiler fix changes that blocker. The refresh is recorded in [issue #168](https://github.com/Vbitz/neurocontainers-arm64/issues/168#issuecomment-5668922940).

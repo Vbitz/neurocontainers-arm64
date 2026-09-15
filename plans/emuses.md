@@ -47,3 +47,7 @@ A dependency/source-build investigation remains, rather than an established univ
 - Exact native retry [34775307167](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34775307167) is now dispatched as attempt 3/6. It uses candidate `685f5f4d9636d34aa8237646535d2a7dfc3a525d`; inspect the complete build and runtime evidence before integration.
 
 The candidate passed native Docker build, SIF conversion, deploy checks and 2/2 fulltests (0 failed, 0 skipped) in [run 34775307167](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34775307167). Because it descends directly from accepted pin `80a84327a6659b0ac79a44f2c1853faa9eb84f4b`, it is accepted for serial top-level integration at `685f5f4d9636d34aa8237646535d2a7dfc3a525d`.
+
+## Accepted implementation — 2026-09-14
+
+The verified candidate `685f5f4d9636d34aa8237646535d2a7dfc3a525d` remains an ancestor of accepted submodule pin `41ddfbf5010657e0185ab1d7730b42149e8fb744`. Its ARM-only lock filtering removes the x86-only NVIDIA/Triton closure while preserving the CPU PyTorch route, and its native run passed 2/2 fulltests with no skips. No additional EMUSES build is required.

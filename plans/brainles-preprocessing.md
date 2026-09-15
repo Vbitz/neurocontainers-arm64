@@ -61,3 +61,19 @@ The final outcome is recorded in [issue #186](https://github.com/Vbitz/neurocont
 - Coverage status: build **❌**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-infrastructure**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-5655583825).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Changed-infrastructure follow-up — 2026-09-14
+
+A direct preflight at `2026-09-14T18:49:41Z` returned HTTP 200 and `application/octet-stream` for all five declared HD-BET model URLs. This changes the prior data-service condition that prevented both native attempts from reaching Docker staging. The existing source-build candidate `2f061f36896188f8be2d00b73519d819c8c2d164` was therefore reopened as attempt 3/6 in a fresh 12-hour window and dispatched on the native ARM64 workflow as [run 34883244804](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883244804). The issue checkpoint is [#186](https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-5669009474), with the exact dispatch recorded [here](https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-5669022628).
+
+Require the full ARM64 Docker build, SIF conversion, deploy checks and complete existing fulltest before considering the route verified. The candidate remains based on its recorded earlier accepted source and must be rebased and retested serially before integration if it passes.
+
+## Native source-build result — 2026-09-15
+
+The changed-data candidate `2f061f36896188f8be2d00b73519d819c8c2d164` passed the native ARM64 Docker build, SIF conversion, deploy checks and all 16 fulltests in [run 34883244804](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883244804). The issue reporter records 16 passed, 0 failed and 0 skipped in [issue #186](https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-5669707592).
+
+Because that candidate was based on the older parent `685f5f4d9636d34aa8237646535d2a7dfc3a525d`, its single recipe commit was cherry-picked onto the current accepted pin `2ad9c2ff6c9762868c99ebbe3ac59b7f895cfc51`. The integrated candidate is `bfa2364d60f7cd99e83b813a48f6c39d41c6945e` on `integration/brainles-preprocessing`; local validation and ARM64/x86_64 generation passed. Exact native retest is queued as attempt 4/6 in [run 34888489034](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34888489034), with the dispatch checkpoint in [issue #186](https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-5669775446). Acceptance remains pending that exact integrated result.
+
+## Accepted ARM64 result — 2026-09-15
+
+The serially integrated candidate `bfa2364d60f7cd99e83b813a48f6c39d41c6945e` passed the exact native ARM64 workflow `34888489034`: Docker build, architecture verification, SIF conversion, deploy checks, and fulltest all passed (16 passed, 0 failed, 0 skipped). The submodule pin was advanced from `2ad9c2ff6c9762868c99ebbe3ac59b7f895cfc51` and pushed in root commit `b8d2189`. Issue: https://github.com/Vbitz/neurocontainers-arm64/issues/186

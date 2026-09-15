@@ -43,3 +43,11 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **❌**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-upstream**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/240#issuecomment-5654629347).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Changed route investigation — 2026-09-14
+
+The current conda-forge ARM64 package inventory provided a new route, so the earlier VTK 9.1 source failure was not treated as final without testing it. Candidate `4a4bdc48` added an ARM-only VMTK 1.5.0 source build against native conda-forge ITK and VTK packages. Native run [34833500259](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34833500259) installed the packages but stopped because the conda ITK package intentionally omits `ITKConfig.cmake` and C++ headers.
+
+The final bounded candidate `76a0729353cf135171b4422885766e93dcf21cba` pinned native VTK 9.3.1 and used VMTK's documented ITK 5.4.5 superbuild. Native run [34834014049](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34834014049) stopped at CMake configuration when the ARM VTK/Qt package required `QT_HOST_PATH` and reported `Qt6_FOUND=FALSE` from VTK's package configuration. No SIF, deploy checks or fulltest ran.
+
+This investigation reached the six attempt limit. VMTK remains `blocked-upstream`; revisit only with a supported ARM64 VTK/Qt package or documented native `QT_HOST_PATH` configuration. The failed branch [`arm64/vmtk-system`](https://github.com/Vbitz/neurocontainers/tree/arm64/vmtk-system) remains available for evidence. Do not patch Qt or VTK internals in the recipe.

@@ -45,3 +45,7 @@ A dependency/source-build investigation remains, rather than an established univ
 ## Follow-up upstream audit — 2026-09-14
 
 The upstream fMRIPrep build configuration still explicitly builds both its base and production images with `--platform linux/amd64` in [the official CI configuration](https://github.com/nipreps/fmriprep/blob/master/.circleci/config.yml). The upstream [ARM host report](https://github.com/nipreps/fmriprep/issues/3068) also records the released image being selected as `linux/amd64` on an ARM64 host. Since this recipe consumes the pinned image as its complete dependency stack, no native ARM64 candidate can be made by changing the wrapper architecture selector. Revisit only when the pinned release or a supported replacement publishes a Linux ARM64 image or complete ARM64 source build.
+
+## Final disposition — 2026-09-14
+
+Outcome: **blocked-prerequisite**. The pinned recipe is a wrapper around the complete `nipreps/fmriprep:25.2.5` image, whose build and published manifest are amd64-only. A recipe-only architecture declaration cannot produce the required native dependency stack. Revisit when the pinned release or a supported replacement publishes a Linux ARM64 image or a complete documented ARM64 source build; do not dispatch an unchanged candidate.

@@ -41,3 +41,10 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/151#issuecomment-5651349311).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+## Accepted ARM64 implementation — 2026-09-14
+
+Candidate `4911988c7900801c10f7fce39f143d301c8a3852` passed a native ARM64
+Docker build, architecture verification, SIF conversion, deploy checks, and
+all **6/6** fulltests in [run 34826452710](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34826452710).
+The ARM route uses AFNI's official `linux_ubuntu_24_ARM.tgz` package and a
+native dcm2niix build; the x86_64 ME-ICA runtime remains unchanged.

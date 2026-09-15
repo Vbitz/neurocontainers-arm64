@@ -2671,3 +2671,435 @@ Candidate queued: TopoFit `383a955c977619a8c64d2e2340ff724f551fe8f9` on `arm64/t
 - Blender’s prior current candidate `f096bb4b0a3cc2a4fde90ab957770ea79dfac722` failed after 1h23m in Blender’s native MaterialX configure with `Error in building MaterialXRenderGlsl: Xt was not found`. The failure was recorded on issue [#122](https://github.com/Vbitz/neurocontainers-arm64/issues/122); Ubuntu noble publishes `libxt-dev` for arm64.
 - Candidate `803bf8f3e46ec28bf52be2873b244bf8a85b83ca` adds only ARM64 `libxt-dev` to the Blender source-build dependencies. Local validation and ARM64/x86_64 generation pass, and the branch `arm64/blender-mimosa` is pushed.
 - The exact current-pin candidate is dispatched in [run 34808872519](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34808872519). Acceptance requires native Docker/SIF/deploy/fulltest success; this is the final targeted dependency retry before recording Blender’s blocker if another upstream failure appears.
+
+## Coverage reporting checkpoint — 2026-09-14
+
+- Follow-up presentation change: result cells and summary rows now use ✅/❌, with distinct symbols for skipped, unrun, cancelled and unknown results. The generator refreshed issue #2 and verified the published body; all required checks passed again.
+- User-requested reporting change: `scripts/tracking_issue.py` now generates the build/test/plan-feasibility table and directly updates [issue #2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) with `python3 scripts/tracking_issue.py --write`. The published body was read back and verified. README documents preview and saved-evidence replay; the previous `--issues-json` checklist command is replaced.
+- Reviewed all 352 workflow runs (353 attempts), 247 container issues and their comment histories, and 148 research plans. Latest completed evidence: 125 builds succeeded; 119 passed every test; 6 failed runtime tests; 18 failed builds; 104 did not reach a build. Unverified plan assessments: 14 plausible, 68 unresolved, 7 conditional, 31 vendor-prerequisite blockers, 2 with no route found, 1 outside scope, 5 without a research plan.
+- Reporting-only work at root baseline `3a3ce612ff2975ab7fde1d1b5315634bc5d3b11c`; accepted submodule pin remains `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`. The existing checkout remains `arm64/blender-mimosa` at `803bf8f3e46ec28bf52be2873b244bf8a85b83ca`, with run 34808872519 active at the snapshot. No builds dispatched, branches switched, pins staged, or AGENTS.md files changed. Fork Actions remains disabled. Recipe investigation budgets and next actions above are unchanged.
+- Validation: 15 Python tests, the Node reporter test, actionlint and diff whitespace checks passed. Reporting code, tests and documentation remain local working-tree changes for review; no commits or pushes were made for this reporting task. Next reporting action: rerun the new command after build results change.
+
+## Blender upstream blocker checkpoint — 2026-09-14
+
+- The exact current-pin Blender candidate `803bf8f3e46ec28bf52be2873b244bf8a85b83ca` on `arm64/blender-mimosa` failed in native ARM64 run [34808872519](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34808872519) after approximately 1h44m. Docker build and SIF conversion failed; deploy and fulltest did not run.
+- First actionable error: USD's `pxr/exec/vdf/executorDataVector.cpp:39` reports `error: impossible constraint in ‘asm’` in `Vdf_ExecutorDataVector_ValgrindMakeDefined`. This is an upstream ARM64 assembly/constraint port, so Blender is recorded as `blocked-upstream`; no further speculative recipe retry is planned.
+- Durable issue note: [issue #122 comment](https://github.com/Vbitz/neurocontainers-arm64/issues/122#issuecomment-5660241995). The prior bounded Blender sequence reached its 6/6 attempt, and this accepted-pin replay was the final targeted current-pin dependency retry. Revisit only with a released USD ARM64 fix or documented upstream configuration that removes the failing code path.
+- Current accepted top-level submodule pin remains `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`; the working submodule checkout remains clean at `803bf8f3e46ec28bf52be2873b244bf8a85b83ca` on `arm64/blender-mimosa`. No pin integration is performed for this failed candidate. Fork Actions remains disabled.
+- Next action: refresh coverage issue #2 with `python3 scripts/tracking_issue.py --write`, then reconcile the remaining plausible/unverified inventory without redispatching passed or concretely blocked recipes.
+
+## Coverage reconciliation checkpoint — 2026-09-14 (post-Blender result)
+
+- `python3 scripts/tracking_issue.py --write` was rerun after Blender run `34808872519` completed and issue #2 was read back successfully. The tracker now reports 352 workflow runs, 353 attempts, 0 active runs, 125 historical ARM64 builds, 119 variants passing every test, 18 failed builds, 6 failed runtime variants, and 104 not reaching a build.
+- The 14 rows still assessed as `Plausible` all have terminal evidence in their per-recipe issues: Blender, Civet, Convert3D, Elastix, ITK-SNAP, LCModel, LSTAI, MRIcroGL, MuscleMap, QuickShear, ROMEO, SOVA BIDS and SurfIce have concrete upstream, prerequisite, runtime, or infrastructure blockers; DSI Studio is also included in the runtime-failure set. No plausible row remains without a durable investigation outcome.
+- The four runtime-reaching failures reviewed in this pass remain unresolved for upstream reasons: DSI Studio required AutoTrack operations fail in its official ARM64 CPU binary; ITK-SNAP exposes a pinned C3D buffer overflow; QuickShear requires an unsupported FreeSurfer distance-transform option; ROMEO's upstream Julia package extension remains incompatible. Their exact issue comments are linked by the tracker.
+- Repository checks passed: 15 Python tests, Node reporter test, and `actionlint`. Fork Actions remains disabled. The submodule checkout is restored to the accepted pin `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1` in detached state; no failed candidate was integrated. Existing local user changes to `PLAN.md`, `README.md`, `scripts/tracking_issue.py`, `plans/blender.md`, and `tests/test_tracking_issue.py` remain preserved and unstaged.
+
+## Continuation audit checkpoint — 2026-09-14
+
+- The previous goal closure was premature because the plan files did not mirror the durable issue outcomes. This continuation synchronized the 123 unverified recipe plans with their current build/test result, terminal outcome label, and exact issue comment link. The 25 remaining plans without this section are verified recipes and were intentionally left unchanged.
+- The current tracker inventory has no unverified row without issue evidence. Unresolved rows are categorized by their recorded outcomes: 57 blocked-prerequisite, 9 blocked-upstream and 2 blocked-infrastructure; conditional, no-route, outside-scope and plausible rows also have terminal issue outcomes. No recipe has a justified next native experiment without a changed upstream release, prerequisite, or infrastructure condition.
+- `python3 scripts/tracking_issue.py --write` refreshed and verified issue #2 after the plan synchronization. Repository validation passed: 15 Python tests, the Node reporter test, `actionlint`, and `git diff --check`. No active runs remain and fork Actions is still disabled.
+- The accepted submodule pin remains `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`; no failed candidate was integrated. Local reporting and plan changes remain unstaged for user review.
+
+## Active continuation checkpoint — 2026-09-14 (unresolved prerequisite audit)
+
+- The continuation remains active. Current accepted submodule pin is `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`; the submodule checkout is detached at that pin and clean. Fork Actions is disabled and there are no active native runs.
+- The current tracker inventory still has 247 rows: 125 historical ARM64 builds, 119 variants passing every test, 18 failed builds, 6 failed runtime variants and 104 not run. Every unverified row has an issue outcome; no recipe branch is currently justified without a changed prerequisite or a documented supported route.
+- Follow-up audit of fMRIPrep found the pinned upstream build remains explicitly `linux/amd64`; the evidence is recorded in issue [#105](https://github.com/Vbitz/neurocontainers-arm64/issues/105#issuecomment-5660402371) and pushed plan commit `81cf932`. The next selection pass is focused on unresolved source routes whose full dependency stack is not already blocked by an amd64-only payload or an exhausted upstream compile failure.
+
+## Active continuation checkpoint — 2026-09-14 (148-recipe terminal-outcome audit)
+
+- The 148-recipe research scope in `plans/README.md` is fully represented in the tracker: 25 currently pass native ARM64 build/SIF/deploy/fulltest gates and 123 remain unverified with a durable issue outcome and revisit condition. The tracker has no missing scope row or missing issue evidence.
+- The current global tracker snapshot is 247 rows, 125 historical ARM64 builds, 119 variants passing every test, 18 failed builds, 6 failed runtime variants, and 104 not run. The 14 recipes still classified as initially plausible have all reached either native verification or a concrete terminal blocker; no plausible route is being retried without changed upstream evidence.
+- NFTsim’s accepted native result is now mirrored in `plans/nftsim.md` and issue [#222](https://github.com/Vbitz/neurocontainers-arm64/issues/222#issuecomment-5660493719). Candidate `ce058afece0774f0fe915f3bc07c04507c7665bc` passed 68/68 in [run 34754095890](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34754095890) and remains an ancestor of accepted pin `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`; the documentation correction is pushed in root commit `0f05c06`.
+- No active native runs remain. Fork Actions remains disabled. The submodule checkout is detached and clean at the accepted pin. Existing local changes to `PLAN.md`, `README.md`, `scripts/tracking_issue.py`, and `tests/test_tracking_issue.py` remain untouched and unstaged.
+- The goal remains active: continue auditing any unresolved recipe whose issue condition changes, and do not close the goal solely because the current queue has terminal blockers.
+
+## Active continuation checkpoint — 2026-09-14 (conditional and stack blockers clarified)
+
+- Added concrete implementation dispositions to the conditional GPU recipes `deepisles`, `deepsif`, `esilpd`, `nesvor`, `openads`, `openmsk`, and `relion`. Their pinned x86/CUDA assets or GPU-only contracts prevent a native CPU ARM64 candidate; each exact issue comment records the revisit condition. Root documentation commit `b79d59a` pushed.
+- Added concrete dispositions to `connectomeworkbench`, `brainvisa`, `hcpasl`, `ilastik`, `mriqc`, and `mrtrix3src`, documenting their amd64 package/image, missing ARM channel, complete native-stack, or embedded x86 prerequisite blockers. Root documentation commit `d08efa8` pushed.
+- Validation passed: 15 Python tests, Node report test, `actionlint`, `git diff --check`; `scripts/tracking_issue.py --write` updated and verified issue #2. No native runs are active and fork Actions remains disabled.
+- The 148-scope goal remains active. Continue only when a remaining issue gains a changed upstream release, ARM package, supported CPU mode, or infrastructure condition; do not dispatch speculative retries against the recorded blockers.
+
+## Active continuation checkpoint — 2026-09-14 (FreeSurfer shared prerequisite audit)
+
+- Official FreeSurfer download evidence was refreshed. The current development index lists ARM64 artifacts for macOS but Linux artifacts only for x86_64/amd64; no Linux ARM64 payload is available for the FastSurfer surface prerequisite. This is recorded in issue [#196](https://github.com/Vbitz/neurocontainers-arm64/issues/196#issuecomment-5660576119) and `plans/fastsurfer.md`; root commit `a434c4f` is pushed.
+- Issue #2 was refreshed and verified after the audit. No active native runs remain, Actions is disabled, and the accepted submodule remains clean at `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`.
+- The goal remains active. Continue looking for changed upstream ARM releases or supported CPU routes that would invalidate a current blocker; do not use emulation or partial functionality as verification.
+
+## Active continuation checkpoint — 2026-09-14 (accepted-result reconciliation)
+
+- OpenADS CPU’s integrated candidate `6103a923f43106c039ddf22a59c99c25352e459b` was confirmed as an accepted native ARM64 result: 3/3 tests in [run 34759549792](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34759549792). The result is recorded in [plans/openadscpu.md](plans/openadscpu.md), issue [#66](https://github.com/Vbitz/neurocontainers-arm64/issues/66#issuecomment-5660599059), and root commit `a1cfe83`.
+- The remaining 17 accepted scope recipes whose plans lacked implementation notes now have exact candidate/run/fulltest records in root commit `a30b752`. All 25 currently verified plans now contain a durable native result; no successful recipe was rerun.
+- `scripts/tracking_issue.py --write` refreshed and verified issue #2. No active native runs remain, fork Actions is disabled, and the submodule is clean at accepted pin `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`.
+- The goal remains active while the 123 unverified recipes retain their terminal blocker outcomes and are eligible for reconsideration only when their recorded prerequisite, upstream, runtime, or infrastructure condition changes.
+
+## Active continuation checkpoint — 2026-09-14 (bounded source-route review)
+
+- BrainLesion was re-audited before considering a retry. Its issue already records three native attempts and the two allowed recipe-level prerequisite corrections: adding `g++`, then `build-essential` and `git`. The final antspyx 0.6.3 source setup failed in upstream ITK/ANTs configuration with the `master` pathspec error and missing ZLIB/PNG development libraries. No duplicate run was dispatched; the exact disposition is now mirrored in `plans/brainlesion.md` and pushed in root commit `bd3d66e`.
+- FastCSR was rechecked at preflight. Its pinned inputs remain FreeSurfer `Linux-centos6_x86_64` and the Nighres `cp38-cp38-linux_x86_64` wheel, so no valid ARM64 candidate can be formed from the declared pipeline. The exact prerequisite disposition is mirrored in `plans/fastcsr.md` and pushed in the same commit.
+- Current upstream image checks found fMRIPrep 25.2.5 is still a single `linux/amd64` image and NiftyMIC v0.9 is still a single `linux/amd64` image; neither invalidates its existing issue blocker. No build was repeated. Tracker write completed and verified issue #2; Actions remains disabled and no native runs are active.
+- The accepted submodule remains detached and clean at `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`. Local `PLAN.md`, README, tracker script and tracker tests remain user changes and are not staged. Keep the goal active and continue only when a remaining recipe has changed upstream ARM64 evidence or a bounded, supported source route.
+
+## Active continuation checkpoint — 2026-09-14 (MINC source route exhausted)
+
+- MINC was selected for a fresh supported source route from upstream `release-1.9.18.4`. The candidate branch `arm64/minc-source` is pushed through final candidate `53aef7f9a678cf83c2bcb8ff12f98130395acbbb`; the local submodule is currently clean on that failed branch. The accepted top-level pin remains `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1` and was not changed.
+- Six native ARM64 attempts were completed in [34820094089](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34820094089), [34820665331](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34820665331), [34821227145](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34821227145), [34821692841](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34821692841), [34822875410](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34822875410), and [34823294298](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34823294298). The final candidate cleared CMake configure and substantial ARM64 compilation, then failed because the legacy MINC HDF5 integration did not propagate `hdf5.h` from Ubuntu's serial multiarch include directory into `libminc`.
+- MINC is recorded as `blocked-upstream` in [issue #154](https://github.com/Vbitz/neurocontainers-arm64/issues/154#issuecomment-5661335522) and [plans/minc.md](plans/minc.md). No SIF, deploy checks or fulltest ran. Do not rerun without a released MINC build-system fix or documented supported include-path configuration.
+- `python3 scripts/tracking_issue.py --write` completed after the final run and verified issue #2. The tracker reports zero active runs; fork Actions remains disabled.
+- Local recipe validation and ARM64/x86_64 Dockerfile generation passed for the final candidate. MINC and NiftyMIC plan dispositions are pushed in root commit `6efddeb`, and the MRtrix3 refinement is pushed in `96d96d3`; the remaining root working tree changes (`PLAN.md`, `README.md`, `scripts/tracking_issue.py` and `tests/test_tracking_issue.py`) remain intentionally unstaged, and no `AGENTS.md` was touched. The next queue action is to audit the remaining unresolved recipes for a changed supported route, without repeating MINC's exhausted investigation.
+
+## Active continuation checkpoint — 2026-09-14 (NiftyMIC prerequisite route closed)
+
+- NiftyMIC was audited without a duplicate build. Its pinned v0.9 image remains linux/amd64-only, and the documented source installation requires the legacy NSoL, SimpleReg, PySiTK and ITK_NiftyMIC stack with Python 2.7/3.5/3.6 and Ubuntu 16.04/18.04 assumptions. Upstream metadata shows the dependency stack has had no maintained ARM64 release path.
+- The exact disposition is recorded as `blocked-prerequisite` in [issue #110](https://github.com/Vbitz/neurocontainers-arm64/issues/110#issuecomment-5661388675) and [plans/niftymic.md](plans/niftymic.md). Revisit only with a maintained ARM64/multi-architecture release or documented current source route; do not port the legacy third-party stack in this recipe.
+- The accepted submodule remains `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`, clean and detached. No native runs are active, and the next action is to continue changed-route audits while preserving the active goal.
+
+## Active continuation checkpoint — 2026-09-14 (MRtrix dependency audit)
+
+- Current Bioconda metadata now provides MRtrix3 3.0.8 for linux-aarch64, but the complete `mrtrix3` recipe still requires FSL, ANTs, FreeSurfer and the embedded x86 CentOS acpcdetect binary. No partial candidate was dispatched because omitting those dependencies would change the declared container functionality.
+- The exact remaining prerequisite blocker is recorded in [issue #243](https://github.com/Vbitz/neurocontainers-arm64/issues/243#issuecomment-5661433515) and [plans/mrtrix3.md](plans/mrtrix3.md). Continue auditing other unresolved routes for equivalent newly available ARM artifacts without rerunning this blocked recipe.
+
+## Active continuation checkpoint — 2026-09-14 (MEICA AFNI ARM64 route)
+
+- Current accepted submodule pin remains `df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1`. The submodule candidate branch `arm64/meica-afni` contains `4911988c7900801c10f7fce39f143d301c8a3852`, which adds `aarch64` support for MEICA 4.0.1 while preserving the x86_64 matched runtime.
+- The ARM route uses AFNI's official `linux_ubuntu_24_ARM.tgz` package, creates the MEICA runtime activation/layout, and compiles dcm2niix v1.0.20250505 from source. Recipe validation and ARM64/x86_64 generation pass.
+- Exact native run [34826452710](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34826452710) is active, attempt 1/6. Acceptance requires native Docker build, SIF conversion, deploy checks and the complete MEICA fulltest. Issue [#151](https://github.com/Vbitz/neurocontainers-arm64/issues/151#issuecomment-5661632033) records the hypothesis and next action.
+- The root submodule pointer is intentionally unstaged while this exact candidate runs. Fork Actions remains disabled; no other same-recipe attempt is queued.
+
+## Active continuation checkpoint — 2026-09-14 (MEICA accepted; AIDAmri reopened)
+
+- MEICA candidate `4911988c7900801c10f7fce39f143d301c8a3852` is now accepted in root commit `66404cf`. Native run [34826452710](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34826452710) passed build, SIF conversion, deploy checks and 6/6 fulltests; issue [#151](https://github.com/Vbitz/neurocontainers-arm64/issues/151#issuecomment-5661747050) and `plans/meica.md` record the verified result.
+- The submodule is clean at the accepted MEICA candidate. Existing user changes to `PLAN.md`, `README.md`, `plans/aidamri.md`, `plans/meica.md`, `scripts/tracking_issue.py` and `tests/test_tracking_issue.py` remain unstaged; no `AGENTS.md` was touched.
+- AIDAmri issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5661737150) was reopened from its old prerequisite disposition after official FSL Linux aarch64 packages and official DSI Studio ARM64 Linux releases became available. Next action: create one bounded candidate preserving x86_64, using the accepted FSL ARM path and an ARM64 DSI Studio release, then let native build evidence classify the remaining Python/runtime dependencies.
+- `python3 scripts/tracking_issue.py --write` was run after the prior accepted pin; rerun after integrating the next accepted candidate or recording the AIDAmri result. Fork Actions remains disabled.
+
+## Active continuation checkpoint — 2026-09-14 (AIDAmri native attempt 1)
+
+- Accepted root commit is `66404cf`, with accepted submodule pin `4911988c7900801c10f7fce39f143d301c8a3852` (MEICA ARM64 verified).
+- AIDAmri candidate `3c54062f` is pushed on `arm64/aidamri`; issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5661828015) records the hypothesis and validation.
+- Exact native run [34827799424](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34827799424) is queued, attempt 1/6. It tests the official FSL ARM template, DSI Studio ARM64 CPU asset, ARM Miniconda runtime and the complete AIDAmri fulltest.
+- The top-level submodule pointer is intentionally unstaged while this candidate runs. Fork Actions remains disabled; no other AIDAmri attempt is queued.
+- Dispatch correction: run `34827799424` used an abbreviated ref and failed during checkout before any recipe work; it is metadata-only. The exact candidate SHA `3c54062fa17cece264665aede89e863d9daf356c` is now queued in [run 34827992841](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34827992841) as AIDAmri attempt 1/6.
+- Coverage checkpoint: `python3 scripts/tracking_issue.py --write` fetched 247 issues/363 runs, refreshed issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2), and verified the updated body while AIDAmri run 34827992841 remains active.
+
+## Active continuation checkpoint — 2026-09-14 (AIDAmri attempt 1 diagnosis)
+
+- AIDAmri attempt 1, run `34827992841`, reached native ARM64 Docker build and installed the ARM FSL stack successfully, then failed at the DSI Studio extraction path. The official ARM zip uses `dsi-studio-cpu/dsi_studio`; the candidate expected `dsi-studio/dsi_studio`.
+- Targeted fix `4aef7b97152a04e95602f81f1e89a0e642125675` normalizes that ARM-only directory and preserves the existing runtime checks. Validation and both architecture generations pass. Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5661982439) records the evidence.
+- Exact retry run [34828975256](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34828975256) is queued as attempt 2/6. The accepted root pin remains `4911988c7900801c10f7fce39f143d301c8a3852`; the working submodule is on `arm64/aidamri` and remains intentionally unstaged at the root.
+
+## Active continuation checkpoint — 2026-09-14 (AIDAmri attempt 2 diagnosis)
+
+- AIDAmri attempt 2, run [34828975256](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34828975256), reached the ARM64 NiftyReg source build after FSL and DSI Studio completed. It failed on the pinned NiftyReg project's default x86 SSE flag: `cc: error: unrecognized command-line option '-msse'`.
+- This is a documented NiftyReg configuration route, not yet an upstream source port. Candidate `76c4d2054fe601aee0489b6a7e26b2da3c5d3aa6` adds `-D USE_SSE=OFF` only to the aarch64 CMake invocation and preserves the x86_64 path. Recipe validation plus ARM64/x86_64 generation passed; the candidate is pushed on `arm64/aidamri`.
+- Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5662078998) records the first error, attempt budget, and next action. Dispatch the exact candidate as attempt 3/6. The accepted root pin remains `4911988c7900801c10f7fce39f143d301c8a3852`; the root submodule pointer is intentionally unstaged while this candidate runs.
+
+## Active continuation checkpoint — 2026-09-14 (AIDAmri attempt 3 diagnosis)
+
+- AIDAmri attempt 3, run [34829714256](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34829714256), passed the prior SSE failure and compiled NiftyReg through 83% before the pinned 2019 source failed on its invalid `InputTransform` member in `_reg_aladin.h`. No SIF, deploy checks or fulltest ran.
+- NiftyReg's current released `v2.0.0` fixes that accessor and documents Ubuntu 22.04+ support. Candidate `0293c7fe` updates only the aarch64 NiftyReg source to that release, keeps the old x86_64 source, and retains ARM `USE_SSE=OFF`. Validation and both architecture generations passed; the candidate is pushed on `arm64/aidamri`.
+- Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5662196129) records the source error and bounded release-update hypothesis. Dispatch the exact candidate as attempt 4/6. If the released source still needs compatibility patches, classify AIDAmri as blocked-upstream and stop further edits. Accepted root pin remains `4911988c7900801c10f7fce39f143d301c8a3852`; root submodule pointer is intentionally unstaged.
+
+## Active continuation checkpoint — 2026-09-14 (AIDAmri attempt 4 dispatched)
+
+- The first v2.0.0 dispatch used a mistyped SHA and was canceled before checkout in [run 34830620193](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34830620193); it is metadata-only and does not consume the recipe attempt budget.
+- Exact candidate `0293c7fe67740570aadf8ab9e2f498d9ffa2ba69` is now dispatched as native attempt 4/6 in [run 34830672292](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34830672292). Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5662209302) records the correction. Accepted root pin remains `4911988c7900801c10f7fce39f143d301c8a3852`; root submodule pointer is intentionally unstaged.
+
+## Active continuation checkpoint — 2026-09-14 (AIDAmri attempt 4 diagnosis)
+
+- AIDAmri attempt 4, run [34830672292](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34830672292), reached NiftyReg v2.0.0 CMake configuration and failed because `git` was missing for release version metadata. FSL and DSI Studio completed; no SIF, deploy checks or fulltest ran.
+- Candidate `0b57a253f38c9749d5cff6e98657993824f2c8fd` adds the missing `git` build dependency and preserves x86_64. Validation and both architecture generations passed; the candidate is pushed on `arm64/aidamri`.
+- Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5662276167) records the first error and next action. Dispatch the exact candidate as attempt 5/6. If the released NiftyReg source has another source compatibility failure, stop and record `blocked-upstream`. Accepted root pin remains `4911988c7900801c10f7fce39f143d301c8a3852`; root pointer is intentionally unstaged.
+
+## Active continuation checkpoint — 2026-09-14 (AIDAmri attempt 5 dispatched)
+
+- Exact candidate `0b57a253f38c9749d5cff6e98657993824f2c8fd` is dispatched as native attempt 5/6 in [run 34831228481](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34831228481). Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5662282309) records the run and hypothesis.
+- The candidate adds Git for NiftyReg v2.0.0 version metadata, retains ARM `USE_SSE=OFF`, and keeps the x86_64 source route unchanged. Accepted root pin remains `4911988c7900801c10f7fce39f143d301c8a3852`; root pointer is intentionally unstaged while the run completes.
+
+## Active continuation checkpoint — 2026-09-14 (AIDAmri attempt 5 diagnosis)
+
+- AIDAmri attempt 5, run [34831228481](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34831228481), found Git and reached NiftyReg v2.0.0 configuration, then failed because the source release tarball has no Git metadata and CMake produced `No VERSION specified for WRITE_BASIC_CONFIG_VERSION_FILE()`.
+- Final candidate `18814aacef8b458d337e641b2f090b0ee32ab9f8` creates a tagged empty `v2.0.0` Git history in the extracted ARM source before invoking untouched upstream CMake. It changes no NiftyReg source and preserves x86_64. Validation and both architecture generations passed; the candidate is pushed on `arm64/aidamri`.
+- Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5662368660) records the exact error and final attempt budget. Dispatch this exact candidate as attempt 6/6. If it fails within NiftyReg, record `blocked-upstream`, return the checkout to the accepted root pin, and move to the next eligible recipe. Accepted root pin remains `4911988c7900801c10f7fce39f143d301c8a3852`; root pointer is intentionally unstaged.
+
+## Active continuation checkpoint — 2026-09-14 (AIDAmri attempt 6 dispatched)
+
+- Exact final candidate `18814aacef8b458d337e641b2f090b0ee32ab9f8` is dispatched as native attempt 6/6 in [run 34831946025](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34831946025). Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5662375741) records the route and final budget.
+- The candidate supplies release Git metadata for NiftyReg v2.0.0 without changing upstream source. Accepted root pin remains `4911988c7900801c10f7fce39f143d301c8a3852`; root pointer is intentionally unstaged. After this run, either integrate a complete verified candidate or record AIDAmri's concrete blocker and move on.
+
+## Active continuation checkpoint — 2026-09-14 (AIDAmri terminal blocker)
+
+- AIDAmri final attempt 6, [run 34831946025](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34831946025), installed FSL ARM and DSI Studio ARM64 and compiled NiftyReg v2.0.0 through the ARM64 CPU libraries, then failed at link time because bundled libpng references missing ARM NEON symbols (`png_do_expand_palette_rgba8_neon`, `png_do_expand_palette_rgb8_neon`, `png_riffle_palette_neon`, and `png_init_filter_functions_neon`). No SIF, deploy checks or fulltest ran.
+- AIDAmri is now recorded as `blocked-upstream` in [issue #119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5662474867) after six native attempts. Revisit only with an upstream NiftyReg/libpng ARM64 fix or a documented supported system-libpng ARM64 configuration; do not patch the embedded third-party library in this recipe.
+- The failed candidate branch `arm64/aidamri` remains pushed for evidence. The accepted root pin remains `4911988c7900801c10f7fce39f143d301c8a3852`; switch the submodule checkout back to that accepted pin before selecting the next changed-route recipe. Run `python3 scripts/tracking_issue.py --write` after this outcome is reconciled.
+
+## Active continuation checkpoint — 2026-09-14 (AIDAmri reconciled)
+
+- `python3 scripts/tracking_issue.py --write` completed after the AIDAmri terminal result, fetched 247 issues and 369 runs, and updated and verified issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2). No native runs remain active, and fork Actions is still disabled.
+- The submodule checkout is clean and detached at accepted pin `4911988c7900801c10f7fce39f143d301c8a3852`; the failed AIDAmri branch and commits remain pushed for evidence. Root local changes remain intentionally unstaged, including `PLAN.md`, `README.md`, `plans/aidamri.md`, `plans/meica.md`, the tracker script and tracker tests.
+- Plausible routes in the 148-recipe plan inventory now have either accepted native evidence or a durable terminal issue outcome. The goal remains active; continue changed-route audits and do not close it while any eligible unresolved recipe gains a concrete ARM64 release, package, source route or infrastructure change.
+
+## Active continuation checkpoint — 2026-09-14 (VMTK system dependency route)
+
+- VMTK was reopened because current conda-forge metadata provides native linux-aarch64 VTK 9.6.x and ITK 5.4.x packages. The prior four-attempt investigation built VTK 9.1 from source and failed inside upstream VTK 9.1; this is a changed supported dependency route.
+- Candidate `4a4bdc48` is pushed on `arm64/vmtk-system`, based on accepted submodule pin `4911988c7900801c10f7fce39f143d301c8a3852`. It adds an ARM-only VMTK 1.5.0 source build with `USE_SYSTEM_VTK=ON` and `USE_SYSTEM_ITK=ON`, preserving the x86_64 conda package path. Validation and ARM64/x86_64 Dockerfile generation passed.
+- Native run [34833500259](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34833500259) is in progress as VMTK attempt 5/6; issue [#240](https://github.com/Vbitz/neurocontainers-arm64/issues/240#issuecomment-5662574320) records the hypothesis, baseline, deadline and next action. The root submodule pointer is intentionally unstaged while this exact candidate runs.
+
+## Active continuation checkpoint — 2026-09-14 (VMTK final dependency correction)
+
+- VMTK candidate `4a4bdc48` ran in [run 34833500259](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34833500259) and failed at CMake configure because the conda-forge ITK ARM package is a Python runtime package without `ITKConfig.cmake` or C++ headers.
+- Final candidate `76a0729353cf135171b4422885766e93dcf21cba` is pushed on `arm64/vmtk-system`, preserving x86_64 and changing ARM to native VTK 9.3.1 plus VMTK's documented ITK 5.4.5 superbuild. Validation and both architecture generations passed.
+- Dispatch this exact candidate as VMTK attempt 6/6. If it fails in upstream ITK/VTK/VMTK compilation, record the concrete blocker and stop this recipe. The root submodule pointer remains intentionally unstaged while the run is active.
+
+## Active continuation checkpoint — 2026-09-14 (VMTK final dispatch)
+
+- Exact candidate `76a0729353cf135171b4422885766e93dcf21cba` is dispatched as native attempt 6/6 in [run 34834014049](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34834014049). Issue [#240](https://github.com/Vbitz/neurocontainers-arm64/issues/240#issuecomment-5662642938) records the final hypothesis and stop condition.
+- The candidate pins native VTK 9.3.1 and uses VMTK's upstream ITK 5.4.5 superbuild. The root submodule pointer remains intentionally unstaged; do not start another VMTK attempt unless this run reveals a narrow, already documented correction within the budget.
+
+## Active continuation checkpoint — 2026-09-14 (VMTK terminal blocker)
+
+- VMTK final attempt 6, [run 34834014049](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34834014049), reached native ARM64 CMake configuration with VTK 9.3.1, then failed because the released ARM Qt package requires `QT_HOST_PATH`; VTK consequently reported `Qt6_FOUND=FALSE`. No SIF, deploy checks or fulltest ran.
+- VMTK is recorded `blocked-upstream` in [issue #240](https://github.com/Vbitz/neurocontainers-arm64/issues/240#issuecomment-5662676567) after six attempts. Revisit only with a supported ARM64 VTK/Qt package or documented native host Qt configuration. The failed branch `arm64/vmtk-system` remains pushed; the submodule checkout is restored to accepted pin `4911988c7900801c10f7fce39f143d301c8a3852`.
+- `python3 scripts/tracking_issue.py --write` fetched 247 issues and 371 runs, refreshed and verified [issue #2](https://github.com/Vbitz/neurocontainers-arm64/issues/2), and found no unaccounted active attempts. The 148-recipe goal remains active; continue only if another remaining recipe gains changed ARM64 evidence.
+
+## Active continuation checkpoint — 2026-09-14 (Elastix ITK 5.4.7 route)
+
+- Elastix's previous ARM64 attempt failed in released ITK 5.3.0 at a missing `uint8_t` declaration. ITK 5.4.7 is now available with ARM build reliability fixes, so a new supported source route is justified.
+- Candidate `825d4ba4` is pushed on `arm64/elastix-itk547`, based on accepted pin `4911988c7900801c10f7fce39f143d301c8a3852`. ARM builds ITK 5.4.7 and pinned Elastix 5.1.0 from official source archives; x86_64 retains its existing binary route. Validation and both architecture generations passed.
+- Exact native run [34834779023](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34834779023) is queued as Elastix attempt 2/6. Issue [#92](https://github.com/Vbitz/neurocontainers-arm64/issues/92#issuecomment-5662736296) records the changed evidence and hypothesis. The root submodule pointer is intentionally unstaged while this candidate runs.
+
+### Elastix runtime-path retry checkpoint — 2026-09-14
+- Candidate branch: `arm64/elastix-itk547`; baseline accepted submodule SHA `4911988c7900801c10f7fce39f143d301c8a3852`; candidate `1ced5e84ac29fabf384e8fc025c50c68f157b77e`.
+- Run `34834779023` built ITK 5.4.7 and Elastix 5.1.0 natively and produced a SIF, but all 32 fulltests returned 127 because Apptainer did not expose the image-appended `/opt/elastix_arm64-5.1.0/bin` in the test PATH. The installed `/opt/.../bin/elastix` and `transformix` were confirmed in the build log.
+- Focused recipe fix committed and pushed: symlink both entry points into `/usr/local/bin`, which is present on the clean runtime PATH. Validation and ARM64/x86_64 Dockerfile generation passed.
+- A mistyped SHA dispatch `34838979240` failed during checkout before any build; it is not counted as a recipe build attempt. Exact attempt 3/6 is run `34839057475`: https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34839057475. Issue #92 comments: https://github.com/Vbitz/neurocontainers-arm64/issues/92#issuecomment-5663281877 and https://github.com/Vbitz/neurocontainers-arm64/issues/92#issuecomment-5663298748.
+- Start/deadline remain `2026-09-14T10:00:00Z` / `2026-09-14T22:00:00Z`; next action is inspect the exact run's build, deploy, and fulltest outcomes, then integrate only if all gates pass.
+
+### Elastix loader-path retry checkpoint — 2026-09-14
+- Run `34839057475` for candidate `1ced5e84ac29fabf384e8fc025c50c68f157b77e` completed native ARM64 Docker build, SIF conversion, and deploy checks. Artifact evidence: both entry points were found and deploy checks passed; fulltest was 0/32 because the host `LD_LIBRARY_PATH` masked ITK and `elastix` reported missing `libITKMathematicalMorphology-5.4.so.1`.
+- Focused fix committed as `41ddfbf5010657e0185ab1d7730b42149e8fb744`: `/usr/local/bin/elastix` and `/usr/local/bin/transformix` wrappers explicitly prepend `/opt/itk/lib` and the Elastix library directory before executing the installed binaries. Recipe validation and ARM64/x86_64 generation pass.
+- A mistyped-SHA checkout run `34842763183` has no build evidence and is not counted. Exact attempt 4/6 is run `34842787062`: https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34842787062. Issue #92 loader diagnosis: https://github.com/Vbitz/neurocontainers-arm64/issues/92#issuecomment-5663766014.
+
+### Elastix accepted integration checkpoint — 2026-09-14
+- Verified candidate `41ddfbf5010657e0185ab1d7730b42149e8fb744` passed native ARM64 build, SIF, deploy, and 33/33 fulltests in run `34842787062`; issue #92 verified comment: https://github.com/Vbitz/neurocontainers-arm64/issues/92#issuecomment-5664382174.
+- Candidate descended directly from accepted pin `4911988c7900801c10f7fce39f143d301c8a3852`; top-level pointer advanced serially and pushed in root commit `e49d4e5` (`main`). `python3 scripts/tracking_issue.py --write` completed and verified issue #2.
+- Fork Actions remains disabled; no active workflow runs. The local root worktree still contains the pre-existing/user documentation and tracking changes listed by `git status`; do not stage them. Next action: reconcile remaining plan dispositions and select only a changed-evidence or not-yet-proven route; keep the goal active.
+
+## Active continuation checkpoint — 2026-09-14 (SOVA-BIDS conda PyQt route)
+
+- SOVA-BIDS was reopened because the previous ARM candidate was terminated while compiling the PyQt5 source distribution. Conda-forge currently publishes a native `linux-aarch64` `pyqt=5.15.7` package for Python 3.10, which is a recipe-level replacement for that source build while preserving PyQt5 functionality.
+- Candidate `f1408181` is pushed on `arm64/sovabids-conda-pyqt`, based on accepted submodule pin `41ddfbf5010657e0185ab1d7730b42149e8fb744`. It reuses the verified ARM VS Code asset selection and installs conda-forge PyQt only on aarch64 before the existing pip dependency resolution. Recipe validation and ARM64/x86_64 Dockerfile generation pass.
+- The first dispatch used a short SHA and stopped during checkout in metadata-only run `34847889790`; it produced no build evidence. The corrected exact candidate `f140818153e3fc571f29099bc478f575ccd728ef` is queued as SOVA-BIDS attempt 3/6 in [run 34847995845](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34847995845). The prior two substantive attempts were the permitted unchanged infrastructure retries and are not being repeated; this run tests the changed dependency route. Root submodule pointer remains intentionally unstaged while the native result is pending.
+- While that immutable candidate runs, the next exact candidate `ba03af38` was prepared and pushed with an architecture-aware VS Code fulltest assertion (`x64` on x86_64, `arm64` on aarch64). Local recipe validation and both Dockerfile generations pass. Dispatch it only if the current run exposes this expected ARM runtime assertion or otherwise requires a new exact candidate.
+
+## SOVA-BIDS build diagnosis — 2026-09-14
+
+- Run [34847995845](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34847995845) reached the native ARM64 Docker build and failed after about 97 minutes when pip resolved BIDScoin's `PyQt5>=5.12.1` dependency to the x86-independent source distribution `PyQt5-5.15.11.tar.gz`; it was terminated with exit 143 during the source build. The conda-forge `pyqt=5.15.7` package did not provide pip distribution metadata, so it did not prevent that resolution. No SIF, deploy or fulltest ran.
+- Candidate `a520d328faeb0602fcff3e753d5c9248f7b89113` is pushed on `arm64/sovabids-conda-pyqt`. It keeps the architecture-aware fulltest fix and instead exposes Ubuntu Jammy's native ARM `python3-pyqt5` distribution metadata through `PYTHONPATH`, removing the ineffective conda package step. Local validation and ARM64/x86_64 Dockerfile generation pass.
+- The exact candidate is queued as SOVA-BIDS attempt 4/6 in [run 34852064087](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34852064087). This is a changed dependency-resolution hypothesis; do not count the current result as an upstream blocker until the system-package route has been tested.
+
+## Active continuation checkpoint — 2026-09-15 (SOVA-BIDS ARM dependency route)
+
+- Run [34852064087](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34852064087) failed during `conda env create` because the ARM-only global `PYTHONPATH` made Miniconda import Ubuntu Jammy's incompatible `requests` package (`JSONDecodeError` missing). It produced no SIF, deploy checks or fulltest; this is a recipe configuration failure, not a blocker.
+- Candidate `0d1c2fa636433716eab215057253b8f58e633e5a` is pushed on `arm64/sovabids-conda-pyqt`, based on accepted pin `41ddfbf5010657e0185ab1d7730b42149e8fb744`. It removes the global path, adds Ubuntu's ARM PyQt site directory through a post-environment `.pth` file, installs Bidscoin's remaining Python dependencies from ARM-compatible packages, and installs the pinned Bidscoin source with `--no-deps` only on ARM. The x86_64 route remains unchanged. Validation and explicit ARM64/x86_64 Dockerfile generation pass.
+- Exact candidate `0d1c2fa636433716eab215057253b8f58e633e5a` is dispatched as native SOVA-BIDS attempt 5/6 in [run 34853090228](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34853090228). Issue [#167](https://github.com/Vbitz/neurocontainers-arm64/issues/167#issuecomment-5665227072) records the run and candidate mapping. Require build, SIF conversion, deploy checks and every fulltest; if it fails, use the first actionable result for one final narrow correction only, otherwise record the concrete blocker and move to the next recipe. The root submodule pointer remains intentionally unstaged while the run is active.
+
+## SOVA-BIDS final attempt checkpoint — 2026-09-15
+
+- Run [34853090228](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34853090228), attempt 5/6, reached the ARM dependency install and failed because `traits` needed to compile a C extension but `gcc` was absent (`[Errno 2] No such file or directory: 'gcc'`). No SIF, deploy checks or fulltest ran.
+- Final candidate `7dc7fb657f1a8eb0fdcdd0f6c966882a928677ba` is pushed on `arm64/sovabids-conda-pyqt`. It adds ARM-only `build-essential`; validation and both architecture Dockerfile generations pass. Issue [#167](https://github.com/Vbitz/neurocontainers-arm64/issues/167#issuecomment-5665303706) records the first error and final stop condition.
+- The first final dispatch, [run 34853759204](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34853759204), used a mistyped candidate SHA and failed during checkout before any recipe work; it is metadata-only. The exact pushed candidate is `7dc7fb657f1a8eb0fdcdd0f6c966882a928677ba`, dispatched as the actual native SOVA-BIDS attempt 6/6 in [run 34854062915](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34854062915). If it reaches another source compatibility failure, record the concrete blocker and move to the next recipe; if all gates pass, integrate it serially from accepted pin `41ddfbf5010657e0185ab1d7730b42149e8fb744`. The root submodule pointer remains intentionally unstaged while the run is active.
+
+## SOVA-BIDS terminal checkpoint — 2026-09-15
+
+- Exact final candidate `7dc7fb657f1a8eb0fdcdd0f6c966882a928677ba` reached the ARM64 dependency route in [run 34854062915](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34854062915). It compiled the ARM `traits` extension and built and installed pinned Bidscoin without the prior PyQt source build.
+- The build stopped at `pip check` because Ubuntu's `spyder` package installs `ipykernel 6.7.0`, which requires missing `debugpy`. No SIF, deploy checks or fulltest ran. SOVA-BIDS is recorded as `blocked-prerequisite` after its six-attempt budget; revisit only with a fresh budget or changed package metadata and an ARM `debugpy` dependency fix.
+- Issue [#167](https://github.com/Vbitz/neurocontainers-arm64/issues/167#issuecomment-5665436903) records the terminal result. The failed branch remains pushed, and the accepted root pin is unchanged at `41ddfbf5010657e0185ab1d7730b42149e8fb744`; restore the submodule checkout to that pin before selecting the next recipe.
+
+## Active continuation checkpoint — 2026-09-15 (inventory audit after SOVA-BIDS)
+
+- The 148-plan inventory has 13 rows assessed as `Plausible`: Blender, CIVET, Convert3D, DSI Studio, ITK-SNAP, LCModel, LST-AI, MRIcroGL, MuscleMap, QuickShear, ROMEO, SOVA-BIDS and Surfice. Each currently has either accepted native evidence or a terminal issue outcome; no plausible row remains unattempted.
+- The changed external-prerequisite audit found no new native Linux ARM64 FreeSurfer release. Current official FreeSurfer downloads remain Linux x86_64 for 8.2.0 and provide ARM64 packages only for macOS; FSL's official Linux ARM package route is already accepted. Do not reopen the FreeSurfer-dependent workflows without a Linux ARM64 vendor runtime.
+- Slicer was rechecked against the current official download endpoint. Stable 5.12.4 queries for both `arch=arm64` and `arch=amd64` redirect to the same `Slicer-5.12.4-linux-amd64.tar.gz` payload, while the 5.13.0 ARM64 preview query returns HTTP 400. This confirms Slicer's existing prerequisite blocker remains current: no official Linux ARM64 payload. Evidence is recorded in [issue #231](https://github.com/Vbitz/neurocontainers-arm64/issues/231#issuecomment-5665526857) and `plans/slicer.md`; do not dispatch it without a newly published native Linux ARM64 distribution.
+- No native runs are active, the accepted submodule checkout is clean at `41ddfbf5010657e0185ab1d7730b42149e8`, and fork Actions remains disabled. The goal remains active because SOVA-BIDS has the concrete missing `debugpy` dependency and its six-attempt budget is exhausted; revisit it only with a fresh explicit budget or changed upstream package metadata while continuing to preserve all terminal blockers.
+## Active continuation checkpoint — 2026-09-15 (SCT changed dependency route)
+
+- Spinal Cord Toolbox has new changed evidence: conda-forge publishes native `linux-aarch64` `pyqt=5.15.11` for Python 3.10. Candidate `b9043a1d` is pushed on `arm64/spinalcordtoolbox-conda-pyqt`, based on accepted pin `41ddfbf5010657e0185ab1d7730b42149e8fb744`. It keeps the existing ARM Miniforge rewrite, installs Conda PyQt 5.15.11, and removes only the three PyQt entries from the ARM pip freeze so the prior PyQt source build is avoided; x86_64 is unchanged. Validation and both architecture generations pass.
+- The candidate is recorded in [SCT issue #74](https://github.com/Vbitz/neurocontainers-arm64/issues/74#issuecomment-5665618096) but was not dispatched because the original SCT investigation began 2026-09-12 and its 12-hour budget has expired. Do not present it as verified or silently reset the budget; revisit only with an explicit fresh investigation budget or new user direction. The submodule checkout is restored clean at accepted pin `41ddfbf5010657e0185ab1d7730b42149e8fb744`.
+- Changed evidence justified a separately tracked SCT follow-up window without resetting the prior attempt history: candidate `b9043a1dd3c3a48fce336f1ba390806cfd97ff45` is native run [34856371358](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34856371358), attempt 3/6 overall. Issue [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74#issuecomment-5665656457) records the exact SHA, run, and follow-up deadline. The submodule checkout remains restored at the accepted pin while the immutable run executes.
+- RStudio's current vendor audit found only partial ARM64 support: Posit documents ARM64 for newer Server/Workbench deployments, while current Linux Desktop downloads remain amd64. Because the recipe requires both Desktop and Server, it remains `blocked-prerequisite` without a native Desktop artifact. Evidence is recorded in [issue #230](https://github.com/Vbitz/neurocontainers-arm64/issues/230#issuecomment-5665695051) and `plans/rstudio.md`; no partial server-only build was dispatched.
+- SCT run `34856371358` reached successful ARM64 Python/SCT installation and failed only on repeated HTTP 504 responses for the upstream `sc_epi` model archive. The exact unchanged retry is [run 34857273165](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34857273165), attempt 4/6; issue [#74](https://github.com/Vbitz/neurocontainers-arm64/issues/74#issuecomment-5665764655) records the transient-data hypothesis and stop condition.
+
+## Active continuation checkpoint — 2026-09-15 (SCT terminal infrastructure result)
+
+- SCT follow-up run [34856371358](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34856371358) confirmed that the ARM64 Conda PyQt route installs SCT and its Python environment; it failed only on a GitHub 504 downloading the `sc_epi` model archive. The single permitted unchanged retry, [34857273165](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34857273165), failed on a GitHub 504 serving the ARM64 Miniforge installer, so no SIF/deploy/fulltest evidence exists.
+- SCT is recorded `blocked-infrastructure` after the two follow-up runs in [issue #74](https://github.com/Vbitz/neurocontainers-arm64/issues/74#issuecomment-5665830191). Revisit only when those upstream endpoints are reachable or stable mirrors are available; the ARM PyQt recipe candidate remains pushed on `arm64/spinalcordtoolbox-conda-pyqt` but is not accepted. The local submodule checkout is restored to accepted pin `41ddfbf5010657e0185ab1d7730b42149e8`.
+
+## Active continuation checkpoint — 2026-09-15 (mritools 4.9 source follow-up)
+
+- CompileMRI released v4.9.0 on 2026-09-03 with a completed `App/Project.toml` dependency environment, directly addressing the sequential bootstrap failure that blocked mritools 3.3.0. Candidate `ae93e24b8f6bf279397db9ff861f7dfe2126577b` is pushed on `arm64/mritools-v490`, based on accepted pin `41ddfbf5010657e0185ab1d7730b42149e8`. It updates both recipe and fulltest to mritools 4.9.0, builds the released source with Julia 1.10.12 on ARM64, and preserves the x86_64 binary route; local validation and both Dockerfile generations pass.
+- The exact candidate is dispatched in native run [34859110074](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34859110074). The preceding dispatch [34858988330](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34858988330) used a mistyped nonexistent SHA and was canceled during checkout; it produced no recipe evidence and is not counted. The issue records the candidate, changed hypothesis and follow-up window in [issue #156](https://github.com/Vbitz/neurocontainers-arm64/issues/156#issuecomment-5666003537).
+- Follow-up window: `2026-09-14T14:57:01Z` to `2026-09-15T02:57:01Z`; historical mritools attempts remain recorded. The next action is to inspect the exact run's native build, SIF, deploy and fulltest result. Integrate only if every gate passes; otherwise record the first upstream or runtime blocker and restore the local submodule to accepted pin `41ddfbf5010657e0185ab1d7730b42149e8`.
+
+## Active continuation checkpoint — 2026-09-15 (148-plan disposition audit)
+
+- A fresh local audit of `plans/*.md` excluding `README.md` found exactly 148 recipe plans, and every plan has a terminal, accepted or tracker disposition section. The plan-level plausible set is fully accounted for by accepted native builds or terminal issue outcomes; no plausible plan is unattempted. The tracker still reports unresolved rows where the recorded disposition is a concrete prerequisite, upstream, infrastructure or runtime blocker, so those rows remain part of the active goal rather than being treated as verified.
+- Current native work is limited to mritools follow-up run [34859403089](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34859403089). DSI Studio was rechecked against its current upstream release and has no changed asset or parameter evidence after its five required AutoTrack failures; it remains terminal failed-runtime. No second recipe is queued while mritools is building.
+- Run [34859403089](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34859403089) passed the 4.9.0 native ARM64 build, SIF and deploy checks and completed 53/54 fulltests. The only failure was the inherited ROMEO version assertion expecting `3`; candidate `4f73c13762dc293190214271ed2b91b559ea3dbf` updates it to the released 1.6.0 output and is dispatched as exact retry [34863087923](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34863087923), follow-up attempt 3/6. Require all 54 tests before integrating.
+
+## mritools accepted candidate — 2026-09-15
+
+- Candidate `b13364554a3f6b3e3ab99d18fbc5ee9bca2d3585` passed exact native ARM64 run [34866790216](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34866790216): Docker build, architecture verification, SIF conversion, deploy checks and **55/55 fulltests**, with zero skips.
+- Issue [#156](https://github.com/Vbitz/neurocontainers-arm64/issues/156#issuecomment-5667497490) records the verified outcome, candidate, branch, source version and attempt 4/6. The candidate descends directly from accepted pin `41ddfbf5010657e0185ab1d7730b42149e8`.
+- Next action: integrate the candidate serially, advance the root pin, run `python3 scripts/tracking_issue.py --write`, and keep the overall goal active while unresolved recipes remain.
+
+## Active continuation checkpoint — 2026-09-15 (SOVA-BIDS debugpy follow-up)
+
+- The user explicitly requested continued work after SOVA-BIDS exhausted its prior six-attempt window. The last native build reached `pip check` and identified one concrete missing dependency: Ubuntu's `spyder` package exposes `ipykernel 6.7.0`, which requires `debugpy`.
+- Candidate `e3bbad5e59bc3037374a7f8db380f528aa25a70d` is pushed on `arm64/sovabids-debugpy`, based on accepted pin `b13364554a3f6b3e3ab99d18fbc5ee9bca2d3585`. It adds `debugpy` only to the ARM dependency install; local validation and ARM64/x86_64 generation pass. The exact candidate is being dispatched as attempt 1/6 in a fresh window `2026-09-14T16:53:59Z`–`2026-09-15T04:53:59Z`.
+- The root submodule is temporarily checked out on the candidate branch for dispatch and must be restored to accepted mritools pin `b13364554a3f6b3e3ab99d18fbc5ee9bca2d3585` while the immutable run executes. Keep the goal active.
+
+- Exact native dispatch: candidate `e3bbad5e59bc3037374a7f8db380f528aa25a70d` is queued as [run 34871579327](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34871579327), attempt 1/6 in the reopened window. Issue [#167](https://github.com/Vbitz/neurocontainers-arm64/issues/167#issuecomment-5667568391) records the hypothesis and corrected SHA.
+
+- Run [34871579327](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34871579327) passed ARM64 image build and SIF conversion but failed 40/96 fulltests due to the NumPy 2.x versus pinned pandas/SOVA compatibility mismatch. Candidate `3cd80779270718fdd6204a837d88c5588c22ee44` reapplies the existing NumPy 1.26.4 and pandas 1.5.3 pins after ARM helper installation; it is pushed and dispatched as attempt 2/6. Issue [#167](https://github.com/Vbitz/neurocontainers-arm64/issues/167#issuecomment-5667770645) records the first error and hypothesis.
+
+- Exact run [34873161511](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34873161511) passed native build, SIF, deploy and **96/96 fulltests** with zero skips for candidate `3cd80779270718fdd6204a837d88c5588c22ee44`. Issue [#167](https://github.com/Vbitz/neurocontainers-arm64/issues/167#issuecomment-5667942216) records the verified result. Next action is serial integration from accepted pin `b13364554a3f6b3e3ab99d18fbc5ee9bca2d3585`.
+
+## mritools integration checkpoint — 2026-09-15
+
+- mritools candidate `b13364554a3f6b3e3ab99d18fbc5ee9bca2d3585` is now the accepted submodule pin. Root commit `1b0ca0a` was pushed to `main` after the exact native run [34866790216](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34866790216) passed build, SIF, deploy and 55/55 fulltests.
+- Issue [#156](https://github.com/Vbitz/neurocontainers-arm64/issues/156#issuecomment-5667497490) contains the durable verified outcome. `python3 scripts/tracking_issue.py --write` refreshed and verified [coverage issue #2](https://github.com/Vbitz/neurocontainers-arm64/issues/2); fork Actions remains disabled and there are no active runs.
+- The local submodule is clean and detached at the accepted mritools commit. The root worktree retains the existing local plan, README, tracking script and test changes; none were staged into the integration commit. Keep the goal active and continue with the remaining unresolved recipes.
+
+## SOVA-BIDS integration checkpoint — 2026-09-15
+
+- Candidate `3cd80779270718fdd6204a837d88c5588c22ee44` passed exact native run [34873161511](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34873161511): ARM64 build, SIF conversion, deploy checks and **96/96 fulltests**, zero skips.
+- Issue [#167](https://github.com/Vbitz/neurocontainers-arm64/issues/167#issuecomment-5667942216) contains the durable verified outcome. Root commit `5c23952` was pushed to `main`, advancing the accepted submodule pin from mritools `b13364554a3f6b3e3ab99d18fbc5ee9bca2d3585` to the SOVA-BIDS candidate. The tracker refreshed issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2).
+- Fork Actions remains disabled, no runs are active, and the local submodule is clean and detached at `3cd80779270718fdd6204a837d88c5588c22ee44`. Existing root plan and tracking changes remain unstaged. Keep the overall goal active.
+
+## Active continuation checkpoint — 2026-09-15 (ROMEO CompileMRI 4.9 follow-up)
+
+- ROMEO gained changed upstream evidence from the accepted mritools 4.9.0 source route: the released CompileMRI project and Julia 1.10.12 ARM64 build passed the ROMEO functional suite inside mritools. Candidate `137a31db5dee0ba5f19aa8a3e642eab5234058d7` is pushed on `arm64/romeo-v490`, based on accepted submodule pin `3cd80779270718fdd6204a837d88c5588c22ee44`; local recipe validation and ARM64/x86_64 generation passed.
+- Exact native run [34875388957](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34875388957) is queued for ROMEO attempt 1 in this changed-source follow-up. Issue [#164](https://github.com/Vbitz/neurocontainers-arm64/issues/164#issuecomment-5668044487) records the hypothesis and [the dispatch](https://github.com/Vbitz/neurocontainers-arm64/issues/164#issuecomment-5668053043). Follow-up window: `2026-09-14T17:32:21Z`–`2026-09-15T05:32:21Z`.
+- The shared submodule checkout is restored clean and detached at accepted pin `3cd80779270718fdd6204a837d88c5588c22ee44`; inspect the exact run before selecting another recipe. Keep the goal active.
+
+## Active continuation checkpoint — 2026-09-15 (DAFNE GUI runtime follow-up)
+
+- DAFNE's previous ARM64 artifact showed a headless GUI crash immediately after `QStandardPaths` reported the missing `/run/user/1001` runtime directory. Candidate `26d987864c5cc1d90f15084296d49591b4c9c31d` on `arm64/dafne-runtime-dir`, based on accepted pin `3cd80779270718fdd6204a837d88c5588c22ee44`, adds a writable `XDG_RUNTIME_DIR` in the existing launcher. Validation and both architecture generations passed.
+- Exact native run [34876243931](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34876243931) is queued as a changed, narrow DAFNE follow-up. Issue [#48](https://github.com/Vbitz/neurocontainers-arm64/issues/48#issuecomment-5668152331) records the hypothesis and [dispatch](https://github.com/Vbitz/neurocontainers-arm64/issues/48#issuecomment-5668161155). Window: `2026-09-14T17:40:50Z`–`2026-09-15T05:40:50Z`.
+- The shared submodule checkout is clean and detached at accepted pin `3cd80779270718fdd6204a837d88c5588c22ee44`; inspect both exact runs before integrating or selecting another recipe. Keep the goal active.
+
+## Active continuation checkpoint — 2026-09-15 (DAFNE software-rendering retry)
+
+- DAFNE follow-up run [34876243931](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34876243931) confirmed the XDG runtime directory fix but still failed only the headless GUI test with exit 139; the previous `/run/user/1001` warning disappeared. The imported constructor includes `pyvistaqt`/VTK rendering.
+- Candidate `f440c962ba740f5e7ae055a842544e2052202a3f` on `arm64/dafne-runtime-dir`, based on the prior follow-up candidate, adds `LIBGL_ALWAYS_SOFTWARE=1` to the existing launcher. Validation and both architecture generations passed. Exact native retry [34877537989](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34877537989) is dispatched as the second follow-up attempt; issue [#48](https://github.com/Vbitz/neurocontainers-arm64/issues/48#issuecomment-5668310643) records the hypothesis and dispatch.
+- Follow-up deadline remains `2026-09-15T05:40:50Z`. The shared submodule checkout is clean and detached at accepted pin `3cd80779270718fdd6204a837d88c5588c22ee44`; stop DAFNE after this retry if the same native GUI crash remains. Keep the goal active.
+
+## DAFNE terminal checkpoint — 2026-09-15
+
+- Exact retry candidate `f440c962ba740f5e7ae055a842544e2052202a3f` completed native ARM64 build and SIF conversion in [run 34877537989](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34877537989). Deploy checks and 10/11 fulltests passed; the only failure was headless `dafne` GUI startup exiting 139. The XDG runtime directory warning was gone, and `LIBGL_ALWAYS_SOFTWARE=1` did not change the crash. Issue [#48](https://github.com/Vbitz/neurocontainers-arm64/issues/48#issuecomment-5668481614) records the terminal `blocked-upstream` outcome and revisit condition.
+- DAFNE is removed from active recipe work after two targeted runtime fixes. Its branch remains pushed for inspection; the accepted root pin remains `3cd80779270718fdd6204a837d88c5588c22ee44`.
+
+## Active continuation checkpoint — 2026-09-15 (ROMEO fulltest compatibility retry)
+
+- ROMEO CompileMRI 4.9.0 candidate `137a31db5dee0ba5f19aa8a3e642eab5234058d7` passed native ARM64 build, SIF conversion, deployment and 102/104 fulltests; all functional unwrapping, pipeline, error handling and Julia checks passed. The two failures were stale help expectations for the removed `--coil-combination` alias and old template default `2`.
+- Candidate `2ad9c2ff6c9762868c99ebbe3ac59b7f895cfc51` on `arm64/romeo-v490` updates those assertions to the current 4.9.0 MCPC3Ds help text and template default `1`. Local recipe validation and both architecture Dockerfile generations passed. Issue [#164](https://github.com/Vbitz/neurocontainers-arm64/issues/164#issuecomment-5668458801) records the hypothesis.
+- The exact candidate is queued as ROMEO attempt 2 in [run 34878790921](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34878790921); issue [#164](https://github.com/Vbitz/neurocontainers-arm64/issues/164#issuecomment-5668551288) records the exact dispatch. The earlier mistyped dispatch [run 34878760802](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34878760802) was cancelled immediately and is metadata-only; it used no recipe evidence. Follow-up deadline remains `2026-09-15T05:32:21Z`. The shared checkout must remain restored to accepted pin `3cd80779270718fdd6204a837d88c5588c22ee44` while the immutable run executes.
+
+## ROMEO integration checkpoint — 2026-09-15
+
+- Candidate `2ad9c2ff6c9762868c99ebbe3ac59b7f895cfc51` passed exact native ARM64 run [34878790921](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34878790921): Docker build, SIF conversion, deploy checks and **105/105 fulltests**, zero failures and zero skips. Issue [#164](https://github.com/Vbitz/neurocontainers-arm64/issues/164#issuecomment-5668857011) contains the durable verified outcome and artifact link.
+- Root commit `32cb228` was pushed to `main`, advancing the accepted submodule pin from `3cd80779270718fdd6204a837d88c5588c22ee44` to `2ad9c2ff6c9762868c99ebbe3ac59b7f895cfc51`. The submodule checkout is restored clean and detached at the accepted pin. ROMEO is now verified; keep the overall goal active while the remaining unresolved plans and terminal outcomes remain tracked.
+
+## Active continuation checkpoint — 2026-09-15 (shared blocker refresh)
+
+- A fresh official-release audit found no changed ARM64 route for the remaining plausible terminal recipes. Current C3D source still contains the `ReadIndexVector` allocation defect exposed by ITK-SNAP; issue [#148](https://github.com/Vbitz/neurocontainers-arm64/issues/148#issuecomment-5668922683) records the evidence.
+- Surf Ice's latest release remains `v1.0.20211006` without a Linux ARM64 asset, and its prior source attempt still fails in the upstream Pascal OpenGL code; issue [#168](https://github.com/Vbitz/neurocontainers-arm64/issues/168#issuecomment-5668922940) records the refresh. MRIcroGL's latest release likewise has no Linux ARM64 asset; issue [#97](https://github.com/Vbitz/neurocontainers-arm64/issues/97#issuecomment-5668923203) records the refresh.
+- No native runs are active, the accepted submodule checkout is clean and detached at `2ad9c2ff6c9762868c99ebbe3ac59b7f895cfc51`, and fork Actions remains disabled. The goal remains active because unresolved prerequisite plans still require changed upstream evidence before they can be verified.
+
+## Active continuation checkpoint — 2026-09-15 (changed-infrastructure retries)
+
+- Direct preflight at `2026-09-14T18:49:41Z` returned HTTP 200 with nonzero content for all five BrainLesion HD-BET model files and all nine TractSeg weight files. This is new evidence after the earlier native attempts failed before Docker staging on Zenodo HTTP 504 responses.
+- BrainLesion candidate `2f061f36896188f8be2d00b73519d819c8c2d164` on `arm64/brainles-preprocessing-source` is dispatched as attempt 3/6 in fresh window `2026-09-14T18:50:22Z`–`2026-09-15T06:50:22Z`: [run 34883244804](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883244804), [issue checkpoint](https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-5669022628).
+- TractSeg candidate `a6bd2f46399657df8b56cfc12ce48f147796d1fc` on `arm64/tractseg-modern-arm` is dispatched as attempt 3/6 in fresh window `2026-09-14T18:50:36Z`–`2026-09-15T06:50:36Z`: [run 34883270646](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883270646), [issue checkpoint](https://github.com/Vbitz/neurocontainers-arm64/issues/238#issuecomment-5669022897).
+- The two immutable runs are the only active native work. Review staging first, then Docker/SIF/deploy/fulltest evidence; integrate only after serial rebase and exact retest from accepted pin `2ad9c2ff6c9762868c99ebbe3ac59b7f895cfc51`. Keep the overall goal active.
+
+## Active continuation checkpoint — 2026-09-15 (SCT changed-infrastructure retry)
+
+- A direct preflight at `2026-09-14T18:52:28Z` returned HTTP 200 for the SCT ARM64 Miniforge installer, the previously failing `sc_epi` model archive, and the SCT 7.3 source tarball. The earlier Conda PyQt candidate can therefore be tested under a changed external-data condition.
+- Spinal Cord Toolbox candidate `b9043a1dd3c3a48fce336f1ba390806cfd97ff45` on `arm64/spinalcordtoolbox-conda-pyqt` is dispatched as attempt 5/6 in fresh window `2026-09-14T18:52:28Z`–`2026-09-15T06:52:28Z`: [run 34883583223](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883583223), [issue checkpoint](https://github.com/Vbitz/neurocontainers-arm64/issues/74#issuecomment-5669058290).
+- Three native jobs are now active: BrainLesion [34883244804](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883244804), TractSeg [34883270646](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883270646), and SCT [34883583223](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883583223). Review each exact candidate's staging, build, SIF, deploy and fulltest result before starting another recipe. Keep the overall goal active.
+
+## Active continuation checkpoint — 2026-09-15 (SCT final Torch configuration retry)
+
+- SCT attempt 5 [run 34883583223](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883583223) reached complete model staging and native dependency installation, then failed at the existing `sct_check_dependencies` gate because the ARM64 CPU Torch 2.2.2 wheel lacked the `+cpu` marker SCT 7.3 uses to distinguish GPU installations. The exact error and hypothesis are recorded in [issue #74](https://github.com/Vbitz/neurocontainers-arm64/issues/74#issuecomment-5669168070).
+- Final candidate `4be33834e3786c05629d4aeb2920e09d5ebd27e8` on `arm64/spinalcordtoolbox-conda-pyqt` selects official ARM64 `torch==2.10.0+cpu` and matching `torchvision==0.25.0+cpu` only in the ARM requirements copy. Local validation and both architecture generations passed. Exact final attempt 6/6 is queued as [run 34884606432](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34884606432), with [dispatch checkpoint](https://github.com/Vbitz/neurocontainers-arm64/issues/74#issuecomment-5669189172).
+- BrainLesion [34883244804](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883244804) and TractSeg [34883270646](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883270646) remain active. Three exact native jobs are in flight; review all results before refilling a slot. Keep the goal active.
+
+## SCT terminal checkpoint — 2026-09-15
+
+- Final candidate `4be33834e3786c05629d4aeb2920e09d5ebd27e8` passed the ARM64 Torch classification check in [run 34884606432](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34884606432): SCT saw `2.10.0+cpu`, clearing the prior selector mismatch. The existing dependency gate then failed because SCT's downloaded `binaries_linux` bundle contains x86 `isct_antsRegistration` and `isct_propseg`, both raising `Exec format error` on native ARM64. It also reports a PyQt5/Conda C++ ABI mismatch.
+- SCT is terminal `blocked-upstream` at attempt 6/6; no SIF or fulltest ran. The durable outcome and revisit condition are recorded in [issue #74](https://github.com/Vbitz/neurocontainers-arm64/issues/74#issuecomment-5669320254). Do not retry until SCT publishes ARM64 binaries and a supported ARM64 Qt route.
+- The BrainLesion and TractSeg changed-infrastructure native runs remain active: [34883244804](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883244804) and [34883270646](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883270646). Keep the goal active and review their exact outcomes next.
+
+## Active continuation checkpoint — 2026-09-15 (BrainLesion integration and TractSeg FSL route)
+
+- BrainLesion changed-data candidate `2f061f36896188f8be2d00b73519d819c8c2d164` passed native ARM64 build, SIF, deploy and 16/16 fulltests in [run 34883244804](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34883244804); issue [#186](https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-5669707592) has the reporter evidence.
+- Its recipe commit was cherry-picked serially onto the current accepted pin `2ad9c2ff6c9762868c99ebbe3ac59b7f895cfc51`, producing integrated candidate `bfa2364d60f7cd99e83b813a48f6c39d41c6945e` on `integration/brainles-preprocessing`. Local validation and both architecture generations passed. Exact integrated retest is queued as attempt 4/6 in [run 34888489034](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34888489034); issue checkpoint: [#186](https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-5669775446).
+- TractSeg attempt 3 reached the FSL installer and failed because FSL 6.0.7.16 has no Linux ARM64 environment. The targeted ARM-only FSL 6.0.7.22 fix is candidate `2c5b7a4e8f1366d18ace4f67c919a4361d563b2a`, pushed on `arm64/tractseg-modern-arm`; local validation and both architecture generations passed. Exact attempt 4/6 is [run 34888237665](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34888237665); issue checkpoint: [#238](https://github.com/Vbitz/neurocontainers-arm64/issues/238#issuecomment-5669742396).
+- The shared submodule checkout is restored clean and detached at accepted pin `2ad9c2ff6c9762868c99ebbe3ac59b7f895cfc51`. Current active native runs are BrainLesion [34888489034](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34888489034) and TractSeg [34888237665](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34888237665); review both exact outcomes before starting another recipe. Keep the goal active.
+
+## BrainLesion acceptance checkpoint — 2026-09-15
+
+BrainLesion preprocessing is verified and accepted. Integrated submodule candidate `bfa2364d60f7cd99e83b813a48f6c39d41c6945e` passed native ARM64 Docker build, SIF conversion, deploy checks, and fulltest (16 passed, 0 failed, 0 skipped) in run `34888489034`. Root commit `b8d2189` pushed the new pin. The checkout is clean at the accepted detached submodule pin; TractSeg run `34888237665` remains active.
+
+## TractSeg mrview checkpoint — 2026-09-15
+
+TractSeg attempt 4 built natively but fulltest failed only because ARM64 MRtrix source was configured with `-nogui`, leaving `mrview` absent (119/120 passed). Candidate `711220fe` adds documented Qt/OpenGL build dependencies and enables the MRtrix GUI only on ARM64; exact attempt 5/6 is run `34895895495`. The submodule checkout is restored to accepted `bfa2364d`; no new recipe is dispatched until this result is reviewed.
+
+## TractSeg dispatch correction — 2026-09-15
+
+The first attempt 5 dispatch failed in checkout because a short SHA was supplied; no recipe work ran. The same candidate `711220fe497d3d76103af7b25f7cdf0db8970789` was re-dispatched with its full SHA as native attempt 5/6 in run `34896019692`. Await its build and fulltest result.
+
+## TractSeg final attempt checkpoint — 2026-09-15
+
+TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the source template, producing `Qt moc not found`. Candidate `6d8895ee29484f29eb1e799c364a8dca5950d8a8` moves the ARM Qt/OpenGL dependencies before the template. Final native attempt 6/6 is run `34897243628`; checkout is restored to accepted submodule `bfa2364d` while it runs.
+
+## TractSeg integration checkpoint — 2026-09-15
+
+- Accepted pin before integration: `bfa2364d60f7cd99e83b813a48f6c39d41c6945e` (root `b8d2189`).
+- Integrated branch: `integration/tractseg-bpp`; exact candidate: `27ea0a8a3336d633f761b6921d6770bc22a9ba2a`.
+- Required native retest: run `34904389457` — https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34904389457.
+- The abbreviated-ref setup run `34904352147` is excluded from application attempt counts; it failed before recipe work.
+- Next action: inspect the exact integrated run, accept TractSeg serially if all 121 tests pass, then refresh tracking issue #2.
+
+## Quickshear retry checkpoint — 2026-09-15
+
+- Accepted pin before retry: `bfa2364d60f7cd99e83b813a48f6c39d41c6945e` (root `b8d2189`).
+- Integrated branch: `integration/quickshear-synthstrip-v82`; exact candidate: `3df717c62b7a2cac9a4cf4c86af7e9752e2584a3`.
+- New evidence: released FreeSurfer v8.2.0 `mri_synthstrip` contains the required `-d/--sdt` option; v7.4.1 did not.
+- Native retry: run `34904969920` — https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34904969920.
+- Next action: inspect the run; accept serially if all 44 tests pass, otherwise record the first actionable runtime blocker and move on.
+
+## Quickshear integration checkpoint — 2026-09-15
+
+- Candidate run `34904969920` passed 44/44 after switching ARM64 to official FreeSurfer v8.2.0 SynthStrip.
+- Integrated branch: `integration/quickshear-bpp`; integrated candidate: `7b70cacfbf0d2c04e8ef7fd7b355da0dff4a0a2e`, based on accepted `bfa2364d60f7cd99e83b813a48f6c39d41c6945e`.
+- Exact integrated retest: run `34907870046` — https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34907870046.
+- Next action: inspect the integrated result and accept Quickshear serially if all 44 tests pass; otherwise record the blocker.
+
+## TractSeg corrected integration checkpoint — 2026-09-15
+
+- First integration retest `34904389457` failed 119/120 because commit `711220fe` was omitted from the replay; it was not a failure of the passing source candidate.
+- Corrected integrated branch: `integration/tractseg-bpp`; candidate: `91ec1355ac6a0ffa4dc065dc415cc099ad5574d2`.
+- Corrected exact native retest: run `34910314613` — https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34910314613.
+- Next action: inspect this run and accept TractSeg serially only if all fulltests pass.
+
+## QuickShear acceptance and TractSeg current-pin replay — 2026-09-15
+
+- QuickShear integrated candidate `7b70cacfbf0d2c04e8ef7fd7b355da0dff4a0a2e` passed exact native run [34907870046](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34907870046) with 44/44 fulltests, zero failures and zero skips. Root commit `03c8233` pushed the accepted submodule pin; issue [#228](https://github.com/Vbitz/neurocontainers-arm64/issues/228#issuecomment-5672485120) records the durable result.
+- The earlier corrected TractSeg candidate was based on the old BrainLesion pin, so it remains stale evidence even if it passes. Its four intended commits were replayed onto accepted QuickShear `7b70cacfbf0d2c04e8ef7fd7b355da0dff4a0a2e`, producing `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3` on `integration/tractseg-quickshear`. Validation and ARM64/x86_64 generation passed. Issue [#238](https://github.com/Vbitz/neurocontainers-arm64/issues/238#issuecomment-5672497319) records the replay.
+- Exact current-pin TractSeg run [34910862134](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34910862134) is pending. It was dispatched with the full candidate SHA through `neurocontainers_ref`; the top-level workflow head SHA identifies the dispatcher commit and is not the recipe source. Fork Actions was restored to disabled after dispatch (`enabled: false`).

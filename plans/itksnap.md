@@ -105,3 +105,7 @@ Both commands use the pinned C3D revision's `ReadIndexVector`. In C3D `ConvertIm
 - Coverage status: build **✅**, fulltest **❌**; plan assessment: **Plausible**.
 - Investigation outcome: **blocked-upstream**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/148#issuecomment-5656100070).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Upstream refresh — 2026-09-15
+
+The current official download page still provides only an Intel Linux binary for ITK-SNAP 4.4.0. The source-built ARM64 candidate reached the fulltest, where the bundled C3D `-region` and `-pad` operations exposed the current C3D `ReadIndexVector` one-byte allocation defect. The current C3D source retains that defect, so no changed route justifies dispatching the preserved current-pin candidate. The refresh is recorded in [issue #148](https://github.com/Vbitz/neurocontainers-arm64/issues/148#issuecomment-5668922683).

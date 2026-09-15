@@ -45,3 +45,17 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
 - Coverage status: build **✅**, fulltest **❌**; plan assessment: **Plausible**.
 - Investigation outcome: **failed-runtime**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/228#issuecomment-5654227161).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## New upstream evidence retry — 2026-09-15
+
+The prior runtime blocker was revisited after checking the official FreeSurfer release source. FreeSurfer v8.2.0's released `mri_synthstrip` script includes the `-d/--sdt` distance-transform output that is absent from the pinned v7.4.1 script. Candidate `3df717c62b7a2cac9a4cf4c86af7e9752e2584a3` updates the ARM64 script asset to the v8.2.0 tag while retaining the official model assets and all existing tests. Validation and both architecture generations passed.
+
+The inspected upstream file is [FreeSurfer v8.2.0 `mri_synthstrip`](https://github.com/freesurfer/freesurfer/blob/v8.2.0/mri_synthstrip/mri_synthstrip), Git blob `f3bc34a8c4a8b3f92f56e7cf6709e1442112d5df`, SHA-256 `bbc2ff8f8779862039401b05d5cd6039fb4f3583e0032a793ac9adb3f4521590`.
+
+The exact native ARM64 retry is run `34904969920`: https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34904969920. The outcome will determine whether this released script is compatible with the existing ARM64 model/runtime.
+
+## Candidate verification and integration retest — 2026-09-15
+
+Candidate `3df717c62b7a2cac9a4cf4c86af7e9752e2584a3` passed native ARM64 build, SIF, deploy, and all 44/44 fulltests in [run 34904969920](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34904969920). The four intended Quickshear commits were replayed onto accepted pin `bfa2364d60f7cd99e83b813a48f6c39d41c6945e` as integrated candidate `7b70cacfbf0d2c04e8ef7fd7b355da0dff4a0a2e` on `integration/quickshear-bpp`. Local validation and both architecture generations passed.
+
+The exact integrated native retest is [run 34907870046](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34907870046). The shared pin remains unchanged pending this result.

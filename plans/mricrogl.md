@@ -39,3 +39,7 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
 - Coverage status: build **❌**, fulltest **➖ Not run**; plan assessment: **Plausible**.
 - Investigation outcome: **blocked-upstream**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/97#issuecomment-5654319586).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Upstream refresh — 2026-09-15
+
+The latest official MRIcroGL release is `v1.2.20220720`; its assets include Linux, macOS and Windows packages but no Linux ARM64 asset. The pinned Linux bundle also embeds architecture-specific objects, so changing the download URL cannot produce a native Linux ARM64 candidate. The refresh is recorded in [issue #97](https://github.com/Vbitz/neurocontainers-arm64/issues/97#issuecomment-5668923203).

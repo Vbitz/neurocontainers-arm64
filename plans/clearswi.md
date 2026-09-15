@@ -68,3 +68,7 @@ After QuPath advanced the accepted pin to `c98a89ee6799cd32b6a2247554cf8447a37f2
 The SoopCT replay completed successfully: [run 34785901800](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34785901800) passed native build, SIF, deploy and 67/67 fulltests with no skips. The runner's 67-test count is authoritative for that exact fulltest revision. The QuPath descendant `b878ef4914bed658c8df82cf8d418de21d13315f` is ready for exact integrated verification.
 
 Exact current-pin candidate `b878ef4914bed658c8df82cf8d418de21d13315f` is dispatched in native ARM64 [run 34787990978](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34787990978). This is the required QuPath-based verification before serial acceptance.
+
+## Accepted implementation — 2026-09-14
+
+Candidate `b878ef4914bed658c8df82cf8d418de21d13315f` passed native ARM64 build, SIF conversion, deploy checks, and 68/68 fulltests with no skips in [run 34787990978](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34787990978). The ARM route uses the official Julia AArch64 archive and the stock Julia sysimage instead of the failing custom PackageCompiler sysimage. The candidate is an ancestor of accepted submodule pin `41ddfbf5010657e0185ab1d7730b42149e8fb744`; no additional CLEARSWI build is required.

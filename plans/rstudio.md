@@ -38,3 +38,7 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/230#issuecomment-5651537447).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Current vendor download audit — 2026-09-15
+
+Posit's current documentation lists ARM64 support for newer RStudio Server/Workbench deployments on Ubuntu 24/26 and RHEL 10, but current RStudio Desktop Linux downloads remain `amd64`. This recipe requires both the pinned 2023.12.1 Desktop and Server debs, so newer server support does not provide a complete ARM64 route. The blocker and revisit condition are recorded in [issue #230](https://github.com/Vbitz/neurocontainers-arm64/issues/230#issuecomment-5665695051); do not attempt a partial server-only container.

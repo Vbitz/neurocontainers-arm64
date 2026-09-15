@@ -2,9 +2,9 @@
 
 Researched: 2026-09-13. Recipe version: `3.0`. Target: native Linux ARM64.
 
-**Assessment: Complete dependency stack unresolved.**
+**Assessment: A recipe-level ARM route is now plausible; no fundamental blocker is established.**
 
-AIDAmri is Python with source available. The container bundles FSL 5.0.11 and DSI Studio binaries, while NiftyReg already builds from source. Upstream still documents amd64 container assumptions. The complete pinned dependency set, rather than Python, is the obstacle.
+AIDAmri is Python with source available. The container bundles an obsolete x86-only FSL 5.0.11 archive and a bundled Ubuntu 18.04 DSI Studio executable, while NiftyReg already builds from source. The current official FSL channel now publishes Linux aarch64 packages, and DSI Studio publishes ARM64 Linux releases, so the recipe can be tested by replacing those architecture-specific inputs conditionally while preserving the x86 path.
 
 This is a research assessment, not a successful build or a claim that all source-build routes have been exhausted.
 
@@ -27,19 +27,37 @@ The assessment above is based on the recipe and these upstream sources inspected
 - [KCL-BMEIS/niftyreg upstream documentation](https://github.com/KCL-BMEIS/niftyreg/blob/master/README.md).
 - [KCL-BMEIS/niftyreg CMakeLists.txt](https://github.com/KCL-BMEIS/niftyreg/blob/master/CMakeLists.txt).
 - [KCL-BMEIS/niftyreg release v2.0.0](https://github.com/KCL-BMEIS/niftyreg/releases/tag/v2.0.0).
+- [Official FSL Linux aarch64 package index](https://fsl.fmrib.ox.ac.uk/fsldownloads/fslconda/public/linux-aarch64/).
+- [FSL architecture/build documentation](https://fsl.fmrib.ox.ac.uk/fsl/docs/development/management/build_system.html).
+- [Official DSI Studio ARM64 downloads](https://dsi-studio.labsolver.org/download.html).
+- [DSI Studio ARM64 release assets](https://github.com/frankyeh/DSI-Studio/releases).
 
 ## Plan and acceptance criteria
 
-Inventory the invoked FSL and DSI commands. Compile the same NiftyReg revision, establish ARM builds of the other dependencies, and compare rodent registration and tractography outputs. A newer DSI release is a possible migration, not evidence for the old bundled executable.
+Use the accepted FSL ARM recipe path for the ARM build and select an official ARM64 DSI Studio release whose command line interface covers the commands invoked by AIDAmri. Compile the same NiftyReg revision, resolve the old Python 3.6 bootstrap on aarch64, and compare rodent registration and tractography outputs. A newer DSI release is a candidate dependency update and requires runtime validation against the existing AIDAmri tests.
 
 Preserve the assertions in [the existing fulltest](../neurocontainers/recipes/aidamri/fulltest.yaml) and the deployment checks. Any future acceptance requires a newly built native ARM64 image, architecture verification, SIF conversion and meaningful runtime tests. Configuration generation alone is insufficient.
 
 ## Decision boundary
 
-A dependency/source-build investigation remains, rather than an established universal ARM incompatibility. Revisit when the exact native package set or documented source configuration is available; record any first actionable failure. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
+Proceed to one bounded recipe-level candidate from the current accepted pin. Stop if the FSL ARM environment does not provide the commands required by AIDAmri, if the DSI Studio release does not preserve those commands, or if the pinned Python dependency set has no supported aarch64 resolution. Do not introduce emulation, replace scientific implementations, omit essential tests or maintain private library/compiler ports.
 
 ## Tracker disposition — 2026-09-14
 
-- Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
-- Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5651342907).
-- This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+- Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Plausible route, candidate pending**.
+- The prior blocked-prerequisite note is superseded by current official ARM64 FSL and DSI Studio releases. The exact candidate and native evidence are still pending; the issue remains unverified.
+
+## Next candidate
+
+- Add `aarch64` while preserving the existing x86_64 recipe path.
+- Install the current official FSL ARM package set through the existing FSL template, while retaining FSL 5.0.11 for x86_64.
+- Select an official DSI Studio Ubuntu ARM64 release and update the AIDAmri DSI path conditionally.
+- Use an ARM-capable Miniconda bootstrap or another documented ARM64 Python runtime, then let the first native build determine whether the pinned Python 3.6-era requirements resolve.
+
+## Native investigation result — 2026-09-14
+
+The route was attempted on native ARM64 from accepted source `4911988c7900801c10f7fce39f143d301c8a3852` through six bounded build attempts on `arm64/aidamri`. The recipe successfully replaced the x86-only FSL and DSI inputs with official ARM64 routes and reached the NiftyReg source build. The final candidate used released NiftyReg v2.0.0 for ARM, disabled its x86 SSE option, installed Git, and supplied the release metadata expected by its CMake project while preserving the original x86_64 NiftyReg route.
+
+The final native run [34831946025](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34831946025) failed at link time in NiftyReg's bundled libpng with missing ARM NEON symbols: `png_do_expand_palette_rgba8_neon`, `png_do_expand_palette_rgb8_neon`, `png_riffle_palette_neon`, and `png_init_filter_functions_neon`. No SIF, deploy checks or fulltest ran. The exact attempt history and blocker are recorded in [issue #119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5662474867).
+
+**Disposition: blocked-upstream.** Revisit only with an upstream NiftyReg/libpng ARM64 fix or a documented supported system-libpng ARM64 configuration. Do not maintain a recipe-local patch to the embedded third-party library.

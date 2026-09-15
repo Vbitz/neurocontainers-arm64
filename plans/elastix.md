@@ -39,3 +39,7 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
 - Coverage status: build **❌**, fulltest **➖ Not run**; plan assessment: **Plausible**.
 - Investigation outcome: **blocked-upstream**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/92#issuecomment-5653939321).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Verified implementation — 2026-09-14
+
+Candidate `41ddfbf5010657e0185ab1d7730b42149e8fb744` on `arm64/elastix-itk547` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **33/33 fulltests** with no skips in [run 34842787062](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34842787062). The route builds official ITK v5.4.7 and pinned Elastix 5.1.0 from source. The final runtime wrappers prepend `/opt/itk/lib` and the Elastix library directory so Apptainer fulltests remain functional when the host supplies `LD_LIBRARY_PATH`. This candidate descends from accepted pin `4911988c7900801c10f7fce39f143d301c8a3852` and is ready for serial integration.

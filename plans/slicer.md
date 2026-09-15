@@ -40,3 +40,9 @@ A dependency/source-build investigation remains, rather than an established univ
 - Coverage status: build **➖ Not run**, fulltest **➖ Not run**; plan assessment: **Unresolved**.
 - Investigation outcome: **blocked-prerequisite**. The exact candidate, native evidence, first actionable blocker, and revisit condition are recorded in [the linked issue outcome](https://github.com/Vbitz/neurocontainers-arm64/issues/231#issuecomment-5651537651).
 - This recipe remains unverified. Do not dispatch another attempt unless the linked revisit condition changes or a released upstream fix becomes available.
+
+## Follow-up ARM download audit — 2026-09-15
+
+The current official Slicer download service was queried for stable 5.12.4 with `os=linux` and both `arch=arm64` and `arch=amd64`. Both stable queries returned the same Kitware payload, with `Content-Disposition: Slicer-5.12.4-linux-amd64.tar.gz`; the Linux ARM64 preview query for 5.13.0 returned HTTP 400. The service's generic naming documentation mentions an `arm64` placeholder, but the current Linux release endpoint does not provide an ARM64 payload.
+
+This is still a **blocked-prerequisite**. Revisit when the official Slicer service publishes a Linux ARM64 application and a matching MONAILabel extension; do not build the full Slicer/Qt/VTK/ITK stack speculatively or substitute the amd64 archive.
