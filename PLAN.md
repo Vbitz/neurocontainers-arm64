@@ -3149,3 +3149,8 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 
 - Exact candidate `04970417e995232706f4ce85ddf4db23c79d4f25` was dispatched as native ARM64 run [34925938740](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34925938740), attempt 3/6. Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674387518) records the tested changes and acceptance gates.
 - Keep accepted pin `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3` unchanged pending the exact result.
+
+## AIDAmri verified checkpoint — 2026-09-15
+
+- Candidate `04970417e995232706f4ce85ddf4db23c79d4f25` passed exact native ARM64 run [34925938740](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34925938740): Docker build, architecture verification, SIF conversion, deploy checks and **9/9 fulltests**, with zero failures and zero skips. Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674555318) records the durable verified outcome.
+- The candidate descends directly from accepted pin `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3`. Next action: stage only the tested submodule pointer, commit/push the top-level acceptance, then refresh issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2). The overall goal remains active.

@@ -109,3 +109,17 @@ attempt 3/6; the recipe remains within the bounded window.
 The exact candidate is dispatched as native ARM64 run
 [34925938740](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34925938740).
 The dispatch details are recorded in [issue #119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674387518).
+
+## Verified implementation — 2026-09-15
+
+Candidate `04970417e995232706f4ce85ddf4db23c79d4f25` passed exact native ARM64
+run [34925938740](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34925938740):
+Docker build, architecture verification, SIF conversion, deploy checks and all
+**9/9 fulltests** passed with zero failures and zero skips. The candidate uses
+the documented NiftyReg system-library route with native GCC/G++, pins ARM64
+Traits 6.4.3 for Nipype 1.7.0, and preserves the x86_64 route. The durable
+verified outcome is recorded in [issue #119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674555318).
+
+The fresh window used three substantive attempts: system libpng discovery,
+compiler selection, and the runtime dependency/test corrections. The candidate
+is ready for serial integration onto accepted pin `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3`.
