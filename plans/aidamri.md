@@ -61,3 +61,19 @@ The route was attempted on native ARM64 from accepted source `4911988c7900801c10
 The final native run [34831946025](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34831946025) failed at link time in NiftyReg's bundled libpng with missing ARM NEON symbols: `png_do_expand_palette_rgba8_neon`, `png_do_expand_palette_rgb8_neon`, `png_riffle_palette_neon`, and `png_init_filter_functions_neon`. No SIF, deploy checks or fulltest ran. The exact attempt history and blocker are recorded in [issue #119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5662474867).
 
 **Disposition: blocked-upstream.** Revisit only with an upstream NiftyReg/libpng ARM64 fix or a documented supported system-libpng ARM64 configuration. Do not maintain a recipe-local patch to the embedded third-party library.
+
+## New investigation window — 2026-09-15
+
+NiftyReg v2.0.0's released CMake configuration explicitly searches for system
+zlib and libpng before selecting its bundled copies. That is the documented
+configuration route named in the blocker, so the AIDAmri change was replayed
+onto the current accepted pin `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3` as
+candidate `bd5aa3c544bec99dc83b1641fb174b6e27c43a42` on
+`arm64/aidamri-system-libpng`. The ARM64 path adds Ubuntu `libpng-dev` and
+leaves the x86_64 path unchanged. Validation and both architecture Dockerfile
+generations pass.
+
+This is a fresh bounded recipe investigation window authorized by the active
+porting goal. The candidate is ready for one native ARM64 build. Stop if the
+system library is not selected or if the next error requires patching NiftyReg
+or its embedded dependencies.

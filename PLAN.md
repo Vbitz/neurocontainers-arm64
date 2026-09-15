@@ -3118,3 +3118,9 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - The 11 Plausible unverified rows are `aidamri`, `blender`, `civet`, `convert3d`, `dsistudio`, `itksnap`, `lcmodel`, `lstai`, `mricrogl`, `musclemap` and `surfice`. Each has a durable issue outcome identifying the current upstream, runtime, data or prerequisite blocker; do not repeat them without changed evidence.
 - The remaining unverified assessments are 63 Unresolved, 7 Conditional, 31 Blocked prerequisite, 2 No route found, 1 Outside scope and 5 Not assessed rows. Their per-recipe issues contain the bounded outcome or prerequisite condition. Continue the active goal if a released ARM64 asset, supported package or other concrete upstream change creates a new route.
 - The accepted submodule checkout is clean and detached at `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3`; root `main` is clean and pushed at `aec77b9`. Fork Actions remains disabled (`enabled: false`).
+
+## AIDAmri system libpng investigation checkpoint — 2026-09-15
+
+- Changed evidence: released NiftyReg v2.0.0 CMake explicitly searches for system zlib/libpng before its bundled copies. AIDAmri candidate `bd5aa3c544bec99dc83b1641fb174b6e27c43a42` on `arm64/aidamri-system-libpng` replays the prior ARM route onto accepted pin `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3` and adds only ARM64 `libpng-dev`.
+- Local recipe validation and ARM64/x86_64 Dockerfile generation pass. Dispatch the exact full candidate SHA for one fresh bounded attempt; stop at a NiftyReg or embedded dependency source port.
+- Investigation start: `2026-09-15T03:02:32Z`; deadline: `2026-09-15T15:02:32Z`; attempts `0/6`; current checkout `arm64/aidamri-system-libpng`; accepted root pin remains `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3`.
