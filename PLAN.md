@@ -3111,3 +3111,10 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - Current-pin candidate `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3` passed exact native run [34910862134](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34910862134): ARM64 build, SIF conversion, deploy checks and **121/121 fulltests**, with zero failures and zero skips.
 - Root commit `7c2ca83` pushed the accepted submodule pin. Issue [#238](https://github.com/Vbitz/neurocontainers-arm64/issues/238#issuecomment-5673899712) contains the verified outcome. The submodule checkout is clean and detached at the accepted SHA.
 - Fork Actions remains disabled. Next action is to refresh issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2), reconcile the 148 plan queue against the new accepted pin, and continue any recipe with changed evidence; the overall goal remains active.
+
+## Inventory checkpoint after TractSeg acceptance — 2026-09-15
+
+- Tracker refresh completed after root commit `aec77b9`: issue [#2](https://github.com/Vbitz/neurocontainers-arm64/issues/2) now uses accepted submodule `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3`. It reports 127 variants with fully passing historical evidence, 0 active runs, and 11 unverified rows still assessed as Plausible.
+- The 11 Plausible unverified rows are `aidamri`, `blender`, `civet`, `convert3d`, `dsistudio`, `itksnap`, `lcmodel`, `lstai`, `mricrogl`, `musclemap` and `surfice`. Each has a durable issue outcome identifying the current upstream, runtime, data or prerequisite blocker; do not repeat them without changed evidence.
+- The remaining unverified assessments are 63 Unresolved, 7 Conditional, 31 Blocked prerequisite, 2 No route found, 1 Outside scope and 5 Not assessed rows. Their per-recipe issues contain the bounded outcome or prerequisite condition. Continue the active goal if a released ARM64 asset, supported package or other concrete upstream change creates a new route.
+- The accepted submodule checkout is clean and detached at `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3`; root `main` is clean and pushed at `aec77b9`. Fork Actions remains disabled (`enabled: false`).
