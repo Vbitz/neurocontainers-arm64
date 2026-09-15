@@ -82,3 +82,12 @@ The exact candidate was dispatched as native ARM64 run
 [34923542636](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34923542636),
 attempt 1 in this fresh window. The dispatch and hypothesis are recorded in
 [issue #119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674047922).
+
+Run 34923542636 installed `libpng-dev`, but NiftyReg selected FSL's
+`/opt/fsl-5.0.11/bin/cc` wrapper. Its CMake could not find the system zlib or
+libpng and rebuilt the bundled libpng, reproducing the missing ARM NEON symbols
+at link time. Candidate `1a06fd6f8b785d152df9a79fed0d25102926fe4f` keeps the
+system library change and explicitly selects `/usr/bin/gcc` and `/usr/bin/g++`
+for the ARM64 NiftyReg CMake invocation. Validation and both architecture
+Dockerfile generations pass. This is attempt 2/6; dispatch it as the final
+compiler-selection hypothesis before classifying the dependency blocker.
