@@ -3196,3 +3196,5 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 
 - The repeated `docker save` storage blocker is addressable in top-level orchestration. Commit `3980760` changes `scripts/arm64.py` to convert from `docker-daemon:<candidate>` directly, avoiding a duplicate Docker archive; 16 Python tests, the report test, actionlint and diff checks pass.
 - This is GOUHFI attempt 4/6, investigation window `2026-09-15T05:51:29Z`–`2026-09-15T17:51:29Z`. Dispatch the unchanged accepted recipe source `e74050df0e4881833ae5d8d82b4e0ef287a14179` with the updated root orchestration. Require native build, architecture check, SIF, deploy and fulltest; keep the accepted submodule pin unchanged until exact evidence passes.
+
+- Exact GOUHFI attempt 4/6 dispatch: [run 34934499652](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34934499652), created `2026-09-15T05:52:15Z`, uses recipe source `e74050df0e4881833ae5d8d82b4e0ef287a14179` and root orchestration checkpoint `3950167f3fec3742d1d08fe93faeb45e2842d13a`. Await exact native SIF/deploy/fulltest evidence.
