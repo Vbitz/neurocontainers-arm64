@@ -91,3 +91,7 @@ system library change and explicitly selects `/usr/bin/gcc` and `/usr/bin/g++`
 for the ARM64 NiftyReg CMake invocation. Validation and both architecture
 Dockerfile generations pass. This is attempt 2/6; dispatch it as the final
 compiler-selection hypothesis before classifying the dependency blocker.
+
+The exact retry is dispatched as native ARM64 run
+[34924143185](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34924143185).
+The dispatch details are recorded in [issue #119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674109825).

@@ -3134,3 +3134,8 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 
 - Run [34923542636](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34923542636) failed during NiftyReg linking: despite installing `libpng-dev`, FSL's `/opt/fsl-5.0.11/bin/cc` wrapper caused CMake to miss system zlib/libpng and rebuild the bundled libpng, producing the same missing ARM NEON symbols.
 - Candidate `1a06fd6f8b785d152df9a79fed0d25102926fe4f` keeps the ARM64 system library route and explicitly selects `/usr/bin/gcc` and `/usr/bin/g++` for NiftyReg. Validation and both architecture generations pass. This is attempt `2/6`; dispatch the exact SHA and stop if system discovery still fails or the dependency source remains incompatible.
+
+## AIDAmri retry dispatch checkpoint — 2026-09-15
+
+- Exact candidate `1a06fd6f8b785d152df9a79fed0d25102926fe4f` was dispatched as native ARM64 run [34924143185](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34924143185), attempt 2/6. Issue [#119](https://github.com/Vbitz/neurocontainers-arm64/issues/119#issuecomment-5674109825) records the compiler-selection hypothesis.
+- Keep accepted pin `7bf9e3a1ea7846fde48b8c226dc280321c9d15b3` unchanged pending the exact build/SIF/deploy/fulltest result.
