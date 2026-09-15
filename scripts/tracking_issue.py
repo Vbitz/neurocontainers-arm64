@@ -28,6 +28,7 @@ COUNTS = re.compile(r'Tests: \*\*(\d+) passed\*\*, \*\*(\d+) failed\*\*, '
                     r'\*\*(\d+) skipped\*\*, (\d+) total')
 ASSESSMENTS = {
     'Plausible recipe-level port; no fundamental blocker established': 'Plausible',
+    'A recipe-level ARM route is now plausible; no fundamental blocker is established': 'Plausible',
     'Complete dependency stack unresolved': 'Unresolved',
     'Native dependency or legacy environment needs a supported build route': 'Unresolved',
     'Concrete prior build failure; not a general architecture prohibition': 'Unresolved',

@@ -33,6 +33,10 @@ def run(number, status='completed', attempt=1):
 
 
 class CoverageTests(unittest.TestCase):
+    def test_current_plan_assessment_alias_is_supported(self):
+        assessment = 'A recipe-level ARM route is now plausible; no fundamental blocker is established'
+        self.assertEqual(tracker.ASSESSMENTS[assessment], 'Plausible')
+
     def test_success_requires_counts_and_no_skips(self):
         for counts, expected in [(None, 'Unknown'), ((0, 0, 0, 0), 'Unknown'),
                                  ((4, 0, 0, 5), 'Unknown'), ((4, 0, 1, 5), 'Skips'),
