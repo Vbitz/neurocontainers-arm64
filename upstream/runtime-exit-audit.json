@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-12T20:07:08.364909+00:00",
+  "checked_at": "2026-10-12T20:54:15.903068+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     {
@@ -246,6 +246,31 @@
           "errors": [
             "Traceback (most recent call last):"
           ]
+        }
+      ]
+    },
+    {
+      "recipe": "heudiconv",
+      "findings": [
+        {
+          "test": "dcm2niix version check",
+          "return_code": 3,
+          "errors": []
+        },
+        {
+          "test": "nib-diff different files",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "nib-diff with header fields",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "nib-diff verbose",
+          "return_code": 1,
+          "errors": []
         }
       ]
     },
@@ -515,6 +540,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "heudiconv",
+      "source_sha": "a05fe32ba1222db3fc487664c70077efead94c7e",
+      "run_id": 38304264865,
+      "reported_passed": 70,
+      "reported_total": 70,
+      "nonzero_command_exits": 4
+    },
+    {
       "recipe": "hnncore",
       "source_sha": "d9dc5f05e2efd65b9f947881d3c0f4bb0b67071a",
       "run_id": 38292836645,
@@ -528,6 +561,14 @@
       "run_id": 38237720501,
       "reported_passed": 6,
       "reported_total": 6,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "julia",
+      "source_sha": "6dc8d4e2fe8ba19ffb332991f04d1f13c6d64223",
+      "run_id": 38299606271,
+      "reported_passed": 139,
+      "reported_total": 139,
       "nonzero_command_exits": 0
     },
     {
@@ -552,6 +593,14 @@
       "run_id": 38218121419,
       "reported_passed": 12,
       "reported_total": 12,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "mne",
+      "source_sha": "58c9bf3c6608c4e5fa2c739b891ed88e57cdfdc5",
+      "run_id": 38302069553,
+      "reported_passed": 8,
+      "reported_total": 8,
       "nonzero_command_exits": 0
     },
     {
@@ -603,6 +652,14 @@
       "nonzero_command_exits": 4
     },
     {
+      "recipe": "rapidtide",
+      "source_sha": "4b30a1173fbd09ce08b307cef621515d80cd82ea",
+      "run_id": 38301675222,
+      "reported_passed": 6,
+      "reported_total": 6,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "segmentator",
       "source_sha": "413b806fa393075cf4bf92a17dd401eae9eab900",
       "run_id": 38283623639,
@@ -627,7 +684,7 @@
       "nonzero_command_exits": 0
     }
   ],
-  "reviewed_merged_recipe_count": 40,
+  "reviewed_merged_recipe_count": 44,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [],
@@ -746,7 +803,8 @@
           "dockerfile_files_digests_copies_mounts_metadata_readme_equal": true
         }
       },
-      "note": "Metadata-only followup: actual native run remains attributed to c710. Both generated Dockerfiles, declared URLs/digests/inline content, copy sources, local-file bytes, mounts, metadata and readme are equal; the entire43-case suite is exactly equal after actual variable substitution. Shared builder/workflow/locked inputs unchanged. This proves resolved recipe input equivalence, not identical binary image bits or an exact-new-head root dispatch. Both fresh new-head upstream architecture suites remain required."
+      "note": "Metadata-only followup: actual native run remains attributed to c710. Both generated Dockerfiles, declared URLs/digests/inline content, copy sources, local-file bytes, mounts, metadata and readme are equal; the entire43-case suite is exactly equal after actual variable substitution. Shared builder/workflow/locked inputs unchanged. This proves resolved recipe input equivalence, not identical binary image bits or an exact-new-head root dispatch. Both fresh new-head upstream architecture suites remain required.",
+      "scope_note": "Resolved runtime build instructions, assets and test inputs match. Source/tracking provenance labels identify their respective actual commits and may differ; this is not a byte-identical image or exact-new-head root-workflow claim."
     }
   ]
 }
