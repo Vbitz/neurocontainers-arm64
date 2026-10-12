@@ -357,18 +357,18 @@
       "port_files": [
         "recipes/bart/build.yaml"
       ],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-bart-20261012",
       "baseline_sha": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
       "candidate_sha": "5496bbdb1363839a80b7b582b8eb3e5bbd9f320f",
       "started_at": "2026-10-12T05:01:42.216956+00:00",
       "deadline": "2026-10-12T17:01:42.216956+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "run_id": 38206195541,
-      "pr_url": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3482",
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Open its own upstream PR when two matrix build slots are available; require all upstream tests before merge.",
+      "next_action": "Inspect upstream ARM64 and x86_64 candidate reports plus all CI; merge this PR only when all pass with zero failed/skipped tests.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.00",
@@ -391,7 +391,8 @@
         },
         "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206195541",
         "artifact_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206195541/artifacts/11727033149"
-      }
+      },
+      "pr_number": 3482
     },
     {
       "recipe": "batchheudiconv",
@@ -819,7 +820,7 @@
       "port_files": [
         "recipes/brainlifecli/build.yaml"
       ],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-brainlifecli-20261012",
       "baseline_sha": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
       "candidate_sha": "fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8",
@@ -830,7 +831,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Inspect exact native result; open focused upstream PR after all gates pass with zero failures/skips.",
+      "next_action": "Open its own upstream PR when two matrix slots are free; require all upstream container tests and CI before merge.",
       "upstream_review": {
         "exists": true,
         "version": "1.8.2",
@@ -841,7 +842,18 @@
         "fulltest_version": "1.8.2",
         "test_count": 73
       },
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206184713"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206184713",
+      "native_evidence": {
+        "source_sha": "fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8",
+        "version": "1.8.2",
+        "counts": {
+          "total_tests": 74,
+          "passed": 74,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206184713"
+      }
     },
     {
       "recipe": "brats",
@@ -3689,7 +3701,7 @@
       "port_files": [
         "recipes/panoptica/build.yaml"
       ],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-panoptica-20261012",
       "baseline_sha": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
       "candidate_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
@@ -3700,7 +3712,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Inspect exact native run; open upstream PR after all gates and zero failures/skips.",
+      "next_action": "Open its own upstream PR when two matrix slots are free; require all upstream container tests and CI before merge.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.7",
@@ -3711,7 +3723,18 @@
         "fulltest_version": "2.1.7",
         "test_count": 9
       },
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206125547"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206125547",
+      "native_evidence": {
+        "source_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
+        "version": "2.1.7",
+        "counts": {
+          "total_tests": 10,
+          "passed": 10,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206125547"
+      }
     },
     {
       "recipe": "pcntoolkit",

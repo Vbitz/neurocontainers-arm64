@@ -3231,3 +3231,9 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 
 - BART exact updated-upstream native run [38206195541](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206195541) passed **117/117**, zero failures/skips; downloaded metadata confirms `5496bbdb1363839a80b7b582b8eb3e5bbd9f320f`. Pending its own upstream PR after another native build frees capacity for the two upstream architecture jobs.
 - User clarified: **each of the 129 containers must get its own upstream pull request**, with independent native/CI/merge evidence. Do not combine containers. Review already-supported recipes for individually justified improvements rather than empty PRs.
+
+- BART's individual upstream [PR #3482](https://github.com/neurodesk/neurocontainers/pull/3482) is open for exact native-verified source `5496bbdb1363839a80b7b582b8eb3e5bbd9f320f`. Upstream candidate matrix will build x86_64 and ARM64; this is ARM64 attempt 2/6 including upstream verification. Await all container tests and Code quality before merging.
+
+- `panoptica` updated-upstream native [run 38206125547](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206125547) passed **10/10**, zero failures/skips, exact source `85689c2ead33e71e549b830a2b4093f9cc2c3f3f`. Await its own upstream PR when matrix capacity permits.
+
+- `brainlifecli` updated-upstream native [run 38206184713](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206184713) passed **74/74**, zero failures/skips, exact source `fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8`. Await its own upstream PR when matrix capacity permits.
