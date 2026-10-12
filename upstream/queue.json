@@ -1494,7 +1494,7 @@
       "port_files": [
         "recipes/brainles-aurora/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-brainles-aurora-20261012",
       "baseline_sha": "e35419a8aea87ae0c6024c3e29663e3c65612dd3",
       "candidate_sha": "12dd9fd8e64ffa76ae7eeec61d82a884958ecfff",
@@ -1663,10 +1663,13 @@
             "wasted_bytes_display": "18 MB",
             "user_wasted_percent": 0.283
           }
-        }
+        },
+        "candidate_run_id": 38232041336,
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "merged_sha": "38251876538f054f265a3d2fed4304baf357dc2d",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.7",
@@ -1733,7 +1736,8 @@
           "ubuntu-24.04-arm"
         ]
       },
-      "pr_number": 3503
+      "pr_number": 3503,
+      "merged_at": "2026-10-12T10:22:21Z"
     },
     {
       "recipe": "brainles-preprocessing",
@@ -3135,18 +3139,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-datalad-20261012",
+      "baseline_sha": "38251876538f054f265a3d2fed4304baf357dc2d",
+      "candidate_sha": "9f7c08e8bc07ca3cb6d768bc3f91a63c11838b6b",
+      "started_at": "2026-10-12T10:23:19.807018+00:00",
+      "deadline": "2026-10-12T22:23:19.807018+00:00",
+      "attempts": 1,
+      "run_id": 38236088785,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.7.1",
@@ -3158,7 +3162,7 @@
         "fulltest_version": "1.7.1",
         "test_count": 9
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "pr_plan": "Preserve9 existing tests; add a real offline local clone with explicitly annexed deterministic64KiB content, exact retrieval and matching content-key assertions.",
       "recent_upstream_pr_preflight": [
         {
           "number": 3417,
@@ -3176,7 +3180,20 @@
           "merge_sha": "8246312d1654f58e4890509ebfc146c883eda906",
           "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
         }
-      ]
+      ],
+      "upstream_verification_mode": "runtime-only",
+      "release_metadata_policy": "Fulltest-only verification; no image candidate or new release promotion.",
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38236088785",
+      "primary_source_review": {
+        "sources": [
+          "https://docs.datalad.org/en/stable/generated/man/datalad-clone.html",
+          "https://docs.datalad.org/en/stable/generated/man/datalad-get.html",
+          "https://git-annex.branchable.com/git-annex-add/"
+        ],
+        "note": "Normal local dataset clone initializes an annex without content retrieval; --force-large explicitly stores the small deterministic fixture in annex. Assert content is absent before get, keys match, and retrieved64KiB bytes are exact. No reckless clone, unchecked drop, external data or changed image inputs. YAML/Bash and codespell checks plus both architecture generation passed."
+      }
     },
     {
       "recipe": "dcm2bids",
@@ -5342,7 +5359,10 @@
       "attempts": 3,
       "run_id": 38230695316,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3504",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "initial_run_id": 38235760181,
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38235760181"
+      },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
