@@ -2929,5 +2929,190 @@
       ],
       "metadata_checked_at": "2026-10-12T10:41:17.536249+00:00"
     }
-  ]
+  ],
+  "shared_publication_queue_observation": {
+    "checked_at": "2026-10-12T22:17:17.765708+00:00",
+    "status": "queued-awaiting-publisher-runner",
+    "shared_runner_label": "neurodesk-syd-arcrunner-neurocontainers",
+    "queued_jobs": 14,
+    "promotions": [
+      {
+        "recipe": "apptainer",
+        "run_id": 38283169300,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38283169300",
+        "jobs": [
+          {
+            "id": 114925209048,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          },
+          {
+            "id": 114925209219,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          }
+        ]
+      },
+      {
+        "recipe": "brkraw",
+        "run_id": 38265545390,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38265545390",
+        "jobs": [
+          {
+            "id": 114866872760,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          },
+          {
+            "id": 114866872789,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          }
+        ]
+      },
+      {
+        "recipe": "eharmonize",
+        "run_id": 38309924254,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38309924254",
+        "jobs": [
+          {
+            "id": 115012963941,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          },
+          {
+            "id": 115012964047,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          }
+        ]
+      },
+      {
+        "recipe": "gigaconnectome",
+        "run_id": 38263440929,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38263440929",
+        "jobs": [
+          {
+            "id": 114859649438,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          },
+          {
+            "id": 114859649489,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          }
+        ]
+      },
+      {
+        "recipe": "mne",
+        "run_id": 38305768891,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38305768891",
+        "jobs": [
+          {
+            "id": 114999414775,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          },
+          {
+            "id": 114999415001,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          }
+        ]
+      },
+      {
+        "recipe": "quickshear",
+        "run_id": 38300069639,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38300069639",
+        "jobs": [
+          {
+            "id": 114980658690,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          },
+          {
+            "id": 114980658755,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          }
+        ]
+      },
+      {
+        "recipe": "rapidtide",
+        "run_id": 38304440005,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38304440005",
+        "jobs": [
+          {
+            "id": 114995076221,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          },
+          {
+            "id": 114995076351,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          }
+        ]
+      }
+    ],
+    "runner_inventory_access": "GET repos/neurodesk/neurocontainers/actions/runners returned HTTP403: repository runners permission required. Runner health/capacity cannot be established with current credentials.",
+    "recovery_condition": "An eligible upstream publishing runner must accept these queued jobs. Administrator runner inspection is needed to diagnose offline/capacity/autoscaling state. Preserve exact tested candidates and queued promotions; no container rebuild or manually fabricated release metadata."
+  }
 }
