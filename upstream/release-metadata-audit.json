@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T06:24:57.970146+00:00",
+  "checked_at": "2026-10-12T06:42:44.477787+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -67,9 +67,9 @@
       "promotion_run_id": 38208442867,
       "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38208442867",
       "status": "pending-promotion",
-      "workflow_status": "queued",
+      "workflow_status": "in_progress",
       "workflow_conclusion": null,
-      "checked_at": "2026-10-12T06:24:52.205055+00:00",
+      "checked_at": "2026-10-12T06:42:40.708776+00:00",
       "metadata": [
         {
           "architecture": "aarch64",
@@ -93,25 +93,25 @@
       "publish_jobs": [
         {
           "name": "publish (candidate-bart-5496bbdb1363839a80b7b582b8eb3e5bbd9f320f)",
+          "status": "completed",
+          "conclusion": "success",
+          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-skvdq",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-bart_arm64-5496bbdb1363839a80b7b582b8eb3e5bbd9f320f)",
           "status": "in_progress",
           "conclusion": null,
-          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-skvdq",
+          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-ndcst",
           "labels": [
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
           "active_steps": [
             "Download candidate bundle without executing it"
           ]
-        },
-        {
-          "name": "publish (candidate-bart_arm64-5496bbdb1363839a80b7b582b8eb3e5bbd9f320f)",
-          "status": "queued",
-          "conclusion": null,
-          "runner_name": "",
-          "labels": [
-            "neurodesk-syd-arcrunner-neurocontainers"
-          ],
-          "active_steps": []
         }
       ]
     },
@@ -122,7 +122,7 @@
       "status": "pending-promotion",
       "workflow_status": "queued",
       "workflow_conclusion": null,
-      "checked_at": "2026-10-12T06:24:54.158603+00:00",
+      "checked_at": "2026-10-12T06:42:41.909650+00:00",
       "metadata": [
         {
           "architecture": "aarch64",
@@ -173,7 +173,7 @@
       "status": "pending-promotion",
       "workflow_status": "queued",
       "workflow_conclusion": null,
-      "checked_at": "2026-10-12T06:24:56.143292+00:00",
+      "checked_at": "2026-10-12T06:42:42.963954+00:00",
       "metadata": [
         {
           "architecture": "aarch64",
@@ -224,7 +224,7 @@
       "status": "pending-promotion",
       "workflow_status": "queued",
       "workflow_conclusion": null,
-      "checked_at": "2026-10-12T06:24:57.969927+00:00",
+      "checked_at": "2026-10-12T06:42:44.477527+00:00",
       "metadata": [
         {
           "architecture": "aarch64",
@@ -270,9 +270,11 @@
     }
   ],
   "findings": [
-    "Successful SynthStrip and both Neurodesktop Lite architecture promotions committed JSON exactly matching the trusted promotion previews.",
-    "ARM64 named variant metadata uses releases/<recipe>_arm64/<version>.json and declares recipe, variant and aarch64 architecture. Source SHA, checksums and PR provenance live in promotion manifests; scientific test counts live in candidate reports.",
-    "Four merged ARM64 ports have automatically triggered promotion. Their current ARM64 JSON files are absent while publication is pending; existing x86 metadata remains historical.",
-    "Publish jobs require neurodesk-syd-arcrunner-neurocontainers; queued jobs have no assigned runner. Metadata finalization waits for all publish jobs and then serializes final tags, SIF copies and the metadata commit."
+    "bart: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38208442867)",
+    "brainlifecli: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38210939803)",
+    "brkraw: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38211197258)",
+    "panoptica: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38209000133)",
+    "Completed reference promotions match their trusted previews, including explicit ARM64 architecture and named-variant paths.",
+    "Publication is tracked separately from native test success and upstream PR merge. No release JSON is manually edited."
   ]
 }

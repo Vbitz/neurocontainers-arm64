@@ -3326,3 +3326,11 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - `modsort` prepared and pushed at `b8764c4d1150f58dafc62913167242a94fc96769` on `arm64/upstream-modsort-20261012`, baseline `5a09a87422c5f04892824b0d5a8782adebd861e5`; all recipe checks and architecture generations passed. Start `2026-10-12T06:36:34.467681+00:00`, deadline `2026-10-12T18:36:34.467681+00:00`; no builds dispatched yet, waiting for capacity.
 
 - `modsort` current-upstream native [run 38213391991](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38213391991) dispatched at exact `b8764c4d1150f58dafc62913167242a94fc96769`; attempts 1/6 total; deadline `2026-10-12T18:36:34.467681+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `modsort` exact current-upstream `b8764c4d1150f58dafc62913167242a94fc96769` native verified: **8/8**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38213391991). Await its own upstream PR and dual-architecture verification before merge.
+
+- `meganorm` exact current-upstream `8dd1bb3681beb288923340ad07f228f42c98ddc9` native verified: **12/12**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38213095329). Await its own upstream PR and dual-architecture verification before merge.
+
+- `pcntoolkit` individual upstream [PR #3491](https://github.com/neurodesk/neurocontainers/pull/3491) opened at exact native-verified `64d88b79ce7299c91813e28dfdc8b95375b6ab6e` (14/14, zero failures/skips). Total builds now 3/6 including both upstream architecture candidates; deadline `2026-10-12T18:10:43.172380+00:00`. Require actual upstream reports and all required checks before authorized merge.
+
+- Coverage issue #2 refreshed from 429 runs using `python3 scripts/tracking_issue.py --write`; body update verified, historical inventory retained. Supporting CI fix is merged, ModSort native 8/8 and MEGaNorm 12/12 verified; PCNtoolkit PR #3491 upstream candidate run 38213936792 is pending. Current checkout remains pushed ModSort candidate; historical accepted gitlink is intentionally preserved.
