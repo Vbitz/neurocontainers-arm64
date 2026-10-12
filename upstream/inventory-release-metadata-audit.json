@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-12T21:28:57.172788+00:00",
-  "upstream_ref": "e1c866ef60cfe99f148e5e310eec25c1491fc75b",
+  "checked_at": "2026-10-12T21:57:24.319291+00:00",
+  "upstream_ref": "cf6a35afcc86b2b57519bad90a50f6ffc05fc0eb",
   "scope": "112 user-requested in-scope recipes;17 OpenRecon exclusions omitted.",
   "policy": "Read-only source-tree audit. Metadata presence/schema does not prove current builds, public artifacts or deployment; exact-candidate publication proofs remain in release-metadata-audit.json. No generated JSON changes or promotion dispatch.",
   "counts": {

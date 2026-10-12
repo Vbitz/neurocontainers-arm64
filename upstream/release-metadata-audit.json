@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T21:28:54.863797+00:00",
+  "checked_at": "2026-10-12T21:57:12.963613+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -225,7 +225,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T21:28:40.189439+00:00",
+      "checked_at": "2026-10-12T21:56:56.356537+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -250,7 +250,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T21:28:40.957070+00:00"
+      "metadata_checked_at": "2026-10-12T21:56:57.158901+00:00"
     },
     {
       "recipe": "bart",
@@ -483,7 +483,7 @@
           "current_candidate_date_committed": true
         }
       ],
-      "checked_at": "2026-10-12T21:28:42.539116+00:00",
+      "checked_at": "2026-10-12T21:56:58.279627+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -508,7 +508,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T21:28:43.341440+00:00"
+      "metadata_checked_at": "2026-10-12T21:56:59.053906+00:00"
     },
     {
       "recipe": "clearswi",
@@ -875,7 +875,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T21:28:46.542572+00:00",
+      "checked_at": "2026-10-12T21:57:02.220223+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -900,7 +900,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T21:28:47.297192+00:00"
+      "metadata_checked_at": "2026-10-12T21:57:03.117354+00:00"
     },
     {
       "recipe": "fsqc",
@@ -995,7 +995,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T21:28:48.368934+00:00",
+      "checked_at": "2026-10-12T21:57:04.377917+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -1020,7 +1020,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T21:28:49.119119+00:00"
+      "metadata_checked_at": "2026-10-12T21:57:05.171622+00:00"
     },
     {
       "recipe": "gingerale",
@@ -1317,7 +1317,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T21:28:50.282336+00:00",
+      "checked_at": "2026-10-12T21:57:06.444368+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -1342,7 +1342,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T21:28:51.021019+00:00"
+      "metadata_checked_at": "2026-10-12T21:57:07.281999+00:00"
     },
     {
       "recipe": "modsort",
@@ -1411,6 +1411,54 @@
         }
       ],
       "metadata_checked_at": "2026-10-12T10:41:45.885713+00:00"
+    },
+    {
+      "recipe": "openrefine",
+      "promotion_run_id": 38311690124,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38311690124",
+      "status": "promotion-failed",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/openrefine_arm64/3.10.1.json",
+          "expected_build_date": "20261013",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/openrefine/3.10.1.json",
+          "expected_build_date": "20261013",
+          "exists": true,
+          "committed_build_dates": [
+            "20260601"
+          ],
+          "current_candidate_date_committed": false
+        }
+      ],
+      "checked_at": "2026-10-12T21:57:08.300371+00:00",
+      "workflow_status": "completed",
+      "workflow_conclusion": "failure",
+      "publish_jobs": [
+        {
+          "name": "publish (${{ matrix.artifact.name }})",
+          "status": "completed",
+          "conclusion": "skipped",
+          "runner_name": null,
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-12T21:57:09.056727+00:00",
+      "failure_detail": {
+        "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
+        "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
+        "source_sha": "5e2f76d3",
+        "next_action": "Merge shared selector correction only after required upstream checks; existing failed publication requires upstream-maintainer recovery. Do not rebuild passing container or dispatch promotion under this workflow."
+      }
     },
     {
       "recipe": "panoptica",
@@ -1573,7 +1621,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T21:28:52.083493+00:00",
+      "checked_at": "2026-10-12T21:57:10.160162+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -1598,7 +1646,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T21:28:52.818954+00:00"
+      "metadata_checked_at": "2026-10-12T21:57:10.976517+00:00"
     },
     {
       "recipe": "rapidtide",
@@ -1625,7 +1673,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T21:28:54.053074+00:00",
+      "checked_at": "2026-10-12T21:57:12.158087+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -1650,7 +1698,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T21:28:54.863041+00:00"
+      "metadata_checked_at": "2026-10-12T21:57:12.962692+00:00"
     },
     {
       "recipe": "topaz",
@@ -1743,6 +1791,7 @@
     "meganorm: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38220896254)",
     "mne: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38305768891)",
     "modsort: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38219491260)",
+    "openrefine: promotion-failed (https://github.com/neurodesk/neurocontainers/actions/runs/38311690124)",
     "panoptica: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38209000133)",
     "pcntoolkit: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38215533821)",
     "quickshear: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38300069639)",
@@ -2400,6 +2449,23 @@
         "finalize": "skipped",
         "artifact_count": 0,
         "checked_at": "2026-10-12T18:42:32.054123+00:00",
+        "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
+      }
+    },
+    {
+      "recipe": "bidsme",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3540",
+      "merge_sha": "2b03c6f08b1c1642be6b7d8254b9f52baf449daa",
+      "note": "Fulltest-only change; no image-input change or new release required.",
+      "automatic_workflow_observation": {
+        "run_id": 38312629767,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38312629767",
+        "conclusion": "success",
+        "resolve": "success",
+        "publish": "skipped",
+        "finalize": "skipped",
+        "artifact_count": 0,
+        "checked_at": "2026-10-12T21:56:39.443209+00:00",
         "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
       }
     },

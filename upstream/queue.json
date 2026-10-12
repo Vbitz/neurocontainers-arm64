@@ -1516,7 +1516,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T21:28:40.189439+00:00",
+        "checked_at": "2026-10-12T21:56:56.356537+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -1541,7 +1541,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T21:28:40.957070+00:00"
+        "metadata_checked_at": "2026-10-12T21:56:57.158901+00:00"
       }
     },
     {
@@ -2426,7 +2426,7 @@
         ]
       },
       "port_files": [],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-bidsme-20261012",
       "baseline_sha": "476155d97cc3815e2912e00525e8ecbef8d12ac9",
       "candidate_sha": "4a8ece48b61fb4dd502ed592b7a240fa3fcd5e86",
@@ -2435,9 +2435,85 @@
       "attempts": 6,
       "run_id": 38310835773,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3540",
-      "upstream_ci": {},
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "upstream_ci": {
+        "runtime_run_id": 38311553870,
+        "head_sha": "4a8ece48b61fb4dd502ed592b7a240fa3fcd5e86",
+        "tested_merge_sha": "611fac75efbfc02f2b352731d74e2992a8119742",
+        "recipe_tree_matches_head": true,
+        "quality": "passed",
+        "release_gate": "passed",
+        "publication": "No image-input changes; verification builds are not release candidates.",
+        "aarch64": {
+          "runtime_observation": {
+            "container": "bidsme_arm64",
+            "version": "1.9.6",
+            "machine": "aarch64",
+            "status": "passed",
+            "observed_at": "2026-10-12T21:44:18.550471+00:00",
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38311553870",
+            "recipe_sha256": "ab7acc7309925228c3949808c46f1f736be8b6400dfd84bc6a52175982f35068",
+            "image_id": "sha256:fc4320ae03ccf13c6da2eee3d63d163f581e885dbca6ffc7e15bf9735b65c21e",
+            "candidate_sha256": "20033b3838f29d83f9f995de9b22a7bcb3c1cfbf4d5918450630855df6d031f3"
+          },
+          "counts": {
+            "total_tests": 83,
+            "passed": 83,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 286.9977025985718,
+            "run_timestamp": "2026-10-12T21:44:18.401246",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 82,
+            "total_suites": 1,
+            "total_tests": 82
+          },
+          "artifact_name": "recipe-check-bidsme_arm64-611fac75efbfc02f2b352731d74e2992a8119742",
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38311553870/job/115018608364",
+          "runner_labels": [
+            "blacksmith-8vcpu-ubuntu-2404-arm"
+          ]
+        },
+        "x86_64": {
+          "runtime_observation": {
+            "container": "bidsme",
+            "version": "1.9.6",
+            "machine": "x86_64",
+            "status": "passed",
+            "observed_at": "2026-10-12T21:40:53.114720+00:00",
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38311553870",
+            "recipe_sha256": "ab7acc7309925228c3949808c46f1f736be8b6400dfd84bc6a52175982f35068",
+            "image_id": "sha256:d34c4cbc3afb708c4a1723eaa4b2d890d56a716eaa6ca3cacb27c5cad0137d13",
+            "candidate_sha256": "78ffa777bd05a837cb6c84bc8c2b8e764b4ae0527080f34531ab63be5950b514"
+          },
+          "counts": {
+            "total_tests": 83,
+            "passed": 83,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 154.81184673309326,
+            "run_timestamp": "2026-10-12T21:40:53.056721",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 82,
+            "total_suites": 1,
+            "total_tests": 82
+          },
+          "artifact_name": "recipe-check-bidsme-611fac75efbfc02f2b352731d74e2992a8119742",
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38311553870/job/115018608333",
+          "runner_labels": [
+            "blacksmith-8vcpu-ubuntu-2404"
+          ]
+        }
+      },
+      "merged_sha": "2b03c6f08b1c1642be6b7d8254b9f52baf449daa",
+      "next_action": "Native exact-head proof and both upstream merge-source runtime suites verified before individual PR merge. No image-input changes or new release required.",
       "upstream_review": {
         "exists": true,
         "version": "1.9.6",
@@ -2571,7 +2647,24 @@
         ]
       },
       "pending_upstream_issue": 3540,
-      "pr_number": 3540
+      "pr_number": 3540,
+      "merged_at": "2026-10-12T21:45:38Z",
+      "release_metadata_audit": {
+        "status": "not-applicable-test-only",
+        "checked_at": "2026-10-12T21:45:39.816472+00:00",
+        "note": "Only fulltest.yaml changed. The release plan has no image candidate; verification builds must not advance generated release metadata.",
+        "automatic_workflow_observation": {
+          "run_id": 38312629767,
+          "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38312629767",
+          "conclusion": "success",
+          "resolve": "success",
+          "publish": "skipped",
+          "finalize": "skipped",
+          "artifact_count": 0,
+          "checked_at": "2026-10-12T21:56:39.443209+00:00",
+          "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
+        }
+      }
     },
     {
       "recipe": "bidstools",
@@ -4275,7 +4368,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-12T21:28:42.539116+00:00",
+        "checked_at": "2026-10-12T21:56:58.279627+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -4300,7 +4393,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T21:28:43.341440+00:00"
+        "metadata_checked_at": "2026-10-12T21:56:59.053906+00:00"
       }
     },
     {
@@ -7567,7 +7660,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T21:28:46.542572+00:00",
+        "checked_at": "2026-10-12T21:57:02.220223+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -7592,7 +7685,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T21:28:47.297192+00:00"
+        "metadata_checked_at": "2026-10-12T21:57:03.117354+00:00"
       }
     },
     {
@@ -7613,18 +7706,18 @@
       "port_files": [
         "recipes/elastix/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-elastix-20261012",
+      "baseline_sha": "c62332c882b06c05d225cab2babd11d0290c2dd0",
+      "candidate_sha": "573220436729a6e9325430385191f3916c554910",
+      "started_at": "2026-10-12T21:38:36.616633+00:00",
+      "deadline": "2026-10-13T09:38:36.616633+00:00",
+      "attempts": 1,
+      "run_id": 38312647658,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "5.3.1",
@@ -7639,7 +7732,20 @@
         "three_way_conflicts": [
           "recipes/elastix/build.yaml"
         ]
-      }
+      },
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Port currentElastix5.3.1 to ARM with the previously verified ordinary ITK5.4.7/CMake source configuration, preserving current Ubuntu22.04/x86 released binary. Official5.3.1 requiresITK>=5.4.1, so5.4.7 satisfies it; no dependency source patch or tool replacement. Use architecture-conditional declared source downloads and runtime library wrappers, independent tracked software/ITK versions (ITK5.4 family). Preserve all32 registration/transform/deformation/Jacobian/negative cases, and replace three masked missing-argument exits with explicit expected1 plus existingdiagnostics. No scientific tolerance change.",
+      "pr_title": "Build Elastix5.3.1 on ARM64 with supported ITK and strict runtime checks",
+      "primary_source_review": [
+        "https://github.com/SuperElastix/elastix/blob/5.3.1/CMakeLists.txt",
+        "https://github.com/SuperElastix/elastix/releases/tag/5.3.1",
+        "https://github.com/InsightSoftwareConsortium/ITK/releases/tag/v5.4.7",
+        "https://github.com/Vbitz/neurocontainers-arm64/issues/92#issuecomment-5654152601"
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38312647658"
     },
     {
       "recipe": "emuses",
@@ -8945,7 +9051,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T21:28:48.368934+00:00",
+        "checked_at": "2026-10-12T21:57:04.377917+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -8970,7 +9076,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T21:28:49.119119+00:00"
+        "metadata_checked_at": "2026-10-12T21:57:05.171622+00:00"
       }
     },
     {
@@ -12030,11 +12136,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-lqt-20261012",
       "baseline_sha": "e1c866ef60cfe99f148e5e310eec25c1491fc75b",
-      "candidate_sha": "13d8859856604ef5d38d1cfc53d98a467171b0a1",
+      "candidate_sha": "4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5",
       "started_at": "2026-10-12T21:33:21.907078+00:00",
       "deadline": "2026-10-13T09:33:21.907078+00:00",
-      "attempts": 1,
-      "run_id": 38311439790,
+      "attempts": 2,
+      "run_id": 38313557027,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -12051,18 +12157,32 @@
         "test_count": 5
       },
       "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
-      "upstream_verification_mode": "runtime-only",
+      "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
-      "change_summary": "Preserve all5 LQT0.1.0 package/runtime cases and add actual exported get_parcel_damage on synthetic lesion/parcellation NIfTIs with a documented pre-made cfg list. Require exact25/50/100 percent damages for three parcels, exact CSV labels/groups, every saved map voxel/geometry, copied lesion values and unchanged inputs. Assert real dimension-mismatch exception and diagnostic. Tests cover parcel damage; tract disconnection still requires external DSI Studio/atlas resources and is not claimed. No image-input or scientific implementation change.",
+      "change_summary": "Preserve all5 LQT0.1.0 package/runtime cases and add actual exported get_parcel_damage on synthetic lesion/parcellation NIfTIs with a documented pre-made cfg list. Require exact25/50/100 percent damages for three parcels, exact CSV labels/groups, every saved map voxel/geometry, copied lesion values and unchanged inputs. Assert real dimension-mismatch exception and diagnostic. Tests cover parcel damage; tract disconnection still requires external DSI Studio/atlas resources and is not claimed. No image-input or scientific implementation change. Declare existing R and Rscript deployment commands: first native image passed all6 fulltests but correctly failed the deploy gate because no commands were declared. Retain that gate and retest the new candidate.",
       "pr_title": "Verify real LQT parcel damage outputs and dimension checks",
       "primary_source_review": [
         "https://github.com/jdwor/LQT/blob/ab5801bd5ef2d5a9c3c6d75c332d0ef2fa6968b8/R/get_parcel_damage.R",
         "https://github.com/muschellij2/neurobase",
         "https://github.com/bjw34032/oro.nifti"
       ],
-      "arm64_attempts": 1,
+      "arm64_attempts": 2,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38311439790"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38313557027",
+      "native_attempt_history": [
+        {
+          "run_id": 38311439790,
+          "candidate_sha": "13d8859856604ef5d38d1cfc53d98a467171b0a1",
+          "outcome": "failed-runtime",
+          "counts": {
+            "passed": 6,
+            "failed": 1,
+            "skipped": 0,
+            "total_tests": 7
+          },
+          "diagnosis": "All6 fulltests passed, including exact real parcel-damage maps and CSV. Deploy failed because no commands are declared; DEPLOY_BINS and DEPLOY_PATH empty."
+        }
+      ]
     },
     {
       "recipe": "mede",
@@ -13152,7 +13272,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T21:28:50.282336+00:00",
+        "checked_at": "2026-10-12T21:57:06.444368+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -13177,7 +13297,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T21:28:51.021019+00:00"
+        "metadata_checked_at": "2026-10-12T21:57:07.281999+00:00"
       }
     },
     {
@@ -14559,18 +14679,59 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-nighres-20261012",
       "baseline_sha": "e1c866ef60cfe99f148e5e310eec25c1491fc75b",
       "candidate_sha": "ff4a5b9d6973e6ec04a460bae5ea60895cc4876e",
       "started_at": "2026-10-12T21:30:56.620078+00:00",
       "deadline": "2026-10-13T09:30:56.620078+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38311154204,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3542",
+      "upstream_ci": {
+        "runtime_run_id": 38312505802,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38312505802",
+        "head_sha": "ff4a5b9d6973e6ec04a460bae5ea60895cc4876e",
+        "tested_merge_sha": "db68d90c442c3a8272d02394d6699becee89a86d",
+        "recipe_tree_matches_head": true,
+        "x86_64": {
+          "runtime_observation": {
+            "container": "nighres",
+            "version": "1.5.2",
+            "machine": "x86_64",
+            "status": "passed",
+            "observed_at": "2026-10-12T21:55:29.759496+00:00",
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38312505802",
+            "recipe_sha256": "9530b06ccd528b4b94048dec6df6ae2e9f53c3d54b32330966ec98f26fe78faa",
+            "image_id": "sha256:b2272fc70fafab4386485588611fd15d8ef7bcc2ac9ff65b4b05246754744488",
+            "candidate_sha256": "c6cc302521aae259035d9aec9131d6bc5eee1263e06eaddf14cfe648deafc3ff"
+          },
+          "counts": {
+            "total_tests": 71,
+            "passed": 71,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 118.25276589393616,
+            "run_timestamp": "2026-10-12T21:55:29.710132",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 70,
+            "total_suites": 1,
+            "total_tests": 70
+          },
+          "artifact_name": "recipe-check-nighres-db68d90c442c3a8272d02394d6699becee89a86d",
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38312505802/job/115021532775",
+          "runner_labels": [
+            "blacksmith-8vcpu-ubuntu-2404"
+          ],
+          "actual_command_exit_review": "All unusual exits match source-specific explicit expected contracts; zero unexpected exits."
+        }
+      },
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Exact upstreamx86_64 71/71 and merge-parent/recipe-tree/build-hash proof reviewed. Await other actual architecture report and all gates; retain successful proof.",
       "upstream_review": {
         "exists": true,
         "version": "1.5.2",
@@ -14591,9 +14752,46 @@
         "https://github.com/nighres/nighres/blob/release-1.5.2/nighres/intensity/flash_t2s_fitting.py",
         "https://github.com/piloubazin/cbstools-public/blob/master/de/mpg/cbs/core/intensity/IntensityFlashT2sFitting.java"
       ],
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38311154204"
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38311154204",
+      "native_command_exit_review": {
+        "source_sha": "ff4a5b9d6973e6ec04a460bae5ea60895cc4876e",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "ff4a5b9d6973e6ec04a460bae5ea60895cc4876e",
+        "version": "1.5.2",
+        "counts": {
+          "total_tests": 71,
+          "passed": 71,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 114.75718784332275,
+          "run_timestamp": "2026-10-12T21:41:51.925615",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 70,
+          "total_suites": 1,
+          "total_tests": 70
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38311154204",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3542,
+      "pr_number": 3542
     },
     {
       "recipe": "niimath",
@@ -14954,7 +15152,7 @@
         ]
       },
       "port_files": [],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-openrefine-20261012",
       "baseline_sha": "c7f7754d1fbe036798049004e8d5e267468ff3e9",
       "candidate_sha": "53688a6dceaff1d09f0bfebfc29e6d0912430271",
@@ -15123,10 +15321,12 @@
             "wasted_bytes_display": "18 MB",
             "user_wasted_percent": 4.3781
           }
-        }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "merged_sha": "c62332c882b06c05d225cab2babd11d0290c2dd0",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "3.10.1",
@@ -15226,7 +15426,55 @@
         ]
       },
       "pending_upstream_issue": 3539,
-      "pr_number": 3539
+      "pr_number": 3539,
+      "merged_at": "2026-10-12T21:36:30Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38311690124,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38311690124",
+        "status": "promotion-failed",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/openrefine_arm64/3.10.1.json",
+            "expected_build_date": "20261013",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/openrefine/3.10.1.json",
+            "expected_build_date": "20261013",
+            "exists": true,
+            "committed_build_dates": [
+              "20260601"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-12T21:57:08.300371+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "failure",
+        "publish_jobs": [
+          {
+            "name": "publish (${{ matrix.artifact.name }})",
+            "status": "completed",
+            "conclusion": "skipped",
+            "runner_name": null,
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T21:57:09.056727+00:00",
+        "failure_detail": {
+          "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
+          "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
+          "source_sha": "5e2f76d3",
+          "next_action": "Merge shared selector correction only after required upstream checks; existing failed publication requires upstream-maintainer recovery. Do not rebuild passing container or dispatch promotion under this workflow."
+        }
+      }
     },
     {
       "recipe": "palm",
@@ -16625,7 +16873,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T21:28:52.083493+00:00",
+        "checked_at": "2026-10-12T21:57:10.160162+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -16650,7 +16898,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T21:28:52.818954+00:00"
+        "metadata_checked_at": "2026-10-12T21:57:10.976517+00:00"
       }
     },
     {
@@ -16712,18 +16960,18 @@
       "port_files": [
         "recipes/radtract/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-radtract-20261012",
+      "baseline_sha": "cf6a35afcc86b2b57519bad90a50f6ffc05fc0eb",
+      "candidate_sha": "36f08d225e884492118a44e7fe5507e4dceb58ac",
+      "started_at": "2026-10-12T21:47:51.352229+00:00",
+      "deadline": "2026-10-13T09:47:51.352229+00:00",
+      "attempts": 1,
+      "run_id": 38313692158,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.4",
@@ -16743,7 +16991,19 @@
           "merge_sha": "440f9c1da14d0f2c55598f2078298163126a3cda",
           "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
         }
-      ]
+      ],
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Declare ARM for current RadTract0.2.4 portable published wheel with existing Ubuntu22.04/source PyRadiomics dependencies. Preserve both original tests and add actual deployed tract length filtering and tract-density CLI operations on an analytical synthetic tractogram, requiring exact retained points/streamline counts and every density voxel/geometry. No alternate implementation, private dependency port, skipped gate or scientific tolerance relaxation. Also run the actual primary features CLI through PyRadiomics/SimpleITK on two constant parcels, requiring all9 parcel/global Mean/Minimum/Maximum values exactly and unchanged input NIfTIs. These focused operations do not claim untested parcellation functionality.",
+      "pr_title": "Enable RadTract ARM64 with analytical tract and radiomics tests",
+      "primary_source_review": [
+        "https://pypi.org/project/radtract/0.2.4/",
+        "https://github.com/MIC-DKFZ/radtract",
+        "https://github.com/AIM-Harvard/pyradiomics/tree/v3.1.0"
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38313692158"
     },
     {
       "recipe": "rapidtide",
@@ -17039,7 +17299,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T21:28:54.053074+00:00",
+        "checked_at": "2026-10-12T21:57:12.158087+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -17064,7 +17324,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T21:28:54.863041+00:00"
+        "metadata_checked_at": "2026-10-12T21:57:12.962692+00:00"
       }
     },
     {
@@ -19233,8 +19493,8 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "sha": "e1c866ef60cfe99f148e5e310eec25c1491fc75b",
-    "checked_at": "2026-10-12T21:28:39.133010+00:00",
+    "sha": "cf6a35afcc86b2b57519bad90a50f6ffc05fc0eb",
+    "checked_at": "2026-10-12T21:57:35.148377+00:00",
     "fork_actions_enabled": false
   },
   "runtime_release_routing_fix": {
@@ -19245,5 +19505,18 @@
     "merged_sha": "89c84e179c63e2fc0a0c7478cd1e41981c4d431c",
     "merged_at": "2026-10-12T08:32:46Z",
     "validation": "96 focused passed; ruff/codespell/actionlint; actual upstream Linux Python3.10/3.12, buildkit, Code quality and release gate all passed. Local full macOS:1279 passed,4 skipped,11 unrelated Linux-oriented failures."
+  },
+  "promotion_candidate_selection_fix": {
+    "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3541",
+    "branch": "fix/promotion-latest-exact-candidate-20261012",
+    "head_sha": "5e2f76d30fb6aabc395a836605a5489c3f906108",
+    "status": "merged",
+    "checked_at": "2026-10-12T21:44:55.796265+00:00",
+    "regression_tests": "4/4 regression tests execute actual workflow JavaScript and pass. Upstream Linux Python3.10/3.12 full unit suites and all required checks passed before normal merge. Local macOS broad suite1290passed/11host-dependent failures/4skipped (GNU Bash/tar/dpkg and deploy-permission requirements), with unchanged baseline code.",
+    "scope": "Select latest exact-head/event run by greatest id, preserve fail/wait behavior and all artifact/source gates. No container rebuild or promotion dispatch.",
+    "merged_sha": "cf6a35afcc86b2b57519bad90a50f6ffc05fc0eb",
+    "merged_at": "2026-10-12T21:46:27Z",
+    "upstream_checks": "All required checks success; Linux Python3.10/3.12 full unit suites and Code quality pass.",
+    "local_validation": "4 regression tests pass; all builder1290passed/11host-dependent failures/4skipped; actionlint/Ruff/codespell pass. No baseline signing/deploy/tar/dpkg code changed."
   }
 }

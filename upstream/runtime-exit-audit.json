@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-12T21:28:54.992089+00:00",
+  "checked_at": "2026-10-12T21:57:22.137087+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     {
@@ -88,6 +88,38 @@
         {
           "test": "nib-diff verbose",
           "return_code": 1,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "recipe": "bidsme",
+      "findings": [
+        {
+          "test": "dcm2niix version check",
+          "return_code": 3,
+          "errors": []
+        },
+        {
+          "test": "bidsme invalid subcommand",
+          "return_code": 2,
+          "errors": []
+        },
+        {
+          "test": "bidsme missing source directory",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "bidsme prepare missing destination",
+          "return_code": 2,
+          "errors": []
+        },
+        {
+          "test": "dcm2niix invalid option",
+          "return_code": 12,
           "errors": []
         }
       ]
@@ -380,6 +412,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "bidsme",
+      "source_sha": "4a8ece48b61fb4dd502ed592b7a240fa3fcd5e86",
+      "run_id": 38310835773,
+      "reported_passed": 83,
+      "reported_total": 83,
+      "nonzero_command_exits": 5
+    },
+    {
       "recipe": "bidstools",
       "source_sha": "98f3bcca610abdbef20b907b45bbfe16a5d61c7e",
       "run_id": 38290727923,
@@ -644,6 +684,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "openrefine",
+      "source_sha": "53688a6dceaff1d09f0bfebfc29e6d0912430271",
+      "run_id": 38310669967,
+      "reported_passed": 3,
+      "reported_total": 3,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "panoptica",
       "source_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
       "run_id": 38206125547,
@@ -700,7 +748,7 @@
       "nonzero_command_exits": 0
     }
   ],
-  "reviewed_merged_recipe_count": 46,
+  "reviewed_merged_recipe_count": 48,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [],
