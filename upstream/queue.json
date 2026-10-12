@@ -1505,7 +1505,165 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3503",
       "upstream_ci": {
         "initial_run_id": 38232041336,
-        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38232041336"
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38232041336",
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "brainles-aurora",
+          "container": "brainles-aurora_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "0.2.7",
+          "build_date": "20261012",
+          "docker_archive": "brainles-aurora_arm64_0.2.7_20261012.docker.tar",
+          "sif": "brainles-aurora_arm64_0.2.7_20261012.simg",
+          "candidate_tag": "nd-candidate-brainles-aurora_arm64:12dd9fd8e64f",
+          "launcher": "aurora",
+          "pr_number": 3503,
+          "head_sha": "12dd9fd8e64ffa76ae7eeec61d82a884958ecfff",
+          "tests": {
+            "total": 15,
+            "passed": 15,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 14,
+            "fulltest_passed": 14,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "package imports",
+              "reports the packaged version",
+              "runs outside HOME",
+              "torch imports and computes on CPU",
+              "model weights are bundled in the image",
+              "bundled weights are the declared version",
+              "weights are pinned, not fetched at run time",
+              "resolving the weights logs no network failure",
+              "the weights helper imports in any order",
+              "seeding reaches the test-time augmentation",
+              "two default runs of the same input agree",
+              "aurora CLI is on PATH and renders help",
+              "an unsupported modality combination fails immediately",
+              "inference runs and accepts a bare relative output path"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "811 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8339,
+            "wasted_bytes": 18009872,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.2874
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "brainles-aurora",
+          "container": "brainles-aurora",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "0.2.7",
+          "build_date": "20261012",
+          "docker_archive": "brainles-aurora_0.2.7_20261012.docker.tar",
+          "sif": "brainles-aurora_0.2.7_20261012.simg",
+          "candidate_tag": "nd-candidate-brainles-aurora:12dd9fd8e64f",
+          "launcher": "aurora",
+          "pr_number": 3503,
+          "head_sha": "12dd9fd8e64ffa76ae7eeec61d82a884958ecfff",
+          "tests": {
+            "total": 15,
+            "passed": 15,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 14,
+            "fulltest_passed": 14,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "package imports",
+              "reports the packaged version",
+              "runs outside HOME",
+              "torch imports and computes on CPU",
+              "model weights are bundled in the image",
+              "bundled weights are the declared version",
+              "weights are pinned, not fetched at run time",
+              "resolving the weights logs no network failure",
+              "the weights helper imports in any order",
+              "seeding reaches the test-time augmentation",
+              "two default runs of the same input agree",
+              "aurora CLI is on PATH and renders help",
+              "an unsupported modality combination fails immediately",
+              "inference runs and accepts a bare relative output path"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 3,
+                "wasted_space": "1.9 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "812 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8426,
+            "wasted_bytes": 18160931,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.283
+          }
+        }
       },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
@@ -5175,18 +5333,18 @@
         ]
       },
       "port_files": [],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-irkernel-20261012",
       "baseline_sha": "4d04f767b5ab0fdacfbaab3290a76b75415baa0c",
       "candidate_sha": "f97ae4e088d8c2ae2c9d477e156b379ddbd64662",
       "started_at": "2026-10-12T09:33:02.840468+00:00",
       "deadline": "2026-10-12T21:33:02.840468+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38230695316,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3504",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "1.3.2",
@@ -5201,8 +5359,8 @@
       "pr_plan": "Preserve current CLI, package, registration and PNG tests; add actual Jupyter IR-kernel execution with exact output and correlated successful reply, no image-input change.",
       "upstream_verification_mode": "runtime-only",
       "release_metadata_policy": "Fulltest-only verification: automatic publication and generated release JSON must remain unchanged.",
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38230695316",
       "primary_source_review": {
         "sources": [
@@ -5240,7 +5398,8 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
-      }
+      },
+      "pr_number": 3504
     },
     {
       "recipe": "julia",
