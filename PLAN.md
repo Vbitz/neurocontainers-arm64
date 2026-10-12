@@ -3264,3 +3264,13 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - `gigaconnectome` prepared and pushed at `61a896581afb9bf5af3397a816c2555033dc6a2c` on `arm64/upstream-gigaconnectome-20261012`, baseline `8ffc4cca756fd5099c7e1a65d22f93ad354da01f`; all recipe checks and architecture generations passed. Start `2026-10-12T05:38:30.096019+00:00`, deadline `2026-10-12T17:38:30.096019+00:00`; no builds dispatched yet, waiting for capacity.
 
 - Refreshed coverage issue #2 with `python3 scripts/tracking_issue.py --write`; verified the updated body. Its historical declared-support/build-evidence inventory remains distinct from the 112-container upstream submission queue and 17 OpenRecon exclusions. Snapshot: `/tmp/arm64-upstream-20261012-evidence.json`.
+
+- `panoptica` upstream [PR #3483](https://github.com/neurodesk/neurocontainers/pull/3483) merged at `12ff48cd6220c32d699b5b5df98688bfa5de2040`. Exact head `85689c2ead33e71e549b830a2b4093f9cc2c3f3f` passed native retest plus upstream ARM64 **10/10** and x86_64 **10/10**, zero failures/skips; Code quality, release gate and Dive passed. Upstream verification run: https://github.com/neurodesk/neurocontainers/actions/runs/38206969741. No manual promotion or generated release edits.
+
+- `gigaconnectome` first current-upstream native [run 38209010331](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209010331) dispatched at exact `61a896581afb9bf5af3397a816c2555033dc6a2c`; attempts 1/6 total; deadline `2026-10-12T17:38:30.096019+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `brkraw` prepared and pushed at `6b05f8659fda5654927f7d1276972f473e3b1625` on `arm64/upstream-brkraw-20261012`, baseline `12ff48cd6220c32d699b5b5df98688bfa5de2040`; all recipe checks and architecture generations passed. Start `2026-10-12T05:42:58.534188+00:00`, deadline `2026-10-12T17:42:58.534188+00:00`; no builds dispatched yet, waiting for capacity.
+
+- `brkraw` first current-upstream native [run 38209191228](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209191228) dispatched at exact `6b05f8659fda5654927f7d1276972f473e3b1625`; attempts 1/6 total; deadline `2026-10-12T17:42:58.534188+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- Brainlife CLI upstream ARM64 compact report confirms **74/74**, zero failures/skips and Dive success at exact PR head. x86_64 remains queued on upstream's runner; no duplicate build dispatched. BrkRaw's added parsing operation passed locally with the exact 0.5.7 wheel before native dispatch; this local result is not ARM64 runtime evidence.

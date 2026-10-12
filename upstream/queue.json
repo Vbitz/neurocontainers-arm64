@@ -1026,7 +1026,91 @@
       "run_id": 38206184713,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3484",
       "upstream_ci": {
-        "candidate_run_id": 38208498362
+        "candidate_run_id": 38208498362,
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "brainlifecli",
+          "container": "brainlifecli_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.8.2",
+          "build_date": "20261012",
+          "docker_archive": "brainlifecli_arm64_1.8.2_20261012.docker.tar",
+          "sif": "brainlifecli_arm64_1.8.2_20261012.simg",
+          "candidate_tag": "nd-candidate-brainlifecli_arm64:fc5fe0b58ace",
+          "launcher": "bl",
+          "pr_number": 3484,
+          "head_sha": "fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8",
+          "tests": {
+            "total": 74,
+            "passed": 74,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 73,
+            "fulltest_passed": 73,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Version check",
+              "Version command",
+              "Main help",
+              "Login help",
+              "Refresh help",
+              "Profile help",
+              "Profile query help",
+              "Resource help",
+              "Resource query help",
+              "Datatype help",
+              "Datatype query help",
+              "Project help",
+              "Project query help",
+              "Project update help",
+              "Publication help",
+              "Publication query help",
+              "Data help",
+              "Dataset alias help",
+              "Data query help"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "3.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libapt-pkg.so.6.0.0"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.5 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 5,
+                "wasted_space": "971 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 2,
+                "wasted_space": "887 kB",
+                "path": "/usr/bin/gpgv"
+              }
+            ],
+            "efficiency_percent": 98.7379,
+            "wasted_bytes": 31450579,
+            "wasted_bytes_display": "32 MB",
+            "user_wasted_percent": 2.2956
+          }
+        }
       },
       "merged_sha": null,
       "next_action": "Inspect both upstream candidate architecture reports and all CI; merge only after all tests pass.",
@@ -1115,18 +1199,18 @@
       "port_files": [
         "recipes/brkraw/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-brkraw-20261012",
+      "baseline_sha": "12ff48cd6220c32d699b5b5df98688bfa5de2040",
+      "candidate_sha": "6b05f8659fda5654927f7d1276972f473e3b1625",
+      "started_at": "2026-10-12T05:42:58.534188+00:00",
+      "deadline": "2026-10-12T17:42:58.534188+00:00",
+      "attempts": 1,
+      "run_id": 38209191228,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.5.7",
@@ -1136,7 +1220,10 @@
         "port_patch_applies": true,
         "fulltest_version": "0.5.7",
         "test_count": 74
-      }
+      },
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209191228"
     },
     {
       "recipe": "builder",
@@ -2213,18 +2300,18 @@
       "port_files": [
         "recipes/gigaconnectome/build.yaml"
       ],
-      "status": "ready-to-dispatch",
+      "status": "native-running",
       "branch": "arm64/upstream-gigaconnectome-20261012",
       "baseline_sha": "8ffc4cca756fd5099c7e1a65d22f93ad354da01f",
       "candidate_sha": "61a896581afb9bf5af3397a816c2555033dc6a2c",
       "started_at": "2026-10-12T05:38:30.096019+00:00",
       "deadline": "2026-10-12T17:38:30.096019+00:00",
-      "attempts": 0,
-      "run_id": null,
+      "attempts": 1,
+      "run_id": 38209010331,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Validated and pushed; await a free build slot before the first native dispatch.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.0",
@@ -2234,7 +2321,10 @@
         "port_patch_applies": true,
         "fulltest_version": "0.6.0",
         "test_count": 93
-      }
+      },
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209010331"
     },
     {
       "recipe": "gimp",
@@ -3936,7 +4026,7 @@
       "port_files": [
         "recipes/panoptica/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-panoptica-20261012",
       "baseline_sha": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
       "candidate_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
@@ -4022,12 +4112,85 @@
             "user_wasted_percent": 0.2813
           }
         },
-        "x86_64": null,
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "panoptica",
+          "container": "panoptica",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "2.1.7",
+          "build_date": "20261012",
+          "docker_archive": "panoptica_2.1.7_20261012.docker.tar",
+          "sif": "panoptica_2.1.7_20261012.simg",
+          "candidate_tag": "nd-candidate-panoptica:85689c2ead33",
+          "launcher": "panopticacli",
+          "pr_number": 3483,
+          "head_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
+          "tests": {
+            "total": 10,
+            "passed": 10,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 9,
+            "fulltest_passed": 9,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Panoptica package metadata",
+              "Panoptica runtime imports",
+              "Matched instance evaluation",
+              "Semantic instance approximation",
+              "instance relabelling survives more than 255 labels",
+              "kaleido is present so figure export works",
+              "panopticacli is on PATH",
+              "bundled configs can be copied out",
+              "the container does not export a python interpreter"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 3,
+                "wasted_space": "1.9 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "807 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "451 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "354 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 99.8337,
+            "wasted_bytes": 5305999,
+            "wasted_bytes_display": "5.3 MB",
+            "user_wasted_percent": 0.2434
+          }
+        },
         "quality": "passed",
-        "release_gate": "pending"
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Require upstream ARM64/x86_64 candidate reports and Code quality; merge only after all tests pass.",
+      "merged_sha": "12ff48cd6220c32d699b5b5df98688bfa5de2040",
+      "next_action": "Complete: native retest and individual upstream PR verified and merged. Preserve evidence; no unchanged rebuild.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.7",
@@ -4052,7 +4215,8 @@
       },
       "pr_number": 3483,
       "arm64_attempts": 2,
-      "x86_64_attempts": 1
+      "x86_64_attempts": 1,
+      "merged_at": "2026-10-12T05:40:50Z"
     },
     {
       "recipe": "pcntoolkit",
