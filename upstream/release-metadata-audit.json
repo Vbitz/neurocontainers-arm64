@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T14:31:43.271990+00:00",
+  "checked_at": "2026-10-12T14:52:30.927940+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -401,6 +401,60 @@
         }
       ],
       "metadata_checked_at": "2026-10-12T10:41:12.328360+00:00"
+    },
+    {
+      "recipe": "brkraw",
+      "promotion_run_id": 38265545390,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38265545390",
+      "status": "pending-promotion",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/brkraw_arm64/0.5.7.json",
+          "expected_build_date": "20261012",
+          "exists": true,
+          "committed_build_dates": [
+            "20261012"
+          ],
+          "current_candidate_date_committed": true
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/brkraw/0.5.7.json",
+          "expected_build_date": "20261012",
+          "exists": true,
+          "committed_build_dates": [
+            "20261012"
+          ],
+          "current_candidate_date_committed": true
+        }
+      ],
+      "checked_at": "2026-10-12T14:52:23.654119+00:00",
+      "workflow_status": "queued",
+      "workflow_conclusion": null,
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-brkraw_arm64-a481dbdd858a93571320960b3322002e65ac3e07)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-brkraw-a481dbdd858a93571320960b3322002e65ac3e07)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-12T14:52:24.526951+00:00"
     },
     {
       "recipe": "clearswi",
@@ -811,6 +865,58 @@
       "metadata_checked_at": "2026-10-12T10:41:35.434595+00:00"
     },
     {
+      "recipe": "gigaconnectome",
+      "promotion_run_id": 38263440929,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38263440929",
+      "status": "pending-promotion",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/gigaconnectome_arm64/0.6.0.json",
+          "expected_build_date": "20261012",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/gigaconnectome/0.6.0.json",
+          "expected_build_date": "20261012",
+          "exists": true,
+          "committed_build_dates": [
+            "20250630"
+          ],
+          "current_candidate_date_committed": false
+        }
+      ],
+      "checked_at": "2026-10-12T14:52:25.727075+00:00",
+      "workflow_status": "queued",
+      "workflow_conclusion": null,
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-gigaconnectome-11049ac1e499f13b68a5a150a0a94fa8fe2711fc)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-gigaconnectome_arm64-11049ac1e499f13b68a5a150a0a94fa8fe2711fc)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-12T14:52:26.561263+00:00"
+    },
+    {
       "recipe": "gingerale",
       "promotion_run_id": 38258952820,
       "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38258952820",
@@ -835,15 +941,15 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T14:31:39.853109+00:00",
-      "workflow_status": "queued",
+      "checked_at": "2026-10-12T14:52:27.772877+00:00",
+      "workflow_status": "in_progress",
       "workflow_conclusion": null,
       "publish_jobs": [
         {
           "name": "publish (candidate-gingerale_arm64-07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5)",
-          "status": "queued",
-          "conclusion": null,
-          "runner_name": "",
+          "status": "completed",
+          "conclusion": "success",
+          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-rc7zr",
           "labels": [
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
@@ -851,16 +957,18 @@
         },
         {
           "name": "publish (candidate-gingerale-07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5)",
-          "status": "queued",
+          "status": "in_progress",
           "conclusion": null,
-          "runner_name": "",
+          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-784vv",
           "labels": [
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
-          "active_steps": []
+          "active_steps": [
+            "Publish tested SIF to unique staging object keys"
+          ]
         }
       ],
-      "metadata_checked_at": "2026-10-12T14:31:40.689340+00:00"
+      "metadata_checked_at": "2026-10-12T14:52:28.779136+00:00"
     },
     {
       "recipe": "hdbet",
@@ -887,7 +995,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T14:31:42.044608+00:00",
+      "checked_at": "2026-10-12T14:52:29.981520+00:00",
       "workflow_status": "in_progress",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -912,11 +1020,11 @@
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
           "active_steps": [
-            "Download candidate bundle without executing it"
+            "Publish exact tested Docker archive to unique staging tags"
           ]
         }
       ],
-      "metadata_checked_at": "2026-10-12T14:31:43.271447+00:00"
+      "metadata_checked_at": "2026-10-12T14:52:30.927154+00:00"
     },
     {
       "recipe": "laynii",
@@ -1333,12 +1441,14 @@
     "bart: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38208442867)",
     "brainles-aurora: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38235908870)",
     "brainlifecli: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38210939803)",
+    "brkraw: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38265545390)",
     "clearswi: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38248983163)",
     "condaenvs: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38229766906)",
     "deep-quality-estimation: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38227134210)",
     "dicomtools: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38247345717)",
     "dwidenoise2: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38227215604)",
     "fsqc: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38221551205)",
+    "gigaconnectome: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38263440929)",
     "gingerale: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38258952820)",
     "hdbet: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38255340625)",
     "laynii: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38251408959)",

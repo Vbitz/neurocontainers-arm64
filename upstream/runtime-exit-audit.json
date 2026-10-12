@@ -1,10 +1,9 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-12T14:11:40.148872+00:00",
+  "checked_at": "2026-10-12T14:48:31.784880+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
-    "ants",
-    "brkraw"
+    "ants"
   ],
   "expected_negative_cases": [
     "AMICO invalid input exit64",
@@ -428,16 +427,45 @@
       "candidate_sha": "72f72b06ed357182e63a4370760b5f84ca0140c2",
       "branch": "arm64/upstream-ants-runtime-20261012",
       "run_id": 38254862112,
-      "attempts": 4,
-      "deadline": "2026-10-12T17:01:51.539183+00:00"
-    },
-    {
-      "recipe": "brkraw",
-      "candidate_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
-      "branch": "arm64/upstream-brkraw-scipy-20261012",
-      "run_id": 38258128668,
       "attempts": 6,
-      "deadline": "2026-10-12T17:42:58.534188+00:00"
+      "deadline": "2026-10-12T17:01:51.539183+00:00",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3517",
+      "stage": "native-fixed-upstream-pending",
+      "corrected_native_counts": {
+        "total_tests": 103,
+        "passed": 103,
+        "failed": 0,
+        "skipped": 0
+      }
     }
-  ]
+  ],
+  "resolved_followups": {
+    "brkraw": {
+      "outcome": "verified",
+      "findings": [
+        {
+          "tests": "six nib-conform operations",
+          "return_code": 1,
+          "detail": "Existing tests intentionally assert missing scipy; this proves negative prerequisites, not resampling. Core Bruker parser assertions passed."
+        }
+      ],
+      "next_action": "Corrected resampling passed native and both upstream suites; audit automatic publication for this image source.",
+      "stage": "resolved",
+      "prior_source_sha": "6b05f8659fda5654927f7d1276972f473e3b1625",
+      "corrected_source_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
+      "corrected_native_run_id": 38258128668,
+      "corrected_native_counts": {
+        "total_tests": 76,
+        "passed": 76,
+        "failed": 0,
+        "skipped": 0
+      },
+      "resolution_pr": "https://github.com/neurodesk/neurocontainers/pull/3515",
+      "resolution_merge_sha": "ce4c5ca2886a75b0c259fb256d34bee216896f61",
+      "upstream_counts": {
+        "aarch64": 76,
+        "x86_64": 76
+      }
+    }
+  }
 }

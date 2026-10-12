@@ -383,7 +383,17 @@
             "detail": "Pre-existing known-crash test aborts on extensionless output prefix; investigate documented output filename contract."
           }
         ],
-        "next_action": "Prioritize focused test/recipe followup when investigation slot frees; preserve original3/6 and17:01:51UTC deadline. Do not claim these two operations verified."
+        "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+        "stage": "native-fixed-upstream-pending",
+        "prior_source_sha": "f58b9e6755f6af3db1753d44ba3b390270c7cde0",
+        "corrected_source_sha": "72f72b06ed357182e63a4370760b5f84ca0140c2",
+        "corrected_native_run_id": 38254862112,
+        "corrected_native_counts": {
+          "total_tests": 103,
+          "passed": 103,
+          "failed": 0,
+          "skipped": 0
+        }
       },
       "prior_submissions": [
         {
@@ -2363,7 +2373,7 @@
       "port_files": [
         "recipes/brkraw/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-brkraw-scipy-20261012",
       "baseline_sha": "bf78348b3a85e781049cd9e54ac9571077c0a1c8",
       "candidate_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
@@ -2458,10 +2468,96 @@
             "wasted_bytes_display": "7.0 MB",
             "user_wasted_percent": 1.9282
           }
-        }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "brkraw",
+          "container": "brkraw",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "0.5.7",
+          "build_date": "20261012",
+          "docker_archive": "brkraw_0.5.7_20261012.docker.tar",
+          "sif": "brkraw_0.5.7_20261012.simg",
+          "candidate_tag": "nd-candidate-brkraw:a481dbdd858a",
+          "launcher": "brkraw",
+          "pr_number": 3515,
+          "head_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
+          "tests": {
+            "total": 76,
+            "passed": 76,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 75,
+            "fulltest_passed": 75,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "brkraw version check",
+              "brkraw help",
+              "brkraw info help",
+              "brkraw convert help",
+              "brkraw convert-batch help",
+              "Bruker parameter parsing",
+              "nib-ls version",
+              "nib-ls help",
+              "nib-ls T1w basic info",
+              "nib-ls T1w verbose",
+              "nib-ls T1w with stats",
+              "nib-ls T1w header fields",
+              "nib-ls BOLD info",
+              "nib-ls BOLD with stats",
+              "nib-ls multiple files",
+              "nib-ls verbose multiple files",
+              "nib-stats help",
+              "nib-stats T1w volume mm3",
+              "nib-stats T1w volume voxels"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 4,
+                "wasted_space": "2.8 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "823 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "475 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "378 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 98.7919,
+            "wasted_bytes": 7017681,
+            "wasted_bytes_display": "7.0 MB",
+            "user_wasted_percent": 1.8477
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Exact upstream ARM76/76 (75fulltests)/Dive verified/cached. Await queuedx86 actualreport+requiredgates; original6/6 and17:42deadlinepersist. Do notrerun passedARM.",
+      "merged_sha": "ce4c5ca2886a75b0c259fb256d34bee216896f61",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "0.5.7",
@@ -2477,7 +2573,7 @@
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38258128668",
       "pr_number": 3515,
       "runtime_review": {
-        "outcome": "followup-required",
+        "outcome": "verified",
         "findings": [
           {
             "tests": "six nib-conform operations",
@@ -2485,7 +2581,23 @@
             "detail": "Existing tests intentionally assert missing scipy; this proves negative prerequisites, not resampling. Core Bruker parser assertions passed."
           }
         ],
-        "next_action": "Prioritize documented SciPy dependency/test correction within original3/6 budget and17:42:58UTC deadline; do not claim resampling verified."
+        "next_action": "Corrected resampling passed native and both upstream suites; audit automatic publication for this image source.",
+        "stage": "resolved",
+        "prior_source_sha": "6b05f8659fda5654927f7d1276972f473e3b1625",
+        "corrected_source_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
+        "corrected_native_run_id": 38258128668,
+        "corrected_native_counts": {
+          "total_tests": 76,
+          "passed": 76,
+          "failed": 0,
+          "skipped": 0
+        },
+        "resolution_pr": "https://github.com/neurodesk/neurocontainers/pull/3515",
+        "resolution_merge_sha": "ce4c5ca2886a75b0c259fb256d34bee216896f61",
+        "upstream_counts": {
+          "aarch64": 76,
+          "x86_64": 76
+        }
       },
       "prior_submissions": [
         {
@@ -2879,6 +2991,60 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
+      },
+      "merged_at": "2026-10-12T14:47:57Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38265545390,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38265545390",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/brkraw_arm64/0.5.7.json",
+            "expected_build_date": "20261012",
+            "exists": true,
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "current_candidate_date_committed": true
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/brkraw/0.5.7.json",
+            "expected_build_date": "20261012",
+            "exists": true,
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "current_candidate_date_committed": true
+          }
+        ],
+        "checked_at": "2026-10-12T14:52:23.654119+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-brkraw_arm64-a481dbdd858a93571320960b3322002e65ac3e07)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-brkraw-a481dbdd858a93571320960b3322002e65ac3e07)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T14:52:24.526951+00:00"
       }
     },
     {
@@ -6343,17 +6509,20 @@
       "port_files": [
         "recipes/gigaconnectome/build.yaml"
       ],
-      "status": "blocked-infrastructure",
+      "status": "merged",
       "branch": "arm64/upstream-gigaconnectome-20261012",
       "baseline_sha": "8ffc4cca756fd5099c7e1a65d22f93ad354da01f",
-      "candidate_sha": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
+      "candidate_sha": "11049ac1e499f13b68a5a150a0a94fa8fe2711fc",
       "started_at": "2026-10-12T05:38:30.096019+00:00",
       "deadline": "2026-10-12T17:38:30.096019+00:00",
-      "attempts": 5,
+      "attempts": 7,
       "run_id": 38210795614,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3489",
       "upstream_ci": {
-        "candidate_run_id": 38212268669,
+        "candidate_run_id": 38216359773,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38216359773",
+        "quality": "passed",
+        "release_gate": "passed",
         "aarch64": {
           "schema_version": 3,
           "recipe": "gigaconnectome",
@@ -6364,10 +6533,10 @@
           "build_date": "20261012",
           "docker_archive": "gigaconnectome_arm64_0.6.0_20261012.docker.tar",
           "sif": "gigaconnectome_arm64_0.6.0_20261012.simg",
-          "candidate_tag": "nd-candidate-gigaconnectome_arm64:5b949c5edcf8",
+          "candidate_tag": "nd-candidate-gigaconnectome_arm64:11049ac1e499",
           "launcher": "giga_connectome",
           "pr_number": 3489,
-          "head_sha": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
+          "head_sha": "11049ac1e499f13b68a5a150a0a94fa8fe2711fc",
           "tests": {
             "total": 94,
             "passed": 94,
@@ -6412,43 +6581,119 @@
                 "path": "/usr/bin/perl"
               },
               {
-                "count": 6,
-                "wasted_space": "4.8 MB",
+                "count": 4,
+                "wasted_space": "3.1 MB",
                 "path": "/var/cache/debconf/templates.dat"
               },
               {
-                "count": 5,
-                "wasted_space": "3.9 MB",
+                "count": 4,
+                "wasted_space": "3.1 MB",
                 "path": "/var/cache/debconf/templates.dat-old"
               },
               {
                 "count": 2,
-                "wasted_space": "3.3 MB",
-                "path": "/usr/lib/aarch64-linux-gnu/libc.so.6"
+                "wasted_space": "1.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/perl-base/auto/re/re.so"
               },
               {
                 "count": 2,
-                "wasted_space": "1.7 MB",
-                "path": "/usr/sbin/ldconfig"
+                "wasted_space": "804 kB",
+                "path": "/usr/lib/aarch64-linux-gnu/perl-base/unicore/To/NFKCCF.pl"
               }
             ],
-            "efficiency_percent": 95.9464,
-            "wasted_bytes": 96037211,
-            "wasted_bytes_display": "96 MB",
-            "user_wasted_percent": 8.1048
+            "efficiency_percent": 98.2888,
+            "wasted_bytes": 37706939,
+            "wasted_bytes_display": "38 MB",
+            "user_wasted_percent": 3.3287
           }
         },
-        "conclusion": "failure",
-        "x86_64_failure": {
-          "stage": "Stage and build candidate",
-          "base_image": "bids/giga_connectome:0.6.0",
-          "base_digest": "sha256:fcc5051ab1c01a41cea57a6d9e39d592fcf1b85269feaaca258018c154608212",
-          "first_error": "Debian Bullseye security packages return HTTP 404 during the shared neurodocker preamble, before recipe directives: ca-certificates 20250419~deb12u1~deb11u1; libc-l10n/locales 2.31-13+deb11u14; libcurl4/curl 7.74.0-1.3+deb11u16; unzip 6.0-26+deb11u2. apt-get update had run, so this is not merely an old package list.",
-          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38212268669"
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "gigaconnectome",
+          "container": "gigaconnectome",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "0.6.0",
+          "build_date": "20261012",
+          "docker_archive": "gigaconnectome_0.6.0_20261012.docker.tar",
+          "sif": "gigaconnectome_0.6.0_20261012.simg",
+          "candidate_tag": "nd-candidate-gigaconnectome:11049ac1e499",
+          "launcher": "giga_connectome",
+          "pr_number": 3489,
+          "head_sha": "11049ac1e499f13b68a5a150a0a94fa8fe2711fc",
+          "tests": {
+            "total": 94,
+            "passed": 94,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 93,
+            "fulltest_passed": 93,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "giga_connectome version check",
+              "giga_connectome help",
+              "giga_connectome help - participant label",
+              "giga_connectome help - atlas option",
+              "giga_connectome help - denoise strategy",
+              "giga_connectome help - smoothing option",
+              "Python version check",
+              "Python import giga_connectome",
+              "Python nilearn version",
+              "Python nibabel version",
+              "Python pybids version",
+              "Python templateflow version",
+              "Python numpy version",
+              "Python scipy import",
+              "Python pandas import",
+              "pybids version check",
+              "pybids help",
+              "pybids layout help",
+              "pybids upgrade help"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "7.4 MB",
+                "path": "/usr/bin/perl"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.4 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.6 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/perl-base/auto/re/re.so"
+              },
+              {
+                "count": 2,
+                "wasted_space": "801 kB",
+                "path": "/usr/lib/x86_64-linux-gnu/perl-base/unicore/To/NFKCCF.pl"
+              }
+            ],
+            "efficiency_percent": 98.4319,
+            "wasted_bytes": 34456230,
+            "wasted_bytes_display": "34 MB",
+            "user_wasted_percent": 3.153
+          }
         }
       },
-      "merged_sha": null,
-      "next_action": "Revisit with a corrected official x86 base or approved ordinary shared-preamble archive configuration and enough authorized build budget to verify the changed exact candidate on both architectures. Preserve PR #3489 and ARM proof; no unchanged retry for persistent archived URLs.",
+      "merged_sha": "d93c0da6d0e8cf96c8e9e97a921a4d42ebea7db5",
+      "next_action": "Upstream revised and merged this PR independently; both exact-source suites94/94. Earlier root native proof remains attached to5b949c5e, not revised11049ac1. Root-current-source gap is recorded; no new dispatch beyond persistent budget. Audit automatic publication.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.0",
@@ -6459,8 +6704,8 @@
         "fulltest_version": "0.6.0",
         "test_count": 93
       },
-      "arm64_attempts": 4,
-      "x86_64_attempts": 1,
+      "arm64_attempts": 5,
+      "x86_64_attempts": 2,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38210795614",
       "native_attempt_history": [
         {
@@ -6532,7 +6777,284 @@
       },
       "pr_number": 3489,
       "blocked_at": "2026-10-12T06:35:19.652291+00:00",
-      "blocker": "Current upstream x86 base uses unavailable Bullseye security packages; x86 build fails before application installation. ARM64 current source passed both native and upstream runtime tests. Five of six total builds consumed; changing the candidate triggers two upstream architecture builds and would exceed the persistent budget."
+      "blocker": "Current upstream x86 base uses unavailable Bullseye security packages; x86 build fails before application installation. ARM64 current source passed both native and upstream runtime tests. Five of six total builds consumed; changing the candidate triggers two upstream architecture builds and would exceed the persistent budget.",
+      "prior_submissions": [
+        {
+          "recipe": "gigaconnectome",
+          "variant": "arm64",
+          "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/106",
+          "historical": {
+            "run_id": 34757505350,
+            "attempt": 1,
+            "sha": "dc1439d82ec42fd3cb5b38e85ca1d5800a3484b2",
+            "counts": [
+              94,
+              0,
+              0,
+              94
+            ]
+          },
+          "port_files": [
+            "recipes/gigaconnectome/build.yaml"
+          ],
+          "status": "blocked-infrastructure",
+          "branch": "arm64/upstream-gigaconnectome-20261012",
+          "baseline_sha": "8ffc4cca756fd5099c7e1a65d22f93ad354da01f",
+          "candidate_sha": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
+          "started_at": "2026-10-12T05:38:30.096019+00:00",
+          "deadline": "2026-10-12T17:38:30.096019+00:00",
+          "attempts": 5,
+          "run_id": 38210795614,
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3489",
+          "upstream_ci": {
+            "candidate_run_id": 38212268669,
+            "aarch64": {
+              "schema_version": 3,
+              "recipe": "gigaconnectome",
+              "container": "gigaconnectome_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
+              "version": "0.6.0",
+              "build_date": "20261012",
+              "docker_archive": "gigaconnectome_arm64_0.6.0_20261012.docker.tar",
+              "sif": "gigaconnectome_arm64_0.6.0_20261012.simg",
+              "candidate_tag": "nd-candidate-gigaconnectome_arm64:5b949c5edcf8",
+              "launcher": "giga_connectome",
+              "pr_number": 3489,
+              "head_sha": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
+              "tests": {
+                "total": 94,
+                "passed": 94,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 93,
+                "fulltest_passed": 93,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "giga_connectome version check",
+                  "giga_connectome help",
+                  "giga_connectome help - participant label",
+                  "giga_connectome help - atlas option",
+                  "giga_connectome help - denoise strategy",
+                  "giga_connectome help - smoothing option",
+                  "Python version check",
+                  "Python import giga_connectome",
+                  "Python nilearn version",
+                  "Python nibabel version",
+                  "Python pybids version",
+                  "Python templateflow version",
+                  "Python numpy version",
+                  "Python scipy import",
+                  "Python pandas import",
+                  "pybids version check",
+                  "pybids help",
+                  "pybids layout help",
+                  "pybids upgrade help"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "7.4 MB",
+                    "path": "/usr/bin/perl"
+                  },
+                  {
+                    "count": 6,
+                    "wasted_space": "4.8 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 5,
+                    "wasted_space": "3.9 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "3.3 MB",
+                    "path": "/usr/lib/aarch64-linux-gnu/libc.so.6"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.7 MB",
+                    "path": "/usr/sbin/ldconfig"
+                  }
+                ],
+                "efficiency_percent": 95.9464,
+                "wasted_bytes": 96037211,
+                "wasted_bytes_display": "96 MB",
+                "user_wasted_percent": 8.1048
+              }
+            },
+            "conclusion": "failure",
+            "x86_64_failure": {
+              "stage": "Stage and build candidate",
+              "base_image": "bids/giga_connectome:0.6.0",
+              "base_digest": "sha256:fcc5051ab1c01a41cea57a6d9e39d592fcf1b85269feaaca258018c154608212",
+              "first_error": "Debian Bullseye security packages return HTTP 404 during the shared neurodocker preamble, before recipe directives: ca-certificates 20250419~deb12u1~deb11u1; libc-l10n/locales 2.31-13+deb11u14; libcurl4/curl 7.74.0-1.3+deb11u16; unzip 6.0-26+deb11u2. apt-get update had run, so this is not merely an old package list.",
+              "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38212268669"
+            }
+          },
+          "merged_sha": null,
+          "next_action": "Revisit with a corrected official x86 base or approved ordinary shared-preamble archive configuration and enough authorized build budget to verify the changed exact candidate on both architectures. Preserve PR #3489 and ARM proof; no unchanged retry for persistent archived URLs.",
+          "upstream_review": {
+            "exists": true,
+            "version": "0.6.0",
+            "architectures": [
+              "x86_64"
+            ],
+            "port_patch_applies": true,
+            "fulltest_version": "0.6.0",
+            "test_count": 93
+          },
+          "arm64_attempts": 4,
+          "x86_64_attempts": 1,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38210795614",
+          "native_attempt_history": [
+            {
+              "attempt": 1,
+              "source_sha": "61a896581afb9bf5af3397a816c2555033dc6a2c",
+              "run_id": 38209010331,
+              "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209010331",
+              "outcome": "failed-runtime",
+              "counts": {
+                "total": 94,
+                "passed": 92,
+                "failed": 2,
+                "skipped": 0
+              },
+              "first_errors": [
+                "No deployment commands found: DEPLOY_BINS and DEPLOY_PATH not set",
+                "giga_connectome invalid bids dir: expected error text absent; masked zero-subject no-op"
+              ],
+              "retry_hypothesis": "Native build and SIF passed; deploy failed because no commands are exported. Add giga_connectome to deploy.bins. The missing-directory test supplied no participant, so official get_subject_lists returned an empty list and the workflow succeeded without loading data. Supply participant 01 to exercise BIDSLayout validation and assert exit 1 plus its exact missing-root diagnostic; remove the masking || true. Official 0.6.0 workflow/utils and pinned PyBIDS 0.15.6 validation source inspected."
+            },
+            {
+              "attempt": 2,
+              "source_sha": "76559d1b3e745a038dca5434255d7f1d192564ee",
+              "run_id": 38209922315,
+              "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209922315",
+              "outcome": "failed-runtime",
+              "counts": {
+                "total": 94,
+                "passed": 93,
+                "failed": 1,
+                "skipped": 0
+              },
+              "first_errors": [
+                "Negative test: expected BIDS missing-root diagnostic, got OSError Read-only file system from PyBIDS database path creation"
+              ],
+              "retry_hypothesis": "The corrected participant selector reaches PyBIDS, but PyBIDS 0.15.6 ConnectionManager.exists calls get_database_file, which mkdirs the database path before validate_root. The attempt therefore exited 1 with a read-only filesystem error rather than the guessed missing-root message. Use a regular-file fixture in the writable output directory as an invalid BIDS directory and require exit 1, FileExistsError, and the fixture name. Checked the exact upstream db.py and reproduced this exception locally with the pinned PyBIDS package. No scientific assertions removed or tolerances changed."
+            }
+          ],
+          "retry_hypothesis": "The corrected participant selector reaches PyBIDS, but PyBIDS 0.15.6 ConnectionManager.exists calls get_database_file, which mkdirs the database path before validate_root. The attempt therefore exited 1 with a read-only filesystem error rather than the guessed missing-root message. Use a regular-file fixture in the writable output directory as an invalid BIDS directory and require exit 1, FileExistsError, and the fixture name. Checked the exact upstream db.py and reproduced this exception locally with the pinned PyBIDS package. No scientific assertions removed or tolerances changed.",
+          "native_evidence": {
+            "source_sha": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
+            "version": "0.6.0",
+            "counts": {
+              "total_tests": 94,
+              "passed": 94,
+              "failed": 0,
+              "skipped": 0
+            },
+            "fulltest_summary": {
+              "duration": 130.97959446907043,
+              "run_timestamp": "2026-10-12T06:10:23.570802",
+              "suites_failed": 0,
+              "suites_passed": 1,
+              "tests_failed": 0,
+              "tests_passed": 93,
+              "total_suites": 1,
+              "total_tests": 93
+            },
+            "deploy_counts": {
+              "total": 1,
+              "passed": 1,
+              "failed": 0,
+              "skipped": 0
+            },
+            "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38210795614",
+            "runner_labels": [
+              "ubuntu-24.04-arm"
+            ]
+          },
+          "pr_number": 3489,
+          "blocked_at": "2026-10-12T06:35:19.652291+00:00",
+          "blocker": "Current upstream x86 base uses unavailable Bullseye security packages; x86 build fails before application installation. ARM64 current source passed both native and upstream runtime tests. Five of six total builds consumed; changing the candidate triggers two upstream architecture builds and would exceed the persistent budget.",
+          "prior_submissions": []
+        }
+      ],
+      "merged_at": "2026-10-12T14:30:35Z",
+      "upstream_verification_mode": "image-candidate",
+      "external_progress": {
+        "revised_source": "11049ac1e499f13b68a5a150a0a94fa8fe2711fc",
+        "external_build_attempts": 2,
+        "own_attempts_before_external_revision": 5,
+        "discovered_at": "2026-10-12T14:48:00+00:00",
+        "native_runner_labels": [
+          "blacksmith-8vcpu-ubuntu-2404-arm"
+        ],
+        "root_current_source_verified": false,
+        "note": "Independent upstream revision and normal merge observed; no extra builds or merge performed by this continuation. Original root native source is distinct. Total observed attempts7 exceed original6; do not dispatch again."
+      },
+      "root_current_source_gap": true,
+      "release_metadata_audit": {
+        "promotion_run_id": 38263440929,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38263440929",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/gigaconnectome_arm64/0.6.0.json",
+            "expected_build_date": "20261012",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/gigaconnectome/0.6.0.json",
+            "expected_build_date": "20261012",
+            "exists": true,
+            "committed_build_dates": [
+              "20250630"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-12T14:52:25.727075+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-gigaconnectome-11049ac1e499f13b68a5a150a0a94fa8fe2711fc)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-gigaconnectome_arm64-11049ac1e499f13b68a5a150a0a94fa8fe2711fc)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T14:52:26.561263+00:00"
+      }
     },
     {
       "recipe": "gimp",
@@ -6859,15 +7381,15 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T14:31:39.853109+00:00",
-        "workflow_status": "queued",
+        "checked_at": "2026-10-12T14:52:27.772877+00:00",
+        "workflow_status": "in_progress",
         "workflow_conclusion": null,
         "publish_jobs": [
           {
             "name": "publish (candidate-gingerale_arm64-07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5)",
-            "status": "queued",
-            "conclusion": null,
-            "runner_name": "",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-rc7zr",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
@@ -6875,16 +7397,18 @@
           },
           {
             "name": "publish (candidate-gingerale-07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5)",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "runner_name": "",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-784vv",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": []
+            "active_steps": [
+              "Publish tested SIF to unique staging object keys"
+            ]
           }
         ],
-        "metadata_checked_at": "2026-10-12T14:31:40.689340+00:00"
+        "metadata_checked_at": "2026-10-12T14:52:28.779136+00:00"
       }
     },
     {
@@ -7343,7 +7867,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T14:31:42.044608+00:00",
+        "checked_at": "2026-10-12T14:52:29.981520+00:00",
         "workflow_status": "in_progress",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -7368,11 +7892,11 @@
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "active_steps": [
-              "Download candidate bundle without executing it"
+              "Publish exact tested Docker archive to unique staging tags"
             ]
           }
         ],
-        "metadata_checked_at": "2026-10-12T14:31:43.271447+00:00"
+        "metadata_checked_at": "2026-10-12T14:52:30.927154+00:00"
       }
     },
     {
@@ -11939,18 +12463,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-segmentator-20261012",
+      "baseline_sha": "ce4c5ca2886a75b0c259fb256d34bee216896f61",
+      "candidate_sha": "dc180afdc79fc910d0ae42c9469992b270057e3d",
+      "started_at": "2026-10-12T14:50:00+00:00",
+      "deadline": "2026-10-13T02:50:00+00:00",
+      "attempts": 1,
+      "run_id": 38266583963,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.6.1",
@@ -11962,7 +12486,11 @@
         "fulltest_version": "1.6.1",
         "test_count": 4
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "upstream_verification_mode": "runtime-only",
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38266583963"
     },
     {
       "recipe": "sigviewer",
@@ -13551,10 +14079,10 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "sha": "18c2ec5ed864449aaf464649f2262ff197ee281a",
-    "checked_at": "2026-10-12T14:12:37.760008+00:00",
-    "actions_enabled": false,
-    "method": "normal-fast-forward of fetched upstream accepted source; candidate branches preserved"
+    "sha": "ce4c5ca2886a75b0c259fb256d34bee216896f61",
+    "at": "2026-10-12T14:55:52.172383+00:00",
+    "method": "normal-fast-forward",
+    "actions_enabled": false
   },
   "runtime_release_routing_fix": {
     "status": "merged",
