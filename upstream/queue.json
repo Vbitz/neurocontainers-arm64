@@ -809,7 +809,7 @@
       "candidate_sha": "7ad06c20dca161f6f53b2141234eff61cbe5d829",
       "started_at": "2026-10-12T09:26:34.723292+00:00",
       "deadline": "2026-10-12T21:26:34.723292+00:00",
-      "attempts": 4,
+      "attempts": 6,
       "run_id": 38231273203,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3505",
       "upstream_ci": {
@@ -818,7 +818,7 @@
         "x86_64_failure_report": "/tmp/apptainer-x86-failure-38236817622/test-results.json"
       },
       "merged_sha": null,
-      "next_action": "Upstream x86 runner must permit nested user-namespace proc mounts; then unchanged failed x86 job may be retried within original deadline/budget. ARM current-source native and upstream7/7 passed. No source change or weakened nested test.",
+      "next_action": "Observe independently updated PR3505/c965631e/run38267716949 and review source/tests; no own dispatch or source-proof substitution. Total observed6/6; original deadline persists.",
       "upstream_review": {
         "exists": true,
         "version": "1.5.3",
@@ -844,8 +844,8 @@
         "local_checks": "Build/schema/update-policy and both architecture Dockerfile generation; codespell build/fulltest; all6 shell commands bash -n."
       },
       "upstream_verification_mode": "image-candidate",
-      "arm64_attempts": 3,
-      "x86_64_attempts": 1,
+      "arm64_attempts": 4,
+      "x86_64_attempts": 2,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38231273203",
       "attempt_history": [
         {
@@ -901,6 +901,16 @@
         "architecture": "x86_64",
         "observed": "Nested SIF build succeeded; default proc mount denied by x86 runner. Root native ARM and upstream ARM full7/7 passed; x86 old5 CLI checks passed.",
         "revisit_condition": "Runner configuration permits nested proc mounts or official upstream documents a compatible default container execution configuration; use one unchanged x86 retry after changed infrastructure, not speculative retries."
+      },
+      "external_progress": {
+        "revised_source": "c965631ea591f90d5692f8d85f45a650717fe78a",
+        "run_id": 38267716949,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38267716949",
+        "external_build_attempts": 2,
+        "own_attempts_before_external_revision": 4,
+        "discovered_at": "2026-10-12T15:11:15.546413+00:00",
+        "status": "running",
+        "note": "Independent upstream source update observed, not dispatched by this continuation. Account its two matrix jobs in global capacity. Original source proof and infrastructure blocker remain until new exact-source reports reviewed."
       }
     },
     {
