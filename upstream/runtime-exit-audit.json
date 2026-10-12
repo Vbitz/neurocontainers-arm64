@@ -1,10 +1,8 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-12T15:05:11.228303+00:00",
+  "checked_at": "2026-10-12T16:55:45.595385+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
-  "followup_required": [
-    "ants"
-  ],
+  "followup_required": [],
   "expected_negative_cases": [
     "AMICO invalid input exit64",
     "dcm2niix version exit3/invalid option exit12",
@@ -444,24 +442,7 @@
   "reviewed_merged_recipe_count": 28,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
-  "active_followups": [
-    {
-      "recipe": "ants",
-      "candidate_sha": "72f72b06ed357182e63a4370760b5f84ca0140c2",
-      "branch": "arm64/upstream-ants-runtime-20261012",
-      "run_id": 38254862112,
-      "attempts": 6,
-      "deadline": "2026-10-12T17:01:51.539183+00:00",
-      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3517",
-      "stage": "native-fixed-upstream-pending",
-      "corrected_native_counts": {
-        "total_tests": 103,
-        "passed": 103,
-        "failed": 0,
-        "skipped": 0
-      }
-    }
-  ],
+  "active_followups": [],
   "resolved_followups": {
     "brkraw": {
       "outcome": "verified",
@@ -488,6 +469,38 @@
       "upstream_counts": {
         "aarch64": 76,
         "x86_64": 76
+      }
+    },
+    "ants": {
+      "outcome": "verified",
+      "findings": [
+        {
+          "test": "Reset direction",
+          "return_code": 139,
+          "detail": "Pre-existing known-crash test ignores segfault; verify documented CLI arguments/output before treating capability as working."
+        },
+        {
+          "test": "Time series disassemble",
+          "return_code": 134,
+          "detail": "Pre-existing known-crash test aborts on extensionless output prefix; investigate documented output filename contract."
+        }
+      ],
+      "next_action": "Corrected CLI operations passed native and both upstream suites with all actual command exits zero; no unresolved runtime followup.",
+      "stage": "resolved",
+      "prior_source_sha": "f58b9e6755f6af3db1753d44ba3b390270c7cde0",
+      "corrected_source_sha": "72f72b06ed357182e63a4370760b5f84ca0140c2",
+      "corrected_native_run_id": 38254862112,
+      "corrected_native_counts": {
+        "total_tests": 103,
+        "passed": 103,
+        "failed": 0,
+        "skipped": 0
+      },
+      "resolution_pr": "https://github.com/neurodesk/neurocontainers/pull/3517",
+      "resolution_merge_sha": "6e1e85a267f49406e6825c0408856c4c9609ffbc",
+      "upstream_counts": {
+        "aarch64": 103,
+        "x86_64": 103
       }
     }
   },

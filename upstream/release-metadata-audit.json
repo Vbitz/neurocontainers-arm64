@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T15:15:04.305687+00:00",
+  "checked_at": "2026-10-12T16:54:13.496440+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -429,7 +429,7 @@
           "current_candidate_date_committed": true
         }
       ],
-      "checked_at": "2026-10-12T15:14:58.975392+00:00",
+      "checked_at": "2026-10-12T16:54:00.343268+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -454,7 +454,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T15:14:59.768285+00:00"
+      "metadata_checked_at": "2026-10-12T16:54:01.118709+00:00"
     },
     {
       "recipe": "clearswi",
@@ -889,7 +889,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T15:15:01.444830+00:00",
+      "checked_at": "2026-10-12T16:54:02.533936+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -914,7 +914,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T15:15:02.280206+00:00"
+      "metadata_checked_at": "2026-10-12T16:54:03.368323+00:00"
     },
     {
       "recipe": "gingerale",
@@ -988,57 +988,69 @@
       "recipe": "hdbet",
       "promotion_run_id": 38255340625,
       "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38255340625",
-      "status": "pending-promotion",
+      "status": "verified-published-metadata",
       "metadata": [
         {
           "architecture": "aarch64",
           "path": "releases/hdbet_arm64/2.0.1.json",
           "expected_build_date": "20261012",
-          "exists": false,
-          "committed_build_dates": [],
-          "current_candidate_date_committed": false
+          "committed_build_dates": [
+            "20261012"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "source_sha": "20835db5be6559a46dd369e4982cfac77a46cb91",
+          "metadata_commit_sha": "9abe4d5fa1a7873cb27899f6d899ffccb0c3535a",
+          "sif": "hdbet_arm64_2.0.1_20261012.simg",
+          "sif_sha256": "95a5971c1bdcdca2882a0b6652c0f5b6abfa66ea149d81e9605921a9ecc7dd6b",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/hdbet_arm64_2.0.1_20261012.simg",
+          "public_sif_head_status": 200
         },
         {
           "architecture": "x86_64",
           "path": "releases/hdbet/2.0.1.json",
           "expected_build_date": "20261012",
-          "exists": true,
           "committed_build_dates": [
-            "20260629"
+            "20261012"
           ],
-          "current_candidate_date_committed": false
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "source_sha": "20835db5be6559a46dd369e4982cfac77a46cb91",
+          "metadata_commit_sha": "9abe4d5fa1a7873cb27899f6d899ffccb0c3535a",
+          "sif": "hdbet_2.0.1_20261012.simg",
+          "sif_sha256": "eb3a2c9c855127184668b0892f29217254ed4df9466e8b2e05a3e589b667eeea",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/hdbet_2.0.1_20261012.simg",
+          "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T15:15:03.419903+00:00",
-      "workflow_status": "in_progress",
-      "workflow_conclusion": null,
+      "checked_at": "2026-10-12T16:54:04.703138+00:00",
+      "workflow_status": "completed",
+      "workflow_conclusion": "success",
       "publish_jobs": [
         {
           "name": "publish (candidate-hdbet-20835db5be6559a46dd369e4982cfac77a46cb91)",
-          "status": "in_progress",
-          "conclusion": null,
+          "status": "completed",
+          "conclusion": "success",
           "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-qgt28",
           "labels": [
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
-          "active_steps": [
-            "Publish exact tested Docker archive to unique staging tags"
-          ]
+          "active_steps": []
         },
         {
           "name": "publish (candidate-hdbet_arm64-20835db5be6559a46dd369e4982cfac77a46cb91)",
-          "status": "in_progress",
-          "conclusion": null,
+          "status": "completed",
+          "conclusion": "success",
           "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-jh86w",
           "labels": [
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
-          "active_steps": [
-            "Publish exact tested Docker archive to unique staging tags"
-          ]
+          "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T15:15:04.304865+00:00"
+      "metadata_checked_at": "2026-10-12T16:54:13.495902+00:00"
     },
     {
       "recipe": "laynii",
@@ -1464,7 +1476,7 @@
     "fsqc: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38221551205)",
     "gigaconnectome: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38263440929)",
     "gingerale: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38258952820)",
-    "hdbet: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38255340625)",
+    "hdbet: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38255340625)",
     "laynii: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38251408959)",
     "meganorm: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38220896254)",
     "modsort: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38219491260)",
@@ -1475,13 +1487,13 @@
     "Publication is tracked separately from native test success and upstream PR merge. No release JSON is manually edited."
   ],
   "catalog_queue_audit": {
-    "checked_at": "2026-10-12T15:04:15.301730+00:00",
+    "checked_at": "2026-10-12T16:54:47.051522+00:00",
     "repository": "neurodesk/neurocommand",
     "ref": "update-apps-json",
-    "commit_sha": "c23cc2ead40f29bc79c9b963765231b11a5251ab",
+    "commit_sha": "c8d2c34d4778a73edf5e6462519d452c2fcae4e8",
     "path": "neurodesk/apps.json",
     "status": "verified-queue-content",
-    "note": "Pinned catalog queue matches complete published app records for all36 architecture entries across18 audited image ports. Apps/webapps update workflows succeeded for their metadata commits. Scheduled consolidation/deployment remains separate.",
+    "note": "Pinned catalog queue matches complete published app records for all38 architecture entries across19 audited image ports. Apps/webapps update workflows succeeded for their metadata commits. Scheduled consolidation/deployment remains separate.",
     "entries": [
       {
         "recipe": "ants",
@@ -1844,6 +1856,36 @@
         "metadata_commit_sha": "17b8db7eff48eb1ff9f73e67079b355c2ce452c1"
       },
       {
+        "recipe": "hdbet",
+        "architecture": "aarch64",
+        "catalog_container": "hdbet_arm64",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "catalog_app": "hdbet_arm64 2.0.1",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38274495307",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38274495148",
+        "catalog_apps": [
+          "hdbet_arm64 2.0.1"
+        ],
+        "all_app_records_match": true,
+        "metadata_commit_sha": "9abe4d5fa1a7873cb27899f6d899ffccb0c3535a"
+      },
+      {
+        "recipe": "hdbet",
+        "architecture": "x86_64",
+        "catalog_container": "hdbet",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "catalog_app": "hdbet 2.0.1",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38274495307",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38274495148",
+        "catalog_apps": [
+          "hdbet 2.0.1"
+        ],
+        "all_app_records_match": true,
+        "metadata_commit_sha": "9abe4d5fa1a7873cb27899f6d899ffccb0c3535a"
+      },
+      {
         "recipe": "laynii",
         "architecture": "aarch64",
         "catalog_container": "laynii_arm64",
@@ -2026,7 +2068,7 @@
         "metadata_commit_sha": "ddc25e0d0cb13525b189621c356a365be217c5d8"
       }
     ],
-    "blob_sha": "664279ca1e95a81547a1ebcff909c0e72167a9f5"
+    "blob_sha": "651b72017b4cd36d7b979d0a1d19789bae95a7af"
   },
   "verification_only_changes": [
     {
@@ -2042,6 +2084,23 @@
         "publish": "skipped",
         "finalize": "skipped",
         "artifact_count": 0,
+        "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
+      }
+    },
+    {
+      "recipe": "ants",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3517",
+      "merge_sha": "6e1e85a267f49406e6825c0408856c4c9609ffbc",
+      "note": "Fulltest-only change; no image-input change or new release required.",
+      "automatic_workflow_observation": {
+        "run_id": 38275694655,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38275694655",
+        "conclusion": "success",
+        "resolve": "success",
+        "publish": "skipped",
+        "finalize": "skipped",
+        "artifact_count": 0,
+        "checked_at": "2026-10-12T16:57:25.017852+00:00",
         "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
       }
     },
