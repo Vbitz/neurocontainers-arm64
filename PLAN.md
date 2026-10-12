@@ -3237,3 +3237,7 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - `panoptica` updated-upstream native [run 38206125547](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206125547) passed **10/10**, zero failures/skips, exact source `85689c2ead33e71e549b830a2b4093f9cc2c3f3f`. Await its own upstream PR when matrix capacity permits.
 
 - `brainlifecli` updated-upstream native [run 38206184713](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206184713) passed **74/74**, zero failures/skips, exact source `fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8`. Await its own upstream PR when matrix capacity permits.
+
+- Panoptica individual upstream [PR #3483](https://github.com/neurodesk/neurocontainers/pull/3483) opened for exact native-verified `85689c2ead33e71e549b830a2b4093f9cc2c3f3f` (10/10 tests, zero failures/skips). Upstream ARM64 attempt 2/6; deadline `2026-10-12T17:00:21.844031+00:00`. Build reservations: ANTs native, BART x86_64, Panoptica ARM64/x86_64 = four.
+
+- BART upstream native ARM64 candidate in [run 38206640886](https://github.com/neurodesk/neurocontainers/actions/runs/38206640886) passed **117/117**, zero failures/skips, plus Dive. Downloaded compact report matches PR #3482 and exact head `5496bbdb1363839a80b7b582b8eb3e5bbd9f320f`; upstream Code quality passed. x86_64 candidate remains queued. Other upstream x86 candidates are running, so this is queue contention rather than evidence of an offline pool.

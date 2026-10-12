@@ -366,7 +366,97 @@
       "attempts": 2,
       "run_id": 38206195541,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3482",
-      "upstream_ci": null,
+      "upstream_ci": {
+        "candidate_run_id": 38206640886,
+        "quality_run_id": 38206640876,
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "bart",
+          "container": "bart_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.0.00",
+          "build_date": "20261012",
+          "docker_archive": "bart_arm64_1.0.00_20261012.docker.tar",
+          "sif": "bart_arm64_1.0.00_20261012.simg",
+          "candidate_tag": "nd-candidate-bart_arm64:5496bbdb1363",
+          "launcher": null,
+          "pr_number": 3482,
+          "head_sha": "5496bbdb1363839a80b7b582b8eb3e5bbd9f320f",
+          "tests": {
+            "total": 117,
+            "passed": 117,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 116,
+            "fulltest_passed": 116,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Version check",
+              "Benchmark",
+              "List available commands",
+              "Create zeros array",
+              "Create ones array",
+              "Show array dimensions",
+              "Show specific dimension",
+              "Generate Shepp-Logan phantom",
+              "Generate Shepp-Logan phantom (k-space)",
+              "Generate 3D phantom",
+              "Generate phantom with sensitivities",
+              "Generate sensitivity maps only",
+              "Generate tubes phantom",
+              "Generate BART logo phantom",
+              "Generate geometric phantom",
+              "Generate random tubes phantom",
+              "Generate brain geometry phantom",
+              "Generate Cartesian trajectory",
+              "Generate radial trajectory"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "829 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "476 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "380 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 98.9784,
+            "wasted_bytes": 6125431,
+            "wasted_bytes_display": "6.1 MB",
+            "user_wasted_percent": 1.5957
+          }
+        },
+        "x86_64": null,
+        "quality": "passed",
+        "release_gate": "pending"
+      },
       "merged_sha": null,
       "next_action": "Inspect upstream ARM64 and x86_64 candidate reports plus all CI; merge this PR only when all pass with zero failed/skipped tests.",
       "upstream_review": {
@@ -3701,18 +3791,18 @@
       "port_files": [
         "recipes/panoptica/build.yaml"
       ],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-panoptica-20261012",
       "baseline_sha": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
       "candidate_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
       "started_at": "2026-10-12T05:00:21.844031+00:00",
       "deadline": "2026-10-12T17:00:21.844031+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "run_id": 38206125547,
-      "pr_url": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3483",
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Open its own upstream PR when two matrix slots are free; require all upstream container tests and CI before merge.",
+      "next_action": "Require upstream ARM64/x86_64 candidate reports and Code quality; merge only after all tests pass.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.7",
@@ -3734,7 +3824,8 @@
           "skipped": 0
         },
         "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206125547"
-      }
+      },
+      "pr_number": 3483
     },
     {
       "recipe": "pcntoolkit",
