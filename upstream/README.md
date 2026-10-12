@@ -15,9 +15,10 @@ historical source/run/counts, current upstream review, candidate branch/SHA,
 investigation deadline, attempts, native run, upstream PR, CI result and merge.
 Historical success does not count as a retest of current upstream.
 
-The fork's `main` was fast-forwarded to upstream
-`6720f24a5d1b9137e5e7082e3c12bd521656fed7`. Existing accepted port branches and the
-top-level accepted gitlink are preserved while focused candidates are tested.
+The fork's `main` follows upstream by normal fast-forward pushes; the latest
+synchronized SHA is recorded in `queue.json` under `last_fork_main_sync`. Existing
+accepted port branches and the top-level accepted gitlink are preserved while
+focused candidates are tested.
 There are 80 recipes with fork changes and 49 without fork recipe changes.
 Of those 49, upstream removed ARM64 declarations from five OpenRecon recipes;
 those five are excluded by the user's scope correction. The other 44 still
@@ -34,13 +35,22 @@ do not manufacture empty PRs or mark their upstream testing complete without
 evidence. The user explicitly requires one PR per container; never combine
 containers in a PR.
 
-Upstream classifies fulltest-only PRs as source-only. Supporting
+Fulltest-only PRs do not change image inputs. Supporting
 [PR #3490](https://github.com/neurodesk/neurocontainers/pull/3490) now requires
 Recipes CI verification of every declared variant for those PRs, using newly
 built Docker images and SIFs. The required release gate checks those runtime
 results while retaining the existing release plan: verification-only builds do
 not publish images or release metadata. Inspect the actual reports and source
 commit before merging each recipe PR.
+
+Supporting [PR #3497](https://github.com/neurodesk/neurocontainers/pull/3497)
+keeps current recipe suites out of the historical-release test workflow. Explicit
+release JSON changes still select their release tests. Its summary handles both
+single-artifact extraction into the destination root and multiple-artifact
+subdirectories, while missing reports and failed tests still fail the gate.
+For runtime verification, record the actual tested PR merge source separately
+from the head SHA and verify its candidate parent and complete recipe tree.
+A fulltest-only merge requires no new image publication or release metadata.
 
 The user explicitly authorized upstream PRs and merges for this assignment.
 Fork Actions remains disabled. The upstream `Container release gate` and

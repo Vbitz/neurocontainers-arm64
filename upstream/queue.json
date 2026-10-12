@@ -454,30 +454,46 @@
       "release_metadata_audit": {
         "promotion_run_id": 38219752715,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38219752715",
-        "status": "pending-promotion",
+        "status": "verified-published-metadata",
         "metadata": [
           {
             "architecture": "aarch64",
             "path": "releases/ants_arm64/2.6.5.json",
             "expected_build_date": "20261012",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "f58b9e6755f6af3db1753d44ba3b390270c7cde0",
+            "metadata_commit_sha": "8e633432dc4af2f4ed2d61139ef03f5712e34175",
+            "sif": "ants_arm64_2.6.5_20261012.simg",
+            "sif_sha256": "f8d8bf16ace2be8a1d38b929919556176a5e11d5a178b5253310ee84d9587f32",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/ants_arm64_2.6.5_20261012.simg",
+            "public_sif_head_status": 200
           },
           {
             "architecture": "x86_64",
             "path": "releases/ants/2.6.5.json",
             "expected_build_date": "20261012",
-            "exists": true,
             "committed_build_dates": [
-              "20260602"
+              "20261012"
             ],
-            "current_candidate_date_committed": false
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "f58b9e6755f6af3db1753d44ba3b390270c7cde0",
+            "metadata_commit_sha": "8e633432dc4af2f4ed2d61139ef03f5712e34175",
+            "sif": "ants_2.6.5_20261012.simg",
+            "sif_sha256": "68743607f5d3453f4ce87369cd74e77ad518fd69d6cb165abde241995fe7f1f2",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/ants_2.6.5_20261012.simg",
+            "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T07:58:40.235964+00:00",
-        "workflow_status": "in_progress",
-        "workflow_conclusion": null,
+        "checked_at": "2026-10-12T08:33:33.218479+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
         "publish_jobs": [
           {
             "name": "publish (candidate-ants-f58b9e6755f6af3db1753d44ba3b390270c7cde0)",
@@ -500,7 +516,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:58:41.046607+00:00"
+        "metadata_checked_at": "2026-10-12T08:33:37.447288+00:00"
       }
     },
     {
@@ -864,7 +880,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T07:58:42.621604+00:00",
+        "checked_at": "2026-10-12T08:33:38.687567+00:00",
         "metadata": [
           {
             "architecture": "x86_64",
@@ -923,7 +939,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:58:46.269627+00:00"
+        "metadata_checked_at": "2026-10-12T08:33:42.349656+00:00"
       }
     },
     {
@@ -1585,7 +1601,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T07:58:47.471895+00:00",
+        "checked_at": "2026-10-12T08:33:43.585515+00:00",
         "metadata": [
           {
             "architecture": "x86_64",
@@ -1644,7 +1660,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:58:51.842436+00:00"
+        "metadata_checked_at": "2026-10-12T08:33:47.242368+00:00"
       }
     },
     {
@@ -1960,7 +1976,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T07:58:53.129099+00:00",
+        "checked_at": "2026-10-12T08:33:48.609276+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -2019,7 +2035,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:58:56.699720+00:00"
+        "metadata_checked_at": "2026-10-12T08:33:52.872349+00:00"
       }
     },
     {
@@ -2240,11 +2256,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-condaenvs-20261012",
       "baseline_sha": "adb11f430e76abaf0294852840a23a94d994ac7c",
-      "candidate_sha": "72082aa467533e77239863ef00becd06625bf133",
+      "candidate_sha": "00d52a64cd5bc7dff2d4957d83b284d2fbe8f752",
       "started_at": "2026-10-12T07:52:02.389785+00:00",
       "deadline": "2026-10-12T19:52:02.389785+00:00",
-      "attempts": 1,
-      "run_id": 38220775558,
+      "attempts": 2,
+      "run_id": 38223493182,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -2261,7 +2277,7 @@
         "test_count": 2
       },
       "pr_plan": "Current fulltest checks conda and imports pyedflib. Add a small real EDF write/read round trip in the packaged MNE environment with signal/sample assertions, validating the compiled reader and its runtime dependencies. Preserve existing checks and test the exact candidate upstream.",
-      "upstream_verification_mode": "runtime-only",
+      "upstream_verification_mode": "image-candidate",
       "primary_source_review": {
         "documentation": "https://pyedflib.readthedocs.io/en/latest/ref/highlevel.html",
         "reviewed_functions": [
@@ -2272,9 +2288,24 @@
         "assertions": "Exact digital signals plus labels/frequency/units; finite physical output, with no numerical tolerance needed."
       },
       "release_metadata_policy": "Fulltest-only change; no image-input change and no new release promotion.",
-      "arm64_attempts": 1,
+      "arm64_attempts": 2,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38220775558"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38223493182",
+      "attempt_history": [
+        {
+          "candidate_sha": "72082aa467533e77239863ef00becd06625bf133",
+          "run_id": 38220775558,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38220775558",
+          "outcome": "failed-deploy",
+          "counts": {
+            "passed": 3,
+            "failed": 1,
+            "skipped": 0,
+            "total_tests": 4
+          },
+          "first_error": "No deployment commands found. DEPLOY_BINS and DEPLOY_PATH absent; all three fulltests passed, including exact EDF roundtrip."
+        }
+      ]
     },
     {
       "recipe": "cosmomvpa",
@@ -2476,18 +2507,18 @@
       "port_files": [
         "recipes/deep-quality-estimation/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-deep-quality-estimation-20261012",
       "baseline_sha": "8e633432dc4af2f4ed2d61139ef03f5712e34175",
-      "candidate_sha": "fa1b9da6af3d04dd22b6909e7114749b533277ee",
+      "candidate_sha": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
       "started_at": "2026-10-12T08:03:50.601281+00:00",
       "deadline": "2026-10-12T20:03:50.601281+00:00",
-      "attempts": 1,
-      "run_id": 38221505858,
-      "pr_url": null,
-      "upstream_ci": null,
+      "attempts": 4,
+      "run_id": 38223320234,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3498",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.3",
@@ -2508,9 +2539,49 @@
         "nvidia_dependency_markers": "Linux and x86_64 only; ARM64 wheel uses CPU",
         "historical_cpu_index_asset_status": "Official CPU index links download-r2.pytorch.org; HEAD and one-byte-range GET both returned 403 locally. Use available same-version official PyPI ARM wheel."
       },
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38221505858"
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38223320234",
+      "attempt_history": [
+        {
+          "candidate_sha": "fa1b9da6af3d04dd22b6909e7114749b533277ee",
+          "run_id": 38221505858,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38221505858",
+          "outcome": "failed-runtime-test-assertion",
+          "first_error": "TypeError: must be real number, not str: finite assertion iterated view_scores dictionary keys; actual mean 3.3596441745758057 and all three view values finite."
+        }
+      ],
+      "native_evidence": {
+        "source_sha": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
+        "version": "0.0.3",
+        "counts": {
+          "total_tests": 11,
+          "passed": 11,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 28.208571195602417,
+          "run_timestamp": "2026-10-12T08:31:06.523915",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 10,
+          "total_suites": 1,
+          "total_tests": 10
+        },
+        "deploy_counts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38223320234",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pr_number": 3498
     },
     {
       "recipe": "deepdisco",
@@ -2711,18 +2782,18 @@
       "port_files": [
         "recipes/dwidenoise2/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-dwidenoise2-20261012",
+      "baseline_sha": "36520dbcb15c00597b0dc6afb7fd255e9fbcdc33",
+      "candidate_sha": "d973046690b93979fa394715a2dd842c2f7b8d8e",
+      "started_at": "2026-10-12T08:31:11.930338+00:00",
+      "deadline": "2026-10-12T20:31:11.930338+00:00",
+      "attempts": 1,
+      "run_id": 38224114491,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -2732,7 +2803,10 @@
         "port_patch_applies": true,
         "fulltest_version": "1.0.0",
         "test_count": 4
-      }
+      },
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38224114491"
     },
     {
       "recipe": "eharmonize",
@@ -3333,7 +3407,74 @@
         ]
       },
       "pr_number": 3495,
-      "merged_at": "2026-10-12T08:06:10Z"
+      "merged_at": "2026-10-12T08:06:10Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38221551205,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221551205",
+        "status": "verified-published-metadata",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/fsqc_arm64/2.1.7.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "bba9c58d834c90e5fe99f6649679bf19ffd87334",
+            "metadata_commit_sha": "5142bce43f973c62b8a8bea7534b0f89ad33611f",
+            "sif": "fsqc_arm64_2.1.7_20261012.simg",
+            "sif_sha256": "95e216dc6ceb057fb81483359ffe0b314dbad35054c5586fc954357c94793d29",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/fsqc_arm64_2.1.7_20261012.simg",
+            "public_sif_head_status": 200
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/fsqc/2.1.7.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "bba9c58d834c90e5fe99f6649679bf19ffd87334",
+            "metadata_commit_sha": "5142bce43f973c62b8a8bea7534b0f89ad33611f",
+            "sif": "fsqc_2.1.7_20261012.simg",
+            "sif_sha256": "a3f171fb3e56488d8187e7e924a8b0d9faa6fc046f52e1d020f5333c24443822",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/fsqc_2.1.7_20261012.simg",
+            "public_sif_head_status": 200
+          }
+        ],
+        "checked_at": "2026-10-12T08:33:54.063867+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-fsqc-bba9c58d834c90e5fe99f6649679bf19ffd87334)",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-svk2q",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-fsqc_arm64-bba9c58d834c90e5fe99f6649679bf19ffd87334)",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-frqzz",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T08:34:01.590234+00:00"
+      }
     },
     {
       "recipe": "functionnectome",
@@ -4115,9 +4256,85 @@
       "attempts": 4,
       "run_id": 38220665128,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3496",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "runtime_run_id": 38221440883,
+        "head_sha": "e0605c9dad41131f164cc8e65dbcfb9022354c54",
+        "tested_merge_sha": "1746acbd6c71b7f0e53c07ba0e0142b25adc40ef",
+        "recipe_tree_matches_head": true,
+        "quality": "passed",
+        "release_gate": "passed",
+        "publication": "No image-input changes; verification builds are not release candidates.",
+        "aarch64": {
+          "runtime_observation": {
+            "container": "libreoffice_arm64",
+            "version": "26.8.1.1",
+            "machine": "aarch64",
+            "status": "passed",
+            "observed_at": "2026-10-12T08:10:28.758449+00:00",
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221440883",
+            "recipe_sha256": "b588f5eb4a8b5138229632d677a740b40ff1ee95324ed606a9ddc70d6fa571ac",
+            "image_id": "sha256:7d36a465d97d8873c495ed5f5b2b6f32548118edd4c54311e1ee48eb25689e89",
+            "candidate_sha256": "c8b2c078efffc2dfdc5b979b0473b963083c969fbd0a5143981b1d30e72438cf"
+          },
+          "counts": {
+            "total_tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 7.418264389038086,
+            "run_timestamp": "2026-10-12T08:10:28.607189",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 3,
+            "total_suites": 1,
+            "total_tests": 3
+          },
+          "artifact_name": "recipe-check-libreoffice_arm64-1746acbd6c71b7f0e53c07ba0e0142b25adc40ef",
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221440883/job/114718567936",
+          "runner_labels": [
+            "blacksmith-8vcpu-ubuntu-2404-arm"
+          ]
+        },
+        "x86_64": {
+          "runtime_observation": {
+            "container": "libreoffice",
+            "version": "26.8.1.1",
+            "machine": "x86_64",
+            "status": "passed",
+            "observed_at": "2026-10-12T08:11:07.141034+00:00",
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221440883",
+            "recipe_sha256": "b588f5eb4a8b5138229632d677a740b40ff1ee95324ed606a9ddc70d6fa571ac",
+            "image_id": "sha256:822f9e3319d1f01ddfa9f6354e13e3180934b6f9941c61ae07d255782136248a",
+            "candidate_sha256": "3ec1d18eb017fa9ebecd9b26bac28a74de4f1fce4eff72230654f234de218fc6"
+          },
+          "counts": {
+            "total_tests": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 6.579344272613525,
+            "run_timestamp": "2026-10-12T08:11:07.041254",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 3,
+            "total_suites": 1,
+            "total_tests": 3
+          },
+          "artifact_name": "recipe-check-libreoffice-1746acbd6c71b7f0e53c07ba0e0142b25adc40ef",
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221440883/job/114718567316",
+          "runner_labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ]
+        }
+      },
       "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "next_action": "CI repair #3497 merged with all Linux checks passing. Wait for two free build slots, then close/reopen same-head PR to refresh workflows against repaired base; count two runtime attempts (6/6), retain existing exact-head native proof, no duplicate PR.",
       "upstream_review": {
         "exists": true,
         "version": "26.8.1.1",
@@ -4755,7 +4972,74 @@
       ],
       "pr_head_sha_before_fix": "8dd1bb3681beb288923340ad07f228f42c98ddc9",
       "validation_ref": "arm64/upstream-meganorm-layerfix-20261012",
-      "merged_at": "2026-10-12T07:59:41Z"
+      "merged_at": "2026-10-12T07:59:41Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38220896254,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38220896254",
+        "status": "verified-published-metadata",
+        "metadata": [
+          {
+            "architecture": "x86_64",
+            "path": "releases/meganorm/0.2.2.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "0383fec6a76f59c56190fc67502a150bda24e492",
+            "metadata_commit_sha": "36520dbcb15c00597b0dc6afb7fd255e9fbcdc33",
+            "sif": "meganorm_0.2.2_20261012.simg",
+            "sif_sha256": "fcba1e033fad0632a170c6492af58f2e2203a6ef30e966c4aa80b03e0c29dd3d",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/meganorm_0.2.2_20261012.simg",
+            "public_sif_head_status": 200
+          },
+          {
+            "architecture": "aarch64",
+            "path": "releases/meganorm_arm64/0.2.2.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "0383fec6a76f59c56190fc67502a150bda24e492",
+            "metadata_commit_sha": "36520dbcb15c00597b0dc6afb7fd255e9fbcdc33",
+            "sif": "meganorm_arm64_0.2.2_20261012.simg",
+            "sif_sha256": "bf8858cd72267ed42e8fbbeb6010258844df5de90890a8f2af805c5f56e7bb9e",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/meganorm_arm64_0.2.2_20261012.simg",
+            "public_sif_head_status": 200
+          }
+        ],
+        "checked_at": "2026-10-12T08:34:02.898148+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-meganorm-0383fec6a76f59c56190fc67502a150bda24e492)",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-lkmrg",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-meganorm_arm64-0383fec6a76f59c56190fc67502a150bda24e492)",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-fwrfg",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T08:34:06.876827+00:00"
+      }
     },
     {
       "recipe": "megnet",
@@ -5340,7 +5624,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T07:59:00.359297+00:00",
+        "checked_at": "2026-10-12T08:34:08.174186+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -5365,7 +5649,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:59:08.352952+00:00"
+        "metadata_checked_at": "2026-10-12T08:34:12.089411+00:00"
       }
     },
     {
@@ -6214,7 +6498,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T07:59:09.731062+00:00",
+        "checked_at": "2026-10-12T08:34:13.955618+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -6273,7 +6557,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:59:13.691590+00:00"
+        "metadata_checked_at": "2026-10-12T08:34:18.081945+00:00"
       }
     },
     {
@@ -6552,7 +6836,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T07:59:14.890727+00:00",
+        "checked_at": "2026-10-12T08:34:19.527583+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -6577,7 +6861,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:59:18.584617+00:00"
+        "metadata_checked_at": "2026-10-12T08:34:23.176416+00:00"
       }
     },
     {
@@ -8310,40 +8594,56 @@
       "release_metadata_audit": {
         "promotion_run_id": 38214465720,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38214465720",
-        "status": "pending-promotion",
+        "status": "verified-published-metadata",
         "metadata": [
           {
             "architecture": "aarch64",
             "path": "releases/topaz_arm64/0.3.20.json",
             "expected_build_date": "20261012",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
+            "metadata_commit_sha": "ddc25e0d0cb13525b189621c356a365be217c5d8",
+            "sif": "topaz_arm64_0.3.20_20261012.simg",
+            "sif_sha256": "3ec13104d33df035ce15e36cc3bdd0492e9a755ef666f2c868cf674d2d81ff67",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/topaz_arm64_0.3.20_20261012.simg",
+            "public_sif_head_status": 200
           },
           {
             "architecture": "x86_64",
             "path": "releases/topaz/0.3.20.json",
             "expected_build_date": "20261012",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
+            "metadata_commit_sha": "ddc25e0d0cb13525b189621c356a365be217c5d8",
+            "sif": "topaz_0.3.20_20261012.simg",
+            "sif_sha256": "462dfac0132cd022b40c788fd36167a4ab83ee0da751e2327d3ca24c35477d02",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/topaz_0.3.20_20261012.simg",
+            "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T07:59:19.719540+00:00",
-        "workflow_status": "in_progress",
-        "workflow_conclusion": null,
+        "checked_at": "2026-10-12T08:34:24.631260+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
         "publish_jobs": [
           {
             "name": "publish (candidate-topaz_arm64-b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "success",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-btfnr",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Publish tested SIF to unique staging object keys"
-            ]
+            "active_steps": []
           },
           {
             "name": "publish (candidate-topaz-b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2)",
@@ -8356,7 +8656,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:59:20.498736+00:00"
+        "metadata_checked_at": "2026-10-12T08:34:28.289558+00:00"
       }
     },
     {
@@ -8812,7 +9112,17 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "sha": "f2f5a96add6b70e79b66be7a3fa366c5afccda6c",
-    "reason": "Fast-forward fork main to upstream after verified release metadata commits; fork Actions remains disabled. Candidate checkout and historical root gitlink preserved."
+    "sha": "36520dbcb15c00597b0dc6afb7fd255e9fbcdc33",
+    "at": "2026-10-12T08:33:14.668954+00:00",
+    "actions_enabled": false
+  },
+  "runtime_release_routing_fix": {
+    "status": "merged",
+    "branch": "arm64/ci-runtime-release-routing-20261012",
+    "candidate_sha": "942e393e21aef34b44cde72b601f1f42a18b56ba",
+    "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3497",
+    "merged_sha": "89c84e179c63e2fc0a0c7478cd1e41981c4d431c",
+    "merged_at": "2026-10-12T08:32:46Z",
+    "validation": "96 focused passed; ruff/codespell/actionlint; actual upstream Linux Python3.10/3.12, buildkit, Code quality and release gate all passed. Local full macOS:1279 passed,4 skipped,11 unrelated Linux-oriented failures."
   }
 }
