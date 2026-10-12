@@ -630,9 +630,9 @@
         "promotion_run_id": 38208442867,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38208442867",
         "status": "verified-published-metadata",
-        "workflow_status": "in_progress",
-        "workflow_conclusion": null,
-        "checked_at": "2026-10-12T06:49:12.488505+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
+        "checked_at": "2026-10-12T07:04:03.015242+00:00",
         "metadata": [
           {
             "architecture": "x86_64",
@@ -691,7 +691,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T06:49:20.331849+00:00"
+        "metadata_checked_at": "2026-10-12T07:04:06.796262+00:00"
       }
     },
     {
@@ -1341,9 +1341,9 @@
         "promotion_run_id": 38210939803,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38210939803",
         "status": "pending-promotion",
-        "workflow_status": "queued",
+        "workflow_status": "in_progress",
         "workflow_conclusion": null,
-        "checked_at": "2026-10-12T06:49:21.455121+00:00",
+        "checked_at": "2026-10-12T07:04:07.987507+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -1367,28 +1367,26 @@
         "publish_jobs": [
           {
             "name": "publish (candidate-brainlifecli_arm64-fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "success",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-w7fvn",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Download candidate bundle without executing it"
-            ]
+            "active_steps": []
           },
           {
             "name": "publish (candidate-brainlifecli-fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8)",
-            "status": "queued",
-            "conclusion": null,
-            "runner_name": "",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-w47nr",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T06:49:22.491970+00:00"
+        "metadata_checked_at": "2026-10-12T07:04:08.825025+00:00"
       }
     },
     {
@@ -1692,9 +1690,9 @@
         "promotion_run_id": 38211197258,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38211197258",
         "status": "pending-promotion",
-        "workflow_status": "queued",
+        "workflow_status": "in_progress",
         "workflow_conclusion": null,
-        "checked_at": "2026-10-12T06:49:23.609997+00:00",
+        "checked_at": "2026-10-12T07:04:09.943620+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -1718,26 +1716,30 @@
         "publish_jobs": [
           {
             "name": "publish (candidate-brkraw_arm64-6b05f8659fda5654927f7d1276972f473e3b1625)",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "runner_name": "",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-xhpvl",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": []
+            "active_steps": [
+              "Attach tested SIF to staged OCI images"
+            ]
           },
           {
             "name": "publish (candidate-brkraw-6b05f8659fda5654927f7d1276972f473e3b1625)",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "runner_name": "",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-b6zhc",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": []
+            "active_steps": [
+              "Publish exact tested Docker archive to unique staging tags"
+            ]
           }
         ],
-        "metadata_checked_at": "2026-10-12T06:49:24.375563+00:00"
+        "metadata_checked_at": "2026-10-12T07:04:10.772071+00:00"
       }
     },
     {
@@ -3693,18 +3695,20 @@
       "port_files": [
         "recipes/meganorm/build.yaml"
       ],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-meganorm-20261012",
       "baseline_sha": "a3a48937c8ccd36564db71232bbeecf5198c5c20",
       "candidate_sha": "8dd1bb3681beb288923340ad07f228f42c98ddc9",
       "started_at": "2026-10-12T06:25:44.337660+00:00",
       "deadline": "2026-10-12T18:25:44.337660+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38213095329,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3492",
+      "upstream_ci": {
+        "candidate_run_id": 38215563069
+      },
       "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.2",
@@ -3716,8 +3720,8 @@
         "test_count": 11
       },
       "pr_plan": "Candidate inspected: ARM port is architecture declaration only for Python 3.12 environment. Current 0.2.2 fulltest includes complete synthetic EEG extraction with finite features and logarithmic units assertions. Preserve CPU inference/scientific stack and all compatibility fixes; verify ARM wheels before dispatch.",
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38213095329",
       "native_evidence": {
         "source_sha": "8dd1bb3681beb288923340ad07f228f42c98ddc9",
@@ -3748,7 +3752,8 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
-      }
+      },
+      "pr_number": 3492
     },
     {
       "recipe": "megnet",
@@ -4969,57 +4974,69 @@
       "release_metadata_audit": {
         "promotion_run_id": 38209000133,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38209000133",
-        "status": "pending-promotion",
-        "workflow_status": "in_progress",
-        "workflow_conclusion": null,
-        "checked_at": "2026-10-12T06:49:25.616907+00:00",
+        "status": "verified-published-metadata",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
+        "checked_at": "2026-10-12T07:04:12.003160+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
             "path": "releases/panoptica_arm64/2.1.7.json",
             "expected_build_date": "20261012",
-            "committed_build_dates": [],
-            "exists": false,
-            "current_candidate_date_committed": false
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
+            "metadata_commit_sha": "5da36a28ffa9fd847e98df5bce020e5700b4a078",
+            "sif": "panoptica_arm64_2.1.7_20261012.simg",
+            "sif_sha256": "87aadaaa87fb29ced84ca56092b6bbe8542ac5d79f13668a0563c31c09cc68db",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/panoptica_arm64_2.1.7_20261012.simg",
+            "public_sif_head_status": 200
           },
           {
             "architecture": "x86_64",
             "path": "releases/panoptica/2.1.7.json",
             "expected_build_date": "20261012",
             "committed_build_dates": [
-              "20260822"
+              "20261012"
             ],
             "exists": true,
-            "current_candidate_date_committed": false
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
+            "metadata_commit_sha": "5da36a28ffa9fd847e98df5bce020e5700b4a078",
+            "sif": "panoptica_2.1.7_20261012.simg",
+            "sif_sha256": "37290fed87639b6ac9d8b7faf6e3aa1163e907558f5a4f41b5c5a05d103b3634",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/panoptica_2.1.7_20261012.simg",
+            "public_sif_head_status": 200
           }
         ],
         "publish_jobs": [
           {
             "name": "publish (candidate-panoptica-85689c2ead33e71e549b830a2b4093f9cc2c3f3f)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "success",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-wxfhn",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Publish exact tested Docker archive to unique staging tags"
-            ]
+            "active_steps": []
           },
           {
             "name": "publish (candidate-panoptica_arm64-85689c2ead33e71e549b830a2b4093f9cc2c3f3f)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "success",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-9jvzj",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Download candidate bundle without executing it"
-            ]
+            "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T06:49:26.374094+00:00"
+        "metadata_checked_at": "2026-10-12T07:04:19.644808+00:00"
       }
     },
     {
@@ -5040,7 +5057,7 @@
       "port_files": [
         "recipes/pcntoolkit/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-pcntoolkit-20261012",
       "baseline_sha": "a3a48937c8ccd36564db71232bbeecf5198c5c20",
       "candidate_sha": "64d88b79ce7299c91813e28dfdc8b95375b6ab6e",
@@ -5050,10 +5067,168 @@
       "run_id": 38211311165,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3491",
       "upstream_ci": {
-        "candidate_run_id": 38213936792
+        "candidate_run_id": 38213936792,
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "pcntoolkit",
+          "container": "pcntoolkit_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.3.0",
+          "build_date": "20261012",
+          "docker_archive": "pcntoolkit_arm64_1.3.0_20261012.docker.tar",
+          "sif": "pcntoolkit_arm64_1.3.0_20261012.simg",
+          "candidate_tag": "nd-candidate-pcntoolkit_arm64:64d88b79ce72",
+          "launcher": null,
+          "pr_number": 3491,
+          "head_sha": "64d88b79ce7299c91813e28dfdc8b95375b6ab6e",
+          "tests": {
+            "total": 14,
+            "passed": 14,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 13,
+            "fulltest_passed": 13,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Import pcntoolkit and check version",
+              "Verify Python version constraint",
+              "Import top-level public API",
+              "Import scientific stack",
+              "Import Bayesian modelling stack",
+              "Import supporting libraries",
+              "Test NormData.from_ndarrays and train_test_split",
+              "Test NormData.from_dataframe",
+              "Test BLR and NormativeModel construction",
+              "Test HBR construction",
+              "Test end-to-end BLR fit_predict workflow",
+              "Validate bundled tutorials",
+              "Run bundled offline BLR example"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 3,
+                "wasted_space": "1.9 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 3,
+                "wasted_space": "581 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.4454,
+            "wasted_bytes": 16520589,
+            "wasted_bytes_display": "16 MB",
+            "user_wasted_percent": 1.0752
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "pcntoolkit",
+          "container": "pcntoolkit",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.3.0",
+          "build_date": "20261012",
+          "docker_archive": "pcntoolkit_1.3.0_20261012.docker.tar",
+          "sif": "pcntoolkit_1.3.0_20261012.simg",
+          "candidate_tag": "nd-candidate-pcntoolkit:64d88b79ce72",
+          "launcher": null,
+          "pr_number": 3491,
+          "head_sha": "64d88b79ce7299c91813e28dfdc8b95375b6ab6e",
+          "tests": {
+            "total": 14,
+            "passed": 14,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 13,
+            "fulltest_passed": 13,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Import pcntoolkit and check version",
+              "Verify Python version constraint",
+              "Import top-level public API",
+              "Import scientific stack",
+              "Import Bayesian modelling stack",
+              "Import supporting libraries",
+              "Test NormData.from_ndarrays and train_test_split",
+              "Test NormData.from_dataframe",
+              "Test BLR and NormativeModel construction",
+              "Test HBR construction",
+              "Test end-to-end BLR fit_predict workflow",
+              "Validate bundled tutorials",
+              "Run bundled offline BLR example"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 3,
+                "wasted_space": "1.9 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 3,
+                "wasted_space": "581 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.4439,
+            "wasted_bytes": 17522761,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 1.0654
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "merged_sha": "4b7c56594d009bcf0d226760405c856603b38406",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "1.3.0",
@@ -5098,7 +5273,59 @@
           "ubuntu-24.04-arm"
         ]
       },
-      "pr_number": 3491
+      "pr_number": 3491,
+      "merged_at": "2026-10-12T07:01:56Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38215533821,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38215533821",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/pcntoolkit_arm64/1.3.0.json",
+            "expected_build_date": "20261012",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/pcntoolkit/1.3.0.json",
+            "expected_build_date": "20261012",
+            "exists": true,
+            "committed_build_dates": [
+              "20260731"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-12T07:04:23.137419+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-pcntoolkit_arm64-64d88b79ce7299c91813e28dfdc8b95375b6ab6e)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-pcntoolkit-64d88b79ce7299c91813e28dfdc8b95375b6ab6e)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T07:04:24.110007+00:00"
+      }
     },
     {
       "recipe": "petu",
@@ -6313,18 +6540,188 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
+      "status": "ready-to-dispatch",
+      "branch": "arm64/upstream-topaz-20261012",
+      "baseline_sha": "8427f926c0d7159bd134b94f43926f279424bf35",
+      "candidate_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
+      "started_at": "2026-10-12T07:03:34.505234+00:00",
+      "deadline": "2026-10-12T19:03:34.505234+00:00",
+      "attempts": 2,
       "run_id": null,
-      "pr_url": null,
-      "upstream_ci": null,
-      "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3480",
+      "upstream_ci": {
+        "candidate_run_id": 38210182365,
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "topaz",
+          "container": "topaz_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "0.3.20",
+          "build_date": "20261012",
+          "docker_archive": "topaz_arm64_0.3.20_20261012.docker.tar",
+          "sif": "topaz_arm64_0.3.20_20261012.simg",
+          "candidate_tag": "nd-candidate-topaz_arm64:b23cbd4aebfa",
+          "launcher": "topaz",
+          "pr_number": 3480,
+          "head_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
+          "tests": {
+            "total": 130,
+            "passed": 130,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 129,
+            "fulltest_passed": 129,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Pretrained detector CPU inference",
+              "Pretrained 2D denoisers CPU inference",
+              "Pretrained 3D denoisers CPU inference",
+              "Version check",
+              "Main help",
+              "Help shows particle picking commands",
+              "Help shows extract command",
+              "Help shows image processing commands",
+              "Help shows denoise command",
+              "Help shows file utilities",
+              "Train help",
+              "Train help shows device option",
+              "Train help shows model option",
+              "Train help shows learning rate",
+              "Train help shows num-epochs",
+              "Train help shows train-images",
+              "Train help shows train-targets",
+              "Train help shows radius option",
+              "Train help shows method option"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "807 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "452 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "356 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 99.9338,
+            "wasted_bytes": 6123036,
+            "wasted_bytes_display": "6.1 MB",
+            "user_wasted_percent": 0.0891
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "topaz",
+          "container": "topaz",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "0.3.20",
+          "build_date": "20261012",
+          "docker_archive": "topaz_0.3.20_20261012.docker.tar",
+          "sif": "topaz_0.3.20_20261012.simg",
+          "candidate_tag": "nd-candidate-topaz:b23cbd4aebfa",
+          "launcher": "topaz",
+          "pr_number": 3480,
+          "head_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
+          "tests": {
+            "total": 130,
+            "passed": 130,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 129,
+            "fulltest_passed": 129,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Pretrained detector CPU inference",
+              "Pretrained 2D denoisers CPU inference",
+              "Pretrained 3D denoisers CPU inference",
+              "Version check",
+              "Main help",
+              "Help shows particle picking commands",
+              "Help shows extract command",
+              "Help shows image processing commands",
+              "Help shows denoise command",
+              "Help shows file utilities",
+              "Train help",
+              "Train help shows device option",
+              "Train help shows model option",
+              "Train help shows learning rate",
+              "Train help shows num-epochs",
+              "Train help shows train-images",
+              "Train help shows train-targets",
+              "Train help shows radius option",
+              "Train help shows method option"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 3,
+                "wasted_space": "1.9 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "807 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "451 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "355 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 99.9478,
+            "wasted_bytes": 5255604,
+            "wasted_bytes_display": "5.3 MB",
+            "user_wasted_percent": 0.0744
+          }
+        }
+      },
+      "merged_sha": "33397bf941477438716487a3355c5379bc857fad",
+      "next_action": "Fresh root native ARM64 retest of existing merged PR #3480 exact source when one slot is free. No recipe changes or duplicate PR needed; runtime recipe and shared builder inputs match current main.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.5",
@@ -6336,15 +6733,195 @@
         "fulltest_version": "0.2.5",
         "test_count": 126
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "pr_plan": "Existing individual Topaz PR #3480 merged independently at 33397bf941477438716487a3355c5379bc857fad (version 0.3.20), with exact-head b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2 upstream ARM64/x86 reports saved. When an investigation/build slot is available, inspect this source and run fresh root native ARM64 verification of the same immutable source; reuse the already passing upstream evidence rather than creating a duplicate PR or rerunning unchanged successful upstream builds. Do not claim authorship of the existing PR or mark complete before native proof.",
       "existing_upstream_prs": [
         {
           "number": 3480,
           "url": "https://github.com/neurodesk/neurocontainers/pull/3480",
-          "observed_state": "OPEN",
-          "note": "Existing version update; inspect current main/PR evidence before starting this recipe, and avoid duplicate submissions."
+          "observed_state": "MERGED",
+          "head_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
+          "merge_sha": "33397bf941477438716487a3355c5379bc857fad",
+          "merged_at": "2026-10-12T06:49:44Z",
+          "candidate_run_id": 38210182365,
+          "upstream_reports": {
+            "aarch64": {
+              "schema_version": 3,
+              "recipe": "topaz",
+              "container": "topaz_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
+              "version": "0.3.20",
+              "build_date": "20261012",
+              "docker_archive": "topaz_arm64_0.3.20_20261012.docker.tar",
+              "sif": "topaz_arm64_0.3.20_20261012.simg",
+              "candidate_tag": "nd-candidate-topaz_arm64:b23cbd4aebfa",
+              "launcher": "topaz",
+              "pr_number": 3480,
+              "head_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
+              "tests": {
+                "total": 130,
+                "passed": 130,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 129,
+                "fulltest_passed": 129,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "Pretrained detector CPU inference",
+                  "Pretrained 2D denoisers CPU inference",
+                  "Pretrained 3D denoisers CPU inference",
+                  "Version check",
+                  "Main help",
+                  "Help shows particle picking commands",
+                  "Help shows extract command",
+                  "Help shows image processing commands",
+                  "Help shows denoise command",
+                  "Help shows file utilities",
+                  "Train help",
+                  "Train help shows device option",
+                  "Train help shows model option",
+                  "Train help shows learning rate",
+                  "Train help shows num-epochs",
+                  "Train help shows train-images",
+                  "Train help shows train-targets",
+                  "Train help shows radius option",
+                  "Train help shows method option"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 4,
+                    "wasted_space": "2.7 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.4 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "807 kB",
+                    "path": "/var/log/dpkg.log"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "452 kB",
+                    "path": "/var/lib/dpkg/status"
+                  },
+                  {
+                    "count": 3,
+                    "wasted_space": "356 kB",
+                    "path": "/var/lib/dpkg/status-old"
+                  }
+                ],
+                "efficiency_percent": 99.9338,
+                "wasted_bytes": 6123036,
+                "wasted_bytes_display": "6.1 MB",
+                "user_wasted_percent": 0.0891
+              }
+            },
+            "x86_64": {
+              "schema_version": 3,
+              "recipe": "topaz",
+              "container": "topaz",
+              "variant": "",
+              "architecture": "x86_64",
+              "version": "0.3.20",
+              "build_date": "20261012",
+              "docker_archive": "topaz_0.3.20_20261012.docker.tar",
+              "sif": "topaz_0.3.20_20261012.simg",
+              "candidate_tag": "nd-candidate-topaz:b23cbd4aebfa",
+              "launcher": "topaz",
+              "pr_number": 3480,
+              "head_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
+              "tests": {
+                "total": 130,
+                "passed": 130,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 129,
+                "fulltest_passed": 129,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "Pretrained detector CPU inference",
+                  "Pretrained 2D denoisers CPU inference",
+                  "Pretrained 3D denoisers CPU inference",
+                  "Version check",
+                  "Main help",
+                  "Help shows particle picking commands",
+                  "Help shows extract command",
+                  "Help shows image processing commands",
+                  "Help shows denoise command",
+                  "Help shows file utilities",
+                  "Train help",
+                  "Train help shows device option",
+                  "Train help shows model option",
+                  "Train help shows learning rate",
+                  "Train help shows num-epochs",
+                  "Train help shows train-images",
+                  "Train help shows train-targets",
+                  "Train help shows radius option",
+                  "Train help shows method option"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 3,
+                    "wasted_space": "1.9 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.4 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "807 kB",
+                    "path": "/var/log/dpkg.log"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "451 kB",
+                    "path": "/var/lib/dpkg/status"
+                  },
+                  {
+                    "count": 3,
+                    "wasted_space": "355 kB",
+                    "path": "/var/lib/dpkg/status-old"
+                  }
+                ],
+                "efficiency_percent": 99.9478,
+                "wasted_bytes": 5255604,
+                "wasted_bytes_display": "5.3 MB",
+                "user_wasted_percent": 0.0744
+              }
+            }
+          },
+          "note": "Already merged independently with positive all-pass ARM64 and x86 runtime reports. Only Topaz recipe files changed. Preserve this existing individual PR and evidence; avoid a duplicate or empty PR. Fresh root native ARM64 verification of this exact tested source is still required before counting completion."
         }
-      ]
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 1,
+      "pr_number": 3480,
+      "merged_at": "2026-10-12T06:49:44Z",
+      "current_upstream_sha_at_review": "4b7c56594d009bcf0d226760405c856603b38406",
+      "current_recipe_inputs_match_upstream": true
     },
     {
       "recipe": "topofit",
