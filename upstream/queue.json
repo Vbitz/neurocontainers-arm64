@@ -342,18 +342,18 @@
       "port_files": [
         "recipes/ants/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-ants-runtime-20261012",
       "baseline_sha": "3074741662d65ad1c7aa4042248ab4bfd72eec36",
       "candidate_sha": "72f72b06ed357182e63a4370760b5f84ca0140c2",
       "started_at": "2026-10-12T05:01:51.539183+00:00",
       "deadline": "2026-10-12T17:01:51.539183+00:00",
-      "attempts": 4,
+      "attempts": 6,
       "run_id": 38254862112,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3517",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "2.6.5",
@@ -365,9 +365,9 @@
         "test_count": 102
       },
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38254862112",
-      "arm64_attempts": 3,
-      "x86_64_attempts": 1,
-      "pr_number": null,
+      "arm64_attempts": 4,
+      "x86_64_attempts": 2,
+      "pr_number": 3517,
       "merged_at": "2026-10-12T07:47:46Z",
       "runtime_review": {
         "outcome": "followup-required",
@@ -729,7 +729,53 @@
           }
         }
       ],
-      "upstream_verification_mode": "runtime-only"
+      "upstream_verification_mode": "runtime-only",
+      "deploy_skip_review": {
+        "source_sha": "72f72b06ed357182e63a4370760b5f84ca0140c2",
+        "reviewed": true,
+        "counts": {
+          "total": 960,
+          "passed": 857,
+          "failed": 0,
+          "skipped": 103
+        },
+        "note": "All103 top-level checks and102 scientific fulltests passed, everyfulltestexit0, including corrected directionreset/disassembly outputs. Nesteddeploy857/960,0failed:1unusedDEPLOY_BINS becausebothdeclaredDEPLOY_PATH directoriespassed;102informationalnon-file lddentry records(2each), all102actualELFlinkagesummariespassed. Thesearevirtual/loaderparserentries, not skippeddeclaredtools/scientifictests."
+      },
+      "native_command_exit_review": {
+        "source_sha": "72f72b06ed357182e63a4370760b5f84ca0140c2",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "72f72b06ed357182e63a4370760b5f84ca0140c2",
+        "version": "2.6.5",
+        "counts": {
+          "total_tests": 103,
+          "passed": 103,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "total_suites": 1,
+          "suites_passed": 1,
+          "suites_failed": 0,
+          "total_tests": 102,
+          "tests_passed": 102,
+          "tests_failed": 0,
+          "duration": 625.2118012905121,
+          "run_timestamp": "2026-10-12T14:21:08.899566"
+        },
+        "deploy_counts": {
+          "total": 960,
+          "passed": 857,
+          "failed": 0,
+          "skipped": 103
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38254862112",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "apptainer",
@@ -2326,9 +2372,96 @@
       "attempts": 6,
       "run_id": 38258128668,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3515",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "candidate_run_id": 38258899025,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38258899025",
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "brkraw",
+          "container": "brkraw_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "0.5.7",
+          "build_date": "20261012",
+          "docker_archive": "brkraw_arm64_0.5.7_20261012.docker.tar",
+          "sif": "brkraw_arm64_0.5.7_20261012.simg",
+          "candidate_tag": "nd-candidate-brkraw_arm64:a481dbdd858a",
+          "launcher": "brkraw",
+          "pr_number": 3515,
+          "head_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
+          "tests": {
+            "total": 76,
+            "passed": 76,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 75,
+            "fulltest_passed": 75,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "brkraw version check",
+              "brkraw help",
+              "brkraw info help",
+              "brkraw convert help",
+              "brkraw convert-batch help",
+              "Bruker parameter parsing",
+              "nib-ls version",
+              "nib-ls help",
+              "nib-ls T1w basic info",
+              "nib-ls T1w verbose",
+              "nib-ls T1w with stats",
+              "nib-ls T1w header fields",
+              "nib-ls BOLD info",
+              "nib-ls BOLD with stats",
+              "nib-ls multiple files",
+              "nib-ls verbose multiple files",
+              "nib-stats help",
+              "nib-stats T1w volume mm3",
+              "nib-stats T1w volume voxels"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 4,
+                "wasted_space": "2.8 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "823 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "476 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "378 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 98.7245,
+            "wasted_bytes": 7018857,
+            "wasted_bytes_display": "7.0 MB",
+            "user_wasted_percent": 1.9282
+          }
+        }
+      },
       "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "next_action": "Exact upstream ARM76/76 (75fulltests)/Dive verified/cached. Await queuedx86 actualreport+requiredgates; original6/6 and17:42deadlinepersist. Do notrerun passedARM.",
       "upstream_review": {
         "exists": true,
         "version": "0.5.7",
@@ -3942,18 +4075,54 @@
         ]
       },
       "port_files": [],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-dcm2bids-20261012",
       "baseline_sha": "b35e38baed8ba39f0ddc8707e0e98d52e32acf8a",
       "candidate_sha": "02f8bf5ea00a4d6213c980bc1bcefbd3a5011665",
       "started_at": "2026-10-12T13:52:00+00:00",
       "deadline": "2026-10-13T01:52:00+00:00",
-      "attempts": 2,
+      "attempts": 4,
       "run_id": 38260702822,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3516",
+      "upstream_ci": {
+        "runtime_run_id": 38262382730,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38262382730",
+        "head_sha": "02f8bf5ea00a4d6213c980bc1bcefbd3a5011665",
+        "tested_merge_sha": "a28c6e8f7dce830eac48743bbe6481b8cc69558b",
+        "recipe_tree_matches_head": true,
+        "aarch64": {
+          "runtime_observation": {
+            "container": "dcm2bids_arm64",
+            "version": "3.3.1",
+            "machine": "aarch64",
+            "status": "passed",
+            "observed_at": "2026-10-12T14:25:40.314647+00:00",
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38262382730",
+            "recipe_sha256": "fe8da0fd556b9c00418975356134fd78e12056b761f1e28f0202f0d94eef44eb",
+            "image_id": "sha256:c58b8e796a4184bfe8619da97e5895533298376f6594dd08ab8db307cffd462b",
+            "candidate_sha256": "37ec364e5d7d62d80d55dfe60a29dc3be66e3c62b58229b7eb137acd9aa65519"
+          },
+          "counts": {
+            "total_tests": 62,
+            "passed": 62,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 55.093913316726685,
+            "run_timestamp": "2026-10-12T14:25:40.194145",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 61,
+            "total_suites": 1,
+            "total_tests": 61
+          },
+          "artifact_name": "recipe-check-dcm2bids_arm64-a28c6e8f7dce830eac48743bbe6481b8cc69558b"
+        }
+      },
       "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "next_action": "Exact upstream runtime merge/head/complete-recipetree andARM62/62 verified/cached. Awaitx86actualreport+allgates; noimagepublication expected.",
       "upstream_review": {
         "exists": true,
         "version": "3.3.1",
@@ -3967,8 +4136,8 @@
       },
       "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
       "upstream_verification_mode": "runtime-only",
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38260702822",
       "attempt_history": [
         {
@@ -4013,7 +4182,8 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
-      }
+      },
+      "pr_number": 3516
     },
     {
       "recipe": "dcm2niix",
@@ -6689,7 +6859,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T14:00:46.557801+00:00",
+        "checked_at": "2026-10-12T14:31:39.853109+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -6714,7 +6884,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T14:00:47.396466+00:00"
+        "metadata_checked_at": "2026-10-12T14:31:40.689340+00:00"
       }
     },
     {
@@ -6774,7 +6944,7 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-glmsingle-20261012",
       "baseline_sha": "b35e38baed8ba39f0ddc8707e0e98d52e32acf8a",
       "candidate_sha": "2e2a477ef48cc16f83c6d7053615e74c977c878a",
@@ -6785,7 +6955,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.0",
@@ -6801,7 +6971,42 @@
       "upstream_verification_mode": "runtime-only",
       "arm64_attempts": 1,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38261078085"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38261078085",
+      "native_command_exit_review": {
+        "source_sha": "2e2a477ef48cc16f83c6d7053615e74c977c878a",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "2e2a477ef48cc16f83c6d7053615e74c977c878a",
+        "version": "1.2.0",
+        "counts": {
+          "total_tests": 78,
+          "passed": 78,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 108.53869652748108,
+          "run_timestamp": "2026-10-12T14:19:45.590783",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 77,
+          "total_suites": 1,
+          "total_tests": 77
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38261078085",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "globus",
@@ -7138,19 +7343,21 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T14:00:48.666339+00:00",
-        "workflow_status": "queued",
+        "checked_at": "2026-10-12T14:31:42.044608+00:00",
+        "workflow_status": "in_progress",
         "workflow_conclusion": null,
         "publish_jobs": [
           {
             "name": "publish (candidate-hdbet-20835db5be6559a46dd369e4982cfac77a46cb91)",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "runner_name": "",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-qgt28",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": []
+            "active_steps": [
+              "Download candidate bundle without executing it"
+            ]
           },
           {
             "name": "publish (candidate-hdbet_arm64-20835db5be6559a46dd369e4982cfac77a46cb91)",
@@ -7165,7 +7372,7 @@
             ]
           }
         ],
-        "metadata_checked_at": "2026-10-12T14:00:49.638295+00:00"
+        "metadata_checked_at": "2026-10-12T14:31:43.271447+00:00"
       }
     },
     {
