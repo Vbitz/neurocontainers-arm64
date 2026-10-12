@@ -2635,7 +2635,7 @@
         "recipes/clearswi/build.yaml",
         "recipes/clearswi/fulltest.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-clearswi-20261012",
       "baseline_sha": "f5321b4d004e57be368a31e57a37a00b9d74d6d6",
       "candidate_sha": "83de01a91c3fe525ddef4e60924c9b9797ad6371",
@@ -2730,10 +2730,97 @@
             "wasted_bytes_display": "18 MB",
             "user_wasted_percent": 0.7595
           }
-        }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "clearswi",
+          "container": "clearswi_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.7.0",
+          "build_date": "20261012",
+          "docker_archive": "clearswi_arm64_1.7.0_20261012.docker.tar",
+          "sif": "clearswi_arm64_1.7.0_20261012.simg",
+          "candidate_tag": "nd-candidate-clearswi_arm64:83de01a91c3f",
+          "launcher": "julia",
+          "pr_number": 3502,
+          "head_sha": "83de01a91c3fe525ddef4e60924c9b9797ad6371",
+          "tests": {
+            "total": 68,
+            "passed": 68,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 67,
+            "fulltest_passed": 67,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "clearswi launcher available",
+              "clearswi usage without arguments",
+              "clearswi help flags",
+              "clearswi version flag",
+              "Julia version check",
+              "CLEARSWI package loads",
+              "CLEARSWI exports available",
+              "Test data exists",
+              "Read magnitude image",
+              "Read phase image",
+              "Create Data struct",
+              "Calculate SWI with defaults",
+              "Calculate and save SWI",
+              "Create MIP default",
+              "Create MIP custom depth",
+              "Create maximum intensity projection",
+              "Magnitude combine SNR",
+              "Magnitude combine average",
+              "Magnitude combine last echo"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "808 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.4342,
+            "wasted_bytes": 18024866,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 1.0186
+          }
+        },
+        "candidate_run_id": 38242620566,
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Verify corrected exact-head upstream ARM64 and x86_64 reports and Dive/gates; final6/6 attempt budget, no more builds.",
+      "merged_sha": "aa21a7df2d78c08b6f71e2a3d3af2b95d928b809",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "1.7.0",
@@ -2917,6 +3004,58 @@
             "user_wasted_percent": 0.759
           }
         }
+      },
+      "merged_at": "2026-10-12T12:25:55Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38248983163,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38248983163",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/clearswi_arm64/1.7.0.json",
+            "expected_build_date": "20261012",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/clearswi/1.7.0.json",
+            "expected_build_date": "20261012",
+            "exists": true,
+            "committed_build_dates": [
+              "20260914"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-12T12:38:16.056705+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-clearswi-83de01a91c3fe525ddef4e60924c9b9797ad6371)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-clearswi_arm64-83de01a91c3fe525ddef4e60924c9b9797ad6371)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T12:38:16.842318+00:00"
       }
     },
     {
@@ -4539,32 +4678,36 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T12:13:29.148721+00:00",
-        "workflow_status": "queued",
+        "checked_at": "2026-10-12T12:38:18.012633+00:00",
+        "workflow_status": "in_progress",
         "workflow_conclusion": null,
         "publish_jobs": [
           {
             "name": "publish (candidate-dicomtools-983b27d1fd8aecf2da4d0244053fe8479149864a)",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "runner_name": "",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-xslr6",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": []
+            "active_steps": [
+              "Publish tested SIF to unique staging object keys"
+            ]
           },
           {
             "name": "publish (candidate-dicomtools_arm64-983b27d1fd8aecf2da4d0244053fe8479149864a)",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "runner_name": "",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-tgqdt",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": []
+            "active_steps": [
+              "Publish exact tested Docker archive to unique staging tags"
+            ]
           }
         ],
-        "metadata_checked_at": "2026-10-12T12:13:30.215813+00:00"
+        "metadata_checked_at": "2026-10-12T12:38:18.804402+00:00"
       }
     },
     {
@@ -5987,18 +6130,21 @@
       "port_files": [
         "recipes/gingerale/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-gingerale-20261012",
       "baseline_sha": "5c13f2e1cb89493c732394981ae780380e12b2fc",
       "candidate_sha": "07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5",
       "started_at": "2026-10-12T12:10:57.297821+00:00",
       "deadline": "2026-10-13T00:10:57.297821+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38247655214,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3512",
+      "upstream_ci": {
+        "run_id": 38249033786,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38249033786"
+      },
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "4.0.0",
@@ -6020,9 +6166,40 @@
         "artifact_sha256": "6a0eae7477a2aa8d249bdce6c406debb1fea5cefb1f2e7ec419d06197bd80739",
         "contract": "Official4.0.0Java package, Unix java-cp launcher; downloaded artifact matches recipe SHA and contains no bundled so/dll/dylib native libraries. Ubuntu24.04OpenJDK21availableonARM. Onlyarchitecture declaration changes; preserve all51current tests including actual Talairach/MNI ALE probability maps, mask/threshold variants and coordinate transforms. Botharchitecture schema/updatepolicy generation and codespellpassed."
       },
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38247655214"
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38247655214",
+      "native_evidence": {
+        "source_sha": "07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5",
+        "version": "4.0.0",
+        "counts": {
+          "total_tests": 52,
+          "passed": 52,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 135.41975498199463,
+          "run_timestamp": "2026-10-12T12:17:40.996223",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 51,
+          "total_suites": 1,
+          "total_tests": 51
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38247655214",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pr_number": 3512
     },
     {
       "recipe": "gliomoda",
@@ -6169,18 +6346,21 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-hdbet-20261012",
       "baseline_sha": "5f869919acb27615303977edaf5da13a603dfc9b",
       "candidate_sha": "20835db5be6559a46dd369e4982cfac77a46cb91",
       "started_at": "2026-10-12T11:16:02.699996+00:00",
       "deadline": "2026-10-12T23:16:02.699996+00:00",
-      "attempts": 3,
+      "attempts": 5,
       "run_id": 38247274390,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3513",
+      "upstream_ci": {
+        "run_id": 38250028256,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38250028256"
+      },
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "2.0.1",
@@ -6210,8 +6390,8 @@
           "implementation": "ARM-only launcher preloads existing wheel OpenMP DSO at process startup and execs original HD-BET entrypoint. No library/compiler patch, dependency pin roulette or global preload. Both architecture generations/spelling and wrapper shsyntax pass; unchanged scientific assertions."
         }
       },
-      "arm64_attempts": 3,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 4,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38247274390",
       "attempt_history": [
         {
@@ -6236,7 +6416,38 @@
         "note": "Counts within original6-build/12h budget; no source or test changes.",
         "run_id": 38247274390,
         "candidate_sha": "20835db5be6559a46dd369e4982cfac77a46cb91"
-      }
+      },
+      "native_evidence": {
+        "source_sha": "20835db5be6559a46dd369e4982cfac77a46cb91",
+        "version": "2.0.1",
+        "counts": {
+          "total_tests": 7,
+          "passed": 7,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 138.3601315021515,
+          "run_timestamp": "2026-10-12T12:26:27.474324",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 6,
+          "total_suites": 1,
+          "total_tests": 6
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38247274390",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pr_number": 3513
     },
     {
       "recipe": "heudiconv",
@@ -9093,18 +9304,18 @@
       "port_files": [
         "recipes/palm/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
+      "status": "ready-to-dispatch",
+      "branch": "arm64/upstream-palm-20261012",
+      "baseline_sha": "aa21a7df2d78c08b6f71e2a3d3af2b95d928b809",
+      "candidate_sha": "d312a51693eba0128737a723724a70f8b4a74b18",
+      "started_at": "2026-10-12T12:37:31.605287+00:00",
+      "deadline": "2026-10-13T00:37:31.605287+00:00",
       "attempts": 0,
       "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Validated and pushed; await a free build slot before the first native dispatch.",
       "upstream_review": {
         "exists": true,
         "version": "alpha119",
@@ -9116,7 +9327,13 @@
         "test_count": 55,
         "patch_conflict": "error: patch failed: recipes/palm/build.yaml:10\nerror: recipes/palm/build.yaml: patch does not apply",
         "three_way_clean": true
-      }
+      },
+      "preflight_sources": [
+        "https://fsl.fmrib.ox.ac.uk/fsl/docs/statistics/palm/user_guide.html"
+      ],
+      "validation_notes": [
+        "All55 existing tests unchanged; added exact analytical t-statistic and seeded output assertions. Shell syntax and recipe checks pass. Fulltest spelling check reports pre-existing Mapp at line21; retained unchanged."
+      ]
     },
     {
       "recipe": "pals",
@@ -11989,9 +12206,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "sha": "77d42f3b3e7b5502388657aa6b97a4f392279be5",
+    "sha": "aa21a7df2d78c08b6f71e2a3d3af2b95d928b809",
     "actions_enabled": false,
-    "note": "Normal fast-forward to current upstream main; accepted historical top-level gitlink unchanged."
+    "note": "Normal fast-forward through the accepted CLEARSWI merge, including23 accepted recipe PRs; historical root gitlink unchanged."
   },
   "runtime_release_routing_fix": {
     "status": "merged",
