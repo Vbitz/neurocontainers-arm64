@@ -1412,7 +1412,16 @@
         "port_patch_applies": true,
         "fulltest_version": "0.1.13",
         "test_count": 20
-      }
+      },
+      "existing_upstream_prs": [
+        {
+          "number": 3488,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3488",
+          "title": "brats: show CPU compatibility in brats-algorithms",
+          "status": "OPEN",
+          "note": "Independent upstream change observed 2026-10-12. Reconcile before starting to avoid duplicate recipe work."
+        }
+      ]
     },
     {
       "recipe": "brkraw",
@@ -2787,7 +2796,7 @@
       "port_files": [
         "recipes/gigaconnectome/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "blocked-infrastructure",
       "branch": "arm64/upstream-gigaconnectome-20261012",
       "baseline_sha": "8ffc4cca756fd5099c7e1a65d22f93ad354da01f",
       "candidate_sha": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
@@ -2797,10 +2806,102 @@
       "run_id": 38210795614,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3489",
       "upstream_ci": {
-        "candidate_run_id": 38212268669
+        "candidate_run_id": 38212268669,
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "gigaconnectome",
+          "container": "gigaconnectome_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "0.6.0",
+          "build_date": "20261012",
+          "docker_archive": "gigaconnectome_arm64_0.6.0_20261012.docker.tar",
+          "sif": "gigaconnectome_arm64_0.6.0_20261012.simg",
+          "candidate_tag": "nd-candidate-gigaconnectome_arm64:5b949c5edcf8",
+          "launcher": "giga_connectome",
+          "pr_number": 3489,
+          "head_sha": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
+          "tests": {
+            "total": 94,
+            "passed": 94,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 93,
+            "fulltest_passed": 93,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "giga_connectome version check",
+              "giga_connectome help",
+              "giga_connectome help - participant label",
+              "giga_connectome help - atlas option",
+              "giga_connectome help - denoise strategy",
+              "giga_connectome help - smoothing option",
+              "Python version check",
+              "Python import giga_connectome",
+              "Python nilearn version",
+              "Python nibabel version",
+              "Python pybids version",
+              "Python templateflow version",
+              "Python numpy version",
+              "Python scipy import",
+              "Python pandas import",
+              "pybids version check",
+              "pybids help",
+              "pybids layout help",
+              "pybids upgrade help"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "7.4 MB",
+                "path": "/usr/bin/perl"
+              },
+              {
+                "count": 6,
+                "wasted_space": "4.8 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.9 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "3.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libc.so.6"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.7 MB",
+                "path": "/usr/sbin/ldconfig"
+              }
+            ],
+            "efficiency_percent": 95.9464,
+            "wasted_bytes": 96037211,
+            "wasted_bytes_display": "96 MB",
+            "user_wasted_percent": 8.1048
+          }
+        },
+        "conclusion": "failure",
+        "x86_64_failure": {
+          "stage": "Stage and build candidate",
+          "base_image": "bids/giga_connectome:0.6.0",
+          "base_digest": "sha256:fcc5051ab1c01a41cea57a6d9e39d592fcf1b85269feaaca258018c154608212",
+          "first_error": "Debian Bullseye security packages return HTTP 404 during the shared neurodocker preamble, before recipe directives: ca-certificates 20250419~deb12u1~deb11u1; libc-l10n/locales 2.31-13+deb11u14; libcurl4/curl 7.74.0-1.3+deb11u16; unzip 6.0-26+deb11u2. apt-get update had run, so this is not merely an old package list.",
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38212268669"
+        }
       },
       "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "next_action": "Revisit with a corrected official x86 base or approved ordinary shared-preamble archive configuration and enough authorized build budget to verify the changed exact candidate on both architectures. Preserve PR #3489 and ARM proof; no unchanged retry for persistent archived URLs.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.0",
@@ -2882,7 +2983,9 @@
           "ubuntu-24.04-arm"
         ]
       },
-      "pr_number": 3489
+      "pr_number": 3489,
+      "blocked_at": "2026-10-12T06:35:19.652291+00:00",
+      "blocker": "Current upstream x86 base uses unavailable Bullseye security packages; x86 build fails before application installation. ARM64 current source passed both native and upstream runtime tests. Five of six total builds consumed; changing the candidate triggers two upstream architecture builds and would exceed the persistent budget."
     },
     {
       "recipe": "gimp",
@@ -3571,18 +3674,18 @@
       "port_files": [
         "recipes/meganorm/build.yaml"
       ],
-      "status": "ready-to-dispatch",
+      "status": "native-running",
       "branch": "arm64/upstream-meganorm-20261012",
       "baseline_sha": "a3a48937c8ccd36564db71232bbeecf5198c5c20",
       "candidate_sha": "8dd1bb3681beb288923340ad07f228f42c98ddc9",
       "started_at": "2026-10-12T06:25:44.337660+00:00",
       "deadline": "2026-10-12T18:25:44.337660+00:00",
-      "attempts": 0,
-      "run_id": null,
+      "attempts": 1,
+      "run_id": 38213095329,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Validated and pushed; await a free build slot before the first native dispatch.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.2",
@@ -3593,7 +3696,10 @@
         "fulltest_version": "0.2.2",
         "test_count": 11
       },
-      "pr_plan": "Candidate inspected: ARM port is architecture declaration only for Python 3.12 environment. Current 0.2.2 fulltest includes complete synthetic EEG extraction with finite features and logarithmic units assertions. Preserve CPU inference/scientific stack and all compatibility fixes; verify ARM wheels before dispatch."
+      "pr_plan": "Candidate inspected: ARM port is architecture declaration only for Python 3.12 environment. Current 0.2.2 fulltest includes complete synthetic EEG extraction with finite features and logarithmic units assertions. Preserve CPU inference/scientific stack and all compatibility fixes; verify ARM wheels before dispatch.",
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38213095329"
     },
     {
       "recipe": "megnet",
@@ -3914,18 +4020,18 @@
       "port_files": [
         "recipes/modsort/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-modsort-20261012",
+      "baseline_sha": "5a09a87422c5f04892824b0d5a8782adebd861e5",
+      "candidate_sha": "b8764c4d1150f58dafc62913167242a94fc96769",
+      "started_at": "2026-10-12T06:36:34.467681+00:00",
+      "deadline": "2026-10-12T18:36:34.467681+00:00",
+      "attempts": 1,
+      "run_id": 38213391991,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.2",
@@ -3936,7 +4042,10 @@
         "fulltest_version": "0.0.2",
         "test_count": 7
       },
-      "pr_plan": "Candidate inspected: select official ARM64 AppImage through architecture variable and install zlib development linker needed by its extraction runtime. Existing seven checks include non-root readability, resolved shared libraries and actual Xvfb GUI launch. Verify current official asset names before replay; preserve x86 path."
+      "pr_plan": "Preflight confirms official BrainLesion/modsort v0.0.2 release publishes modsort-Linux-arm64-0.0.2.AppImage (GitHub release API checked 2026-10-12). Replay architecture-conditional get_file selection and zlib1g-dev extraction dependency; keep real 30-second Xvfb non-root launch and all seven runtime checks. No branch, investigation clock or run started while four recipes are active.",
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38213391991"
     },
     {
       "recipe": "mricron",
@@ -6573,10 +6682,23 @@
     }
   ],
   "pull_request_policy": "Exactly one focused upstream pull request per remaining in-scope container; never combine containers. OpenRecon recipes are excluded by user instruction.",
-  "source_only_ci_note": "Upstream release planner does not build candidates for fulltest-only changes. Such PRs must receive separate upstream container verification of their actual candidate before merge; Code quality alone does not prove runtime.",
+  "source_only_ci_note": "Resolved by upstream PR #3490 (merge 5a09a87422c5f04892824b0d5a8782adebd861e5): fulltest-only recipe PRs now require all-variant Recipes CI builds and runtime tests, distinct from promotion. Inspect actual exact-source reports before merge.",
   "target_count": 112,
   "excluded_count": 17,
   "scope_updated_at": "2026-10-12T05:23:03.900742+00:00",
   "scope_exclusion": "All recipes identified by upstream builder.openrecon_updates.uses_openrecon are excluded by explicit user instruction.",
-  "attempt_accounting": "Six total container build attempts per recipe/investigation, including the root native ARM64 run and both architecture jobs in each upstream candidate matrix. Separate architecture counters are retained; source-only checks without a build do not consume a build attempt."
+  "attempt_accounting": "Six total container build attempts per recipe/investigation, including the root native ARM64 run and both architecture jobs in each upstream candidate matrix. Separate architecture counters are retained; source-only checks without a build do not consume a build attempt.",
+  "runtime_test_ci_fix": {
+    "status": "merged",
+    "branch": "arm64/verify-fulltest-only-prs-20261012",
+    "source_sha": "a05b8178271658d5b2d12dccbc2b3c6fce94df8c",
+    "pr_number": 3490,
+    "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3490",
+    "reason": "fulltest-only recipe PRs currently skip runtime tests; require all-variant native image/SIF/deploy/fulltest verification separately from the release plan.",
+    "local_validation": "189 focused tests passed; actionlint, Ruff, codespell passed. Six unchanged signing round-trip tests require Linux/Bash mapfile; upstream Linux checks pending.",
+    "next_action": "Future fulltest-only PRs now require upstream runtime reports; verify their actual PR source and all declared variants before merge.",
+    "merged_sha": "5a09a87422c5f04892824b0d5a8782adebd861e5",
+    "merged_at": "2026-10-12T06:36:14Z",
+    "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
+  }
 }

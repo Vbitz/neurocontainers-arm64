@@ -34,10 +34,13 @@ do not manufacture empty PRs or mark their upstream testing complete without
 evidence. The user explicitly requires one PR per container; never combine
 containers in a PR.
 
-Upstream classifies fulltest-only PRs as source-only and does not build image
-candidates for them. Those PRs need separate upstream container verification of
-their actual candidate before merge. A successful Code quality check alone does
-not satisfy runtime verification.
+Upstream classifies fulltest-only PRs as source-only. Supporting
+[PR #3490](https://github.com/neurodesk/neurocontainers/pull/3490) now requires
+Recipes CI verification of every declared variant for those PRs, using newly
+built Docker images and SIFs. The required release gate checks those runtime
+results while retaining the existing release plan: verification-only builds do
+not publish images or release metadata. Inspect the actual reports and source
+commit before merging each recipe PR.
 
 The user explicitly authorized upstream PRs and merges for this assignment.
 Fork Actions remains disabled. The upstream `Container release gate` and
