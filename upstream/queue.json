@@ -168,18 +168,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-amico-20261012",
+      "baseline_sha": "e35419a8aea87ae0c6024c3e29663e3c65612dd3",
+      "candidate_sha": "410446aa31a5c96fa7226c987b2509ab06691b3f",
+      "started_at": "2026-10-12T09:02:25.117241+00:00",
+      "deadline": "2026-10-12T21:02:25.117241+00:00",
+      "attempts": 1,
+      "run_id": 38227423531,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.1",
@@ -191,7 +191,15 @@
         "fulltest_version": "2.1.1",
         "test_count": 74
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "upstream_verification_mode": "runtime-only",
+      "primary_source_review": {
+        "source": "https://github.com/daducci/AMICO/blob/v2.1.1/amico/synthesis.py",
+        "note": "Pinned synthesis API produces 1D measurement vectors; retain existing acquisition and parameters. Add finite shape/attenuation assertions and exact saved NIfTI pixel/geometry roundtrip; no image or scientific algorithm changes."
+      },
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38227423531"
     },
     {
       "recipe": "ants",
@@ -491,7 +499,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T08:33:33.218479+00:00",
+        "checked_at": "2026-10-12T09:06:40.743369+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -516,7 +524,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T08:33:37.447288+00:00"
+        "metadata_checked_at": "2026-10-12T09:06:45.350749+00:00"
       }
     },
     {
@@ -880,7 +888,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T08:33:38.687567+00:00",
+        "checked_at": "2026-10-12T09:06:47.048752+00:00",
         "metadata": [
           {
             "architecture": "x86_64",
@@ -939,7 +947,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T08:33:42.349656+00:00"
+        "metadata_checked_at": "2026-10-12T09:06:50.708316+00:00"
       }
     },
     {
@@ -1301,18 +1309,18 @@
       "port_files": [
         "recipes/brainles-aurora/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
+      "status": "ready-to-dispatch",
+      "branch": "arm64/upstream-brainles-aurora-20261012",
+      "baseline_sha": "e35419a8aea87ae0c6024c3e29663e3c65612dd3",
+      "candidate_sha": "12dd9fd8e64ffa76ae7eeec61d82a884958ecfff",
+      "started_at": "2026-10-12T09:06:19.347286+00:00",
+      "deadline": "2026-10-12T21:06:19.347286+00:00",
       "attempts": 0,
       "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Validated and pushed; await a free build slot before the first native dispatch.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.7",
@@ -1322,6 +1330,17 @@
         "port_patch_applies": true,
         "fulltest_version": "0.2.7",
         "test_count": 14
+      },
+      "primary_source_review": {
+        "package_version": "0.2.7",
+        "torch_requirement": "torch>=2.1.0",
+        "arm_torch_version": "2.5.1",
+        "sources": [
+          "https://pypi.org/pypi/brainles-aurora/0.2.7/json",
+          "https://github.com/BrainLesion/AURORA",
+          "https://pypi.org/pypi/torch/2.5.1/json"
+        ],
+        "note": "Verified official wheel SHA256 before inspecting inferer.py: Device.CPU is directly supported; AUTO/GPU without CUDA falls back to CPU. Official PyPI ARM PyTorch2.5.1 satisfies package requirements and was just verified by DQE current-source native/upstream CPU inference. Both generated Dockerfiles retain installation/weights/permissions in one RUN; x86 CUDA pip command unchanged. All14 original tests retained including real 3D inference and exact repeat-run output."
       }
     },
     {
@@ -1601,7 +1620,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T08:33:43.585515+00:00",
+        "checked_at": "2026-10-12T09:06:52.037344+00:00",
         "metadata": [
           {
             "architecture": "x86_64",
@@ -1660,7 +1679,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T08:33:47.242368+00:00"
+        "metadata_checked_at": "2026-10-12T09:06:55.844540+00:00"
       }
     },
     {
@@ -1976,7 +1995,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T08:33:48.609276+00:00",
+        "checked_at": "2026-10-12T09:06:57.192905+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -2035,7 +2054,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T08:33:52.872349+00:00"
+        "metadata_checked_at": "2026-10-12T09:07:00.785960+00:00"
       }
     },
     {
@@ -2268,18 +2287,21 @@
         ]
       },
       "port_files": [],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-condaenvs-20261012",
       "baseline_sha": "adb11f430e76abaf0294852840a23a94d994ac7c",
       "candidate_sha": "00d52a64cd5bc7dff2d4957d83b284d2fbe8f752",
       "started_at": "2026-10-12T07:52:02.389785+00:00",
       "deadline": "2026-10-12T19:52:02.389785+00:00",
-      "attempts": 2,
+      "attempts": 4,
       "run_id": 38223493182,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3500",
+      "upstream_ci": {
+        "initial_run_id": 38227072718,
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38227072718"
+      },
       "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "1.1.0",
@@ -2303,8 +2325,8 @@
         "assertions": "Exact digital signals plus labels/frequency/units; finite physical output, with no numerical tolerance needed."
       },
       "release_metadata_policy": "Fulltest-only change; no image-input change and no new release promotion.",
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38223493182",
       "attempt_history": [
         {
@@ -2350,7 +2372,8 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
-      }
+      },
+      "pr_number": 3500
     },
     {
       "recipe": "cosmomvpa",
@@ -2552,7 +2575,7 @@
       "port_files": [
         "recipes/deep-quality-estimation/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-deep-quality-estimation-20261012",
       "baseline_sha": "8e633432dc4af2f4ed2d61139ef03f5712e34175",
       "candidate_sha": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
@@ -2569,10 +2592,163 @@
           "log": "/tmp/dqe-upstream-arm-38224226352.log",
           "retry_used": true,
           "retry_requested_at": "2026-10-12T08:49:41.047533+00:00"
-        }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "deep-quality-estimation",
+          "container": "deep-quality-estimation_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "0.0.3",
+          "build_date": "20261012",
+          "docker_archive": "deep-quality-estimation_arm64_0.0.3_20261012.docker.tar",
+          "sif": "deep-quality-estimation_arm64_0.0.3_20261012.simg",
+          "candidate_tag": "nd-candidate-deep-quality-estimation_arm64:6569b8dbc612",
+          "launcher": "deep-quality-estimation",
+          "pr_number": 3498,
+          "head_sha": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
+          "tests": {
+            "total": 11,
+            "passed": 11,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 10,
+            "fulltest_passed": 10,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "package imports",
+              "reports the packaged version",
+              "runs outside HOME",
+              "torch imports and computes on CPU",
+              "bundled weights are present",
+              "deep-quality-estimation CLI is on PATH and renders help",
+              "help carries the atlas-space requirement and label table",
+              "help documents the overestimation bias",
+              "inputs are validated before the model is loaded",
+              "rates a segmentation with no --device flag"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "811 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.829,
+            "wasted_bytes": 18009872,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.2961
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "deep-quality-estimation",
+          "container": "deep-quality-estimation",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "0.0.3",
+          "build_date": "20261012",
+          "docker_archive": "deep-quality-estimation_0.0.3_20261012.docker.tar",
+          "sif": "deep-quality-estimation_0.0.3_20261012.simg",
+          "candidate_tag": "nd-candidate-deep-quality-estimation:6569b8dbc612",
+          "launcher": "deep-quality-estimation",
+          "pr_number": 3498,
+          "head_sha": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
+          "tests": {
+            "total": 11,
+            "passed": 11,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 10,
+            "fulltest_passed": 10,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "package imports",
+              "reports the packaged version",
+              "runs outside HOME",
+              "torch imports and computes on CPU",
+              "bundled weights are present",
+              "deep-quality-estimation CLI is on PATH and renders help",
+              "help carries the atlas-space requirement and label table",
+              "help documents the overestimation bias",
+              "inputs are validated before the model is loaded",
+              "rates a segmentation with no --device flag"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 3,
+                "wasted_space": "1.9 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "812 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8378,
+            "wasted_bytes": 18160931,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.2918
+          }
+        },
+        "candidate_run_id": 38224226352,
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "One unchanged ARM setup job retry requested for truncated Launchpad response; reconcile same upstream run attempt2. Preserve successful x86 report; no broad rerun.",
+      "merged_sha": "e35419a8aea87ae0c6024c3e29663e3c65612dd3",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.3",
@@ -2635,7 +2811,61 @@
           "ubuntu-24.04-arm"
         ]
       },
-      "pr_number": 3498
+      "pr_number": 3498,
+      "merged_at": "2026-10-12T09:00:42Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38227134210,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38227134210",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/deep-quality-estimation_arm64/0.0.3.json",
+            "expected_build_date": "20261012",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/deep-quality-estimation/0.0.3.json",
+            "expected_build_date": "20261012",
+            "exists": true,
+            "committed_build_dates": [
+              "20260822"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-12T09:07:04.846360+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-deep-quality-estimation-6569b8dbc61243e1880ee86d055542f9dff80dd5)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-deep-quality-estimation_arm64-6569b8dbc61243e1880ee86d055542f9dff80dd5)",
+            "status": "in_progress",
+            "conclusion": null,
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-7qg2b",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": [
+              "Download candidate bundle without executing it"
+            ]
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T09:07:05.630227+00:00"
+      }
     },
     {
       "recipe": "deepdisco",
@@ -2836,7 +3066,7 @@
       "port_files": [
         "recipes/dwidenoise2/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-dwidenoise2-20261012",
       "baseline_sha": "36520dbcb15c00597b0dc6afb7fd255e9fbcdc33",
       "candidate_sha": "d973046690b93979fa394715a2dd842c2f7b8d8e",
@@ -2845,9 +3075,153 @@
       "attempts": 3,
       "run_id": 38224114491,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3499",
-      "upstream_ci": {},
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "upstream_ci": {
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "dwidenoise2",
+          "container": "dwidenoise2_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.0.0",
+          "build_date": "20261012",
+          "docker_archive": "dwidenoise2_arm64_1.0.0_20261012.docker.tar",
+          "sif": "dwidenoise2_arm64_1.0.0_20261012.simg",
+          "candidate_tag": "nd-candidate-dwidenoise2_arm64:d973046690b9",
+          "launcher": null,
+          "pr_number": 3499,
+          "head_sha": "d973046690b93979fa394715a2dd842c2f7b8d8e",
+          "tests": {
+            "total": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 5,
+            "fulltest_passed": 5,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "dwidenoise2 help",
+              "dwi2noise help",
+              "bundled MRtrix3 helper help",
+              "bundled noise estimation schedules",
+              "Denoise a seeded image and reduce its noise variance"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "7.4 MB",
+                "path": "/usr/bin/perl"
+              },
+              {
+                "count": 4,
+                "wasted_space": "3.2 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/perl-base/auto/re/re.so"
+              },
+              {
+                "count": 2,
+                "wasted_space": "804 kB",
+                "path": "/usr/lib/aarch64-linux-gnu/perl-base/unicore/To/NFKCCF.pl"
+              }
+            ],
+            "efficiency_percent": 98.031,
+            "wasted_bytes": 21234128,
+            "wasted_bytes_display": "21 MB",
+            "user_wasted_percent": 4.2069
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "dwidenoise2",
+          "container": "dwidenoise2",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.0.0",
+          "build_date": "20261012",
+          "docker_archive": "dwidenoise2_1.0.0_20261012.docker.tar",
+          "sif": "dwidenoise2_1.0.0_20261012.simg",
+          "candidate_tag": "nd-candidate-dwidenoise2:d973046690b9",
+          "launcher": null,
+          "pr_number": 3499,
+          "head_sha": "d973046690b93979fa394715a2dd842c2f7b8d8e",
+          "tests": {
+            "total": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 5,
+            "fulltest_passed": 5,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "dwidenoise2 help",
+              "dwi2noise help",
+              "bundled MRtrix3 helper help",
+              "bundled noise estimation schedules",
+              "Denoise a seeded image and reduce its noise variance"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "7.6 MB",
+                "path": "/usr/bin/perl"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.6 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.3 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/perl-base/auto/re/re.so"
+              },
+              {
+                "count": 2,
+                "wasted_space": "804 kB",
+                "path": "/usr/lib/x86_64-linux-gnu/perl-base/unicore/To/NFKCCF.pl"
+              }
+            ],
+            "efficiency_percent": 97.9734,
+            "wasted_bytes": 18908302,
+            "wasted_bytes_display": "19 MB",
+            "user_wasted_percent": 4.6001
+          }
+        },
+        "candidate_run_id": 38225863660,
+        "quality": "passed",
+        "release_gate": "passed"
+      },
+      "merged_sha": "14f4ee815e739d12be6c379d0b5a6c74726a6bb7",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -2902,7 +3276,59 @@
           "ubuntu-24.04-arm"
         ]
       },
-      "pr_number": 3499
+      "pr_number": 3499,
+      "merged_at": "2026-10-12T08:59:32Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38227215604,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38227215604",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/dwidenoise2_arm64/1.0.0.json",
+            "expected_build_date": "20261012",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/dwidenoise2/1.0.0.json",
+            "expected_build_date": "20261012",
+            "exists": true,
+            "committed_build_dates": [
+              "20260727"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-12T09:07:08.891219+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-dwidenoise2_arm64-d973046690b93979fa394715a2dd842c2f7b8d8e)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-dwidenoise2-d973046690b93979fa394715a2dd842c2f7b8d8e)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T09:07:09.655484+00:00"
+      }
     },
     {
       "recipe": "eharmonize",
@@ -3544,7 +3970,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T08:33:54.063867+00:00",
+        "checked_at": "2026-10-12T09:07:10.903474+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -3569,7 +3995,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T08:34:01.590234+00:00"
+        "metadata_checked_at": "2026-10-12T09:07:14.746837+00:00"
       }
     },
     {
@@ -5230,7 +5656,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T08:34:02.898148+00:00",
+        "checked_at": "2026-10-12T09:07:16.097543+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -5255,7 +5681,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T08:34:06.876827+00:00"
+        "metadata_checked_at": "2026-10-12T09:07:20.732711+00:00"
       }
     },
     {
@@ -5841,7 +6267,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T08:34:08.174186+00:00",
+        "checked_at": "2026-10-12T09:07:22.669997+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -5866,7 +6292,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T08:34:12.089411+00:00"
+        "metadata_checked_at": "2026-10-12T09:07:27.079542+00:00"
       }
     },
     {
@@ -6715,7 +7141,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T08:34:13.955618+00:00",
+        "checked_at": "2026-10-12T09:07:28.571381+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -6774,7 +7200,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T08:34:18.081945+00:00"
+        "metadata_checked_at": "2026-10-12T09:07:32.226252+00:00"
       }
     },
     {
@@ -7053,7 +7479,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T08:34:19.527583+00:00",
+        "checked_at": "2026-10-12T09:07:33.756599+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -7078,7 +7504,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T08:34:23.176416+00:00"
+        "metadata_checked_at": "2026-10-12T09:07:37.778213+00:00"
       }
     },
     {
@@ -8848,7 +9274,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T08:34:24.631260+00:00",
+        "checked_at": "2026-10-12T09:07:39.152891+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -8873,7 +9299,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T08:34:28.289558+00:00"
+        "metadata_checked_at": "2026-10-12T09:07:44.238408+00:00"
       }
     },
     {
