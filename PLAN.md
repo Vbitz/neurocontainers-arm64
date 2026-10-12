@@ -3253,3 +3253,6 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - The current four investigations and two open PRs are unaffected. No OpenRecon candidate was dispatched or submitted in this new run. Do not restore its architecture declarations, create replacement ARM64 variants, or include its historical passes as completion of the 112-container goal.
 
 - Panoptica upstream ARM64 [candidate run 38206969741](https://github.com/neurodesk/neurocontainers/actions/runs/38206969741) passed **10/10**, zero failures/skips and Dive success. Compact report matches PR #3483 and exact head `85689c2ead33e71e549b830a2b4093f9cc2c3f3f`. Code quality passed; x86_64 candidate remains queued.
+
+- BART upstream x86_64 compact report also confirms **117/117**, zero failures/skips, Dive success and exact PR head. Both architecture tests are now verified; await candidate bundle upload and required release gate before merge.
+- Build-budget accounting clarification for the new upstream stage: BART and Panoptica each consumed **3 total builds** (root ARM64 + upstream ARM64 + upstream x86_64), with ARM64 counter 2 and x86_64 counter 1. The six-build per-recipe limit includes both upstream architecture jobs. Earlier notes giving 2/6 referred to the ARM64 counter; `attempts` in the queue now records total builds so the budget is not silently enlarged.

@@ -223,7 +223,9 @@
         "fulltest_version": "2.6.5",
         "test_count": 102
       },
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206206331"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206206331",
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0
     },
     {
       "recipe": "apptainer",
@@ -374,7 +376,7 @@
       "candidate_sha": "5496bbdb1363839a80b7b582b8eb3e5bbd9f320f",
       "started_at": "2026-10-12T05:01:42.216956+00:00",
       "deadline": "2026-10-12T17:01:42.216956+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "run_id": 38206195541,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3482",
       "upstream_ci": {
@@ -464,7 +466,90 @@
             "user_wasted_percent": 1.5957
           }
         },
-        "x86_64": null,
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "bart",
+          "container": "bart",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.0.00",
+          "build_date": "20261012",
+          "docker_archive": "bart_1.0.00_20261012.docker.tar",
+          "sif": "bart_1.0.00_20261012.simg",
+          "candidate_tag": "nd-candidate-bart:5496bbdb1363",
+          "launcher": null,
+          "pr_number": 3482,
+          "head_sha": "5496bbdb1363839a80b7b582b8eb3e5bbd9f320f",
+          "tests": {
+            "total": 117,
+            "passed": 117,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 116,
+            "fulltest_passed": 116,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Version check",
+              "Benchmark",
+              "List available commands",
+              "Create zeros array",
+              "Create ones array",
+              "Show array dimensions",
+              "Show specific dimension",
+              "Generate Shepp-Logan phantom",
+              "Generate Shepp-Logan phantom (k-space)",
+              "Generate 3D phantom",
+              "Generate phantom with sensitivities",
+              "Generate sensitivity maps only",
+              "Generate tubes phantom",
+              "Generate BART logo phantom",
+              "Generate geometric phantom",
+              "Generate random tubes phantom",
+              "Generate brain geometry phantom",
+              "Generate Cartesian trajectory",
+              "Generate radial trajectory"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "6.0 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/liblsan.so.0.0.0"
+              },
+              {
+                "count": 2,
+                "wasted_space": "5.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libubsan.so.1.0.0"
+              },
+              {
+                "count": 2,
+                "wasted_space": "4.5 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30"
+              },
+              {
+                "count": 2,
+                "wasted_space": "3.7 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libapt-pkg.so.6.0.0"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.4 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              }
+            ],
+            "efficiency_percent": 99.702,
+            "wasted_bytes": 38148232,
+            "wasted_bytes_display": "38 MB",
+            "user_wasted_percent": 0.5029
+          }
+        },
         "quality": "passed",
         "release_gate": "pending"
       },
@@ -493,7 +578,9 @@
         "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206195541",
         "artifact_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206195541/artifacts/11727033149"
       },
-      "pr_number": 3482
+      "pr_number": 3482,
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1
     },
     {
       "recipe": "batchheudiconv",
@@ -961,7 +1048,9 @@
           "skipped": 0
         },
         "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206184713"
-      }
+      },
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0
     },
     {
       "recipe": "brats",
@@ -1084,7 +1173,7 @@
         "fulltest_version": "0.2.0",
         "test_count": 1
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Current fulltest only checks sf-make exists. Add a real generation operation in a writable workspace and assert generated build configuration, exercising the installed builder without a Docker daemon or nested privileged runtime. Verify actual candidate upstream before merge."
     },
     {
       "recipe": "cbsb0stats",
@@ -1257,7 +1346,7 @@
         "fulltest_version": "1.1.0",
         "test_count": 2
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Current fulltest checks conda and imports pyedflib. Add a small real EDF write/read round trip in the packaged MNE environment with signal/sample assertions, validating the compiled reader and its runtime dependencies. Preserve existing checks and test the exact candidate upstream."
     },
     {
       "recipe": "cosmomvpa",
@@ -2687,7 +2776,7 @@
         "fulltest_version": "26.8.1.1",
         "test_count": 2
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Current fulltest checks version and launcher presence. Add headless document conversion using an isolated writable user profile and assert a nonempty PDF with the expected file signature. Test current ARM64/x86_64 candidate; preserve launcher/version checks."
     },
     {
       "recipe": "lipsia",
@@ -3738,7 +3827,7 @@
         "fulltest_version": "3.10.1",
         "test_count": 1
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Current fulltest only checks a wrapper version string. Add a real local web-server operation with isolated writable workspace, create/import a small CSV project and assert returned rows/values. Preserve version test; upstream-test the candidate explicitly if classified source-only."
     },
     {
       "recipe": "palm",
@@ -3849,7 +3938,7 @@
       "candidate_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
       "started_at": "2026-10-12T05:00:21.844031+00:00",
       "deadline": "2026-10-12T17:00:21.844031+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "run_id": 38206125547,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3483",
       "upstream_ci": {
@@ -3957,7 +4046,9 @@
         },
         "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206125547"
       },
-      "pr_number": 3483
+      "pr_number": 3483,
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1
     },
     {
       "recipe": "pcntoolkit",
@@ -5664,5 +5755,6 @@
   "target_count": 112,
   "excluded_count": 17,
   "scope_updated_at": "2026-10-12T05:23:03.900742+00:00",
-  "scope_exclusion": "All recipes identified by upstream builder.openrecon_updates.uses_openrecon are excluded by explicit user instruction."
+  "scope_exclusion": "All recipes identified by upstream builder.openrecon_updates.uses_openrecon are excluded by explicit user instruction.",
+  "attempt_accounting": "Six total container build attempts per recipe/investigation, including the root native ARM64 run and both architecture jobs in each upstream candidate matrix. Separate architecture counters are retained; source-only checks without a build do not consume a build attempt."
 }
