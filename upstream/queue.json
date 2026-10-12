@@ -622,7 +622,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:46:47.820168+00:00",
+        "checked_at": "2026-10-12T10:10:45.351832+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -647,7 +647,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:46:51.385923+00:00"
+        "metadata_checked_at": "2026-10-12T10:10:49.026411+00:00"
       }
     },
     {
@@ -1073,7 +1073,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T09:46:52.586773+00:00",
+        "checked_at": "2026-10-12T10:10:50.510923+00:00",
         "metadata": [
           {
             "architecture": "x86_64",
@@ -1132,7 +1132,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:46:56.211548+00:00"
+        "metadata_checked_at": "2026-10-12T10:10:54.128657+00:00"
       }
     },
     {
@@ -1854,7 +1854,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T09:46:57.455262+00:00",
+        "checked_at": "2026-10-12T10:10:55.440099+00:00",
         "metadata": [
           {
             "architecture": "x86_64",
@@ -1913,7 +1913,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:47:01.065772+00:00"
+        "metadata_checked_at": "2026-10-12T10:11:03.783102+00:00"
       }
     },
     {
@@ -2229,7 +2229,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T09:47:02.409892+00:00",
+        "checked_at": "2026-10-12T10:11:05.580502+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -2288,7 +2288,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:47:06.913745+00:00"
+        "metadata_checked_at": "2026-10-12T10:11:09.282782+00:00"
       }
     },
     {
@@ -2404,7 +2404,91 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3502",
       "upstream_ci": {
         "initial_run_id": 38231427176,
-        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38231427176"
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38231427176",
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "clearswi",
+          "container": "clearswi",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.7.0",
+          "build_date": "20261012",
+          "docker_archive": "clearswi_1.7.0_20261012.docker.tar",
+          "sif": "clearswi_1.7.0_20261012.simg",
+          "candidate_tag": "nd-candidate-clearswi:99a4f077604e",
+          "launcher": "julia",
+          "pr_number": 3502,
+          "head_sha": "99a4f077604e3b6e28d16f328a0b7b45204e5b63",
+          "tests": {
+            "total": 68,
+            "passed": 68,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 67,
+            "fulltest_passed": 67,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "clearswi launcher available",
+              "clearswi usage without arguments",
+              "clearswi help flags",
+              "clearswi version flag",
+              "Julia version check",
+              "CLEARSWI package loads",
+              "CLEARSWI exports available",
+              "Test data exists",
+              "Read magnitude image",
+              "Read phase image",
+              "Create Data struct",
+              "Calculate SWI with defaults",
+              "Calculate and save SWI",
+              "Create MIP default",
+              "Create MIP custom depth",
+              "Create maximum intensity projection",
+              "Magnitude combine SNR",
+              "Magnitude combine average",
+              "Magnitude combine last echo"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 3,
+                "wasted_space": "1.9 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "808 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.5862,
+            "wasted_bytes": 18173058,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.759
+          }
+        }
       },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
@@ -2804,7 +2888,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T09:47:08.044032+00:00",
+        "checked_at": "2026-10-12T10:11:10.392370+00:00",
         "workflow_status": "in_progress",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -2817,7 +2901,7 @@
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "active_steps": [
-              "Download candidate bundle without executing it"
+              "Publish exact tested Docker archive to unique staging tags"
             ]
           },
           {
@@ -2829,11 +2913,11 @@
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "active_steps": [
-              "Download candidate bundle without executing it"
+              "Attach tested SIF to staged OCI images"
             ]
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:47:08.896640+00:00"
+        "metadata_checked_at": "2026-10-12T10:11:11.212642+00:00"
       }
     },
     {
@@ -3277,57 +3361,69 @@
       "release_metadata_audit": {
         "promotion_run_id": 38227134210,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38227134210",
-        "status": "pending-promotion",
+        "status": "verified-published-metadata",
         "metadata": [
           {
             "architecture": "aarch64",
             "path": "releases/deep-quality-estimation_arm64/0.0.3.json",
             "expected_build_date": "20261012",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
+            "metadata_commit_sha": "080e8b3a4cf6e2ddbec99ad817410dd9cbe3d6a9",
+            "sif": "deep-quality-estimation_arm64_0.0.3_20261012.simg",
+            "sif_sha256": "ec7b6ae6238993d3c44138d9502e11f31a1e7dbda15cbaaaa7a0f33616f042aa",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/deep-quality-estimation_arm64_0.0.3_20261012.simg",
+            "public_sif_head_status": 200
           },
           {
             "architecture": "x86_64",
             "path": "releases/deep-quality-estimation/0.0.3.json",
             "expected_build_date": "20261012",
-            "exists": true,
             "committed_build_dates": [
-              "20260822"
+              "20261012"
             ],
-            "current_candidate_date_committed": false
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
+            "metadata_commit_sha": "080e8b3a4cf6e2ddbec99ad817410dd9cbe3d6a9",
+            "sif": "deep-quality-estimation_0.0.3_20261012.simg",
+            "sif_sha256": "e353b34b37f6af422636892afab4ed6af66521bd045daba73c3d58af2bcdf43a",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/deep-quality-estimation_0.0.3_20261012.simg",
+            "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:47:10.007450+00:00",
-        "workflow_status": "in_progress",
-        "workflow_conclusion": null,
+        "checked_at": "2026-10-12T10:11:12.456478+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
         "publish_jobs": [
           {
             "name": "publish (candidate-deep-quality-estimation-6569b8dbc61243e1880ee86d055542f9dff80dd5)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "success",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-d9g2v",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Attach tested SIF to staged OCI images"
-            ]
+            "active_steps": []
           },
           {
             "name": "publish (candidate-deep-quality-estimation_arm64-6569b8dbc61243e1880ee86d055542f9dff80dd5)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "success",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-7qg2b",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Publish exact tested Docker archive to unique staging tags"
-            ]
+            "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:47:10.784079+00:00"
+        "metadata_checked_at": "2026-10-12T10:11:20.385700+00:00"
       }
     },
     {
@@ -3781,7 +3877,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:47:12.070844+00:00",
+        "checked_at": "2026-10-12T10:11:22.520015+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -3806,7 +3902,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:47:15.739873+00:00"
+        "metadata_checked_at": "2026-10-12T10:11:26.320947+00:00"
       }
     },
     {
@@ -4449,7 +4545,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:47:17.102045+00:00",
+        "checked_at": "2026-10-12T10:11:27.631102+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -4474,7 +4570,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:47:20.728952+00:00"
+        "metadata_checked_at": "2026-10-12T10:11:31.585052+00:00"
       }
     },
     {
@@ -6177,7 +6273,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:47:22.008089+00:00",
+        "checked_at": "2026-10-12T10:11:32.956248+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -6202,7 +6298,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:47:26.309574+00:00"
+        "metadata_checked_at": "2026-10-12T10:11:36.683699+00:00"
       }
     },
     {
@@ -6788,7 +6884,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:47:27.616301+00:00",
+        "checked_at": "2026-10-12T10:11:38.323216+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -6813,7 +6909,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:47:31.181146+00:00"
+        "metadata_checked_at": "2026-10-12T10:11:43.028087+00:00"
       }
     },
     {
@@ -7662,7 +7758,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T09:47:32.557866+00:00",
+        "checked_at": "2026-10-12T10:11:44.359559+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -7721,7 +7817,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:47:36.430994+00:00"
+        "metadata_checked_at": "2026-10-12T10:11:48.134625+00:00"
       }
     },
     {
@@ -8000,7 +8096,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:47:37.622582+00:00",
+        "checked_at": "2026-10-12T10:11:49.451516+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -8025,7 +8121,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:47:41.326659+00:00"
+        "metadata_checked_at": "2026-10-12T10:11:53.142408+00:00"
       }
     },
     {
@@ -9795,7 +9891,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:47:42.662754+00:00",
+        "checked_at": "2026-10-12T10:11:54.535231+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -9820,7 +9916,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:47:47.089217+00:00"
+        "metadata_checked_at": "2026-10-12T10:11:58.576020+00:00"
       }
     },
     {
@@ -10276,8 +10372,8 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "sha": "4d04f767b5ab0fdacfbaab3290a76b75415baa0c",
-    "checked_at": "2026-10-12T09:48:44.740881+00:00",
+    "sha": "080e8b3a4cf6e2ddbec99ad817410dd9cbe3d6a9",
+    "checked_at": "2026-10-12T10:15:14.184056+00:00",
     "fork_actions_enabled": false,
     "method": "Fast-forward only; candidate checkout and accepted historical gitlink preserved."
   },
