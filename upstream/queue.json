@@ -1199,18 +1199,20 @@
       "port_files": [
         "recipes/brkraw/build.yaml"
       ],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-brkraw-20261012",
       "baseline_sha": "12ff48cd6220c32d699b5b5df98688bfa5de2040",
       "candidate_sha": "6b05f8659fda5654927f7d1276972f473e3b1625",
       "started_at": "2026-10-12T05:42:58.534188+00:00",
       "deadline": "2026-10-12T17:42:58.534188+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38209191228,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3486",
+      "upstream_ci": {
+        "candidate_run_id": 38209565053
+      },
       "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.5.7",
@@ -1221,8 +1223,8 @@
         "fulltest_version": "0.5.7",
         "test_count": 74
       },
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209191228",
       "native_evidence": {
         "source_sha": "6b05f8659fda5654927f7d1276972f473e3b1625",
@@ -1253,7 +1255,8 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
-      }
+      },
+      "pr_number": 3486
     },
     {
       "recipe": "builder",
@@ -2330,18 +2333,18 @@
       "port_files": [
         "recipes/gigaconnectome/build.yaml"
       ],
-      "status": "native-running",
+      "status": "ready-to-retry",
       "branch": "arm64/upstream-gigaconnectome-20261012",
       "baseline_sha": "8ffc4cca756fd5099c7e1a65d22f93ad354da01f",
-      "candidate_sha": "61a896581afb9bf5af3397a816c2555033dc6a2c",
+      "candidate_sha": "76559d1b3e745a038dca5434255d7f1d192564ee",
       "started_at": "2026-10-12T05:38:30.096019+00:00",
       "deadline": "2026-10-12T17:38:30.096019+00:00",
       "attempts": 1,
-      "run_id": 38209010331,
+      "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Dispatch native attempt 2 when capacity permits; preserve the same investigation clock and six-build total budget.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.0",
@@ -2354,7 +2357,28 @@
       },
       "arm64_attempts": 1,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209010331"
+      "run_url": null,
+      "native_attempt_history": [
+        {
+          "attempt": 1,
+          "source_sha": "61a896581afb9bf5af3397a816c2555033dc6a2c",
+          "run_id": 38209010331,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209010331",
+          "outcome": "failed-runtime",
+          "counts": {
+            "total": 94,
+            "passed": 92,
+            "failed": 2,
+            "skipped": 0
+          },
+          "first_errors": [
+            "No deployment commands found: DEPLOY_BINS and DEPLOY_PATH not set",
+            "giga_connectome invalid bids dir: expected error text absent; masked zero-subject no-op"
+          ],
+          "retry_hypothesis": "Native build and SIF passed; deploy failed because no commands are exported. Add giga_connectome to deploy.bins. The missing-directory test supplied no participant, so official get_subject_lists returned an empty list and the workflow succeeded without loading data. Supply participant 01 to exercise BIDSLayout validation and assert exit 1 plus its exact missing-root diagnostic; remove the masking || true. Official 0.6.0 workflow/utils and pinned PyBIDS 0.15.6 validation source inspected."
+        }
+      ],
+      "retry_hypothesis": "Native build and SIF passed; deploy failed because no commands are exported. Add giga_connectome to deploy.bins. The missing-directory test supplied no participant, so official get_subject_lists returned an empty list and the workflow succeeded without loading data. Supply participant 01 to exercise BIDSLayout validation and assert exit 1 plus its exact missing-root diagnostic; remove the masking || true. Official 0.6.0 workflow/utils and pinned PyBIDS 0.15.6 validation source inspected."
     },
     {
       "recipe": "gimp",
