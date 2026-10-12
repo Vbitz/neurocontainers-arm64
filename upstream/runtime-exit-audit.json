@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-12T19:31:33.515333+00:00",
+  "checked_at": "2026-10-12T20:07:08.364909+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     {
@@ -33,6 +33,61 @@
         {
           "test": "Error handling - missing file",
           "return_code": 64,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "recipe": "batchheudiconv",
+      "findings": [
+        {
+          "test": "bh01_prep_dir.sh help",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "bh02_sort_dicom.sh help",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "bh03_make_subjlist.sh help",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "bh04_make_heuristic.sh help",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "bh05_make_bids.sh help",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "dcm2niix version check",
+          "return_code": 3,
+          "errors": []
+        },
+        {
+          "test": "nib-diff different files",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "nib-diff BOLD runs",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "nib-diff with header fields",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "nib-diff verbose",
+          "return_code": 1,
           "errors": []
         }
       ]
@@ -195,6 +250,37 @@
       ]
     },
     {
+      "recipe": "quickshear",
+      "findings": [
+        {
+          "test": "mri_synthstrip help",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "Error - missing input file",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):",
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "Error - missing mask file",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):",
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "Error - mri_synthstrip missing input",
+          "return_code": 1,
+          "errors": []
+        }
+      ]
+    },
+    {
       "recipe": "topaz",
       "findings": [
         {
@@ -251,6 +337,14 @@
       "reported_passed": 117,
       "reported_total": 117,
       "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "batchheudiconv",
+      "source_sha": "e2729b1ff1c46cb4cccb225a0cbc46af7ec96728",
+      "run_id": 38294499066,
+      "reported_passed": 108,
+      "reported_total": 108,
+      "nonzero_command_exits": 10
     },
     {
       "recipe": "bidsmanager",
@@ -469,6 +563,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "niftyreg",
+      "source_sha": "2c7fb070118a7bb8f01c7f6647d2c798c53b7eb7",
+      "run_id": 38291802437,
+      "reported_passed": 90,
+      "reported_total": 90,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "niimath",
       "source_sha": "38c17ee4e2f5c65d5db5a9077dd754178046fae8",
       "run_id": 38241254326,
@@ -491,6 +593,14 @@
       "reported_passed": 14,
       "reported_total": 14,
       "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "quickshear",
+      "source_sha": "c7104912b5954737df5698c5cb3aac3cfa154cab",
+      "run_id": 38289802875,
+      "reported_passed": 44,
+      "reported_total": 44,
+      "nonzero_command_exits": 4
     },
     {
       "recipe": "segmentator",
@@ -517,7 +627,7 @@
       "nonzero_command_exits": 0
     }
   ],
-  "reviewed_merged_recipe_count": 37,
+  "reviewed_merged_recipe_count": 40,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [],
@@ -610,5 +720,33 @@
       "note": "Actual cached diagnostics match deliberate invalid-input fixtures. Legacy wrappers return0; these are negative/error-path tests, not successful conversions. The new synthetic real DICOM/BIDS operation passes without ignored exits and verifies exact output."
     }
   },
-  "resolved_input_equivalences": []
+  "resolved_input_equivalences": [
+    {
+      "recipe": "quickshear",
+      "native_source_sha": "c7104912b5954737df5698c5cb3aac3cfa154cab",
+      "current_source_sha": "7a8c6946266afbf3d53ca438d6357c3e6699fc57",
+      "changed_paths": [
+        "recipes/quickshear/build.yaml",
+        "recipes/quickshear/fulltest.yaml"
+      ],
+      "shared_inputs_unchanged": true,
+      "resolved_fulltest_identical": true,
+      "fulltest_cases": 43,
+      "architectures": {
+        "aarch64": {
+          "dockerfile_sha256": "ece187756b51fe51756d6534e9c780cb3ea64a9f6091091a56b8c7c1765d61b0",
+          "resolved_input_sha256": "692c6d27989856f63fa2507fdace813863767d643d913ee6cc48dd60610dc8ee",
+          "declared_file_count": 4,
+          "dockerfile_files_digests_copies_mounts_metadata_readme_equal": true
+        },
+        "x86_64": {
+          "dockerfile_sha256": "789631f6fa6dab25f5b667242b96a71768cb23db9519c7fcd65130f43256f63a",
+          "resolved_input_sha256": "edfd74b889e7aac6be6d6b5547c418e1952aacdaad0fb139d6fd501dc7f10954",
+          "declared_file_count": 1,
+          "dockerfile_files_digests_copies_mounts_metadata_readme_equal": true
+        }
+      },
+      "note": "Metadata-only followup: actual native run remains attributed to c710. Both generated Dockerfiles, declared URLs/digests/inline content, copy sources, local-file bytes, mounts, metadata and readme are equal; the entire43-case suite is exactly equal after actual variable substitution. Shared builder/workflow/locked inputs unchanged. This proves resolved recipe input equivalence, not identical binary image bits or an exact-new-head root dispatch. Both fresh new-head upstream architecture suites remain required."
+    }
+  ]
 }
