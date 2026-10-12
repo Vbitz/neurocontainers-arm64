@@ -2420,11 +2420,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-gigaconnectome-20261012",
       "baseline_sha": "8ffc4cca756fd5099c7e1a65d22f93ad354da01f",
-      "candidate_sha": "76559d1b3e745a038dca5434255d7f1d192564ee",
+      "candidate_sha": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
       "started_at": "2026-10-12T05:38:30.096019+00:00",
       "deadline": "2026-10-12T17:38:30.096019+00:00",
-      "attempts": 2,
-      "run_id": 38209922315,
+      "attempts": 3,
+      "run_id": 38210795614,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -2439,9 +2439,9 @@
         "fulltest_version": "0.6.0",
         "test_count": 93
       },
-      "arm64_attempts": 2,
+      "arm64_attempts": 3,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209922315",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38210795614",
       "native_attempt_history": [
         {
           "attempt": 1,
@@ -2460,9 +2460,26 @@
             "giga_connectome invalid bids dir: expected error text absent; masked zero-subject no-op"
           ],
           "retry_hypothesis": "Native build and SIF passed; deploy failed because no commands are exported. Add giga_connectome to deploy.bins. The missing-directory test supplied no participant, so official get_subject_lists returned an empty list and the workflow succeeded without loading data. Supply participant 01 to exercise BIDSLayout validation and assert exit 1 plus its exact missing-root diagnostic; remove the masking || true. Official 0.6.0 workflow/utils and pinned PyBIDS 0.15.6 validation source inspected."
+        },
+        {
+          "attempt": 2,
+          "source_sha": "76559d1b3e745a038dca5434255d7f1d192564ee",
+          "run_id": 38209922315,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209922315",
+          "outcome": "failed-runtime",
+          "counts": {
+            "total": 94,
+            "passed": 93,
+            "failed": 1,
+            "skipped": 0
+          },
+          "first_errors": [
+            "Negative test: expected BIDS missing-root diagnostic, got OSError Read-only file system from PyBIDS database path creation"
+          ],
+          "retry_hypothesis": "The corrected participant selector reaches PyBIDS, but PyBIDS 0.15.6 ConnectionManager.exists calls get_database_file, which mkdirs the database path before validate_root. The attempt therefore exited 1 with a read-only filesystem error rather than the guessed missing-root message. Use a regular-file fixture in the writable output directory as an invalid BIDS directory and require exit 1, FileExistsError, and the fixture name. Checked the exact upstream db.py and reproduced this exception locally with the pinned PyBIDS package. No scientific assertions removed or tolerances changed."
         }
       ],
-      "retry_hypothesis": "Native build and SIF passed; deploy failed because no commands are exported. Add giga_connectome to deploy.bins. The missing-directory test supplied no participant, so official get_subject_lists returned an empty list and the workflow succeeded without loading data. Supply participant 01 to exercise BIDSLayout validation and assert exit 1 plus its exact missing-root diagnostic; remove the masking || true. Official 0.6.0 workflow/utils and pinned PyBIDS 0.15.6 validation source inspected."
+      "retry_hypothesis": "The corrected participant selector reaches PyBIDS, but PyBIDS 0.15.6 ConnectionManager.exists calls get_database_file, which mkdirs the database path before validate_root. The attempt therefore exited 1 with a read-only filesystem error rather than the guessed missing-root message. Use a regular-file fixture in the writable output directory as an invalid BIDS directory and require exit 1, FileExistsError, and the fixture name. Checked the exact upstream db.py and reproduced this exception locally with the pinned PyBIDS package. No scientific assertions removed or tolerances changed."
     },
     {
       "recipe": "gimp",
