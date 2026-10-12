@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-12T13:34:41.053416+00:00",
+  "checked_at": "2026-10-12T14:11:40.148872+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     "ants",
@@ -331,6 +331,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "gingerale",
+      "source_sha": "07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5",
+      "run_id": 38247655214,
+      "reported_passed": 52,
+      "reported_total": 52,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "hdbet",
       "source_sha": "20835db5be6559a46dd369e4982cfac77a46cb91",
       "run_id": 38247274390,
@@ -411,7 +419,7 @@
       "nonzero_command_exits": 3
     }
   ],
-  "reviewed_merged_recipe_count": 25,
+  "reviewed_merged_recipe_count": 26,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [
@@ -427,8 +435,8 @@
       "recipe": "brkraw",
       "candidate_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
       "branch": "arm64/upstream-brkraw-scipy-20261012",
-      "run_id": null,
-      "attempts": 3,
+      "run_id": 38258128668,
+      "attempts": 6,
       "deadline": "2026-10-12T17:42:58.534188+00:00"
     }
   ]

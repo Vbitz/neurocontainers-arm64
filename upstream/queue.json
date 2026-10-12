@@ -2317,18 +2317,18 @@
       "port_files": [
         "recipes/brkraw/build.yaml"
       ],
-      "status": "ready-to-retry",
+      "status": "upstream-running",
       "branch": "arm64/upstream-brkraw-scipy-20261012",
       "baseline_sha": "bf78348b3a85e781049cd9e54ac9571077c0a1c8",
       "candidate_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
       "started_at": "2026-10-12T05:42:58.534188+00:00",
       "deadline": "2026-10-12T17:42:58.534188+00:00",
-      "attempts": 3,
-      "run_id": null,
-      "pr_url": null,
-      "upstream_ci": null,
+      "attempts": 6,
+      "run_id": 38258128668,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3515",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Native attempt4 then upstream both5/6 and6/6; original17:42:58UTC deadline remains. All75fulltests retained, no ignoredexits.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.5.7",
@@ -2339,10 +2339,10 @@
         "fulltest_version": "0.5.7",
         "test_count": 74
       },
-      "arm64_attempts": 2,
-      "x86_64_attempts": 1,
-      "run_url": null,
-      "pr_number": null,
+      "arm64_attempts": 4,
+      "x86_64_attempts": 2,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38258128668",
+      "pr_number": 3515,
       "runtime_review": {
         "outcome": "followup-required",
         "findings": [
@@ -2682,7 +2682,71 @@
           }
         }
       ],
-      "upstream_verification_mode": "image-candidate"
+      "upstream_verification_mode": "image-candidate",
+      "native_command_exit_review": {
+        "source_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": [
+          {
+            "test": "nib-diff different images",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "brkraw info error handling",
+            "expected_exit_code": 2
+          },
+          {
+            "test": "brkraw convert error handling",
+            "expected_exit_code": 2
+          },
+          {
+            "test": "brkraw convert-batch error handling",
+            "expected_exit_code": 2
+          },
+          {
+            "test": "error - nib-roi invalid slice",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "error - nib-convert nonexistent file",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "error - nib-conform invalid orientation",
+            "expected_exit_code": 1
+          }
+        ]
+      },
+      "native_evidence": {
+        "source_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
+        "version": "0.5.7",
+        "counts": {
+          "total_tests": 76,
+          "passed": 76,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 68.02229046821594,
+          "run_timestamp": "2026-10-12T13:50:19.511910",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 75,
+          "total_suites": 1,
+          "total_tests": 75
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38258128668",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "builder",
@@ -3878,18 +3942,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-verified",
+      "branch": "arm64/upstream-dcm2bids-20261012",
+      "baseline_sha": "b35e38baed8ba39f0ddc8707e0e98d52e32acf8a",
+      "candidate_sha": "02f8bf5ea00a4d6213c980bc1bcefbd3a5011665",
+      "started_at": "2026-10-12T13:52:00+00:00",
+      "deadline": "2026-10-13T01:52:00+00:00",
+      "attempts": 2,
+      "run_id": 38260702822,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "3.3.1",
@@ -3901,7 +3965,55 @@
         "fulltest_version": "3.3.1",
         "test_count": 60
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "upstream_verification_mode": "runtime-only",
+      "arm64_attempts": 2,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38260702822",
+      "attempt_history": [
+        {
+          "candidate_sha": "eaf9a137b08e787ade3bbc3710b2c8d05469ee1c",
+          "run_id": 38259648877,
+          "outcome": "test-verifier-prerequisite",
+          "first_error": "New exact-pixel verifier imports nibabel, which is absent in this image. All60existingfulltests passed and actual DICOM/BIDS conversion completed; pixelverification failed before reading output.",
+          "retry_hypothesis": "Use standard-library gzip/struct to assert identical NIfTI datatype/pixels/grid/affine/scaling/units, preservingimageinputs andallsuitecases; local fixture passed."
+        }
+      ],
+      "native_command_exit_review": {
+        "source_sha": "02f8bf5ea00a4d6213c980bc1bcefbd3a5011665",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "02f8bf5ea00a4d6213c980bc1bcefbd3a5011665",
+        "version": "3.3.1",
+        "counts": {
+          "total_tests": 62,
+          "passed": 62,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 22.02815008163452,
+          "run_timestamp": "2026-10-12T14:10:23.321008",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 61,
+          "total_suites": 1,
+          "total_tests": 61
+        },
+        "deploy_counts": {
+          "total": 5,
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38260702822",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "dcm2niix",
@@ -6311,7 +6423,7 @@
       "port_files": [
         "recipes/gingerale/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-gingerale-20261012",
       "baseline_sha": "5c13f2e1cb89493c732394981ae780380e12b2fc",
       "candidate_sha": "07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5",
@@ -6322,10 +6434,181 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3512",
       "upstream_ci": {
         "run_id": 38249033786,
-        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38249033786"
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38249033786",
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "gingerale",
+          "container": "gingerale_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "4.0.0",
+          "build_date": "20261012",
+          "docker_archive": "gingerale_arm64_4.0.0_20261012.docker.tar",
+          "sif": "gingerale_arm64_4.0.0_20261012.simg",
+          "candidate_tag": "nd-candidate-gingerale_arm64:07a3b2f42a7e",
+          "launcher": null,
+          "pr_number": 3512,
+          "head_sha": "07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5",
+          "tests": {
+            "total": 52,
+            "passed": 52,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 51,
+            "fulltest_passed": 51,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "GingerALE version",
+              "getALE2 usage/help",
+              "getALE2 required parameters",
+              "getALE2 mask options",
+              "getALE2 threshold options",
+              "Basic ALE analysis (Talairach)",
+              "Basic ALE analysis (MNI)",
+              "ALE with minimal foci",
+              "ALE with Talairach conservative mask",
+              "ALE with Talairach dilated mask",
+              "ALE with MNI conservative mask",
+              "ALE with MNI dilated mask",
+              "ALE with uncorrected p-value threshold (p=0.05)",
+              "ALE with uncorrected p-value threshold (p=0.01)",
+              "ALE with uncorrected p-value threshold (p=0.001)",
+              "ALE with FDR pN correction (q=0.05)",
+              "ALE with FDR pID correction (q=0.05)",
+              "ALE with cluster-level inference",
+              "ALE with FWE correction (100 perms)"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "851 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 98.3187,
+            "wasted_bytes": 19141628,
+            "wasted_bytes_display": "19 MB",
+            "user_wasted_percent": 3.2203
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "gingerale",
+          "container": "gingerale",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "4.0.0",
+          "build_date": "20261012",
+          "docker_archive": "gingerale_4.0.0_20261012.docker.tar",
+          "sif": "gingerale_4.0.0_20261012.simg",
+          "candidate_tag": "nd-candidate-gingerale:07a3b2f42a7e",
+          "launcher": null,
+          "pr_number": 3512,
+          "head_sha": "07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5",
+          "tests": {
+            "total": 52,
+            "passed": 52,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 51,
+            "fulltest_passed": 51,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "GingerALE version",
+              "getALE2 usage/help",
+              "getALE2 required parameters",
+              "getALE2 mask options",
+              "getALE2 threshold options",
+              "Basic ALE analysis (Talairach)",
+              "Basic ALE analysis (MNI)",
+              "ALE with minimal foci",
+              "ALE with Talairach conservative mask",
+              "ALE with Talairach dilated mask",
+              "ALE with MNI conservative mask",
+              "ALE with MNI dilated mask",
+              "ALE with uncorrected p-value threshold (p=0.05)",
+              "ALE with uncorrected p-value threshold (p=0.01)",
+              "ALE with uncorrected p-value threshold (p=0.001)",
+              "ALE with FDR pN correction (q=0.05)",
+              "ALE with FDR pID correction (q=0.05)",
+              "ALE with cluster-level inference",
+              "ALE with FWE correction (100 perms)"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "852 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 98.1525,
+            "wasted_bytes": 20148257,
+            "wasted_bytes_display": "20 MB",
+            "user_wasted_percent": 3.4628
+          }
+        },
+        "candidate_run_id": 38249033786,
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "merged_sha": "b35e38baed8ba39f0ddc8707e0e98d52e32acf8a",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "4.0.0",
@@ -6380,7 +6663,59 @@
           "ubuntu-24.04-arm"
         ]
       },
-      "pr_number": 3512
+      "pr_number": 3512,
+      "merged_at": "2026-10-12T13:53:55Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38258952820,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38258952820",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/gingerale_arm64/4.0.0.json",
+            "expected_build_date": "20261012",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/gingerale/4.0.0.json",
+            "expected_build_date": "20261012",
+            "exists": true,
+            "committed_build_dates": [
+              "20260928"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-12T14:00:46.557801+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-gingerale_arm64-07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-gingerale-07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T14:00:47.396466+00:00"
+      }
     },
     {
       "recipe": "gliomoda",
@@ -6439,18 +6774,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-glmsingle-20261012",
+      "baseline_sha": "b35e38baed8ba39f0ddc8707e0e98d52e32acf8a",
+      "candidate_sha": "2e2a477ef48cc16f83c6d7053615e74c977c878a",
+      "started_at": "2026-10-12T13:59:00+00:00",
+      "deadline": "2026-10-13T01:59:00+00:00",
+      "attempts": 1,
+      "run_id": 38261078085,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.0",
@@ -6462,7 +6797,11 @@
         "fulltest_version": "1.2.0",
         "test_count": 76
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "upstream_verification_mode": "runtime-only",
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38261078085"
     },
     {
       "recipe": "globus",
@@ -6799,7 +7138,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T13:31:36.134694+00:00",
+        "checked_at": "2026-10-12T14:00:48.666339+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -6815,16 +7154,18 @@
           },
           {
             "name": "publish (candidate-hdbet_arm64-20835db5be6559a46dd369e4982cfac77a46cb91)",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "runner_name": "",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-jh86w",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": []
+            "active_steps": [
+              "Download candidate bundle without executing it"
+            ]
           }
         ],
-        "metadata_checked_at": "2026-10-12T13:31:36.932419+00:00"
+        "metadata_checked_at": "2026-10-12T14:00:49.638295+00:00"
       }
     },
     {
@@ -7485,36 +7826,52 @@
       "release_metadata_audit": {
         "promotion_run_id": 38251408959,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38251408959",
-        "status": "pending-promotion",
+        "status": "verified-published-metadata",
         "metadata": [
           {
             "architecture": "aarch64",
             "path": "releases/laynii_arm64/2.10.0.json",
             "expected_build_date": "20261012",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9",
+            "metadata_commit_sha": "18c2ec5ed864449aaf464649f2262ff197ee281a",
+            "sif": "laynii_arm64_2.10.0_20261012.simg",
+            "sif_sha256": "378bd046eae4f6a776a2f4ae35c2a323d0ae570770b086fe3e1ca2bf4e9d1854",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/laynii_arm64_2.10.0_20261012.simg",
+            "public_sif_head_status": 200
           },
           {
             "architecture": "x86_64",
             "path": "releases/laynii/2.10.0.json",
             "expected_build_date": "20261012",
-            "exists": true,
             "committed_build_dates": [
-              "20260929"
+              "20261012"
             ],
-            "current_candidate_date_committed": false
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9",
+            "metadata_commit_sha": "18c2ec5ed864449aaf464649f2262ff197ee281a",
+            "sif": "laynii_2.10.0_20261012.simg",
+            "sif_sha256": "a29616e32880c29d415ff2538148c29450e87e680dafd45a63b77230014093ff",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/laynii_2.10.0_20261012.simg",
+            "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T13:31:38.091101+00:00",
-        "workflow_status": "queued",
+        "checked_at": "2026-10-12T14:00:50.817502+00:00",
+        "workflow_status": "in_progress",
         "workflow_conclusion": null,
         "publish_jobs": [
           {
             "name": "publish (candidate-laynii-926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9)",
-            "status": "queued",
-            "conclusion": null,
-            "runner_name": "",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-s8xv4",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
@@ -7522,16 +7879,16 @@
           },
           {
             "name": "publish (candidate-laynii_arm64-926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9)",
-            "status": "queued",
-            "conclusion": null,
-            "runner_name": "",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-975p8",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T13:31:38.979901+00:00"
+        "metadata_checked_at": "2026-10-12T14:00:58.387744+00:00"
       }
     },
     {
@@ -9319,7 +9676,7 @@
       "port_files": [
         "recipes/nftsim/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "blocked-infrastructure",
       "branch": "arm64/upstream-nftsim-20261012",
       "baseline_sha": "d6d5aef5e968f942b2a7ad2e8f3f03619ab56b2b",
       "candidate_sha": "06d8049e10fe7703f38ab55cd25b999cbf050abf",
@@ -9328,9 +9685,99 @@
       "attempts": 4,
       "run_id": 38254293026,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3514",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "candidate_run_id": 38256071709,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38256071709",
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "nftsim",
+          "container": "nftsim_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.0.2",
+          "build_date": "20261012",
+          "docker_archive": "nftsim_arm64_1.0.2_20261012.docker.tar",
+          "sif": "nftsim_arm64_1.0.2_20261012.simg",
+          "candidate_tag": "nd-candidate-nftsim_arm64:06d8049e10fe",
+          "launcher": null,
+          "pr_number": 3514,
+          "head_sha": "06d8049e10fe7703f38ab55cd25b999cbf050abf",
+          "tests": {
+            "total": 69,
+            "passed": 68,
+            "failed": 1,
+            "skipped": 0,
+            "fulltest_total": 68,
+            "fulltest_passed": 67,
+            "fulltest_failed": 1,
+            "suites_total": 1,
+            "suites_passed": 0,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Help output",
+              "Help flag short form",
+              "Help flag alternative",
+              "Check config file exists",
+              "EIRS corticothalamic simulation",
+              "Verify EIRS output contains time series",
+              "EIRS burst simulation",
+              "EIRS AERP simulation",
+              "EIRS TMS simulation",
+              "EIRS coupling ramp",
+              "EIRS dendrite integral",
+              "EMIRS simulation",
+              "E cortical simulation",
+              "EI cortical simulation",
+              "E coupling matrix",
+              "E ERPs simulation",
+              "E ERPs all nodes",
+              "Stimuli only simulation",
+              "White noise stimulus test"
+            ],
+            "failed_tests": [
+              "EIRS BCM plasticity"
+            ]
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "825 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "479 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "382 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 98.6522,
+            "wasted_bytes": 6120070,
+            "wasted_bytes_display": "6.1 MB",
+            "user_wasted_percent": 2.2361
+          }
+        },
+        "x86_64_status": "cancelled-unstarted-after-known-ARM-timeout; attempt reservation retained"
+      },
       "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "next_action": "Revisit with sufficient upstream ARM runner CPU to finish unchanged EIRS BCM under120s, or explicit renewed verification budget for test-only timeout correction plus fresh native/bothupstream evidence. No scientific test dropped; PR3514 remains unmerged.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.2",
@@ -9436,7 +9883,18 @@
           "ubuntu-24.04-arm"
         ]
       },
-      "pr_number": 3514
+      "pr_number": 3514,
+      "blocker": {
+        "category": "blocked-infrastructure",
+        "first_error": "EIRS BCM plasticity: Timeout after120s on upstream blacksmith ARM runner; native Ubuntu ARM completed64.06s. Remaining68/69 top-level checks andDive passed.",
+        "upstream_run_id": 38256071709,
+        "native_comparison_run_id": 38254293026,
+        "native_test_duration_seconds": 64.05873084068298,
+        "upstream_test_duration_seconds": 120.11,
+        "preserved_candidate_sha": "06d8049e10fe7703f38ab55cd25b999cbf050abf",
+        "budget_note": "4/6 total reservations retained, including unstarted x86. A source timer correction needs fresh native plus both upstream architectures (3 builds) and exceeds remaining2; originalbudget is notreset. Unchanged retry lacks evidence of a transient outage; none dispatched.",
+        "cancellation": "Only queued x86 job had no runner and no executed steps; cancelled known-red matrix to avoid spending runner work on an unmergeable candidate. CompletedARM report retained. No healthy running compile cancelled."
+      }
     },
     {
       "recipe": "niftyreg",
@@ -12886,10 +13344,10 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "sha": "bf78348b3a85e781049cd9e54ac9571077c0a1c8",
-    "checked_at": "2026-10-12T13:35:19.302492+00:00",
+    "sha": "18c2ec5ed864449aaf464649f2262ff197ee281a",
+    "checked_at": "2026-10-12T14:12:37.760008+00:00",
     "actions_enabled": false,
-    "method": "normal-fast-forward push from freshly fetched upstream/main; existing candidate branches preserved"
+    "method": "normal-fast-forward of fetched upstream accepted source; candidate branches preserved"
   },
   "runtime_release_routing_fix": {
     "status": "merged",
