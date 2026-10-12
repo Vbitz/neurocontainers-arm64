@@ -14,6 +14,10 @@ containers in the active goal**, each requiring its own upstream PR. The frozen
 historical source/run/counts, current upstream review, candidate branch/SHA,
 investigation deadline, attempts, native run, upstream PR, CI result and merge.
 Historical success does not count as a retest of current upstream.
+An independently revised and merged upstream PR can have newer source than its
+root-workflow native run. Record that distinction as `root_current_source_gap`
+and retain both sets of evidence; the earlier run does not verify the revised
+source. Merged PR counts do not resolve such gaps or outstanding runtime followups.
 
 The fork's `main` follows upstream by normal fast-forward pushes; the latest
 synchronized SHA is recorded in `queue.json` under `last_fork_main_sync`. Existing

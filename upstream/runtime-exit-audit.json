@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-12T14:48:31.784880+00:00",
+  "checked_at": "2026-10-12T15:05:11.228303+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     "ants"
@@ -11,7 +11,8 @@
     "DICOM Tools dcmftest rejects NIfTI exit1",
     "Brainlife CLI unknown-command diagnostic",
     "Topaz missing arguments/subcommand diagnostics",
-    "NFTsim bundled explicitly unavailable fCaP coupling exit1"
+    "NFTsim bundled explicitly unavailable fCaP coupling exit1",
+    "Dcm2Bids deliberately missing config/directory and invalid JSON emit FileNotFoundError/NotADirectoryError/JSONDecodeError through legacy shell wrappers"
   ],
   "findings": [
     {
@@ -60,46 +61,9 @@
       "recipe": "brkraw",
       "findings": [
         {
-          "test": "nib-conform T1w to 1mm isotropic",
+          "test": "nib-diff different images",
           "return_code": 1,
-          "errors": [
-            "Traceback (most recent call last):"
-          ]
-        },
-        {
-          "test": "nib-conform T1w to 2mm isotropic",
-          "return_code": 1,
-          "errors": [
-            "Traceback (most recent call last):"
-          ]
-        },
-        {
-          "test": "nib-conform T1w custom shape",
-          "return_code": 1,
-          "errors": [
-            "Traceback (most recent call last):"
-          ]
-        },
-        {
-          "test": "nib-conform T1w RAS orientation",
-          "return_code": 1,
-          "errors": [
-            "Traceback (most recent call last):"
-          ]
-        },
-        {
-          "test": "nib-conform T1w LPS orientation",
-          "return_code": 1,
-          "errors": [
-            "Traceback (most recent call last):"
-          ]
-        },
-        {
-          "test": "nib-conform T2 to standard space",
-          "return_code": 1,
-          "errors": [
-            "Traceback (most recent call last):"
-          ]
+          "errors": []
         },
         {
           "test": "brkraw info error handling",
@@ -117,8 +81,13 @@
           "errors": []
         },
         {
+          "test": "error - nib-roi invalid slice",
+          "return_code": 1,
+          "errors": []
+        },
+        {
           "test": "error - nib-convert nonexistent file",
-          "return_code": 0,
+          "return_code": 1,
           "errors": [
             "Traceback (most recent call last):",
             "Traceback (most recent call last):"
@@ -126,6 +95,32 @@
         },
         {
           "test": "error - nib-conform invalid orientation",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        }
+      ]
+    },
+    {
+      "recipe": "dcm2bids",
+      "findings": [
+        {
+          "test": "dcm2bids missing config file error",
+          "return_code": 0,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "dcm2bids missing dicom dir error",
+          "return_code": 0,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "dcm2bids invalid config JSON error",
           "return_code": 0,
           "errors": [
             "Traceback (most recent call last):"
@@ -180,6 +175,18 @@
           "test": "dcmftest on NIfTI file",
           "return_code": 1,
           "errors": []
+        }
+      ]
+    },
+    {
+      "recipe": "gigaconnectome",
+      "findings": [
+        {
+          "test": "giga_connectome invalid bids dir",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
         }
       ]
     },
@@ -251,11 +258,11 @@
     },
     {
       "recipe": "brkraw",
-      "source_sha": "6b05f8659fda5654927f7d1276972f473e3b1625",
-      "run_id": 38209191228,
+      "source_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
+      "run_id": 38258128668,
       "reported_passed": 76,
       "reported_total": 76,
-      "nonzero_command_exits": 9
+      "nonzero_command_exits": 7
     },
     {
       "recipe": "clearswi",
@@ -279,6 +286,14 @@
       "run_id": 38237016220,
       "reported_passed": 11,
       "reported_total": 11,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "dcm2bids",
+      "source_sha": "02f8bf5ea00a4d6213c980bc1bcefbd3a5011665",
+      "run_id": 38260702822,
+      "reported_passed": 62,
+      "reported_total": 62,
       "nonzero_command_exits": 0
     },
     {
@@ -328,6 +343,14 @@
       "reported_passed": 5,
       "reported_total": 5,
       "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "gigaconnectome",
+      "source_sha": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
+      "run_id": 38210795614,
+      "reported_passed": 94,
+      "reported_total": 94,
+      "nonzero_command_exits": 1
     },
     {
       "recipe": "gingerale",
@@ -418,7 +441,7 @@
       "nonzero_command_exits": 3
     }
   ],
-  "reviewed_merged_recipe_count": 26,
+  "reviewed_merged_recipe_count": 28,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [
@@ -466,6 +489,27 @@
         "aarch64": 76,
         "x86_64": 76
       }
+    }
+  },
+  "root_current_source_gaps": [
+    {
+      "recipe": "gigaconnectome",
+      "current_upstream_source": "11049ac1e499f13b68a5a150a0a94fa8fe2711fc",
+      "root_native_source": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
+      "upstream_run": "https://github.com/neurodesk/neurocontainers/actions/runs/38216359773",
+      "note": "Revised upstream source passed both architecture suites; cached root proof verifies earlier source only."
+    }
+  ],
+  "diagnostic_reviews": {
+    "dcm2bids": {
+      "source_sha": "02f8bf5ea00a4d6213c980bc1bcefbd3a5011665",
+      "native_run_id": 38260702822,
+      "expected_tracebacks": [
+        "FileNotFoundError: nonexistent.json",
+        "NotADirectoryError: /nonexistent/path",
+        "json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes"
+      ],
+      "note": "Actual cached diagnostics match deliberate invalid-input fixtures. Legacy wrappers return0; these are negative/error-path tests, not successful conversions. The new synthetic real DICOM/BIDS operation passes without ignored exits and verifies exact output."
     }
   }
 }
