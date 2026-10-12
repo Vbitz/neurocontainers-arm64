@@ -1,0 +1,435 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-10-12T13:34:41.053416+00:00",
+  "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
+  "followup_required": [
+    "ants",
+    "brkraw"
+  ],
+  "expected_negative_cases": [
+    "AMICO invalid input exit64",
+    "dcm2niix version exit3/invalid option exit12",
+    "DICOM Tools dcmftest rejects NIfTI exit1",
+    "Brainlife CLI unknown-command diagnostic",
+    "Topaz missing arguments/subcommand diagnostics",
+    "NFTsim bundled explicitly unavailable fCaP coupling exit1"
+  ],
+  "findings": [
+    {
+      "recipe": "amico",
+      "findings": [
+        {
+          "test": "Error handling - invalid scheme",
+          "return_code": 64,
+          "errors": []
+        },
+        {
+          "test": "Error handling - missing file",
+          "return_code": 64,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "recipe": "ants",
+      "findings": [
+        {
+          "test": "Reset direction",
+          "return_code": 139,
+          "errors": []
+        },
+        {
+          "test": "Time series disassemble",
+          "return_code": 134,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "recipe": "brainlifecli",
+      "findings": [
+        {
+          "test": "Invalid command error",
+          "return_code": 0,
+          "errors": [
+            "error: unknown command 'invalidcommand'. See 'bl --help'."
+          ]
+        }
+      ]
+    },
+    {
+      "recipe": "brkraw",
+      "findings": [
+        {
+          "test": "nib-conform T1w to 1mm isotropic",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "nib-conform T1w to 2mm isotropic",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "nib-conform T1w custom shape",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "nib-conform T1w RAS orientation",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "nib-conform T1w LPS orientation",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "nib-conform T2 to standard space",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "brkraw info error handling",
+          "return_code": 2,
+          "errors": []
+        },
+        {
+          "test": "brkraw convert error handling",
+          "return_code": 2,
+          "errors": []
+        },
+        {
+          "test": "brkraw convert-batch error handling",
+          "return_code": 2,
+          "errors": []
+        },
+        {
+          "test": "error - nib-convert nonexistent file",
+          "return_code": 0,
+          "errors": [
+            "Traceback (most recent call last):",
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "error - nib-conform invalid orientation",
+          "return_code": 0,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        }
+      ]
+    },
+    {
+      "recipe": "dcm2niix",
+      "findings": [
+        {
+          "test": "Version check",
+          "return_code": 3,
+          "errors": []
+        },
+        {
+          "test": "Version string format",
+          "return_code": 3,
+          "errors": []
+        },
+        {
+          "test": "Build compiler info",
+          "return_code": 3,
+          "errors": []
+        },
+        {
+          "test": "Build architecture info",
+          "return_code": 3,
+          "errors": []
+        },
+        {
+          "test": "JPEG2000 support",
+          "return_code": 3,
+          "errors": []
+        },
+        {
+          "test": "JPEG-LS support",
+          "return_code": 3,
+          "errors": []
+        },
+        {
+          "test": "Invalid option handling",
+          "return_code": 12,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "recipe": "dicomtools",
+      "findings": [
+        {
+          "test": "dcmftest on NIfTI file",
+          "return_code": 1,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "recipe": "topaz",
+      "findings": [
+        {
+          "test": "Invalid subcommand error",
+          "return_code": 2,
+          "errors": []
+        },
+        {
+          "test": "Train without required args",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        },
+        {
+          "test": "Extract without input files",
+          "return_code": 1,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        }
+      ]
+    }
+  ],
+  "reviewed_merged_sources": [
+    {
+      "recipe": "amico",
+      "source_sha": "410446aa31a5c96fa7226c987b2509ab06691b3f",
+      "run_id": 38227423531,
+      "reported_passed": 75,
+      "reported_total": 75,
+      "nonzero_command_exits": 2
+    },
+    {
+      "recipe": "ants",
+      "source_sha": "f58b9e6755f6af3db1753d44ba3b390270c7cde0",
+      "run_id": 38206206331,
+      "reported_passed": 103,
+      "reported_total": 103,
+      "nonzero_command_exits": 2
+    },
+    {
+      "recipe": "bart",
+      "source_sha": "5496bbdb1363839a80b7b582b8eb3e5bbd9f320f",
+      "run_id": 38206195541,
+      "reported_passed": 117,
+      "reported_total": 117,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "brainles-aurora",
+      "source_sha": "12dd9fd8e64ffa76ae7eeec61d82a884958ecfff",
+      "run_id": 38229808747,
+      "reported_passed": 15,
+      "reported_total": 15,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "brainlifecli",
+      "source_sha": "fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8",
+      "run_id": 38206184713,
+      "reported_passed": 74,
+      "reported_total": 74,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "brkraw",
+      "source_sha": "6b05f8659fda5654927f7d1276972f473e3b1625",
+      "run_id": 38209191228,
+      "reported_passed": 76,
+      "reported_total": 76,
+      "nonzero_command_exits": 9
+    },
+    {
+      "recipe": "clearswi",
+      "source_sha": "83de01a91c3fe525ddef4e60924c9b9797ad6371",
+      "run_id": 38238100515,
+      "reported_passed": 68,
+      "reported_total": 68,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "condaenvs",
+      "source_sha": "00d52a64cd5bc7dff2d4957d83b284d2fbe8f752",
+      "run_id": 38223493182,
+      "reported_passed": 4,
+      "reported_total": 4,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "datalad",
+      "source_sha": "8e88819828eff352710469997301a18a7a917a19",
+      "run_id": 38237016220,
+      "reported_passed": 11,
+      "reported_total": 11,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "dcm2niix",
+      "source_sha": "15ef063103efb92fbbabbcf6cc006364750bfb30",
+      "run_id": 38238842263,
+      "reported_passed": 107,
+      "reported_total": 107,
+      "nonzero_command_exits": 7
+    },
+    {
+      "recipe": "deep-quality-estimation",
+      "source_sha": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
+      "run_id": 38223320234,
+      "reported_passed": 11,
+      "reported_total": 11,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "dicomtools",
+      "source_sha": "983b27d1fd8aecf2da4d0244053fe8479149864a",
+      "run_id": 38245306248,
+      "reported_passed": 180,
+      "reported_total": 180,
+      "nonzero_command_exits": 1
+    },
+    {
+      "recipe": "dwidenoise2",
+      "source_sha": "d973046690b93979fa394715a2dd842c2f7b8d8e",
+      "run_id": 38224114491,
+      "reported_passed": 6,
+      "reported_total": 6,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "fsqc",
+      "source_sha": "bba9c58d834c90e5fe99f6649679bf19ffd87334",
+      "run_id": 38218989145,
+      "reported_passed": 110,
+      "reported_total": 110,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "functionnectome",
+      "source_sha": "dd1361b47bae47fa2e28272da1c8905643a2ecb2",
+      "run_id": 38239893904,
+      "reported_passed": 5,
+      "reported_total": 5,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "hdbet",
+      "source_sha": "20835db5be6559a46dd369e4982cfac77a46cb91",
+      "run_id": 38247274390,
+      "reported_passed": 7,
+      "reported_total": 7,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "irkernel",
+      "source_sha": "8552efa3bae7d40f7bc7cee44508f0af2bbf1163",
+      "run_id": 38237720501,
+      "reported_passed": 6,
+      "reported_total": 6,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "laynii",
+      "source_sha": "926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9",
+      "run_id": 38243451196,
+      "reported_passed": 60,
+      "reported_total": 60,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "libreoffice",
+      "source_sha": "e0605c9dad41131f164cc8e65dbcfb9022354c54",
+      "run_id": 38220665128,
+      "reported_passed": 4,
+      "reported_total": 4,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "meganorm",
+      "source_sha": "0383fec6a76f59c56190fc67502a150bda24e492",
+      "run_id": 38218121419,
+      "reported_passed": 12,
+      "reported_total": 12,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "modsort",
+      "source_sha": "b8764c4d1150f58dafc62913167242a94fc96769",
+      "run_id": 38213391991,
+      "reported_passed": 8,
+      "reported_total": 8,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "niimath",
+      "source_sha": "38c17ee4e2f5c65d5db5a9077dd754178046fae8",
+      "run_id": 38241254326,
+      "reported_passed": 115,
+      "reported_total": 115,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "panoptica",
+      "source_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
+      "run_id": 38206125547,
+      "reported_passed": 10,
+      "reported_total": 10,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "pcntoolkit",
+      "source_sha": "64d88b79ce7299c91813e28dfdc8b95375b6ab6e",
+      "run_id": 38211311165,
+      "reported_passed": 14,
+      "reported_total": 14,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "topaz",
+      "source_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
+      "run_id": 38216691578,
+      "reported_passed": 130,
+      "reported_total": 130,
+      "nonzero_command_exits": 3
+    }
+  ],
+  "reviewed_merged_recipe_count": 25,
+  "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
+  "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
+  "active_followups": [
+    {
+      "recipe": "ants",
+      "candidate_sha": "72f72b06ed357182e63a4370760b5f84ca0140c2",
+      "branch": "arm64/upstream-ants-runtime-20261012",
+      "run_id": 38254862112,
+      "attempts": 4,
+      "deadline": "2026-10-12T17:01:51.539183+00:00"
+    },
+    {
+      "recipe": "brkraw",
+      "candidate_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
+      "branch": "arm64/upstream-brkraw-scipy-20261012",
+      "run_id": null,
+      "attempts": 3,
+      "deadline": "2026-10-12T17:42:58.534188+00:00"
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-12T12:56:08.855153+00:00",
-  "upstream_ref": "d6d5aef5e968f942b2a7ad2e8f3f03619ab56b2b",
+  "checked_at": "2026-10-12T13:22:47.489395+00:00",
+  "upstream_ref": "3074741662d65ad1c7aa4042248ab4bfd72eec36",
   "scope": "112 user-requested in-scope recipes;17 OpenRecon exclusions omitted.",
   "policy": "Read-only source-tree audit. Metadata presence/schema does not prove current builds, public artifacts or deployment; exact-candidate publication proofs remain in release-metadata-audit.json. No generated JSON changes or promotion dispatch.",
   "counts": {
     "pending-arm64-port": 52,
-    "explicit-arm64-metadata-present": 34,
-    "no-current-version-metadata-at-audited-ref": 26
+    "explicit-arm64-metadata-present": 35,
+    "no-current-version-metadata-at-audited-ref": 25
   },
   "containers": [
     {
@@ -287,7 +287,16 @@
         "aarch64"
       ],
       "path": "releases/clearswi_arm64/1.7.0.json",
-      "status": "no-current-version-metadata-at-audited-ref"
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "clearswi",
+      "apps": {
+        "clearswi_arm64 1.7.0": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
     },
     {
       "recipe": "code",

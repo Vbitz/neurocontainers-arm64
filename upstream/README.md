@@ -94,3 +94,14 @@ identity checks include the recipe's declared GUI launchers, matching
 is separate from exact-source runtime proof, publication manifests and public
 artifact checks in the per-merge audit. Test-only PRs do not fill pre-existing
 publication gaps or create a release candidate.
+
+Per-command outcomes are reviewed alongside suite totals. Existing
+`ignore_exit_code` settings can make a suite report success despite a crash or
+missing capability. [runtime-exit-audit.json](runtime-exit-audit.json) records the
+cached-report review, intentional negative cases, and required followups.
+Unexpected nonzero exits require correction or a concrete blocker; documented
+negative cases must assert their actual exit code and diagnostic. Prior merged
+PR/source/publication evidence is retained in `prior_submissions` when a focused
+followup is needed. Original attempt counts and deadlines persist. Publication
+proof remains attached to its original image source; a test-only followup does
+not create a new release.
