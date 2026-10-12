@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T12:38:18.805029+00:00",
+  "checked_at": "2026-10-12T12:55:28.322078+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -427,32 +427,36 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T12:38:16.056705+00:00",
-      "workflow_status": "queued",
+      "checked_at": "2026-10-12T12:55:23.457581+00:00",
+      "workflow_status": "in_progress",
       "workflow_conclusion": null,
       "publish_jobs": [
         {
           "name": "publish (candidate-clearswi-83de01a91c3fe525ddef4e60924c9b9797ad6371)",
-          "status": "queued",
+          "status": "in_progress",
           "conclusion": null,
-          "runner_name": "",
+          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-hng49",
           "labels": [
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
-          "active_steps": []
+          "active_steps": [
+            "Publish exact tested Docker archive to unique staging tags"
+          ]
         },
         {
           "name": "publish (candidate-clearswi_arm64-83de01a91c3fe525ddef4e60924c9b9797ad6371)",
-          "status": "queued",
+          "status": "in_progress",
           "conclusion": null,
-          "runner_name": "",
+          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-n885q",
           "labels": [
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
-          "active_steps": []
+          "active_steps": [
+            "Download candidate bundle without executing it"
+          ]
         }
       ],
-      "metadata_checked_at": "2026-10-12T12:38:16.842318+00:00"
+      "metadata_checked_at": "2026-10-12T12:55:24.284209+00:00"
     },
     {
       "recipe": "condaenvs",
@@ -594,55 +598,69 @@
       "recipe": "dicomtools",
       "promotion_run_id": 38247345717,
       "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38247345717",
-      "status": "pending-promotion",
+      "status": "verified-published-metadata",
       "metadata": [
         {
           "architecture": "aarch64",
           "path": "releases/dicomtools_arm64/1.1.0.json",
           "expected_build_date": "20261012",
-          "exists": false,
-          "committed_build_dates": [],
-          "current_candidate_date_committed": false
+          "committed_build_dates": [
+            "20261012"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "source_sha": "983b27d1fd8aecf2da4d0244053fe8479149864a",
+          "metadata_commit_sha": "04a24b6ebfaf018c2323c73c232df4c013a7ccc1",
+          "sif": "dicomtools_arm64_1.1.0_20261012.simg",
+          "sif_sha256": "e77f7762018e7eae83123cfd5fe8e5394ad5e30b99770d6a313ce47ceb3f349a",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/dicomtools_arm64_1.1.0_20261012.simg",
+          "public_sif_head_status": 200
         },
         {
           "architecture": "x86_64",
           "path": "releases/dicomtools/1.1.0.json",
           "expected_build_date": "20261012",
-          "exists": false,
-          "committed_build_dates": [],
-          "current_candidate_date_committed": false
+          "committed_build_dates": [
+            "20261012"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "source_sha": "983b27d1fd8aecf2da4d0244053fe8479149864a",
+          "metadata_commit_sha": "04a24b6ebfaf018c2323c73c232df4c013a7ccc1",
+          "sif": "dicomtools_1.1.0_20261012.simg",
+          "sif_sha256": "6a37c1e29881eb396c1fff1342f3741a30524dfb34704e8c2dc8b09a7be54f18",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/dicomtools_1.1.0_20261012.simg",
+          "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T12:38:18.012633+00:00",
-      "workflow_status": "in_progress",
-      "workflow_conclusion": null,
+      "checked_at": "2026-10-12T12:44:14.574797+00:00",
+      "workflow_status": "completed",
+      "workflow_conclusion": "success",
       "publish_jobs": [
         {
           "name": "publish (candidate-dicomtools-983b27d1fd8aecf2da4d0244053fe8479149864a)",
-          "status": "in_progress",
-          "conclusion": null,
+          "status": "completed",
+          "conclusion": "success",
           "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-xslr6",
           "labels": [
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
-          "active_steps": [
-            "Publish tested SIF to unique staging object keys"
-          ]
+          "active_steps": []
         },
         {
           "name": "publish (candidate-dicomtools_arm64-983b27d1fd8aecf2da4d0244053fe8479149864a)",
-          "status": "in_progress",
-          "conclusion": null,
+          "status": "completed",
+          "conclusion": "success",
           "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-tgqdt",
           "labels": [
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
-          "active_steps": [
-            "Publish exact tested Docker archive to unique staging tags"
-          ]
+          "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T12:38:18.804402+00:00"
+      "metadata_checked_at": "2026-10-12T12:44:23.595532+00:00"
     },
     {
       "recipe": "dwidenoise2",
@@ -779,6 +797,58 @@
         }
       ],
       "metadata_checked_at": "2026-10-12T10:41:35.434595+00:00"
+    },
+    {
+      "recipe": "laynii",
+      "promotion_run_id": 38251408959,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38251408959",
+      "status": "pending-promotion",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/laynii_arm64/2.10.0.json",
+          "expected_build_date": "20261012",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/laynii/2.10.0.json",
+          "expected_build_date": "20261012",
+          "exists": true,
+          "committed_build_dates": [
+            "20260929"
+          ],
+          "current_candidate_date_committed": false
+        }
+      ],
+      "checked_at": "2026-10-12T12:55:27.509824+00:00",
+      "workflow_status": "queued",
+      "workflow_conclusion": null,
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-laynii-926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-laynii_arm64-926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-12T12:55:28.321577+00:00"
     },
     {
       "recipe": "meganorm",
@@ -1130,9 +1200,10 @@
     "clearswi: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38248983163)",
     "condaenvs: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38229766906)",
     "deep-quality-estimation: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38227134210)",
-    "dicomtools: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38247345717)",
+    "dicomtools: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38247345717)",
     "dwidenoise2: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38227215604)",
     "fsqc: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38221551205)",
+    "laynii: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38251408959)",
     "meganorm: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38220896254)",
     "modsort: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38219491260)",
     "panoptica: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38209000133)",
@@ -1142,13 +1213,13 @@
     "Publication is tracked separately from native test success and upstream PR merge. No release JSON is manually edited."
   ],
   "catalog_queue_audit": {
-    "checked_at": "2026-10-12T11:41:15.425591+00:00",
+    "checked_at": "2026-10-12T12:45:12.874129+00:00",
     "repository": "neurodesk/neurocommand",
     "ref": "update-apps-json",
-    "commit_sha": "bd3d75663ed73619b48a31e4e6a16ed7e5b8e366",
+    "commit_sha": "e5592a1a9f53e302552b521b648908444f27b410",
     "path": "neurodesk/apps.json",
     "status": "verified-queue-content",
-    "note": "Pinned catalog queue matches complete published app records for both architectures of all14 audited image ports. Apps/webapps update workflows succeeded for their metadata commits. Scheduled consolidation/deployment remains separate.",
+    "note": "Pinned catalog queue matches complete published app records for all30 architecture entries across15 audited image ports. Apps/webapps update workflows succeeded for their metadata commits. Scheduled consolidation/deployment remains separate.",
     "entries": [
       {
         "recipe": "ants",
@@ -1162,7 +1233,8 @@
         "catalog_apps": [
           "ants_arm64 2.6.5"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "8e633432dc4af2f4ed2d61139ef03f5712e34175"
       },
       {
         "recipe": "ants",
@@ -1176,7 +1248,8 @@
         "catalog_apps": [
           "ants 2.6.5"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "8e633432dc4af2f4ed2d61139ef03f5712e34175"
       },
       {
         "recipe": "bart",
@@ -1190,7 +1263,8 @@
         "catalog_apps": [
           "bart 1.0.00"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "d3cfb58df69ad1e70a15fdfee044c2321d67bfb3"
       },
       {
         "recipe": "bart",
@@ -1204,7 +1278,8 @@
         "catalog_apps": [
           "bart_arm64 1.0.00"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "d3cfb58df69ad1e70a15fdfee044c2321d67bfb3"
       },
       {
         "recipe": "brainles-aurora",
@@ -1218,7 +1293,8 @@
         "catalog_apps": [
           "brainles-aurora_arm64 0.2.7"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "ad4813f274014435d173e13f7ec53ce3b3796bbe"
       },
       {
         "recipe": "brainles-aurora",
@@ -1232,7 +1308,8 @@
         "catalog_apps": [
           "brainles-aurora 0.2.7"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "ad4813f274014435d173e13f7ec53ce3b3796bbe"
       },
       {
         "recipe": "brainlifecli",
@@ -1246,7 +1323,8 @@
         "catalog_apps": [
           "brainlifecli 1.8.2"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "cbd8b8de076603d29447347670dec9a753039319"
       },
       {
         "recipe": "brainlifecli",
@@ -1260,7 +1338,8 @@
         "catalog_apps": [
           "brainlifecli_arm64 1.8.2"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "cbd8b8de076603d29447347670dec9a753039319"
       },
       {
         "recipe": "brkraw",
@@ -1274,7 +1353,8 @@
         "catalog_apps": [
           "brkraw_arm64 0.5.7"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "85c2cb512f1f45306b7b1f2760a6b167596cacb5"
       },
       {
         "recipe": "brkraw",
@@ -1288,7 +1368,8 @@
         "catalog_apps": [
           "brkraw 0.5.7"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "85c2cb512f1f45306b7b1f2760a6b167596cacb5"
       },
       {
         "recipe": "condaenvs",
@@ -1302,7 +1383,8 @@
         "catalog_apps": [
           "condaenvs 1.1.0"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "a11929e82fc8b7e866c18a07cb41d4d3ef13fae3"
       },
       {
         "recipe": "condaenvs",
@@ -1316,7 +1398,8 @@
         "catalog_apps": [
           "condaenvs_arm64 1.1.0"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "a11929e82fc8b7e866c18a07cb41d4d3ef13fae3"
       },
       {
         "recipe": "deep-quality-estimation",
@@ -1330,7 +1413,8 @@
         "catalog_apps": [
           "deep-quality-estimation_arm64 0.0.3"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "080e8b3a4cf6e2ddbec99ad817410dd9cbe3d6a9"
       },
       {
         "recipe": "deep-quality-estimation",
@@ -1344,7 +1428,38 @@
         "catalog_apps": [
           "deep-quality-estimation 0.0.3"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "080e8b3a4cf6e2ddbec99ad817410dd9cbe3d6a9"
+      },
+      {
+        "recipe": "dicomtools",
+        "architecture": "aarch64",
+        "catalog_container": "dicomtools_arm64",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "catalog_app": "dicomtools_arm64 1.1.0",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38250811252",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38250811274",
+        "catalog_apps": [
+          "dicomtools_arm64 1.1.0"
+        ],
+        "all_app_records_match": true,
+        "metadata_commit_sha": "04a24b6ebfaf018c2323c73c232df4c013a7ccc1"
+      },
+      {
+        "recipe": "dicomtools",
+        "architecture": "x86_64",
+        "catalog_container": "dicomtools",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "catalog_app": "dicomtools 1.1.0",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38250811252",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38250811274",
+        "catalog_apps": [
+          "dicomtools 1.1.0"
+        ],
+        "all_app_records_match": true,
+        "metadata_commit_sha": "04a24b6ebfaf018c2323c73c232df4c013a7ccc1"
       },
       {
         "recipe": "dwidenoise2",
@@ -1358,7 +1473,8 @@
         "catalog_apps": [
           "dwidenoise2_arm64 1.0.0"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "f5e5c6f3264ac8e7a42bbaf665b9a1a33b771d19"
       },
       {
         "recipe": "dwidenoise2",
@@ -1372,7 +1488,8 @@
         "catalog_apps": [
           "dwidenoise2 1.0.0"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "f5e5c6f3264ac8e7a42bbaf665b9a1a33b771d19"
       },
       {
         "recipe": "fsqc",
@@ -1386,7 +1503,8 @@
         "catalog_apps": [
           "fsqc_arm64 2.1.7"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "5142bce43f973c62b8a8bea7534b0f89ad33611f"
       },
       {
         "recipe": "fsqc",
@@ -1400,7 +1518,8 @@
         "catalog_apps": [
           "fsqc 2.1.7"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "5142bce43f973c62b8a8bea7534b0f89ad33611f"
       },
       {
         "recipe": "meganorm",
@@ -1414,7 +1533,8 @@
         "catalog_apps": [
           "meganorm 0.2.2"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "36520dbcb15c00597b0dc6afb7fd255e9fbcdc33"
       },
       {
         "recipe": "meganorm",
@@ -1428,7 +1548,8 @@
         "catalog_apps": [
           "meganorm_arm64 0.2.2"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "36520dbcb15c00597b0dc6afb7fd255e9fbcdc33"
       },
       {
         "recipe": "modsort",
@@ -1443,7 +1564,8 @@
           "modsort 0.0.2",
           "modsort-modsort 0.0.2"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "c96a8ec22c9d8bfd02515cc42d876d205a306d91"
       },
       {
         "recipe": "modsort",
@@ -1458,7 +1580,8 @@
           "modsort_arm64 0.0.2",
           "modsort-modsort_arm64 0.0.2"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "c96a8ec22c9d8bfd02515cc42d876d205a306d91"
       },
       {
         "recipe": "panoptica",
@@ -1472,7 +1595,8 @@
         "catalog_apps": [
           "panoptica_arm64 2.1.7"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "5da36a28ffa9fd847e98df5bce020e5700b4a078"
       },
       {
         "recipe": "panoptica",
@@ -1486,7 +1610,8 @@
         "catalog_apps": [
           "panoptica 2.1.7"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "5da36a28ffa9fd847e98df5bce020e5700b4a078"
       },
       {
         "recipe": "pcntoolkit",
@@ -1500,7 +1625,8 @@
         "catalog_apps": [
           "pcntoolkit 1.3.0"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "653f2cd77169ec3c6e1aff8f237faec3f283c7c6"
       },
       {
         "recipe": "pcntoolkit",
@@ -1514,7 +1640,8 @@
         "catalog_apps": [
           "pcntoolkit_arm64 1.3.0"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "653f2cd77169ec3c6e1aff8f237faec3f283c7c6"
       },
       {
         "recipe": "topaz",
@@ -1528,7 +1655,8 @@
         "catalog_apps": [
           "topaz_arm64 0.3.20"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "ddc25e0d0cb13525b189621c356a365be217c5d8"
       },
       {
         "recipe": "topaz",
@@ -1542,10 +1670,11 @@
         "catalog_apps": [
           "topaz 0.3.20"
         ],
-        "all_app_records_match": true
+        "all_app_records_match": true,
+        "metadata_commit_sha": "ddc25e0d0cb13525b189621c356a365be217c5d8"
       }
     ],
-    "blob_sha": "d03556031a5e79e4c8a291182647f2b451140756"
+    "blob_sha": "c52f1c55880a2eb2c34ee6b3ac0f860f8a2829c4"
   },
   "verification_only_changes": [
     {
