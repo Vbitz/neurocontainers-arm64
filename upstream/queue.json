@@ -93,7 +93,17 @@
         "three_way_conflicts": [
           "recipes/afni/build.yaml"
         ]
-      }
+      },
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3442,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3442",
+          "observed_state": "MERGED",
+          "head_sha": "090439f1cb83dad7965fe5e5aa2ba33092ecaeb7",
+          "merge_sha": "e58e8160a816113f1fb04921bfa30d048d783f19",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "aidamri",
@@ -211,7 +221,91 @@
       "run_id": 38206206331,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3487",
       "upstream_ci": {
-        "candidate_run_id": 38211134319
+        "candidate_run_id": 38211134319,
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "ants",
+          "container": "ants_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "2.6.5",
+          "build_date": "20261012",
+          "docker_archive": "ants_arm64_2.6.5_20261012.docker.tar",
+          "sif": "ants_arm64_2.6.5_20261012.simg",
+          "candidate_tag": "nd-candidate-ants_arm64:f58b9e6755f6",
+          "launcher": null,
+          "pr_number": 3487,
+          "head_sha": "f58b9e6755f6af3db1753d44ba3b390270c7cde0",
+          "tests": {
+            "total": 103,
+            "passed": 103,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 102,
+            "fulltest_passed": 102,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "ANTs version check",
+              "N4BiasFieldCorrection version check",
+              "antsApplyTransforms version check",
+              "PrintHeader origin",
+              "PrintHeader spacing",
+              "PrintHeader size",
+              "PrintHeader direction",
+              "Image intensity statistics",
+              "Convert to unsigned char",
+              "Convert to unsigned short",
+              "Convert to float",
+              "N4 bias field correction basic",
+              "N4 with bias field output",
+              "N4 with custom convergence",
+              "Denoise image Rician model",
+              "Denoise image Gaussian model",
+              "Denoise with noise image output",
+              "Denoise with shrink factor",
+              "Threshold image basic"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.6 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "1.1 MB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 98.6748,
+            "wasted_bytes": 20736880,
+            "wasted_bytes_display": "21 MB",
+            "user_wasted_percent": 2.2979
+          }
+        }
       },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
@@ -733,7 +827,17 @@
         "fulltest_version": "1.0.0",
         "test_count": 107
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3453,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3453",
+          "observed_state": "MERGED",
+          "head_sha": "de8ee1d11d807e1c4fbaa0e679f069fc8b3067ca",
+          "merge_sha": "084d03ac116480e2cfbcb4f587583b32a661e47b",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "bidscoin",
@@ -1453,6 +1557,16 @@
           "status": "OPEN",
           "note": "Independent upstream change observed 2026-10-12. Reconcile before starting to avoid duplicate recipe work."
         }
+      ],
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3488,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3488",
+          "observed_state": "MERGED",
+          "head_sha": "beb7117d5677d27c67d8cc7d78104a6300a6a7e3",
+          "merge_sha": "bab09bafcdf71fbada352986df5e2ed748d34342",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
       ]
     },
     {
@@ -1941,7 +2055,33 @@
           "recipes/code/build.yaml",
           "recipes/code/fulltest.yaml"
         ]
-      }
+      },
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3460,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3460",
+          "observed_state": "MERGED",
+          "head_sha": "ee520f6dc670e35dfed047825b0903e7d207892a",
+          "merge_sha": "cb227af2cd03c681499c622b803564fc1947464d",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        },
+        {
+          "number": 3425,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3425",
+          "observed_state": "MERGED",
+          "head_sha": "f9636ae5746f505bee11f128002a7d45d48e65ca",
+          "merge_sha": "65e570af8f260935e625715bc799139d15ffb486",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        },
+        {
+          "number": 3408,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3408",
+          "observed_state": "MERGED",
+          "head_sha": "c375b485fcbab6222194158d4767ca10cb3d3786",
+          "merge_sha": "e6b6a36a5a80eb6dd83af5e544ddcdb80a25e4d3",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "condaenvs",
@@ -2064,7 +2204,25 @@
         "fulltest_version": "1.7.1",
         "test_count": 9
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3417,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3417",
+          "observed_state": "MERGED",
+          "head_sha": "a8b17aa60c5a0b52d1833a6e8bf35f734ef399f8",
+          "merge_sha": "bdfa3160000e82a49f165dcc3c9d6d3f76867be1",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        },
+        {
+          "number": 3409,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3409",
+          "observed_state": "MERGED",
+          "head_sha": "3c22c761291abdf4e886de33b63e316b488cc9cc",
+          "merge_sha": "8246312d1654f58e4890509ebfc146c883eda906",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "dcm2bids",
@@ -2315,7 +2473,17 @@
         "fulltest_version": "0.15.3",
         "test_count": 86
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3410,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3410",
+          "observed_state": "MERGED",
+          "head_sha": "3c3792e1bb3382d1b44575d5ae011821e68eb707",
+          "merge_sha": "238d5f0d2395729fabf0869e1df2b83378743a39",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "dicomtools",
@@ -2784,6 +2952,15 @@
         "port_patch_applies": true,
         "fulltest_version": "2.1.7",
         "test_count": 108
+      },
+      "pr_plan": "Read-only preflight complete: official FSQC 2.1.7 PyPI py3-none-any wheel requires Python >=3.10 and the existing recipe uses Python 3.13. Pinned fsqcUtils.binarizeImage inspected from that wheel. Replay ARM declaration and add exact saved segmentation-mask/uint8/affine assertions while preserving all existing 108 tests. Stage only after an investigation slot opens. No branch, clock or build started during preflight.",
+      "primary_source_review": {
+        "package_metadata": "https://pypi.org/pypi/fsqc/2.1.7/json",
+        "documentation": "https://github.com/Deep-MI/fsqc",
+        "version": "2.1.7",
+        "wheel": "fsqc-2.1.7-py3-none-any.whl",
+        "requires_python": ">=3.10",
+        "operation": "fsqc.fsqcUtils.binarizeImage: match selected labels, preserve image affine, output uint8"
       }
     },
     {
@@ -3580,7 +3757,17 @@
         "fulltest_version": "26.8.1.1",
         "test_count": 2
       },
-      "pr_plan": "Current fulltest checks version and launcher presence. Add headless document conversion using an isolated writable user profile and assert a nonempty PDF with the expected file signature. Test current ARM64/x86_64 candidate; preserve launcher/version checks."
+      "pr_plan": "Current fulltest checks version and launcher presence. Add headless document conversion using an isolated writable user profile and assert a nonempty PDF with the expected file signature. Test current ARM64/x86_64 candidate; preserve launcher/version checks.",
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3418,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3418",
+          "observed_state": "MERGED",
+          "head_sha": "92adce1b79e27617ed46e048aa555735f35908d7",
+          "merge_sha": "62affd2ba07b8965f0a57991fdf6fbec02368d77",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "lipsia",
@@ -4257,7 +4444,25 @@
         "three_way_conflicts": [
           "recipes/mneextended/build.yaml"
         ]
-      }
+      },
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3462,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3462",
+          "observed_state": "MERGED",
+          "head_sha": "36986c8605651f9564a73fa04760f07884559290",
+          "merge_sha": "873e4eebb2527c847937bf3a34e4a6f4a55762ec",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        },
+        {
+          "number": 3427,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3427",
+          "observed_state": "MERGED",
+          "head_sha": "bc5900e0904f96e37034a988f206250befcfe707",
+          "merge_sha": "9e2eef59e8d8aa92a65d9dbaf35195c2e5400d06",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "modsort",
@@ -5673,7 +5878,17 @@
         "three_way_conflicts": [
           "recipes/pydeface/build.yaml"
         ]
-      }
+      },
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3387,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3387",
+          "observed_state": "MERGED",
+          "head_sha": "04c0c7d77286e06a9f3b03a8ae672b22cc6c1453",
+          "merge_sha": "e799857ac5b66df4126c62df33e161e5d8fa1299",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "qmrlab",
@@ -5714,7 +5929,17 @@
         "port_patch_applies": true,
         "fulltest_version": "3.0.0",
         "test_count": 50
-      }
+      },
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3388,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3388",
+          "observed_state": "MERGED",
+          "head_sha": "ddac09233ad8025db0b28966e83fed85c2ffbd86",
+          "merge_sha": "97ff6ac557ca8296ab655a78216ef41df8ac3ffa",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "qsmbly",
@@ -5758,7 +5983,17 @@
         "test_count": 1,
         "patch_conflict": "error: patch failed: recipes/qsmbly/fulltest.yaml:1\nerror: recipes/qsmbly/fulltest.yaml: patch does not apply",
         "three_way_clean": true
-      }
+      },
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3412,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3412",
+          "observed_state": "MERGED",
+          "head_sha": "c8f30d3b12c3fd3e59168ff9644e770532c79285",
+          "merge_sha": "0dbe458871601eb5c22fd66509e617ab690c2d2d",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "qsmxt",
@@ -5930,7 +6165,17 @@
         "port_patch_applies": true,
         "fulltest_version": "0.2.4",
         "test_count": 2
-      }
+      },
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3421,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3421",
+          "observed_state": "MERGED",
+          "head_sha": "8336f5b0b09d357d066a40398614f0d228f78fae",
+          "merge_sha": "440f9c1da14d0f2c55598f2078298163126a3cda",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "rapidtide",
@@ -5973,7 +6218,17 @@
         "test_count": 4,
         "patch_conflict": "error: patch failed: recipes/rapidtide/build.yaml:2\nerror: recipes/rapidtide/build.yaml: patch does not apply",
         "three_way_clean": true
-      }
+      },
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3428,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3428",
+          "observed_state": "MERGED",
+          "head_sha": "c29a105ed983cb3fa041e85295e5b4e1c950663b",
+          "merge_sha": "cc18f74019698f89f038bf8bde337d17b9ae2272",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "romeo",
@@ -6063,7 +6318,17 @@
           "recipes/root/build.yaml",
           "recipes/root/fulltest.yaml"
         ]
-      }
+      },
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3443,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3443",
+          "observed_state": "MERGED",
+          "head_sha": "26ff065c4321460e2458c16fb3ba2a48d97e1fbd",
+          "merge_sha": "a913d5d55e8bb34eaa480b4ce3a904866cd9ff42",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "rshrf",
@@ -6403,7 +6668,17 @@
         "three_way_conflicts": [
           "recipes/sovabids/build.yaml"
         ]
-      }
+      },
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3455,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3455",
+          "observed_state": "MERGED",
+          "head_sha": "63325f3dd1fcca539cad21b1425951997bbe4fdb",
+          "merge_sha": "30eea7bd0dc418880092565c207a73278e83f3b6",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "spant",
@@ -6444,7 +6719,17 @@
         "fulltest_version": "4.5.0",
         "test_count": 4
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3456,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3456",
+          "observed_state": "MERGED",
+          "head_sha": "0423d4ec41b1571e635009450d59a043c60683b7",
+          "merge_sha": "5b6e42cf2dfdeab67306eded2e438d8e2750f8eb",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "spmpython",
@@ -6485,7 +6770,17 @@
         "fulltest_version": "25.1.2.post2",
         "test_count": 82
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3457,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3457",
+          "observed_state": "MERGED",
+          "head_sha": "021952b329dd8ed958b6346668a65d53fbee129a",
+          "merge_sha": "bdbfda367a9ba4329a27be54f8c4f37c50d4329f",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "syncro",
@@ -6614,7 +6909,17 @@
         "port_patch_applies": true,
         "fulltest_version": "7.4.1",
         "test_count": 69
-      }
+      },
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3479,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3479",
+          "observed_state": "MERGED",
+          "head_sha": "aeeda37e7263fa5e7023c16cacfcd63c02ecfd15",
+          "merge_sha": "1bf329f739577e8aa338653814b9b3dcb9b2f1e8",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "synthstroke",
@@ -7228,7 +7533,17 @@
         "fulltest_version": "2.5.0",
         "test_count": 2
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Recent independent PR #3481 already merged 2.18.0 and no-home launch fix; both upstream architecture candidates passed four configuration/deploy tests. Avoid duplicating that image change. Current ARM suite does not assert actual model inference; inspect feasibility of a real public-model CPU inference/geometry test before fresh native verification and a focused fulltest PR under the now-fixed runtime CI.",
+      "recent_upstream_pr_preflight": [
+        {
+          "number": 3481,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3481",
+          "observed_state": "MERGED",
+          "head_sha": "9bc170ee6baa0eba8b2ed7261a0d496a40c327b7",
+          "merge_sha": "a4661e3960f643bd6a6711e1b32111c0726ac02c",
+          "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
+        }
+      ]
     },
     {
       "recipe": "tractseg",

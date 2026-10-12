@@ -3364,3 +3364,5 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - `meganorm` current-upstream native [run 38218121419](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38218121419) dispatched at exact `0383fec6a76f59c56190fc67502a150bda24e492`; attempts 4/6 total; deadline `2026-10-12T18:25:44.337660+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
 
 - `pcntoolkit` publication now verified: [promotion](https://github.com/neurodesk/neurocontainers/actions/runs/38215533821) succeeded; both committed release JSONs exactly match trusted previews for `64d88b79ce7299c91813e28dfdc8b95375b6ab6e`, with expected ARM64 identity/date and public SIF HTTP 200. Metadata commits: 653f2cd77169ec3c6e1aff8f237faec3f283c7c6, 653f2cd77169ec3c6e1aff8f237faec3f283c7c6.
+
+- ANTs upstream ARM64 report from run 38211134319 confirms exact source/PR, 103/103 runtime and 102/102 scientific tests, zero failures/skips, Dive passed. x86 source build remains healthy and active; no repeat build.
