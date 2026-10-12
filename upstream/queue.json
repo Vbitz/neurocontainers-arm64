@@ -5637,7 +5637,15 @@
         "fulltest_version": "0.2.5",
         "test_count": 126
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "existing_upstream_prs": [
+        {
+          "number": 3480,
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3480",
+          "observed_state": "OPEN",
+          "note": "Existing version update; inspect current main/PR evidence before starting this recipe, and avoid duplicate submissions."
+        }
+      ]
     },
     {
       "recipe": "topofit",
