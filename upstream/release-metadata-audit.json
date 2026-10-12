@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T15:04:01.210472+00:00",
+  "checked_at": "2026-10-12T15:15:04.305687+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -429,7 +429,7 @@
           "current_candidate_date_committed": true
         }
       ],
-      "checked_at": "2026-10-12T15:03:47.045560+00:00",
+      "checked_at": "2026-10-12T15:14:58.975392+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -454,7 +454,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T15:03:47.913089+00:00"
+      "metadata_checked_at": "2026-10-12T15:14:59.768285+00:00"
     },
     {
       "recipe": "clearswi",
@@ -889,7 +889,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T15:03:49.256508+00:00",
+      "checked_at": "2026-10-12T15:15:01.444830+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -914,7 +914,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T15:03:50.002837+00:00"
+      "metadata_checked_at": "2026-10-12T15:15:02.280206+00:00"
     },
     {
       "recipe": "gingerale",
@@ -1009,7 +1009,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T15:04:00.391552+00:00",
+      "checked_at": "2026-10-12T15:15:03.419903+00:00",
       "workflow_status": "in_progress",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -1022,7 +1022,7 @@
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
           "active_steps": [
-            "Download candidate bundle without executing it"
+            "Publish exact tested Docker archive to unique staging tags"
           ]
         },
         {
@@ -1038,7 +1038,7 @@
           ]
         }
       ],
-      "metadata_checked_at": "2026-10-12T15:04:01.210085+00:00"
+      "metadata_checked_at": "2026-10-12T15:15:04.304865+00:00"
     },
     {
       "recipe": "laynii",

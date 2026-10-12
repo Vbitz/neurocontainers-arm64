@@ -910,7 +910,82 @@
         "own_attempts_before_external_revision": 4,
         "discovered_at": "2026-10-12T15:11:15.546413+00:00",
         "status": "running",
-        "note": "Independent upstream source update observed, not dispatched by this continuation. Account its two matrix jobs in global capacity. Original source proof and infrastructure blocker remain until new exact-source reports reviewed."
+        "note": "Independent upstream source update observed, not dispatched by this continuation. Account its two matrix jobs in global capacity. Original source proof and infrastructure blocker remain until new exact-source reports reviewed.",
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "apptainer",
+          "container": "apptainer_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.5.3",
+          "build_date": "20261012",
+          "docker_archive": "apptainer_arm64_1.5.3_20261012.docker.tar",
+          "sif": "apptainer_arm64_1.5.3_20261012.simg",
+          "candidate_tag": "nd-candidate-apptainer_arm64:c965631ea591",
+          "launcher": null,
+          "pr_number": 3505,
+          "head_sha": "c965631ea591f90d5692f8d85f45a650717fe78a",
+          "tests": {
+            "total": 7,
+            "passed": 7,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 6,
+            "fulltest_passed": 6,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "apptainer version",
+              "singularity alias version",
+              "apptainer help",
+              "apptainer exec help",
+              "apptainer build help",
+              "build and execute a native nested SIF"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.5 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "1.0 MB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.1477,
+            "wasted_bytes": 20340448,
+            "wasted_bytes_display": "20 MB",
+            "user_wasted_percent": 1.4399
+          }
+        },
+        "aarch64_runner_labels": [
+          "blacksmith-8vcpu-ubuntu-2404-arm"
+        ],
+        "next_action": "Exact revised ARM7/7 with6/6fulltests/Dive verified; await revised x867/7 and required gates. Earlier root proof is distinct."
       }
     },
     {
@@ -3029,7 +3104,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-12T15:03:47.045560+00:00",
+        "checked_at": "2026-10-12T15:14:58.975392+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -3054,7 +3129,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T15:03:47.913089+00:00"
+        "metadata_checked_at": "2026-10-12T15:14:59.768285+00:00"
       }
     },
     {
@@ -7095,7 +7170,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T15:03:49.256508+00:00",
+        "checked_at": "2026-10-12T15:15:01.444830+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -7120,7 +7195,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T15:03:50.002837+00:00"
+        "metadata_checked_at": "2026-10-12T15:15:02.280206+00:00"
       }
     },
     {
@@ -7561,9 +7636,50 @@
       "attempts": 3,
       "run_id": 38261078085,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3518",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "runtime_run_id": 38267404507,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38267404507",
+        "head_sha": "2e2a477ef48cc16f83c6d7053615e74c977c878a",
+        "tested_merge_sha": "adbc9eebcc7b6945f6c8f2e8d737b746601c8ab0",
+        "recipe_tree_matches_head": true,
+        "aarch64": {
+          "runtime_observation": {
+            "container": "glmsingle_arm64",
+            "version": "1.2.0",
+            "machine": "aarch64",
+            "status": "passed",
+            "observed_at": "2026-10-12T15:15:16.642552+00:00",
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38267404507",
+            "recipe_sha256": "e140c49a8765c38e9d72fb608fa8708f0f70ad3715b21c1a96bdbbcf3b89aa8c",
+            "image_id": "sha256:1f0feaf6357a16c232df59f6c9db01307431b6fe9ce4015884048e9b59062fd1",
+            "candidate_sha256": "85eaf49c2667f5e1c716b6ef7875ba4c66740f23b80ec050453f81f888afb964"
+          },
+          "counts": {
+            "total_tests": 78,
+            "passed": 78,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 168.3951461315155,
+            "run_timestamp": "2026-10-12T15:15:16.517117",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 77,
+            "total_suites": 1,
+            "total_tests": 77
+          },
+          "artifact_name": "recipe-check-glmsingle_arm64-adbc9eebcc7b6945f6c8f2e8d737b746601c8ab0",
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38267404507/job/114873149140",
+          "runner_labels": [
+            "blacksmith-8vcpu-ubuntu-2404-arm"
+          ],
+          "actual_command_exits": "All77 fulltest commands returned0"
+        }
+      },
       "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "next_action": "Exact upstream ARM78/78/77fulltests and merge-parent/recipe-tree/build-hash proof reviewed. Await actual x86 report and all gates; no successful ARM rebuild.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.0",
@@ -7952,7 +8068,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T15:04:00.391552+00:00",
+        "checked_at": "2026-10-12T15:15:03.419903+00:00",
         "workflow_status": "in_progress",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -7965,7 +8081,7 @@
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "active_steps": [
-              "Download candidate bundle without executing it"
+              "Publish exact tested Docker archive to unique staging tags"
             ]
           },
           {
@@ -7981,7 +8097,7 @@
             ]
           }
         ],
-        "metadata_checked_at": "2026-10-12T15:04:01.210085+00:00"
+        "metadata_checked_at": "2026-10-12T15:15:04.304865+00:00"
       }
     },
     {
