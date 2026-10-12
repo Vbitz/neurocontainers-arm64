@@ -85,7 +85,11 @@
         "port_patch_applies": false,
         "fulltest_version": "26.3.02",
         "test_count": 113,
-        "patch_conflict": "error: patch failed: recipes/afni/build.yaml:1\nerror: recipes/afni/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/afni/build.yaml:1\nerror: recipes/afni/build.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/afni/build.yaml"
+        ]
       }
     },
     {
@@ -128,7 +132,11 @@
         "port_patch_applies": false,
         "fulltest_version": "3.0.0",
         "test_count": 6,
-        "patch_conflict": "error: patch failed: recipes/aidamri/build.yaml:9\nerror: recipes/aidamri/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/aidamri/build.yaml:9\nerror: recipes/aidamri/build.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/aidamri/build.yaml"
+        ]
       }
     },
     {
@@ -693,7 +701,8 @@
         "port_patch_applies": false,
         "fulltest_version": "1.1.0",
         "test_count": 2,
-        "patch_conflict": "error: patch failed: recipes/blochsiegertb1mapping/build.yaml:2\nerror: recipes/blochsiegertb1mapping/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/blochsiegertb1mapping/build.yaml:2\nerror: recipes/blochsiegertb1mapping/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -776,7 +785,8 @@
         "port_patch_applies": false,
         "fulltest_version": "0.6.13",
         "test_count": 15,
-        "patch_conflict": "error: patch failed: recipes/brainles-preprocessing/build.yaml:8\nerror: recipes/brainles-preprocessing/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/brainles-preprocessing/build.yaml:8\nerror: recipes/brainles-preprocessing/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -1064,7 +1074,12 @@
         "port_patch_applies": false,
         "fulltest_version": "240320",
         "test_count": 84,
-        "patch_conflict": "error: patch failed: recipes/code/build.yaml:1\nerror: recipes/code/build.yaml: patch does not apply\nerror: patch failed: recipes/code/fulltest.yaml:14\nerror: recipes/code/fulltest.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/code/build.yaml:1\nerror: recipes/code/build.yaml: patch does not apply\nerror: patch failed: recipes/code/fulltest.yaml:14\nerror: recipes/code/fulltest.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/code/build.yaml",
+          "recipes/code/fulltest.yaml"
+        ]
       }
     },
     {
@@ -1388,7 +1403,11 @@
         "port_patch_applies": false,
         "fulltest_version": "3.0.2",
         "test_count": 100,
-        "patch_conflict": "error: patch failed: recipes/deeplabcut/build.yaml:2\nerror: recipes/deeplabcut/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/deeplabcut/build.yaml:2\nerror: recipes/deeplabcut/build.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/deeplabcut/build.yaml"
+        ]
       }
     },
     {
@@ -1470,7 +1489,8 @@
         "port_patch_applies": false,
         "fulltest_version": "1.1.0",
         "test_count": 178,
-        "patch_conflict": "error: patch failed: recipes/dicomtools/build.yaml:12\nerror: recipes/dicomtools/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/dicomtools/build.yaml:12\nerror: recipes/dicomtools/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -1593,7 +1613,11 @@
         "port_patch_applies": false,
         "fulltest_version": "5.3.1",
         "test_count": 32,
-        "patch_conflict": "error: patch failed: recipes/elastix/build.yaml:14\nerror: recipes/elastix/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/elastix/build.yaml:14\nerror: recipes/elastix/build.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/elastix/build.yaml"
+        ]
       }
     },
     {
@@ -1718,7 +1742,8 @@
         "port_patch_applies": false,
         "fulltest_version": "1.0.0",
         "test_count": 2,
-        "patch_conflict": "error: patch failed: recipes/fetalsynthseg/build.yaml:7\nerror: recipes/fetalsynthseg/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/fetalsynthseg/build.yaml:7\nerror: recipes/fetalsynthseg/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -1800,7 +1825,8 @@
         "port_patch_applies": false,
         "fulltest_version": "1.0.0",
         "test_count": 8,
-        "patch_conflict": "error: patch failed: recipes/flames/build.yaml:10\nerror: recipes/flames/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/flames/build.yaml:10\nerror: recipes/flames/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -1842,7 +1868,11 @@
         "port_patch_applies": false,
         "fulltest_version": "6.0.7.23",
         "test_count": 130,
-        "patch_conflict": "error: patch failed: recipes/fsl/build.yaml:31\nerror: recipes/fsl/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/fsl/build.yaml:31\nerror: recipes/fsl/build.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/fsl/build.yaml"
+        ]
       }
     },
     {
@@ -2046,7 +2076,8 @@
         "port_patch_applies": false,
         "fulltest_version": "4.0.0",
         "test_count": 51,
-        "patch_conflict": "error: patch failed: recipes/gingerale/build.yaml:2\nerror: recipes/gingerale/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/gingerale/build.yaml:2\nerror: recipes/gingerale/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -2170,7 +2201,11 @@
         "port_patch_applies": false,
         "fulltest_version": "${globus_version}",
         "test_count": 71,
-        "patch_conflict": "error: patch failed: recipes/globus/fulltest.yaml:7\nerror: recipes/globus/fulltest.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/globus/fulltest.yaml:7\nerror: recipes/globus/fulltest.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/globus/fulltest.yaml"
+        ]
       }
     },
     {
@@ -2412,7 +2447,11 @@
         "port_patch_applies": false,
         "fulltest_version": "2.10.0",
         "test_count": 59,
-        "patch_conflict": "error: patch failed: recipes/laynii/build.yaml:25\nerror: recipes/laynii/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/laynii/build.yaml:25\nerror: recipes/laynii/build.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/laynii/build.yaml"
+        ]
       }
     },
     {
@@ -2697,7 +2736,8 @@
         "port_patch_applies": false,
         "fulltest_version": "1.1.0",
         "test_count": 5,
-        "patch_conflict": "error: patch failed: recipes/megnet/build.yaml:7\nerror: recipes/megnet/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/megnet/build.yaml:7\nerror: recipes/megnet/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -2739,7 +2779,8 @@
         "port_patch_applies": false,
         "fulltest_version": "4.0.1",
         "test_count": 5,
-        "patch_conflict": "error: patch failed: recipes/meica/build.yaml:12\nerror: recipes/meica/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/meica/build.yaml:12\nerror: recipes/meica/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -2863,7 +2904,8 @@
         "port_patch_applies": false,
         "fulltest_version": "0.6.2",
         "test_count": 2,
-        "patch_conflict": "error: patch failed: recipes/mipview/build.yaml:2\nerror: recipes/mipview/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/mipview/build.yaml:2\nerror: recipes/mipview/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -2946,7 +2988,11 @@
         "port_patch_applies": false,
         "fulltest_version": "1.2.0",
         "test_count": 114,
-        "patch_conflict": "error: patch failed: recipes/mneextended/build.yaml:5\nerror: recipes/mneextended/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/mneextended/build.yaml:5\nerror: recipes/mneextended/build.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/mneextended/build.yaml"
+        ]
       }
     },
     {
@@ -3070,7 +3116,12 @@
         "port_patch_applies": false,
         "fulltest_version": "4.9.0",
         "test_count": 54,
-        "patch_conflict": "error: patch failed: recipes/mritools/build.yaml:1\nerror: recipes/mritools/build.yaml: patch does not apply\nerror: patch failed: recipes/mritools/fulltest.yaml:1\nerror: recipes/mritools/fulltest.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/mritools/build.yaml:1\nerror: recipes/mritools/build.yaml: patch does not apply\nerror: patch failed: recipes/mritools/fulltest.yaml:1\nerror: recipes/mritools/fulltest.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/mritools/build.yaml",
+          "recipes/mritools/fulltest.yaml"
+        ]
       }
     },
     {
@@ -3153,7 +3204,8 @@
         "port_patch_applies": false,
         "fulltest_version": "1.0.0",
         "test_count": 2,
-        "patch_conflict": "error: patch failed: recipes/neurocommand/build.yaml:15\nerror: recipes/neurocommand/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/neurocommand/build.yaml:15\nerror: recipes/neurocommand/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -3195,7 +3247,8 @@
         "port_patch_applies": false,
         "fulltest_version": "1.0.2",
         "test_count": 67,
-        "patch_conflict": "error: patch failed: recipes/nftsim/build.yaml:2\nerror: recipes/nftsim/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/nftsim/build.yaml:2\nerror: recipes/nftsim/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -3560,7 +3613,8 @@
         "port_patch_applies": false,
         "fulltest_version": "alpha119",
         "test_count": 55,
-        "patch_conflict": "error: patch failed: recipes/palm/build.yaml:10\nerror: recipes/palm/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/palm/build.yaml:10\nerror: recipes/palm/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -3807,7 +3861,11 @@
         "port_patch_applies": false,
         "fulltest_version": "2.1.0",
         "test_count": 59,
-        "patch_conflict": "error: patch failed: recipes/pydeface/build.yaml:7\nerror: recipes/pydeface/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/pydeface/build.yaml:7\nerror: recipes/pydeface/build.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/pydeface/build.yaml"
+        ]
       }
     },
     {
@@ -3891,7 +3949,8 @@
         "port_patch_applies": false,
         "fulltest_version": "0.29.0",
         "test_count": 1,
-        "patch_conflict": "error: patch failed: recipes/qsmbly/fulltest.yaml:1\nerror: recipes/qsmbly/fulltest.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/qsmbly/fulltest.yaml:1\nerror: recipes/qsmbly/fulltest.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -3933,7 +3992,11 @@
         "port_patch_applies": false,
         "fulltest_version": "9.22.0",
         "test_count": 13,
-        "patch_conflict": "error: patch failed: recipes/qsmxt/build.yaml:15\nerror: recipes/qsmxt/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/qsmxt/build.yaml:15\nerror: recipes/qsmxt/build.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/qsmxt/build.yaml"
+        ]
       }
     },
     {
@@ -4099,7 +4162,8 @@
         "port_patch_applies": false,
         "fulltest_version": "3.2.0",
         "test_count": 4,
-        "patch_conflict": "error: patch failed: recipes/rapidtide/build.yaml:2\nerror: recipes/rapidtide/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/rapidtide/build.yaml:2\nerror: recipes/rapidtide/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -4184,7 +4248,12 @@
         "port_patch_applies": false,
         "fulltest_version": "6.24.06",
         "test_count": 101,
-        "patch_conflict": "error: patch failed: recipes/root/build.yaml:1\nerror: recipes/root/build.yaml: patch does not apply\nerror: patch failed: recipes/root/fulltest.yaml:11\nerror: recipes/root/fulltest.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/root/build.yaml:1\nerror: recipes/root/build.yaml: patch does not apply\nerror: patch failed: recipes/root/fulltest.yaml:11\nerror: recipes/root/fulltest.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/root/build.yaml",
+          "recipes/root/fulltest.yaml"
+        ]
       }
     },
     {
@@ -4308,7 +4377,8 @@
         "port_patch_applies": false,
         "fulltest_version": "0.6.4",
         "test_count": 35,
-        "patch_conflict": "error: patch failed: recipes/sigviewer/build.yaml:1\nerror: recipes/sigviewer/build.yaml: patch does not apply\nerror: patch failed: recipes/sigviewer/fulltest.yaml:1\nerror: recipes/sigviewer/fulltest.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/sigviewer/build.yaml:1\nerror: recipes/sigviewer/build.yaml: patch does not apply\nerror: patch failed: recipes/sigviewer/fulltest.yaml:1\nerror: recipes/sigviewer/fulltest.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -4515,7 +4585,11 @@
         "port_patch_applies": false,
         "fulltest_version": "0.4.7",
         "test_count": 97,
-        "patch_conflict": "error: patch failed: recipes/sovabids/build.yaml:16\nerror: recipes/sovabids/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/sovabids/build.yaml:16\nerror: recipes/sovabids/build.yaml: patch does not apply",
+        "three_way_clean": false,
+        "three_way_conflicts": [
+          "recipes/sovabids/build.yaml"
+        ]
       }
     },
     {
@@ -4638,7 +4712,8 @@
         "port_patch_applies": false,
         "fulltest_version": "0.2.0",
         "test_count": 36,
-        "patch_conflict": "error: patch failed: recipes/syncro/build.yaml:3\nerror: recipes/syncro/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/syncro/build.yaml:3\nerror: recipes/syncro/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -4680,7 +4755,8 @@
         "port_patch_applies": false,
         "fulltest_version": "8.2.0",
         "test_count": 22,
-        "patch_conflict": "error: patch failed: recipes/synthseg/build.yaml:12\nerror: recipes/synthseg/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/synthseg/build.yaml:12\nerror: recipes/synthseg/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -4847,7 +4923,8 @@
         "port_patch_applies": false,
         "fulltest_version": "1.11.10",
         "test_count": 4,
-        "patch_conflict": "error: patch failed: recipes/terastitcher/build.yaml:3\nerror: recipes/terastitcher/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/terastitcher/build.yaml:3\nerror: recipes/terastitcher/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -4930,7 +5007,8 @@
         "port_patch_applies": false,
         "fulltest_version": "0.6.0",
         "test_count": 14,
-        "patch_conflict": "error: patch failed: recipes/topofit/build.yaml:27\nerror: recipes/topofit/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/topofit/build.yaml:27\nerror: recipes/topofit/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -5013,7 +5091,8 @@
         "port_patch_applies": false,
         "fulltest_version": "2.9.0",
         "test_count": 120,
-        "patch_conflict": "error: patch failed: recipes/tractseg/build.yaml:5\nerror: recipes/tractseg/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/tractseg/build.yaml:5\nerror: recipes/tractseg/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
@@ -5218,7 +5297,8 @@
         "port_patch_applies": false,
         "fulltest_version": "1.0.0",
         "test_count": 20,
-        "patch_conflict": "error: patch failed: recipes/wftfi/build.yaml:6\nerror: recipes/wftfi/build.yaml: patch does not apply"
+        "patch_conflict": "error: patch failed: recipes/wftfi/build.yaml:6\nerror: recipes/wftfi/build.yaml: patch does not apply",
+        "three_way_clean": true
       }
     },
     {
