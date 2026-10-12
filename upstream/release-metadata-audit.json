@@ -2773,6 +2773,23 @@
         "checked_at": "2026-10-12T18:42:33.070343+00:00",
         "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
       }
+    },
+    {
+      "recipe": "nighres",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3542",
+      "merge_sha": "f86808ce0b308d6da1434fcf6c4ad19b40ba0b02",
+      "note": "Fulltest-only change; no image-input change or new release required.",
+      "automatic_workflow_observation": {
+        "run_id": 38314225850,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38314225850",
+        "conclusion": "success",
+        "resolve": "success",
+        "publish": "skipped",
+        "finalize": "skipped",
+        "artifact_count": 0,
+        "checked_at": "2026-10-12T22:06:51.647872+00:00",
+        "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
+      }
     }
   ],
   "historical_recipe_promotions": [
