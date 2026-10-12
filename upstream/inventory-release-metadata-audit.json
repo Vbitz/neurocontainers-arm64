@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-12T11:12:39.930003+00:00",
-  "upstream_ref": "5f869919acb27615303977edaf5da13a603dfc9b",
+  "checked_at": "2026-10-12T11:40:11.185957+00:00",
+  "upstream_ref": "533affbc63893cf3d62035ca4db8f045ba4fa04c",
   "scope": "112 user-requested in-scope recipes;17 OpenRecon exclusions omitted.",
   "policy": "Read-only source-tree audit. Metadata presence/schema does not prove current builds, public artifacts or deployment; exact-candidate publication proofs remain in release-metadata-audit.json. No generated JSON changes or promotion dispatch.",
   "counts": {
     "pending-arm64-port": 55,
-    "explicit-arm64-metadata-present": 32,
-    "no-current-version-metadata-at-audited-ref": 25
+    "explicit-arm64-metadata-present": 33,
+    "no-current-version-metadata-at-audited-ref": 24
   },
   "containers": [
     {
@@ -204,7 +204,16 @@
         "aarch64"
       ],
       "path": "releases/brainles-aurora_arm64/0.2.7.json",
-      "status": "no-current-version-metadata-at-audited-ref"
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "brainles-aurora",
+      "apps": {
+        "brainles-aurora_arm64 0.2.7": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
     },
     {
       "recipe": "brainles-preprocessing",
