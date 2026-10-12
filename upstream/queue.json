@@ -1209,7 +1209,91 @@
       "run_id": 38209191228,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3486",
       "upstream_ci": {
-        "candidate_run_id": 38209565053
+        "candidate_run_id": 38209565053,
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "brkraw",
+          "container": "brkraw_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "0.5.7",
+          "build_date": "20261012",
+          "docker_archive": "brkraw_arm64_0.5.7_20261012.docker.tar",
+          "sif": "brkraw_arm64_0.5.7_20261012.simg",
+          "candidate_tag": "nd-candidate-brkraw_arm64:6b05f8659fda",
+          "launcher": "brkraw",
+          "pr_number": 3486,
+          "head_sha": "6b05f8659fda5654927f7d1276972f473e3b1625",
+          "tests": {
+            "total": 76,
+            "passed": 76,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 75,
+            "fulltest_passed": 75,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "brkraw version check",
+              "brkraw help",
+              "brkraw info help",
+              "brkraw convert help",
+              "brkraw convert-batch help",
+              "Bruker parameter parsing",
+              "nib-ls version",
+              "nib-ls help",
+              "nib-ls T1w basic info",
+              "nib-ls T1w verbose",
+              "nib-ls T1w with stats",
+              "nib-ls T1w header fields",
+              "nib-ls BOLD info",
+              "nib-ls BOLD with stats",
+              "nib-ls multiple files",
+              "nib-ls verbose multiple files",
+              "nib-stats help",
+              "nib-stats T1w volume mm3",
+              "nib-stats T1w volume voxels"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 4,
+                "wasted_space": "2.8 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "823 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "476 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "378 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 97.8921,
+            "wasted_bytes": 7018853,
+            "wasted_bytes_display": "7.0 MB",
+            "user_wasted_percent": 3.6421
+          }
+        }
       },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
@@ -2333,18 +2417,18 @@
       "port_files": [
         "recipes/gigaconnectome/build.yaml"
       ],
-      "status": "ready-to-retry",
+      "status": "native-running",
       "branch": "arm64/upstream-gigaconnectome-20261012",
       "baseline_sha": "8ffc4cca756fd5099c7e1a65d22f93ad354da01f",
       "candidate_sha": "76559d1b3e745a038dca5434255d7f1d192564ee",
       "started_at": "2026-10-12T05:38:30.096019+00:00",
       "deadline": "2026-10-12T17:38:30.096019+00:00",
-      "attempts": 1,
-      "run_id": null,
+      "attempts": 2,
+      "run_id": 38209922315,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Dispatch native attempt 2 when capacity permits; preserve the same investigation clock and six-build total budget.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.0",
@@ -2355,9 +2439,9 @@
         "fulltest_version": "0.6.0",
         "test_count": 93
       },
-      "arm64_attempts": 1,
+      "arm64_attempts": 2,
       "x86_64_attempts": 0,
-      "run_url": null,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209922315",
       "native_attempt_history": [
         {
           "attempt": 1,
@@ -3088,7 +3172,8 @@
         "port_patch_applies": true,
         "fulltest_version": "0.2.2",
         "test_count": 11
-      }
+      },
+      "pr_plan": "Candidate inspected: ARM port is architecture declaration only for Python 3.12 environment. Current 0.2.2 fulltest includes complete synthetic EEG extraction with finite features and logarithmic units assertions. Preserve CPU inference/scientific stack and all compatibility fixes; verify ARM wheels before dispatch."
     },
     {
       "recipe": "megnet",
@@ -3342,7 +3427,8 @@
         "port_patch_applies": true,
         "fulltest_version": "1.13.2",
         "test_count": 5
-      }
+      },
+      "pr_plan": "Candidate inspected: current upstream has advanced to 1.13.2/Python 3.13, compared with historical pass. Reconcile ARM VS Code asset and complete conda GUI environment at current version. Preserve MNE synthetic raw operation; strengthen it with exact numeric/FIF roundtrip assertions if needed. No claim that the old version verifies this environment."
     },
     {
       "recipe": "mneextended",
@@ -3429,7 +3515,8 @@
         "port_patch_applies": true,
         "fulltest_version": "0.0.2",
         "test_count": 7
-      }
+      },
+      "pr_plan": "Candidate inspected: select official ARM64 AppImage through architecture variable and install zlib development linker needed by its extraction runtime. Existing seven checks include non-root readability, resolved shared libraries and actual Xvfb GUI launch. Verify current official asset names before replay; preserve x86 path."
     },
     {
       "recipe": "mricron",
@@ -4311,7 +4398,8 @@
         "port_patch_applies": true,
         "fulltest_version": "1.3.0",
         "test_count": 13
-      }
+      },
+      "pr_plan": "Next small candidate: reapply aarch64 declaration to current upstream 1.3.0 after refetch. Existing 13-test suite includes complete BLR fit/predict, finite deviation scores and bundled offline example; preserve all assertions. Check pinned Miniconda ARM asset and scientific/Bayesian package availability before native dispatch."
     },
     {
       "recipe": "petu",
@@ -4614,7 +4702,8 @@
         "port_patch_applies": true,
         "fulltest_version": "1.2.0",
         "test_count": 43
-      }
+      },
+      "pr_plan": "Candidate inspected: ARM requires full official CPU SynthStrip path and weights, preserving the defacing workflows, not just installing QuickShear. Existing historical fulltest raises timeouts for actual ARM inference (assertions unchanged). Confirm current upstream SynthStrip version and asset compatibility before dispatch; expect longer inference tests."
     },
     {
       "recipe": "qupath",
