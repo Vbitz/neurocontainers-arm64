@@ -3554,3 +3554,31 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - `datalad` prepared and pushed at `9f7c08e8bc07ca3cb6d768bc3f91a63c11838b6b` on `arm64/upstream-datalad-20261012`, baseline `38251876538f054f265a3d2fed4304baf357dc2d`; all recipe checks and architecture generations passed. Start `2026-10-12T10:23:19.807018+00:00`, deadline `2026-10-12T22:23:19.807018+00:00`; no builds dispatched yet, waiting for capacity.
 
 - `datalad` current-upstream native [run 38236088785](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38236088785) dispatched at exact `9f7c08e8bc07ca3cb6d768bc3f91a63c11838b6b`; attempts 1/6 total; deadline `2026-10-12T22:23:19.807018+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- DataLad native38236088785 passed image/arch/SIF/deploy and9old fulltests; added fixture annexed64KiB successfully, then save failed on relative path outside dataset. Run save/get in their respective dataset cwd; preserve all retrieval assertions. Original1/6 budget and deadline retained.
+
+- `apptainer` individual upstream [PR #3505](https://github.com/neurodesk/neurocontainers/pull/3505) opened at exact native-verified `7ad06c20dca161f6f53b2141234eff61cbe5d829` (7/7, zero failures/skips). Total builds now 4/6 including both upstream architecture candidates; deadline `2026-10-12T21:26:34.723292+00:00`. Require actual upstream reports and all required checks before authorized merge.
+
+- `datalad` current-upstream native [run 38237016220](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38237016220) dispatched at exact `8e88819828eff352710469997301a18a7a917a19`; attempts 2/6 total; deadline `2026-10-12T22:23:19.807018+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `datalad` exact current-upstream `8e88819828eff352710469997301a18a7a917a19` native verified: **11/11**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38237016220). Await its own upstream PR and dual-architecture verification before merge.
+
+- IRkernel upstream38235760181: ARM added fixture misrouted delayed startup kernel_info_reply;4originaltests and x86passed. Fix bounded parent-ID correlation, preserve exact arithmetic assertions. Original3/6 budget retained; isolated new candidate native before advancing PR3504.
+
+- `irkernel` current-upstream native [run 38237720501](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38237720501) dispatched at exact `8552efa3bae7d40f7bc7cee44508f0af2bbf1163`; attempts 4/6 total; deadline `2026-10-12T21:33:02.840468+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `datalad` individual upstream [PR #3506](https://github.com/neurodesk/neurocontainers/pull/3506) opened at exact native-verified `8e88819828eff352710469997301a18a7a917a19` (11/11, zero failures/skips). Total builds now 4/6 including both upstream architecture candidates; deadline `2026-10-12T22:23:19.807018+00:00`. Require actual upstream reports and all required checks before authorized merge.
+
+- Apptainer PR3505 upstream38236817622: ARM7/7 passed; x86 nested SIF built but proc mount denied by host user namespace. Blocked infrastructure, original4/6 budget/deadline retained; no test weakening. CLEARSWI PR3502 upstream38231427176:65/67 ARM science passed,2three-invocation tests need300s; move depot chmod into install layer to eliminate682MB duplicate cache. Original3/6 budget retained. DataLad PR3506 current8e888198 native11/11, upstream38237809389 active.
+
+- `clearswi` current-upstream native [run 38238100515](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38238100515) dispatched at exact `83de01a91c3fe525ddef4e60924c9b9797ad6371`; attempts 4/6 total; deadline `2026-10-12T20:54:45.227424+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `datalad` individual runtime-test [PR #3506](https://github.com/neurodesk/neurocontainers/pull/3506) merged at `7e1b74217c11fb78e8d01f53d8c1a8058a997db9`. Exact head `8e88819828eff352710469997301a18a7a917a19` passed root native; upstream merge source `8acc5c202f8858120574f0187168798d475f2488` has identical recipe tree and passed ARM64 11/11 and x86_64 11/11, zero failures/skips, every required check. Fulltest-only change: no release metadata promotion required.
+
+- `irkernel` exact current-upstream `8552efa3bae7d40f7bc7cee44508f0af2bbf1163` native verified: **6/6**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38237720501). Await its own upstream PR and dual-architecture verification before merge.
+
+- IRkernel corrected `8552efa3bae7d40f7bc7cee44508f0af2bbf1163` native38237720501 passed6/6; existing PR3504 advanced normally after proof. Both upstream new-head builds reserved, total6/6/original deadline21:33 retained. No further retries.
+
+- dcm2niix current-source runtime candidate `15ef063103efb92fbbabbcf6cc006364750bfb30` prepared on `arm64/upstream-dcm2niix-20261012`, base `7e1b74217c11fb78e8d01f53d8c1a8058a997db9`. All105 oldtests retained + exact real2-slice DICOM→NIfTI pixels/geometry/BIDS timing. Host-generated synthetic fixture locally validated; native Linux build pending. Start `2026-10-12T10:48:10.587848+00:00`, deadline `2026-10-12T22:48:10.587848+00:00`, attempts0/6.
+
+- `dcm2niix` current-upstream native [run 38238842263](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38238842263) dispatched at exact `15ef063103efb92fbbabbcf6cc006364750bfb30`; attempts 1/6 total; deadline `2026-10-12T22:48:10.587848+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
