@@ -1,0 +1,3931 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-10-12T04:56:34.601251+00:00",
+  "inventory_source": "e9c2b9de4032676602eee3dc432d97559263a6d5",
+  "accepted_pin": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
+  "port_merge_base": "87e1c7265e8b6c767cd3154c67caca984116711e",
+  "upstream_base": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
+  "count": 129,
+  "containers": [
+    {
+      "recipe": "afib1",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/21",
+      "historical": {
+        "run_id": 34686701687,
+        "attempt": 1,
+        "sha": "7bd4f9ee9734c4dd3a449290c39955f009f081d3",
+        "counts": [
+          5,
+          0,
+          0,
+          5
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "afni",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/118",
+      "historical": {
+        "run_id": 34765634289,
+        "attempt": 1,
+        "sha": "8a9e48a7028b53be7b93eb6706a55a6a9ec801e6",
+        "counts": [
+          114,
+          0,
+          0,
+          114
+        ]
+      },
+      "port_files": [
+        "recipes/afni/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "aidamri",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/119",
+      "historical": {
+        "run_id": 34925938740,
+        "attempt": 1,
+        "sha": "04970417e995232706f4ce85ddf4db23c79d4f25",
+        "counts": [
+          9,
+          0,
+          0,
+          9
+        ]
+      },
+      "port_files": [
+        "recipes/aidamri/build.yaml",
+        "recipes/aidamri/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "amico",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/41",
+      "historical": {
+        "run_id": 34689875666,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          75,
+          0,
+          0,
+          75
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "ants",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/93",
+      "historical": {
+        "run_id": 34706765954,
+        "attempt": 1,
+        "sha": "f48620a9503c3f532fa16c1b1e9ccc96778a86c6",
+        "counts": [
+          103,
+          0,
+          0,
+          103
+        ]
+      },
+      "port_files": [
+        "recipes/ants/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "apptainer",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/15",
+      "historical": {
+        "run_id": 34685647267,
+        "attempt": 1,
+        "sha": "87e1c7265e8b6c767cd3154c67caca984116711e",
+        "counts": [
+          6,
+          0,
+          0,
+          6
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "arfiproc",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/22",
+      "historical": {
+        "run_id": 34686847933,
+        "attempt": 1,
+        "sha": "7bd4f9ee9734c4dd3a449290c39955f009f081d3",
+        "counts": [
+          6,
+          0,
+          0,
+          6
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "b0map",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/23",
+      "historical": {
+        "run_id": 34686964891,
+        "attempt": 1,
+        "sha": "7bd4f9ee9734c4dd3a449290c39955f009f081d3",
+        "counts": [
+          8,
+          0,
+          0,
+          8
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "bart",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/180",
+      "historical": {
+        "run_id": 34740461864,
+        "attempt": 1,
+        "sha": "e3f721a72f6e1b1f23d5962118f2873abbcdd203",
+        "counts": [
+          117,
+          0,
+          0,
+          117
+        ]
+      },
+      "port_files": [
+        "recipes/bart/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "batchheudiconv",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/42",
+      "historical": {
+        "run_id": 34690023102,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          108,
+          0,
+          0,
+          108
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "bidscoin",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/54",
+      "historical": {
+        "run_id": 34691304372,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          97,
+          0,
+          0,
+          97
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "bidsmanager",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/24",
+      "historical": {
+        "run_id": 34687075563,
+        "attempt": 1,
+        "sha": "7bd4f9ee9734c4dd3a449290c39955f009f081d3",
+        "counts": [
+          9,
+          0,
+          0,
+          9
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "bidsme",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/44",
+      "historical": {
+        "run_id": 34690122795,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          82,
+          0,
+          0,
+          82
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "bidstools",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/20",
+      "historical": {
+        "run_id": 34686613888,
+        "attempt": 1,
+        "sha": "7bd4f9ee9734c4dd3a449290c39955f009f081d3",
+        "counts": [
+          12,
+          0,
+          0,
+          12
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "bidsvue",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/121",
+      "historical": {
+        "run_id": 34768724186,
+        "attempt": 1,
+        "sha": "ba7af5842b2c41dbc98ffd8d1e25431acf19a7db",
+        "counts": [
+          5,
+          0,
+          0,
+          5
+        ]
+      },
+      "port_files": [
+        "recipes/bidsvue/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "blastct",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/45",
+      "historical": {
+        "run_id": 34690252022,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          6,
+          0,
+          0,
+          6
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "blochsiegertb1mapping",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/91",
+      "historical": {
+        "run_id": 34708203749,
+        "attempt": 1,
+        "sha": "93a11a16885aec3a548584bb9f3f332fe726df1b",
+        "counts": [
+          2,
+          0,
+          0,
+          2
+        ]
+      },
+      "port_files": [
+        "recipes/blochsiegertb1mapping/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "brainles-aurora",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/237",
+      "historical": {
+        "run_id": 34741297561,
+        "attempt": 1,
+        "sha": "dc828b57afcfaf21f4613d731b5676dcb16cacaa",
+        "counts": [
+          15,
+          0,
+          0,
+          15
+        ]
+      },
+      "port_files": [
+        "recipes/brainles-aurora/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "brainles-preprocessing",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/186",
+      "historical": {
+        "run_id": 34888489034,
+        "attempt": 1,
+        "sha": "bfa2364d60f7cd99e83b813a48f6c39d41c6945e",
+        "counts": [
+          16,
+          0,
+          0,
+          16
+        ]
+      },
+      "port_files": [
+        "recipes/brainles-preprocessing/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "brainlifecli",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/59",
+      "historical": {
+        "run_id": 34693086744,
+        "attempt": 1,
+        "sha": "f50c2fbc4377e4a19312019488e4323a189ef453",
+        "counts": [
+          74,
+          0,
+          0,
+          74
+        ]
+      },
+      "port_files": [
+        "recipes/brainlifecli/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "brats",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/248",
+      "historical": {
+        "run_id": 34742518202,
+        "attempt": 1,
+        "sha": "166f9dac76f26c1906acaf468665916a2b0bbca6",
+        "counts": [
+          21,
+          0,
+          0,
+          21
+        ]
+      },
+      "port_files": [
+        "recipes/brats/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "brkraw",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/58",
+      "historical": {
+        "run_id": 34692637652,
+        "attempt": 1,
+        "sha": "35e458827fb6522c147e4bd99121d1ed631dd6f7",
+        "counts": [
+          84,
+          0,
+          0,
+          84
+        ]
+      },
+      "port_files": [
+        "recipes/brkraw/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "builder",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/51",
+      "historical": {
+        "run_id": 34691302636,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          2,
+          0,
+          0,
+          2
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "cbsb0stats",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/25",
+      "historical": {
+        "run_id": 34687077011,
+        "attempt": 1,
+        "sha": "7bd4f9ee9734c4dd3a449290c39955f009f081d3",
+        "counts": [
+          6,
+          0,
+          0,
+          6
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "clearswi",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/75",
+      "historical": {
+        "run_id": 34787990978,
+        "attempt": 1,
+        "sha": "b878ef4914bed658c8df82cf8d418de21d13315f",
+        "counts": [
+          68,
+          0,
+          0,
+          68
+        ]
+      },
+      "port_files": [
+        "recipes/clearswi/build.yaml",
+        "recipes/clearswi/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "code",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/95",
+      "historical": {
+        "run_id": 34738779168,
+        "attempt": 1,
+        "sha": "15337e04a04ddf0303b610d304c350008df371ea",
+        "counts": [
+          84,
+          0,
+          0,
+          84
+        ]
+      },
+      "port_files": [
+        "recipes/code/build.yaml",
+        "recipes/code/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "condaenvs",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/32",
+      "historical": {
+        "run_id": 34688353976,
+        "attempt": 1,
+        "sha": "031ff4750b9097aa0a552eb2efcccef00ab38a3b",
+        "counts": [
+          3,
+          0,
+          0,
+          3
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "cosmomvpa",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/36",
+      "historical": {
+        "run_id": 34689424126,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          6,
+          0,
+          0,
+          6
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "datalad",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/12",
+      "historical": {
+        "run_id": 34685666449,
+        "attempt": 1,
+        "sha": "87e1c7265e8b6c767cd3154c67caca984116711e",
+        "counts": [
+          10,
+          0,
+          0,
+          10
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "dcm2bids",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/5",
+      "historical": {
+        "run_id": 34693164459,
+        "attempt": 1,
+        "sha": "35e458827fb6522c147e4bd99121d1ed631dd6f7",
+        "counts": [
+          61,
+          0,
+          0,
+          61
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "dcm2niix",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/4",
+      "historical": {
+        "run_id": 34692396408,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          106,
+          0,
+          0,
+          106
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "deep-quality-estimation",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/78",
+      "historical": {
+        "run_id": 34702770551,
+        "attempt": 1,
+        "sha": "46d1a5ae9bb1881b7ecb7d36f41fdff27af5818a",
+        "counts": [
+          11,
+          0,
+          0,
+          11
+        ]
+      },
+      "port_files": [
+        "recipes/deep-quality-estimation/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "deepdisco",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/67",
+      "historical": {
+        "run_id": 34696205436,
+        "attempt": 1,
+        "sha": "fbce330df22a4152be2a2be2e67ae5e959f8148c",
+        "counts": [
+          2,
+          0,
+          0,
+          2
+        ]
+      },
+      "port_files": [
+        "recipes/deepdisco/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "deeplabcut",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/192",
+      "historical": {
+        "run_id": 34758030010,
+        "attempt": 1,
+        "sha": "4d92aaab39c59ea92490b8e456c088633467379e",
+        "counts": [
+          101,
+          0,
+          0,
+          101
+        ]
+      },
+      "port_files": [
+        "recipes/deeplabcut/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "dicompare",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/19",
+      "historical": {
+        "run_id": 34686615747,
+        "attempt": 1,
+        "sha": "7bd4f9ee9734c4dd3a449290c39955f009f081d3",
+        "counts": [
+          105,
+          0,
+          0,
+          105
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "dicomtools",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/27",
+      "historical": {
+        "run_id": 34687413104,
+        "attempt": 1,
+        "sha": "e430edb9d9a595878a619cb4bb00a68056665daf",
+        "counts": [
+          179,
+          0,
+          0,
+          179
+        ]
+      },
+      "port_files": [
+        "recipes/dicomtools/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "dwidenoise2",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/61",
+      "historical": {
+        "run_id": 34693799839,
+        "attempt": 1,
+        "sha": "fb140e557113c668e65cd86060aa8ab1a8573a6a",
+        "counts": [
+          5,
+          0,
+          0,
+          5
+        ]
+      },
+      "port_files": [
+        "recipes/dwidenoise2/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "eharmonize",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/18",
+      "historical": {
+        "run_id": 34686618053,
+        "attempt": 1,
+        "sha": "7bd4f9ee9734c4dd3a449290c39955f009f081d3",
+        "counts": [
+          6,
+          0,
+          0,
+          6
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "elastix",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/92",
+      "historical": {
+        "run_id": 34842787062,
+        "attempt": 1,
+        "sha": "41ddfbf5010657e0185ab1d7730b42149e8fb744",
+        "counts": [
+          33,
+          0,
+          0,
+          33
+        ]
+      },
+      "port_files": [
+        "recipes/elastix/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "emuses",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/94",
+      "historical": {
+        "run_id": 34775307167,
+        "attempt": 1,
+        "sha": "685f5f4d9636d34aa8237646535d2a7dfc3a525d",
+        "counts": [
+          3,
+          0,
+          0,
+          3
+        ]
+      },
+      "port_files": [
+        "recipes/emuses/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "epirecon",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/86",
+      "historical": {
+        "run_id": 34705779719,
+        "attempt": 1,
+        "sha": "313f47d4958cd5f69d718edd05656f9f41526d28",
+        "counts": [
+          7,
+          0,
+          0,
+          7
+        ]
+      },
+      "port_files": [
+        "recipes/epirecon/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "fetalsynthseg",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/199",
+      "historical": {
+        "run_id": 34759079934,
+        "attempt": 1,
+        "sha": "e673b917ca5a8ae6e6f7ec74da961cb62e99fc5e",
+        "counts": [
+          4,
+          0,
+          0,
+          4
+        ]
+      },
+      "port_files": [
+        "recipes/fetalsynthseg/build.yaml",
+        "recipes/fetalsynthseg/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "fitlins",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/33",
+      "historical": {
+        "run_id": 34689060946,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          7,
+          0,
+          0,
+          7
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "flames",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/69",
+      "historical": {
+        "run_id": 34696992986,
+        "attempt": 1,
+        "sha": "1c6bd96c84cd75dc52aae6598cf363e24e7a37aa",
+        "counts": [
+          9,
+          0,
+          0,
+          9
+        ]
+      },
+      "port_files": [
+        "recipes/flames/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "fsl",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/242",
+      "historical": {
+        "run_id": 34762946871,
+        "attempt": 1,
+        "sha": "9a5ae40c67667a088f50f0e9885833b983893f98",
+        "counts": [
+          129,
+          0,
+          0,
+          129
+        ]
+      },
+      "port_files": [
+        "recipes/fsl/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "fsqc",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/64",
+      "historical": {
+        "run_id": 34694302517,
+        "attempt": 1,
+        "sha": "a9a30dd58530ec002184c2217ba8fcf3ed43c1c5",
+        "counts": [
+          109,
+          0,
+          0,
+          109
+        ]
+      },
+      "port_files": [
+        "recipes/fsqc/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "functionnectome",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/26",
+      "historical": {
+        "run_id": 34687208365,
+        "attempt": 1,
+        "sha": "7bd4f9ee9734c4dd3a449290c39955f009f081d3",
+        "counts": [
+          4,
+          0,
+          0,
+          4
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "gigaconnectome",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/106",
+      "historical": {
+        "run_id": 34757505350,
+        "attempt": 1,
+        "sha": "dc1439d82ec42fd3cb5b38e85ca1d5800a3484b2",
+        "counts": [
+          94,
+          0,
+          0,
+          94
+        ]
+      },
+      "port_files": [
+        "recipes/gigaconnectome/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "gimp",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/8",
+      "historical": {
+        "run_id": 34693583287,
+        "attempt": 1,
+        "sha": "f50c2fbc4377e4a19312019488e4323a189ef453",
+        "counts": [
+          7,
+          0,
+          0,
+          7
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "gingerale",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/80",
+      "historical": {
+        "run_id": 34703768813,
+        "attempt": 1,
+        "sha": "7592907bb1caf8c3da996156e87f765a727c8719",
+        "counts": [
+          51,
+          0,
+          0,
+          51
+        ]
+      },
+      "port_files": [
+        "recipes/gingerale/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "gliomoda",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/225",
+      "historical": {
+        "run_id": 34740874041,
+        "attempt": 1,
+        "sha": "a9b7f2675cd9553388d30aa7df2bcdc053fa058d",
+        "counts": [
+          17,
+          0,
+          0,
+          17
+        ]
+      },
+      "port_files": [
+        "recipes/gliomoda/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "glmsingle",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/43",
+      "historical": {
+        "run_id": 34689909788,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          77,
+          0,
+          0,
+          77
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "globus",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/14",
+      "historical": {
+        "run_id": 34686096832,
+        "attempt": 1,
+        "sha": "7bd4f9ee9734c4dd3a449290c39955f009f081d3",
+        "counts": [
+          72,
+          0,
+          0,
+          72
+        ]
+      },
+      "port_files": [
+        "recipes/globus/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "hdbet",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/40",
+      "historical": {
+        "run_id": 34689514789,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          6,
+          0,
+          0,
+          6
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "heudiconv",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/9",
+      "historical": {
+        "run_id": 34693323676,
+        "attempt": 1,
+        "sha": "35e458827fb6522c147e4bd99121d1ed631dd6f7",
+        "counts": [
+          69,
+          0,
+          0,
+          69
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "hnncore",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/49",
+      "historical": {
+        "run_id": 34690701313,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          73,
+          0,
+          0,
+          73
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "irkernel",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/37",
+      "historical": {
+        "run_id": 34689425438,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          5,
+          0,
+          0,
+          5
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "julia",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/17",
+      "historical": {
+        "run_id": 34685647289,
+        "attempt": 1,
+        "sha": "87e1c7265e8b6c767cd3154c67caca984116711e",
+        "counts": [
+          137,
+          0,
+          0,
+          137
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "laynii",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/150",
+      "historical": {
+        "run_id": 34749541502,
+        "attempt": 1,
+        "sha": "457c5a31b9830587801a06e7d6f81f18293135e8",
+        "counts": [
+          60,
+          0,
+          0,
+          60
+        ]
+      },
+      "port_files": [
+        "recipes/laynii/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "lesionquantificationtoolkit",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/182",
+      "historical": {
+        "run_id": 34740546339,
+        "attempt": 1,
+        "sha": "afc5c52d0d5d32e3d02c3fa1a94562274016f803",
+        "counts": [
+          101,
+          0,
+          0,
+          101
+        ]
+      },
+      "port_files": [
+        "recipes/lesionquantificationtoolkit/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "libreoffice",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/16",
+      "historical": {
+        "run_id": 34685794423,
+        "attempt": 1,
+        "sha": "87e1c7265e8b6c767cd3154c67caca984116711e",
+        "counts": [
+          3,
+          0,
+          0,
+          3
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "lipsia",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/181",
+      "historical": {
+        "run_id": 34740665171,
+        "attempt": 1,
+        "sha": "01ea960b11e8c47698b02c93f9ce99007ca50be2",
+        "counts": [
+          101,
+          0,
+          0,
+          101
+        ]
+      },
+      "port_files": [
+        "recipes/lipsia/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "lqt",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/28",
+      "historical": {
+        "run_id": 34688683840,
+        "attempt": 1,
+        "sha": "031ff4750b9097aa0a552eb2efcccef00ab38a3b",
+        "counts": [
+          6,
+          0,
+          0,
+          6
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "mede",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/52",
+      "historical": {
+        "run_id": 34691245302,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          3,
+          0,
+          0,
+          3
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "meganorm",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/65",
+      "historical": {
+        "run_id": 34695477795,
+        "attempt": 1,
+        "sha": "31091ade121699a43a8745a2633e325f47c99061",
+        "counts": [
+          11,
+          0,
+          0,
+          11
+        ]
+      },
+      "port_files": [
+        "recipes/meganorm/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "megnet",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/210",
+      "historical": {
+        "run_id": 34756122909,
+        "attempt": 1,
+        "sha": "1ce18a5642515bbb314ea48def4ac022c91264e8",
+        "counts": [
+          6,
+          0,
+          0,
+          6
+        ]
+      },
+      "port_files": [
+        "recipes/megnet/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "meica",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/151",
+      "historical": {
+        "run_id": 34826452710,
+        "attempt": 1,
+        "sha": "4911988c7900801c10f7fce39f143d301c8a3852",
+        "counts": [
+          6,
+          0,
+          0,
+          6
+        ]
+      },
+      "port_files": [
+        "recipes/meica/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "mimosa",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/212",
+      "historical": {
+        "run_id": 34802537055,
+        "attempt": 1,
+        "sha": "df8a470aa8f1d5c45ffe2ac43fe39193a11e05d1",
+        "counts": [
+          21,
+          0,
+          0,
+          21
+        ]
+      },
+      "port_files": [
+        "recipes/mimosa/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "mipav",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/38",
+      "historical": {
+        "run_id": 34689681947,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          7,
+          0,
+          0,
+          7
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "mipview",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/83",
+      "historical": {
+        "run_id": 34704666186,
+        "attempt": 1,
+        "sha": "d7de67d4647d4bfb50eb14f799afd34fd57d3c34",
+        "counts": [
+          4,
+          0,
+          0,
+          4
+        ]
+      },
+      "port_files": [
+        "recipes/mipview/build.yaml",
+        "recipes/mipview/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "mne",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/70",
+      "historical": {
+        "run_id": 34698033237,
+        "attempt": 1,
+        "sha": "f8a66f994161507e1399826980f78c90fcec6e19",
+        "counts": [
+          6,
+          0,
+          0,
+          6
+        ]
+      },
+      "port_files": [
+        "recipes/mne/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "mneextended",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/71",
+      "historical": {
+        "run_id": 34746559924,
+        "attempt": 1,
+        "sha": "7bffacf617a8e2b65f00f9f8eaa5e7e70d11cba0",
+        "counts": [
+          111,
+          0,
+          0,
+          111
+        ]
+      },
+      "port_files": [
+        "recipes/mneextended/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "modsort",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/155",
+      "historical": {
+        "run_id": 34751788247,
+        "attempt": 1,
+        "sha": "c38fa11e2377ad2a9775fdd5fc3993c8b44155de",
+        "counts": [
+          8,
+          0,
+          0,
+          8
+        ]
+      },
+      "port_files": [
+        "recipes/modsort/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "mricron",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/13",
+      "historical": {
+        "run_id": 34685692303,
+        "attempt": 1,
+        "sha": "87e1c7265e8b6c767cd3154c67caca984116711e",
+        "counts": [
+          105,
+          0,
+          0,
+          105
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "mritools",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/156",
+      "historical": {
+        "run_id": 34866790216,
+        "attempt": 1,
+        "sha": "b13364554a3f6b3e3ab99d18fbc5ee9bca2d3585",
+        "counts": [
+          55,
+          0,
+          0,
+          55
+        ]
+      },
+      "port_files": [
+        "recipes/mritools/build.yaml",
+        "recipes/mritools/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "napari",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/219",
+      "historical": {
+        "run_id": 34777662542,
+        "attempt": 1,
+        "sha": "8bcc3e3dd69d25fdb16b2f3084d89cf25ddfb5dc",
+        "counts": [
+          4,
+          0,
+          0,
+          4
+        ]
+      },
+      "port_files": [
+        "recipes/napari/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "neurocommand",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/158",
+      "historical": {
+        "run_id": 34928959233,
+        "attempt": 1,
+        "sha": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
+        "counts": [
+          3,
+          0,
+          0,
+          3
+        ]
+      },
+      "port_files": [
+        "recipes/neurocommand/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "nftsim",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/222",
+      "historical": {
+        "run_id": 34754095890,
+        "attempt": 1,
+        "sha": "ce058afece0774f0fe915f3bc07c04507c7665bc",
+        "counts": [
+          68,
+          0,
+          0,
+          68
+        ]
+      },
+      "port_files": [
+        "recipes/nftsim/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "niftyreg",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/10",
+      "historical": {
+        "run_id": 34692465359,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          89,
+          0,
+          0,
+          89
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "nighres",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/47",
+      "historical": {
+        "run_id": 34690354693,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          70,
+          0,
+          0,
+          70
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "niimath",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/6",
+      "historical": {
+        "run_id": 34692464125,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          115,
+          0,
+          0,
+          115
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "niistat",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/7",
+      "historical": {
+        "run_id": 34693166308,
+        "attempt": 1,
+        "sha": "35e458827fb6522c147e4bd99121d1ed631dd6f7",
+        "counts": [
+          93,
+          0,
+          0,
+          93
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "openadscpu",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/66",
+      "historical": {
+        "run_id": 34759549792,
+        "attempt": 1,
+        "sha": "6103a923f43106c039ddf22a59c99c25352e459b",
+        "counts": [
+          3,
+          0,
+          0,
+          3
+        ]
+      },
+      "port_files": [
+        "recipes/openadscpu/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "openreconexample",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/90",
+      "historical": {
+        "run_id": 34708194854,
+        "attempt": 1,
+        "sha": "2eaed2732a85fa475cb823a336c62f682b8df90b",
+        "counts": [
+          6,
+          0,
+          0,
+          6
+        ]
+      },
+      "port_files": [
+        "recipes/openreconexample/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "openreconi2iexample",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/82",
+      "historical": {
+        "run_id": 34704212512,
+        "attempt": 1,
+        "sha": "fd60cfea817a54dd286f386fef251b07d41dc192",
+        "counts": [
+          5,
+          0,
+          0,
+          5
+        ]
+      },
+      "port_files": [
+        "recipes/openreconi2iexample/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "openrefine",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/11",
+      "historical": {
+        "run_id": 34693584794,
+        "attempt": 1,
+        "sha": "f50c2fbc4377e4a19312019488e4323a189ef453",
+        "counts": [
+          2,
+          0,
+          0,
+          2
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "palm",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/88",
+      "historical": {
+        "run_id": 34706614272,
+        "attempt": 1,
+        "sha": "57b11078062dbf7735fe0e76afd513db17f3b5f1",
+        "counts": [
+          56,
+          0,
+          0,
+          56
+        ]
+      },
+      "port_files": [
+        "recipes/palm/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "pals",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/226",
+      "historical": {
+        "run_id": 34782946174,
+        "attempt": 1,
+        "sha": "ee0cba5b7c5d95f7cc89e12c68dfcedd70cff006",
+        "counts": [
+          4,
+          0,
+          0,
+          4
+        ]
+      },
+      "port_files": [
+        "recipes/pals/build.yaml",
+        "recipes/pals/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "panoptica",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/63",
+      "historical": {
+        "run_id": 34694920638,
+        "attempt": 1,
+        "sha": "9b1f7d7a2c2d3decae0de23cb3bfff124e821e80",
+        "counts": [
+          10,
+          0,
+          0,
+          10
+        ]
+      },
+      "port_files": [
+        "recipes/panoptica/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "pcntoolkit",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/62",
+      "historical": {
+        "run_id": 34695171335,
+        "attempt": 1,
+        "sha": "70118cbab3e931402a951dae5ba66b63e30f051d",
+        "counts": [
+          12,
+          0,
+          0,
+          12
+        ]
+      },
+      "port_files": [
+        "recipes/pcntoolkit/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "petu",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/246",
+      "historical": {
+        "run_id": 34741200931,
+        "attempt": 1,
+        "sha": "2cb7b104d99cfe2505e20882dd606f4261499cf3",
+        "counts": [
+          12,
+          0,
+          0,
+          12
+        ]
+      },
+      "port_files": [
+        "recipes/petu/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "prostatefiducialseg",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/57",
+      "historical": {
+        "run_id": 34691824091,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          4,
+          0,
+          0,
+          4
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "pydeface",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/161",
+      "historical": {
+        "run_id": 34771433995,
+        "attempt": 1,
+        "sha": "80a84327a6659b0ac79a44f2c1853faa9eb84f4b",
+        "counts": [
+          60,
+          0,
+          0,
+          60
+        ]
+      },
+      "port_files": [
+        "recipes/pydeface/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "qmrlab",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/81",
+      "historical": {
+        "run_id": 34705439660,
+        "attempt": 1,
+        "sha": "8fdfbd5a814d113d895a8c75a0ad95ca1d7b2873",
+        "counts": [
+          51,
+          0,
+          0,
+          51
+        ]
+      },
+      "port_files": [
+        "recipes/qmrlab/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "qsmbly",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/76",
+      "historical": {
+        "run_id": 34701432576,
+        "attempt": 1,
+        "sha": "fb92480d3132c936de1c3cd4b88cb9e6cc61cb11",
+        "counts": [
+          2,
+          0,
+          0,
+          2
+        ]
+      },
+      "port_files": [
+        "recipes/qsmbly/build.yaml",
+        "recipes/qsmbly/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "qsmxt",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/68",
+      "historical": {
+        "run_id": 34697632034,
+        "attempt": 1,
+        "sha": "56253af124371ff19dd7c82cf97e82a60e10fcaf",
+        "counts": [
+          9,
+          0,
+          0,
+          9
+        ]
+      },
+      "port_files": [
+        "recipes/qsmxt/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "quickshear",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/228",
+      "historical": {
+        "run_id": 34907870046,
+        "attempt": 1,
+        "sha": "7b70cacfbf0d2c04e8ef7fd7b355da0dff4a0a2e",
+        "counts": [
+          44,
+          0,
+          0,
+          44
+        ]
+      },
+      "port_files": [
+        "recipes/quickshear/build.yaml",
+        "recipes/quickshear/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "qupath",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/229",
+      "historical": {
+        "run_id": 34785400495,
+        "attempt": 1,
+        "sha": "c98a89ee6799cd32b6a2247554cf8447a37f24aa",
+        "counts": [
+          125,
+          0,
+          0,
+          125
+        ]
+      },
+      "port_files": [
+        "recipes/qupath/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "radtract",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/29",
+      "historical": {
+        "run_id": 34687953581,
+        "attempt": 1,
+        "sha": "031ff4750b9097aa0a552eb2efcccef00ab38a3b",
+        "counts": [
+          3,
+          0,
+          0,
+          3
+        ]
+      },
+      "port_files": [
+        "recipes/radtract/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "rapidtide",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/30",
+      "historical": {
+        "run_id": 34688458132,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          5,
+          0,
+          0,
+          5
+        ]
+      },
+      "port_files": [
+        "recipes/rapidtide/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "romeo",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/164",
+      "historical": {
+        "run_id": 34878790921,
+        "attempt": 1,
+        "sha": "2ad9c2ff6c9762868c99ebbe3ac59b7f895cfc51",
+        "counts": [
+          105,
+          0,
+          0,
+          105
+        ]
+      },
+      "port_files": [
+        "recipes/romeo/build.yaml",
+        "recipes/romeo/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "root",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/116",
+      "historical": {
+        "run_id": 34764973586,
+        "attempt": 1,
+        "sha": "3bdd670d17eb6aae64902d1aed8091b2c464a79a",
+        "counts": [
+          102,
+          0,
+          0,
+          102
+        ]
+      },
+      "port_files": [
+        "recipes/root/build.yaml",
+        "recipes/root/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "rshrf",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/115",
+      "historical": {
+        "run_id": 34757064676,
+        "attempt": 1,
+        "sha": "9b60afc24a471a606cb2145b36a21c9b01cd089b",
+        "counts": [
+          2,
+          0,
+          0,
+          2
+        ]
+      },
+      "port_files": [
+        "recipes/rshrf/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "segmentator",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/31",
+      "historical": {
+        "run_id": 34688945692,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          5,
+          0,
+          0,
+          5
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "sigviewer",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/96",
+      "historical": {
+        "run_id": 34737708431,
+        "attempt": 1,
+        "sha": "c34a2103117399b31000f4d74bb378482e03f691",
+        "counts": [
+          36,
+          0,
+          0,
+          36
+        ]
+      },
+      "port_files": [
+        "recipes/sigviewer/build.yaml",
+        "recipes/sigviewer/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "sodiumgridding",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/84",
+      "historical": {
+        "run_id": 34705231419,
+        "attempt": 1,
+        "sha": "cd7950c00e93503648e96270f58104fae11f5718",
+        "counts": [
+          7,
+          0,
+          0,
+          7
+        ]
+      },
+      "port_files": [
+        "recipes/sodiumgridding/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "sodiumgriddingptpi",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/87",
+      "historical": {
+        "run_id": 34705851195,
+        "attempt": 1,
+        "sha": "8cd40433b186f4a71ea98dd04815ecf6fcd3385c",
+        "counts": [
+          7,
+          0,
+          0,
+          7
+        ]
+      },
+      "port_files": [
+        "recipes/sodiumgriddingptpi/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "sodiumnufft",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/85",
+      "historical": {
+        "run_id": 34705290732,
+        "attempt": 1,
+        "sha": "444e18aea84dbd67c7e939cba1eccbeab52007bb",
+        "counts": [
+          5,
+          0,
+          0,
+          5
+        ]
+      },
+      "port_files": [
+        "recipes/sodiumnufft/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "soopct",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/232",
+      "historical": {
+        "run_id": 34783752296,
+        "attempt": 1,
+        "sha": "e3d7996e606f92bb8d4fa292bb7a8b8e7987d3a5",
+        "counts": [
+          7,
+          0,
+          0,
+          7
+        ]
+      },
+      "port_files": [
+        "recipes/soopct/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "sovabids",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/167",
+      "historical": {
+        "run_id": 34873161511,
+        "attempt": 1,
+        "sha": "3cd80779270718fdd6204a837d88c5588c22ee44",
+        "counts": [
+          96,
+          0,
+          0,
+          96
+        ]
+      },
+      "port_files": [
+        "recipes/sovabids/build.yaml",
+        "recipes/sovabids/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "spant",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/34",
+      "historical": {
+        "run_id": 34688352312,
+        "attempt": 1,
+        "sha": "031ff4750b9097aa0a552eb2efcccef00ab38a3b",
+        "counts": [
+          2,
+          0,
+          0,
+          2
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "spmpython",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/35",
+      "historical": {
+        "run_id": 34689239216,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          82,
+          0,
+          0,
+          82
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "syncro",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/234",
+      "historical": {
+        "run_id": 34791087179,
+        "attempt": 1,
+        "sha": "54a83518034d8b164ec8290c09a2ee91e42a9996",
+        "counts": [
+          37,
+          0,
+          0,
+          37
+        ]
+      },
+      "port_files": [
+        "recipes/syncro/build.yaml",
+        "recipes/syncro/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "synthseg",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/235",
+      "historical": {
+        "run_id": 34753249262,
+        "attempt": 1,
+        "sha": "815cf1b3e10b0b4b6003dc728f4300c54ccc3116",
+        "counts": [
+          18,
+          0,
+          0,
+          18
+        ]
+      },
+      "port_files": [
+        "recipes/synthseg/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "synthstrip",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/72",
+      "historical": {
+        "run_id": 34703210392,
+        "attempt": 1,
+        "sha": "8533a1468968477e25b4f685b1bf827ed219239c",
+        "counts": [
+          70,
+          0,
+          0,
+          70
+        ]
+      },
+      "port_files": [
+        "recipes/synthstrip/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "synthstroke",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/73",
+      "historical": {
+        "run_id": 34699910413,
+        "attempt": 1,
+        "sha": "bb3f660d9c3ec0718df2f558cd15450eaffd8260",
+        "counts": [
+          4,
+          0,
+          0,
+          4
+        ]
+      },
+      "port_files": [
+        "recipes/synthstroke/build.yaml",
+        "recipes/synthstroke/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "template",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/79",
+      "historical": {
+        "run_id": 34703327433,
+        "attempt": 1,
+        "sha": "ffe5f289da8da47c006835876a86dcd07138b208",
+        "counts": [
+          2,
+          0,
+          0,
+          2
+        ]
+      },
+      "port_files": [
+        "recipes/template/build.yaml",
+        "recipes/template/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "terastitcher",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/170",
+      "historical": {
+        "run_id": 34754970340,
+        "attempt": 1,
+        "sha": "77b1ebe055243e309f5d5cbc0e7be279b72e9251",
+        "counts": [
+          5,
+          0,
+          0,
+          5
+        ]
+      },
+      "port_files": [
+        "recipes/terastitcher/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "topaz",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/55",
+      "historical": {
+        "run_id": 34690938300,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          127,
+          0,
+          0,
+          127
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "topofit",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/236",
+      "historical": {
+        "run_id": 34779394328,
+        "attempt": 1,
+        "sha": "88e6776aeb27f16ef43e015acb426b7e87fe0d1c",
+        "counts": [
+          15,
+          0,
+          0,
+          15
+        ]
+      },
+      "port_files": [
+        "recipes/topofit/build.yaml",
+        "recipes/topofit/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "totalsegmentator",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/39",
+      "historical": {
+        "run_id": 34689567635,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          3,
+          0,
+          0,
+          3
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "tractseg",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/238",
+      "historical": {
+        "run_id": 34910862134,
+        "attempt": 1,
+        "sha": "7bf9e3a1ea7846fde48b8c226dc280321c9d15b3",
+        "counts": [
+          121,
+          0,
+          0,
+          121
+        ]
+      },
+      "port_files": [
+        "recipes/tractseg/build.yaml",
+        "recipes/tractseg/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "vertexwiser",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/77",
+      "historical": {
+        "run_id": 34701810565,
+        "attempt": 1,
+        "sha": "5534389f33c579fc39cb307c43fbf7d30b980478",
+        "counts": [
+          10,
+          0,
+          0,
+          10
+        ]
+      },
+      "port_files": [
+        "recipes/vertexwiser/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "vesselboost",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/239",
+      "historical": {
+        "run_id": 34797274474,
+        "attempt": 1,
+        "sha": "863c447457d817156882b12a6920fd3411f68543",
+        "counts": [
+          47,
+          0,
+          0,
+          47
+        ]
+      },
+      "port_files": [
+        "recipes/vesselboost/build.yaml",
+        "recipes/vesselboost/fulltest.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "vesselvio",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/50",
+      "historical": {
+        "run_id": 34690762333,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          97,
+          0,
+          0,
+          97
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "vina",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/3",
+      "historical": {
+        "run_id": 34692325207,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          8,
+          0,
+          0,
+          8
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "wftfi",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/89",
+      "historical": {
+        "run_id": 34707462294,
+        "attempt": 1,
+        "sha": "9a383b0d951f71725f2a2dade16a12e372bd6253",
+        "counts": [
+          21,
+          0,
+          0,
+          21
+        ]
+      },
+      "port_files": [
+        "recipes/wftfi/build.yaml"
+      ],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "workshopdemo",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/1",
+      "historical": {
+        "run_id": 34692323241,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          4,
+          0,
+          0,
+          4
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    },
+    {
+      "recipe": "xnat",
+      "variant": "arm64",
+      "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/46",
+      "historical": {
+        "run_id": 34690473020,
+        "attempt": 1,
+        "sha": "c6d782cd73cf88ccc44b837f705967b810519086",
+        "counts": [
+          99,
+          0,
+          0,
+          99
+        ]
+      },
+      "port_files": [],
+      "status": "pending",
+      "branch": null,
+      "baseline_sha": null,
+      "candidate_sha": null,
+      "started_at": null,
+      "deadline": null,
+      "attempts": 0,
+      "run_id": null,
+      "pr_url": null,
+      "upstream_ci": null,
+      "merged_sha": null,
+      "next_action": "Review current upstream recipe and replay only needed port changes."
+    }
+  ]
+}
