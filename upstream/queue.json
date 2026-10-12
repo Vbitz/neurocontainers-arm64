@@ -34,7 +34,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.7.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.7.0",
+        "test_count": 4
+      }
     },
     {
       "recipe": "afni",
@@ -65,7 +75,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "26.3.02",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "26.3.02",
+        "test_count": 113,
+        "patch_conflict": "error: patch failed: recipes/afni/build.yaml:1\nerror: recipes/afni/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "aidamri",
@@ -97,7 +118,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "3.0.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "3.0.0",
+        "test_count": 6,
+        "patch_conflict": "error: patch failed: recipes/aidamri/build.yaml:9\nerror: recipes/aidamri/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "amico",
@@ -126,7 +158,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.1.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "2.1.1",
+        "test_count": 74
+      }
     },
     {
       "recipe": "ants",
@@ -146,18 +189,29 @@
       "port_files": [
         "recipes/ants/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-ants-20261012",
+      "baseline_sha": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
+      "candidate_sha": "f58b9e6755f6af3db1753d44ba3b390270c7cde0",
+      "started_at": "2026-10-12T05:01:51.539183+00:00",
+      "deadline": "2026-10-12T17:01:51.539183+00:00",
+      "attempts": 1,
+      "run_id": 38206206331,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Inspect exact native result; open focused upstream PR after all gates pass with zero failures/skips.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.6.5",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "2.6.5",
+        "test_count": 102
+      },
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206206331"
     },
     {
       "recipe": "apptainer",
@@ -186,7 +240,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.5.3",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.5.3",
+        "test_count": 5
+      }
     },
     {
       "recipe": "arfiproc",
@@ -215,7 +280,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.1.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.1.0",
+        "test_count": 5
+      }
     },
     {
       "recipe": "b0map",
@@ -244,7 +319,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.1.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.1.0",
+        "test_count": 7
+      }
     },
     {
       "recipe": "bart",
@@ -264,18 +349,29 @@
       "port_files": [
         "recipes/bart/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-bart-20261012",
+      "baseline_sha": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
+      "candidate_sha": "5496bbdb1363839a80b7b582b8eb3e5bbd9f320f",
+      "started_at": "2026-10-12T05:01:42.216956+00:00",
+      "deadline": "2026-10-12T17:01:42.216956+00:00",
+      "attempts": 1,
+      "run_id": 38206195541,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Inspect exact native result; open focused upstream PR after all gates pass with zero failures/skips.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.00",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.0.00",
+        "test_count": 116
+      },
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206195541"
     },
     {
       "recipe": "batchheudiconv",
@@ -304,7 +400,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.0.0",
+        "test_count": 107
+      }
     },
     {
       "recipe": "bidscoin",
@@ -333,7 +440,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "4.6.2",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "4.6.2",
+        "test_count": 96
+      }
     },
     {
       "recipe": "bidsmanager",
@@ -362,7 +480,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.4.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.4.1",
+        "test_count": 8
+      }
     },
     {
       "recipe": "bidsme",
@@ -391,7 +520,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.9.6",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.9.6",
+        "test_count": 81
+      }
     },
     {
       "recipe": "bidstools",
@@ -420,7 +560,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.3.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.3.0",
+        "test_count": 11
+      }
     },
     {
       "recipe": "bidsvue",
@@ -451,7 +602,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.1.20260704",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.1.20260704",
+        "test_count": 4
+      }
     },
     {
       "recipe": "blastct",
@@ -480,7 +641,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.0.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "2.0.0",
+        "test_count": 5
+      }
     },
     {
       "recipe": "blochsiegertb1mapping",
@@ -511,7 +683,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.1.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "1.1.0",
+        "test_count": 2,
+        "patch_conflict": "error: patch failed: recipes/blochsiegertb1mapping/build.yaml:2\nerror: recipes/blochsiegertb1mapping/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "brainles-aurora",
@@ -542,7 +725,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.2.7",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.2.7",
+        "test_count": 14
+      }
     },
     {
       "recipe": "brainles-preprocessing",
@@ -573,7 +766,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.6.13",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "0.6.13",
+        "test_count": 15,
+        "patch_conflict": "error: patch failed: recipes/brainles-preprocessing/build.yaml:8\nerror: recipes/brainles-preprocessing/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "brainlifecli",
@@ -593,18 +797,29 @@
       "port_files": [
         "recipes/brainlifecli/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-brainlifecli-20261012",
+      "baseline_sha": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
+      "candidate_sha": "fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8",
+      "started_at": "2026-10-12T05:01:31.807733+00:00",
+      "deadline": "2026-10-12T17:01:31.807733+00:00",
+      "attempts": 1,
+      "run_id": 38206184713,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Inspect exact native result; open focused upstream PR after all gates pass with zero failures/skips.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.8.2",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.8.2",
+        "test_count": 73
+      },
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206184713"
     },
     {
       "recipe": "brats",
@@ -635,7 +850,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.1.13",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.1.13",
+        "test_count": 20
+      }
     },
     {
       "recipe": "brkraw",
@@ -666,7 +891,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.5.7",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.5.7",
+        "test_count": 74
+      }
     },
     {
       "recipe": "builder",
@@ -695,7 +930,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.2.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "0.2.0",
+        "test_count": 1
+      }
     },
     {
       "recipe": "cbsb0stats",
@@ -724,7 +970,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.4.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.4.0",
+        "test_count": 5
+      }
     },
     {
       "recipe": "clearswi",
@@ -756,7 +1012,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.7.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.7.0",
+        "test_count": 67
+      }
     },
     {
       "recipe": "code",
@@ -788,7 +1054,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "240320",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "240320",
+        "test_count": 84,
+        "patch_conflict": "error: patch failed: recipes/code/build.yaml:1\nerror: recipes/code/build.yaml: patch does not apply\nerror: patch failed: recipes/code/fulltest.yaml:14\nerror: recipes/code/fulltest.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "condaenvs",
@@ -817,7 +1094,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.1.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.1.0",
+        "test_count": 2
+      }
     },
     {
       "recipe": "cosmomvpa",
@@ -846,7 +1134,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.1.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.1.0",
+        "test_count": 5
+      }
     },
     {
       "recipe": "datalad",
@@ -875,7 +1174,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.7.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.7.1",
+        "test_count": 9
+      }
     },
     {
       "recipe": "dcm2bids",
@@ -904,7 +1214,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "3.3.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "3.3.1",
+        "test_count": 60
+      }
     },
     {
       "recipe": "dcm2niix",
@@ -933,7 +1254,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "v1.0.20260724",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "v1.0.20260724",
+        "test_count": 105
+      }
     },
     {
       "recipe": "deep-quality-estimation",
@@ -964,7 +1296,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.0.3",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.0.3",
+        "test_count": 10
+      }
     },
     {
       "recipe": "deepdisco",
@@ -995,7 +1337,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "20251008",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "20251008",
+        "test_count": 1
+      }
     },
     {
       "recipe": "deeplabcut",
@@ -1026,7 +1378,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "3.0.2",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "3.0.2",
+        "test_count": 100,
+        "patch_conflict": "error: patch failed: recipes/deeplabcut/build.yaml:2\nerror: recipes/deeplabcut/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "dicompare",
@@ -1055,7 +1418,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.15.3",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "0.15.3",
+        "test_count": 86
+      }
     },
     {
       "recipe": "dicomtools",
@@ -1086,7 +1460,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.1.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "1.1.0",
+        "test_count": 178,
+        "patch_conflict": "error: patch failed: recipes/dicomtools/build.yaml:12\nerror: recipes/dicomtools/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "dwidenoise2",
@@ -1117,7 +1502,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.0.0",
+        "test_count": 4
+      }
     },
     {
       "recipe": "eharmonize",
@@ -1146,7 +1541,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.0.0",
+        "test_count": 5
+      }
     },
     {
       "recipe": "elastix",
@@ -1177,7 +1583,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "5.3.1",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "5.3.1",
+        "test_count": 32,
+        "patch_conflict": "error: patch failed: recipes/elastix/build.yaml:14\nerror: recipes/elastix/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "emuses",
@@ -1208,7 +1625,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.3.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.3.0",
+        "test_count": 2
+      }
     },
     {
       "recipe": "epirecon",
@@ -1239,7 +1666,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.0.4",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.0.4",
+        "test_count": 6
+      }
     },
     {
       "recipe": "fetalsynthseg",
@@ -1271,7 +1708,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "1.0.0",
+        "test_count": 2,
+        "patch_conflict": "error: patch failed: recipes/fetalsynthseg/build.yaml:7\nerror: recipes/fetalsynthseg/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "fitlins",
@@ -1300,7 +1748,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.11.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "0.11.0",
+        "test_count": 6
+      }
     },
     {
       "recipe": "flames",
@@ -1331,7 +1790,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "1.0.0",
+        "test_count": 8,
+        "patch_conflict": "error: patch failed: recipes/flames/build.yaml:10\nerror: recipes/flames/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "fsl",
@@ -1362,7 +1832,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "6.0.7.23",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "6.0.7.23",
+        "test_count": 130,
+        "patch_conflict": "error: patch failed: recipes/fsl/build.yaml:31\nerror: recipes/fsl/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "fsqc",
@@ -1393,7 +1874,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.1.7",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "2.1.7",
+        "test_count": 108
+      }
     },
     {
       "recipe": "functionnectome",
@@ -1422,7 +1913,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.5.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "2.5.0",
+        "test_count": 3
+      }
     },
     {
       "recipe": "gigaconnectome",
@@ -1453,7 +1955,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.6.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.6.0",
+        "test_count": 93
+      }
     },
     {
       "recipe": "gimp",
@@ -1482,7 +1994,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.10.36",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "2.10.36",
+        "test_count": 6
+      }
     },
     {
       "recipe": "gingerale",
@@ -1513,7 +2036,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "4.0.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "4.0.0",
+        "test_count": 51,
+        "patch_conflict": "error: patch failed: recipes/gingerale/build.yaml:2\nerror: recipes/gingerale/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "gliomoda",
@@ -1544,7 +2078,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.0.4",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.0.4",
+        "test_count": 16
+      }
     },
     {
       "recipe": "glmsingle",
@@ -1573,7 +2117,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.2.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.2.0",
+        "test_count": 76
+      }
     },
     {
       "recipe": "globus",
@@ -1604,7 +2159,19 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "3.3.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "${globus_version}",
+        "test_count": 71,
+        "patch_conflict": "error: patch failed: recipes/globus/fulltest.yaml:7\nerror: recipes/globus/fulltest.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "hdbet",
@@ -1633,7 +2200,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.0.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "2.0.1",
+        "test_count": 5
+      }
     },
     {
       "recipe": "heudiconv",
@@ -1662,7 +2240,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.5.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.5.1",
+        "test_count": 68
+      }
     },
     {
       "recipe": "hnncore",
@@ -1691,7 +2280,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.6.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "0.6.1",
+        "test_count": 72
+      }
     },
     {
       "recipe": "irkernel",
@@ -1720,7 +2320,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.3.2",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.3.2",
+        "test_count": 4
+      }
     },
     {
       "recipe": "julia",
@@ -1749,7 +2360,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.13.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.13.1",
+        "test_count": 137
+      }
     },
     {
       "recipe": "laynii",
@@ -1780,7 +2402,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.10.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "2.10.0",
+        "test_count": 59,
+        "patch_conflict": "error: patch failed: recipes/laynii/build.yaml:25\nerror: recipes/laynii/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "lesionquantificationtoolkit",
@@ -1811,7 +2444,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.1.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.1.0",
+        "test_count": 100
+      }
     },
     {
       "recipe": "libreoffice",
@@ -1840,7 +2483,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "26.8.1.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "26.8.1.1",
+        "test_count": 2
+      }
     },
     {
       "recipe": "lipsia",
@@ -1871,7 +2525,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "4.1.1",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "4.1.1",
+        "test_count": 100
+      }
     },
     {
       "recipe": "lqt",
@@ -1900,7 +2564,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.1.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "0.1.0",
+        "test_count": 5
+      }
     },
     {
       "recipe": "mede",
@@ -1929,7 +2604,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.0.12",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "0.0.12",
+        "test_count": 2
+      }
     },
     {
       "recipe": "meganorm",
@@ -1960,7 +2646,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.2.2",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.2.2",
+        "test_count": 11
+      }
     },
     {
       "recipe": "megnet",
@@ -1991,7 +2687,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.1.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "1.1.0",
+        "test_count": 5,
+        "patch_conflict": "error: patch failed: recipes/megnet/build.yaml:7\nerror: recipes/megnet/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "meica",
@@ -2022,7 +2729,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "4.0.1",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "4.0.1",
+        "test_count": 5,
+        "patch_conflict": "error: patch failed: recipes/meica/build.yaml:12\nerror: recipes/meica/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "mimosa",
@@ -2053,7 +2771,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.5.8",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.5.8",
+        "test_count": 20
+      }
     },
     {
       "recipe": "mipav",
@@ -2082,7 +2810,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "11.3.3",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "11.3.3",
+        "test_count": 6
+      }
     },
     {
       "recipe": "mipview",
@@ -2114,7 +2853,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.6.2",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "0.6.2",
+        "test_count": 2,
+        "patch_conflict": "error: patch failed: recipes/mipview/build.yaml:2\nerror: recipes/mipview/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "mne",
@@ -2145,7 +2895,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.13.2",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.13.2",
+        "test_count": 5
+      }
     },
     {
       "recipe": "mneextended",
@@ -2176,7 +2936,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.2.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "1.2.0",
+        "test_count": 114,
+        "patch_conflict": "error: patch failed: recipes/mneextended/build.yaml:5\nerror: recipes/mneextended/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "modsort",
@@ -2207,7 +2978,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.0.2",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.0.2",
+        "test_count": 7
+      }
     },
     {
       "recipe": "mricron",
@@ -2236,7 +3017,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.2.20211006",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.2.20211006",
+        "test_count": 104
+      }
     },
     {
       "recipe": "mritools",
@@ -2268,7 +3060,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "4.9.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "4.9.0",
+        "test_count": 54,
+        "patch_conflict": "error: patch failed: recipes/mritools/build.yaml:1\nerror: recipes/mritools/build.yaml: patch does not apply\nerror: patch failed: recipes/mritools/fulltest.yaml:1\nerror: recipes/mritools/fulltest.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "napari",
@@ -2299,7 +3102,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.9.2",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.9.2",
+        "test_count": 3
+      }
     },
     {
       "recipe": "neurocommand",
@@ -2330,7 +3143,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "1.0.0",
+        "test_count": 2,
+        "patch_conflict": "error: patch failed: recipes/neurocommand/build.yaml:15\nerror: recipes/neurocommand/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "nftsim",
@@ -2361,7 +3185,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.2",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "1.0.2",
+        "test_count": 67,
+        "patch_conflict": "error: patch failed: recipes/nftsim/build.yaml:2\nerror: recipes/nftsim/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "niftyreg",
@@ -2390,7 +3225,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.1.2",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "2.1.2",
+        "test_count": 88
+      }
     },
     {
       "recipe": "nighres",
@@ -2419,7 +3265,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.5.2",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.5.2",
+        "test_count": 69
+      }
     },
     {
       "recipe": "niimath",
@@ -2448,7 +3305,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.20260924",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.0.20260924",
+        "test_count": 113
+      }
     },
     {
       "recipe": "niistat",
@@ -2477,7 +3345,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.20191216",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.0.20191216",
+        "test_count": 92
+      }
     },
     {
       "recipe": "openadscpu",
@@ -2508,7 +3387,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.0.0",
+        "test_count": 2
+      }
     },
     {
       "recipe": "openreconexample",
@@ -2539,7 +3428,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.0.0",
+        "test_count": 5
+      }
     },
     {
       "recipe": "openreconi2iexample",
@@ -2570,7 +3469,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.89",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.0.89",
+        "test_count": 4
+      }
     },
     {
       "recipe": "openrefine",
@@ -2599,7 +3508,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "3.10.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "3.10.1",
+        "test_count": 1
+      }
     },
     {
       "recipe": "palm",
@@ -2630,7 +3550,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "alpha119",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "alpha119",
+        "test_count": 55,
+        "patch_conflict": "error: patch failed: recipes/palm/build.yaml:10\nerror: recipes/palm/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "pals",
@@ -2662,7 +3593,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.0.1",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "2.0.1",
+        "test_count": 2
+      }
     },
     {
       "recipe": "panoptica",
@@ -2682,18 +3623,29 @@
       "port_files": [
         "recipes/panoptica/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-panoptica-20261012",
+      "baseline_sha": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
+      "candidate_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
+      "started_at": "2026-10-12T05:00:21.844031+00:00",
+      "deadline": "2026-10-12T17:00:21.844031+00:00",
+      "attempts": 1,
+      "run_id": 38206125547,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Inspect exact native run; open upstream PR after all gates and zero failures/skips.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.1.7",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "2.1.7",
+        "test_count": 9
+      },
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206125547"
     },
     {
       "recipe": "pcntoolkit",
@@ -2724,7 +3676,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.3.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.3.0",
+        "test_count": 13
+      }
     },
     {
       "recipe": "petu",
@@ -2755,7 +3717,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.0.7",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.0.7",
+        "test_count": 11
+      }
     },
     {
       "recipe": "prostatefiducialseg",
@@ -2784,7 +3756,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "7.1.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "7.1.0",
+        "test_count": 3
+      }
     },
     {
       "recipe": "pydeface",
@@ -2815,7 +3797,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.1.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "2.1.0",
+        "test_count": 59,
+        "patch_conflict": "error: patch failed: recipes/pydeface/build.yaml:7\nerror: recipes/pydeface/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "qmrlab",
@@ -2846,7 +3839,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "3.0.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "3.0.0",
+        "test_count": 50
+      }
     },
     {
       "recipe": "qsmbly",
@@ -2878,7 +3881,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.29.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "0.29.0",
+        "test_count": 1,
+        "patch_conflict": "error: patch failed: recipes/qsmbly/fulltest.yaml:1\nerror: recipes/qsmbly/fulltest.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "qsmxt",
@@ -2909,7 +3923,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "9.22.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "9.22.0",
+        "test_count": 13,
+        "patch_conflict": "error: patch failed: recipes/qsmxt/build.yaml:15\nerror: recipes/qsmxt/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "quickshear",
@@ -2941,7 +3966,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.2.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.2.0",
+        "test_count": 43
+      }
     },
     {
       "recipe": "qupath",
@@ -2972,7 +4007,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.7.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.7.0",
+        "test_count": 124
+      }
     },
     {
       "recipe": "radtract",
@@ -3003,7 +4048,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.2.4",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.2.4",
+        "test_count": 2
+      }
     },
     {
       "recipe": "rapidtide",
@@ -3034,7 +4089,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "3.2.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "3.2.0",
+        "test_count": 4,
+        "patch_conflict": "error: patch failed: recipes/rapidtide/build.yaml:2\nerror: recipes/rapidtide/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "romeo",
@@ -3066,7 +4132,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "3.2.8",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "3.2.8",
+        "test_count": 104
+      }
     },
     {
       "recipe": "root",
@@ -3098,7 +4174,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "6.24.06",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "6.24.06",
+        "test_count": 101,
+        "patch_conflict": "error: patch failed: recipes/root/build.yaml:1\nerror: recipes/root/build.yaml: patch does not apply\nerror: patch failed: recipes/root/fulltest.yaml:11\nerror: recipes/root/fulltest.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "rshrf",
@@ -3129,7 +4216,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.7.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.7.0",
+        "test_count": 1
+      }
     },
     {
       "recipe": "segmentator",
@@ -3158,7 +4255,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.6.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.6.1",
+        "test_count": 4
+      }
     },
     {
       "recipe": "sigviewer",
@@ -3190,7 +4298,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.6.4",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "0.6.4",
+        "test_count": 35,
+        "patch_conflict": "error: patch failed: recipes/sigviewer/build.yaml:1\nerror: recipes/sigviewer/build.yaml: patch does not apply\nerror: patch failed: recipes/sigviewer/fulltest.yaml:1\nerror: recipes/sigviewer/fulltest.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "sodiumgridding",
@@ -3221,7 +4340,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.1.6",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.1.6",
+        "test_count": 6
+      }
     },
     {
       "recipe": "sodiumgriddingptpi",
@@ -3252,7 +4381,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.1.10",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.1.10",
+        "test_count": 6
+      }
     },
     {
       "recipe": "sodiumnufft",
@@ -3283,7 +4422,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.1.10",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.1.10",
+        "test_count": 4
+      }
     },
     {
       "recipe": "soopct",
@@ -3314,7 +4463,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.0.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.0.0",
+        "test_count": 6
+      }
     },
     {
       "recipe": "sovabids",
@@ -3346,7 +4505,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.4.7",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "0.4.7",
+        "test_count": 97,
+        "patch_conflict": "error: patch failed: recipes/sovabids/build.yaml:16\nerror: recipes/sovabids/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "spant",
@@ -3375,7 +4545,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "4.5.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "4.5.0",
+        "test_count": 4
+      }
     },
     {
       "recipe": "spmpython",
@@ -3404,7 +4585,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "25.1.2.post2",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "25.1.2.post2",
+        "test_count": 82
+      }
     },
     {
       "recipe": "syncro",
@@ -3436,7 +4628,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.2.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "0.2.0",
+        "test_count": 36,
+        "patch_conflict": "error: patch failed: recipes/syncro/build.yaml:3\nerror: recipes/syncro/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "synthseg",
@@ -3467,7 +4670,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "8.2.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "8.2.0",
+        "test_count": 22,
+        "patch_conflict": "error: patch failed: recipes/synthseg/build.yaml:12\nerror: recipes/synthseg/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "synthstrip",
@@ -3498,7 +4712,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "7.4.1",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "7.4.1",
+        "test_count": 69
+      }
     },
     {
       "recipe": "synthstroke",
@@ -3530,7 +4754,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.0.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "0.0.0",
+        "test_count": 2
+      }
     },
     {
       "recipe": "template",
@@ -3562,7 +4796,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.1.5",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.1.5",
+        "test_count": 1
+      }
     },
     {
       "recipe": "terastitcher",
@@ -3593,7 +4837,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.11.10",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "1.11.10",
+        "test_count": 4,
+        "patch_conflict": "error: patch failed: recipes/terastitcher/build.yaml:3\nerror: recipes/terastitcher/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "topaz",
@@ -3622,7 +4877,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.2.5",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "0.2.5",
+        "test_count": 126
+      }
     },
     {
       "recipe": "topofit",
@@ -3654,7 +4920,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "0.6.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "0.6.0",
+        "test_count": 14,
+        "patch_conflict": "error: patch failed: recipes/topofit/build.yaml:27\nerror: recipes/topofit/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "totalsegmentator",
@@ -3683,7 +4960,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.5.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "2.5.0",
+        "test_count": 2
+      }
     },
     {
       "recipe": "tractseg",
@@ -3715,7 +5003,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.9.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "2.9.0",
+        "test_count": 120,
+        "patch_conflict": "error: patch failed: recipes/tractseg/build.yaml:5\nerror: recipes/tractseg/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "vertexwiser",
@@ -3746,7 +5045,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.5.1",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "1.5.1",
+        "test_count": 9
+      }
     },
     {
       "recipe": "vesselboost",
@@ -3778,7 +5087,17 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "2.0.2",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": true,
+        "fulltest_version": "2.0.2",
+        "test_count": 46
+      }
     },
     {
       "recipe": "vesselvio",
@@ -3807,7 +5126,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.1.2",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.1.2",
+        "test_count": 96
+      }
     },
     {
       "recipe": "vina",
@@ -3836,7 +5166,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.2.5",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.2.5",
+        "test_count": 7
+      }
     },
     {
       "recipe": "wftfi",
@@ -3867,7 +5208,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.0",
+        "architectures": [
+          "x86_64"
+        ],
+        "port_patch_applies": false,
+        "fulltest_version": "1.0.0",
+        "test_count": 20,
+        "patch_conflict": "error: patch failed: recipes/wftfi/build.yaml:6\nerror: recipes/wftfi/build.yaml: patch does not apply"
+      }
     },
     {
       "recipe": "workshopdemo",
@@ -3896,7 +5248,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.0.0",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.0.0",
+        "test_count": 3
+      }
     },
     {
       "recipe": "xnat",
@@ -3925,7 +5288,18 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes."
+      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "upstream_review": {
+        "exists": true,
+        "version": "1.9.2.1",
+        "architectures": [
+          "x86_64",
+          "aarch64"
+        ],
+        "port_patch_applies": null,
+        "fulltest_version": "1.9.2.1",
+        "test_count": 98
+      }
     }
   ]
 }
