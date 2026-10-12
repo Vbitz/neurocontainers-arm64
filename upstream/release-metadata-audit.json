@@ -758,14 +758,34 @@
     "Publication is tracked separately from native test success and upstream PR merge. No release JSON is manually edited."
   ],
   "catalog_queue_audit": {
-    "checked_at": "2026-10-12T07:41:28.540172+00:00",
+    "checked_at": "2026-10-12T08:37:37.058009+00:00",
     "repository": "neurodesk/neurocommand",
     "ref": "update-apps-json",
-    "commit_sha": "8a528080fbe74cee245ed8ba2feca4af90be1a8b",
+    "commit_sha": "6822758cc8e86b9bd10f46d0413fc8560b1a5d5d",
     "path": "neurodesk/apps.json",
     "status": "verified-queue-content",
-    "note": "The generated catalog queue contains both architectures for all 5 audited published ports and preserves their release dates. Catalog consolidation into neurocommand main follows that repository scheduling; this audit does not claim its queue is already deployed.",
+    "note": "Generated catalog queue contains both architectures for all 10 audited published ports with matching release dates; apps/webapps workflows succeeded for every metadata commit. Scheduled consolidation/deployment is separate.",
     "entries": [
+      {
+        "recipe": "ants",
+        "architecture": "aarch64",
+        "catalog_container": "ants_arm64",
+        "catalog_app": "ants_arm64 2.6.5",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38220933763",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38220933730"
+      },
+      {
+        "recipe": "ants",
+        "architecture": "x86_64",
+        "catalog_container": "ants",
+        "catalog_app": "ants 2.6.5",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38220933763",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38220933730"
+      },
       {
         "recipe": "bart",
         "architecture": "x86_64",
@@ -827,6 +847,66 @@
         "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38216022157"
       },
       {
+        "recipe": "fsqc",
+        "architecture": "aarch64",
+        "catalog_container": "fsqc_arm64",
+        "catalog_app": "fsqc_arm64 2.1.7",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38223833337",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38223833227"
+      },
+      {
+        "recipe": "fsqc",
+        "architecture": "x86_64",
+        "catalog_container": "fsqc",
+        "catalog_app": "fsqc 2.1.7",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38223833337",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38223833227"
+      },
+      {
+        "recipe": "meganorm",
+        "architecture": "x86_64",
+        "catalog_container": "meganorm",
+        "catalog_app": "meganorm 0.2.2",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38223006372",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38223006355"
+      },
+      {
+        "recipe": "meganorm",
+        "architecture": "aarch64",
+        "catalog_container": "meganorm_arm64",
+        "catalog_app": "meganorm_arm64 0.2.2",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38223006372",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38223006355"
+      },
+      {
+        "recipe": "modsort",
+        "architecture": "x86_64",
+        "catalog_container": "modsort",
+        "catalog_app": "modsort 0.0.2",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38220527886",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38220527859"
+      },
+      {
+        "recipe": "modsort",
+        "architecture": "aarch64",
+        "catalog_container": "modsort_arm64",
+        "catalog_app": "modsort_arm64 0.0.2",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38220527886",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38220527859"
+      },
+      {
         "recipe": "panoptica",
         "architecture": "aarch64",
         "catalog_container": "panoptica_arm64",
@@ -865,9 +945,28 @@
         "status": "matches-published-metadata",
         "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38217720136",
         "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38217720077"
+      },
+      {
+        "recipe": "topaz",
+        "architecture": "aarch64",
+        "catalog_container": "topaz_arm64",
+        "catalog_app": "topaz_arm64 0.3.20",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38222145575",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38222145409"
+      },
+      {
+        "recipe": "topaz",
+        "architecture": "x86_64",
+        "catalog_container": "topaz",
+        "catalog_app": "topaz 0.3.20",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38222145575",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38222145409"
       }
-    ],
-    "blob_sha": "6819a6b2a52f073ff7f99063e81458cf2c033618"
+    ]
   },
   "verification_only_changes": []
 }

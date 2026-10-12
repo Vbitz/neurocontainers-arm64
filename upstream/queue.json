@@ -2140,18 +2140,18 @@
         "recipes/clearswi/build.yaml",
         "recipes/clearswi/fulltest.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-clearswi-20261012",
+      "baseline_sha": "f5321b4d004e57be368a31e57a37a00b9d74d6d6",
+      "candidate_sha": "99a4f077604e3b6e28d16f328a0b7b45204e5b63",
+      "started_at": "2026-10-12T08:54:45.227424+00:00",
+      "deadline": "2026-10-12T20:54:45.227424+00:00",
+      "attempts": 1,
+      "run_id": 38226596227,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.7.0",
@@ -2161,7 +2161,22 @@
         "port_patch_applies": true,
         "fulltest_version": "1.7.0",
         "test_count": 67
-      }
+      },
+      "current_upstream_preflight": {
+        "status": "reviewed-not-started",
+        "version": "1.7.0",
+        "note": "Historical 1.6.1 ARM stock Julia sysimage route passed68/68. Current 1.7.0 needs fresh testing. Official Julia1.12.6 feed confirms AArch64 asset and SHA256. Preserve all67 current fulltests; retain original x86 unpack/install/custom-sysimage/cleanup in a single RUN to avoid introducing overlay duplication when replaying historical patch. Investigate only when one of four active recipes finishes.",
+        "primary_sources": [
+          "https://julialang.org/downloads/support/",
+          "https://julialang-s3.julialang.org/bin/versions.json",
+          "https://julialang.github.io/PackageCompiler.jl/stable/sysimages.html"
+        ],
+        "arm64_asset": "https://julialang-s3.julialang.org/bin/linux/aarch64/1.12/julia-1.12.6-linux-aarch64.tar.gz",
+        "sha256": "029b93b857bd0ffd627f9a8580d3bbaa63daf008d7b7aed02fbceb8fd57c4899"
+      },
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38226596227"
     },
     {
       "recipe": "code",
@@ -2253,7 +2268,7 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-condaenvs-20261012",
       "baseline_sha": "adb11f430e76abaf0294852840a23a94d994ac7c",
       "candidate_sha": "00d52a64cd5bc7dff2d4957d83b284d2fbe8f752",
@@ -2264,7 +2279,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "1.1.0",
@@ -2305,7 +2320,37 @@
           },
           "first_error": "No deployment commands found. DEPLOY_BINS and DEPLOY_PATH absent; all three fulltests passed, including exact EDF roundtrip."
         }
-      ]
+      ],
+      "native_evidence": {
+        "source_sha": "00d52a64cd5bc7dff2d4957d83b284d2fbe8f752",
+        "version": "1.1.0",
+        "counts": {
+          "total_tests": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 5.696871995925903,
+          "run_timestamp": "2026-10-12T08:41:06.924513",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 3,
+          "total_suites": 1,
+          "total_tests": 3
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38223493182",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "cosmomvpa",
@@ -2513,12 +2558,21 @@
       "candidate_sha": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
       "started_at": "2026-10-12T08:03:50.601281+00:00",
       "deadline": "2026-10-12T20:03:50.601281+00:00",
-      "attempts": 4,
+      "attempts": 5,
       "run_id": 38223320234,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3498",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "initial_run_id": 38224226352,
+        "transient_arm_setup_failure": {
+          "job_id": 114727769420,
+          "first_error": "add-apt-repository for Apptainer PPA: http.client.IncompleteRead(69366 bytes read) from Launchpad API; before container build.",
+          "log": "/tmp/dqe-upstream-arm-38224226352.log",
+          "retry_used": true,
+          "retry_requested_at": "2026-10-12T08:49:41.047533+00:00"
+        }
+      },
       "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "next_action": "One unchanged ARM setup job retry requested for truncated Launchpad response; reconcile same upstream run attempt2. Preserve successful x86 report; no broad rerun.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.3",
@@ -2539,7 +2593,7 @@
         "nvidia_dependency_markers": "Linux and x86_64 only; ARM64 wheel uses CPU",
         "historical_cpu_index_asset_status": "Official CPU index links download-r2.pytorch.org; HEAD and one-byte-range GET both returned 403 locally. Use available same-version official PyPI ARM wheel."
       },
-      "arm64_attempts": 3,
+      "arm64_attempts": 4,
       "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38223320234",
       "attempt_history": [
@@ -2782,18 +2836,18 @@
       "port_files": [
         "recipes/dwidenoise2/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-dwidenoise2-20261012",
       "baseline_sha": "36520dbcb15c00597b0dc6afb7fd255e9fbcdc33",
       "candidate_sha": "d973046690b93979fa394715a2dd842c2f7b8d8e",
       "started_at": "2026-10-12T08:31:11.930338+00:00",
       "deadline": "2026-10-12T20:31:11.930338+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38224114491,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3499",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -2804,9 +2858,51 @@
         "fulltest_version": "1.0.0",
         "test_count": 4
       },
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38224114491"
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38224114491",
+      "deploy_skip_review": {
+        "reviewed": true,
+        "source_sha": "d973046690b93979fa394715a2dd842c2f7b8d8e",
+        "counts": {
+          "total": 35,
+          "passed": 29,
+          "failed": 0,
+          "skipped": 6
+        },
+        "note": "All five declared DEPLOY_PATH binaries resolve and their filesystem libraries pass. DEPLOY_BINS is intentionally absent because PATH deployment is used; the other five informational skips are ldd summary records for two entries per ELF binary without filesystem paths. No scientific or runtime test was skipped: all five fulltests passed, including finite seeded 4D denoising, exact dimensions, preserved mean and reduced variance. The minimal synthetic MIF has no transform and MRtrix explicitly uses identity defaults; this test asserts intensity and dimension behavior, not registration geometry."
+      },
+      "native_evidence": {
+        "source_sha": "d973046690b93979fa394715a2dd842c2f7b8d8e",
+        "version": "1.0.0",
+        "counts": {
+          "total_tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "total_suites": 1,
+          "suites_passed": 1,
+          "suites_failed": 0,
+          "total_tests": 5,
+          "tests_passed": 5,
+          "tests_failed": 0,
+          "duration": 1.1241135597229004,
+          "run_timestamp": "2026-10-12T08:39:11.793131"
+        },
+        "deploy_counts": {
+          "total": 35,
+          "passed": 29,
+          "failed": 0,
+          "skipped": 6
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38224114491",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pr_number": 3499
     },
     {
       "recipe": "eharmonize",
@@ -4247,17 +4343,17 @@
         ]
       },
       "port_files": [],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-libreoffice-20261012",
       "baseline_sha": "577a7335949d3f89a9ee30e9c89d06ea7a0f26fb",
       "candidate_sha": "e0605c9dad41131f164cc8e65dbcfb9022354c54",
       "started_at": "2026-10-12T07:47:17.933423+00:00",
       "deadline": "2026-10-12T19:47:17.933423+00:00",
-      "attempts": 4,
+      "attempts": 6,
       "run_id": 38220665128,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3496",
       "upstream_ci": {
-        "runtime_run_id": 38221440883,
+        "runtime_run_id": 38225236180,
         "head_sha": "e0605c9dad41131f164cc8e65dbcfb9022354c54",
         "tested_merge_sha": "1746acbd6c71b7f0e53c07ba0e0142b25adc40ef",
         "recipe_tree_matches_head": true,
@@ -4270,11 +4366,11 @@
             "version": "26.8.1.1",
             "machine": "aarch64",
             "status": "passed",
-            "observed_at": "2026-10-12T08:10:28.758449+00:00",
-            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221440883",
+            "observed_at": "2026-10-12T08:46:20.928917+00:00",
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38225236180",
             "recipe_sha256": "b588f5eb4a8b5138229632d677a740b40ff1ee95324ed606a9ddc70d6fa571ac",
             "image_id": "sha256:7d36a465d97d8873c495ed5f5b2b6f32548118edd4c54311e1ee48eb25689e89",
-            "candidate_sha256": "c8b2c078efffc2dfdc5b979b0473b963083c969fbd0a5143981b1d30e72438cf"
+            "candidate_sha256": "df205a21da907e0184e89cf3f50473949e07ad52e5eee88648ec1ff2db9763e5"
           },
           "counts": {
             "total_tests": 4,
@@ -4283,8 +4379,8 @@
             "skipped": 0
           },
           "fulltest_summary": {
-            "duration": 7.418264389038086,
-            "run_timestamp": "2026-10-12T08:10:28.607189",
+            "duration": 6.5032103061676025,
+            "run_timestamp": "2026-10-12T08:46:20.804290",
             "suites_failed": 0,
             "suites_passed": 1,
             "tests_failed": 0,
@@ -4293,7 +4389,7 @@
             "total_tests": 3
           },
           "artifact_name": "recipe-check-libreoffice_arm64-1746acbd6c71b7f0e53c07ba0e0142b25adc40ef",
-          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221440883/job/114718567936",
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38225236180/job/114731190513",
           "runner_labels": [
             "blacksmith-8vcpu-ubuntu-2404-arm"
           ]
@@ -4304,11 +4400,11 @@
             "version": "26.8.1.1",
             "machine": "x86_64",
             "status": "passed",
-            "observed_at": "2026-10-12T08:11:07.141034+00:00",
-            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221440883",
+            "observed_at": "2026-10-12T08:48:46.678678+00:00",
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38225236180",
             "recipe_sha256": "b588f5eb4a8b5138229632d677a740b40ff1ee95324ed606a9ddc70d6fa571ac",
-            "image_id": "sha256:822f9e3319d1f01ddfa9f6354e13e3180934b6f9941c61ae07d255782136248a",
-            "candidate_sha256": "3ec1d18eb017fa9ebecd9b26bac28a74de4f1fce4eff72230654f234de218fc6"
+            "image_id": "sha256:8a0fc528d250b36036e44732cc40d9058d126ac09482e33af66f76dd5a2a4a06",
+            "candidate_sha256": "c1862394a75e6d40dfddabc21b9d5fe748c116fee0771d93ced07e4521377f87"
           },
           "counts": {
             "total_tests": 4,
@@ -4317,8 +4413,8 @@
             "skipped": 0
           },
           "fulltest_summary": {
-            "duration": 6.579344272613525,
-            "run_timestamp": "2026-10-12T08:11:07.041254",
+            "duration": 6.505373001098633,
+            "run_timestamp": "2026-10-12T08:48:46.567072",
             "suites_failed": 0,
             "suites_passed": 1,
             "tests_failed": 0,
@@ -4327,14 +4423,32 @@
             "total_tests": 3
           },
           "artifact_name": "recipe-check-libreoffice-1746acbd6c71b7f0e53c07ba0e0142b25adc40ef",
-          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221440883/job/114718567316",
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38225236180/job/114731190655",
           "runner_labels": [
             "neurodesk-syd-arcrunner-neurocontainers"
           ]
+        },
+        "legacy_release_check_review": {
+          "reviewed": true,
+          "source_sha": "e0605c9dad41131f164cc8e65dbcfb9022354c54",
+          "run_id": 38225235800,
+          "check_name": "summarize-results",
+          "status": "inapplicable-historical-release-failure",
+          "tested_release_version": "26.2.4",
+          "current_recipe_version": "26.8.1.1",
+          "report_counts": {
+            "passed": 3,
+            "failed": 1,
+            "skipped": 0,
+            "total_tests": 4
+          },
+          "first_error": "Historical LibreOffice26.2.4.2 fails expected current26.8.1.1 version; summary misses flat artifact layout.",
+          "evidence": "Reopened legacy workflow checked out stale merge1746 before CI repair; current stable merge3cc differs only in release-selection CI and its tests, not builder/runtime/image inputs. Required Container release gate and Code quality both pass; current-container ARM/x86 each4/4. Main CI repair#3497 merged.",
+          "merge_policy": "Normal authorized merge only; no admin override, forged check, removed scientific test or additional build. Retain the historical failure without claiming it passed."
         }
       },
-      "merged_sha": null,
-      "next_action": "CI repair #3497 merged with all Linux checks passing. Wait for two free build slots, then close/reopen same-head PR to refresh workflows against repaired base; count two runtime attempts (6/6), retain existing exact-head native proof, no duplicate PR.",
+      "merged_sha": "f5321b4d004e57be368a31e57a37a00b9d74d6d6",
+      "next_action": "Native exact-head proof and both upstream merge-source runtime suites verified before individual PR merge. No image-input changes or new release required.",
       "upstream_review": {
         "exists": true,
         "version": "26.8.1.1",
@@ -4369,8 +4483,8 @@
         ]
       },
       "release_metadata_policy": "A fulltest-only PR changes no image inputs and must not promote an unnecessary new release. Preserve existing release metadata; audit scientific/runtime verification separately.",
-      "arm64_attempts": 3,
-      "x86_64_attempts": 1,
+      "arm64_attempts": 4,
+      "x86_64_attempts": 2,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38220665128",
       "attempt_history": [
         {
@@ -4410,7 +4524,110 @@
           "ubuntu-24.04-arm"
         ]
       },
-      "pr_number": 3496
+      "pr_number": 3496,
+      "upstream_ci_history": [
+        {
+          "runtime_run_id": 38221440883,
+          "head_sha": "e0605c9dad41131f164cc8e65dbcfb9022354c54",
+          "tested_merge_sha": "1746acbd6c71b7f0e53c07ba0e0142b25adc40ef",
+          "recipe_tree_matches_head": true,
+          "quality": "passed",
+          "release_gate": "passed",
+          "publication": "No image-input changes; verification builds are not release candidates.",
+          "aarch64": {
+            "runtime_observation": {
+              "container": "libreoffice_arm64",
+              "version": "26.8.1.1",
+              "machine": "aarch64",
+              "status": "passed",
+              "observed_at": "2026-10-12T08:10:28.758449+00:00",
+              "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221440883",
+              "recipe_sha256": "b588f5eb4a8b5138229632d677a740b40ff1ee95324ed606a9ddc70d6fa571ac",
+              "image_id": "sha256:7d36a465d97d8873c495ed5f5b2b6f32548118edd4c54311e1ee48eb25689e89",
+              "candidate_sha256": "c8b2c078efffc2dfdc5b979b0473b963083c969fbd0a5143981b1d30e72438cf"
+            },
+            "counts": {
+              "total_tests": 4,
+              "passed": 4,
+              "failed": 0,
+              "skipped": 0
+            },
+            "fulltest_summary": {
+              "duration": 7.418264389038086,
+              "run_timestamp": "2026-10-12T08:10:28.607189",
+              "suites_failed": 0,
+              "suites_passed": 1,
+              "tests_failed": 0,
+              "tests_passed": 3,
+              "total_suites": 1,
+              "total_tests": 3
+            },
+            "artifact_name": "recipe-check-libreoffice_arm64-1746acbd6c71b7f0e53c07ba0e0142b25adc40ef",
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221440883/job/114718567936",
+            "runner_labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ]
+          },
+          "x86_64": {
+            "runtime_observation": {
+              "container": "libreoffice",
+              "version": "26.8.1.1",
+              "machine": "x86_64",
+              "status": "passed",
+              "observed_at": "2026-10-12T08:11:07.141034+00:00",
+              "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221440883",
+              "recipe_sha256": "b588f5eb4a8b5138229632d677a740b40ff1ee95324ed606a9ddc70d6fa571ac",
+              "image_id": "sha256:822f9e3319d1f01ddfa9f6354e13e3180934b6f9941c61ae07d255782136248a",
+              "candidate_sha256": "3ec1d18eb017fa9ebecd9b26bac28a74de4f1fce4eff72230654f234de218fc6"
+            },
+            "counts": {
+              "total_tests": 4,
+              "passed": 4,
+              "failed": 0,
+              "skipped": 0
+            },
+            "fulltest_summary": {
+              "duration": 6.579344272613525,
+              "run_timestamp": "2026-10-12T08:11:07.041254",
+              "suites_failed": 0,
+              "suites_passed": 1,
+              "tests_failed": 0,
+              "tests_passed": 3,
+              "total_suites": 1,
+              "total_tests": 3
+            },
+            "artifact_name": "recipe-check-libreoffice-1746acbd6c71b7f0e53c07ba0e0142b25adc40ef",
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221440883/job/114718567316",
+            "runner_labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          }
+        }
+      ],
+      "legacy_release_check_review": {
+        "reviewed": true,
+        "source_sha": "e0605c9dad41131f164cc8e65dbcfb9022354c54",
+        "run_id": 38225235800,
+        "check_name": "summarize-results",
+        "status": "inapplicable-historical-release-failure",
+        "tested_release_version": "26.2.4",
+        "current_recipe_version": "26.8.1.1",
+        "report_counts": {
+          "passed": 3,
+          "failed": 1,
+          "skipped": 0,
+          "total_tests": 4
+        },
+        "first_error": "Historical LibreOffice26.2.4.2 fails expected current26.8.1.1 version; summary misses flat artifact layout.",
+        "evidence": "Reopened legacy workflow checked out stale merge1746 before CI repair; current stable merge3cc differs only in release-selection CI and its tests, not builder/runtime/image inputs. Required Container release gate and Code quality both pass; current-container ARM/x86 each4/4. Main CI repair#3497 merged.",
+        "merge_policy": "Normal authorized merge only; no admin override, forged check, removed scientific test or additional build. Retain the historical failure without claiming it passed."
+      },
+      "merged_at": "2026-10-12T08:53:30Z",
+      "release_metadata_audit": {
+        "status": "not-applicable-test-only",
+        "checked_at": "2026-10-12T08:53:32.005875+00:00",
+        "note": "Only fulltest.yaml changed. The release plan has no image candidate; verification builds must not advance generated release metadata."
+      }
     },
     {
       "recipe": "lipsia",
