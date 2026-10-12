@@ -6322,18 +6322,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
+      "status": "ready-to-dispatch",
+      "branch": "arm64/upstream-dicompare-20261012",
+      "baseline_sha": "ea209a0a0084f732012180aad5464328c8d01236",
+      "candidate_sha": "1bf708d567c540820a8160924080b616baf19c60",
+      "started_at": "2026-10-12T20:06:23.915267+00:00",
+      "deadline": "2026-10-13T08:06:23.915267+00:00",
       "attempts": 0,
       "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native Docker/architecture/SIF/deploy/fulltest then individual PR and both actual upstream reports/all gates.",
       "upstream_review": {
         "exists": true,
         "version": "0.15.3",
@@ -6355,7 +6355,18 @@
           "merge_sha": "238d5f0d2395729fabf0869e1df2b83378743a39",
           "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
         }
-      ]
+      ],
+      "upstream_verification_mode": "runtime-only",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Preserve all86 Dicompare0.15.3 cases and replace seven masked HTTP probes with actual deployed-launcher checks on private ports. Require exact index/favicon/manifest bytes, every advertised schema and validation definition, valid JSON, and exact SPA fallback. Add a real application asset test requiring JavaScript/CSS/Pyodide worker bytes and correct browser MIME types. Cleanup only each test owned process group; no global pkill, ignored requests or generic success-string substitute. This verifies real server deployment and resource delivery, not browser-side DICOM validation execution. Image inputs unchanged.",
+      "pr_title": "Verify actual Dicompare web deployment and complete application assets",
+      "primary_source_review": [
+        "https://github.com/astewartau/dicompare-web/tree/v0.15.3",
+        "https://github.com/vercel/serve",
+        "https://nodejs.org/api/child_process.html"
+      ],
+      "arm64_attempts": 0,
+      "x86_64_attempts": 0
     },
     {
       "recipe": "dicomtools",
@@ -10158,9 +10169,50 @@
       "attempts": 3,
       "run_id": 38299606271,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3531",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "runtime_run_id": 38301184373,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38301184373",
+        "head_sha": "6dc8d4e2fe8ba19ffb332991f04d1f13c6d64223",
+        "tested_merge_sha": "e2b6f3745ee4b5eb9b2aad75b4e90bdd1da777ed",
+        "recipe_tree_matches_head": true,
+        "x86_64": {
+          "runtime_observation": {
+            "container": "julia",
+            "version": "1.13.1",
+            "machine": "x86_64",
+            "status": "passed",
+            "observed_at": "2026-10-12T20:10:46.013464+00:00",
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38301184373",
+            "recipe_sha256": "5d7208fe02ae33938b26b8a0430b3e44d3bf22a8185f97b5e07e2035a2f34ddf",
+            "image_id": "sha256:54d789e2baba8323a08cd86fdaeac6ed8d534d8ac11c90bd37d6d90e5bc41abf",
+            "candidate_sha256": "7f64eca74a62c11515284c740b3a15e21ee8474494a786731a687676af09b966"
+          },
+          "counts": {
+            "total_tests": 139,
+            "passed": 139,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 379.04479598999023,
+            "run_timestamp": "2026-10-12T20:10:45.867819",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 138,
+            "total_suites": 1,
+            "total_tests": 138
+          },
+          "artifact_name": "recipe-check-julia-e2b6f3745ee4b5eb9b2aad75b4e90bdd1da777ed",
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38301184373/job/114984385025",
+          "runner_labels": [
+            "blacksmith-8vcpu-ubuntu-2404"
+          ],
+          "actual_command_exit_review": "All unusual exits match source-specific explicit expected contracts; zero unexpected exits."
+        }
+      },
       "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "next_action": "Exact upstreamx86_64 139/139 and merge-parent/recipe-tree/build-hash proof reviewed. Await other actual architecture report and all gates; retain successful proof.",
       "upstream_review": {
         "exists": true,
         "version": "1.13.1",
@@ -15218,18 +15270,22 @@
       "port_files": [
         "recipes/rapidtide/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-rapidtide-20261012",
       "baseline_sha": "ea209a0a0084f732012180aad5464328c8d01236",
       "candidate_sha": "4b30a1173fbd09ce08b307cef621515d80cd82ea",
       "started_at": "2026-10-12T19:49:48.622725+00:00",
       "deadline": "2026-10-13T07:49:48.622725+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38301675222,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3532",
+      "upstream_ci": {
+        "candidate_run_id": 38302663340,
+        "head_sha": "4b30a1173fbd09ce08b307cef621515d80cd82ea",
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38302663340"
+      },
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "3.2.0",
@@ -15259,9 +15315,46 @@
         "https://pypi.org/pypi/rapidtide/3.2.0/json"
       ],
       "upstream_ci_runner_label": "ci-blacksmith-x86",
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38301675222"
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38301675222",
+      "native_command_exit_review": {
+        "source_sha": "4b30a1173fbd09ce08b307cef621515d80cd82ea",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "4b30a1173fbd09ce08b307cef621515d80cd82ea",
+        "version": "3.2.0",
+        "counts": {
+          "total_tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 11.202033519744873,
+          "run_timestamp": "2026-10-12T20:10:23.854901",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 5,
+          "total_suites": 1,
+          "total_tests": 5
+        },
+        "deploy_counts": {
+          "total": 12,
+          "passed": 12,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38301675222",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3532,
+      "pr_number": 3532
     },
     {
       "recipe": "romeo",
