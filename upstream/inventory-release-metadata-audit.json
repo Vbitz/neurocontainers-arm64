@@ -1,0 +1,1296 @@
+{
+  "checked_at": "2026-10-12T09:56:47.255649+00:00",
+  "upstream_ref": "4d04f767b5ab0fdacfbaab3290a76b75415baa0c",
+  "scope": "112 user-requested in-scope recipes;17 OpenRecon exclusions omitted.",
+  "policy": "Read-only source-tree audit. Metadata presence/schema does not prove current builds, public artifacts or deployment; exact-candidate publication proofs remain in release-metadata-audit.json. No generated JSON changes or promotion dispatch.",
+  "counts": {
+    "pending-arm64-port": 56,
+    "explicit-arm64-metadata-present": 30,
+    "no-current-version-metadata-at-audited-ref": 26
+  },
+  "containers": [
+    {
+      "recipe": "afni",
+      "version": "26.3.02",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "aidamri",
+      "version": "3.0.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "amico",
+      "version": "2.1.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/amico_arm64/2.1.1.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "amico",
+      "apps": {
+        "amico_arm64 2.1.1": "20260910"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "ants",
+      "version": "2.6.5",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/ants_arm64/2.6.5.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "ants",
+      "apps": {
+        "ants_arm64 2.6.5": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "apptainer",
+      "version": "1.5.3",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/apptainer_arm64/1.5.3.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "apptainer",
+      "apps": {
+        "apptainer_arm64 1.5.3": "20260910"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "bart",
+      "version": "1.0.00",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/bart_arm64/1.0.00.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "bart",
+      "apps": {
+        "bart_arm64 1.0.00": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "batchheudiconv",
+      "version": "1.0.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/batchheudiconv_arm64/1.0.0.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "batchheudiconv",
+      "apps": {
+        "batchheudiconv_arm64 1.0.0": "20261010"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "bidscoin",
+      "version": "4.6.2",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/bidscoin_arm64/4.6.2.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "bidsmanager",
+      "version": "1.4.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/bidsmanager_arm64/1.4.1.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "bidsmanager",
+      "apps": {
+        "bidsmanager_arm64 1.4.1": "20260927"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "bidsme",
+      "version": "1.9.6",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/bidsme_arm64/1.9.6.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "bidstools",
+      "version": "1.3.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/bidstools_arm64/1.3.0.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "bidstools",
+      "apps": {
+        "bidstools_arm64 1.3.0": "20260919"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "bidsvue",
+      "version": "0.1.20260704",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "blastct",
+      "version": "2.0.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/blastct_arm64/2.0.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "brainles-aurora",
+      "version": "0.2.7",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "brainles-preprocessing",
+      "version": "0.6.13",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "brainlifecli",
+      "version": "1.8.2",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/brainlifecli_arm64/1.8.2.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "brainlifecli",
+      "apps": {
+        "brainlifecli_arm64 1.8.2": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "brats",
+      "version": "0.1.13",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "brkraw",
+      "version": "0.5.7",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/brkraw_arm64/0.5.7.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "brkraw",
+      "apps": {
+        "brkraw_arm64 0.5.7": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "builder",
+      "version": "0.2.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/builder_arm64/0.2.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "clearswi",
+      "version": "1.7.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "code",
+      "version": "240320",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "condaenvs",
+      "version": "1.1.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/condaenvs_arm64/1.1.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "cosmomvpa",
+      "version": "1.1.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/cosmomvpa_arm64/1.1.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "datalad",
+      "version": "1.7.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/datalad_arm64/1.7.1.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "datalad",
+      "apps": {
+        "datalad_arm64 1.7.1": "20261007"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "dcm2bids",
+      "version": "3.3.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/dcm2bids_arm64/3.3.1.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "dcm2bids",
+      "apps": {
+        "dcm2bids_arm64 3.3.1": "20260920"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "dcm2niix",
+      "version": "v1.0.20260724",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/dcm2niix_arm64/v1.0.20260724.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "dcm2niix",
+      "apps": {
+        "dcm2niix_arm64 v1.0.20260724": "20260920"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "deep-quality-estimation",
+      "version": "0.0.3",
+      "declared_architectures": [
+        "aarch64",
+        "x86_64"
+      ],
+      "path": "releases/deep-quality-estimation_arm64/0.0.3.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "deepdisco",
+      "version": "20251008",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "deeplabcut",
+      "version": "3.0.2",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "dicompare",
+      "version": "0.15.3",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/dicompare_arm64/0.15.3.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "dicompare",
+      "apps": {
+        "dicompare_arm64 0.15.3": "20261006"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "dicomtools",
+      "version": "1.1.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "dwidenoise2",
+      "version": "1.0.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/dwidenoise2_arm64/1.0.0.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "dwidenoise2",
+      "apps": {
+        "dwidenoise2_arm64 1.0.0": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "eharmonize",
+      "version": "1.0.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/eharmonize_arm64/1.0.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "elastix",
+      "version": "5.3.1",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "emuses",
+      "version": "1.3.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "fetalsynthseg",
+      "version": "1.0.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "fitlins",
+      "version": "0.11.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/fitlins_arm64/0.11.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "flames",
+      "version": "1.0.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "fsl",
+      "version": "6.0.7.23",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "fsqc",
+      "version": "2.1.7",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/fsqc_arm64/2.1.7.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "fsqc",
+      "apps": {
+        "fsqc_arm64 2.1.7": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "functionnectome",
+      "version": "2.5.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/functionnectome_arm64/2.5.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "gigaconnectome",
+      "version": "0.6.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "gimp",
+      "version": "2.10.36",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/gimp_arm64/2.10.36.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "gimp",
+      "apps": {
+        "gimp_arm64 2.10.36": "20260911",
+        "gimpGUI-gimp_arm64 2.10.36": "20260911"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "gingerale",
+      "version": "4.0.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "gliomoda",
+      "version": "0.0.4",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "glmsingle",
+      "version": "1.2.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/glmsingle_arm64/1.2.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "globus",
+      "version": "3.3.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/globus_arm64/3.3.1.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "globus",
+      "apps": {
+        "globus_arm64 3.3.1": "20260927",
+        "globusGUI-globus_arm64 3.3.1": "20260927"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "hdbet",
+      "version": "2.0.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/hdbet_arm64/2.0.1.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "heudiconv",
+      "version": "1.5.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/heudiconv_arm64/1.5.1.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "heudiconv",
+      "apps": {
+        "heudiconv_arm64 1.5.1": "20260927"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "hnncore",
+      "version": "0.6.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/hnncore_arm64/0.6.1.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "irkernel",
+      "version": "1.3.2",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/irkernel_arm64/1.3.2.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "julia",
+      "version": "1.13.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/julia_arm64/1.13.1.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "julia",
+      "apps": {
+        "julia_arm64 1.13.1": "20260928",
+        "vscodeGUI-julia_arm64 1.13.1": "20260928",
+        "REPLGUI-julia_arm64 1.13.1": "20260928"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "laynii",
+      "version": "2.10.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "lesionquantificationtoolkit",
+      "version": "0.1.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "libreoffice",
+      "version": "26.8.1.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/libreoffice_arm64/26.8.1.1.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "lipsia",
+      "version": "4.1.1",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "lqt",
+      "version": "0.1.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/lqt_arm64/0.1.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "mede",
+      "version": "0.0.12",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/mede_arm64/0.0.12.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "meganorm",
+      "version": "0.2.2",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/meganorm_arm64/0.2.2.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "meganorm",
+      "apps": {
+        "meganorm_arm64 0.2.2": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "megnet",
+      "version": "1.1.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "mimosa",
+      "version": "0.5.8",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "mipav",
+      "version": "11.3.3",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/mipav_arm64/11.3.3.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "mipview",
+      "version": "0.6.2",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "mne",
+      "version": "1.13.2",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "mneextended",
+      "version": "1.2.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "modsort",
+      "version": "0.0.2",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/modsort_arm64/0.0.2.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "modsort",
+      "apps": {
+        "modsort_arm64 0.0.2": "20261012",
+        "modsort-modsort_arm64 0.0.2": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "mricron",
+      "version": "1.2.20211006",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/mricron_arm64/1.2.20211006.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "mritools",
+      "version": "4.9.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "napari",
+      "version": "0.9.2",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "neurocommand",
+      "version": "1.0.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "nftsim",
+      "version": "1.0.2",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "niftyreg",
+      "version": "2.1.2",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/niftyreg_arm64/2.1.2.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "niftyreg",
+      "apps": {
+        "niftyreg_arm64 2.1.2": "20261003"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "nighres",
+      "version": "1.5.2",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/nighres_arm64/1.5.2.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "niimath",
+      "version": "1.0.20260924",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/niimath_arm64/1.0.20260924.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "niimath",
+      "apps": {
+        "niimath_arm64 1.0.20260924": "20261004"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "niistat",
+      "version": "1.0.20191216",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/niistat_arm64/1.0.20191216.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "openadscpu",
+      "version": "1.0.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "openrefine",
+      "version": "3.10.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/openrefine_arm64/3.10.1.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "palm",
+      "version": "alpha119",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "pals",
+      "version": "2.0.1",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "panoptica",
+      "version": "2.1.7",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/panoptica_arm64/2.1.7.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "panoptica",
+      "apps": {
+        "panoptica_arm64 2.1.7": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "pcntoolkit",
+      "version": "1.3.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/pcntoolkit_arm64/1.3.0.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "pcntoolkit",
+      "apps": {
+        "pcntoolkit_arm64 1.3.0": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "petu",
+      "version": "0.0.7",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "pydeface",
+      "version": "2.1.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "qmrlab",
+      "version": "3.0.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "qsmbly",
+      "version": "0.29.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "quickshear",
+      "version": "1.2.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "qupath",
+      "version": "0.7.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "radtract",
+      "version": "0.2.4",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "rapidtide",
+      "version": "3.2.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "romeo",
+      "version": "3.2.8",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "root",
+      "version": "6.24.06",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "rshrf",
+      "version": "1.7.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "segmentator",
+      "version": "1.6.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/segmentator_arm64/1.6.1.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "sigviewer",
+      "version": "0.6.4",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "soopct",
+      "version": "0.0.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "sovabids",
+      "version": "0.4.7",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "spant",
+      "version": "4.5.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/spant_arm64/4.5.0.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "spant",
+      "apps": {
+        "spant_arm64 4.5.0": "20261010"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "spmpython",
+      "version": "25.1.2.post2",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/spmpython_arm64/25.1.2.post2.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "spmpython",
+      "apps": {
+        "spmpython_arm64 25.1.2.post2": "20261010"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "syncro",
+      "version": "0.2.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "synthstrip",
+      "version": "8.2.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "synthstroke",
+      "version": "0.0.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "template",
+      "version": "1.1.5",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "terastitcher",
+      "version": "1.11.10",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "topaz",
+      "version": "0.3.20",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/topaz_arm64/0.3.20.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "topaz",
+      "apps": {
+        "topaz_arm64 0.3.20": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "totalsegmentator",
+      "version": "2.18.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/totalsegmentator_arm64/2.18.0.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "totalsegmentator",
+      "apps": {
+        "totalsegmentator_arm64 2.18.0": "20261012"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "tractseg",
+      "version": "2.9.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "vertexwiser",
+      "version": "1.5.1",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "vesselvio",
+      "version": "1.1.2",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/vesselvio_arm64/1.1.2.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "vina",
+      "version": "1.2.5",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/vina_arm64/1.2.5.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "vina",
+      "apps": {
+        "vina_arm64 1.2.5": "20260911"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
+    },
+    {
+      "recipe": "wftfi",
+      "version": "1.0.0",
+      "declared_architectures": [
+        "x86_64"
+      ],
+      "status": "pending-arm64-port"
+    },
+    {
+      "recipe": "workshopdemo",
+      "version": "1.0.0",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/workshopdemo_arm64/1.0.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "xnat",
+      "version": "1.9.2.1",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/xnat_arm64/1.9.2.1.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    }
+  ]
+}

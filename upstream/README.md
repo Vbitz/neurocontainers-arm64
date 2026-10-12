@@ -84,3 +84,13 @@ against promotion previews. ARM64 named variants use
 recipe fields. A merged recipe remains pending publication until promotion has
 finished and the committed JSON matches the tested candidate. Automatic upstream
 promotion is observed; generated release JSONs are never edited manually.
+
+[inventory-release-metadata-audit.json](inventory-release-metadata-audit.json)
+adds a read-only check of current-version ARM64 metadata across all112 in-scope
+recipes at its recorded upstream commit. It distinguishes pending ARM64 ports,
+missing current-version metadata and explicit named-variant metadata. Application
+identity checks include the recipe's declared GUI launchers, matching
+`builder/release.py`; build dates must agree across app entries. Metadata presence
+is separate from exact-source runtime proof, publication manifests and public
+artifact checks in the per-merge audit. Test-only PRs do not fill pre-existing
+publication gaps or create a release candidate.
