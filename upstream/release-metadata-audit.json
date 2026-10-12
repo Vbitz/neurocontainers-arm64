@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T07:40:28.600581+00:00",
+  "checked_at": "2026-10-12T07:59:20.499070+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -63,13 +63,65 @@
   ],
   "merged_recipe_promotions": [
     {
+      "recipe": "ants",
+      "promotion_run_id": 38219752715,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38219752715",
+      "status": "pending-promotion",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/ants_arm64/2.6.5.json",
+          "expected_build_date": "20261012",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/ants/2.6.5.json",
+          "expected_build_date": "20261012",
+          "exists": true,
+          "committed_build_dates": [
+            "20260602"
+          ],
+          "current_candidate_date_committed": false
+        }
+      ],
+      "checked_at": "2026-10-12T07:58:40.235964+00:00",
+      "workflow_status": "in_progress",
+      "workflow_conclusion": null,
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-ants-f58b9e6755f6af3db1753d44ba3b390270c7cde0)",
+          "status": "completed",
+          "conclusion": "success",
+          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-75lp2",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-ants_arm64-f58b9e6755f6af3db1753d44ba3b390270c7cde0)",
+          "status": "completed",
+          "conclusion": "success",
+          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-t6kcr",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-12T07:58:41.046607+00:00"
+    },
+    {
       "recipe": "bart",
       "promotion_run_id": 38208442867,
       "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38208442867",
       "status": "verified-published-metadata",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
-      "checked_at": "2026-10-12T07:40:01.428206+00:00",
+      "checked_at": "2026-10-12T07:58:42.621604+00:00",
       "metadata": [
         {
           "architecture": "x86_64",
@@ -128,7 +180,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T07:40:05.001492+00:00"
+      "metadata_checked_at": "2026-10-12T07:58:46.269627+00:00"
     },
     {
       "recipe": "brainlifecli",
@@ -137,7 +189,7 @@
       "status": "verified-published-metadata",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
-      "checked_at": "2026-10-12T07:40:06.253163+00:00",
+      "checked_at": "2026-10-12T07:58:47.471895+00:00",
       "metadata": [
         {
           "architecture": "x86_64",
@@ -196,7 +248,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T07:40:09.995139+00:00"
+      "metadata_checked_at": "2026-10-12T07:58:51.842436+00:00"
     },
     {
       "recipe": "brkraw",
@@ -205,7 +257,7 @@
       "status": "verified-published-metadata",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
-      "checked_at": "2026-10-12T07:40:11.211938+00:00",
+      "checked_at": "2026-10-12T07:58:53.129099+00:00",
       "metadata": [
         {
           "architecture": "aarch64",
@@ -264,7 +316,75 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T07:40:14.778755+00:00"
+      "metadata_checked_at": "2026-10-12T07:58:56.699720+00:00"
+    },
+    {
+      "recipe": "modsort",
+      "promotion_run_id": 38219491260,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38219491260",
+      "status": "verified-published-metadata",
+      "metadata": [
+        {
+          "architecture": "x86_64",
+          "path": "releases/modsort/0.0.2.json",
+          "expected_build_date": "20261012",
+          "committed_build_dates": [
+            "20261012"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "source_sha": "b8764c4d1150f58dafc62913167242a94fc96769",
+          "metadata_commit_sha": "c96a8ec22c9d8bfd02515cc42d876d205a306d91",
+          "sif": "modsort_0.0.2_20261012.simg",
+          "sif_sha256": "32b9bdb88a6d24e03380e9b3234f931d52a337b157f9106f21cf4764660ca7ec",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/modsort_0.0.2_20261012.simg",
+          "public_sif_head_status": 200
+        },
+        {
+          "architecture": "aarch64",
+          "path": "releases/modsort_arm64/0.0.2.json",
+          "expected_build_date": "20261012",
+          "committed_build_dates": [
+            "20261012"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "source_sha": "b8764c4d1150f58dafc62913167242a94fc96769",
+          "metadata_commit_sha": "c96a8ec22c9d8bfd02515cc42d876d205a306d91",
+          "sif": "modsort_arm64_0.0.2_20261012.simg",
+          "sif_sha256": "26046ffaeb98456bc57e4b40cdd08b039082efc2aa365b184a2f32251c154174",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/modsort_arm64_0.0.2_20261012.simg",
+          "public_sif_head_status": 200
+        }
+      ],
+      "checked_at": "2026-10-12T07:59:00.359297+00:00",
+      "workflow_status": "completed",
+      "workflow_conclusion": "success",
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-modsort-b8764c4d1150f58dafc62913167242a94fc96769)",
+          "status": "completed",
+          "conclusion": "success",
+          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-p5s2n",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-modsort_arm64-b8764c4d1150f58dafc62913167242a94fc96769)",
+          "status": "completed",
+          "conclusion": "success",
+          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-g2md2",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-12T07:59:08.352952+00:00"
     },
     {
       "recipe": "panoptica",
@@ -273,7 +393,7 @@
       "status": "verified-published-metadata",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
-      "checked_at": "2026-10-12T07:40:15.986974+00:00",
+      "checked_at": "2026-10-12T07:59:09.731062+00:00",
       "metadata": [
         {
           "architecture": "aarch64",
@@ -332,7 +452,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T07:40:19.759246+00:00"
+      "metadata_checked_at": "2026-10-12T07:59:13.691590+00:00"
     },
     {
       "recipe": "pcntoolkit",
@@ -375,7 +495,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T07:40:20.904469+00:00",
+      "checked_at": "2026-10-12T07:59:14.890727+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -400,7 +520,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T07:40:24.413597+00:00"
+      "metadata_checked_at": "2026-10-12T07:59:18.584617+00:00"
     },
     {
       "recipe": "topaz",
@@ -425,7 +545,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T07:40:27.825817+00:00",
+      "checked_at": "2026-10-12T07:59:19.719540+00:00",
       "workflow_status": "in_progress",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -438,29 +558,29 @@
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
           "active_steps": [
-            "Publish exact tested Docker archive to unique staging tags"
+            "Publish tested SIF to unique staging object keys"
           ]
         },
         {
           "name": "publish (candidate-topaz-b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2)",
-          "status": "in_progress",
-          "conclusion": null,
+          "status": "completed",
+          "conclusion": "success",
           "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-gkcqf",
           "labels": [
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
-          "active_steps": [
-            "Publish exact tested Docker archive to unique staging tags"
-          ]
+          "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T07:40:28.600353+00:00"
+      "metadata_checked_at": "2026-10-12T07:59:20.498736+00:00"
     }
   ],
   "findings": [
+    "ants: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38219752715)",
     "bart: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38208442867)",
     "brainlifecli: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38210939803)",
     "brkraw: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38211197258)",
+    "modsort: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38219491260)",
     "panoptica: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38209000133)",
     "pcntoolkit: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38215533821)",
     "topaz: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38214465720)",
@@ -578,5 +698,6 @@
       }
     ],
     "blob_sha": "6819a6b2a52f073ff7f99063e81458cf2c033618"
-  }
+  },
+  "verification_only_changes": []
 }

@@ -3380,3 +3380,39 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - `fsqc` current-upstream native [run 38218989145](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38218989145) dispatched at exact `bba9c58d834c90e5fe99f6649679bf19ffd87334`; attempts 1/6 total; deadline `2026-10-12T19:39:20.732416+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
 
 - PCNtoolkit downstream apps/webapps workflows succeeded for metadata commit `653f2cd77169ec3c6e1aff8f237faec3f283c7c6`. Neurocommand catalog queue `8a528080fbe74cee245ed8ba2feca4af90be1a8b` now verifies all ten architecture entries for the five published ports; scheduled consolidation/deployment remains separate. Topaz automatic promotion is still publishing both variants.
+
+- `modsort` upstream [PR #3494](https://github.com/neurodesk/neurocontainers/pull/3494) merged at `577a7335949d3f89a9ee30e9c89d06ea7a0f26fb`. Exact head `b8764c4d1150f58dafc62913167242a94fc96769` passed native retest plus upstream ARM64 **8/8** and x86_64 **8/8**, zero failures/skips; Code quality, release gate and Dive passed. Upstream verification run: https://github.com/neurodesk/neurocontainers/actions/runs/38218920993. No manual promotion or generated release edits.
+
+- `meganorm` existing [PR #3492](https://github.com/neurodesk/neurocontainers/pull/3492) fast-forwarded to native-verified layer fix `0383fec6a76f59c56190fc67502a150bda24e492`. Native 12/12; both upstream builds reserved, total 6/6, original deadline `2026-10-12T18:25:44.337660+00:00`. No duplicate PR and no relaxed test/Dive gate.
+
+- `libreoffice` prepared and pushed at `ff2bed8a25ffc2587c4981bf5d93d9d8c63c5dfa` on `arm64/upstream-libreoffice-20261012`, baseline `577a7335949d3f89a9ee30e9c89d06ea7a0f26fb`; all recipe checks and architecture generations passed. Start `2026-10-12T07:47:17.933423+00:00`, deadline `2026-10-12T19:47:17.933423+00:00`; no builds dispatched yet, waiting for capacity.
+
+- `ants` upstream [PR #3487](https://github.com/neurodesk/neurocontainers/pull/3487) merged at `adb11f430e76abaf0294852840a23a94d994ac7c`. Exact head `f58b9e6755f6af3db1753d44ba3b390270c7cde0` passed native retest plus upstream ARM64 **103/103** and x86_64 **103/103**, zero failures/skips; Code quality, release gate and Dive passed. Upstream verification run: https://github.com/neurodesk/neurocontainers/actions/runs/38211134319. No manual promotion or generated release edits.
+
+- `fsqc` exact current-upstream `bba9c58d834c90e5fe99f6649679bf19ffd87334` native verified: **110/110**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38218989145). Await its own upstream PR and dual-architecture verification before merge.
+
+- `libreoffice` current-upstream native [run 38219780574](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38219780574) dispatched at exact `ff2bed8a25ffc2587c4981bf5d93d9d8c63c5dfa`; attempts 1/6 total; deadline `2026-10-12T19:47:17.933423+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `condaenvs` prepared and pushed at `72082aa467533e77239863ef00becd06625bf133` on `arm64/upstream-condaenvs-20261012`, baseline `adb11f430e76abaf0294852840a23a94d994ac7c`; all recipe checks and architecture generations passed. Start `2026-10-12T07:52:02.389785+00:00`, deadline `2026-10-12T19:52:02.389785+00:00`; no builds dispatched yet, waiting for capacity.
+
+- `fsqc` individual upstream [PR #3495](https://github.com/neurodesk/neurocontainers/pull/3495) opened at exact native-verified `bba9c58d834c90e5fe99f6649679bf19ffd87334` (110/110, zero failures/skips). Total builds now 3/6 including both upstream architecture candidates; deadline `2026-10-12T19:39:20.732416+00:00`. Require actual upstream reports and all required checks before authorized merge.
+
+- LibreOffice native run 38219780574 passed image/SIF plus three checks; added ODT conversion succeeded but exact --cat readback failed. Official source forwards text bytes and docs permit UTF-8 BOM. Preparing BOM-only normalization with unchanged exact content/PDF checks; hypothesis posted before retry, attempts remain 1/6.
+
+- `libreoffice` current-upstream native [run 38220665128](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38220665128) dispatched at exact `e0605c9dad41131f164cc8e65dbcfb9022354c54`; attempts 2/6 total; deadline `2026-10-12T19:47:17.933423+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `condaenvs` current-upstream native [run 38220775558](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38220775558) dispatched at exact `72082aa467533e77239863ef00becd06625bf133`; attempts 1/6 total; deadline `2026-10-12T19:52:02.389785+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `modsort` publication now verified: [promotion](https://github.com/neurodesk/neurocontainers/actions/runs/38219491260) succeeded; both committed release JSONs exactly match trusted previews for `b8764c4d1150f58dafc62913167242a94fc96769`, with expected ARM64 identity/date and public SIF HTTP 200. Metadata commits: c96a8ec22c9d8bfd02515cc42d876d205a306d91, c96a8ec22c9d8bfd02515cc42d876d205a306d91.
+
+- `meganorm` upstream [PR #3492](https://github.com/neurodesk/neurocontainers/pull/3492) merged at `e40c9527bf4fe0434605b2d851300735f42a7e9e`. Exact head `0383fec6a76f59c56190fc67502a150bda24e492` passed native retest plus upstream ARM64 **12/12** and x86_64 **12/12**, zero failures/skips; Code quality, release gate and Dive passed. Upstream verification run: https://github.com/neurodesk/neurocontainers/actions/runs/38219552373. No manual promotion or generated release edits.
+
+- `deep-quality-estimation` prepared and pushed at `fa1b9da6af3d04dd22b6909e7114749b533277ee` on `arm64/upstream-deep-quality-estimation-20261012`, baseline `8e633432dc4af2f4ed2d61139ef03f5712e34175`; all recipe checks and architecture generations passed. Start `2026-10-12T08:03:50.601281+00:00`, deadline `2026-10-12T20:03:50.601281+00:00`; no builds dispatched yet, waiting for capacity.
+
+- `libreoffice` exact current-upstream `e0605c9dad41131f164cc8e65dbcfb9022354c54` native verified: **4/4**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38220665128). Await its own upstream PR and dual-architecture verification before merge.
+
+- `libreoffice` individual upstream [PR #3496](https://github.com/neurodesk/neurocontainers/pull/3496) opened at exact native-verified `e0605c9dad41131f164cc8e65dbcfb9022354c54` (4/4, zero failures/skips). Total builds now 4/6 including both upstream architecture candidates; deadline `2026-10-12T19:47:17.933423+00:00`. Require actual upstream reports and all required checks before authorized merge.
+
+- `deep-quality-estimation` current-upstream native [run 38221505858](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38221505858) dispatched at exact `fa1b9da6af3d04dd22b6909e7114749b533277ee`; attempts 1/6 total; deadline `2026-10-12T20:03:50.601281+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `fsqc` upstream [PR #3495](https://github.com/neurodesk/neurocontainers/pull/3495) merged at `30e2a13598847c1bef193b9efd3eea5ccefe754f`. Exact head `bba9c58d834c90e5fe99f6649679bf19ffd87334` passed native retest plus upstream ARM64 **110/110** and x86_64 **110/110**, zero failures/skips; Code quality, release gate and Dive passed. Upstream verification run: https://github.com/neurodesk/neurocontainers/actions/runs/38220292268. No manual promotion or generated release edits.
