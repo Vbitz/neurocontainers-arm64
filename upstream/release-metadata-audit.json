@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T09:24:29.410024+00:00",
+  "checked_at": "2026-10-12T09:35:07.803019+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -103,7 +103,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:23:22.674988+00:00",
+      "checked_at": "2026-10-12T09:33:58.549415+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -128,7 +128,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:23:26.510482+00:00"
+      "metadata_checked_at": "2026-10-12T09:34:04.695879+00:00"
     },
     {
       "recipe": "bart",
@@ -137,7 +137,7 @@
       "status": "verified-published-metadata",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
-      "checked_at": "2026-10-12T09:23:28.838228+00:00",
+      "checked_at": "2026-10-12T09:34:06.072456+00:00",
       "metadata": [
         {
           "architecture": "x86_64",
@@ -196,7 +196,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:23:37.301926+00:00"
+      "metadata_checked_at": "2026-10-12T09:34:09.824039+00:00"
     },
     {
       "recipe": "brainlifecli",
@@ -205,7 +205,7 @@
       "status": "verified-published-metadata",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
-      "checked_at": "2026-10-12T09:23:38.638028+00:00",
+      "checked_at": "2026-10-12T09:34:11.441103+00:00",
       "metadata": [
         {
           "architecture": "x86_64",
@@ -264,7 +264,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:23:42.296444+00:00"
+      "metadata_checked_at": "2026-10-12T09:34:15.160115+00:00"
     },
     {
       "recipe": "brkraw",
@@ -273,7 +273,7 @@
       "status": "verified-published-metadata",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
-      "checked_at": "2026-10-12T09:23:43.574474+00:00",
+      "checked_at": "2026-10-12T09:34:16.973351+00:00",
       "metadata": [
         {
           "architecture": "aarch64",
@@ -332,7 +332,61 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:23:47.285686+00:00"
+      "metadata_checked_at": "2026-10-12T09:34:21.279316+00:00"
+    },
+    {
+      "recipe": "condaenvs",
+      "promotion_run_id": 38229766906,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38229766906",
+      "status": "pending-promotion",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/condaenvs_arm64/1.1.0.json",
+          "expected_build_date": "20261012",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/condaenvs/1.1.0.json",
+          "expected_build_date": "20261012",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        }
+      ],
+      "checked_at": "2026-10-12T09:34:25.142939+00:00",
+      "workflow_status": "in_progress",
+      "workflow_conclusion": null,
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-condaenvs_arm64-00d52a64cd5bc7dff2d4957d83b284d2fbe8f752)",
+          "status": "in_progress",
+          "conclusion": null,
+          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-b5szv",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": [
+            "Download candidate bundle without executing it"
+          ]
+        },
+        {
+          "name": "publish (candidate-condaenvs-00d52a64cd5bc7dff2d4957d83b284d2fbe8f752)",
+          "status": "in_progress",
+          "conclusion": null,
+          "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-pctmw",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": [
+            "Download candidate bundle without executing it"
+          ]
+        }
+      ],
+      "metadata_checked_at": "2026-10-12T09:34:25.921955+00:00"
     },
     {
       "recipe": "deep-quality-estimation",
@@ -359,7 +413,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T09:23:48.398917+00:00",
+      "checked_at": "2026-10-12T09:34:27.112361+00:00",
       "workflow_status": "in_progress",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -372,7 +426,7 @@
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
           "active_steps": [
-            "Download candidate bundle without executing it"
+            "Publish exact tested Docker archive to unique staging tags"
           ]
         },
         {
@@ -384,11 +438,11 @@
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
           "active_steps": [
-            "Download candidate bundle without executing it"
+            "Publish exact tested Docker archive to unique staging tags"
           ]
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:23:49.114655+00:00"
+      "metadata_checked_at": "2026-10-12T09:34:27.905357+00:00"
     },
     {
       "recipe": "dwidenoise2",
@@ -431,7 +485,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:23:50.250364+00:00",
+      "checked_at": "2026-10-12T09:34:29.110504+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -456,7 +510,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:23:58.482544+00:00"
+      "metadata_checked_at": "2026-10-12T09:34:32.938153+00:00"
     },
     {
       "recipe": "fsqc",
@@ -499,7 +553,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:23:59.817459+00:00",
+      "checked_at": "2026-10-12T09:34:34.817769+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -524,7 +578,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:24:03.498236+00:00"
+      "metadata_checked_at": "2026-10-12T09:34:38.639697+00:00"
     },
     {
       "recipe": "meganorm",
@@ -567,7 +621,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:24:04.901838+00:00",
+      "checked_at": "2026-10-12T09:34:40.822981+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -592,7 +646,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:24:08.445255+00:00"
+      "metadata_checked_at": "2026-10-12T09:34:45.436709+00:00"
     },
     {
       "recipe": "modsort",
@@ -635,7 +689,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:24:09.744923+00:00",
+      "checked_at": "2026-10-12T09:34:46.719096+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -660,7 +714,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:24:13.520339+00:00"
+      "metadata_checked_at": "2026-10-12T09:34:50.471589+00:00"
     },
     {
       "recipe": "panoptica",
@@ -669,7 +723,7 @@
       "status": "verified-published-metadata",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
-      "checked_at": "2026-10-12T09:24:14.919960+00:00",
+      "checked_at": "2026-10-12T09:34:51.961432+00:00",
       "metadata": [
         {
           "architecture": "aarch64",
@@ -728,7 +782,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:24:18.499029+00:00"
+      "metadata_checked_at": "2026-10-12T09:34:55.930448+00:00"
     },
     {
       "recipe": "pcntoolkit",
@@ -771,7 +825,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:24:20.033277+00:00",
+      "checked_at": "2026-10-12T09:34:57.442790+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -796,7 +850,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:24:24.156352+00:00"
+      "metadata_checked_at": "2026-10-12T09:35:01.608813+00:00"
     },
     {
       "recipe": "topaz",
@@ -839,7 +893,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:24:25.610282+00:00",
+      "checked_at": "2026-10-12T09:35:02.979035+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -864,7 +918,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:24:29.409794+00:00"
+      "metadata_checked_at": "2026-10-12T09:35:07.802641+00:00"
     }
   ],
   "findings": [
@@ -872,6 +926,7 @@
     "bart: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38208442867)",
     "brainlifecli: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38210939803)",
     "brkraw: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38211197258)",
+    "condaenvs: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38229766906)",
     "deep-quality-estimation: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38227134210)",
     "dwidenoise2: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38227215604)",
     "fsqc: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38221551205)",
@@ -1116,6 +1171,22 @@
     "blob_sha": "c8c883d660d13d7e726254dff5c5764e99271cbe"
   },
   "verification_only_changes": [
+    {
+      "recipe": "amico",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3501",
+      "merge_sha": "36cc1c246c5ccc0e1c1271c774f5ec48f6516ac8",
+      "note": "Fulltest-only change; no image-input change or new release required.",
+      "automatic_workflow_observation": {
+        "run_id": 38230536191,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38230536191",
+        "conclusion": "success",
+        "resolve": "success",
+        "publish": "skipped",
+        "finalize": "skipped",
+        "artifact_count": 0,
+        "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
+      }
+    },
     {
       "recipe": "libreoffice",
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3496",

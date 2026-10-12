@@ -3504,3 +3504,11 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - Coverage issue#2 regenerated from443runs and247issues; upstream checkpoint comment refreshed to14/112 merged,11published image ports,22matching catalog queue entries, DQE/conda pending automatic publication and LibreOffice correctly verification-only. No manual generated metadata or tested/published conflation.
 
 - `apptainer` current-upstream native [run 38230281758](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38230281758) dispatched at exact `3f89bcf97117c10205647c10df2b27941aab1b03`; attempts 1/6 total; deadline `2026-10-12T21:26:34.723292+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `amico` individual runtime-test [PR #3501](https://github.com/neurodesk/neurocontainers/pull/3501) merged at `36cc1c246c5ccc0e1c1271c774f5ec48f6516ac8`. Exact head `410446aa31a5c96fa7226c987b2509ab06691b3f` passed root native; upstream merge source `c4b2a0a6d74ab0b463793dcdd80047524d95e0ac` has identical recipe tree and passed ARM64 75/75 and x86_64 75/75, zero failures/skips, every required check. Fulltest-only change: no release metadata promotion required.
+
+- `irkernel` prepared and pushed at `f97ae4e088d8c2ae2c9d477e156b379ddbd64662` on `arm64/upstream-irkernel-20261012`, baseline `4d04f767b5ab0fdacfbaab3290a76b75415baa0c`; all recipe checks and architecture generations passed. Start `2026-10-12T09:33:02.840468+00:00`, deadline `2026-10-12T21:33:02.840468+00:00`; no builds dispatched yet, waiting for capacity.
+
+- `irkernel` current-upstream native [run 38230695316](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38230695316) dispatched at exact `f97ae4e088d8c2ae2c9d477e156b379ddbd64662`; attempts 1/6 total; deadline `2026-10-12T21:33:02.840468+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- AMICO test-only merge automaticworkflow38230536191 completed successfully: resolve passed, publication/finalize skipped, zero artifacts. No generated release metadata or image publication produced. Active exact native runs: CLEARSWI38226596227, BrainLes retry38229808747, Apptainer38230281758, IRkernel38230695316; all original budgets retained.
