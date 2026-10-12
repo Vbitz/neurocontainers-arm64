@@ -3668,3 +3668,19 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - `laynii` individual upstream [PR #3510](https://github.com/neurodesk/neurocontainers/pull/3510) opened at exact native-verified `926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9` (60/60, zero failures/skips). Total builds now 4/6 including both upstream architecture candidates; deadline `2026-10-12T22:59:00+00:00`. Require actual upstream reports and all required checks before authorized merge.
 
 - CLEARSWI corrected83de01a9 upstream38242620566 x86 report downloaded and source/PR verified:68/68, all67scientific tests and Dive passed. Cached compact proof retained; ARM still running. Final6/6 budget/originaldeadline retained, no retry.
+
+- `hdbet` transient gateway504 beforeDocker classified; one unchanged infrastructure retry planned within original 2/6 budget/deadline `2026-10-12T23:16:02.699996+00:00`. HD-BET20835db5 OpenMP fix remains untested after Zenodo stage failure38245843908; retry native when free.
+
+- `laynii` transient gateway504 beforeDocker classified; one unchanged infrastructure retry planned within original 4/6 budget/deadline `2026-10-12T22:59:00+00:00`. LayNii926f5dc8 x86source stage failed38245986937/job114799947911; keep healthy ARM running, then rerun failed x86 only, preserve passed sibling.
+
+- `dicomtools` individual upstream [PR #3511](https://github.com/neurodesk/neurocontainers/pull/3511) opened at exact native-verified `983b27d1fd8aecf2da4d0244053fe8479149864a` (180/180, zero failures/skips). Total builds now 4/6 including both upstream architecture candidates; deadline `2026-10-12T23:36:21.154561+00:00`. Require actual upstream reports and all required checks before authorized merge.
+
+- `hdbet` current-upstream native [run 38247274390](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38247274390) dispatched at exact `20835db5be6559a46dd369e4982cfac77a46cb91`; attempts 3/6 total; deadline `2026-10-12T23:16:02.699996+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `dicomtools` upstream [PR #3511](https://github.com/neurodesk/neurocontainers/pull/3511) merged at `5c13f2e1cb89493c732394981ae780380e12b2fc`. Exact head `983b27d1fd8aecf2da4d0244053fe8479149864a` passed native retest plus upstream ARM64 **180/180** and x86_64 **180/180**, zero failures/skips; Code quality, release gate and Dive passed. Upstream verification run: https://github.com/neurodesk/neurocontainers/actions/runs/38246598024. No manual promotion or generated release edits.
+
+- `gingerale` prepared and pushed at `07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5` on `arm64/upstream-gingerale-20261012`, baseline `5c13f2e1cb89493c732394981ae780380e12b2fc`; all recipe checks and architecture generations passed. Start `2026-10-12T12:10:57.297821+00:00`, deadline `2026-10-13T00:10:57.297821+00:00`; no builds dispatched yet, waiting for capacity.
+
+- LayNii926f5dc8 upstream38245986937 ARM60/60/Dive verified and compact proof cached. Only failed x86job114799947911 rerun unchanged for GitHub504; successful ARM retained. Attempts5/6/original22:59deadline, one infrastructure retry consumed. Require new x86report and gate before merge.
+
+- `gingerale` current-upstream native [run 38247655214](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38247655214) dispatched at exact `07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5`; attempts 1/6 total; deadline `2026-10-13T00:10:57.297821+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.

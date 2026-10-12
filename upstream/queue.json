@@ -4264,18 +4264,192 @@
       "port_files": [
         "recipes/dicomtools/build.yaml"
       ],
-      "status": "native-verified",
+      "status": "merged",
       "branch": "arm64/upstream-dicomtools-20261012",
       "baseline_sha": "77d42f3b3e7b5502388657aa6b97a4f392279be5",
       "candidate_sha": "983b27d1fd8aecf2da4d0244053fe8479149864a",
       "started_at": "2026-10-12T11:36:21.154561+00:00",
       "deadline": "2026-10-12T23:36:21.154561+00:00",
-      "attempts": 2,
+      "attempts": 4,
       "run_id": 38245306248,
-      "pr_url": null,
-      "upstream_ci": null,
-      "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3511",
+      "upstream_ci": {
+        "initial_run_id": 38246598024,
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38246598024",
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "dicomtools",
+          "container": "dicomtools_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.1.0",
+          "build_date": "20261012",
+          "docker_archive": "dicomtools_arm64_1.1.0_20261012.docker.tar",
+          "sif": "dicomtools_arm64_1.1.0_20261012.simg",
+          "candidate_tag": "nd-candidate-dicomtools_arm64:983b27d1fd8a",
+          "launcher": "xmedcon",
+          "pr_number": 3511,
+          "head_sha": "983b27d1fd8aecf2da4d0244053fe8479149864a",
+          "tests": {
+            "total": 180,
+            "passed": 180,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 179,
+            "fulltest_passed": 179,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "dcm2niix version check",
+              "dcm2niix tracked source version",
+              "dcm2niix help display",
+              "dcm2niix options list",
+              "dcm2niix BIDS sidecar option",
+              "dcm2niix compression option",
+              "dcm2niix output directory option",
+              "dcm2niix filename format option",
+              "dcm2niix JPEG2000 support",
+              "dcm2niix JPEG-LS support",
+              "dcm2niix 64-bit build",
+              "dcm2niix examples section",
+              "dcm2niix query mode",
+              "dcm2niix query list mode",
+              "dcm2niix scan subject directory",
+              "dcm2niix scan with depth limit",
+              "dcm2niix scan empty directory",
+              "dcm2niix output directory test",
+              "dcm2niix BIDS enabled"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.5 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "1.2 MB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 98.4213,
+            "wasted_bytes": 21080909,
+            "wasted_bytes_display": "21 MB",
+            "user_wasted_percent": 2.7649
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "dicomtools",
+          "container": "dicomtools",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.1.0",
+          "build_date": "20261012",
+          "docker_archive": "dicomtools_1.1.0_20261012.docker.tar",
+          "sif": "dicomtools_1.1.0_20261012.simg",
+          "candidate_tag": "nd-candidate-dicomtools:983b27d1fd8a",
+          "launcher": "xmedcon",
+          "pr_number": 3511,
+          "head_sha": "983b27d1fd8aecf2da4d0244053fe8479149864a",
+          "tests": {
+            "total": 180,
+            "passed": 180,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 179,
+            "fulltest_passed": 179,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "dcm2niix version check",
+              "dcm2niix tracked source version",
+              "dcm2niix help display",
+              "dcm2niix options list",
+              "dcm2niix BIDS sidecar option",
+              "dcm2niix compression option",
+              "dcm2niix output directory option",
+              "dcm2niix filename format option",
+              "dcm2niix JPEG2000 support",
+              "dcm2niix JPEG-LS support",
+              "dcm2niix 64-bit build",
+              "dcm2niix examples section",
+              "dcm2niix query mode",
+              "dcm2niix query list mode",
+              "dcm2niix scan subject directory",
+              "dcm2niix scan with depth limit",
+              "dcm2niix scan empty directory",
+              "dcm2niix output directory test",
+              "dcm2niix BIDS enabled"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "1.2 MB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 98.4221,
+            "wasted_bytes": 21238871,
+            "wasted_bytes_display": "21 MB",
+            "user_wasted_percent": 2.781
+          }
+        },
+        "candidate_run_id": 38246598024,
+        "quality": "passed",
+        "release_gate": "passed"
+      },
+      "merged_sha": "5c13f2e1cb89493c732394981ae780380e12b2fc",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "1.1.0",
@@ -4299,8 +4473,8 @@
         "contract": "dcmconv+tb/+ti/+te encoding conversions; dcmdump+W explicitly outputs little-endian raw pixels. Exact uint16 edge values0,1,255,256,4095,65535, dimensions2x3 and SOPInstanceUID unchanged for all3converted transfer syntaxes. Standard-library host fixture; no new image dependency. Existing portable source/package installation unchanged except ARM declaration.",
         "local_checks": "Schema/update policy and2architecture Dockerfiles, fulltest codespell, Bash syntax, host Python compilation/DICOM preamble/expected pixel bytes, all178oldtests unchanged."
       },
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38245306248",
       "attempt_history": [
         {
@@ -4340,6 +4514,57 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
+      },
+      "pr_number": 3511,
+      "merged_at": "2026-10-12T12:10:16Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38247345717,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38247345717",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/dicomtools_arm64/1.1.0.json",
+            "expected_build_date": "20261012",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/dicomtools/1.1.0.json",
+            "expected_build_date": "20261012",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-12T12:13:29.148721+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-dicomtools-983b27d1fd8aecf2da4d0244053fe8479149864a)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-dicomtools_arm64-983b27d1fd8aecf2da4d0244053fe8479149864a)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T12:13:30.215813+00:00"
       }
     },
     {
@@ -5762,18 +5987,18 @@
       "port_files": [
         "recipes/gingerale/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-gingerale-20261012",
+      "baseline_sha": "5c13f2e1cb89493c732394981ae780380e12b2fc",
+      "candidate_sha": "07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5",
+      "started_at": "2026-10-12T12:10:57.297821+00:00",
+      "deadline": "2026-10-13T00:10:57.297821+00:00",
+      "attempts": 1,
+      "run_id": 38247655214,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "4.0.0",
@@ -5785,7 +6010,19 @@
         "test_count": 51,
         "patch_conflict": "error: patch failed: recipes/gingerale/build.yaml:2\nerror: recipes/gingerale/build.yaml: patch does not apply",
         "three_way_clean": true
-      }
+      },
+      "upstream_verification_mode": "image-candidate",
+      "primary_source_review": {
+        "sources": [
+          "https://www.brainmap.org/ale/",
+          "https://www.brainmap.org/ale/GingerALE.jar"
+        ],
+        "artifact_sha256": "6a0eae7477a2aa8d249bdce6c406debb1fea5cefb1f2e7ec419d06197bd80739",
+        "contract": "Official4.0.0Java package, Unix java-cp launcher; downloaded artifact matches recipe SHA and contains no bundled so/dll/dylib native libraries. Ubuntu24.04OpenJDK21availableonARM. Onlyarchitecture declaration changes; preserve all51current tests including actual Talairach/MNI ALE probability maps, mask/threshold variants and coordinate transforms. Botharchitecture schema/updatepolicy generation and codespellpassed."
+      },
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38247655214"
     },
     {
       "recipe": "gliomoda",
@@ -5938,8 +6175,8 @@
       "candidate_sha": "20835db5be6559a46dd369e4982cfac77a46cb91",
       "started_at": "2026-10-12T11:16:02.699996+00:00",
       "deadline": "2026-10-12T23:16:02.699996+00:00",
-      "attempts": 2,
-      "run_id": 38245843908,
+      "attempts": 3,
+      "run_id": 38247274390,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -5973,9 +6210,9 @@
           "implementation": "ARM-only launcher preloads existing wheel OpenMP DSO at process startup and execs original HD-BET entrypoint. No library/compiler patch, dependency pin roulette or global preload. Both architecture generations/spelling and wrapper shsyntax pass; unchanged scientific assertions."
         }
       },
-      "arm64_attempts": 2,
+      "arm64_attempts": 3,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38245843908",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38247274390",
       "attempt_history": [
         {
           "candidate_sha": "472f10e635229a12f761a066dc0ebba61f045cbf",
@@ -5983,8 +6220,23 @@
           "outcome": "failed-runtime",
           "first_error": "Real CPU inference failed before prediction in sklearn._openmp_helpers: scikit_learn.libs/libgomp-947d5fa1.so.1.0.0 cannot allocate memory in static TLS block. Docker/architecture/SIF/deploy and all5old tests passed.",
           "retry_hypothesis": "Official documented ARM64 libgomp early-loading workaround: preload same wheel DSO only in ARM hd-bet launcher then exec original unchanged entrypoint/arguments. Exactly one DSO resolved at build; x86 path and all scientific assertions unchanged."
+        },
+        {
+          "candidate_sha": "20835db5be6559a46dd369e4982cfac77a46cb91",
+          "run_id": 38245843908,
+          "outcome": "blocked-infrastructure-transient",
+          "first_error": "Stage before Docker: declared Zenodo release_v1.5.0.zip failed HTTP504 after3internal attempts. OpenMP launcher correction has not yet run.",
+          "retry_hypothesis": "One unchanged native retry after the gateway failure; retain source20835db5, weights/required inference and original budget."
         }
-      ]
+      ],
+      "infrastructure_retry": {
+        "status": "consumed",
+        "limit": 1,
+        "reason": "Transient HTTP504 before Docker build; existing download route previously succeeded.",
+        "note": "Counts within original6-build/12h budget; no source or test changes.",
+        "run_id": 38247274390,
+        "candidate_sha": "20835db5be6559a46dd369e4982cfac77a46cb91"
+      }
     },
     {
       "recipe": "heudiconv",
@@ -6351,15 +6603,105 @@
       "candidate_sha": "926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9",
       "started_at": "2026-10-12T10:59:00+00:00",
       "deadline": "2026-10-12T22:59:00+00:00",
-      "attempts": 4,
+      "attempts": 5,
       "run_id": 38243451196,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3510",
       "upstream_ci": {
         "initial_run_id": 38245986937,
-        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38245986937"
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38245986937",
+        "failed_x86_job": {
+          "job_id": 114799947911,
+          "run_id": 38245986937,
+          "first_error": "Before Docker, unchanged x86 repair-source archive9febedf... at github.com/layerfMRI/LAYNII/archive/...tar.gz returned HTTP504 after3internal attempts.",
+          "retry_hypothesis": "Let healthy ARM job finish; one unchanged rerun of failed x86 job only, preserving successful ARM result. Source/test gates unchanged."
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "laynii",
+          "container": "laynii_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "2.10.0",
+          "build_date": "20261012",
+          "docker_archive": "laynii_arm64_2.10.0_20261012.docker.tar",
+          "sif": "laynii_arm64_2.10.0_20261012.simg",
+          "candidate_tag": "nd-candidate-laynii_arm64:926f5dc88396",
+          "launcher": null,
+          "pr_number": 3510,
+          "head_sha": "926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9",
+          "tests": {
+            "total": 60,
+            "passed": 60,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 59,
+            "fulltest_passed": 59,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "LN_INFO basic execution",
+              "LN_INFO with BOLD data",
+              "LN_FLOAT_ME conversion",
+              "LN_SHORT_ME conversion",
+              "LN_INT_ME conversion",
+              "LN_SKEW temporal statistics",
+              "LN_EXTREMETR find extreme timepoints",
+              "LN_TEMPSMOOTH box filter",
+              "LN_TEMPSMOOTH gaussian filter",
+              "LN_TRIAL averaging",
+              "LN_DIRECT_SMOOTH x-direction",
+              "LN_DIRECT_SMOOTH y-direction",
+              "LN_DIRECT_SMOOTH z-direction",
+              "LN_INTPRO minimum projection",
+              "LN_INTPRO maximum projection",
+              "LN_INTPRO with range",
+              "LN_NOISEME add noise",
+              "LN_NOISE_KERNEL analyze noise",
+              "LN_GFACTOR calculation"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.5 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 5,
+                "wasted_space": "1.0 MB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 97.5659,
+            "wasted_bytes": 19285442,
+            "wasted_bytes_display": "19 MB",
+            "user_wasted_percent": 4.9988
+          }
+        }
       },
       "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "next_action": "Verify x86-only unchanged rerun and required gate; successful ARM60/60 compact report is retained, no ARM rebuild. Attempts5/6, no further unchanged infrastructure retries.",
       "upstream_review": {
         "exists": true,
         "version": "2.10.0",
@@ -6388,7 +6730,7 @@
         "local_checks": "Schema/update-policy/all declared architecture generation/codespell/diff checks passed; inspected x86 commands unchanged and ARM compiler/source/patch/data-only extraction."
       },
       "arm64_attempts": 3,
-      "x86_64_attempts": 1,
+      "x86_64_attempts": 2,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38243451196",
       "attempt_history": [
         {
@@ -6446,7 +6788,16 @@
           "ubuntu-24.04-arm"
         ]
       },
-      "pr_number": 3510
+      "pr_number": 3510,
+      "infrastructure_retry": {
+        "status": "consumed",
+        "limit": 1,
+        "reason": "Transient HTTP504 before Docker build; existing download route previously succeeded.",
+        "note": "Counts within original6-build/12h budget; no source or test changes.",
+        "run_id": 38245986937,
+        "rerun_job_id": 114799947911,
+        "scope": "Failed x86 job and dependent gate only; ARM success retained."
+      }
     },
     {
       "recipe": "lesionquantificationtoolkit",

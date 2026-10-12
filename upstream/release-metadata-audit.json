@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T11:38:34.118112+00:00",
+  "checked_at": "2026-10-12T12:13:30.216392+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -539,6 +539,56 @@
       "metadata_checked_at": "2026-10-12T10:41:25.483844+00:00"
     },
     {
+      "recipe": "dicomtools",
+      "promotion_run_id": 38247345717,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38247345717",
+      "status": "pending-promotion",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/dicomtools_arm64/1.1.0.json",
+          "expected_build_date": "20261012",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/dicomtools/1.1.0.json",
+          "expected_build_date": "20261012",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        }
+      ],
+      "checked_at": "2026-10-12T12:13:29.148721+00:00",
+      "workflow_status": "queued",
+      "workflow_conclusion": null,
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-dicomtools-983b27d1fd8aecf2da4d0244053fe8479149864a)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-dicomtools_arm64-983b27d1fd8aecf2da4d0244053fe8479149864a)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-12T12:13:30.215813+00:00"
+    },
+    {
       "recipe": "dwidenoise2",
       "promotion_run_id": 38227215604,
       "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38227215604",
@@ -1023,6 +1073,7 @@
     "brkraw: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38211197258)",
     "condaenvs: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38229766906)",
     "deep-quality-estimation: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38227134210)",
+    "dicomtools: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38247345717)",
     "dwidenoise2: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38227215604)",
     "fsqc: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38221551205)",
     "meganorm: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38220896254)",
