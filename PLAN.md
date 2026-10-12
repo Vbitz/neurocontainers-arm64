@@ -3582,3 +3582,55 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - dcm2niix current-source runtime candidate `15ef063103efb92fbbabbcf6cc006364750bfb30` prepared on `arm64/upstream-dcm2niix-20261012`, base `7e1b74217c11fb78e8d01f53d8c1a8058a997db9`. All105 oldtests retained + exact real2-slice DICOM→NIfTI pixels/geometry/BIDS timing. Host-generated synthetic fixture locally validated; native Linux build pending. Start `2026-10-12T10:48:10.587848+00:00`, deadline `2026-10-12T22:48:10.587848+00:00`, attempts0/6.
 
 - `dcm2niix` current-upstream native [run 38238842263](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38238842263) dispatched at exact `15ef063103efb92fbbabbcf6cc006364750bfb30`; attempts 1/6 total; deadline `2026-10-12T22:48:10.587848+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `functionnectome` prepared and pushed at `67122d40bf88f757d32ec98cc0cb081a903cdda4` on `arm64/upstream-functionnectome-20261012`, baseline `7e1b74217c11fb78e8d01f53d8c1a8058a997db9`; all recipe checks and architecture generations passed. Start `2026-10-12T10:52:32.890703+00:00`, deadline `2026-10-12T22:52:32.890703+00:00`; no builds dispatched yet, waiting for capacity.
+
+- `functionnectome` current-upstream native [run 38239187328](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38239187328) dispatched at exact `67122d40bf88f757d32ec98cc0cb081a903cdda4`; attempts 1/6 total; deadline `2026-10-12T22:52:32.890703+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `dcm2niix` exact current-upstream `15ef063103efb92fbbabbcf6cc006364750bfb30` native verified: **107/107**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38238842263). Await its own upstream PR and dual-architecture verification before merge.
+
+- DataLad fulltest-only merge7e1b7421 automatic promotion38238262362 resolved successfully, skipped publish/finalize and produced0artifacts. No new release claimed. Full112 inventory audit refreshed at7e1b7421:31metadata-present,26declared-current-version gaps,55pending ARM declarations,0identityerrors. Forkmain fast-forwarded to7e1b7421 with CIoff; historical accepted gitlink unchanged.
+
+- Functionnectome native38239187328 passed image/deploy/3oldtests; new fixture header repr used bare nan, incompatible with documented np.nan schema. Use official2.5.0 header2string helper; exact science/parallel assertions retained, original1/6 budget.
+
+- `dcm2niix` individual upstream [PR #3507](https://github.com/neurodesk/neurocontainers/pull/3507) opened at exact native-verified `15ef063103efb92fbbabbcf6cc006364750bfb30` (107/107, zero failures/skips). Total builds now 3/6 including both upstream architecture candidates; deadline `2026-10-12T22:48:10.587848+00:00`. Require actual upstream reports and all required checks before authorized merge.
+
+- `irkernel` individual runtime-test [PR #3504](https://github.com/neurodesk/neurocontainers/pull/3504) merged at `1500bccebe4938d26423e91cfeac6c5c77ec7da1`. Exact head `8552efa3bae7d40f7bc7cee44508f0af2bbf1163` passed root native; upstream merge source `515bd23bf8702f3ae449e81b40b9646b05274151` has identical recipe tree and passed ARM64 6/6 and x86_64 6/6, zero failures/skips, every required check. Fulltest-only change: no release metadata promotion required.
+
+- `functionnectome` current-upstream native [run 38239893904](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38239893904) dispatched at exact `dd1361b47bae47fa2e28272da1c8905643a2ecb2`; attempts 2/6 total; deadline `2026-10-12T22:52:32.890703+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `dcm2niix` individual runtime-test [PR #3507](https://github.com/neurodesk/neurocontainers/pull/3507) merged at `5f869919acb27615303977edaf5da13a603dfc9b`. Exact head `15ef063103efb92fbbabbcf6cc006364750bfb30` passed root native; upstream merge source `3385e57e9f36f762fed5fbad54f708d671a484a4` has identical recipe tree and passed ARM64 107/107 and x86_64 107/107, zero failures/skips, every required check. Fulltest-only change: no release metadata promotion required.
+
+- `functionnectome` exact current-upstream `dd1361b47bae47fa2e28272da1c8905643a2ecb2` native verified: **5/5**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38239893904). Await its own upstream PR and dual-architecture verification before merge.
+
+- LayNii2.10.0 candidate `234f6782510cefc9a59f127dd12e910eb36031c9` on `arm64/upstream-laynii-20261012`, baseline `1500bccebe4938d26423e91cfeac6c5c77ec7da1`: portable official makeall with existing runtime repair patch, current ARM Ubuntu24.04, unchanged x86path. All59 fulltests preserved; one missing tagged-source derivedfixture extracted as data only from official sameversion release ZIP. Local schema/update policy/both Dockerfiles/codespell pass. Investigation10:59UTC, deadline22:59UTC, attempts0/6.
+
+- `laynii` current-upstream native [run 38240576094](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38240576094) dispatched at exact `234f6782510cefc9a59f127dd12e910eb36031c9`; attempts 1/6 total; deadline `2026-10-12T22:59:00+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `functionnectome` individual upstream [PR #3508](https://github.com/neurodesk/neurocontainers/pull/3508) opened at exact native-verified `dd1361b47bae47fa2e28272da1c8905643a2ecb2` (5/5, zero failures/skips). Total builds now 4/6 including both upstream architecture candidates; deadline `2026-10-12T22:52:32.890703+00:00`. Require actual upstream reports and all required checks before authorized merge.
+
+- `condaenvs` publication now verified: [promotion](https://github.com/neurodesk/neurocontainers/actions/runs/38229766906) succeeded; both committed release JSONs exactly match trusted previews for `00d52a64cd5bc7dff2d4957d83b284d2fbe8f752`, with expected ARM64 identity/date and public SIF HTTP 200. Metadata commits: a11929e82fc8b7e866c18a07cb41d4d3ef13fae3, a11929e82fc8b7e866c18a07cb41d4d3ef13fae3.
+
+- `niimath` prepared and pushed at `38c17ee4e2f5c65d5db5a9077dd754178046fae8` on `arm64/upstream-niimath-20261012`, baseline `5f869919acb27615303977edaf5da13a603dfc9b`; all recipe checks and architecture generations passed. Start `2026-10-12T11:10:38.660490+00:00`, deadline `2026-10-12T23:10:38.660490+00:00`; no builds dispatched yet, waiting for capacity.
+
+- Condaenvs promotion38229766906 verified: exact trusted previews equal both committed release JSONs at a11929e82fc8b7e866c18a07cb41d4d3ef13fae3; both public SIFs HTTP200.13 image ports now have publication proofs. Pinned Neurocommand queuebf726e2452d6dc69ab287440d7ba8f6303f46f5f blob verified; all26 published architecture entries match, including Condaenvs. Apps38239787360/webapps38239787717 succeeded at exact metadata commit; scheduled deployment separate.
+
+- `functionnectome` individual runtime-test [PR #3508](https://github.com/neurodesk/neurocontainers/pull/3508) merged at `77d42f3b3e7b5502388657aa6b97a4f392279be5`. Exact head `dd1361b47bae47fa2e28272da1c8905643a2ecb2` passed root native; upstream merge source `708ff6a8d707b27201e7cfffa82f4e3fac76dfba` has identical recipe tree and passed ARM64 5/5 and x86_64 5/5, zero failures/skips, every required check. Fulltest-only change: no release metadata promotion required.
+
+- `niimath` current-upstream native [run 38241254326](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38241254326) dispatched at exact `38c17ee4e2f5c65d5db5a9077dd754178046fae8`; attempts 1/6 total; deadline `2026-10-12T23:10:38.660490+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `hdbet` prepared and pushed at `be822e335f3b131ab789a14c37bcd32bff1d8751` on `arm64/upstream-hdbet-20261012`, baseline `5f869919acb27615303977edaf5da13a603dfc9b`; all recipe checks and architecture generations passed. Start `2026-10-12T11:16:02.699996+00:00`, deadline `2026-10-12T23:16:02.699996+00:00`; no builds dispatched yet, waiting for capacity.
+
+- `clearswi` exact current-upstream `83de01a91c3fe525ddef4e60924c9b9797ad6371` native verified: **68/68**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38238100515). Await its own upstream PR and dual-architecture verification before merge.
+
+- `niimath` exact current-upstream `38c17ee4e2f5c65d5db5a9077dd754178046fae8` native verified: **115/115**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38241254326). Await its own upstream PR and dual-architecture verification before merge.
+
+- `niimath` individual upstream [PR #3509](https://github.com/neurodesk/neurocontainers/pull/3509) opened at exact native-verified `38c17ee4e2f5c65d5db5a9077dd754178046fae8` (115/115, zero failures/skips). Total builds now 3/6 including both upstream architecture candidates; deadline `2026-10-12T23:10:38.660490+00:00`. Require actual upstream reports and all required checks before authorized merge.
+
+- CLEARSWI corrected exact `83de01a91c3fe525ddef4e60924c9b9797ad6371` native38238100515 passed68/68; normal fast-forward of existing PR3502 after proof. Both new upstream architecture builds reserved, total6/6 final/original deadline20:54:45UTC. All67 scientific tests preserved; ARM depot layer and two multi-invocation timeout fixes require actual new-head reports before merge.
+
+- LayNii initial native60/60 passed, but deployment exposed bundled macOS Mach-O development executable (absent Linux release/make-all). Exclude only that artifact; corrected `926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9` validated/pushed, fresh native pending capacity. All59 scientific tests retained, attempts1/6/deadline22:59 unchanged.
+
+- Automatic publication observations for dcm2niix, functionnectome, irkernel, libreoffice: exact merged-source push workflows succeeded, resolve passed, publish/finalize skipped and0artifacts. Runtime-only verification created no new release metadata.
+
+- 11:37UTC checkpoint:20/112 individual recipe PRs merged,86pending,2 infrastructure blockers,4active investigations. ForkActions disabled; historical accepted gitlinke74050d unchanged. Coverage reporter refreshed455runs/247issues and durable summary updated. Current checkout LayNii corrected926f5dc8; Clear upstream38242620566 and niimath38242541849 occupy4 matrix slots; LayNii/HD-BET wait.13published image ports/26catalog entries;6test-only automatic publication skips observed.
