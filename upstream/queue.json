@@ -43,8 +43,10 @@
         ],
         "port_patch_applies": null,
         "fulltest_version": "1.7.0",
-        "test_count": 4
-      }
+        "test_count": 4,
+        "arm64_retirement_pr": "https://github.com/neurodesk/neurocontainers/pull/3176"
+      },
+      "pr_plan": "Restore removed ARM64 declaration against current upstream, inspect removal PR #3176 and current OpenRecon macro, retain newer source pins and preserve meaningful fulltests; verify natively before its own PR."
     },
     {
       "recipe": "afni",
@@ -177,7 +179,8 @@
         "port_patch_applies": null,
         "fulltest_version": "2.1.1",
         "test_count": 74
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "ants",
@@ -259,7 +262,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.5.3",
         "test_count": 5
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "arfiproc",
@@ -297,8 +301,10 @@
         ],
         "port_patch_applies": null,
         "fulltest_version": "1.1.0",
-        "test_count": 5
-      }
+        "test_count": 5,
+        "arm64_retirement_pr": "https://github.com/neurodesk/neurocontainers/pull/3176"
+      },
+      "pr_plan": "Restore removed ARM64 declaration against current upstream, inspect removal PR #3176 and current OpenRecon macro, retain newer source pins and preserve meaningful fulltests; verify natively before its own PR."
     },
     {
       "recipe": "b0map",
@@ -336,8 +342,10 @@
         ],
         "port_patch_applies": null,
         "fulltest_version": "1.1.0",
-        "test_count": 7
-      }
+        "test_count": 7,
+        "arm64_retirement_pr": "https://github.com/neurodesk/neurocontainers/pull/3176"
+      },
+      "pr_plan": "Restore removed ARM64 declaration against current upstream, inspect removal PR #3176 and current OpenRecon macro, retain newer source pins and preserve meaningful fulltests; verify natively before its own PR."
     },
     {
       "recipe": "bart",
@@ -522,7 +530,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.0.0",
         "test_count": 107
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "bidscoin",
@@ -562,7 +571,8 @@
         "port_patch_applies": null,
         "fulltest_version": "4.6.2",
         "test_count": 96
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "bidsmanager",
@@ -602,7 +612,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.4.1",
         "test_count": 8
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "bidsme",
@@ -642,7 +653,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.9.6",
         "test_count": 81
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "bidstools",
@@ -682,7 +694,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.3.0",
         "test_count": 11
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "bidsvue",
@@ -763,7 +776,8 @@
         "port_patch_applies": null,
         "fulltest_version": "2.0.0",
         "test_count": 5
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "blochsiegertb1mapping",
@@ -1065,7 +1079,8 @@
         "port_patch_applies": null,
         "fulltest_version": "0.2.0",
         "test_count": 1
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "cbsb0stats",
@@ -1103,8 +1118,10 @@
         ],
         "port_patch_applies": null,
         "fulltest_version": "1.4.0",
-        "test_count": 5
-      }
+        "test_count": 5,
+        "arm64_retirement_pr": "https://github.com/neurodesk/neurocontainers/pull/3176"
+      },
+      "pr_plan": "Restore removed ARM64 declaration against current upstream, inspect removal PR #3176 and current OpenRecon macro, retain newer source pins and preserve meaningful fulltests; verify natively before its own PR."
     },
     {
       "recipe": "clearswi",
@@ -1234,7 +1251,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.1.0",
         "test_count": 2
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "cosmomvpa",
@@ -1274,7 +1292,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.1.0",
         "test_count": 5
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "datalad",
@@ -1314,7 +1333,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.7.1",
         "test_count": 9
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "dcm2bids",
@@ -1354,7 +1374,8 @@
         "port_patch_applies": null,
         "fulltest_version": "3.3.1",
         "test_count": 60
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "dcm2niix",
@@ -1394,7 +1415,8 @@
         "port_patch_applies": null,
         "fulltest_version": "v1.0.20260724",
         "test_count": 105
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "deep-quality-estimation",
@@ -1562,7 +1584,8 @@
         "port_patch_applies": null,
         "fulltest_version": "0.15.3",
         "test_count": 86
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "dicomtools",
@@ -1686,7 +1709,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.0.0",
         "test_count": 5
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "elastix",
@@ -1898,7 +1922,8 @@
         "port_patch_applies": null,
         "fulltest_version": "0.11.0",
         "test_count": 6
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "flames",
@@ -2068,7 +2093,8 @@
         "port_patch_applies": null,
         "fulltest_version": "2.5.0",
         "test_count": 3
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "gigaconnectome",
@@ -2149,7 +2175,8 @@
         "port_patch_applies": null,
         "fulltest_version": "2.10.36",
         "test_count": 6
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "gingerale",
@@ -2273,7 +2300,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.2.0",
         "test_count": 76
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "globus",
@@ -2360,7 +2388,8 @@
         "port_patch_applies": null,
         "fulltest_version": "2.0.1",
         "test_count": 5
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "heudiconv",
@@ -2400,7 +2429,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.5.1",
         "test_count": 68
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "hnncore",
@@ -2440,7 +2470,8 @@
         "port_patch_applies": null,
         "fulltest_version": "0.6.1",
         "test_count": 72
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "irkernel",
@@ -2480,7 +2511,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.3.2",
         "test_count": 4
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "julia",
@@ -2520,7 +2552,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.13.1",
         "test_count": 137
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "laynii",
@@ -2647,7 +2680,8 @@
         "port_patch_applies": null,
         "fulltest_version": "26.8.1.1",
         "test_count": 2
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "lipsia",
@@ -2728,7 +2762,8 @@
         "port_patch_applies": null,
         "fulltest_version": "0.1.0",
         "test_count": 5
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "mede",
@@ -2768,7 +2803,8 @@
         "port_patch_applies": null,
         "fulltest_version": "0.0.12",
         "test_count": 2
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "meganorm",
@@ -2976,7 +3012,8 @@
         "port_patch_applies": null,
         "fulltest_version": "11.3.3",
         "test_count": 6
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "mipview",
@@ -3188,7 +3225,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.2.20211006",
         "test_count": 104
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "mritools",
@@ -3403,7 +3441,8 @@
         "port_patch_applies": null,
         "fulltest_version": "2.1.2",
         "test_count": 88
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "nighres",
@@ -3443,7 +3482,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.5.2",
         "test_count": 69
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "niimath",
@@ -3483,7 +3523,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.0.20260924",
         "test_count": 113
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "niistat",
@@ -3523,7 +3564,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.0.20191216",
         "test_count": 92
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "openadscpu",
@@ -3686,7 +3728,8 @@
         "port_patch_applies": null,
         "fulltest_version": "3.10.1",
         "test_count": 1
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "palm",
@@ -3945,8 +3988,10 @@
         ],
         "port_patch_applies": null,
         "fulltest_version": "7.1.0",
-        "test_count": 3
-      }
+        "test_count": 3,
+        "arm64_retirement_pr": "https://github.com/neurodesk/neurocontainers/pull/3176"
+      },
+      "pr_plan": "Restore removed ARM64 declaration against current upstream, inspect removal PR #3176 and current OpenRecon macro, retain newer source pins and preserve meaningful fulltests; verify natively before its own PR."
     },
     {
       "recipe": "pydeface",
@@ -4461,7 +4506,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.6.1",
         "test_count": 4
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "sigviewer",
@@ -4756,7 +4802,8 @@
         "port_patch_applies": null,
         "fulltest_version": "4.5.0",
         "test_count": 4
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "spmpython",
@@ -4796,7 +4843,8 @@
         "port_patch_applies": null,
         "fulltest_version": "25.1.2.post2",
         "test_count": 82
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "syncro",
@@ -5091,7 +5139,8 @@
         "port_patch_applies": null,
         "fulltest_version": "0.2.5",
         "test_count": 126
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "topofit",
@@ -5175,7 +5224,8 @@
         "port_patch_applies": null,
         "fulltest_version": "2.5.0",
         "test_count": 2
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "tractseg",
@@ -5342,7 +5392,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.1.2",
         "test_count": 96
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "vina",
@@ -5382,7 +5433,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.2.5",
         "test_count": 7
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "wftfi",
@@ -5465,7 +5517,8 @@
         "port_patch_applies": null,
         "fulltest_version": "1.0.0",
         "test_count": 3
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     },
     {
       "recipe": "xnat",
@@ -5505,8 +5558,10 @@
         "port_patch_applies": null,
         "fulltest_version": "1.9.2.1",
         "test_count": 98
-      }
+      },
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
     }
   ],
-  "pull_request_policy": "Exactly one focused upstream pull request per container; never combine containers. Recipes already supported upstream need individually justified improvements before their PR and current-source tests."
+  "pull_request_policy": "Exactly one focused upstream pull request per container; never combine containers. Recipes already supported upstream need individually justified improvements before their PR and current-source tests.",
+  "source_only_ci_note": "Upstream release planner does not build candidates for fulltest-only changes. Such PRs must receive separate upstream container verification of their actual candidate before merge; Code quality alone does not prove runtime."
 }
