@@ -632,7 +632,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T07:04:03.015242+00:00",
+        "checked_at": "2026-10-12T07:11:54.917922+00:00",
         "metadata": [
           {
             "architecture": "x86_64",
@@ -691,7 +691,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:04:06.796262+00:00"
+        "metadata_checked_at": "2026-10-12T07:11:59.108560+00:00"
       }
     },
     {
@@ -1340,28 +1340,44 @@
       "release_metadata_audit": {
         "promotion_run_id": 38210939803,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38210939803",
-        "status": "pending-promotion",
-        "workflow_status": "in_progress",
-        "workflow_conclusion": null,
-        "checked_at": "2026-10-12T07:04:07.987507+00:00",
+        "status": "verified-published-metadata",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
+        "checked_at": "2026-10-12T07:12:00.809979+00:00",
         "metadata": [
-          {
-            "architecture": "aarch64",
-            "path": "releases/brainlifecli_arm64/1.8.2.json",
-            "expected_build_date": "20261012",
-            "committed_build_dates": [],
-            "exists": false,
-            "current_candidate_date_committed": false
-          },
           {
             "architecture": "x86_64",
             "path": "releases/brainlifecli/1.8.2.json",
             "expected_build_date": "20261012",
             "committed_build_dates": [
-              "20260913"
+              "20261012"
             ],
             "exists": true,
-            "current_candidate_date_committed": false
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8",
+            "metadata_commit_sha": "cbd8b8de076603d29447347670dec9a753039319",
+            "sif": "brainlifecli_1.8.2_20261012.simg",
+            "sif_sha256": "b525a7fc4c53d014d3b8121fdf11ed4dad8f28ef39b9f4d94a9b9b50969eeb27",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/brainlifecli_1.8.2_20261012.simg",
+            "public_sif_head_status": 200
+          },
+          {
+            "architecture": "aarch64",
+            "path": "releases/brainlifecli_arm64/1.8.2.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8",
+            "metadata_commit_sha": "cbd8b8de076603d29447347670dec9a753039319",
+            "sif": "brainlifecli_arm64_1.8.2_20261012.simg",
+            "sif_sha256": "85dd16f71fa9f70525129976098a68a17435c70b660fb7329ea4b2a940590d10",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/brainlifecli_arm64_1.8.2_20261012.simg",
+            "public_sif_head_status": 200
           }
         ],
         "publish_jobs": [
@@ -1386,7 +1402,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:04:08.825025+00:00"
+        "metadata_checked_at": "2026-10-12T07:12:04.506112+00:00"
       }
     },
     {
@@ -1689,57 +1705,69 @@
       "release_metadata_audit": {
         "promotion_run_id": 38211197258,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38211197258",
-        "status": "pending-promotion",
-        "workflow_status": "in_progress",
-        "workflow_conclusion": null,
-        "checked_at": "2026-10-12T07:04:09.943620+00:00",
+        "status": "verified-published-metadata",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
+        "checked_at": "2026-10-12T07:12:05.614028+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
             "path": "releases/brkraw_arm64/0.5.7.json",
             "expected_build_date": "20261012",
-            "committed_build_dates": [],
-            "exists": false,
-            "current_candidate_date_committed": false
+            "committed_build_dates": [
+              "20261012"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "6b05f8659fda5654927f7d1276972f473e3b1625",
+            "metadata_commit_sha": "85c2cb512f1f45306b7b1f2760a6b167596cacb5",
+            "sif": "brkraw_arm64_0.5.7_20261012.simg",
+            "sif_sha256": "32c172b398c62bda7e253e2cd6a43d880d712b160894511e8d8e539a3367adff",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/brkraw_arm64_0.5.7_20261012.simg",
+            "public_sif_head_status": 200
           },
           {
             "architecture": "x86_64",
             "path": "releases/brkraw/0.5.7.json",
             "expected_build_date": "20261012",
             "committed_build_dates": [
-              "20260914"
+              "20261012"
             ],
             "exists": true,
-            "current_candidate_date_committed": false
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "6b05f8659fda5654927f7d1276972f473e3b1625",
+            "metadata_commit_sha": "85c2cb512f1f45306b7b1f2760a6b167596cacb5",
+            "sif": "brkraw_0.5.7_20261012.simg",
+            "sif_sha256": "350a08fb0620fe13d627cbe5b951c24e647916dcc4cb8acd0c29ad1acc305f7c",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/brkraw_0.5.7_20261012.simg",
+            "public_sif_head_status": 200
           }
         ],
         "publish_jobs": [
           {
             "name": "publish (candidate-brkraw_arm64-6b05f8659fda5654927f7d1276972f473e3b1625)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "success",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-xhpvl",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Attach tested SIF to staged OCI images"
-            ]
+            "active_steps": []
           },
           {
             "name": "publish (candidate-brkraw-6b05f8659fda5654927f7d1276972f473e3b1625)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "success",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-b6zhc",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Publish exact tested Docker archive to unique staging tags"
-            ]
+            "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:04:10.772071+00:00"
+        "metadata_checked_at": "2026-10-12T07:12:13.639308+00:00"
       }
     },
     {
@@ -4977,7 +5005,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T07:04:12.003160+00:00",
+        "checked_at": "2026-10-12T07:12:14.900531+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -5036,7 +5064,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:04:19.644808+00:00"
+        "metadata_checked_at": "2026-10-12T07:12:18.569592+00:00"
       }
     },
     {
@@ -5299,32 +5327,36 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T07:04:23.137419+00:00",
-        "workflow_status": "queued",
+        "checked_at": "2026-10-12T07:12:19.664018+00:00",
+        "workflow_status": "in_progress",
         "workflow_conclusion": null,
         "publish_jobs": [
           {
             "name": "publish (candidate-pcntoolkit_arm64-64d88b79ce7299c91813e28dfdc8b95375b6ab6e)",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "runner_name": "",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-qwpqz",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": []
+            "active_steps": [
+              "Download candidate bundle without executing it"
+            ]
           },
           {
             "name": "publish (candidate-pcntoolkit-64d88b79ce7299c91813e28dfdc8b95375b6ab6e)",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "runner_name": "",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-w8rsr",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": []
+            "active_steps": [
+              "Download candidate bundle without executing it"
+            ]
           }
         ],
-        "metadata_checked_at": "2026-10-12T07:04:24.110007+00:00"
+        "metadata_checked_at": "2026-10-12T07:12:20.470864+00:00"
       }
     },
     {
@@ -6921,7 +6953,8 @@
       "pr_number": 3480,
       "merged_at": "2026-10-12T06:49:44Z",
       "current_upstream_sha_at_review": "4b7c56594d009bcf0d226760405c856603b38406",
-      "current_recipe_inputs_match_upstream": true
+      "current_recipe_inputs_match_upstream": true,
+      "reuse_existing_upstream_pr": true
     },
     {
       "recipe": "topofit",
@@ -7364,5 +7397,9 @@
     "merged_sha": "5a09a87422c5f04892824b0d5a8782adebd861e5",
     "merged_at": "2026-10-12T06:36:14Z",
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
+  },
+  "last_fork_main_sync": {
+    "sha": "f2f5a96add6b70e79b66be7a3fa366c5afccda6c",
+    "reason": "Fast-forward fork main to upstream after verified release metadata commits; fork Actions remains disabled. Candidate checkout and historical root gitlink preserved."
   }
 }
