@@ -3228,3 +3228,6 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - No persistent watcher or agent process was started. Next: review native results, post durable outcomes, open focused passing PRs, and keep total active recipe investigations at four while upstream candidate builds run.
 
 - Inventory reconciliation refined the 35 context-mismatched patches: 21 merge cleanly in a three-way preflight, leaving 14 actual conflict cases. These checks used temporary files only; no additional recipes entered active investigation. Details are in `upstream/queue.json`.
+
+- BART exact updated-upstream native run [38206195541](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206195541) passed **117/117**, zero failures/skips; downloaded metadata confirms `5496bbdb1363839a80b7b582b8eb3e5bbd9f320f`. Pending its own upstream PR after another native build frees capacity for the two upstream architecture jobs.
+- User clarified: **each of the 129 containers must get its own upstream pull request**, with independent native/CI/merge evidence. Do not combine containers. Review already-supported recipes for individually justified improvements rather than empty PRs.

@@ -18,10 +18,12 @@ All 129 current recipe paths exist. Of the 80 port patches, 45 apply directly,
 reconciliation. These counts describe preparation, not verified builds.
 
 Each container progresses through recipe review, local validation, native ARM64
-Docker/SIF/deploy/fulltest verification, an upstream PR where changes are needed,
+Docker/SIF/deploy/fulltest verification, its own upstream PR,
 upstream candidate tests for every declared variant, and merge. Review recipes
-without fork changes for useful fixes or test improvements; do not manufacture
-empty PRs or mark their upstream testing complete without evidence.
+without fork changes for individually justified fixes or test improvements;
+do not manufacture empty PRs or mark their upstream testing complete without
+evidence. The user explicitly requires one PR per container; never combine
+containers in a PR.
 
 The user explicitly authorized upstream PRs and merges for this assignment.
 Fork Actions remains disabled. The upstream `Container release gate` and

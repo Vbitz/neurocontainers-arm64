@@ -357,7 +357,7 @@
       "port_files": [
         "recipes/bart/build.yaml"
       ],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-bart-20261012",
       "baseline_sha": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
       "candidate_sha": "5496bbdb1363839a80b7b582b8eb3e5bbd9f320f",
@@ -368,7 +368,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Inspect exact native result; open focused upstream PR after all gates pass with zero failures/skips.",
+      "next_action": "Open its own upstream PR when two matrix build slots are available; require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.00",
@@ -379,7 +379,19 @@
         "fulltest_version": "1.0.00",
         "test_count": 116
       },
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206195541"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206195541",
+      "native_evidence": {
+        "source_sha": "5496bbdb1363839a80b7b582b8eb3e5bbd9f320f",
+        "version": "1.0.00",
+        "counts": {
+          "total_tests": 117,
+          "passed": 117,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206195541",
+        "artifact_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206195541/artifacts/11727033149"
+      }
     },
     {
       "recipe": "batchheudiconv",
@@ -5381,5 +5393,6 @@
         "test_count": 98
       }
     }
-  ]
+  ],
+  "pull_request_policy": "Exactly one focused upstream pull request per container; never combine containers. Recipes already supported upstream need individually justified improvements before their PR and current-source tests."
 }
