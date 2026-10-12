@@ -3366,3 +3366,17 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - `pcntoolkit` publication now verified: [promotion](https://github.com/neurodesk/neurocontainers/actions/runs/38215533821) succeeded; both committed release JSONs exactly match trusted previews for `64d88b79ce7299c91813e28dfdc8b95375b6ab6e`, with expected ARM64 identity/date and public SIF HTTP 200. Metadata commits: 653f2cd77169ec3c6e1aff8f237faec3f283c7c6, 653f2cd77169ec3c6e1aff8f237faec3f283c7c6.
 
 - ANTs upstream ARM64 report from run 38211134319 confirms exact source/PR, 103/103 runtime and 102/102 scientific tests, zero failures/skips, Dive passed. x86 source build remains healthy and active; no repeat build.
+
+- `topaz` exact current-upstream `b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2` native verified: **130/130**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38216691578). Finalize the recorded existing merged PR proof without another submission.
+
+- `topaz` fresh native exact-source 130/130 passed; independently merged PR #3480 and both same-source upstream reports verified. Reused the existing focused PR without duplicate submission or unchanged upstream rebuild. Status now merged; publication audit remains separate.
+
+- `modsort` individual upstream [PR #3494](https://github.com/neurodesk/neurocontainers/pull/3494) opened at exact native-verified `b8764c4d1150f58dafc62913167242a94fc96769` (8/8, zero failures/skips). Total builds now 3/6 including both upstream architecture candidates; deadline `2026-10-12T18:36:34.467681+00:00`. Require actual upstream reports and all required checks before authorized merge.
+
+- `meganorm` exact current-upstream `0383fec6a76f59c56190fc67502a150bda24e492` native verified: **12/12**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38218121419). Await its own upstream PR and dual-architecture verification before merge.
+
+- `fsqc` prepared and pushed at `bba9c58d834c90e5fe99f6649679bf19ffd87334` on `arm64/upstream-fsqc-20261012`, baseline `653f2cd77169ec3c6e1aff8f237faec3f283c7c6`; all recipe checks and architecture generations passed. Start `2026-10-12T07:39:20.732416+00:00`, deadline `2026-10-12T19:39:20.732416+00:00`; no builds dispatched yet, waiting for capacity.
+
+- `fsqc` current-upstream native [run 38218989145](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38218989145) dispatched at exact `bba9c58d834c90e5fe99f6649679bf19ffd87334`; attempts 1/6 total; deadline `2026-10-12T19:39:20.732416+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- PCNtoolkit downstream apps/webapps workflows succeeded for metadata commit `653f2cd77169ec3c6e1aff8f237faec3f283c7c6`. Neurocommand catalog queue `8a528080fbe74cee245ed8ba2feca4af90be1a8b` now verifies all ten architecture entries for the five published ports; scheduled consolidation/deployment remains separate. Topaz automatic promotion is still publishing both variants.
