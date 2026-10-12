@@ -399,5 +399,96 @@
     "pcntoolkit: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38215533821)",
     "Completed reference promotions match their trusted previews, including explicit ARM64 architecture and named-variant paths.",
     "Publication is tracked separately from native test success and upstream PR merge. No release JSON is manually edited."
-  ]
+  ],
+  "catalog_queue_audit": {
+    "checked_at": "2026-10-12T07:18:32.229378+00:00",
+    "repository": "neurodesk/neurocommand",
+    "ref": "update-apps-json",
+    "commit_sha": "999682f1b87c134a38ac4750cac9e3b437b0c5f8",
+    "path": "neurodesk/apps.json",
+    "status": "verified-queue-content",
+    "note": "The generated catalog queue contains both architectures for all four published ports and preserves their release dates. Catalog consolidation into neurocommand main follows that repository scheduling; this audit does not claim its queue is already deployed.",
+    "entries": [
+      {
+        "recipe": "bart",
+        "architecture": "x86_64",
+        "catalog_container": "bart",
+        "catalog_app": "bart 1.0.00",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38214387623",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38214387435"
+      },
+      {
+        "recipe": "bart",
+        "architecture": "aarch64",
+        "catalog_container": "bart_arm64",
+        "catalog_app": "bart_arm64 1.0.00",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38214387623",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38214387435"
+      },
+      {
+        "recipe": "brainlifecli",
+        "architecture": "x86_64",
+        "catalog_container": "brainlifecli",
+        "catalog_app": "brainlifecli 1.8.2",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38215869046",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38215868953"
+      },
+      {
+        "recipe": "brainlifecli",
+        "architecture": "aarch64",
+        "catalog_container": "brainlifecli_arm64",
+        "catalog_app": "brainlifecli_arm64 1.8.2",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38215869046",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38215868953"
+      },
+      {
+        "recipe": "brkraw",
+        "architecture": "aarch64",
+        "catalog_container": "brkraw_arm64",
+        "catalog_app": "brkraw_arm64 0.5.7",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38216022040",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38216022157"
+      },
+      {
+        "recipe": "brkraw",
+        "architecture": "x86_64",
+        "catalog_container": "brkraw",
+        "catalog_app": "brkraw 0.5.7",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38216022040",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38216022157"
+      },
+      {
+        "recipe": "panoptica",
+        "architecture": "aarch64",
+        "catalog_container": "panoptica_arm64",
+        "catalog_app": "panoptica_arm64 2.1.7",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38215646108",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38215646144"
+      },
+      {
+        "recipe": "panoptica",
+        "architecture": "x86_64",
+        "catalog_container": "panoptica",
+        "catalog_app": "panoptica 2.1.7",
+        "build_date": "20261012",
+        "status": "matches-published-metadata",
+        "apps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38215646108",
+        "webapps_update_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38215646144"
+      }
+    ]
+  }
 }

@@ -6572,14 +6572,14 @@
         ]
       },
       "port_files": [],
-      "status": "ready-to-dispatch",
+      "status": "native-running",
       "branch": "arm64/upstream-topaz-20261012",
       "baseline_sha": "8427f926c0d7159bd134b94f43926f279424bf35",
       "candidate_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
       "started_at": "2026-10-12T07:03:34.505234+00:00",
       "deadline": "2026-10-12T19:03:34.505234+00:00",
-      "attempts": 2,
-      "run_id": null,
+      "attempts": 3,
+      "run_id": 38216691578,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3480",
       "upstream_ci": {
         "candidate_run_id": 38210182365,
@@ -6753,7 +6753,7 @@
         }
       },
       "merged_sha": "33397bf941477438716487a3355c5379bc857fad",
-      "next_action": "Fresh root native ARM64 retest of existing merged PR #3480 exact source when one slot is free. No recipe changes or duplicate PR needed; runtime recipe and shared builder inputs match current main.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.5",
@@ -6948,13 +6948,14 @@
           "note": "Already merged independently with positive all-pass ARM64 and x86 runtime reports. Only Topaz recipe files changed. Preserve this existing individual PR and evidence; avoid a duplicate or empty PR. Fresh root native ARM64 verification of this exact tested source is still required before counting completion."
         }
       ],
-      "arm64_attempts": 1,
+      "arm64_attempts": 2,
       "x86_64_attempts": 1,
       "pr_number": 3480,
       "merged_at": "2026-10-12T06:49:44Z",
       "current_upstream_sha_at_review": "4b7c56594d009bcf0d226760405c856603b38406",
       "current_recipe_inputs_match_upstream": true,
-      "reuse_existing_upstream_pr": true
+      "reuse_existing_upstream_pr": true,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38216691578"
     },
     {
       "recipe": "topofit",
