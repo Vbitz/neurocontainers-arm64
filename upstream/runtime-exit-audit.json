@@ -901,5 +901,17 @@
       "note": "Metadata-only followup: actual native run remains attributed to c710. Both generated Dockerfiles, declared URLs/digests/inline content, copy sources, local-file bytes, mounts, metadata and readme are equal; the entire43-case suite is exactly equal after actual variable substitution. Shared builder/workflow/locked inputs unchanged. This proves resolved recipe input equivalence, not identical binary image bits or an exact-new-head root dispatch. Both fresh new-head upstream architecture suites remain required.",
       "scope_note": "Resolved runtime build instructions, assets and test inputs match. Source/tracking provenance labels identify their respective actual commits and may differ; this is not a byte-identical image or exact-new-head root-workflow claim."
     }
-  ]
+  ],
+  "cached_deployment_linkage_summary_review": {
+    "reviewed_count": 51,
+    "outliers": [],
+    "checked_at": "2026-10-12T23:30:26.946976+00:00",
+    "method": "Read existing exact-source native reports for all51 unique merged recipes; no image rebuilt. Flag ldd.summary.skipped entries withmorethan2 pathless records. None found. Two entries are consistent with vDSO/loader summaries; aggregate counts do not prove full linkage closure because the current parser also skips=>notfound.",
+    "parser_limitation": "workflows/test_deploy.sh parse_ldd_output treats unresolved=>notfound entries as skipped, not failures. Exact library closure cannot be inferred solely from aggregate deployment success.",
+    "active_recipe_reviews": {
+      "elastix": "45 pathless entries per exposed raw ELF; ITK global runtime path corrected and independent raw versions/ldd no-notfound checks dispatched in38321532705 at3decd22f. All32 original functional cases retained.",
+      "fsl": "115 binaries have2 pathless entries; onlyeddy_cuda has4. CPU131functional tests verified; complete CUDA linkage/operation requires an eligible GPU/driver host. Existing200-command scan cap remains explicit."
+    },
+    "scope": "Cached deployed-directory scan summaries only; not exhaustive optional-command execution or GPU verification."
+  }
 }

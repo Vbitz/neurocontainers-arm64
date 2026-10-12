@@ -2187,18 +2187,18 @@
         ]
       },
       "port_files": [],
-      "status": "ready-to-dispatch",
+      "status": "native-running",
       "branch": "arm64/upstream-bidscoin-20261012",
       "baseline_sha": "6aca40899920a8dfe3cbfd503771ae34e333f239",
-      "candidate_sha": "290bb463c617f74910efdc66a2860da9ebdc8f55",
+      "candidate_sha": "afee2d8f46a0bb5d8796fbe545122d62d6b0292e",
       "started_at": "2026-10-12T22:44:00+00:00",
       "deadline": "2026-10-13T10:44:00+00:00",
-      "attempts": 0,
-      "run_id": null,
+      "attempts": 2,
+      "run_id": 38321882044,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Native exact-source Docker/architecture/SIF/deploy/fulltest proof, then this recipe only PR and both upstream architecture checks before merge.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "4.6.2",
@@ -2221,8 +2221,23 @@
         "https://bidscoin.readthedocs.io/en/4.6.2/",
         "https://www.npmjs.com/package/bids-validator/v/1.13.0"
       ],
-      "arm64_attempts": 0,
-      "x86_64_attempts": 0
+      "arm64_attempts": 2,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38321882044",
+      "native_attempt_history": [
+        {
+          "run_id": 38320357554,
+          "candidate_sha": "290bb463c617f74910efdc66a2860da9ebdc8f55",
+          "counts": {
+            "passed": 97,
+            "failed": 1,
+            "skipped": 0,
+            "total_tests": 98
+          },
+          "outcome": "failed-fixture",
+          "diagnosis": "All96 retained cases and deployment passed. New automated mapping failed before data discovery because ruamel round-trip serialization emitted a flow collection the application PyYAML parser rejects attemplate807. Use the application own safe_load/safe_dump, host exact-template semantic roundtrip verified."
+        }
+      ]
     },
     {
       "recipe": "bidsmanager",
@@ -4424,18 +4439,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-builder-20261012",
+      "baseline_sha": "6aca40899920a8dfe3cbfd503771ae34e333f239",
+      "candidate_sha": "d24e9fa51fcea693845df60e0557aec484a60d23",
+      "started_at": "2026-10-12T23:16:13+00:00",
+      "deadline": "2026-10-13T11:16:13+00:00",
+      "attempts": 1,
+      "run_id": 38322335314,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.0",
@@ -4447,7 +4462,19 @@
         "fulltest_version": "0.2.0",
         "test_count": 1
       },
-      "pr_plan": "Current fulltest only checks sf-make exists. Add a real generation operation in a writable workspace and assert generated build configuration, exercising the installed builder without a Docker daemon or nested privileged runtime. Verify actual candidate upstream before merge."
+      "pr_plan": "Current fulltest only checks sf-make exists. Add a real generation operation in a writable workspace and assert generated build configuration, exercising the installed builder without a Docker daemon or nested privileged runtime. Verify actual candidate upstream before merge.",
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Pin the builder image embedded NeuroContainers checkout to reviewed upstream6aca4089 instead of floatingmain, retaining its frozen maintainer-controlled update policy and explicit source tracking. The existing pinned Moby BuildKit index was verified to contain native ARM64 and AMD64 manifests. Preserve sf-make deployment case and add actual native-architecture recipe compilation/staging with exact256-byte payload, README/source preservation, architecture conditions and deterministic Dockerfile/SIF command plans; execute shipped buildctl/Apptainer native binaries. Full nested privileged image execution is not claimed. No shared builder changes, emulation, source patch or release metadata edits.",
+      "pr_title": "Pin Builder source and verify actual native recipe staging",
+      "primary_source_review": [
+        "https://github.com/neurodesk/neurocontainers/blob/6aca40899920a8dfe3cbfd503771ae34e333f239/builder/README.md",
+        "https://github.com/neurodesk/neurocontainers/blob/6aca40899920a8dfe3cbfd503771ae34e333f239/builder/cli.py",
+        "https://github.com/moby/buildkit"
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38322335314"
     },
     {
       "recipe": "cbsb0stats",
@@ -7721,11 +7748,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-elastix-20261012",
       "baseline_sha": "c62332c882b06c05d225cab2babd11d0290c2dd0",
-      "candidate_sha": "7a8650118ac4e6f715ec3a5195e495031b75145a",
+      "candidate_sha": "3decd22f152597e909d91b5ebd3560035922a197",
       "started_at": "2026-10-12T21:38:36.616633+00:00",
       "deadline": "2026-10-13T09:38:36.616633+00:00",
-      "attempts": 2,
-      "run_id": 38317307913,
+      "attempts": 3,
+      "run_id": 38321532705,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -7747,7 +7774,7 @@
       },
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
-      "change_summary": "Port currentElastix5.3.1 to ARM with the previously verified ordinary ITK5.4.7/CMake source configuration, preserving current Ubuntu22.04/x86 released binary. Official5.3.1 requiresITK>=5.4.1, so5.4.7 satisfies it; no dependency source patch or tool replacement. Use architecture-conditional declared source downloads and runtime library wrappers, independent tracked software/ITK versions (ITK5.4 family). Preserve all32 registration/transform/deformation/Jacobian/negative cases, and replace three masked missing-argument exits with explicit expected1 plus existingdiagnostics. No scientific tolerance change. First native5.3.1 image/deploy and all positive cases passed. Assert the released missing-p/missing-tp statuses255 (source returns-1) with their complete exact diagnostics; missing-fixed remains1. No ignored exits or weaker numerical assertions.",
+      "change_summary": "Port currentElastix5.3.1 to ARM with the previously verified ordinary ITK5.4.7/CMake source configuration, preserving current Ubuntu22.04/x86 released binary. Official5.3.1 requiresITK>=5.4.1, so5.4.7 satisfies it; no dependency source patch or tool replacement. Use architecture-conditional declared source downloads and runtime library wrappers, independent tracked software/ITK versions (ITK5.4 family). Preserve all32 registration/transform/deformation/Jacobian/negative cases, and replace three masked missing-argument exits with explicit expected1 plus existingdiagnostics. No scientific tolerance change. First native5.3.1 image/deploy and all positive cases passed. Assert the released missing-p/missing-tp statuses255 (source returns-1) with their complete exact diagnostics; missing-fixed remains1. No ignored exits or weaker numerical assertions. ARM runtime library environment includes/opt/itk/lib for directly deployed ELF commands; new direct-binary versions and full ldd no-not-found assertions cover both exposed tools, preserving all32 previous cases.",
       "pr_title": "Build Elastix5.3.1 on ARM64 with supported ITK and strict runtime checks",
       "primary_source_review": [
         "https://github.com/SuperElastix/elastix/blob/5.3.1/CMakeLists.txt",
@@ -7755,9 +7782,9 @@
         "https://github.com/InsightSoftwareConsortium/ITK/releases/tag/v5.4.7",
         "https://github.com/Vbitz/neurocontainers-arm64/issues/92#issuecomment-5654152601"
       ],
-      "arm64_attempts": 2,
+      "arm64_attempts": 3,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38317307913",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38321532705",
       "native_attempt_history": [
         {
           "run_id": 38312647658,
@@ -7770,6 +7797,18 @@
             "total_tests": 33
           },
           "diagnosis": "Native Docker/SIF/deploy and all positive registration/transform/deformation/Jacobian cases passed. Two negative CLI cases returned255 with exact missing-p/missing-tp diagnostics; tests incorrectly expected1. Released5.3.1 CLI source sets returndummy|=-1 and returns it, giving POSIX255."
+        },
+        {
+          "run_id": 38317307913,
+          "candidate_sha": "7a8650118ac4e6f715ec3a5195e495031b75145a",
+          "counts": {
+            "passed": 33,
+            "failed": 0,
+            "skipped": 0,
+            "total_tests": 33
+          },
+          "outcome": "deployment-review-incomplete",
+          "diagnosis": "All32 functional cases passed, including released negative-exit contracts. Nested deploy14/17 reports45 pathless ldd entries for each exposed raw ELF, whereas wrappers explicitly add/opt/itk/lib; installed ITK livesoutsideglobalLD_LIBRARY_PATH. Existing parser treats=>notfound as informational. Add ARM global ITK library path and independent raw-binary/ldd assertions before accepting deployment."
         }
       ]
     },
@@ -8011,7 +8050,107 @@
       "attempts": 3,
       "run_id": 38314680689,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3545",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "fsl",
+          "container": "fsl",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "6.0.7.23",
+          "build_date": "20261013",
+          "docker_archive": "fsl_6.0.7.23_20261013.docker.tar",
+          "sif": "fsl_6.0.7.23_20261013.simg",
+          "candidate_tag": "nd-candidate-fsl:4bfaf8ea40c7",
+          "launcher": null,
+          "pr_number": 3545,
+          "head_sha": "4bfaf8ea40c71778b11058f8511eeb7199b47e43",
+          "tests": {
+            "total": 132,
+            "passed": 132,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 131,
+            "fulltest_passed": 131,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "FSLeyes filtered streams restore descriptors and preserve exit status",
+              "Default FSLeyes renders selected image voxels without a display",
+              "ASL extension imports and option parsing",
+              "FSL version check",
+              "fslmaths usage",
+              "fslhd - display header",
+              "fslhd XML format",
+              "fslinfo - basic info",
+              "fslval - get dimension",
+              "fslval - get pixdim",
+              "fslnvols - count volumes",
+              "fslorient - get orientation",
+              "fslorient - get sform",
+              "fslorient - get qform",
+              "fslstats - min/max",
+              "fslstats - robust range",
+              "fslstats - mean",
+              "fslstats - nonzero mean",
+              "fslstats - standard deviation"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "6.1 MB",
+                "path": "/usr/lib/locale/locale-archive"
+              },
+              {
+                "count": 7,
+                "wasted_space": "5.2 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 7,
+                "wasted_space": "1.8 MB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.878,
+            "wasted_bytes": 32538538,
+            "wasted_bytes_display": "32 MB",
+            "user_wasted_percent": 0.1862
+          }
+        },
+        "candidate_run_id": 38318121061,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38318121061",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "4bfaf8ea40c71778b11058f8511eeb7199b47e43",
+            "job_id": 115039916388,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38318121061/job/115039916388",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        }
+      },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
@@ -8066,7 +8205,15 @@
           "aws_zsh_completer.sh",
           "deploy.py"
         ],
-        "note": "All132 top-level checks and131 actual fulltests passed, zero failed/skipped runtime cases, including FSLeyes rendering/shutdown, ASL imports, BET/FAST/FLIRT/motion and exact analytical arithmetic/statistics/ROI/identity registration. Nested deployment945/1069passed,0failed:116informational ldd summaries omit entries without filesystem paths;1optional DEPLOY_BINS is unset because directory deployment is used;6auxiliary compiler configuration/Qt-Android/Python deployment/AWS shell completion/Windows launcher files are not ELF/shebang commands;1existing default directory-scan limit stopped after200executables. Both deployed directories and checked filesystem links/access passed. The deployment inventory scan is explicitly partial: exhaustive linkage testing of every optional bundled command and GPU execution are not claimed. No essential scientific fulltest was skipped; core commands beyond the alphabetical scan were executed by the full suite. Preserve the existing gate and numerical assertions."
+        "note": "All132 top-level checks and131 actual fulltests passed, zero failed/skipped runtime cases, including FSLeyes rendering/shutdown, ASL imports, BET/FAST/FLIRT/motion and exact analytical arithmetic/statistics/ROI/identity registration. Nested deployment945/1069passed,0failed:116informational ldd summaries omit entries without filesystem paths;1optional DEPLOY_BINS is unset because directory deployment is used;6auxiliary compiler configuration/Qt-Android/Python deployment/AWS shell completion/Windows launcher files are not ELF/shebang commands;1existing default directory-scan limit stopped after200executables. Both deployed directories and checked filesystem links/access passed. The deployment inventory scan is explicitly partial: exhaustive linkage testing of every optional bundled command and GPU execution are not claimed. No essential scientific fulltest was skipped; core commands beyond the alphabetical scan were executed by the full suite. Preserve the existing gate and numerical assertions. Additional source-specific parser review:115 binaries each have2 pathless ldd entries, consistent with Linux vDSO/loader summaries; only eddy_cuda has4. The existing parser does not reject=>notfound, so an empty failure count alone cannot establish full linkage closure. The two extra eddy_cuda entries require GPU/driver investigation on an eligible host; GPU execution and complete CUDA linkage are unverified on this CPU-only runner. All131 actual CPU fulltests passed including exact arithmetic/statistics/ROI/FLIRT and FSLeyes/ASL. Preserve explicit200-executable inventory cap and GPU prerequisite limitation; no exhaustive optional-command/GPU claim. No source change or successful CPU build repeated.",
+        "linkage_parser_followup": {
+          "ordinary_two_entry_summaries": 115,
+          "cuda_command_extra_entries": {
+            "command": "eddy_cuda",
+            "entries": 4
+          },
+          "note": "Additional source-specific parser review:115 binaries each have2 pathless ldd entries, consistent with Linux vDSO/loader summaries; only eddy_cuda has4. The existing parser does not reject=>notfound, so an empty failure count alone cannot establish full linkage closure. The two extra eddy_cuda entries require GPU/driver investigation on an eligible host; GPU execution and complete CUDA linkage are unverified on this CPU-only runner. All131 actual CPU fulltests passed including exact arithmetic/statistics/ROI/FLIRT and FSLeyes/ASL. Preserve explicit200-executable inventory cap and GPU prerequisite limitation; no exhaustive optional-command/GPU claim. No source change or successful CPU build repeated."
+        }
       },
       "native_command_exit_review": {
         "source_sha": "4bfaf8ea40c71778b11058f8511eeb7199b47e43",
@@ -19277,7 +19424,7 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "blocked-upstream",
       "branch": "arm64/upstream-spant-20261012",
       "baseline_sha": "6fd5191af670e314def4e49af3b01483a850ac7f",
       "candidate_sha": "550638a8764062eaf47dd7fc54ae6355a69bd688",
@@ -19288,7 +19435,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Revisit only with a released SPANT fix or documented configuration preserving VARPRO_3P quantification. Keep the failed test and fork experiment; do not patch the R library, substitute another fitting method, mask the exception, or claim basic FFT/report checks prove spectral fitting.",
       "upstream_review": {
         "exists": true,
         "version": "4.5.0",
@@ -19323,7 +19470,32 @@
       ],
       "arm64_attempts": 1,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38318269302"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38318269302",
+      "blocker": {
+        "classification": "failed-runtime",
+        "run_id": 38318269302,
+        "source_sha": "550638a8764062eaf47dd7fc54ae6355a69bd688",
+        "counts": {
+          "passed": 5,
+          "failed": 1,
+          "skipped": 0,
+          "total": 6
+        },
+        "dependency": "SPANT4.5.0 VARPRO_3P / vec2mrs_data",
+        "errors": [
+          "Error in vec2mrs_data(y, fs = acq_paras$fs, ft = acq_paras$ft, ref = acq_paras$ref): nuc is missing. Calls fit_mrs -> plyr -> varpro_3_para -> vec2mrs_data. Fails before optimizer/analytical assertions."
+        ],
+        "source_explanation": "Released v4.5.0 R/varpro_3_para.R passes fs,ft,ref but neither nuc nor mrs_data; R/mrs_data_proc.R requires nuc when mrs_data isNULL. The public fit_mrs branch forwards acquisition metadata but the internal routine discards nucleus. No documented options route supplies this required internal argument. Official latest release isv4.5.0 (2026-10-02), no newer released fix. This is an upstream R-method bug, not evidence that ARM hardware cannot run SPANT.",
+        "verified_scope": "Native Docker build, architecture, SIF conversion, deploy and all4 existing version/resonance-FFT/zero-fill/HTML-report tests passed. No successful spectral quantification or default ABFIT verification is claimed.",
+        "sources": [
+          "https://github.com/martin3141/spant/blob/v4.5.0/R/varpro_3_para.R",
+          "https://github.com/martin3141/spant/blob/v4.5.0/R/mrs_data_proc.R",
+          "https://github.com/martin3141/spant/blob/v4.5.0/R/fitting.R",
+          "https://github.com/martin3141/spant/releases/tag/v4.5.0"
+        ],
+        "revisit_condition": "A released fix or documented same-method argument configuration that passes nucleus into the internal constructor and preserves all analytical fitting assertions."
+      },
+      "investigation_stopped_at": "2026-10-12T23:16:01.592552+00:00"
     },
     {
       "recipe": "spmpython",
