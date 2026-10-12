@@ -370,7 +370,7 @@
       "port_files": [
         "recipes/bart/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-bart-20261012",
       "baseline_sha": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
       "candidate_sha": "5496bbdb1363839a80b7b582b8eb3e5bbd9f320f",
@@ -551,10 +551,10 @@
           }
         },
         "quality": "passed",
-        "release_gate": "pending"
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Inspect upstream ARM64 and x86_64 candidate reports plus all CI; merge this PR only when all pass with zero failed/skipped tests.",
+      "merged_sha": "8ffc4cca756fd5099c7e1a65d22f93ad354da01f",
+      "next_action": "Complete: native retest and individual upstream PR verified and merged. Preserve evidence; no unchanged rebuild.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.00",
@@ -580,7 +580,8 @@
       },
       "pr_number": 3482,
       "arm64_attempts": 2,
-      "x86_64_attempts": 1
+      "x86_64_attempts": 1,
+      "merged_at": "2026-10-12T05:33:20Z"
     },
     {
       "recipe": "batchheudiconv",
@@ -1015,18 +1016,20 @@
       "port_files": [
         "recipes/brainlifecli/build.yaml"
       ],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-brainlifecli-20261012",
       "baseline_sha": "6720f24a5d1b9137e5e7082e3c12bd521656fed7",
       "candidate_sha": "fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8",
       "started_at": "2026-10-12T05:01:31.807733+00:00",
       "deadline": "2026-10-12T17:01:31.807733+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38206184713,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3484",
+      "upstream_ci": {
+        "candidate_run_id": 38208498362
+      },
       "merged_sha": null,
-      "next_action": "Open its own upstream PR when two matrix slots are free; require all upstream container tests and CI before merge.",
+      "next_action": "Inspect both upstream candidate architecture reports and all CI; merge only after all tests pass.",
       "upstream_review": {
         "exists": true,
         "version": "1.8.2",
@@ -1049,8 +1052,9 @@
         },
         "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38206184713"
       },
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
+      "pr_number": 3484
     },
     {
       "recipe": "brats",

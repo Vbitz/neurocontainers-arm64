@@ -48,8 +48,10 @@ promotion or edit generated release metadata.
 Keep at most four builds active, accounting for the upstream PR matrix as well
 as local repository Actions. Never dispatch concurrent duplicates. Resume from
 the recorded run/PR before starting another attempt. Per-recipe budgets remain
-six native attempts and twelve hours; upstream retries and integration attempts
-also need accounting.
+six total container build attempts and twelve hours, including the root ARM64
+build and both architecture jobs in each upstream matrix. Upstream retries and
+integration attempts also consume that budget; separate architecture counters
+do not enlarge it.
 
 Durable investigation notes belong in each linked `arm64-container` issue's
 comments. `PLAN.md` records checkpoints. Coverage issue #2 continues to report
