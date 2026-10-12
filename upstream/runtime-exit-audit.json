@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-12T22:45:01.020398+00:00",
+  "checked_at": "2026-10-12T22:59:09.750091+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     {
@@ -850,6 +850,13 @@
       "current_upstream_source": "11049ac1e499f13b68a5a150a0a94fa8fe2711fc",
       "root_native_source": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
       "upstream_run": "https://github.com/neurodesk/neurocontainers/actions/runs/38216359773",
+      "note": "Revised upstream source passed both architecture suites; cached root proof verifies earlier source only."
+    },
+    {
+      "recipe": "julia",
+      "current_upstream_source": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
+      "root_native_source": "6dc8d4e2fe8ba19ffb332991f04d1f13c6d64223",
+      "upstream_run": "https://github.com/neurodesk/neurocontainers/actions/runs/38314938865",
       "note": "Revised upstream source passed both architecture suites; cached root proof verifies earlier source only."
     }
   ],

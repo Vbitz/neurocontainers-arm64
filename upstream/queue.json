@@ -1516,7 +1516,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T22:44:35.000006+00:00",
+        "checked_at": "2026-10-12T22:58:47.661278+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -1541,7 +1541,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T22:44:35.761253+00:00"
+        "metadata_checked_at": "2026-10-12T22:58:48.787242+00:00"
       }
     },
     {
@@ -2187,18 +2187,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
+      "status": "ready-to-dispatch",
+      "branch": "arm64/upstream-bidscoin-20261012",
+      "baseline_sha": "6aca40899920a8dfe3cbfd503771ae34e333f239",
+      "candidate_sha": "290bb463c617f74910efdc66a2860da9ebdc8f55",
+      "started_at": "2026-10-12T22:44:00+00:00",
+      "deadline": "2026-10-13T10:44:00+00:00",
       "attempts": 0,
       "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Native exact-source Docker/architecture/SIF/deploy/fulltest proof, then this recipe only PR and both upstream architecture checks before merge.",
       "upstream_review": {
         "exists": true,
         "version": "4.6.2",
@@ -2210,7 +2210,19 @@
         "fulltest_version": "4.6.2",
         "test_count": 96
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "upstream_verification_mode": "runtime-only",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Preserve all96 current BIDScoin4.6.2 cases and add actual automated bidsmapper/bidscoiner DICOM-to-BIDS conversion on two analytical MR slices. Require every voxel, exact physical affine, BIDS timing, anonymization, participants/scans records, provenance and unchanged source bytes. Replace six ignored/truncated validator checks with complete structured diagnostics and strict validation-status consistency; this external partial dataset is not claimed BIDS-valid. Assert the documented built-in core/template/all-installed-plugin API result in headless mode, replacing a truncated CLI that did not propagate failures. Interactive display availability is not claimed. No image-input change, alternate converter, skipped scientific gate or tolerance change. Require actual bids-validator success with zero structured errors on the newly converted synthetic dataset.",
+      "pr_title": "Verify actual BIDScoin DICOM mapping and conversion with strict diagnostics",
+      "primary_source_review": [
+        "https://pypi.org/project/bidscoin/4.6.2/",
+        "https://github.com/Donders-Institute/bidscoin",
+        "https://bidscoin.readthedocs.io/en/4.6.2/",
+        "https://www.npmjs.com/package/bids-validator/v/1.13.0"
+      ],
+      "arm64_attempts": 0,
+      "x86_64_attempts": 0
     },
     {
       "recipe": "bidsmanager",
@@ -4368,7 +4380,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-12T22:44:37.143317+00:00",
+        "checked_at": "2026-10-12T22:58:49.846669+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -4393,7 +4405,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T22:44:37.904075+00:00"
+        "metadata_checked_at": "2026-10-12T22:58:50.574841+00:00"
       }
     },
     {
@@ -7660,7 +7672,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T22:44:39.437855+00:00",
+        "checked_at": "2026-10-12T22:58:51.619741+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -7685,7 +7697,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T22:44:40.203769+00:00"
+        "metadata_checked_at": "2026-10-12T22:58:52.377306+00:00"
       }
     },
     {
@@ -9141,7 +9153,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T22:44:41.428001+00:00",
+        "checked_at": "2026-10-12T22:58:53.458977+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -9166,7 +9178,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T22:44:42.784353+00:00"
+        "metadata_checked_at": "2026-10-12T22:58:54.395800+00:00"
       }
     },
     {
@@ -11068,91 +11080,209 @@
       "status": "merged",
       "branch": "arm64/upstream-julia-20261012",
       "baseline_sha": "8f737d2b854c60a86b02fe4b475a0f7a12240e42",
-      "candidate_sha": "6dc8d4e2fe8ba19ffb332991f04d1f13c6d64223",
+      "candidate_sha": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
       "started_at": "2026-10-12T19:36:02.461377+00:00",
       "deadline": "2026-10-13T07:36:02.461377+00:00",
-      "attempts": 7,
+      "attempts": 11,
       "run_id": 38299606271,
-      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3531",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3536",
       "upstream_ci": {
-        "runtime_run_id": 38301184373,
-        "head_sha": "6dc8d4e2fe8ba19ffb332991f04d1f13c6d64223",
-        "tested_merge_sha": "e2b6f3745ee4b5eb9b2aad75b4e90bdd1da777ed",
-        "recipe_tree_matches_head": true,
+        "candidate_run_id": 38314938865,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38314938865",
+        "head_sha": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
         "quality": "passed",
         "release_gate": "passed",
-        "publication": "No image-input changes; verification builds are not release candidates.",
+        "native_job_review": {
+          "aarch64": {
+            "job_id": 115029333274,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38314938865/job/115029333274",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "artifact_name": "candidate-report-julia_arm64-6fb4d1f46c2f4b41c0327b1a8abce66178075333",
+            "fresh_native_docker_sif_deploy_fulltest_dive_manifest_gates": "success"
+          },
+          "x86_64": {
+            "job_id": 115029344029,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38314938865/job/115029344029",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "artifact_name": "candidate-report-julia-6fb4d1f46c2f4b41c0327b1a8abce66178075333",
+            "fresh_native_docker_sif_deploy_fulltest_dive_manifest_gates": "success"
+          }
+        },
         "aarch64": {
-          "runtime_observation": {
-            "container": "julia_arm64",
-            "version": "1.13.1",
-            "machine": "aarch64",
-            "status": "passed",
-            "observed_at": "2026-10-12T20:18:20.012944+00:00",
-            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38301184373",
-            "recipe_sha256": "5d7208fe02ae33938b26b8a0430b3e44d3bf22a8185f97b5e07e2035a2f34ddf",
-            "image_id": "sha256:dcffb0b9bb117dba323682f52faedbca885f7f5be9b0a82357ee88265f6ba625",
-            "candidate_sha256": "7f429244b9cd90c8837c4b3165c220829feb11c9b6230f67b8567e98fe39f7ec"
-          },
-          "counts": {
-            "total_tests": 139,
-            "passed": 139,
+          "schema_version": 3,
+          "recipe": "julia",
+          "container": "julia_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.13.1",
+          "build_date": "20261012",
+          "docker_archive": "julia_arm64_1.13.1_20261012.docker.tar",
+          "sif": "julia_arm64_1.13.1_20261012.simg",
+          "candidate_tag": "nd-candidate-julia_arm64:6fb4d1f46c2f",
+          "launcher": "julia",
+          "pr_number": 3536,
+          "head_sha": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
+          "tests": {
+            "total": 140,
+            "passed": 140,
             "failed": 0,
-            "skipped": 0
-          },
-          "fulltest_summary": {
-            "duration": 546.6056180000305,
-            "run_timestamp": "2026-10-12T20:18:19.865217",
-            "suites_failed": 0,
+            "skipped": 0,
+            "fulltest_total": 139,
+            "fulltest_passed": 139,
+            "fulltest_failed": 0,
+            "suites_total": 1,
             "suites_passed": 1,
-            "tests_failed": 0,
-            "tests_passed": 138,
-            "total_suites": 1,
-            "total_tests": 138
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Packages work without a writable home",
+              "Version check",
+              "Help output",
+              "Hidden help options",
+              "Version constant",
+              "System kernel info",
+              "Word size check",
+              "Julia home directory",
+              "Basic addition",
+              "Basic subtraction",
+              "Basic multiplication",
+              "Basic division",
+              "Integer division",
+              "Modulo operation",
+              "Power operation",
+              "Float arithmetic",
+              "Complex numbers",
+              "Square root",
+              "Absolute value"
+            ],
+            "failed_tests": []
           },
-          "artifact_name": "recipe-check-julia_arm64-e2b6f3745ee4b5eb9b2aad75b4e90bdd1da777ed",
-          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38301184373/job/114984384927",
-          "runner_labels": [
-            "blacksmith-8vcpu-ubuntu-2404-arm"
-          ]
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.1 MB",
+                "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/libs/plotly/plotly.min.js"
+              },
+              {
+                "count": 2,
+                "wasted_space": "5.1 MB",
+                "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js.map"
+              },
+              {
+                "count": 2,
+                "wasted_space": "4.3 MB",
+                "path": "/opt/vscode-extensions/korbinianeckstein.niivue-2.9.0/niivue/index.js"
+              },
+              {
+                "count": 2,
+                "wasted_space": "4.2 MB",
+                "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.6 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              }
+            ],
+            "efficiency_percent": 97.9091,
+            "wasted_bytes": 115858031,
+            "wasted_bytes_display": "116 MB",
+            "user_wasted_percent": 4.0114
+          }
         },
         "x86_64": {
-          "runtime_observation": {
-            "container": "julia",
-            "version": "1.13.1",
-            "machine": "x86_64",
-            "status": "passed",
-            "observed_at": "2026-10-12T20:10:46.013464+00:00",
-            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38301184373",
-            "recipe_sha256": "5d7208fe02ae33938b26b8a0430b3e44d3bf22a8185f97b5e07e2035a2f34ddf",
-            "image_id": "sha256:54d789e2baba8323a08cd86fdaeac6ed8d534d8ac11c90bd37d6d90e5bc41abf",
-            "candidate_sha256": "7f64eca74a62c11515284c740b3a15e21ee8474494a786731a687676af09b966"
-          },
-          "counts": {
-            "total_tests": 139,
-            "passed": 139,
+          "schema_version": 3,
+          "recipe": "julia",
+          "container": "julia",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.13.1",
+          "build_date": "20261012",
+          "docker_archive": "julia_1.13.1_20261012.docker.tar",
+          "sif": "julia_1.13.1_20261012.simg",
+          "candidate_tag": "nd-candidate-julia:6fb4d1f46c2f",
+          "launcher": "julia",
+          "pr_number": 3536,
+          "head_sha": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
+          "tests": {
+            "total": 140,
+            "passed": 140,
             "failed": 0,
-            "skipped": 0
-          },
-          "fulltest_summary": {
-            "duration": 379.04479598999023,
-            "run_timestamp": "2026-10-12T20:10:45.867819",
-            "suites_failed": 0,
+            "skipped": 0,
+            "fulltest_total": 139,
+            "fulltest_passed": 139,
+            "fulltest_failed": 0,
+            "suites_total": 1,
             "suites_passed": 1,
-            "tests_failed": 0,
-            "tests_passed": 138,
-            "total_suites": 1,
-            "total_tests": 138
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Packages work without a writable home",
+              "Version check",
+              "Help output",
+              "Hidden help options",
+              "Version constant",
+              "System kernel info",
+              "Word size check",
+              "Julia home directory",
+              "Basic addition",
+              "Basic subtraction",
+              "Basic multiplication",
+              "Basic division",
+              "Integer division",
+              "Modulo operation",
+              "Power operation",
+              "Float arithmetic",
+              "Complex numbers",
+              "Square root",
+              "Absolute value"
+            ],
+            "failed_tests": []
           },
-          "artifact_name": "recipe-check-julia-e2b6f3745ee4b5eb9b2aad75b4e90bdd1da777ed",
-          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38301184373/job/114984385025",
-          "runner_labels": [
-            "blacksmith-8vcpu-ubuntu-2404"
-          ]
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.1 MB",
+                "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/libs/plotly/plotly.min.js"
+              },
+              {
+                "count": 2,
+                "wasted_space": "5.1 MB",
+                "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js.map"
+              },
+              {
+                "count": 2,
+                "wasted_space": "4.3 MB",
+                "path": "/opt/vscode-extensions/korbinianeckstein.niivue-2.9.0/niivue/index.js"
+              },
+              {
+                "count": 2,
+                "wasted_space": "4.2 MB",
+                "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.6 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              }
+            ],
+            "efficiency_percent": 97.926,
+            "wasted_bytes": 115858894,
+            "wasted_bytes_display": "116 MB",
+            "user_wasted_percent": 3.9896
+          }
         }
       },
-      "merged_sha": "c8cab86b372a6a6e8a7d17b996c8cb36f9f1a42e",
-      "next_action": "Native exact-head proof and both upstream merge-source runtime suites verified before individual PR merge. No image-input changes or new release required.",
+      "merged_sha": "6aca40899920a8dfe3cbfd503771ae34e333f239",
+      "next_action": "Final independently merged source passed both actual native upstream suites; the original root-workflow proof verifies earlier image inputs only. Root-current-source gap remains: no further own build is authorized within the exhausted original budget. Audit automatic publication separately.",
       "upstream_review": {
         "exists": true,
         "version": "1.13.1",
@@ -11165,15 +11295,15 @@
         "test_count": 137
       },
       "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
-      "upstream_verification_mode": "runtime-only",
+      "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
       "change_summary": "Preserve all137 current Julia1.13.1 tests and add actual two-worker native computations using the shipped Distributed and FFTW packages. Require distinct child OS processes and expected worker IDs/architecture, exact partitioned signal energies30/174 and total204, exact matrix multiplication and all4 impulse FFT coefficients. Remove workers in finally and require process count returns to1. Official Distributed.addprocs/remotecall_fetch environment and cleanup contracts reviewed. Image/dependency inputs, existing ARM ZMQ preference and all scientific bounds unchanged.",
       "pr_title": "Verify actual native distributed computations for Julia",
       "primary_source_review": [
         "https://docs.julialang.org/en/v1/stdlib/Distributed/"
       ],
-      "arm64_attempts": 4,
-      "x86_64_attempts": 3,
+      "arm64_attempts": 6,
+      "x86_64_attempts": 5,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38299606271",
       "native_command_exit_review": {
         "source_sha": "6dc8d4e2fe8ba19ffb332991f04d1f13c6d64223",
@@ -11211,55 +11341,50 @@
         ]
       },
       "pending_upstream_issue": 3531,
-      "pr_number": 3531,
-      "merged_at": "2026-10-12T20:20:53Z",
-      "release_metadata_audit": {
-        "status": "not-applicable-test-only",
-        "checked_at": "2026-10-12T20:20:55.515150+00:00",
-        "note": "Only fulltest.yaml changed. The release plan has no image candidate; verification builds must not advance generated release metadata.",
-        "automatic_workflow_observation": {
-          "run_id": 38303625662,
-          "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38303625662",
-          "conclusion": "success",
-          "resolve": "success",
-          "publish": "skipped",
-          "finalize": "skipped",
-          "artifact_count": 0,
-          "checked_at": "2026-10-12T20:45:07.656050+00:00",
-          "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
-        }
-      },
+      "pr_number": 3536,
+      "merged_at": "2026-10-12T22:46:35Z",
       "external_progress": {
-        "status": "failed-runtime",
+        "status": "merged-verified-upstream",
         "pr_number": 3536,
         "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3536",
-        "head_sha": "2db0f5fb5b87e659fa8afc71d3abc8e690a3557a",
-        "run_id": 38306507750,
-        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38306507750",
-        "reason": "Independent no-HOME image-input followup still at2db0f5fb; upstream matrix externally refreshed after prior pair cancelled. Record both pairs as observed attempts, retain original139/139 source proof, no additional own build beyond original budget. Current-source root gap if accepted remains to be recorded honestly.",
+        "head_sha": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
+        "run_id": 38314938865,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38314938865",
+        "reason": "Final independent generic-cache/ZMQ precompilation fix passed actual native ARM and x86 with unchanged IJulia120s limit and all139 functional tests. Reviewed actual Docker/SIF/deploy/fulltest/Dive/manifest/final gates and source/PR/native-runner identities from cached compact reports and logs. Independent merge, no build/merge dispatched here.",
         "prior_runs": [
           {
             "run_id": 38305270199,
             "conclusion": "cancelled",
             "reason": "Independent label/CI refresh; no cancellation or rerun requested by this agent."
+          },
+          {
+            "run_id": 38306507750,
+            "conclusion": "failure",
+            "reason": "Prior source2db0f5fb ARM IJulia timeout; retained in external_history."
+          },
+          {
+            "run_id": 38313277937,
+            "conclusion": "failure",
+            "head_sha": "29c9d7ce9e2accbdb45077d36ec0d634743c973f",
+            "reason": "Further independent image-cache precompilation candidate."
           }
         ],
         "proofs": {
-          "x86_64": {
+          "aarch64": {
             "report": {
               "schema_version": 3,
               "recipe": "julia",
-              "container": "julia",
-              "variant": "",
-              "architecture": "x86_64",
+              "container": "julia_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
               "version": "1.13.1",
               "build_date": "20261012",
-              "docker_archive": "julia_1.13.1_20261012.docker.tar",
-              "sif": "julia_1.13.1_20261012.simg",
-              "candidate_tag": "nd-candidate-julia:2db0f5fb5b87",
+              "docker_archive": "julia_arm64_1.13.1_20261012.docker.tar",
+              "sif": "julia_arm64_1.13.1_20261012.simg",
+              "candidate_tag": "nd-candidate-julia_arm64:6fb4d1f46c2f",
               "launcher": "julia",
               "pr_number": 3536,
-              "head_sha": "2db0f5fb5b87e659fa8afc71d3abc8e690a3557a",
+              "head_sha": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
               "tests": {
                 "total": 140,
                 "passed": 140,
@@ -11324,110 +11449,560 @@
                     "path": "/var/cache/debconf/templates.dat"
                   }
                 ],
-                "efficiency_percent": 97.8797,
-                "wasted_bytes": 115858892,
+                "efficiency_percent": 97.9091,
+                "wasted_bytes": 115858031,
                 "wasted_bytes_display": "116 MB",
-                "user_wasted_percent": 4.0811
+                "user_wasted_percent": 4.0114
               }
             },
-            "job_id": 115002366224,
-            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38306507750/job/115002366224",
+            "job_id": 115029333274,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38314938865/job/115029333274",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "artifact_name": "candidate-report-julia_arm64-6fb4d1f46c2f4b41c0327b1a8abce66178075333",
+            "fresh_native_docker_sif_deploy_fulltest_dive_manifest_gates": "success"
+          },
+          "x86_64": {
+            "report": {
+              "schema_version": 3,
+              "recipe": "julia",
+              "container": "julia",
+              "variant": "",
+              "architecture": "x86_64",
+              "version": "1.13.1",
+              "build_date": "20261012",
+              "docker_archive": "julia_1.13.1_20261012.docker.tar",
+              "sif": "julia_1.13.1_20261012.simg",
+              "candidate_tag": "nd-candidate-julia:6fb4d1f46c2f",
+              "launcher": "julia",
+              "pr_number": 3536,
+              "head_sha": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
+              "tests": {
+                "total": 140,
+                "passed": 140,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 139,
+                "fulltest_passed": 139,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "Packages work without a writable home",
+                  "Version check",
+                  "Help output",
+                  "Hidden help options",
+                  "Version constant",
+                  "System kernel info",
+                  "Word size check",
+                  "Julia home directory",
+                  "Basic addition",
+                  "Basic subtraction",
+                  "Basic multiplication",
+                  "Basic division",
+                  "Integer division",
+                  "Modulo operation",
+                  "Power operation",
+                  "Float arithmetic",
+                  "Complex numbers",
+                  "Square root",
+                  "Absolute value"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "9.1 MB",
+                    "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/libs/plotly/plotly.min.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "5.1 MB",
+                    "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js.map"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "4.3 MB",
+                    "path": "/opt/vscode-extensions/korbinianeckstein.niivue-2.9.0/niivue/index.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "4.2 MB",
+                    "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js"
+                  },
+                  {
+                    "count": 5,
+                    "wasted_space": "3.6 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  }
+                ],
+                "efficiency_percent": 97.926,
+                "wasted_bytes": 115858894,
+                "wasted_bytes_display": "116 MB",
+                "user_wasted_percent": 3.9896
+              }
+            },
+            "job_id": 115029344029,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38314938865/job/115029344029",
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404"
             ],
-            "artifact_name": "candidate-report-julia-2db0f5fb5b87e659fa8afc71d3abc8e690a3557a",
+            "artifact_name": "candidate-report-julia-6fb4d1f46c2f4b41c0327b1a8abce66178075333",
             "fresh_native_docker_sif_deploy_fulltest_dive_manifest_gates": "success"
           }
         },
-        "failed_architecture": "aarch64",
-        "failed_report": {
-          "schema_version": 3,
-          "recipe": "julia",
-          "container": "julia_arm64",
-          "variant": "arm64",
-          "architecture": "aarch64",
-          "version": "1.13.1",
-          "build_date": "20261012",
-          "docker_archive": "julia_arm64_1.13.1_20261012.docker.tar",
-          "sif": "julia_arm64_1.13.1_20261012.simg",
-          "candidate_tag": "nd-candidate-julia_arm64:2db0f5fb5b87",
-          "launcher": "julia",
+        "failed_architecture": null,
+        "failed_report": null,
+        "first_error": null,
+        "next_action": "Final independently merged source passed both actual native upstream suites; the original root-workflow proof verifies earlier image inputs only. Root-current-source gap remains: no further own build is authorized within the exhausted original budget. Audit automatic publication separately.",
+        "merged_sha": "6aca40899920a8dfe3cbfd503771ae34e333f239",
+        "merged_at": "2026-10-12T22:46:35Z"
+      },
+      "external_history": [
+        {
+          "status": "failed-runtime",
           "pr_number": 3536,
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3536",
           "head_sha": "2db0f5fb5b87e659fa8afc71d3abc8e690a3557a",
-          "tests": {
-            "total": 140,
-            "passed": 139,
-            "failed": 1,
-            "skipped": 0,
-            "fulltest_total": 139,
-            "fulltest_passed": 138,
-            "fulltest_failed": 1,
-            "suites_total": 1,
-            "suites_passed": 0,
-            "passed_tests": [
-              "Simple Deploy Bins/Path Test",
-              "Packages work without a writable home",
-              "Version check",
-              "Help output",
-              "Hidden help options",
-              "Version constant",
-              "System kernel info",
-              "Word size check",
-              "Julia home directory",
-              "Basic addition",
-              "Basic subtraction",
-              "Basic multiplication",
-              "Basic division",
-              "Integer division",
-              "Modulo operation",
-              "Power operation",
-              "Float arithmetic",
-              "Complex numbers",
-              "Square root",
-              "Absolute value"
-            ],
-            "failed_tests": [
-              "Load IJulia package"
+          "run_id": 38306507750,
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38306507750",
+          "reason": "Independent no-HOME image-input followup still at2db0f5fb; upstream matrix externally refreshed after prior pair cancelled. Record both pairs as observed attempts, retain original139/139 source proof, no additional own build beyond original budget. Current-source root gap if accepted remains to be recorded honestly.",
+          "prior_runs": [
+            {
+              "run_id": 38305270199,
+              "conclusion": "cancelled",
+              "reason": "Independent label/CI refresh; no cancellation or rerun requested by this agent."
+            }
+          ],
+          "proofs": {
+            "x86_64": {
+              "report": {
+                "schema_version": 3,
+                "recipe": "julia",
+                "container": "julia",
+                "variant": "",
+                "architecture": "x86_64",
+                "version": "1.13.1",
+                "build_date": "20261012",
+                "docker_archive": "julia_1.13.1_20261012.docker.tar",
+                "sif": "julia_1.13.1_20261012.simg",
+                "candidate_tag": "nd-candidate-julia:2db0f5fb5b87",
+                "launcher": "julia",
+                "pr_number": 3536,
+                "head_sha": "2db0f5fb5b87e659fa8afc71d3abc8e690a3557a",
+                "tests": {
+                  "total": 140,
+                  "passed": 140,
+                  "failed": 0,
+                  "skipped": 0,
+                  "fulltest_total": 139,
+                  "fulltest_passed": 139,
+                  "fulltest_failed": 0,
+                  "suites_total": 1,
+                  "suites_passed": 1,
+                  "passed_tests": [
+                    "Simple Deploy Bins/Path Test",
+                    "Packages work without a writable home",
+                    "Version check",
+                    "Help output",
+                    "Hidden help options",
+                    "Version constant",
+                    "System kernel info",
+                    "Word size check",
+                    "Julia home directory",
+                    "Basic addition",
+                    "Basic subtraction",
+                    "Basic multiplication",
+                    "Basic division",
+                    "Integer division",
+                    "Modulo operation",
+                    "Power operation",
+                    "Float arithmetic",
+                    "Complex numbers",
+                    "Square root",
+                    "Absolute value"
+                  ],
+                  "failed_tests": []
+                },
+                "dive": {
+                  "status": "success",
+                  "failed_checks": [],
+                  "inefficient_files": [
+                    {
+                      "count": 2,
+                      "wasted_space": "9.1 MB",
+                      "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/libs/plotly/plotly.min.js"
+                    },
+                    {
+                      "count": 2,
+                      "wasted_space": "5.1 MB",
+                      "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js.map"
+                    },
+                    {
+                      "count": 2,
+                      "wasted_space": "4.3 MB",
+                      "path": "/opt/vscode-extensions/korbinianeckstein.niivue-2.9.0/niivue/index.js"
+                    },
+                    {
+                      "count": 2,
+                      "wasted_space": "4.2 MB",
+                      "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js"
+                    },
+                    {
+                      "count": 5,
+                      "wasted_space": "3.6 MB",
+                      "path": "/var/cache/debconf/templates.dat"
+                    }
+                  ],
+                  "efficiency_percent": 97.8797,
+                  "wasted_bytes": 115858892,
+                  "wasted_bytes_display": "116 MB",
+                  "user_wasted_percent": 4.0811
+                }
+              },
+              "job_id": 115002366224,
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38306507750/job/115002366224",
+              "labels": [
+                "blacksmith-8vcpu-ubuntu-2404"
+              ],
+              "artifact_name": "candidate-report-julia-2db0f5fb5b87e659fa8afc71d3abc8e690a3557a",
+              "fresh_native_docker_sif_deploy_fulltest_dive_manifest_gates": "success"
+            }
+          },
+          "failed_architecture": "aarch64",
+          "failed_report": {
+            "schema_version": 3,
+            "recipe": "julia",
+            "container": "julia_arm64",
+            "variant": "arm64",
+            "architecture": "aarch64",
+            "version": "1.13.1",
+            "build_date": "20261012",
+            "docker_archive": "julia_arm64_1.13.1_20261012.docker.tar",
+            "sif": "julia_arm64_1.13.1_20261012.simg",
+            "candidate_tag": "nd-candidate-julia_arm64:2db0f5fb5b87",
+            "launcher": "julia",
+            "pr_number": 3536,
+            "head_sha": "2db0f5fb5b87e659fa8afc71d3abc8e690a3557a",
+            "tests": {
+              "total": 140,
+              "passed": 139,
+              "failed": 1,
+              "skipped": 0,
+              "fulltest_total": 139,
+              "fulltest_passed": 138,
+              "fulltest_failed": 1,
+              "suites_total": 1,
+              "suites_passed": 0,
+              "passed_tests": [
+                "Simple Deploy Bins/Path Test",
+                "Packages work without a writable home",
+                "Version check",
+                "Help output",
+                "Hidden help options",
+                "Version constant",
+                "System kernel info",
+                "Word size check",
+                "Julia home directory",
+                "Basic addition",
+                "Basic subtraction",
+                "Basic multiplication",
+                "Basic division",
+                "Integer division",
+                "Modulo operation",
+                "Power operation",
+                "Float arithmetic",
+                "Complex numbers",
+                "Square root",
+                "Absolute value"
+              ],
+              "failed_tests": [
+                "Load IJulia package"
+              ]
+            },
+            "dive": {
+              "status": "success",
+              "failed_checks": [],
+              "inefficient_files": [
+                {
+                  "count": 2,
+                  "wasted_space": "9.1 MB",
+                  "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/libs/plotly/plotly.min.js"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "5.1 MB",
+                  "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js.map"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "4.3 MB",
+                  "path": "/opt/vscode-extensions/korbinianeckstein.niivue-2.9.0/niivue/index.js"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "4.2 MB",
+                  "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js"
+                },
+                {
+                  "count": 5,
+                  "wasted_space": "3.6 MB",
+                  "path": "/var/cache/debconf/templates.dat"
+                }
+              ],
+              "efficiency_percent": 97.8629,
+              "wasted_bytes": 115858033,
+              "wasted_bytes_display": "116 MB",
+              "user_wasted_percent": 4.1022
+            }
+          },
+          "first_error": "Load IJulia package timed out after120s. Actual ZeroMQ request/reply and distributed native computations passed, as did new no-HOME worker test. ARM functional138/139; combined139/140, x86all140. Current source not verified/accepted; original merged6dc8d4e139/139 proof remains separate.",
+          "next_action": "Await independent fix/proof; no own eighth build or merge of failing followup. Original7observed-attempt total and deadline retained."
+        }
+      ],
+      "prior_submissions": [
+        {
+          "recipe": "julia",
+          "variant": "arm64",
+          "issue_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/17",
+          "historical": {
+            "run_id": 34685647289,
+            "attempt": 1,
+            "sha": "87e1c7265e8b6c767cd3154c67caca984116711e",
+            "counts": [
+              137,
+              0,
+              0,
+              137
             ]
           },
-          "dive": {
-            "status": "success",
-            "failed_checks": [],
-            "inefficient_files": [
-              {
-                "count": 2,
-                "wasted_space": "9.1 MB",
-                "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/libs/plotly/plotly.min.js"
+          "port_files": [],
+          "status": "merged",
+          "branch": "arm64/upstream-julia-20261012",
+          "baseline_sha": "8f737d2b854c60a86b02fe4b475a0f7a12240e42",
+          "candidate_sha": "6dc8d4e2fe8ba19ffb332991f04d1f13c6d64223",
+          "started_at": "2026-10-12T19:36:02.461377+00:00",
+          "deadline": "2026-10-13T07:36:02.461377+00:00",
+          "attempts": 11,
+          "run_id": 38299606271,
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3531",
+          "upstream_ci": {
+            "runtime_run_id": 38301184373,
+            "head_sha": "6dc8d4e2fe8ba19ffb332991f04d1f13c6d64223",
+            "tested_merge_sha": "e2b6f3745ee4b5eb9b2aad75b4e90bdd1da777ed",
+            "recipe_tree_matches_head": true,
+            "quality": "passed",
+            "release_gate": "passed",
+            "publication": "No image-input changes; verification builds are not release candidates.",
+            "aarch64": {
+              "runtime_observation": {
+                "container": "julia_arm64",
+                "version": "1.13.1",
+                "machine": "aarch64",
+                "status": "passed",
+                "observed_at": "2026-10-12T20:18:20.012944+00:00",
+                "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38301184373",
+                "recipe_sha256": "5d7208fe02ae33938b26b8a0430b3e44d3bf22a8185f97b5e07e2035a2f34ddf",
+                "image_id": "sha256:dcffb0b9bb117dba323682f52faedbca885f7f5be9b0a82357ee88265f6ba625",
+                "candidate_sha256": "7f429244b9cd90c8837c4b3165c220829feb11c9b6230f67b8567e98fe39f7ec"
               },
-              {
-                "count": 2,
-                "wasted_space": "5.1 MB",
-                "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js.map"
+              "counts": {
+                "total_tests": 139,
+                "passed": 139,
+                "failed": 0,
+                "skipped": 0
               },
-              {
-                "count": 2,
-                "wasted_space": "4.3 MB",
-                "path": "/opt/vscode-extensions/korbinianeckstein.niivue-2.9.0/niivue/index.js"
+              "fulltest_summary": {
+                "duration": 546.6056180000305,
+                "run_timestamp": "2026-10-12T20:18:19.865217",
+                "suites_failed": 0,
+                "suites_passed": 1,
+                "tests_failed": 0,
+                "tests_passed": 138,
+                "total_suites": 1,
+                "total_tests": 138
               },
-              {
-                "count": 2,
-                "wasted_space": "4.2 MB",
-                "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js"
+              "artifact_name": "recipe-check-julia_arm64-e2b6f3745ee4b5eb9b2aad75b4e90bdd1da777ed",
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38301184373/job/114984384927",
+              "runner_labels": [
+                "blacksmith-8vcpu-ubuntu-2404-arm"
+              ]
+            },
+            "x86_64": {
+              "runtime_observation": {
+                "container": "julia",
+                "version": "1.13.1",
+                "machine": "x86_64",
+                "status": "passed",
+                "observed_at": "2026-10-12T20:10:46.013464+00:00",
+                "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38301184373",
+                "recipe_sha256": "5d7208fe02ae33938b26b8a0430b3e44d3bf22a8185f97b5e07e2035a2f34ddf",
+                "image_id": "sha256:54d789e2baba8323a08cd86fdaeac6ed8d534d8ac11c90bd37d6d90e5bc41abf",
+                "candidate_sha256": "7f64eca74a62c11515284c740b3a15e21ee8474494a786731a687676af09b966"
               },
-              {
-                "count": 5,
-                "wasted_space": "3.6 MB",
-                "path": "/var/cache/debconf/templates.dat"
-              }
+              "counts": {
+                "total_tests": 139,
+                "passed": 139,
+                "failed": 0,
+                "skipped": 0
+              },
+              "fulltest_summary": {
+                "duration": 379.04479598999023,
+                "run_timestamp": "2026-10-12T20:10:45.867819",
+                "suites_failed": 0,
+                "suites_passed": 1,
+                "tests_failed": 0,
+                "tests_passed": 138,
+                "total_suites": 1,
+                "total_tests": 138
+              },
+              "artifact_name": "recipe-check-julia-e2b6f3745ee4b5eb9b2aad75b4e90bdd1da777ed",
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38301184373/job/114984385025",
+              "runner_labels": [
+                "blacksmith-8vcpu-ubuntu-2404"
+              ]
+            }
+          },
+          "merged_sha": "c8cab86b372a6a6e8a7d17b996c8cb36f9f1a42e",
+          "next_action": "Native exact-head proof and both upstream merge-source runtime suites verified before individual PR merge. No image-input changes or new release required.",
+          "upstream_review": {
+            "exists": true,
+            "version": "1.13.1",
+            "architectures": [
+              "x86_64",
+              "aarch64"
             ],
-            "efficiency_percent": 97.8629,
-            "wasted_bytes": 115858033,
-            "wasted_bytes_display": "116 MB",
-            "user_wasted_percent": 4.1022
+            "port_patch_applies": null,
+            "fulltest_version": "1.13.1",
+            "test_count": 137
+          },
+          "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+          "upstream_verification_mode": "runtime-only",
+          "upstream_ci_runner_label": "ci-blacksmith-x86",
+          "change_summary": "Preserve all137 current Julia1.13.1 tests and add actual two-worker native computations using the shipped Distributed and FFTW packages. Require distinct child OS processes and expected worker IDs/architecture, exact partitioned signal energies30/174 and total204, exact matrix multiplication and all4 impulse FFT coefficients. Remove workers in finally and require process count returns to1. Official Distributed.addprocs/remotecall_fetch environment and cleanup contracts reviewed. Image/dependency inputs, existing ARM ZMQ preference and all scientific bounds unchanged.",
+          "pr_title": "Verify actual native distributed computations for Julia",
+          "primary_source_review": [
+            "https://docs.julialang.org/en/v1/stdlib/Distributed/"
+          ],
+          "arm64_attempts": 6,
+          "x86_64_attempts": 5,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38299606271",
+          "native_command_exit_review": {
+            "source_sha": "6dc8d4e2fe8ba19ffb332991f04d1f13c6d64223",
+            "all_unusual_exits_explicitly_asserted": true,
+            "unusual_exits": []
+          },
+          "native_evidence": {
+            "source_sha": "6dc8d4e2fe8ba19ffb332991f04d1f13c6d64223",
+            "version": "1.13.1",
+            "counts": {
+              "total_tests": 139,
+              "passed": 139,
+              "failed": 0,
+              "skipped": 0
+            },
+            "fulltest_summary": {
+              "duration": 249.35714960098267,
+              "run_timestamp": "2026-10-12T19:56:08.364701",
+              "suites_failed": 0,
+              "suites_passed": 1,
+              "tests_failed": 0,
+              "tests_passed": 138,
+              "total_suites": 1,
+              "total_tests": 138
+            },
+            "deploy_counts": {
+              "total": 1,
+              "passed": 1,
+              "failed": 0,
+              "skipped": 0
+            },
+            "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38299606271",
+            "runner_labels": [
+              "ubuntu-24.04-arm"
+            ]
+          },
+          "pending_upstream_issue": 3531,
+          "pr_number": 3531,
+          "merged_at": "2026-10-12T20:20:53Z",
+          "release_metadata_audit": {
+            "status": "not-applicable-test-only",
+            "checked_at": "2026-10-12T20:20:55.515150+00:00",
+            "note": "Only fulltest.yaml changed. The release plan has no image candidate; verification builds must not advance generated release metadata.",
+            "automatic_workflow_observation": {
+              "run_id": 38303625662,
+              "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38303625662",
+              "conclusion": "success",
+              "resolve": "success",
+              "publish": "skipped",
+              "finalize": "skipped",
+              "artifact_count": 0,
+              "checked_at": "2026-10-12T20:45:07.656050+00:00",
+              "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
+            }
           }
-        },
-        "first_error": "Load IJulia package timed out after120s. Actual ZeroMQ request/reply and distributed native computations passed, as did new no-HOME worker test. ARM functional138/139; combined139/140, x86all140. Current source not verified/accepted; original merged6dc8d4e139/139 proof remains separate.",
-        "next_action": "Await independent fix/proof; no own eighth build or merge of failing followup. Original7observed-attempt total and deadline retained."
+        }
+      ],
+      "upstream_branch": "neurodesk:fix/julia-no-home",
+      "root_current_source_gap": true,
+      "release_metadata_audit": {
+        "promotion_run_id": 38318568095,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38318568095",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/julia_arm64/1.13.1.json",
+            "expected_build_date": "20261012",
+            "exists": true,
+            "committed_build_dates": [
+              "20260928"
+            ],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/julia/1.13.1.json",
+            "expected_build_date": "20261012",
+            "exists": true,
+            "committed_build_dates": [
+              "20260928"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-12T22:58:57.525398+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-julia_arm64-6fb4d1f46c2f4b41c0327b1a8abce66178075333)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-julia-6fb4d1f46c2f4b41c0327b1a8abce66178075333)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T22:58:58.284443+00:00"
       }
     },
     {
@@ -12506,7 +13081,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T22:44:46.393327+00:00",
+        "checked_at": "2026-10-12T22:58:59.299762+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -12531,7 +13106,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T22:44:47.134775+00:00"
+        "metadata_checked_at": "2026-10-12T22:59:00.032212+00:00"
       }
     },
     {
@@ -13622,7 +14197,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T22:44:48.472218+00:00",
+        "checked_at": "2026-10-12T22:59:01.500121+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -13647,7 +14222,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T22:44:49.881708+00:00"
+        "metadata_checked_at": "2026-10-12T22:59:02.274655+00:00"
       }
     },
     {
@@ -15854,7 +16429,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T22:44:51.231926+00:00",
+        "checked_at": "2026-10-12T22:59:03.299534+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -15869,7 +16444,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T22:44:52.009276+00:00",
+        "metadata_checked_at": "2026-10-12T22:59:04.040657+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -17275,7 +17850,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T22:44:53.135424+00:00",
+        "checked_at": "2026-10-12T22:59:05.173354+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -17300,7 +17875,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T22:44:54.205171+00:00"
+        "metadata_checked_at": "2026-10-12T22:59:05.992100+00:00"
       }
     },
     {
@@ -17649,7 +18224,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T22:44:57.922862+00:00",
+        "checked_at": "2026-10-12T22:59:07.041367+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -17674,7 +18249,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T22:44:58.870782+00:00"
+        "metadata_checked_at": "2026-10-12T22:59:07.758469+00:00"
       }
     },
     {
@@ -17971,7 +18546,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T22:45:00.109610+00:00",
+        "checked_at": "2026-10-12T22:59:08.858882+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -17996,7 +18571,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T22:45:00.869764+00:00"
+        "metadata_checked_at": "2026-10-12T22:59:09.617602+00:00"
       }
     },
     {
@@ -20205,10 +20780,10 @@
     "local_validation": "4 regression tests pass; all builder1290passed/11host-dependent failures/4skipped; actionlint/Ruff/codespell pass. No baseline signing/deploy/tar/dpkg code changed."
   },
   "shared_publication_queue_observation": {
-    "checked_at": "2026-10-12T22:49:19.287986+00:00",
+    "checked_at": "2026-10-12T22:59:15.404609+00:00",
     "status": "queued-awaiting-publisher-runner",
     "shared_runner_label": "neurodesk-syd-arcrunner-neurocontainers",
-    "queued_jobs": 18,
+    "queued_jobs": 20,
     "promotions": [
       {
         "recipe": "apptainer",
@@ -20301,6 +20876,31 @@
           },
           {
             "id": 114859649489,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          }
+        ]
+      },
+      {
+        "recipe": "julia",
+        "run_id": 38318568095,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38318568095",
+        "jobs": [
+          {
+            "id": 115041350767,
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ]
+          },
+          {
+            "id": 115041350831,
             "status": "queued",
             "conclusion": null,
             "runner_name": "",
