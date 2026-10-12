@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-12T20:54:15.903068+00:00",
+  "checked_at": "2026-10-12T21:28:54.992089+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     {
@@ -468,6 +468,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "dicompare",
+      "source_sha": "355079c222a60cea8405c52a3bd978faad29abe7",
+      "run_id": 38304615691,
+      "reported_passed": 88,
+      "reported_total": 88,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "dicomtools",
       "source_sha": "983b27d1fd8aecf2da4d0244053fe8479149864a",
       "run_id": 38245306248,
@@ -481,6 +489,14 @@
       "run_id": 38224114491,
       "reported_passed": 6,
       "reported_total": 6,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "eharmonize",
+      "source_sha": "58ad6425526133992ec41cdc69046683888b66ed",
+      "run_id": 38308533745,
+      "reported_passed": 8,
+      "reported_total": 8,
       "nonzero_command_exits": 0
     },
     {
@@ -684,7 +700,7 @@
       "nonzero_command_exits": 0
     }
   ],
-  "reviewed_merged_recipe_count": 44,
+  "reviewed_merged_recipe_count": 46,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [],

@@ -1516,7 +1516,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T20:46:34.878959+00:00",
+        "checked_at": "2026-10-12T21:28:40.189439+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -1541,7 +1541,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T20:46:35.686302+00:00"
+        "metadata_checked_at": "2026-10-12T21:28:40.957070+00:00"
       }
     },
     {
@@ -2426,18 +2426,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-bidsme-20261012",
+      "baseline_sha": "476155d97cc3815e2912e00525e8ecbef8d12ac9",
+      "candidate_sha": "4a8ece48b61fb4dd502ed592b7a240fa3fcd5e86",
       "started_at": "2026-10-12T20:30:31.169604+00:00",
       "deadline": "2026-10-13T08:30:31.169604+00:00",
-      "attempts": 0,
-      "run_id": null,
+      "attempts": 4,
+      "run_id": 38310835773,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.9.6",
@@ -2450,7 +2450,70 @@
         "test_count": 81
       },
       "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
-      "preflight_note": "Reviewing current1.9.6 application CLI and existing masked dry-run/ROI tests. No candidate or build yet; fourth active investigation, persistent original timestamp/deadline."
+      "preflight_note": "Reviewing current1.9.6 application CLI and existing masked dry-run/ROI tests. No candidate or build yet; fourth active investigation, persistent original timestamp/deadline.",
+      "upstream_verification_mode": "runtime-only",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Preserve all81 BIDSme1.9.6 test intents and add actual synthetic MRI prepare/map/process/bidsify with exact copied float32 pixels, physical affine, BIDS output path, timing metadata and participant registration. Correct dry-run inputs to the real prepared dataset/map and require successful exits; repair invalid nib-roi CLI and assert exact crop/affine, require real conform output geometry/finite data, and assert documented negative CLI exits. No ignored failures, scientific implementation changes, numerical tolerance changes or image-input changes.",
+      "pr_title": "Verify real BIDSme conversion and strict image and CLI contracts",
+      "primary_source_review": [
+        "https://github.com/CyclotronResearchCentre/bidsme/blob/v1.9.6/doc/workflow.md",
+        "https://github.com/CyclotronResearchCentre/bidsme/blob/v1.9.6/doc/creating_map.md",
+        "https://github.com/CyclotronResearchCentre/bidsme/blob/v1.9.6/bidsme/Modules/MRI/jsonNIFTI.py",
+        "https://github.com/rordenlab/dcm2niix/blob/v1.0.20260724/console/main_console.cpp"
+      ],
+      "arm64_attempts": 4,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38310835773",
+      "attempt_history": [
+        {
+          "candidate_sha": "beeaeac236497ee4d2a0359e1a203e2ebee3d8a3",
+          "run_id": 38307630004,
+          "counts": {
+            "passed": 71,
+            "failed": 12,
+            "skipped": 0,
+            "total_tests": 83
+          },
+          "outcome": "failed-runtime",
+          "classification": "recipe-test-configuration",
+          "first_error": "Synthetic T1w map validation: NonlinearGradientCorrection/MRAcquisitionType/DwellTime/FlipAngle placeholders were empty; functional RepetitionTime field is not valid for this anatomical model. Separate old BIDS version assertion expected1.11.1 while installed schema is1.11.2. Actual prepare exact-image check, conform geometry, exact ROI and all negative CLI exits passed. Ten dependent pipeline cases could not run.",
+          "retry_hypothesis": "Provide typed realistic synthetic acquisition values and map anatomical RepetitionTimeExcitation from its known1second excitation interval. Compare CLI BIDS version exactly with installed bidsschematools schema, and use same version in fixture. Preserve all82 functional cases and every pixel/affine assertion; no runtime or schema validation bypass.",
+          "sources": [
+            "https://bids-specification.readthedocs.io/en/stable/modality-specific-files/magnetic-resonance-imaging-data.html"
+          ]
+        },
+        {
+          "candidate_sha": "a28cf5801875e1ce0f9cf45e4cc0cc605bb473a1",
+          "run_id": 38308418488,
+          "counts": {
+            "total_tests": 83,
+            "passed": 72,
+            "failed": 11,
+            "skipped": 0
+          },
+          "outcome": "failed-runtime",
+          "classification": "recipe-test-configuration",
+          "first_error": "Generated template.yaml four newly added sidecar mappings had incorrect indentation: ruamel.yaml ScannerError atline20column34. Actual prepare/pixels/participant passed; version assertion corrected and remaining original independent tests passed.",
+          "retry_hypothesis": "Indent all eight ordered sidecar mappings consistently. Parse the actual Python-generated template with all8 mappings locally before dispatch; retain strict actual pipeline, negative exits and exact image assertions."
+        },
+        {
+          "candidate_sha": "a41c0678fb0db8b4611f47cf67bf76105977cb03",
+          "run_id": 38309349274,
+          "counts": {
+            "total_tests": 83,
+            "passed": 72,
+            "failed": 11,
+            "skipped": 0
+          },
+          "outcome": "failed-runtime",
+          "classification": "recipe-test-configuration",
+          "first_error": "Actual prepare and exact pixels/affine/participants passed; actual map completed schema validation without errors. Process then correctly refused unchecked template run: Unchecked runs present. Fixture omitted mandatory documented map review, preventing10 dependent cases.",
+          "retry_hypothesis": "Perform official Step10 mapping review: assert one anat:T1w run, exact example/provenance/SeriesDescription, all8 known metadata expressions/values, then validate expected filename+sidecar with shipped BIDSschema. Remove empty optional fields per guide, mark only that verified run checked/non-template, rerun actual mapping and require review retained. Process and final bidsify still require exact image/metadata/participant output and final BIDSschema validation. No schema/test bypass.",
+          "sources": [
+            "https://github.com/CyclotronResearchCentre/bidsme/blob/v1.9.6/doc/creating_map.md#step-10---manual-validation"
+          ]
+        }
+      ]
     },
     {
       "recipe": "bidstools",
@@ -4154,7 +4217,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-12T20:46:37.001580+00:00",
+        "checked_at": "2026-10-12T21:28:42.539116+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -4179,7 +4242,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T20:46:37.790329+00:00"
+        "metadata_checked_at": "2026-10-12T21:28:43.341440+00:00"
       }
     },
     {
@@ -6323,7 +6386,7 @@
         ]
       },
       "port_files": [],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-dicompare-20261012",
       "baseline_sha": "ea209a0a0084f732012180aad5464328c8d01236",
       "candidate_sha": "355079c222a60cea8405c52a3bd978faad29abe7",
@@ -6332,9 +6395,85 @@
       "attempts": 4,
       "run_id": 38304615691,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3537",
-      "upstream_ci": {},
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "upstream_ci": {
+        "runtime_run_id": 38307198863,
+        "head_sha": "355079c222a60cea8405c52a3bd978faad29abe7",
+        "tested_merge_sha": "2802a50bf0071ba6e368ec896bf99e972fe8fa61",
+        "recipe_tree_matches_head": true,
+        "quality": "passed",
+        "release_gate": "passed",
+        "publication": "No image-input changes; verification builds are not release candidates.",
+        "aarch64": {
+          "runtime_observation": {
+            "container": "dicompare_arm64",
+            "version": "0.15.3",
+            "machine": "aarch64",
+            "status": "passed",
+            "observed_at": "2026-10-12T20:58:53.188437+00:00",
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38307198863",
+            "recipe_sha256": "13d7baf2ffca12db8cc67caea0ce8a3f4d3ec012c45d5477dae39b8e546e258b",
+            "image_id": "sha256:2ad58080135af7ac32243132d8737ff63be4c89cfca7ea21044bab14609d3248",
+            "candidate_sha256": "d4465759d928240c8d778979250832be1f651bf9f80e572cf66edae306bcb4dc"
+          },
+          "counts": {
+            "total_tests": 88,
+            "passed": 88,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 42.695361852645874,
+            "run_timestamp": "2026-10-12T20:58:53.055380",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 87,
+            "total_suites": 1,
+            "total_tests": 87
+          },
+          "artifact_name": "recipe-check-dicompare_arm64-2802a50bf0071ba6e368ec896bf99e972fe8fa61",
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38307198863/job/115004292300",
+          "runner_labels": [
+            "blacksmith-8vcpu-ubuntu-2404-arm"
+          ]
+        },
+        "x86_64": {
+          "runtime_observation": {
+            "container": "dicompare",
+            "version": "0.15.3",
+            "machine": "x86_64",
+            "status": "passed",
+            "observed_at": "2026-10-12T20:58:02.819171+00:00",
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38307198863",
+            "recipe_sha256": "13d7baf2ffca12db8cc67caea0ce8a3f4d3ec012c45d5477dae39b8e546e258b",
+            "image_id": "sha256:98c3f58c3a121630db3197d1b04ec266d75f748c688cf88f452305d155d45a73",
+            "candidate_sha256": "556e709ed13b39c7374c8761555d1fae6df259cb76efc13c189393ade5d52552"
+          },
+          "counts": {
+            "total_tests": 88,
+            "passed": 88,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 32.253169298172,
+            "run_timestamp": "2026-10-12T20:58:02.757776",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 87,
+            "total_suites": 1,
+            "total_tests": 87
+          },
+          "artifact_name": "recipe-check-dicompare-2802a50bf0071ba6e368ec896bf99e972fe8fa61",
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38307198863/job/115004292450",
+          "runner_labels": [
+            "blacksmith-8vcpu-ubuntu-2404"
+          ]
+        }
+      },
+      "merged_sha": "c7f7754d1fbe036798049004e8d5e267468ff3e9",
+      "next_action": "Native exact-head proof and both upstream merge-source runtime suites verified before individual PR merge. No image-input changes or new release required.",
       "upstream_review": {
         "exists": true,
         "version": "0.15.3",
@@ -6425,7 +6564,24 @@
         ]
       },
       "pending_upstream_issue": 3537,
-      "pr_number": 3537
+      "pr_number": 3537,
+      "merged_at": "2026-10-12T21:02:15Z",
+      "release_metadata_audit": {
+        "status": "not-applicable-test-only",
+        "checked_at": "2026-10-12T21:02:16.859958+00:00",
+        "note": "Only fulltest.yaml changed. The release plan has no image candidate; verification builds must not advance generated release metadata.",
+        "automatic_workflow_observation": {
+          "run_id": 38308087778,
+          "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38308087778",
+          "conclusion": "success",
+          "resolve": "success",
+          "publish": "skipped",
+          "finalize": "skipped",
+          "artifact_count": 0,
+          "checked_at": "2026-10-12T21:13:05.969567+00:00",
+          "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
+        }
+      }
     },
     {
       "recipe": "dicomtools",
@@ -7080,18 +7236,191 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
-      "pr_url": null,
-      "upstream_ci": null,
-      "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "status": "merged",
+      "branch": "arm64/upstream-eharmonize-20261012",
+      "baseline_sha": "c7f7754d1fbe036798049004e8d5e267468ff3e9",
+      "candidate_sha": "58ad6425526133992ec41cdc69046683888b66ed",
+      "started_at": "2026-10-12T20:58:34.356359+00:00",
+      "deadline": "2026-10-13T08:58:34.356359+00:00",
+      "attempts": 3,
+      "run_id": 38308533745,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3538",
+      "upstream_ci": {
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "eharmonize",
+          "container": "eharmonize_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.0.0",
+          "build_date": "20261013",
+          "docker_archive": "eharmonize_arm64_1.0.0_20261013.docker.tar",
+          "sif": "eharmonize_arm64_1.0.0_20261013.simg",
+          "candidate_tag": "nd-candidate-eharmonize_arm64:58ad64255261",
+          "launcher": null,
+          "pr_number": 3538,
+          "head_sha": "58ad6425526133992ec41cdc69046683888b66ed",
+          "tests": {
+            "total": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 7,
+            "fulltest_passed": 7,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "eharmonize binary in PATH",
+              "eharmonize help output",
+              "harmonize-fa help output",
+              "Python runtime available",
+              "eharmonize package metadata",
+              "Actual reference harmonization and saved model",
+              "Compatible pandas and NumPy runtimes"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "788 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.1222,
+            "wasted_bytes": 17912274,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 1.6402
+          }
+        },
+        "candidate_run_id": 38309131218,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38309131218",
+        "native_job_review": {
+          "aarch64": {
+            "head_sha": "58ad6425526133992ec41cdc69046683888b66ed",
+            "job_id": 115010397544,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38309131218/job/115010397544",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "x86_64": {
+            "head_sha": "58ad6425526133992ec41cdc69046683888b66ed",
+            "job_id": 115010396663,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38309131218/job/115010396663",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "eharmonize",
+          "container": "eharmonize",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.0.0",
+          "build_date": "20261013",
+          "docker_archive": "eharmonize_1.0.0_20261013.docker.tar",
+          "sif": "eharmonize_1.0.0_20261013.simg",
+          "candidate_tag": "nd-candidate-eharmonize:58ad64255261",
+          "launcher": null,
+          "pr_number": 3538,
+          "head_sha": "58ad6425526133992ec41cdc69046683888b66ed",
+          "tests": {
+            "total": 8,
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 7,
+            "fulltest_passed": 7,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "eharmonize binary in PATH",
+              "eharmonize help output",
+              "harmonize-fa help output",
+              "Python runtime available",
+              "eharmonize package metadata",
+              "Actual reference harmonization and saved model",
+              "Compatible pandas and NumPy runtimes"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "788 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.1288,
+            "wasted_bytes": 18919151,
+            "wasted_bytes_display": "19 MB",
+            "user_wasted_percent": 1.6014
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
+      },
+      "merged_sha": "e1c866ef60cfe99f148e5e310eec25c1491fc75b",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -7103,7 +7432,110 @@
         "fulltest_version": "1.0.0",
         "test_count": 5
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "preflight_note": "Current pinned official ENIGMA harmonization source review; five original cases only prove help/metadata. Add a real small reference harmonization if supported by bundled resources, preserving scientific behavior. No build dispatched.",
+      "change_summary": "Restore real eHarmonize lifespan reference harmonization with published Python3.10/pandas1.5.3/NumPy1.26.4 packages. The unchanged pinned application uses Series.iteritems removed by pandas2; pin its original official neuroHarmonize dependency to the reviewed current commit and track it independently. Preserve both architectures and all5 original tests, adding actual ComBat-GAM fitting for56 synthetic controls/3ROI/two sites against bundled reference curves, reduced known site offsets, finite physiological FA, exact covariates, saved-model reapplication and real QC PNGs. No scientific implementation or private library patch.",
+      "pr_title": "Restore eHarmonize runtime compatibility and verify actual reference harmonization",
+      "primary_source_review": [
+        "https://raw.githubusercontent.com/ahzhu/eharmonize/15e981551693a479753b29ce39f2745420c1facf/README.md",
+        "https://pandas.pydata.org/docs/whatsnew/v2.0.0.html",
+        "https://pypi.org/pypi/pandas/1.5.3/json",
+        "https://pypi.org/pypi/numpy/1.26.4/json",
+        "https://github.com/ahzhu/neuroHarmonize/tree/c03e409eae5956f290916548fecf4ab0cc351932"
+      ],
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38308533745",
+      "native_command_exit_review": {
+        "source_sha": "58ad6425526133992ec41cdc69046683888b66ed",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "58ad6425526133992ec41cdc69046683888b66ed",
+        "version": "1.0.0",
+        "counts": {
+          "total_tests": 8,
+          "passed": 8,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 19.22180485725403,
+          "run_timestamp": "2026-10-12T21:10:26.368216",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 7,
+          "total_suites": 1,
+          "total_tests": 7
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38308533745",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3538,
+      "pr_number": 3538,
+      "merged_at": "2026-10-12T21:19:37Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38309924254,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38309924254",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/eharmonize_arm64/1.0.0.json",
+            "expected_build_date": "20261013",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/eharmonize/1.0.0.json",
+            "expected_build_date": "20261013",
+            "exists": true,
+            "committed_build_dates": [
+              "20260611"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-12T21:28:46.542572+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-eharmonize_arm64-58ad6425526133992ec41cdc69046683888b66ed)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-eharmonize-58ad6425526133992ec41cdc69046683888b66ed)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-12T21:28:47.297192+00:00"
+      }
     },
     {
       "recipe": "elastix",
@@ -8455,7 +8887,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T20:46:38.951407+00:00",
+        "checked_at": "2026-10-12T21:28:48.368934+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -8480,7 +8912,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T20:46:39.732753+00:00"
+        "metadata_checked_at": "2026-10-12T21:28:49.119119+00:00"
       }
     },
     {
@@ -10544,7 +10976,7 @@
         }
       },
       "external_progress": {
-        "status": "running",
+        "status": "failed-runtime",
         "pr_number": 3536,
         "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3536",
         "head_sha": "2db0f5fb5b87e659fa8afc71d3abc8e690a3557a",
@@ -10557,7 +10989,191 @@
             "conclusion": "cancelled",
             "reason": "Independent label/CI refresh; no cancellation or rerun requested by this agent."
           }
-        ]
+        ],
+        "proofs": {
+          "x86_64": {
+            "report": {
+              "schema_version": 3,
+              "recipe": "julia",
+              "container": "julia",
+              "variant": "",
+              "architecture": "x86_64",
+              "version": "1.13.1",
+              "build_date": "20261012",
+              "docker_archive": "julia_1.13.1_20261012.docker.tar",
+              "sif": "julia_1.13.1_20261012.simg",
+              "candidate_tag": "nd-candidate-julia:2db0f5fb5b87",
+              "launcher": "julia",
+              "pr_number": 3536,
+              "head_sha": "2db0f5fb5b87e659fa8afc71d3abc8e690a3557a",
+              "tests": {
+                "total": 140,
+                "passed": 140,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 139,
+                "fulltest_passed": 139,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "Packages work without a writable home",
+                  "Version check",
+                  "Help output",
+                  "Hidden help options",
+                  "Version constant",
+                  "System kernel info",
+                  "Word size check",
+                  "Julia home directory",
+                  "Basic addition",
+                  "Basic subtraction",
+                  "Basic multiplication",
+                  "Basic division",
+                  "Integer division",
+                  "Modulo operation",
+                  "Power operation",
+                  "Float arithmetic",
+                  "Complex numbers",
+                  "Square root",
+                  "Absolute value"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "9.1 MB",
+                    "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/libs/plotly/plotly.min.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "5.1 MB",
+                    "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js.map"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "4.3 MB",
+                    "path": "/opt/vscode-extensions/korbinianeckstein.niivue-2.9.0/niivue/index.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "4.2 MB",
+                    "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js"
+                  },
+                  {
+                    "count": 5,
+                    "wasted_space": "3.6 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  }
+                ],
+                "efficiency_percent": 97.8797,
+                "wasted_bytes": 115858892,
+                "wasted_bytes_display": "116 MB",
+                "user_wasted_percent": 4.0811
+              }
+            },
+            "job_id": 115002366224,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38306507750/job/115002366224",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "artifact_name": "candidate-report-julia-2db0f5fb5b87e659fa8afc71d3abc8e690a3557a",
+            "fresh_native_docker_sif_deploy_fulltest_dive_manifest_gates": "success"
+          }
+        },
+        "failed_architecture": "aarch64",
+        "failed_report": {
+          "schema_version": 3,
+          "recipe": "julia",
+          "container": "julia_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.13.1",
+          "build_date": "20261012",
+          "docker_archive": "julia_arm64_1.13.1_20261012.docker.tar",
+          "sif": "julia_arm64_1.13.1_20261012.simg",
+          "candidate_tag": "nd-candidate-julia_arm64:2db0f5fb5b87",
+          "launcher": "julia",
+          "pr_number": 3536,
+          "head_sha": "2db0f5fb5b87e659fa8afc71d3abc8e690a3557a",
+          "tests": {
+            "total": 140,
+            "passed": 139,
+            "failed": 1,
+            "skipped": 0,
+            "fulltest_total": 139,
+            "fulltest_passed": 138,
+            "fulltest_failed": 1,
+            "suites_total": 1,
+            "suites_passed": 0,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Packages work without a writable home",
+              "Version check",
+              "Help output",
+              "Hidden help options",
+              "Version constant",
+              "System kernel info",
+              "Word size check",
+              "Julia home directory",
+              "Basic addition",
+              "Basic subtraction",
+              "Basic multiplication",
+              "Basic division",
+              "Integer division",
+              "Modulo operation",
+              "Power operation",
+              "Float arithmetic",
+              "Complex numbers",
+              "Square root",
+              "Absolute value"
+            ],
+            "failed_tests": [
+              "Load IJulia package"
+            ]
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.1 MB",
+                "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/libs/plotly/plotly.min.js"
+              },
+              {
+                "count": 2,
+                "wasted_space": "5.1 MB",
+                "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js.map"
+              },
+              {
+                "count": 2,
+                "wasted_space": "4.3 MB",
+                "path": "/opt/vscode-extensions/korbinianeckstein.niivue-2.9.0/niivue/index.js"
+              },
+              {
+                "count": 2,
+                "wasted_space": "4.2 MB",
+                "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.6 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              }
+            ],
+            "efficiency_percent": 97.8629,
+            "wasted_bytes": 115858033,
+            "wasted_bytes_display": "116 MB",
+            "user_wasted_percent": 4.1022
+          }
+        },
+        "first_error": "Load IJulia package timed out after120s. Actual ZeroMQ request/reply and distributed native computations passed, as did new no-HOME worker test. ARM functional138/139; combined139/140, x86all140. Current source not verified/accepted; original merged6dc8d4e139/139 proof remains separate.",
+        "next_action": "Await independent fix/proof; no own eighth build or merge of failing followup. Original7observed-attempt total and deadline retained."
       }
     },
     {
@@ -12466,7 +13082,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T20:46:42.851314+00:00",
+        "checked_at": "2026-10-12T21:28:50.282336+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -12491,7 +13107,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T20:46:43.620603+00:00"
+        "metadata_checked_at": "2026-10-12T21:28:51.021019+00:00"
       }
     },
     {
@@ -14257,18 +14873,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-openrefine-20261012",
+      "baseline_sha": "c7f7754d1fbe036798049004e8d5e267468ff3e9",
+      "candidate_sha": "53688a6dceaff1d09f0bfebfc29e6d0912430271",
+      "started_at": "2026-10-12T21:07:52.224367+00:00",
+      "deadline": "2026-10-13T09:07:52.224367+00:00",
+      "attempts": 3,
+      "run_id": 38310669967,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "3.10.1",
@@ -14280,7 +14896,58 @@
         "fulltest_version": "3.10.1",
         "test_count": 1
       },
-      "pr_plan": "Current fulltest only checks a wrapper version string. Add a real local web-server operation with isolated writable workspace, create/import a small CSV project and assert returned rows/values. Preserve version test; upstream-test the candidate explicitly if classified source-only."
+      "pr_plan": "Current fulltest only checks a wrapper version string. Add a real local web-server operation with isolated writable workspace, create/import a small CSV project and assert returned rows/values. Preserve version test; upstream-test the candidate explicitly if classified source-only.",
+      "preflight_note": "Official OpenRefine3.10.1 API review for real CSV import/transformation/export using existing Java server and curl, preserving original version check and image inputs. No open duplicate PR observed; fourth investigation alongside independent Julia/BIDSme/eHarmonize.",
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Fix OpenRefine3.10.1 startup when inherited host JAVA_HOME is absent in the image: fall back to its existing installed Java via the upstream launcher PATH lookup, preserving valid explicit JAVA_HOME. Retain version check and add real CSRF-protected three-row CSV import, GREL trim/uppercase and exact before/after export through the deployed server. Private writable workspace/port and owned-process cleanup. No Java/application dependency changes or scientific implementation patch.",
+      "pr_title": "Fix inherited Java runtime paths and verify real OpenRefine data cleaning",
+      "primary_source_review": [
+        "https://openrefine.org/docs/technical-reference/openrefine-api",
+        "https://github.com/OpenRefine/OpenRefine/blob/3.10.1/main/src/com/google/refine/commands/project/CreateProjectCommand.java",
+        "https://github.com/OpenRefine/OpenRefine/blob/3.10.1/main/src/com/google/refine/commands/cell/TextTransformCommand.java",
+        "https://github.com/OpenRefine/OpenRefine/blob/3.10.1/main/src/com/google/refine/commands/project/ExportRowsCommand.java"
+      ],
+      "arm64_attempts": 3,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38310669967",
+      "attempt_history": [
+        {
+          "candidate_sha": "de85738aae0fb90d98997137319590d8de9a0b8e",
+          "run_id": 38308973996,
+          "counts": {
+            "total_tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0
+          },
+          "outcome": "failed-runtime",
+          "classification": "recipe-runtime-environment",
+          "first_error": "OpenRefine actual launcher could not find java at inherited host JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-arm64; container installs Ubuntu OpenJDK17 at its own path. Vendor refine script chooses JAVA_HOME before PATH. Docker/SIF/deploy and old version check passed.",
+          "retry_hypothesis": "If a nonempty inherited JAVA_HOME has no executable bin/java inside the container, unset it and let the unchanged vendor launcher select installed java from PATH. Preserve valid explicit JAVA_HOME. Exercise fallback with an explicitly absent host path, retaining all exact import/transform/export assertions. This is a small wrapper configuration fix on both architectures, not an ARM library port.",
+          "sources": [
+            "https://github.com/OpenRefine/OpenRefine/blob/3.10.1/refine#L625-L645"
+          ]
+        },
+        {
+          "candidate_sha": "c3a0f2bce77db7e1d934687a137adc6ad79b5258",
+          "run_id": 38309736044,
+          "counts": {
+            "total_tests": 3,
+            "passed": 2,
+            "failed": 1,
+            "skipped": 0
+          },
+          "outcome": "failed-runtime",
+          "classification": "recipe-test-configuration",
+          "first_error": "Actual Java fallback, server, CSRF and CSV import passed. Byte comparison of uncleaned export differs at byte31 because shipped CsvWriter uses default whitespace trimming. Stored imported cells must be inspected independently of export normalization.",
+          "retry_hypothesis": "Require all nine raw string cells in exact order via actual get-rows API, including both surrounding spaces, plus exact total3. Retain actual GREL transformation and exact final CSV output. No scientific tolerance change or failure suppression.",
+          "sources": [
+            "https://github.com/OpenRefine/OpenRefine/blob/3.10.1/main/src/com/google/refine/exporters/CsvExporter.java",
+            "https://github.com/uniVocity/univocity-parsers/blob/v2.9.1/src/main/java/com/univocity/parsers/common/CommonSettings.java"
+          ]
+        }
+      ]
     },
     {
       "recipe": "palm",
@@ -15679,7 +16346,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T20:46:44.684416+00:00",
+        "checked_at": "2026-10-12T21:28:52.083493+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -15704,7 +16371,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T20:46:45.478735+00:00"
+        "metadata_checked_at": "2026-10-12T21:28:52.818954+00:00"
       }
     },
     {
@@ -16093,7 +16760,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T20:46:48.741211+00:00",
+        "checked_at": "2026-10-12T21:28:54.053074+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -16118,7 +16785,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T20:46:49.499508+00:00"
+        "metadata_checked_at": "2026-10-12T21:28:54.863041+00:00"
       }
     },
     {
@@ -18287,10 +18954,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "sha": "fe6eeaeda4e781017870326f661d4f2d902f128e",
-    "synced_at": "2026-10-12T20:53:55.987940+00:00",
-    "actions_enabled": false,
-    "method": "normal fast-forward push from reviewed upstream/main"
+    "sha": "e1c866ef60cfe99f148e5e310eec25c1491fc75b",
+    "checked_at": "2026-10-12T21:28:39.133010+00:00",
+    "fork_actions_enabled": false
   },
   "runtime_release_routing_fix": {
     "status": "merged",

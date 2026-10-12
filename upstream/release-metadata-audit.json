@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T20:46:49.500212+00:00",
+  "checked_at": "2026-10-12T21:28:54.863797+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -225,7 +225,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T20:46:34.878959+00:00",
+      "checked_at": "2026-10-12T21:28:40.189439+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -250,7 +250,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T20:46:35.686302+00:00"
+      "metadata_checked_at": "2026-10-12T21:28:40.957070+00:00"
     },
     {
       "recipe": "bart",
@@ -483,7 +483,7 @@
           "current_candidate_date_committed": true
         }
       ],
-      "checked_at": "2026-10-12T20:46:37.001580+00:00",
+      "checked_at": "2026-10-12T21:28:42.539116+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -508,7 +508,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T20:46:37.790329+00:00"
+      "metadata_checked_at": "2026-10-12T21:28:43.341440+00:00"
     },
     {
       "recipe": "clearswi",
@@ -851,6 +851,58 @@
       "metadata_checked_at": "2026-10-12T10:41:30.359464+00:00"
     },
     {
+      "recipe": "eharmonize",
+      "promotion_run_id": 38309924254,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38309924254",
+      "status": "pending-promotion",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/eharmonize_arm64/1.0.0.json",
+          "expected_build_date": "20261013",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/eharmonize/1.0.0.json",
+          "expected_build_date": "20261013",
+          "exists": true,
+          "committed_build_dates": [
+            "20260611"
+          ],
+          "current_candidate_date_committed": false
+        }
+      ],
+      "checked_at": "2026-10-12T21:28:46.542572+00:00",
+      "workflow_status": "queued",
+      "workflow_conclusion": null,
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-eharmonize_arm64-58ad6425526133992ec41cdc69046683888b66ed)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-eharmonize-58ad6425526133992ec41cdc69046683888b66ed)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-12T21:28:47.297192+00:00"
+    },
+    {
       "recipe": "fsqc",
       "promotion_run_id": 38221551205,
       "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38221551205",
@@ -943,7 +995,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T20:46:38.951407+00:00",
+      "checked_at": "2026-10-12T21:28:48.368934+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -968,7 +1020,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T20:46:39.732753+00:00"
+      "metadata_checked_at": "2026-10-12T21:28:49.119119+00:00"
     },
     {
       "recipe": "gingerale",
@@ -1265,7 +1317,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T20:46:42.851314+00:00",
+      "checked_at": "2026-10-12T21:28:50.282336+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -1290,7 +1342,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T20:46:43.620603+00:00"
+      "metadata_checked_at": "2026-10-12T21:28:51.021019+00:00"
     },
     {
       "recipe": "modsort",
@@ -1521,7 +1573,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T20:46:44.684416+00:00",
+      "checked_at": "2026-10-12T21:28:52.083493+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -1546,7 +1598,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T20:46:45.478735+00:00"
+      "metadata_checked_at": "2026-10-12T21:28:52.818954+00:00"
     },
     {
       "recipe": "rapidtide",
@@ -1573,7 +1625,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T20:46:48.741211+00:00",
+      "checked_at": "2026-10-12T21:28:54.053074+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -1598,7 +1650,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T20:46:49.499508+00:00"
+      "metadata_checked_at": "2026-10-12T21:28:54.863041+00:00"
     },
     {
       "recipe": "topaz",
@@ -1682,6 +1734,7 @@
     "deep-quality-estimation: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38227134210)",
     "dicomtools: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38247345717)",
     "dwidenoise2: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38227215604)",
+    "eharmonize: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38309924254)",
     "fsqc: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38221551205)",
     "gigaconnectome: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38263440929)",
     "gingerale: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38258952820)",
@@ -2435,6 +2488,23 @@
       }
     },
     {
+      "recipe": "dicompare",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3537",
+      "merge_sha": "c7f7754d1fbe036798049004e8d5e267468ff3e9",
+      "note": "Fulltest-only change; no image-input change or new release required.",
+      "automatic_workflow_observation": {
+        "run_id": 38308087778,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38308087778",
+        "conclusion": "success",
+        "resolve": "success",
+        "publish": "skipped",
+        "finalize": "skipped",
+        "artifact_count": 0,
+        "checked_at": "2026-10-12T21:13:05.969567+00:00",
+        "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
+      }
+    },
+    {
       "recipe": "functionnectome",
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3508",
       "merge_sha": "77d42f3b3e7b5502388657aa6b97a4f392279be5",
@@ -2482,6 +2552,23 @@
         "finalize": "skipped",
         "artifact_count": 0,
         "checked_at": "2026-10-12T18:21:04.768836+00:00",
+        "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
+      }
+    },
+    {
+      "recipe": "heudiconv",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3535",
+      "merge_sha": "476155d97cc3815e2912e00525e8ecbef8d12ac9",
+      "note": "Fulltest-only change; no image-input change or new release required.",
+      "automatic_workflow_observation": {
+        "run_id": 38306750043,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38306750043",
+        "conclusion": "success",
+        "resolve": "success",
+        "publish": "skipped",
+        "finalize": "skipped",
+        "artifact_count": 0,
+        "checked_at": "2026-10-12T20:54:27.662194+00:00",
         "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
       }
     },
@@ -2618,23 +2705,6 @@
         "finalize": "skipped",
         "artifact_count": 0,
         "checked_at": "2026-10-12T18:42:33.070343+00:00",
-        "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
-      }
-    },
-    {
-      "recipe": "heudiconv",
-      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3535",
-      "merge_sha": "476155d97cc3815e2912e00525e8ecbef8d12ac9",
-      "note": "Fulltest-only change; no image-input change or new release required.",
-      "automatic_workflow_observation": {
-        "run_id": 38306750043,
-        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38306750043",
-        "conclusion": "success",
-        "resolve": "success",
-        "publish": "skipped",
-        "finalize": "skipped",
-        "artifact_count": 0,
-        "checked_at": "2026-10-12T20:54:27.662194+00:00",
         "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
       }
     }
