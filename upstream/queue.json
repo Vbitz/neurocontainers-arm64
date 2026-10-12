@@ -2034,18 +2034,18 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-bidsmanager-20261012",
       "baseline_sha": "5cc1750273af4a78bb62b98376d09f0188937733",
       "candidate_sha": "64eb9e1a67908617b0b591e78cfa06f573c66dd8",
       "started_at": "2026-10-12T18:17:59.717422+00:00",
       "deadline": "2026-10-13T06:17:59.717422+00:00",
-      "attempts": 2,
+      "attempts": 4,
       "run_id": 38290676442,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3525",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "1.4.1",
@@ -2067,8 +2067,8 @@
         "https://pypi.org/pypi/bids-manager/1.4.1/json",
         "https://github.com/ANCPLabOldenburg/BIDS-Manager"
       ],
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38290676442",
       "attempt_history": [
         {
@@ -2084,7 +2084,44 @@
           "first_error": "New workspace operation used ${output_dir} without declaring it in test_data, so the quoted Python path remained literal and did not exist. Docker/SIF/deploy and all8 existing cases passed; workspace operation never ran.",
           "retry_hypothesis": "Declare output_dir=test_output using the shared fulltest variable contract. Keep every workspace/idempotency/metadata assertion unchanged."
         }
-      ]
+      ],
+      "native_command_exit_review": {
+        "source_sha": "64eb9e1a67908617b0b591e78cfa06f573c66dd8",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "64eb9e1a67908617b0b591e78cfa06f573c66dd8",
+        "version": "1.4.1",
+        "counts": {
+          "total_tests": 10,
+          "passed": 10,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 6.933114051818848,
+          "run_timestamp": "2026-10-12T18:28:01.737951",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 9,
+          "total_suites": 1,
+          "total_tests": 9
+        },
+        "deploy_counts": {
+          "total": 9,
+          "passed": 9,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38290676442",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3525,
+      "pr_number": 3525
     },
     {
       "recipe": "bidsme",
@@ -2143,7 +2180,7 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-bidstools-20261012",
       "baseline_sha": "5cc1750273af4a78bb62b98376d09f0188937733",
       "candidate_sha": "98f3bcca610abdbef20b907b45bbfe16a5d61c7e",
@@ -2154,7 +2191,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "1.3.0",
@@ -2178,7 +2215,42 @@
       ],
       "arm64_attempts": 1,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38290727923"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38290727923",
+      "native_command_exit_review": {
+        "source_sha": "98f3bcca610abdbef20b907b45bbfe16a5d61c7e",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "98f3bcca610abdbef20b907b45bbfe16a5d61c7e",
+        "version": "1.3.0",
+        "counts": {
+          "total_tests": 13,
+          "passed": 13,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 1.7088778018951416,
+          "run_timestamp": "2026-10-12T18:30:09.072902",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 12,
+          "total_suites": 1,
+          "total_tests": 12
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38290727923",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "bidsvue",
@@ -4843,6 +4915,21 @@
           "checked_at": "2026-10-12T18:21:02.492671+00:00",
           "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
         }
+      },
+      "independent_version_path_followup": {
+        "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3523",
+        "head_sha": "ae05d84ee21ebb7d024b07e793c1cf2d8b2f9625",
+        "merge_sha": "5cc1750273af4a78bb62b98376d09f0188937733",
+        "original_tested_source": "4d950f4bbc97683bf411a26c354040265a2c09dd",
+        "resolved_full_suite_identical_at_version": "1.1.0",
+        "identical_build_runtime_paths": [
+          "recipes/cosmomvpa/build.yaml",
+          "builder",
+          "workflows",
+          "pyproject.toml",
+          "uv.lock"
+        ],
+        "note": "Independent followup replaces five literal install paths with ${version}. Parsed full suite is exactly equal after literal version substitution at current1.1.0. Original native and both upstream reports retain their actual SHAs; no rebuild or exact new-head source claim."
       }
     },
     {
@@ -12372,18 +12459,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-niftyreg-20261012",
+      "baseline_sha": "513d3be8fec108509d414989c7324a85481930ea",
+      "candidate_sha": "2c7fb070118a7bb8f01c7f6647d2c798c53b7eb7",
+      "started_at": "2026-10-12T18:33:17.913626+00:00",
+      "deadline": "2026-10-13T06:33:17.913626+00:00",
+      "attempts": 1,
+      "run_id": 38291802437,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.2",
@@ -12395,7 +12482,17 @@
         "fulltest_version": "2.1.2",
         "test_count": 88
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "upstream_verification_mode": "runtime-only",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Preserve all88 current NiftyReg2.1.2 cases and add analytical affine inversion plus noncommuting composition. Anisotropic powers-of-two scales and integer translations require exact16-element inverse, both composition orders and identity roundtrip; reject nonfinite/non-numeric values. Official reg_transform2.1.2 defines Trans3(x)=Trans2(Trans1(x)); no image inputs, dependencies, implementation or numerical tolerances change. Private writable scratch directory and all CLI failures propagate.",
+      "pr_title": "Verify exact affine inversion and composition order for NiftyReg",
+      "primary_source_review": [
+        "https://github.com/KCL-BMEIS/niftyreg/blob/v2.1.2/reg-apps/reg_transform.cpp"
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38291802437"
     },
     {
       "recipe": "nighres",
@@ -15882,7 +15979,7 @@
         ]
       },
       "port_files": [],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-vina-20261012",
       "baseline_sha": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
       "candidate_sha": "96ad9fa94061d35848b8efa57bf1a2cb4b8e9a24",
@@ -15893,10 +15990,12 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3524",
       "upstream_ci": {
         "runtime_run_id": 38289152523,
-        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38289152523",
         "head_sha": "96ad9fa94061d35848b8efa57bf1a2cb4b8e9a24",
         "tested_merge_sha": "b7d2bd02bcc9d5343fa296c08b99a9b6463dc42a",
         "recipe_tree_matches_head": true,
+        "quality": "passed",
+        "release_gate": "passed",
+        "publication": "No image-input changes; verification builds are not release candidates.",
         "aarch64": {
           "runtime_observation": {
             "container": "vina_arm64",
@@ -15929,8 +16028,7 @@
           "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38289152523/job/114945594948",
           "runner_labels": [
             "blacksmith-8vcpu-ubuntu-2404-arm"
-          ],
-          "actual_command_exit_review": "All unusual exits match source-specific explicit expected contracts; zero unexpected exits."
+          ]
         },
         "x86_64": {
           "runtime_observation": {
@@ -15964,12 +16062,11 @@
           "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38289152523/job/114945594983",
           "runner_labels": [
             "blacksmith-8vcpu-ubuntu-2404"
-          ],
-          "actual_command_exit_review": "All unusual exits match source-specific explicit expected contracts; zero unexpected exits."
+          ]
         }
       },
-      "merged_sha": null,
-      "next_action": "Exact upstreamx86_64 9/9 and merge-parent/recipe-tree/build-hash proof reviewed. Await other actual architecture report and all gates; retain successful proof.",
+      "merged_sha": "513d3be8fec108509d414989c7324a85481930ea",
+      "next_action": "Native exact-head proof and both upstream merge-source runtime suites verified before individual PR merge. No image-input changes or new release required.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.5",
@@ -16048,7 +16145,13 @@
         ]
       },
       "pending_upstream_issue": 3524,
-      "pr_number": 3524
+      "pr_number": 3524,
+      "merged_at": "2026-10-12T18:30:44Z",
+      "release_metadata_audit": {
+        "status": "not-applicable-test-only",
+        "checked_at": "2026-10-12T18:30:46.607043+00:00",
+        "note": "Only fulltest.yaml changed. The release plan has no image candidate; verification builds must not advance generated release metadata."
+      }
     },
     {
       "recipe": "wftfi",
@@ -16197,9 +16300,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "sha": "8a3e5382b520328dbbfb75be8362b5af0b7dd7dd",
+    "sha": "513d3be8fec108509d414989c7324a85481930ea",
     "actions_enabled": false,
-    "method": "normal fast-forward; no workflow enabled"
+    "method": "normal fast-forward; workflows retained disabled"
   },
   "runtime_release_routing_fix": {
     "status": "merged",

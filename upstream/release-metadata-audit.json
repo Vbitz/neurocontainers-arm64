@@ -2344,6 +2344,12 @@
         "checked_at": "2026-10-12T18:21:05.779924+00:00",
         "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
       }
+    },
+    {
+      "recipe": "vina",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3524",
+      "merge_sha": "513d3be8fec108509d414989c7324a85481930ea",
+      "note": "Fulltest-only change; no image-input change or new release required."
     }
   ],
   "historical_recipe_promotions": [
