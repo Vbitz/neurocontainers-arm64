@@ -3512,3 +3512,17 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - `irkernel` current-upstream native [run 38230695316](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38230695316) dispatched at exact `f97ae4e088d8c2ae2c9d477e156b379ddbd64662`; attempts 1/6 total; deadline `2026-10-12T21:33:02.840468+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
 
 - AMICO test-only merge automaticworkflow38230536191 completed successfully: resolve passed, publication/finalize skipped, zero artifacts. No generated release metadata or image publication produced. Active exact native runs: CLEARSWI38226596227, BrainLes retry38229808747, Apptainer38230281758, IRkernel38230695316; all original budgets retained.
+
+- Apptainer38230281758 passed image/architecture/SIF/deploy and5old CLI tests. New nested test failed before running: missing declared output_dir (unbound variable). Add standard test_data.output_dir, preserving all nested assertions and Go fix; fresh source native retry required. Original attempts1/6 and deadline retained.
+
+- `apptainer` current-upstream native [run 38231273203](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38231273203) dispatched at exact `7ad06c20dca161f6f53b2141234eff61cbe5d829`; attempts 2/6 total; deadline `2026-10-12T21:26:34.723292+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
+
+- `clearswi` exact current-upstream `99a4f077604e3b6e28d16f328a0b7b45204e5b63` native verified: **68/68**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38226596227). Await its own upstream PR and dual-architecture verification before merge.
+
+- `brainles-aurora` exact current-upstream `12dd9fd8e64ffa76ae7eeec61d82a884958ecfff` native verified: **15/15**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38229808747). Await its own upstream PR and dual-architecture verification before merge.
+
+- `clearswi` individual upstream [PR #3502](https://github.com/neurodesk/neurocontainers/pull/3502) opened at exact native-verified `99a4f077604e3b6e28d16f328a0b7b45204e5b63` (68/68, zero failures/skips). Total builds now 3/6 including both upstream architecture candidates; deadline `2026-10-12T20:54:45.227424+00:00`. Require actual upstream reports and all required checks before authorized merge.
+
+- `irkernel` exact current-upstream `f97ae4e088d8c2ae2c9d477e156b379ddbd64662` native verified: **6/6**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38230695316). Await its own upstream PR and dual-architecture verification before merge.
+
+- Checkpoint: CLEARSWI PR3502 exact99a4f077604e3b6e28d16f328a0b7b45204e5b63 upstream38231427176 ARM/x86 building (attempts3/6); BrainLes12dd9fd8e64ffa76ae7eeec61d82a884958ecfff native retry38229808747 passed15/15 (attempts2/6), ready for own PR; IRkernelf97ae4e088d8c2ae2c9d477e156b379ddbd64662 native38230695316 passed6/6 including real Jupyter R execution (attempts1/6), ready for own PR. Apptainer checkout7ad06c20 fixture correction native38231273203 running (attempts2/6). Two upstream matrices must await capacity; no passed native builds repeated. Root historical gitlink unchanged.
