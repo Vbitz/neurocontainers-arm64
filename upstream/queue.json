@@ -7706,18 +7706,18 @@
       "port_files": [
         "recipes/elastix/build.yaml"
       ],
-      "status": "native-running",
+      "status": "ready-to-retry",
       "branch": "arm64/upstream-elastix-20261012",
       "baseline_sha": "c62332c882b06c05d225cab2babd11d0290c2dd0",
-      "candidate_sha": "573220436729a6e9325430385191f3916c554910",
+      "candidate_sha": "7a8650118ac4e6f715ec3a5195e495031b75145a",
       "started_at": "2026-10-12T21:38:36.616633+00:00",
       "deadline": "2026-10-13T09:38:36.616633+00:00",
       "attempts": 1,
-      "run_id": 38312647658,
+      "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Retest exact new fulltest contracts on native candidate when one slot frees. Scientific cases unchanged; then individual upstream PR and both actual native suites/all gates.",
       "upstream_review": {
         "exists": true,
         "version": "5.3.1",
@@ -7735,7 +7735,7 @@
       },
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
-      "change_summary": "Port currentElastix5.3.1 to ARM with the previously verified ordinary ITK5.4.7/CMake source configuration, preserving current Ubuntu22.04/x86 released binary. Official5.3.1 requiresITK>=5.4.1, so5.4.7 satisfies it; no dependency source patch or tool replacement. Use architecture-conditional declared source downloads and runtime library wrappers, independent tracked software/ITK versions (ITK5.4 family). Preserve all32 registration/transform/deformation/Jacobian/negative cases, and replace three masked missing-argument exits with explicit expected1 plus existingdiagnostics. No scientific tolerance change.",
+      "change_summary": "Port currentElastix5.3.1 to ARM with the previously verified ordinary ITK5.4.7/CMake source configuration, preserving current Ubuntu22.04/x86 released binary. Official5.3.1 requiresITK>=5.4.1, so5.4.7 satisfies it; no dependency source patch or tool replacement. Use architecture-conditional declared source downloads and runtime library wrappers, independent tracked software/ITK versions (ITK5.4 family). Preserve all32 registration/transform/deformation/Jacobian/negative cases, and replace three masked missing-argument exits with explicit expected1 plus existingdiagnostics. No scientific tolerance change. First native5.3.1 image/deploy and all positive cases passed. Assert the released missing-p/missing-tp statuses255 (source returns-1) with their complete exact diagnostics; missing-fixed remains1. No ignored exits or weaker numerical assertions.",
       "pr_title": "Build Elastix5.3.1 on ARM64 with supported ITK and strict runtime checks",
       "primary_source_review": [
         "https://github.com/SuperElastix/elastix/blob/5.3.1/CMakeLists.txt",
@@ -7745,7 +7745,21 @@
       ],
       "arm64_attempts": 1,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38312647658"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38312647658",
+      "native_attempt_history": [
+        {
+          "run_id": 38312647658,
+          "candidate_sha": "573220436729a6e9325430385191f3916c554910",
+          "outcome": "failed-runtime",
+          "counts": {
+            "passed": 31,
+            "failed": 2,
+            "skipped": 0,
+            "total_tests": 33
+          },
+          "diagnosis": "Native Docker/SIF/deploy and all positive registration/transform/deformation/Jacobian cases passed. Two negative CLI cases returned255 with exact missing-p/missing-tp diagnostics; tests incorrectly expected1. Released5.3.1 CLI source sets returndummy|=-1 and returns it, giving POSIX255."
+        }
+      ]
     },
     {
       "recipe": "emuses",
@@ -12156,7 +12170,94 @@
       "attempts": 4,
       "run_id": 38313557027,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3543",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "lqt",
+          "container": "lqt",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "0.1.0",
+          "build_date": "20261013",
+          "docker_archive": "lqt_0.1.0_20261013.docker.tar",
+          "sif": "lqt_0.1.0_20261013.simg",
+          "candidate_tag": "nd-candidate-lqt:4c6ab5e599ac",
+          "launcher": "R",
+          "pr_number": 3543,
+          "head_sha": "4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5",
+          "tests": {
+            "total": 7,
+            "passed": 7,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 6,
+            "fulltest_passed": 6,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "R version",
+              "LQT library loads",
+              "LQT package version",
+              "LQT package path",
+              "LQT namespace exports",
+              "Actual parcel damage maps and table"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "864 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 98.7682,
+            "wasted_bytes": 20304544,
+            "wasted_bytes_display": "20 MB",
+            "user_wasted_percent": 2.1947
+          }
+        },
+        "candidate_run_id": 38315234079,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38315234079",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5",
+            "job_id": 115030238066,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38315234079/job/115030238066",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        }
+      },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
@@ -17063,18 +17164,18 @@
       "port_files": [
         "recipes/radtract/build.yaml"
       ],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-radtract-20261012",
       "baseline_sha": "cf6a35afcc86b2b57519bad90a50f6ffc05fc0eb",
       "candidate_sha": "7e0a4afb361194694f9242d2858d8414580f6079",
       "started_at": "2026-10-12T21:47:51.352229+00:00",
       "deadline": "2026-10-13T09:47:51.352229+00:00",
-      "attempts": 2,
+      "attempts": 4,
       "run_id": 38314658516,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3544",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.4",
@@ -17104,8 +17205,8 @@
         "https://github.com/MIC-DKFZ/radtract",
         "https://github.com/AIM-Harvard/pyradiomics/tree/v3.1.0"
       ],
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38314658516",
       "native_attempt_history": [
         {
@@ -17155,7 +17256,9 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
-      }
+      },
+      "pending_upstream_issue": 3544,
+      "pr_number": 3544
     },
     {
       "recipe": "rapidtide",
