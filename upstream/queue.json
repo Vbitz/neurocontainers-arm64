@@ -1199,7 +1199,7 @@
       "port_files": [
         "recipes/brkraw/build.yaml"
       ],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-brkraw-20261012",
       "baseline_sha": "12ff48cd6220c32d699b5b5df98688bfa5de2040",
       "candidate_sha": "6b05f8659fda5654927f7d1276972f473e3b1625",
@@ -1210,7 +1210,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "0.5.7",
@@ -1223,7 +1223,37 @@
       },
       "arm64_attempts": 1,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209191228"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209191228",
+      "native_evidence": {
+        "source_sha": "6b05f8659fda5654927f7d1276972f473e3b1625",
+        "version": "0.5.7",
+        "counts": {
+          "total_tests": 76,
+          "passed": 76,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 48.720940589904785,
+          "run_timestamp": "2026-10-12T05:45:59.315830",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 75,
+          "total_suites": 1,
+          "total_tests": 75
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209191228",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "builder",

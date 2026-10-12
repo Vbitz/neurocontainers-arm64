@@ -3274,3 +3274,5 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - `brkraw` first current-upstream native [run 38209191228](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209191228) dispatched at exact `6b05f8659fda5654927f7d1276972f473e3b1625`; attempts 1/6 total; deadline `2026-10-12T17:42:58.534188+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
 
 - Brainlife CLI upstream ARM64 compact report confirms **74/74**, zero failures/skips and Dive success at exact PR head. x86_64 remains queued on upstream's runner; no duplicate build dispatched. BrkRaw's added parsing operation passed locally with the exact 0.5.7 wheel before native dispatch; this local result is not ARM64 runtime evidence.
+
+- `brkraw` exact current-upstream `6b05f8659fda5654927f7d1276972f473e3b1625` native verified: **76/76**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38209191228). Await its own upstream PR and dual-architecture verification before merge.
