@@ -4296,3 +4296,9 @@ Checkpoint 2026-10-12T21:29:11.299240+00:00:46 individual containers merged;62 p
 - `fsl` current-upstream native [run 38314680689](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38314680689) dispatched at exact `4bfaf8ea40c71778b11058f8511eeb7199b47e43`; attempts 1/6 total; deadline `2026-10-13T10:00:20+00:00`. No duplicate active variant; capacity checked against native and both upstream matrix jobs.
 
 - Automatic publication observations for nighres: exact merged-source push workflows succeeded, resolve passed, publish/finalize skipped and0artifacts. Runtime-only verification created no new release metadata.
+
+- `lqt` exact current-upstream `4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5` native verified: **7/7**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38313557027). Await its own upstream PR and dual-architecture verification before merge.
+
+- `radtract` exact current-upstream `7e0a4afb361194694f9242d2858d8414580f6079` native verified: **5/5**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38314658516). Await its own upstream PR and dual-architecture verification before merge.
+
+- `lqt` individual upstream [PR #3543](https://github.com/neurodesk/neurocontainers/pull/3543) opened at exact native-verified `4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5` (7/7, zero failures/skips). Total builds now 4/6 including both upstream architecture candidates; deadline `2026-10-13T09:33:21.907078+00:00`. Require actual upstream reports and all required checks before authorized merge.

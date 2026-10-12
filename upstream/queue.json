@@ -12147,18 +12147,18 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-lqt-20261012",
       "baseline_sha": "e1c866ef60cfe99f148e5e310eec25c1491fc75b",
       "candidate_sha": "4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5",
       "started_at": "2026-10-12T21:33:21.907078+00:00",
       "deadline": "2026-10-13T09:33:21.907078+00:00",
-      "attempts": 2,
+      "attempts": 4,
       "run_id": 38313557027,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3543",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.1.0",
@@ -12180,8 +12180,8 @@
         "https://github.com/muschellij2/neurobase",
         "https://github.com/bjw34032/oro.nifti"
       ],
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38313557027",
       "native_attempt_history": [
         {
@@ -12196,7 +12196,44 @@
           },
           "diagnosis": "All6 fulltests passed, including exact real parcel-damage maps and CSV. Deploy failed because no commands are declared; DEPLOY_BINS and DEPLOY_PATH empty."
         }
-      ]
+      ],
+      "native_command_exit_review": {
+        "source_sha": "4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5",
+        "version": "0.1.0",
+        "counts": {
+          "total_tests": 7,
+          "passed": 7,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 7.439797401428223,
+          "run_timestamp": "2026-10-12T22:08:34.435652",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 6,
+          "total_suites": 1,
+          "total_tests": 6
+        },
+        "deploy_counts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38313557027",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3543,
+      "pr_number": 3543
     },
     {
       "recipe": "mede",
@@ -17026,7 +17063,7 @@
       "port_files": [
         "recipes/radtract/build.yaml"
       ],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-radtract-20261012",
       "baseline_sha": "cf6a35afcc86b2b57519bad90a50f6ffc05fc0eb",
       "candidate_sha": "7e0a4afb361194694f9242d2858d8414580f6079",
@@ -17037,7 +17074,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.4",
@@ -17083,7 +17120,42 @@
           },
           "diagnosis": "Native Docker/SIF/deploy and original2 cases pass. Filter retained exact8mm fiber; density equality failed from uint8 reference scaling(maxerror0.00392151). Actual PyRadiomics extracted all9 rows but provenance string retained doublequotes from official __init__.py; raw string equality failed before numerical feature assertions."
         }
-      ]
+      ],
+      "native_command_exit_review": {
+        "source_sha": "7e0a4afb361194694f9242d2858d8414580f6079",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "7e0a4afb361194694f9242d2858d8414580f6079",
+        "version": "0.2.4",
+        "counts": {
+          "total_tests": 5,
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 7.598397731781006,
+          "run_timestamp": "2026-10-12T22:10:56.689709",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 4,
+          "total_suites": 1,
+          "total_tests": 4
+        },
+        "deploy_counts": {
+          "total": 10,
+          "passed": 10,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38314658516",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "rapidtide",
