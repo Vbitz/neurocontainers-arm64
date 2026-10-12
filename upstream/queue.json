@@ -2426,18 +2426,18 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-bidsme-20261012",
       "baseline_sha": "476155d97cc3815e2912e00525e8ecbef8d12ac9",
       "candidate_sha": "4a8ece48b61fb4dd502ed592b7a240fa3fcd5e86",
       "started_at": "2026-10-12T20:30:31.169604+00:00",
       "deadline": "2026-10-13T08:30:31.169604+00:00",
-      "attempts": 4,
+      "attempts": 6,
       "run_id": 38310835773,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3540",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "1.9.6",
@@ -2461,8 +2461,8 @@
         "https://github.com/CyclotronResearchCentre/bidsme/blob/v1.9.6/bidsme/Modules/MRI/jsonNIFTI.py",
         "https://github.com/rordenlab/dcm2niix/blob/v1.0.20260724/console/main_console.cpp"
       ],
-      "arm64_attempts": 4,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 5,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38310835773",
       "attempt_history": [
         {
@@ -2513,7 +2513,65 @@
             "https://github.com/CyclotronResearchCentre/bidsme/blob/v1.9.6/doc/creating_map.md#step-10---manual-validation"
           ]
         }
-      ]
+      ],
+      "native_command_exit_review": {
+        "source_sha": "4a8ece48b61fb4dd502ed592b7a240fa3fcd5e86",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": [
+          {
+            "test": "dcm2niix version check",
+            "expected_exit_code": 3
+          },
+          {
+            "test": "bidsme invalid subcommand",
+            "expected_exit_code": 2
+          },
+          {
+            "test": "bidsme missing source directory",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "bidsme prepare missing destination",
+            "expected_exit_code": 2
+          },
+          {
+            "test": "dcm2niix invalid option",
+            "expected_exit_code": 12
+          }
+        ]
+      },
+      "native_evidence": {
+        "source_sha": "4a8ece48b61fb4dd502ed592b7a240fa3fcd5e86",
+        "version": "1.9.6",
+        "counts": {
+          "total_tests": 83,
+          "passed": 83,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 162.52370929718018,
+          "run_timestamp": "2026-10-12T21:33:25.612057",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 82,
+          "total_suites": 1,
+          "total_tests": 82
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38310835773",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3540,
+      "pr_number": 3540
     },
     {
       "recipe": "bidstools",
@@ -11969,18 +12027,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-lqt-20261012",
+      "baseline_sha": "e1c866ef60cfe99f148e5e310eec25c1491fc75b",
+      "candidate_sha": "13d8859856604ef5d38d1cfc53d98a467171b0a1",
+      "started_at": "2026-10-12T21:33:21.907078+00:00",
+      "deadline": "2026-10-13T09:33:21.907078+00:00",
+      "attempts": 1,
+      "run_id": 38311439790,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.1.0",
@@ -11992,7 +12050,19 @@
         "fulltest_version": "0.1.0",
         "test_count": 5
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "upstream_verification_mode": "runtime-only",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Preserve all5 LQT0.1.0 package/runtime cases and add actual exported get_parcel_damage on synthetic lesion/parcellation NIfTIs with a documented pre-made cfg list. Require exact25/50/100 percent damages for three parcels, exact CSV labels/groups, every saved map voxel/geometry, copied lesion values and unchanged inputs. Assert real dimension-mismatch exception and diagnostic. Tests cover parcel damage; tract disconnection still requires external DSI Studio/atlas resources and is not claimed. No image-input or scientific implementation change.",
+      "pr_title": "Verify real LQT parcel damage outputs and dimension checks",
+      "primary_source_review": [
+        "https://github.com/jdwor/LQT/blob/ab5801bd5ef2d5a9c3c6d75c332d0ef2fa6968b8/R/get_parcel_damage.R",
+        "https://github.com/muschellij2/neurobase",
+        "https://github.com/bjw34032/oro.nifti"
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38311439790"
     },
     {
       "recipe": "mede",
@@ -14489,18 +14559,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-nighres-20261012",
+      "baseline_sha": "e1c866ef60cfe99f148e5e310eec25c1491fc75b",
+      "candidate_sha": "ff4a5b9d6973e6ec04a460bae5ea60895cc4876e",
+      "started_at": "2026-10-12T21:30:56.620078+00:00",
+      "deadline": "2026-10-13T09:30:56.620078+00:00",
+      "attempts": 1,
+      "run_id": 38311154204,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.5.2",
@@ -14512,7 +14582,18 @@
         "fulltest_version": "1.5.2",
         "test_count": 69
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "upstream_verification_mode": "runtime-only",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Preserve all69 Nighres1.5.2 cases and add actual FLASH T2star log-linear fitting through the shipped JCC/Java backend. Four analytical exponential echo volumes have35 varying foreground voxels and one zero background voxel; assert all four saved T2star/R2star/S0/R-squared maps, exact geometry/dtype, finite results, unchanged inputs and float32-derived <8ppm fitting error. Original simulations remain additional coverage; no alternative implementation substituted for Java. No image-input or scientific implementation change.",
+      "pr_title": "Verify actual Nighres Java T2star fitting against analytical echoes",
+      "primary_source_review": [
+        "https://github.com/nighres/nighres/blob/release-1.5.2/nighres/intensity/flash_t2s_fitting.py",
+        "https://github.com/piloubazin/cbstools-public/blob/master/de/mpg/cbs/core/intensity/IntensityFlashT2sFitting.java"
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38311154204"
     },
     {
       "recipe": "niimath",
@@ -14873,18 +14954,179 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-openrefine-20261012",
       "baseline_sha": "c7f7754d1fbe036798049004e8d5e267468ff3e9",
       "candidate_sha": "53688a6dceaff1d09f0bfebfc29e6d0912430271",
       "started_at": "2026-10-12T21:07:52.224367+00:00",
       "deadline": "2026-10-13T09:07:52.224367+00:00",
-      "attempts": 3,
+      "attempts": 5,
       "run_id": 38310669967,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3539",
+      "upstream_ci": {
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "openrefine",
+          "container": "openrefine",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "3.10.1",
+          "build_date": "20261013",
+          "docker_archive": "openrefine_3.10.1_20261013.docker.tar",
+          "sif": "openrefine_3.10.1_20261013.simg",
+          "candidate_tag": "nd-candidate-openrefine:53688a6dceaf",
+          "launcher": "openrefine",
+          "pr_number": 3539,
+          "head_sha": "53688a6dceaff1d09f0bfebfc29e6d0912430271",
+          "tests": {
+            "total": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 2,
+            "fulltest_passed": 2,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "OpenRefine version",
+              "Real CSV import cleaning and export"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "786 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 97.74,
+            "wasted_bytes": 18894605,
+            "wasted_bytes_display": "19 MB",
+            "user_wasted_percent": 4.651
+          }
+        },
+        "candidate_run_id": 38310977914,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38310977914",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "53688a6dceaff1d09f0bfebfc29e6d0912430271",
+            "job_id": 115017243548,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38310977914/job/115017243548",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "aarch64": {
+            "head_sha": "53688a6dceaff1d09f0bfebfc29e6d0912430271",
+            "job_id": 115017243481,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38310977914/job/115017243481",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "openrefine",
+          "container": "openrefine_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "3.10.1",
+          "build_date": "20261013",
+          "docker_archive": "openrefine_arm64_3.10.1_20261013.docker.tar",
+          "sif": "openrefine_arm64_3.10.1_20261013.simg",
+          "candidate_tag": "nd-candidate-openrefine_arm64:53688a6dceaf",
+          "launcher": "openrefine",
+          "pr_number": 3539,
+          "head_sha": "53688a6dceaff1d09f0bfebfc29e6d0912430271",
+          "tests": {
+            "total": 3,
+            "passed": 3,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 2,
+            "fulltest_passed": 2,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "OpenRefine version",
+              "Real CSV import cleaning and export"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "786 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 97.9495,
+            "wasted_bytes": 17887732,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 4.3781
+          }
+        }
+      },
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "3.10.1",
@@ -14908,8 +15150,8 @@
         "https://github.com/OpenRefine/OpenRefine/blob/3.10.1/main/src/com/google/refine/commands/cell/TextTransformCommand.java",
         "https://github.com/OpenRefine/OpenRefine/blob/3.10.1/main/src/com/google/refine/commands/project/ExportRowsCommand.java"
       ],
-      "arm64_attempts": 3,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 4,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38310669967",
       "attempt_history": [
         {
@@ -14947,7 +15189,44 @@
             "https://github.com/uniVocity/univocity-parsers/blob/v2.9.1/src/main/java/com/univocity/parsers/common/CommonSettings.java"
           ]
         }
-      ]
+      ],
+      "native_command_exit_review": {
+        "source_sha": "53688a6dceaff1d09f0bfebfc29e6d0912430271",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "53688a6dceaff1d09f0bfebfc29e6d0912430271",
+        "version": "3.10.1",
+        "counts": {
+          "total_tests": 3,
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 7.039067506790161,
+          "run_timestamp": "2026-10-12T21:28:44.457356",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 2,
+          "total_suites": 1,
+          "total_tests": 2
+        },
+        "deploy_counts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38310669967",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3539,
+      "pr_number": 3539
     },
     {
       "recipe": "palm",
