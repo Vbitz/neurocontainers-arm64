@@ -622,7 +622,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:41:15.753560+00:00",
+        "checked_at": "2026-10-12T09:46:47.820168+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -647,7 +647,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:41:20.897975+00:00"
+        "metadata_checked_at": "2026-10-12T09:46:51.385923+00:00"
       }
     },
     {
@@ -666,7 +666,7 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-apptainer-20261012",
       "baseline_sha": "ce9ce4b722cb0c6c6f9524faded05583cac61dc5",
       "candidate_sha": "7ad06c20dca161f6f53b2141234eff61cbe5d829",
@@ -677,7 +677,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "1.5.3",
@@ -721,7 +721,37 @@
           "first_error": "Added nested test references ${output_dir}, but existing fulltest has no test_data.output_dir declaration; Bash reports output_dir: unbound variable before nested build. Docker/arch/SIF/deploy and5 existing CLI tests passed.",
           "retry_hypothesis": "Declare the writable output_dir used by the test and setup via the standard fulltest test_data field. Keep every nested build/execution assertion and compiler fix."
         }
-      ]
+      ],
+      "native_evidence": {
+        "source_sha": "7ad06c20dca161f6f53b2141234eff61cbe5d829",
+        "version": "1.5.3",
+        "counts": {
+          "total_tests": 7,
+          "passed": 7,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 2.110412120819092,
+          "run_timestamp": "2026-10-12T09:45:12.011524",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 6,
+          "total_suites": 1,
+          "total_tests": 6
+        },
+        "deploy_counts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38231273203",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "arfiproc",
@@ -1043,7 +1073,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T09:41:22.103587+00:00",
+        "checked_at": "2026-10-12T09:46:52.586773+00:00",
         "metadata": [
           {
             "architecture": "x86_64",
@@ -1102,7 +1132,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:41:25.780902+00:00"
+        "metadata_checked_at": "2026-10-12T09:46:56.211548+00:00"
       }
     },
     {
@@ -1464,18 +1494,21 @@
       "port_files": [
         "recipes/brainles-aurora/build.yaml"
       ],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-brainles-aurora-20261012",
       "baseline_sha": "e35419a8aea87ae0c6024c3e29663e3c65612dd3",
       "candidate_sha": "12dd9fd8e64ffa76ae7eeec61d82a884958ecfff",
       "started_at": "2026-10-12T09:06:19.347286+00:00",
       "deadline": "2026-10-12T21:06:19.347286+00:00",
-      "attempts": 2,
+      "attempts": 4,
       "run_id": 38229808747,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3503",
+      "upstream_ci": {
+        "initial_run_id": 38232041336,
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38232041336"
+      },
       "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.7",
@@ -1497,8 +1530,8 @@
         ],
         "note": "Verified official wheel SHA256 before inspecting inferer.py: Device.CPU is directly supported; AUTO/GPU without CUDA falls back to CPU. Official PyPI ARM PyTorch2.5.1 satisfies package requirements and was just verified by DQE current-source native/upstream CPU inference. Both generated Dockerfiles retain installation/weights/permissions in one RUN; x86 CUDA pip command unchanged. All14 original tests retained including real 3D inference and exact repeat-run output."
       },
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38229808747",
       "attempt_history": [
         {
@@ -1541,7 +1574,8 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
-      }
+      },
+      "pr_number": 3503
     },
     {
       "recipe": "brainles-preprocessing",
@@ -1820,7 +1854,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T09:41:27.136834+00:00",
+        "checked_at": "2026-10-12T09:46:57.455262+00:00",
         "metadata": [
           {
             "architecture": "x86_64",
@@ -1879,7 +1913,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:41:30.864178+00:00"
+        "metadata_checked_at": "2026-10-12T09:47:01.065772+00:00"
       }
     },
     {
@@ -2195,7 +2229,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T09:41:32.218517+00:00",
+        "checked_at": "2026-10-12T09:47:02.409892+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -2254,7 +2288,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:41:36.309270+00:00"
+        "metadata_checked_at": "2026-10-12T09:47:06.913745+00:00"
       }
     },
     {
@@ -2770,7 +2804,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T09:41:37.439742+00:00",
+        "checked_at": "2026-10-12T09:47:08.044032+00:00",
         "workflow_status": "in_progress",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -2799,7 +2833,7 @@
             ]
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:41:39.229133+00:00"
+        "metadata_checked_at": "2026-10-12T09:47:08.896640+00:00"
       }
     },
     {
@@ -3264,7 +3298,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T09:41:40.369873+00:00",
+        "checked_at": "2026-10-12T09:47:10.007450+00:00",
         "workflow_status": "in_progress",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -3277,7 +3311,7 @@
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "active_steps": [
-              "Publish exact tested Docker archive to unique staging tags"
+              "Attach tested SIF to staged OCI images"
             ]
           },
           {
@@ -3293,7 +3327,7 @@
             ]
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:41:41.105227+00:00"
+        "metadata_checked_at": "2026-10-12T09:47:10.784079+00:00"
       }
     },
     {
@@ -3747,7 +3781,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:41:42.287663+00:00",
+        "checked_at": "2026-10-12T09:47:12.070844+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -3772,7 +3806,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:41:45.787151+00:00"
+        "metadata_checked_at": "2026-10-12T09:47:15.739873+00:00"
       }
     },
     {
@@ -4415,7 +4449,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:41:47.077577+00:00",
+        "checked_at": "2026-10-12T09:47:17.102045+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -4440,7 +4474,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:41:51.663528+00:00"
+        "metadata_checked_at": "2026-10-12T09:47:20.728952+00:00"
       }
     },
     {
@@ -6143,7 +6177,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:41:52.973694+00:00",
+        "checked_at": "2026-10-12T09:47:22.008089+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -6168,7 +6202,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:41:57.348259+00:00"
+        "metadata_checked_at": "2026-10-12T09:47:26.309574+00:00"
       }
     },
     {
@@ -6754,7 +6788,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:41:58.650905+00:00",
+        "checked_at": "2026-10-12T09:47:27.616301+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -6779,7 +6813,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:42:02.187548+00:00"
+        "metadata_checked_at": "2026-10-12T09:47:31.181146+00:00"
       }
     },
     {
@@ -7628,7 +7662,7 @@
         "status": "verified-published-metadata",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
-        "checked_at": "2026-10-12T09:42:03.548444+00:00",
+        "checked_at": "2026-10-12T09:47:32.557866+00:00",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -7687,7 +7721,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:42:07.493888+00:00"
+        "metadata_checked_at": "2026-10-12T09:47:36.430994+00:00"
       }
     },
     {
@@ -7966,7 +8000,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:42:08.928815+00:00",
+        "checked_at": "2026-10-12T09:47:37.622582+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -7991,7 +8025,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:42:12.498634+00:00"
+        "metadata_checked_at": "2026-10-12T09:47:41.326659+00:00"
       }
     },
     {
@@ -9761,7 +9795,7 @@
             "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-12T09:42:13.931641+00:00",
+        "checked_at": "2026-10-12T09:47:42.662754+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -9786,7 +9820,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T09:42:18.655967+00:00"
+        "metadata_checked_at": "2026-10-12T09:47:47.089217+00:00"
       }
     },
     {
@@ -10242,10 +10276,10 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "sha": "ce9ce4b722cb0c6c6f9524faded05583cac61dc5",
-    "checked_at": "2026-10-12T09:28:02.398771+00:00",
+    "sha": "4d04f767b5ab0fdacfbaab3290a76b75415baa0c",
+    "checked_at": "2026-10-12T09:48:44.740881+00:00",
     "fork_actions_enabled": false,
-    "method": "Fast-forward only; no candidate or accepted historical gitlink changes."
+    "method": "Fast-forward only; candidate checkout and accepted historical gitlink preserved."
   },
   "runtime_release_routing_fix": {
     "status": "merged",

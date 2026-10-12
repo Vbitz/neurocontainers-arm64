@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T09:42:18.656333+00:00",
+  "checked_at": "2026-10-12T09:47:47.089590+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -103,7 +103,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:41:15.753560+00:00",
+      "checked_at": "2026-10-12T09:46:47.820168+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -128,7 +128,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:41:20.897975+00:00"
+      "metadata_checked_at": "2026-10-12T09:46:51.385923+00:00"
     },
     {
       "recipe": "bart",
@@ -137,7 +137,7 @@
       "status": "verified-published-metadata",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
-      "checked_at": "2026-10-12T09:41:22.103587+00:00",
+      "checked_at": "2026-10-12T09:46:52.586773+00:00",
       "metadata": [
         {
           "architecture": "x86_64",
@@ -196,7 +196,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:41:25.780902+00:00"
+      "metadata_checked_at": "2026-10-12T09:46:56.211548+00:00"
     },
     {
       "recipe": "brainlifecli",
@@ -205,7 +205,7 @@
       "status": "verified-published-metadata",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
-      "checked_at": "2026-10-12T09:41:27.136834+00:00",
+      "checked_at": "2026-10-12T09:46:57.455262+00:00",
       "metadata": [
         {
           "architecture": "x86_64",
@@ -264,7 +264,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:41:30.864178+00:00"
+      "metadata_checked_at": "2026-10-12T09:47:01.065772+00:00"
     },
     {
       "recipe": "brkraw",
@@ -273,7 +273,7 @@
       "status": "verified-published-metadata",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
-      "checked_at": "2026-10-12T09:41:32.218517+00:00",
+      "checked_at": "2026-10-12T09:47:02.409892+00:00",
       "metadata": [
         {
           "architecture": "aarch64",
@@ -332,7 +332,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:41:36.309270+00:00"
+      "metadata_checked_at": "2026-10-12T09:47:06.913745+00:00"
     },
     {
       "recipe": "condaenvs",
@@ -357,7 +357,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T09:41:37.439742+00:00",
+      "checked_at": "2026-10-12T09:47:08.044032+00:00",
       "workflow_status": "in_progress",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -386,7 +386,7 @@
           ]
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:41:39.229133+00:00"
+      "metadata_checked_at": "2026-10-12T09:47:08.896640+00:00"
     },
     {
       "recipe": "deep-quality-estimation",
@@ -413,7 +413,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T09:41:40.369873+00:00",
+      "checked_at": "2026-10-12T09:47:10.007450+00:00",
       "workflow_status": "in_progress",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -426,7 +426,7 @@
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
           "active_steps": [
-            "Publish exact tested Docker archive to unique staging tags"
+            "Attach tested SIF to staged OCI images"
           ]
         },
         {
@@ -442,7 +442,7 @@
           ]
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:41:41.105227+00:00"
+      "metadata_checked_at": "2026-10-12T09:47:10.784079+00:00"
     },
     {
       "recipe": "dwidenoise2",
@@ -485,7 +485,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:41:42.287663+00:00",
+      "checked_at": "2026-10-12T09:47:12.070844+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -510,7 +510,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:41:45.787151+00:00"
+      "metadata_checked_at": "2026-10-12T09:47:15.739873+00:00"
     },
     {
       "recipe": "fsqc",
@@ -553,7 +553,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:41:47.077577+00:00",
+      "checked_at": "2026-10-12T09:47:17.102045+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -578,7 +578,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:41:51.663528+00:00"
+      "metadata_checked_at": "2026-10-12T09:47:20.728952+00:00"
     },
     {
       "recipe": "meganorm",
@@ -621,7 +621,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:41:52.973694+00:00",
+      "checked_at": "2026-10-12T09:47:22.008089+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -646,7 +646,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:41:57.348259+00:00"
+      "metadata_checked_at": "2026-10-12T09:47:26.309574+00:00"
     },
     {
       "recipe": "modsort",
@@ -689,7 +689,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:41:58.650905+00:00",
+      "checked_at": "2026-10-12T09:47:27.616301+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -714,7 +714,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:42:02.187548+00:00"
+      "metadata_checked_at": "2026-10-12T09:47:31.181146+00:00"
     },
     {
       "recipe": "panoptica",
@@ -723,7 +723,7 @@
       "status": "verified-published-metadata",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
-      "checked_at": "2026-10-12T09:42:03.548444+00:00",
+      "checked_at": "2026-10-12T09:47:32.557866+00:00",
       "metadata": [
         {
           "architecture": "aarch64",
@@ -782,7 +782,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:42:07.493888+00:00"
+      "metadata_checked_at": "2026-10-12T09:47:36.430994+00:00"
     },
     {
       "recipe": "pcntoolkit",
@@ -825,7 +825,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:42:08.928815+00:00",
+      "checked_at": "2026-10-12T09:47:37.622582+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -850,7 +850,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:42:12.498634+00:00"
+      "metadata_checked_at": "2026-10-12T09:47:41.326659+00:00"
     },
     {
       "recipe": "topaz",
@@ -893,7 +893,7 @@
           "public_sif_head_status": 200
         }
       ],
-      "checked_at": "2026-10-12T09:42:13.931641+00:00",
+      "checked_at": "2026-10-12T09:47:42.662754+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -918,7 +918,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T09:42:18.655967+00:00"
+      "metadata_checked_at": "2026-10-12T09:47:47.089217+00:00"
     }
   ],
   "findings": [
