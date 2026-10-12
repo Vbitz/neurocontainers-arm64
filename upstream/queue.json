@@ -2646,7 +2646,91 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3502",
       "upstream_ci": {
         "initial_run_id": 38242620566,
-        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38242620566"
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38242620566",
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "clearswi",
+          "container": "clearswi",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.7.0",
+          "build_date": "20261012",
+          "docker_archive": "clearswi_1.7.0_20261012.docker.tar",
+          "sif": "clearswi_1.7.0_20261012.simg",
+          "candidate_tag": "nd-candidate-clearswi:83de01a91c3f",
+          "launcher": "julia",
+          "pr_number": 3502,
+          "head_sha": "83de01a91c3fe525ddef4e60924c9b9797ad6371",
+          "tests": {
+            "total": 68,
+            "passed": 68,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 67,
+            "fulltest_passed": 67,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "clearswi launcher available",
+              "clearswi usage without arguments",
+              "clearswi help flags",
+              "clearswi version flag",
+              "Julia version check",
+              "CLEARSWI package loads",
+              "CLEARSWI exports available",
+              "Test data exists",
+              "Read magnitude image",
+              "Read phase image",
+              "Create Data struct",
+              "Calculate SWI with defaults",
+              "Calculate and save SWI",
+              "Create MIP default",
+              "Create MIP custom depth",
+              "Create maximum intensity projection",
+              "Magnitude combine SNR",
+              "Magnitude combine average",
+              "Magnitude combine last echo"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 3,
+                "wasted_space": "1.9 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "808 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.5859,
+            "wasted_bytes": 18173058,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.7595
+          }
+        }
       },
       "merged_sha": null,
       "next_action": "Verify corrected exact-head upstream ARM64 and x86_64 reports and Dive/gates; final6/6 attempt budget, no more builds.",
@@ -4180,18 +4264,18 @@
       "port_files": [
         "recipes/dicomtools/build.yaml"
       ],
-      "status": "ready-to-dispatch",
+      "status": "native-verified",
       "branch": "arm64/upstream-dicomtools-20261012",
       "baseline_sha": "77d42f3b3e7b5502388657aa6b97a4f392279be5",
-      "candidate_sha": "66f85a5a7e90765b949610cea3939ad233a9100d",
+      "candidate_sha": "983b27d1fd8aecf2da4d0244053fe8479149864a",
       "started_at": "2026-10-12T11:36:21.154561+00:00",
       "deadline": "2026-10-12T23:36:21.154561+00:00",
-      "attempts": 0,
-      "run_id": null,
+      "attempts": 2,
+      "run_id": 38245306248,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Schema/update policy/both architecture generations and new fixture/shell syntax pass; candidate pushed. Await native build slot; all178 old tests retained with exact DCMTK pixel roundtrip added.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "1.1.0",
@@ -4214,6 +4298,48 @@
         ],
         "contract": "dcmconv+tb/+ti/+te encoding conversions; dcmdump+W explicitly outputs little-endian raw pixels. Exact uint16 edge values0,1,255,256,4095,65535, dimensions2x3 and SOPInstanceUID unchanged for all3converted transfer syntaxes. Standard-library host fixture; no new image dependency. Existing portable source/package installation unchanged except ARM declaration.",
         "local_checks": "Schema/update policy and2architecture Dockerfiles, fulltest codespell, Bash syntax, host Python compilation/DICOM preamble/expected pixel bytes, all178oldtests unchanged."
+      },
+      "arm64_attempts": 2,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38245306248",
+      "attempt_history": [
+        {
+          "candidate_sha": "66f85a5a7e90765b949610cea3939ad233a9100d",
+          "run_id": 38244637892,
+          "outcome": "failed-test-fixture",
+          "first_error": "All178old tests and3new transfer syntax assertions passed; fulltest predefined$name substitution changed shellloop path to dicomtools.dcm, causing dcmdump missing-file failure.",
+          "retry_hypothesis": "Rename only local shellloop variable to encoding_mode; retain every exact pixel/dimension/UID/encoding assertion. Verified actual builder.runtime_execution.substitute_variables output and Bashsyntax."
+        }
+      ],
+      "native_evidence": {
+        "source_sha": "983b27d1fd8aecf2da4d0244053fe8479149864a",
+        "version": "1.1.0",
+        "counts": {
+          "total_tests": 180,
+          "passed": 180,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 40.80535817146301,
+          "run_timestamp": "2026-10-12T11:54:30.598020",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 179,
+          "total_suites": 1,
+          "total_tests": 179
+        },
+        "deploy_counts": {
+          "total": 3,
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38245306248",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
       }
     },
     {
@@ -5809,11 +5935,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-hdbet-20261012",
       "baseline_sha": "5f869919acb27615303977edaf5da13a603dfc9b",
-      "candidate_sha": "472f10e635229a12f761a066dc0ebba61f045cbf",
+      "candidate_sha": "20835db5be6559a46dd369e4982cfac77a46cb91",
       "started_at": "2026-10-12T11:16:02.699996+00:00",
       "deadline": "2026-10-12T23:16:02.699996+00:00",
-      "attempts": 1,
-      "run_id": 38243542827,
+      "attempts": 2,
+      "run_id": 38245843908,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -5829,8 +5955,8 @@
         "fulltest_version": "2.0.1",
         "test_count": 5
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
-      "upstream_verification_mode": "runtime-only",
+      "pr_plan": "Fix real ARM64 CPU inference staticTLS failure with documented bundled-OpenMP preload in ARM-only launcher, retain5originalchecks and exact brain-mask scientific operation; own upstream PR only after fresh native proof.",
+      "upstream_verification_mode": "image-candidate",
       "primary_source_review": {
         "sources": [
           "https://raw.githubusercontent.com/MIC-DKFZ/HD-BET/v2.0.1/readme.md",
@@ -5838,11 +5964,27 @@
           "https://github.com/MIC-DKFZ/HD-BET/blob/v2.0.1/HD_BET/hd_bet_prediction.py"
         ],
         "contract": "Official CPU recommendation -devicecpu --disable_tta; save_bet_mask retains <output>_bet.nii.gz. apply_bet zeros pixels outsidemask, copies geometry and preserves all inside pixels. Use real ds000001T1 reoriented to documented LAS space, serialized float32 without intensity normalization; compare exact physical input pixels and binary mask, requiring finite/nonempty output. Only1e-5mm geometry serialization allowance, documented NIfTI float32/SimpleITK roundtrip; no intensity tolerance. All5oldtests retained.",
-        "checks": "Fulltest Python compilation, codespell, both architectures/recipe validation passed."
+        "checks": "Fulltest Python compilation, codespell, both architectures/recipe validation passed.",
+        "runtime_fix": {
+          "sources": [
+            "https://github.com/scikit-learn/scikit-learn/issues/17231",
+            "https://lightgbm.readthedocs.io/en/latest/FAQ.html#loading-lightgbm-fails-like-cannot-allocate-memory-in-static-tls-block"
+          ],
+          "implementation": "ARM-only launcher preloads existing wheel OpenMP DSO at process startup and execs original HD-BET entrypoint. No library/compiler patch, dependency pin roulette or global preload. Both architecture generations/spelling and wrapper shsyntax pass; unchanged scientific assertions."
+        }
       },
-      "arm64_attempts": 1,
+      "arm64_attempts": 2,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38243542827"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38245843908",
+      "attempt_history": [
+        {
+          "candidate_sha": "472f10e635229a12f761a066dc0ebba61f045cbf",
+          "run_id": 38243542827,
+          "outcome": "failed-runtime",
+          "first_error": "Real CPU inference failed before prediction in sklearn._openmp_helpers: scikit_learn.libs/libgomp-947d5fa1.so.1.0.0 cannot allocate memory in static TLS block. Docker/architecture/SIF/deploy and all5old tests passed.",
+          "retry_hypothesis": "Official documented ARM64 libgomp early-loading workaround: preload same wheel DSO only in ARM hd-bet launcher then exec original unchanged entrypoint/arguments. Exactly one DSO resolved at build; x86 path and all scientific assertions unchanged."
+        }
+      ]
     },
     {
       "recipe": "heudiconv",
@@ -6203,18 +6345,21 @@
       "port_files": [
         "recipes/laynii/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-laynii-20261012",
       "baseline_sha": "1500bccebe4938d26423e91cfeac6c5c77ec7da1",
       "candidate_sha": "926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9",
       "started_at": "2026-10-12T10:59:00+00:00",
       "deadline": "2026-10-12T22:59:00+00:00",
-      "attempts": 2,
+      "attempts": 4,
       "run_id": 38243451196,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3510",
+      "upstream_ci": {
+        "initial_run_id": 38245986937,
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38245986937"
+      },
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "2.10.0",
@@ -6242,8 +6387,8 @@
         "fixture_preflight": "Compared every fulltest /test_data reference against tagged source tree. Only Ding2016_occip_rim_layers_equidist.nii.gz missing. Verified official2.10.0 release ZIP contains exact173401-byte file; extract this data file only on ARM, no release binaries. All59 fulltests unchanged.",
         "local_checks": "Schema/update-policy/all declared architecture generation/codespell/diff checks passed; inspected x86 commands unchanged and ARM compiler/source/patch/data-only extraction."
       },
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38243451196",
       "attempt_history": [
         {
@@ -6259,7 +6404,49 @@
           "first_error": "Nested deployment file.type skipped LayNii_IDA: official source tag bundles a Mach-O arm64 macOS executable, not a Linux target. Absent from official Linux release ZIP and make all target list.",
           "retry_hypothesis": "Exclude only the tagged macOS development executable during ARM source extraction; preserve every official Linux make-all target, all59 scientific tests and unchanged x86 release path. Fresh exact-candidate native package verification required."
         }
-      ]
+      ],
+      "deploy_skip_review": {
+        "reviewed": true,
+        "source_sha": "926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9",
+        "counts": {
+          "total": 415,
+          "passed": 345,
+          "failed": 0,
+          "skipped": 70
+        },
+        "note": "70 nested informational records:67 summaries omit2ldd pseudoentries without filesystem paths;1DEPLOY_BINS unset because deployment uses PATH;2source/documentation files Makefile and README.md are not runnable tools. All67 built Linux executables have resolved linkage and arbitrary-user access; actual59 scientific fulltests pass with zero skips. Foreign macOS LayNii_IDA is absent after the extraction fix. No essential capability is skipped."
+      },
+      "native_evidence": {
+        "source_sha": "926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9",
+        "version": "2.10.0",
+        "counts": {
+          "total_tests": 60,
+          "passed": 60,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "total_suites": 1,
+          "suites_passed": 1,
+          "suites_failed": 0,
+          "total_tests": 59,
+          "tests_passed": 59,
+          "tests_failed": 0,
+          "duration": 247.73537707328796,
+          "run_timestamp": "2026-10-12T11:42:45.449748"
+        },
+        "deploy_counts": {
+          "total": 415,
+          "passed": 345,
+          "failed": 0,
+          "skipped": 70
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38243451196",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pr_number": 3510
     },
     {
       "recipe": "lesionquantificationtoolkit",
