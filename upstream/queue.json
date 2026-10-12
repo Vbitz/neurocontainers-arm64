@@ -1516,7 +1516,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T18:22:05.644798+00:00",
+        "checked_at": "2026-10-12T18:59:54.170717+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -1541,7 +1541,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T18:22:06.524990+00:00"
+        "metadata_checked_at": "2026-10-12T18:59:54.949813+00:00"
       }
     },
     {
@@ -1942,7 +1942,7 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-batchheudiconv-20261012",
       "baseline_sha": "a4946935d20a1eabf3419a6e096017d761ef26d6",
       "candidate_sha": "e2729b1ff1c46cb4cccb225a0cbc46af7ec96728",
@@ -1953,7 +1953,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -1987,7 +1987,94 @@
       ],
       "arm64_attempts": 1,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38294499066"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38294499066",
+      "deploy_skip_review": {
+        "reviewed": true,
+        "source_sha": "e2729b1ff1c46cb4cccb225a0cbc46af7ec96728",
+        "counts": {
+          "total": 61,
+          "passed": 58,
+          "failed": 0,
+          "skipped": 3
+        },
+        "note": "All107 functional fulltests and top-level deploy check passed; no failed or skipped runtime test. Nested deployment58/61 passed with3 administrative skips: optional DEPLOY_BINS is empty because the full batch-heudiconv directory is deployed; bash/env linkage summaries each note2 entries lacking filesystem paths. All11 deployed executables were checked for existence, access and interpreter; linked-file summaries passed. No required executable or scientific capability skipped. Preserve actual nested counts."
+      },
+      "native_command_exit_review": {
+        "source_sha": "e2729b1ff1c46cb4cccb225a0cbc46af7ec96728",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": [
+          {
+            "test": "bh01_prep_dir.sh help",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "bh02_sort_dicom.sh help",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "bh03_make_subjlist.sh help",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "bh04_make_heuristic.sh help",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "bh05_make_bids.sh help",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "dcm2niix version check",
+            "expected_exit_code": 3
+          },
+          {
+            "test": "nib-diff different files",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "nib-diff BOLD runs",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "nib-diff with header fields",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "nib-diff verbose",
+            "expected_exit_code": 1
+          }
+        ]
+      },
+      "native_evidence": {
+        "source_sha": "e2729b1ff1c46cb4cccb225a0cbc46af7ec96728",
+        "version": "1.0.0",
+        "counts": {
+          "total_tests": 108,
+          "passed": 108,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "total_suites": 1,
+          "suites_passed": 1,
+          "suites_failed": 0,
+          "total_tests": 107,
+          "tests_passed": 107,
+          "tests_failed": 0,
+          "duration": 128.72765135765076,
+          "run_timestamp": "2026-10-12T19:02:52.856302"
+        },
+        "deploy_counts": {
+          "total": 61,
+          "passed": 58,
+          "failed": 0,
+          "skipped": 3
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38294499066",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "bidscoin",
@@ -3971,7 +4058,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-12T18:22:08.150101+00:00",
+        "checked_at": "2026-10-12T18:59:56.022132+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -3996,7 +4083,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T18:22:08.924548+00:00"
+        "metadata_checked_at": "2026-10-12T18:59:56.750597+00:00"
       }
     },
     {
@@ -8203,7 +8290,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-12T18:22:10.009073+00:00",
+        "checked_at": "2026-10-12T18:59:57.840148+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -8228,7 +8315,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-12T18:22:10.796760+00:00"
+        "metadata_checked_at": "2026-10-12T18:59:58.628792+00:00"
       }
     },
     {
@@ -9568,18 +9655,18 @@
         ]
       },
       "port_files": [],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-hnncore-20261012",
       "baseline_sha": "670e27f1c85cceba5050c2e0c686f450a3d957fb",
       "candidate_sha": "d9dc5f05e2efd65b9f947881d3c0f4bb0b67071a",
       "started_at": "2026-10-12T18:41:03.520451+00:00",
       "deadline": "2026-10-13T06:41:03.520451+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38292836645,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3528",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.1",
@@ -9599,8 +9686,8 @@
       "primary_source_review": [
         "https://github.com/jonescompneurolab/hnn-core/blob/v0.6.1/hnn_core/dipole.py"
       ],
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38292836645",
       "native_command_exit_review": {
         "source_sha": "d9dc5f05e2efd65b9f947881d3c0f4bb0b67071a",
@@ -9636,7 +9723,9 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
-      }
+      },
+      "pending_upstream_issue": 3528,
+      "pr_number": 3528
     },
     {
       "recipe": "irkernel",

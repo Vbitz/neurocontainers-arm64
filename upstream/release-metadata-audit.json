@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-12T18:22:10.797593+00:00",
+  "checked_at": "2026-10-12T18:59:58.629535+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -225,7 +225,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T18:22:05.644798+00:00",
+      "checked_at": "2026-10-12T18:59:54.170717+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -250,7 +250,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T18:22:06.524990+00:00"
+      "metadata_checked_at": "2026-10-12T18:59:54.949813+00:00"
     },
     {
       "recipe": "bart",
@@ -483,7 +483,7 @@
           "current_candidate_date_committed": true
         }
       ],
-      "checked_at": "2026-10-12T18:22:08.150101+00:00",
+      "checked_at": "2026-10-12T18:59:56.022132+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -508,7 +508,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T18:22:08.924548+00:00"
+      "metadata_checked_at": "2026-10-12T18:59:56.750597+00:00"
     },
     {
       "recipe": "clearswi",
@@ -943,7 +943,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-12T18:22:10.009073+00:00",
+      "checked_at": "2026-10-12T18:59:57.840148+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -968,7 +968,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-12T18:22:10.796760+00:00"
+      "metadata_checked_at": "2026-10-12T18:59:58.628792+00:00"
     },
     {
       "recipe": "gingerale",
@@ -2160,6 +2160,40 @@
       }
     },
     {
+      "recipe": "bidsmanager",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3525",
+      "merge_sha": "670e27f1c85cceba5050c2e0c686f450a3d957fb",
+      "note": "Fulltest-only change; no image-input change or new release required.",
+      "automatic_workflow_observation": {
+        "run_id": 38292335408,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38292335408",
+        "conclusion": "success",
+        "resolve": "success",
+        "publish": "skipped",
+        "finalize": "skipped",
+        "artifact_count": 0,
+        "checked_at": "2026-10-12T18:42:32.054123+00:00",
+        "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
+      }
+    },
+    {
+      "recipe": "bidstools",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3526",
+      "merge_sha": "a4946935d20a1eabf3419a6e096017d761ef26d6",
+      "note": "Fulltest-only change; no image-input change or new release required.",
+      "automatic_workflow_observation": {
+        "run_id": 38293230596,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38293230596",
+        "conclusion": "success",
+        "resolve": "success",
+        "publish": "skipped",
+        "finalize": "skipped",
+        "artifact_count": 0,
+        "checked_at": "2026-10-12T18:58:54.423989+00:00",
+        "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
+      }
+    },
+    {
       "recipe": "cosmomvpa",
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3522",
       "merge_sha": "8a3e5382b520328dbbfb75be8362b5af0b7dd7dd",
@@ -2359,40 +2393,6 @@
         "finalize": "skipped",
         "artifact_count": 0,
         "checked_at": "2026-10-12T18:42:33.070343+00:00",
-        "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
-      }
-    },
-    {
-      "recipe": "bidsmanager",
-      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3525",
-      "merge_sha": "670e27f1c85cceba5050c2e0c686f450a3d957fb",
-      "note": "Fulltest-only change; no image-input change or new release required.",
-      "automatic_workflow_observation": {
-        "run_id": 38292335408,
-        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38292335408",
-        "conclusion": "success",
-        "resolve": "success",
-        "publish": "skipped",
-        "finalize": "skipped",
-        "artifact_count": 0,
-        "checked_at": "2026-10-12T18:42:32.054123+00:00",
-        "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
-      }
-    },
-    {
-      "recipe": "bidstools",
-      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3526",
-      "merge_sha": "a4946935d20a1eabf3419a6e096017d761ef26d6",
-      "note": "Fulltest-only change; no image-input change or new release required.",
-      "automatic_workflow_observation": {
-        "run_id": 38293230596,
-        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38293230596",
-        "conclusion": "success",
-        "resolve": "success",
-        "publish": "skipped",
-        "finalize": "skipped",
-        "artifact_count": 0,
-        "checked_at": "2026-10-12T18:58:54.423989+00:00",
         "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
       }
     }
