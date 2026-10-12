@@ -4034,3 +4034,7 @@ TractSeg attempt 5 failed at MRtrix configure because Qt was installed after the
 - `hnncore` individual upstream [PR #3528](https://github.com/neurodesk/neurocontainers/pull/3528) opened at exact native-verified `d9dc5f05e2efd65b9f947881d3c0f4bb0b67071a` (73/73, zero failures/skips). Total builds now 3/6 including both upstream architecture candidates; deadline `2026-10-13T06:41:03.520451+00:00`. Require actual upstream reports and all required checks before authorized merge.
 
 - `batchheudiconv` exact current-upstream `e2729b1ff1c46cb4cccb225a0cbc46af7ec96728` native verified: **108/108**, zero failures/skips, all Docker/architecture/SIF/deploy/fulltest gates passed on `ubuntu-24.04-arm`. [Run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38294499066). Await its own upstream PR and dual-architecture verification before merge.
+
+- `quickshear` individualPR3527 actual upstream ARM/x86 pair started at [run38294532000](https://github.com/neurodesk/neurocontainers/actions/runs/38294532000); exact headc7104912b5954737df5698c5cb3aac3cfa154cab, total3/6, deadline2026-10-13T05:52:00+00:00. Both source-specific reports and all required gates remain before merge.
+
+- `hnncore` individualPR3528 actual upstream ARM/x86 pair started at [run38295188534](https://github.com/neurodesk/neurocontainers/actions/runs/38295188534); exact headd9dc5f05e2efd65b9f947881d3c0f4bb0b67071a, total3/6, deadline2026-10-13T06:41:03.520451+00:00. Both source-specific reports and all required gates remain before merge.

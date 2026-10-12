@@ -9664,7 +9664,10 @@
       "attempts": 3,
       "run_id": 38292836645,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3528",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "candidate_run_id": 38295188534,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38295188534"
+      },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
@@ -14352,7 +14355,10 @@
       "attempts": 3,
       "run_id": 38289802875,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3527",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "candidate_run_id": 38294532000,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38294532000"
+      },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
