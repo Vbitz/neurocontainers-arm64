@@ -1,8 +1,17 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-12T16:55:45.595385+00:00",
+  "checked_at": "2026-10-12T18:21:00.028296+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
-  "followup_required": [],
+  "followup_required": [
+    {
+      "recipe": "glmsingle",
+      "capability": "Turbo colormap",
+      "source_sha": "320da1fc522a1d9d8e574f648d543ae4cfe80ef7",
+      "run_id": 38283250023,
+      "first_error": "Existing Turbo colormap test masks ValueError: A value (256.0) in x_new is above the interpolation range maximum255. Source calls scipy interp1d with1-based resampling indices against0-based input. Its shell fallback echoes the expected bug text and returns0; reported78/78 does not verify Turbo colormap.",
+      "revisit_when": "Released upstream fix containing9b7f685 plus explicit renewed build allowance, then remove masked failure and verify actual finite colormap output on both architectures. No private library patch or seventh build."
+    }
+  ],
   "expected_negative_cases": [
     "AMICO invalid input exit64",
     "dcm2niix version exit3/invalid option exit12",
@@ -24,21 +33,6 @@
         {
           "test": "Error handling - missing file",
           "return_code": 64,
-          "errors": []
-        }
-      ]
-    },
-    {
-      "recipe": "ants",
-      "findings": [
-        {
-          "test": "Reset direction",
-          "return_code": 139,
-          "errors": []
-        },
-        {
-          "test": "Time series disassemble",
-          "return_code": 134,
           "errors": []
         }
       ]
@@ -189,6 +183,18 @@
       ]
     },
     {
+      "recipe": "glmsingle",
+      "findings": [
+        {
+          "test": "Turbo colormap",
+          "return_code": 0,
+          "errors": [
+            "Traceback (most recent call last):"
+          ]
+        }
+      ]
+    },
+    {
       "recipe": "topaz",
       "findings": [
         {
@@ -224,11 +230,19 @@
     },
     {
       "recipe": "ants",
-      "source_sha": "f58b9e6755f6af3db1753d44ba3b390270c7cde0",
-      "run_id": 38206206331,
+      "source_sha": "72f72b06ed357182e63a4370760b5f84ca0140c2",
+      "run_id": 38254862112,
       "reported_passed": 103,
       "reported_total": 103,
-      "nonzero_command_exits": 2
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "apptainer",
+      "source_sha": "7ad06c20dca161f6f53b2141234eff61cbe5d829",
+      "run_id": 38231273203,
+      "reported_passed": 7,
+      "reported_total": 7,
+      "nonzero_command_exits": 0
     },
     {
       "recipe": "bart",
@@ -276,6 +290,14 @@
       "run_id": 38223493182,
       "reported_passed": 4,
       "reported_total": 4,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "cosmomvpa",
+      "source_sha": "4d950f4bbc97683bf411a26c354040265a2c09dd",
+      "run_id": 38283869236,
+      "reported_passed": 7,
+      "reported_total": 7,
       "nonzero_command_exits": 0
     },
     {
@@ -351,11 +373,27 @@
       "nonzero_command_exits": 1
     },
     {
+      "recipe": "gimp",
+      "source_sha": "91a4cf173b2ec9687611cc65d8f8b4022ee0b894",
+      "run_id": 38284654111,
+      "reported_passed": 7,
+      "reported_total": 7,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "gingerale",
       "source_sha": "07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5",
       "run_id": 38247655214,
       "reported_passed": 52,
       "reported_total": 52,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "glmsingle",
+      "source_sha": "320da1fc522a1d9d8e574f648d543ae4cfe80ef7",
+      "run_id": 38283250023,
+      "reported_passed": 78,
+      "reported_total": 78,
       "nonzero_command_exits": 0
     },
     {
@@ -431,6 +469,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "segmentator",
+      "source_sha": "413b806fa393075cf4bf92a17dd401eae9eab900",
+      "run_id": 38283623639,
+      "reported_passed": 6,
+      "reported_total": 6,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "topaz",
       "source_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
       "run_id": 38216691578,
@@ -439,7 +485,7 @@
       "nonzero_command_exits": 3
     }
   ],
-  "reviewed_merged_recipe_count": 28,
+  "reviewed_merged_recipe_count": 33,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [],
@@ -505,6 +551,13 @@
     }
   },
   "root_current_source_gaps": [
+    {
+      "recipe": "apptainer",
+      "current_upstream_source": "d283242192109fce4d5f9914a41cf97abe98d1eb",
+      "root_native_source": "7ad06c20dca161f6f53b2141234eff61cbe5d829",
+      "upstream_run": "https://github.com/neurodesk/neurocontainers/actions/runs/38281477701",
+      "note": "Revised upstream source passed both architecture suites; cached root proof verifies earlier source only."
+    },
     {
       "recipe": "gigaconnectome",
       "current_upstream_source": "11049ac1e499f13b68a5a150a0a94fa8fe2711fc",
