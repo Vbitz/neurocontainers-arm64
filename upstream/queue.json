@@ -210,7 +210,9 @@
       "attempts": 3,
       "run_id": 38206206331,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3487",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "candidate_run_id": 38211134319
+      },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
@@ -623,7 +625,59 @@
       "pr_number": 3482,
       "arm64_attempts": 2,
       "x86_64_attempts": 1,
-      "merged_at": "2026-10-12T05:33:20Z"
+      "merged_at": "2026-10-12T05:33:20Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38208442867,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38208442867",
+        "status": "pending-promotion",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "checked_at": "2026-10-12T06:24:52.205055+00:00",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/bart_arm64/1.0.00.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [],
+            "exists": false,
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/bart/1.0.00.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [
+              "20260911"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": false
+          }
+        ],
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-bart-5496bbdb1363839a80b7b582b8eb3e5bbd9f320f)",
+            "status": "in_progress",
+            "conclusion": null,
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-skvdq",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": [
+              "Download candidate bundle without executing it"
+            ]
+          },
+          {
+            "name": "publish (candidate-bart_arm64-5496bbdb1363839a80b7b582b8eb3e5bbd9f320f)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ]
+      }
     },
     {
       "recipe": "batchheudiconv",
@@ -1267,7 +1321,57 @@
       "arm64_attempts": 2,
       "x86_64_attempts": 1,
       "pr_number": 3484,
-      "merged_at": "2026-10-12T06:06:22Z"
+      "merged_at": "2026-10-12T06:06:22Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38210939803,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38210939803",
+        "status": "pending-promotion",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "checked_at": "2026-10-12T06:24:54.158603+00:00",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/brainlifecli_arm64/1.8.2.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [],
+            "exists": false,
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/brainlifecli/1.8.2.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [
+              "20260913"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": false
+          }
+        ],
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-brainlifecli_arm64-fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-brainlifecli-fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ]
+      }
     },
     {
       "recipe": "brats",
@@ -1556,7 +1660,57 @@
         ]
       },
       "pr_number": 3486,
-      "merged_at": "2026-10-12T06:09:43Z"
+      "merged_at": "2026-10-12T06:09:43Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38211197258,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38211197258",
+        "status": "pending-promotion",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "checked_at": "2026-10-12T06:24:56.143292+00:00",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/brkraw_arm64/0.5.7.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [],
+            "exists": false,
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/brkraw/0.5.7.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [
+              "20260914"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": false
+          }
+        ],
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-brkraw_arm64-6b05f8659fda5654927f7d1276972f473e3b1625)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-brkraw-6b05f8659fda5654927f7d1276972f473e3b1625)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ]
+      }
     },
     {
       "recipe": "builder",
@@ -2633,18 +2787,20 @@
       "port_files": [
         "recipes/gigaconnectome/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-gigaconnectome-20261012",
       "baseline_sha": "8ffc4cca756fd5099c7e1a65d22f93ad354da01f",
       "candidate_sha": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
       "started_at": "2026-10-12T05:38:30.096019+00:00",
       "deadline": "2026-10-12T17:38:30.096019+00:00",
-      "attempts": 3,
+      "attempts": 5,
       "run_id": 38210795614,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3489",
+      "upstream_ci": {
+        "candidate_run_id": 38212268669
+      },
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.0",
@@ -2655,8 +2811,8 @@
         "fulltest_version": "0.6.0",
         "test_count": 93
       },
-      "arm64_attempts": 3,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 4,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38210795614",
       "native_attempt_history": [
         {
@@ -2695,7 +2851,38 @@
           "retry_hypothesis": "The corrected participant selector reaches PyBIDS, but PyBIDS 0.15.6 ConnectionManager.exists calls get_database_file, which mkdirs the database path before validate_root. The attempt therefore exited 1 with a read-only filesystem error rather than the guessed missing-root message. Use a regular-file fixture in the writable output directory as an invalid BIDS directory and require exit 1, FileExistsError, and the fixture name. Checked the exact upstream db.py and reproduced this exception locally with the pinned PyBIDS package. No scientific assertions removed or tolerances changed."
         }
       ],
-      "retry_hypothesis": "The corrected participant selector reaches PyBIDS, but PyBIDS 0.15.6 ConnectionManager.exists calls get_database_file, which mkdirs the database path before validate_root. The attempt therefore exited 1 with a read-only filesystem error rather than the guessed missing-root message. Use a regular-file fixture in the writable output directory as an invalid BIDS directory and require exit 1, FileExistsError, and the fixture name. Checked the exact upstream db.py and reproduced this exception locally with the pinned PyBIDS package. No scientific assertions removed or tolerances changed."
+      "retry_hypothesis": "The corrected participant selector reaches PyBIDS, but PyBIDS 0.15.6 ConnectionManager.exists calls get_database_file, which mkdirs the database path before validate_root. The attempt therefore exited 1 with a read-only filesystem error rather than the guessed missing-root message. Use a regular-file fixture in the writable output directory as an invalid BIDS directory and require exit 1, FileExistsError, and the fixture name. Checked the exact upstream db.py and reproduced this exception locally with the pinned PyBIDS package. No scientific assertions removed or tolerances changed.",
+      "native_evidence": {
+        "source_sha": "5b949c5edcf8aecd53001a3eee6f3e312b8f8aec",
+        "version": "0.6.0",
+        "counts": {
+          "total_tests": 94,
+          "passed": 94,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 130.97959446907043,
+          "run_timestamp": "2026-10-12T06:10:23.570802",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 93,
+          "total_suites": 1,
+          "total_tests": 93
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38210795614",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pr_number": 3489
     },
     {
       "recipe": "gimp",
@@ -3384,18 +3571,18 @@
       "port_files": [
         "recipes/meganorm/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
+      "status": "ready-to-dispatch",
+      "branch": "arm64/upstream-meganorm-20261012",
+      "baseline_sha": "a3a48937c8ccd36564db71232bbeecf5198c5c20",
+      "candidate_sha": "8dd1bb3681beb288923340ad07f228f42c98ddc9",
+      "started_at": "2026-10-12T06:25:44.337660+00:00",
+      "deadline": "2026-10-12T18:25:44.337660+00:00",
       "attempts": 0,
       "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Validated and pushed; await a free build slot before the first native dispatch.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.2",
@@ -4590,7 +4777,57 @@
       "pr_number": 3483,
       "arm64_attempts": 2,
       "x86_64_attempts": 1,
-      "merged_at": "2026-10-12T05:40:50Z"
+      "merged_at": "2026-10-12T05:40:50Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38209000133,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38209000133",
+        "status": "pending-promotion",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "checked_at": "2026-10-12T06:24:57.969927+00:00",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/panoptica_arm64/2.1.7.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [],
+            "exists": false,
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/panoptica/2.1.7.json",
+            "expected_build_date": "20261012",
+            "committed_build_dates": [
+              "20260822"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": false
+          }
+        ],
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-panoptica-85689c2ead33e71e549b830a2b4093f9cc2c3f3f)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-panoptica_arm64-85689c2ead33e71e549b830a2b4093f9cc2c3f3f)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ]
+      }
     },
     {
       "recipe": "pcntoolkit",
@@ -4610,18 +4847,18 @@
       "port_files": [
         "recipes/pcntoolkit/build.yaml"
       ],
-      "status": "ready-to-dispatch",
+      "status": "native-verified",
       "branch": "arm64/upstream-pcntoolkit-20261012",
       "baseline_sha": "a3a48937c8ccd36564db71232bbeecf5198c5c20",
       "candidate_sha": "64d88b79ce7299c91813e28dfdc8b95375b6ab6e",
       "started_at": "2026-10-12T06:10:43.172380+00:00",
       "deadline": "2026-10-12T18:10:43.172380+00:00",
-      "attempts": 0,
-      "run_id": null,
+      "attempts": 1,
+      "run_id": 38211311165,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Validated and pushed; await a free build slot before the first native dispatch.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "1.3.0",
@@ -4632,7 +4869,40 @@
         "fulltest_version": "1.3.0",
         "test_count": 13
       },
-      "pr_plan": "Next small candidate: reapply aarch64 declaration to current upstream 1.3.0 after refetch. Existing 13-test suite includes complete BLR fit/predict, finite deviation scores and bundled offline example; preserve all assertions. Check pinned Miniconda ARM asset and scientific/Bayesian package availability before native dispatch."
+      "pr_plan": "Next small candidate: reapply aarch64 declaration to current upstream 1.3.0 after refetch. Existing 13-test suite includes complete BLR fit/predict, finite deviation scores and bundled offline example; preserve all assertions. Check pinned Miniconda ARM asset and scientific/Bayesian package availability before native dispatch.",
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38211311165",
+      "native_evidence": {
+        "source_sha": "64d88b79ce7299c91813e28dfdc8b95375b6ab6e",
+        "version": "1.3.0",
+        "counts": {
+          "total_tests": 14,
+          "passed": 14,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 64.45465159416199,
+          "run_timestamp": "2026-10-12T06:16:13.413344",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 13,
+          "total_suites": 1,
+          "total_tests": 13
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38211311165",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "petu",

@@ -62,3 +62,12 @@ Local checkout protection: upstream instruction files differ from the historical
 checkout. They were read from git without changing any on-disk `AGENTS.md`.
 The submodule index marks both instruction paths skip-worktree; preserve those
 protections. Do not stage the working candidate gitlink as an accepted update.
+
+Release metadata is tracked separately from native verification and PR merge.
+[release-metadata-audit.json](release-metadata-audit.json) records trusted
+promotion runs, the committed metadata paths and build dates, and comparisons
+against promotion previews. ARM64 named variants use
+`releases/<recipe>_arm64/<version>.json`, with explicit architecture and source
+recipe fields. A merged recipe remains pending publication until promotion has
+finished and the committed JSON matches the tested candidate. Automatic upstream
+promotion is observed; generated release JSONs are never edited manually.
