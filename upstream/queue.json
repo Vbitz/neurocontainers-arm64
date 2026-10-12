@@ -10709,7 +10709,7 @@
         "x86_64_status": "cancelled-unstarted-after-known-ARM-timeout; attempt reservation retained"
       },
       "merged_sha": null,
-      "next_action": "Revisit with sufficient upstream ARM runner CPU to finish unchanged EIRS BCM under120s, or explicit renewed verification budget for test-only timeout correction plus fresh native/bothupstream evidence. No scientific test dropped; PR3514 remains unmerged.",
+      "next_action": "Original120s upstream timeout blocker retained. Independently revised mixed shared-builder/recipePR has skipped container suites and failedCodequality; wait scoped/verified infrastructure with actual source-specific container reports. No green empty gate accepted.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.2",
@@ -10826,6 +10826,17 @@
         "preserved_candidate_sha": "06d8049e10fe7703f38ab55cd25b999cbf050abf",
         "budget_note": "4/6 total reservations retained, including unstarted x86. A source timer correction needs fresh native plus both upstream architectures (3 builds) and exceeds remaining2; originalbudget is notreset. Unchanged retry lacks evidence of a transient outage; none dispatched.",
         "cancellation": "Only queued x86 job had no runner and no executed steps; cancelled known-red matrix to avoid spending runner work on an unmergeable candidate. CompletedARM report retained. No healthy running compile cancelled."
+      },
+      "external_progress": {
+        "revised_source": "febbdebb43a7932504a2ab15fbd49601f84f75d6",
+        "run_id": 38270040430,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38270040430",
+        "quality_run_id": 38270039798,
+        "status": "preflight-failed",
+        "external_build_attempts": 0,
+        "discovered_at": "2026-10-12T15:30:31.869875+00:00",
+        "note": "Independent revision includes11shared builder/docs/tests files plus2recipefiles. Candidate and runtime jobs skipped; green release gate has0actual container tests, not proof. Code quality failed Ruff format. Originaltimeoutblocker/sourceproof/budget4/6 retained; no new build or merge by this continuation.",
+        "changes": "ARM compiles C++ source/configs extracted from vendor x86 OCI layers without executing x86 binaries; EIRS300s allowance retains simulation/output assertions; source/vendor identity added. Shared copy-from-image builder path remains unaccepted/unverified as a port."
       }
     },
     {
