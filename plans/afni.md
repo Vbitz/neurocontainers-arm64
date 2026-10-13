@@ -2,7 +2,12 @@
 
 Researched: 2026-09-13. Recipe version: `26.0.07`. Target: native Linux ARM64.
 
-**Assessment: Plausible recipe-level port; no fundamental blocker established.**
+**Assessment: Complete dependency stack unresolved.**
+
+Updated 2026-10-13: native AFNI binaries are available, but the current complete
+recipe requires FreeSurfer 7.4.1, whose official Linux package is x86_64-only.
+The current investigation and revisit condition are recorded below; the original
+AFNI source-build research is retained as historical context.
 
 No fundamental ARM64 blocker established. The recipe chooses an x86 Linux tarball, but AFNI publishes source and a documented local build. Its precompiled R library bundle is a separate architecture-specific input.
 

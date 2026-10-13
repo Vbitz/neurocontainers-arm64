@@ -1,5 +1,7 @@
 # spmpython: native compiled runtime unavailable
 
+**Assessment: Required vendor runtime/standalone execution path unavailable.**
+
 Outcome: blocked-prerequisite
 
 SPM-Python25.1.2.post2 on recipe Python3.12 requires spm-runtime-r2025b>=25.1.2. Actual SPM computations require the proprietary MATLAB Runtime R2025b; MathWorks publishes Linux glnxa64/x86-64, while ARM64 installers are for macOS only. Latest documented Linux R2026b still requires Intel/AMD x86-64. Released matlab-runtime0.0.6 installer map contains glnxa64/glnx86 and maca64, no Linux ARM. Recipe installs Python wrappers and runtime deployment package but no MATLAB engine. Existing82 cases exercise imports, pure Python containers, function availability and NumPy; none calls the compiled SPM computational engine. Historical82/82 therefore remains valid evidence of those checks, not scientific SPM execution on Linux ARM64. Ordinary recipe configuration cannot supply an unavailable proprietary native runtime. No emulation or replacement implementation is permitted.
