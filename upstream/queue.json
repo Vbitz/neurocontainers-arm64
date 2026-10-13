@@ -10199,7 +10199,7 @@
       "port_files": [
         "recipes/flames/build.yaml"
       ],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-flames-20261012",
       "baseline_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
       "candidate_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
@@ -10210,7 +10210,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open the same focused FLAMeS PR after two slots free, report the poor native reference Dice explicitly, and compare the unchanged full MRI/model workflow on both upstream architectures. All required gates plus honest source-specific numerical/parity review must precede merge; no clinical accuracy claim.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -10227,7 +10227,7 @@
       "x86_64_attempts": 0,
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
-      "change_summary": "Enable FLAMeS1.0.0 ARM64 with the official architecture-specific Miniforge installer and matched CPU Torch2.5.1/torchvision0.20.1 wheels. Preserve pinned FLAMeS model ea055aec, all five HD-BET1.0 checkpoints/sourceae160681 and nnU-Net2.8.1. Pin Python3.11/NumPy1.26.4 and the pre-Torch2.6 load contract for the old HD-BET code on both architectures; no library patches. Correct the wrapper to use pinned HD-BET documented -tta0/integer GPU device arguments, retain its five-model accurate mode, clean temporary state and fail if prediction output is absent. Retain all8 existing tests and add real CPU compiled dependency operations plus full five-fold/default-augmentation FLAMeS inference with actual skull stripping on a complete182x218x182 public MS FLAIR image. Require nonempty binary lesions, physical grid, overlap with known lesions and unchanged input/reference/model assets. No clinical accuracy or GPU execution claim.",
+      "change_summary": "Enable FLAMeS1.0.0 ARM64 with the official architecture-specific Miniforge installer and matched CPU Torch2.5.1/torchvision0.20.1 wheels. Preserve pinned FLAMeS model ea055aec, all five HD-BET1.0 checkpoints/sourceae160681 and nnU-Net2.8.1. Pin Python3.11/NumPy1.26.4 and the pre-Torch2.6 load contract for the old HD-BET code on both architectures; no library patches. Correct the wrapper to use pinned HD-BET documented -tta0/integer GPU device arguments, retain its five-model accurate mode, clean temporary state and fail if prediction output is absent. Retain all8 existing tests and add real CPU compiled dependency operations plus full five-fold/default-augmentation FLAMeS inference with actual skull stripping on a complete182x218x182 public MS FLAIR image. Require nonempty binary lesions, physical grid, overlap with known lesions and unchanged input/reference/model assets. No clinical accuracy or GPU execution claim.\n\nNative scientific limitation: Native full-case runtime completed, but this example has very poor agreement with its manual reference:22 predicted voxels vs30620 reference voxels, Dice0.0014359376. This establishes model execution/output integrity only, not segmentation accuracy. Keep the same MRI, reference, all folds/checkpoints and tests; require the planned upstream x86 case comparison before attributing the behavior to ARM or accepting an architecture-parity claim. No easier replacement fixture, threshold tuning or clinical accuracy claim.",
       "pr_title": "Enable FLAMeS ARM64 and correct pinned HD-BET invocation",
       "primary_source_review": [
         "https://huggingface.co/spaces/FrancescoLR/FLAMeS/blob/main/app.py",
@@ -10363,7 +10363,82 @@
           "Dataset004_WML/nnUNetTrainer_8000epochs__nnUNetPlans__3d_fullres/plans.json": "{\n    \"dataset_name\": \"Dataset004_WML\",\n    \"plans_name\": \"nnUNetPlans\",\n    \"original_median_spacing_after_transp\": [\n        1.0,\n        0.9000000059604645,\n        0.9000000059604645\n    ],\n    \"original_median_shape_after_transp\": [\n        144,\n        177,\n        190\n    ],\n    \"image_reader_writer\": \"SimpleITKIO\",\n    \"transpose_forward\": [\n        2,\n        0,\n        1\n    ],\n    \"transpose_backward\": [\n        1,\n        2,\n        0\n    ],\n    \"configurations\": {\n        \"2d\": {\n            \"data_identifier\": \"nnUNetPlans_2d\",\n            \"preprocessor_name\": \"DefaultPreprocessor\",\n            \"batch_size\": 106,\n            \"patch_size\": [\n                160,\n                192\n            ],\n            \"median_image_size_in_voxels\": [\n                154.0,\n                185.0\n            ],\n            \"spacing\": [\n                0.9000000059604645,\n                0.9000000059604645\n            ],\n            \"normalization_schemes\": [\n                \"ZScoreNormalization\"\n            ],\n            \"use_mask_for_norm\": [\n                true\n            ],\n            \"resampling_fn_data\": \"resample_data_or_seg_to_shape\",\n            \"resampling_fn_seg\": \"resample_data_or_seg_to_shape\",\n            \"resampling_fn_data_kwargs\": {\n                \"is_seg\": false,\n                \"order\": 3,\n                \"order_z\": 0,\n                \"force_separate_z\": null\n            },\n            \"resampling_fn_seg_kwargs\": {\n                \"is_seg\": true,\n                \"order\": 1,\n                \"order_z\": 0,\n                \"force_separate_z\": null\n            },\n            \"resampling_fn_probabilities\": \"resample_data_or_seg_to_shape\",\n            \"resampling_fn_probabilities_kwargs\": {\n                \"is_seg\": false,\n                \"order\": 1,\n                \"order_z\": 0,\n                \"force_separate_z\": null\n            },\n            \"architecture\": {\n                \"network_class_name\": \"dynamic_network_architectures.architectures.unet.PlainConvUNet\",\n                \"arch_kwargs\": {\n                    \"n_stages\": 6,\n                    \"features_per_stage\": [\n                        32,\n                        64,\n                        128,\n                        256,\n                        512,\n                        512\n                    ],\n                    \"conv_op\": \"torch.nn.modules.conv.Conv2d\",\n                    \"kernel_sizes\": [\n                        [\n                            3,\n                            3\n                        ],\n                        [\n                            3,\n                            3\n                        ],\n                        [\n                            3,\n                            3\n                        ],\n                        [\n                            3,\n                            3\n                        ],\n                        [\n                            3,\n                            3\n                        ],\n                        [\n                            3,\n                            3\n                        ]\n                    ],\n                    \"strides\": [\n                        [\n                            1,\n                            1\n                        ],\n                        [\n                            2,\n                            2\n                        ],\n                        [\n                            2,\n                            2\n                        ],\n                        [\n                            2,\n                            2\n                        ],\n                        [\n                            2,\n                            2\n                        ],\n                        [\n                            2,\n                            2\n                        ]\n                    ],\n                    \"n_conv_per_stage\": [\n                        2,\n                        2,\n                        2,\n                        2,\n                        2,\n                        2\n                    ],\n                    \"n_conv_per_stage_decoder\": [\n                        2,\n                        2,\n                        2,\n                        2,\n                        2\n                    ],\n                    \"conv_bias\": true,\n                    \"norm_op\": \"torch.nn.modules.instancenorm.InstanceNorm2d\",\n                    \"norm_op_kwargs\": {\n                        \"eps\": 1e-05,\n                        \"affine\": true\n                    },\n                    \"dropout_op\": null,\n                    \"dropout_op_kwargs\": null,\n                    \"nonlin\": \"torch.nn.LeakyReLU\",\n                    \"nonlin_kwargs\": {\n                        \"inplace\": true\n                    }\n                },\n                \"_kw_requires_import\": [\n                    \"conv_op\",\n                    \"norm_op\",\n                    \"dropout_op\",\n                    \"nonlin\"\n                ]\n            },\n            \"batch_dice\": true\n        },\n        \"3d_fullres\": {\n            \"data_identifier\": \"nnUNetPlans_3d_fullres\",\n            \"preprocessor_name\": \"DefaultPreprocessor\",\n            \"batch_size\": 2,\n            \"patch_size\": [\n                112,\n                128,\n                160\n            ],\n            \"median_image_size_in_voxels\": [\n                133.0,\n                154.0,\n                185.0\n            ],\n            \"spacing\": [\n                1.0,\n                0.9000000059604645,\n                0.9000000059604645\n            ],\n            \"normalization_schemes\": [\n                \"ZScoreNormalization\"\n            ],\n            \"use_mask_for_norm\": [\n                true\n            ],\n            \"resampling_fn_data\": \"resample_data_or_seg_to_shape\",\n            \"resampling_fn_seg\": \"resample_data_or_seg_to_shape\",\n            \"resampling_fn_data_kwargs\": {\n                \"is_seg\": false,\n                \"order\": 3,\n                \"order_z\": 0,\n                \"force_separate_z\": null\n            },\n            \"resampling_fn_seg_kwargs\": {\n                \"is_seg\": true,\n                \"order\": 1,\n                \"order_z\": 0,\n                \"force_separate_z\": null\n            },\n            \"resampling_fn_probabilities\": \"resample_data_or_seg_to_shape\",\n            \"resampling_fn_probabilities_kwargs\": {\n                \"is_seg\": false,\n                \"order\": 1,\n                \"order_z\": 0,\n                \"force_separate_z\": null\n            },\n            \"architecture\": {\n                \"network_class_name\": \"dynamic_network_architectures.architectures.unet.PlainConvUNet\",\n                \"arch_kwargs\": {\n                    \"n_stages\": 6,\n                    \"features_per_stage\": [\n                        32,\n                        64,\n                        128,\n                        256,\n                        320,\n                        320\n                    ],\n                    \"conv_op\": \"torch.nn.modules.conv.Conv3d\",\n                    \"kernel_sizes\": [\n                        [\n                            3,\n                            3,\n                            3\n                        ],\n                        [\n                            3,\n                            3,\n                            3\n                        ],\n                        [\n                            3,\n                            3,\n                            3\n                        ],\n                        [\n                            3,\n                            3,\n                            3\n                        ],\n                        [\n                            3,\n                            3,\n                            3\n                        ],\n                        [\n                            3,\n                            3,\n                            3\n                        ]\n                    ],\n                    \"strides\": [\n                        [\n                            1,\n                            1,\n                            1\n                        ],\n                        [\n                            2,\n                            2,\n                            2\n                        ],\n                        [\n                            2,\n                            2,\n                            2\n                        ],\n                        [\n                            2,\n                            2,\n                            2\n                        ],\n                        [\n                            2,\n                            2,\n                            2\n                        ],\n                        [\n                            1,\n                            2,\n                            2\n                        ]\n                    ],\n                    \"n_conv_per_stage\": [\n                        2,\n                        2,\n                        2,\n                        2,\n                        2,\n                        2\n                    ],\n                    \"n_conv_per_stage_decoder\": [\n                        2,\n                        2,\n                        2,\n                        2,\n                        2\n                    ],\n                    \"conv_bias\": true,\n                    \"norm_op\": \"torch.nn.modules.instancenorm.InstanceNorm3d\",\n                    \"norm_op_kwargs\": {\n                        \"eps\": 1e-05,\n                        \"affine\": true\n                    },\n                    \"dropout_op\": null,\n                    \"dropout_op_kwargs\": null,\n                    \"nonlin\": \"torch.nn.LeakyReLU\",\n                    \"nonlin_kwargs\": {\n                        \"inplace\": true\n                    }\n                },\n                \"_kw_requires_import\": [\n                    \"conv_op\",\n                    \"norm_op\",\n                    \"dropout_op\",\n                    \"nonlin\"\n                ]\n            },\n            \"batch_dice\": false\n        }\n    },\n    \"experiment_planner_used\": \"ExperimentPlanner\",\n    \"label_manager\": \"LabelManager\",\n    \"foreground_intensity_properties_per_channel\": {\n        \"0\": {\n            \"max\": 3688541.5,\n            \"mean\": 63206.06989644738,\n            \"median\": 167.43850708007812,\n            \"min\": 0.0,\n            \"percentile_00_5\": 47.72833251953125,\n            \"percentile_99_5\": 2077017.5018749982,\n            \"std\": 327313.09328078595\n        }\n    }\n}"
         }
       },
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38483705386"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38483705386",
+      "native_command_exit_review": {
+        "source_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": [
+          {
+            "test": "FLAMeS command help",
+            "expected_exit_code": 1
+          }
+        ]
+      },
+      "native_evidence": {
+        "source_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+        "version": "1.0.0",
+        "counts": {
+          "total_tests": 11,
+          "passed": 11,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 914.4044692516327,
+          "run_timestamp": "2026-10-13T23:46:10.635691",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 10,
+          "total_suites": 1,
+          "total_tests": 10
+        },
+        "deploy_counts": {
+          "total": 3,
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38483705386",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "native_actual_scientific_review": {
+        "source_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+        "actual_zero_exit_commands": 9,
+        "explicit_expected_exit_one_commands": [
+          "FLAMeS command help"
+        ],
+        "full_ms_case_seconds": 905.2132086753845,
+        "metrics": {
+          "folds": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "input_sha256": {
+            "flair": "312253bbc7cea9adcd78a98c66e18ba1253b1a2183f31492f6a9f9ce5086e745",
+            "reference": "f35bd723ac2af1b179522f53de48e45ce485c5864e4f6954d24d684140ba0533"
+          },
+          "lesion_voxels": 22,
+          "observed_dice": 0.0014359376019842046,
+          "reference_overlap_voxels": 22,
+          "seconds": 895.19,
+          "shape": [
+            182,
+            218,
+            182
+          ],
+          "skull_strip": true,
+          "unchanged_model_files": 33
+        },
+        "reference_lesion_voxels": 30620,
+        "limitation": "Native full-case runtime completed, but this example has very poor agreement with its manual reference:22 predicted voxels vs30620 reference voxels, Dice0.0014359376. This establishes model execution/output integrity only, not segmentation accuracy. Keep the same MRI, reference, all folds/checkpoints and tests; require the planned upstream x86 case comparison before attributing the behavior to ARM or accepting an architecture-parity claim. No easier replacement fixture, threshold tuning or clinical accuracy claim.",
+        "parity_review_pending": true
+      }
     },
     {
       "recipe": "fsl",
@@ -30202,18 +30277,18 @@
         "recipes/syncro/build.yaml",
         "recipes/syncro/fulltest.yaml"
       ],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-syncro-20261012",
       "baseline_sha": "670f3eafd0f9393aba110741c05a062948d969d4",
       "candidate_sha": "08e0b4a389c90485a7d99c030f0fedb6e39517b7",
       "started_at": "2026-10-13T21:20:41.673684+00:00",
       "deadline": "2026-10-14T09:20:41.673684+00:00",
-      "attempts": 2,
+      "attempts": 4,
       "run_id": 38476007098,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3605",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.0",
@@ -30226,8 +30301,8 @@
         "patch_conflict": "error: patch failed: recipes/syncro/build.yaml:3\nerror: recipes/syncro/build.yaml: patch does not apply",
         "three_way_clean": true
       },
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
       "change_summary": "Enable ARM64 for SYNcro0.2.0 while preserving the existing x86 SynthStrip1.8 base and the unmodified current SYNcro/SynthSR science. Reconstruct the ARM CPU component from the official SynthStrip1.8 Docker-linked source9f94380e, identical checksummed default/no-CSF checkpoints, matching official Surfa sourceca4e263 and torch2.1.2 on Python3.10 Bookworm. Use the previously native-proven unmodified ANTsPy0.5.4 source build with ordinary CMake/image-library dependencies, existing NumPy1.26.4/TensorFlow2.21/SynthSR04ab source and official OSF models/MNI fixture, all preflighted. Add missing unzip needed by the existing shared install; retain x86 packages/versions. Track introduced source/dependency/artifact pins and writable caches. Preserve all36 existing tests including actual distance-transform output (the older7.4.1 ARM script could not support it), all full normalization/lesion/multiple-image operations and the original registration-overlap threshold. Assert documented help1 and negative1 exit codes instead of masking them. Add actual CPU TensorFlow/PyTorch/native-ANTs/model closure plus every masked voxel, physical MNI grids, finite distance-transform/default-output consistency, nonempty binary warped lesion/pathology maps and unchanged MRI/model hashes, using existing model outputs without extra forward passes. CPU integration is the verified target; GPU and clinical accuracy are not inferred.",
@@ -30329,6 +30404,18 @@
           "Complete trained normalization and lesion image contracts": "Actual full SYNcro SynthSR/SynthStrip/ANTs normalization and lesion/multiple-image outputs preserve physical grids, every masked voxel, distance-transform capability and all input/checkpoint hashes\n"
         },
         "scope": "CPU SynthSR/SynthStrip/ANTs full normalization, distance transform, lesions/multiple-image maps, original registration-overlap assertion and every masked voxel/physical grid/input-model hash. GPU and clinical accuracy unverified."
+      },
+      "pending_upstream_issue": 3605,
+      "pr_number": 3605,
+      "upstream_candidate_run": {
+        "id": 38486489794,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38486489794",
+        "jobs": {
+          "x86_64": 115601411189,
+          "aarch64": 115601411251
+        },
+        "status": "in-progress",
+        "note": "Both actual architecture image jobs started; earlier superseded detect/quality runs are not current proof."
       }
     },
     {
