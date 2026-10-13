@@ -70,6 +70,11 @@ build and both architecture jobs in each upstream matrix. Upstream retries and
 integration attempts also consume that budget; separate architecture counters
 do not enlarge it.
 
+On 2026-10-13, the user authorized **seven total builds for Code only**. Its
+original attempts and deadline remain in force. The per-recipe
+`max_build_attempts` and `build_budget_authorization` fields record this exception;
+the default remains six for every other recipe.
+
 Durable investigation notes belong in each linked `arm64-container` issue's
 comments. `PLAN.md` records checkpoints. Coverage issue #2 continues to report
 its own accepted architecture inventory and latest build evidence; its historic

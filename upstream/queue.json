@@ -5959,18 +5959,18 @@
         "recipes/code/build.yaml",
         "recipes/code/fulltest.yaml"
       ],
-      "status": "blocked-verification-budget",
+      "status": "waiting-capacity",
       "branch": "arm64/upstream-code-20261012",
       "baseline_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
       "candidate_sha": "c2c0cd3369a1fcd717243deffd9d11f75e112000",
       "started_at": "2026-10-13T14:10:00+00:00",
       "deadline": "2026-10-14T02:10:00+00:00",
       "attempts": 4,
-      "run_id": 38428496033,
+      "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Needs explicitly renewed build budget to verify corrected exact source natively and in its own upstream ARM/x86 PR. Preserve correction and prior reports; continue other eligible recipes.",
+      "next_action": "User authorized7 total builds for Code. When one of the four active investigations finishes, resume pushedc2c0cd33 for one exact native retest (attempt5), then its own upstream ARM/x86 PR (attempts6and7) only if the full native suite passes. Original02:10UTC deadline remains.",
       "upstream_review": {
         "exists": true,
         "version": "240320",
@@ -6028,7 +6028,7 @@
       ],
       "arm64_attempts": 4,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38428496033",
+      "run_url": null,
       "candidate_history": [
         {
           "source_sha": "86a5ee5a0d7802e6576ca0e36401861e84a32343",
@@ -6115,12 +6115,19 @@
       "retry_hypothesis": "Launchpad returned HTTP504 during host Apptainer setup before image build. One unchanged retry of exact source680e40b7 is permitted; it leaves exactly two upstream architecture builds within six total. No scientific/runtime result is inferred from the setup failure.",
       "transient_unchanged_retry_used": true,
       "untested_correction_sha": "c2c0cd3369a1fcd717243deffd9d11f75e112000",
-      "blocker": {
+      "prior_budget_blocker": {
         "recorded_at": "2026-10-13T16:34:52.950071+00:00",
         "classification": "insufficient-remaining-builds-for-full-verification",
         "note": "Four native attempts used (including one Launchpad504 before build). Last source built/converted/deployed, then my host fixture used non-POSIX pipefail with /bin/sh and failed before all87 functional cases. Corrected only host set options to POSIX set -eu; no pipelines exist there, all functional assertions remain. Actual guarded host setup executes via /bin/sh locally. Three new builds required (native plus both upstream architectures), only2 remain. No application/runtime blocker concluded and no corrected-source proof/PR claimed.",
         "required_additional_builds": 3,
         "remaining_builds": 2
+      },
+      "max_build_attempts": 7,
+      "build_budget_authorization": {
+        "authorized_by": "user",
+        "answer": "Allow 7 total for Code",
+        "authorized_at": "2026-10-13T17:03:39.970889+00:00",
+        "scope": "Code only; original four attempts and original deadline retained; no skipped/weakened tests"
       }
     },
     {
@@ -30842,7 +30849,7 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-xnat-20261012",
       "baseline_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
       "candidate_sha": "845d83734f0b98b5c06514048528bccd6646a6c5",
@@ -30853,7 +30860,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "1.9.2.1",
@@ -30868,8 +30875,8 @@
       "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
-      "change_summary": "Retain current upstream XNAT1.9.2.1 and its existing ARM/x86 declarations, Java8/Tomcat9/PostgreSQL12 and official WAR. The98 original tests never start the service. Fix ordinary PostgreSQL bootstrap configuration for Apptainer's host account: explicitly initialize the postgres superuser instead of assuming the runtime account is jovyan; require SQL ON_ERROR_STOP and clean pg_ctl shutdown. Add standard python3 to drive the real integration operation. Keep all98 cases, remove truncating pipelines and error fallbacks, make the Java settings query actually return0 with -version, and explicitly handle the intentionally absent JDK-only utilities in this JRE image. Add actual deployed XNAT server startup and initial setup through its supported API, authenticated project creation, full required T2 NIfTI resource upload/download with exact-byte/catalog-size and unchanged-input checks, native database project confirmation and denied unauthenticated private-file access. Keep all runtime state private/writable and clean up the owned service process group. No Java/application/library patch, fake service, emulation or omitted functional gate. Current recipe version is retained; this is not an application upgrade to newer XNAT releases.",
-      "pr_title": "Verify XNAT service and NIfTI transfers on native ARM64 and x86",
+      "change_summary": "Apptainer runs XNAT as the host account, while the startup script tried to connect as a database role named jovyan. Initialize an explicit postgres bootstrap role, fail on SQL errors and shut the temporary database down cleanly. Keep XNAT1.9.2.1 and its existing Java/Tomcat/PostgreSQL packages.\n\nRetain all98 existing cases and add a real server operation: complete initial setup, create a project through the authenticated API, upload and download the required T2 NIfTI byte-for-byte, confirm its catalog size and database row, and deny anonymous private-file access. The fixture verifies cleanup of its entire owned process group.",
+      "pr_title": "Fix XNAT startup under Apptainer and test native NIfTI transfers",
       "primary_source_review": [
         "https://api.bitbucket.org/2.0/repositories/xnatdev/xnat-web/downloads?pagelen=100",
         "https://wiki.xnat.org/documentation/xnat-installation-guide",
@@ -30950,7 +30957,42 @@
           },
           "followup": "All100 application/deployment checks passed, but Apptainer warned that a process kept the SIF open after completion. Strengthen complete owned-process-group cleanup before upstream submission."
         }
-      ]
+      ],
+      "native_command_exit_review": {
+        "source_sha": "845d83734f0b98b5c06514048528bccd6646a6c5",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "845d83734f0b98b5c06514048528bccd6646a6c5",
+        "version": "1.9.2.1",
+        "counts": {
+          "total_tests": 100,
+          "passed": 100,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 94.46536660194397,
+          "run_timestamp": "2026-10-13T16:56:25.827394",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 99,
+          "total_suites": 1,
+          "total_tests": 99
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38434072302",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     }
   ],
   "pull_request_policy": "Exactly one focused upstream pull request per remaining in-scope container; never combine containers. OpenRecon recipes are excluded by user instruction.",
