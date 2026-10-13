@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-13T18:03:20.222369+00:00",
+  "checked_at": "2026-10-13T18:19:01.131731+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -561,7 +561,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T18:03:07.948467+00:00",
+      "checked_at": "2026-10-13T18:18:46.811949+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -586,7 +586,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:03:08.752559+00:00",
+      "metadata_checked_at": "2026-10-13T18:18:47.542112+00:00",
       "publication_blocker": {
         "classification": "blocked-prerequisite-publication",
         "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -672,6 +672,58 @@
         }
       ],
       "metadata_checked_at": "2026-10-12T13:20:32.213313+00:00"
+    },
+    {
+      "recipe": "code",
+      "promotion_run_id": 38444713184,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38444713184",
+      "status": "pending-promotion",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/code_arm64/240320.json",
+          "expected_build_date": "20261014",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/code/240320.json",
+          "expected_build_date": "20261014",
+          "exists": true,
+          "committed_build_dates": [
+            "20261011"
+          ],
+          "current_candidate_date_committed": false
+        }
+      ],
+      "checked_at": "2026-10-13T18:18:50.711089+00:00",
+      "workflow_status": "queued",
+      "workflow_conclusion": null,
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-code-c2c0cd3369a1fcd717243deffd9d11f75e112000)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-code_arm64-c2c0cd3369a1fcd717243deffd9d11f75e112000)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-13T18:18:51.472778+00:00"
     },
     {
       "recipe": "condaenvs",
@@ -2060,7 +2112,7 @@
           "current_candidate_date_committed": true
         }
       ],
-      "checked_at": "2026-10-13T18:03:10.350163+00:00",
+      "checked_at": "2026-10-13T18:18:52.790652+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -2085,7 +2137,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:03:11.827305+00:00",
+      "metadata_checked_at": "2026-10-13T18:18:53.577377+00:00",
       "failure_review": {
         "classification": "blocked-infrastructure",
         "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -2393,7 +2445,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T18:03:13.293829+00:00",
+      "checked_at": "2026-10-13T18:18:54.689507+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -2408,7 +2460,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:03:14.186278+00:00",
+      "metadata_checked_at": "2026-10-13T18:18:55.454169+00:00",
       "failure_detail": {
         "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
         "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -2915,7 +2967,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T18:03:15.504552+00:00",
+      "checked_at": "2026-10-13T18:18:56.576111+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -2940,7 +2992,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:03:16.298691+00:00"
+      "metadata_checked_at": "2026-10-13T18:18:57.332627+00:00"
     },
     {
       "recipe": "root",
@@ -3511,7 +3563,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T18:03:17.428854+00:00",
+      "checked_at": "2026-10-13T18:18:58.439113+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -3536,7 +3588,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:03:18.222911+00:00"
+      "metadata_checked_at": "2026-10-13T18:18:59.279077+00:00"
     },
     {
       "recipe": "workshopdemo",
@@ -3631,7 +3683,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T18:03:19.385598+00:00",
+      "checked_at": "2026-10-13T18:19:00.330071+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -3656,7 +3708,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:03:20.221263+00:00"
+      "metadata_checked_at": "2026-10-13T18:19:01.130966+00:00"
     }
   ],
   "findings": [
@@ -3669,6 +3721,7 @@
     "brkraw: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38265545390)",
     "builder: promotion-failed (https://github.com/neurodesk/neurocontainers/actions/runs/38323251344)",
     "clearswi: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38248983163)",
+    "code: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38444713184)",
     "condaenvs: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38229766906)",
     "deep-quality-estimation: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38227134210)",
     "deepdisco: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38365154488)",
