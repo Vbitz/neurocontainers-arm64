@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-12T23:45:47.602192+00:00",
+  "checked_at": "2026-10-13T00:13:19.241750+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     {
@@ -548,6 +548,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "fsl",
+      "source_sha": "4bfaf8ea40c71778b11058f8511eeb7199b47e43",
+      "run_id": 38314680689,
+      "reported_passed": 132,
+      "reported_total": 132,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "fsqc",
       "source_sha": "bba9c58d834c90e5fe99f6649679bf19ffd87334",
       "run_id": 38218989145,
@@ -780,7 +788,7 @@
       "nonzero_command_exits": 0
     }
   ],
-  "reviewed_merged_recipe_count": 52,
+  "reviewed_merged_recipe_count": 53,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [],
@@ -911,15 +919,26 @@
     }
   ],
   "cached_deployment_linkage_summary_review": {
-    "reviewed_count": 51,
-    "outliers": [],
-    "checked_at": "2026-10-12T23:30:26.946976+00:00",
-    "method": "Read existing exact-source native reports for all51 unique merged recipes; no image rebuilt. Flag ldd.summary.skipped entries withmorethan2 pathless records. None found. Two entries are consistent with vDSO/loader summaries; aggregate counts do not prove full linkage closure because the current parser also skips=>notfound.",
+    "reviewed_count": 53,
+    "outliers": [
+      {
+        "recipe": "fsl",
+        "source_sha": "4bfaf8ea40c71778b11058f8511eeb7199b47e43",
+        "run_id": 38314680689,
+        "name": "ldd.summary.skipped:/opt/fsl-6.0.7.23/bin/eddy_cuda",
+        "status": "skipped",
+        "message": "Skipped 4 linkage entries without filesystem paths."
+      }
+    ],
+    "checked_at": "2026-10-13T00:14:16.850955+00:00",
+    "method": "Read exact-source cached deployment scan summaries for all53 merged recipes, including prior root source for the3 explicitly recorded current-source gaps. No rebuild. The sole >2 pathless-entry summary is FSL eddy_cuda, with4; source-specific GPU/driver limitation is recorded in its issue. All131 CPU functional cases passed. Ordinary2-entry summaries do not establish full linkage closure because the parser also skips unresolved=>notfound entries.",
     "parser_limitation": "workflows/test_deploy.sh parse_ldd_output treats unresolved=>notfound entries as skipped, not failures. Exact library closure cannot be inferred solely from aggregate deployment success.",
     "active_recipe_reviews": {
-      "elastix": "45 pathless entries per exposed raw ELF; ITK global runtime path corrected and independent raw versions/ldd no-notfound checks dispatched in38321532705 at3decd22f. All32 original functional cases retained.",
-      "fsl": "115 binaries have2 pathless entries; onlyeddy_cuda has4. CPU131functional tests verified; complete CUDA linkage/operation requires an eligible GPU/driver host. Existing200-command scan cap remains explicit."
+      "elastix": "Native3decd22f ITK global path fix reduced45 to2 pathless entries per raw ELF; all32 retained scientific/negative cases passed. Independent raw closure check failed before running because image has no Python. Corrected exact shell/ldd/version assertions are now dispatched at429bc011017cb462f049babba5b28f4bd1d6179a in38325625311; no direct closure success claimed yet."
     },
-    "scope": "Cached deployed-directory scan summaries only; not exhaustive optional-command execution or GPU verification."
+    "scope": "Cached deployed-directory scan summaries only; not exhaustive optional-command execution or GPU verification.",
+    "accepted_recipe_limitations": {
+      "fsl": "Additional source-specific parser review:115 binaries each have2 pathless ldd entries, consistent with Linux vDSO/loader summaries; only eddy_cuda has4. The existing parser does not reject=>notfound, so an empty failure count alone cannot establish full linkage closure. The two extra eddy_cuda entries require GPU/driver investigation on an eligible host; GPU execution and complete CUDA linkage are unverified on this CPU-only runner. All131 actual CPU fulltests passed including exact arithmetic/statistics/ROI/FLIRT and FSLeyes/ASL. Preserve explicit200-executable inventory cap and GPU prerequisite limitation; no exhaustive optional-command/GPU claim. No source change or successful CPU build repeated."
+    }
   }
 }
