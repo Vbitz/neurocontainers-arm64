@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-13T20:32:06.052554+00:00",
-  "upstream_ref": "99cfe0286304f146935aa39d31fa2e579810610d",
+  "checked_at": "2026-10-13T22:04:09.379537+00:00",
+  "upstream_ref": "4167b93854b46d07ab7139d80d9d430db5b4c561",
   "scope": "112 user-requested in-scope recipes;17 OpenRecon exclusions omitted.",
   "policy": "Read-only source-tree audit. Metadata presence/schema does not prove current builds, public artifacts or deployment; exact-candidate publication proofs remain in release-metadata-audit.json. No generated JSON changes or promotion dispatch.",
   "counts": {
-    "pending-arm64-port": 21,
+    "pending-arm64-port": 20,
     "explicit-arm64-metadata-present": 65,
-    "no-current-version-metadata-at-audited-ref": 26
+    "no-current-version-metadata-at-audited-ref": 27
   },
   "containers": [
     {
@@ -818,9 +818,11 @@
       "recipe": "lesionquantificationtoolkit",
       "version": "0.1.0",
       "declared_architectures": [
-        "x86_64"
+        "x86_64",
+        "aarch64"
       ],
-      "status": "pending-arm64-port"
+      "path": "releases/lesionquantificationtoolkit_arm64/0.1.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
     },
     {
       "recipe": "libreoffice",
