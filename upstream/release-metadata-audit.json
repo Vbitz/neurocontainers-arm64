@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-13T18:55:43.554631+00:00",
+  "checked_at": "2026-10-13T20:30:51.109399+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -561,7 +561,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T18:55:29.026329+00:00",
+      "checked_at": "2026-10-13T20:30:23.810094+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -586,7 +586,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:55:30.089136+00:00",
+      "metadata_checked_at": "2026-10-13T20:30:24.611114+00:00",
       "publication_blocker": {
         "classification": "blocked-prerequisite-publication",
         "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -698,7 +698,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T18:55:31.164131+00:00",
+      "checked_at": "2026-10-13T20:30:25.874310+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -723,7 +723,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:55:31.965821+00:00"
+      "metadata_checked_at": "2026-10-13T20:30:26.712537+00:00"
     },
     {
       "recipe": "condaenvs",
@@ -1974,7 +1974,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T18:55:33.131576+00:00",
+      "checked_at": "2026-10-13T20:30:27.990041+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "success",
       "publish_jobs": [
@@ -1989,7 +1989,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:55:33.917712+00:00",
+      "metadata_checked_at": "2026-10-13T20:30:28.860752+00:00",
       "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
       "resolution_evidence": {
         "automatic_run_id": 38448486794,
@@ -2167,7 +2167,7 @@
           "current_candidate_date_committed": true
         }
       ],
-      "checked_at": "2026-10-13T18:55:35.225412+00:00",
+      "checked_at": "2026-10-13T20:30:30.520017+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -2192,7 +2192,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:55:36.008642+00:00",
+      "metadata_checked_at": "2026-10-13T20:30:31.364529+00:00",
       "failure_review": {
         "classification": "blocked-infrastructure",
         "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -2500,7 +2500,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T18:55:37.133891+00:00",
+      "checked_at": "2026-10-13T20:30:32.665994+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -2515,13 +2515,65 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:55:37.898997+00:00",
+      "metadata_checked_at": "2026-10-13T20:30:33.480887+00:00",
       "failure_detail": {
         "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
         "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
         "source_sha": "5e2f76d3",
         "next_action": "Merge shared selector correction only after required upstream checks; existing failed publication requires upstream-maintainer recovery. Do not rebuild passing container or dispatch promotion under this workflow."
       }
+    },
+    {
+      "recipe": "pals",
+      "promotion_run_id": 38461903935,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38461903935",
+      "status": "pending-promotion",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/pals_arm64/2.0.1.json",
+          "expected_build_date": "20261014",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/pals/2.0.1.json",
+          "expected_build_date": "20261014",
+          "exists": true,
+          "committed_build_dates": [
+            "20260518"
+          ],
+          "current_candidate_date_committed": false
+        }
+      ],
+      "checked_at": "2026-10-13T20:30:37.019655+00:00",
+      "workflow_status": "queued",
+      "workflow_conclusion": null,
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-pals-b2c74585de5d550a5dbd1c80cbfb91e943034d02)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-pals_arm64-b2c74585de5d550a5dbd1c80cbfb91e943034d02)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-13T20:30:37.755550+00:00"
     },
     {
       "recipe": "panoptica",
@@ -2726,6 +2778,58 @@
         }
       ],
       "metadata_checked_at": "2026-10-13T02:01:01.299983+00:00"
+    },
+    {
+      "recipe": "qsmbly",
+      "promotion_run_id": 38453384443,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38453384443",
+      "status": "pending-promotion",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/qsmbly_arm64/0.29.0.json",
+          "expected_build_date": "20261014",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/qsmbly/0.29.0.json",
+          "expected_build_date": "20261014",
+          "exists": true,
+          "committed_build_dates": [
+            "20261006"
+          ],
+          "current_candidate_date_committed": false
+        }
+      ],
+      "checked_at": "2026-10-13T20:30:39.742768+00:00",
+      "workflow_status": "queued",
+      "workflow_conclusion": null,
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-qsmbly-f29fad8a1acd06e56bf4e3c5b727472448b23dbc)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-qsmbly_arm64-f29fad8a1acd06e56bf4e3c5b727472448b23dbc)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-13T20:30:40.488212+00:00"
     },
     {
       "recipe": "quickshear",
@@ -3022,7 +3126,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T18:55:39.067536+00:00",
+      "checked_at": "2026-10-13T20:30:41.759381+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -3047,7 +3151,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:55:39.792420+00:00"
+      "metadata_checked_at": "2026-10-13T20:30:43.592766+00:00"
     },
     {
       "recipe": "root",
@@ -3320,6 +3424,58 @@
         }
       ],
       "metadata_checked_at": "2026-10-13T02:01:18.910352+00:00"
+    },
+    {
+      "recipe": "synthstrip",
+      "promotion_run_id": 38463038213,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38463038213",
+      "status": "pending-promotion",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/synthstrip_arm64/8.2.0.json",
+          "expected_build_date": "20261014",
+          "exists": false,
+          "committed_build_dates": [],
+          "current_candidate_date_committed": false
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/synthstrip/8.2.0.json",
+          "expected_build_date": "20261014",
+          "exists": true,
+          "committed_build_dates": [
+            "20261012"
+          ],
+          "current_candidate_date_committed": false
+        }
+      ],
+      "checked_at": "2026-10-13T20:30:46.592473+00:00",
+      "workflow_status": "queued",
+      "workflow_conclusion": null,
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-synthstrip_arm64-b39a7cf0fd97b9dd6d035b376fabfff59c5d4aad)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-synthstrip-b39a7cf0fd97b9dd6d035b376fabfff59c5d4aad)",
+          "status": "queued",
+          "conclusion": null,
+          "runner_name": "",
+          "labels": [
+            "neurodesk-syd-arcrunner-neurocontainers"
+          ],
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-13T20:30:47.355733+00:00"
     },
     {
       "recipe": "template",
@@ -3618,7 +3774,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T18:55:40.893772+00:00",
+      "checked_at": "2026-10-13T20:30:48.386170+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -3643,7 +3799,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:55:41.721200+00:00"
+      "metadata_checked_at": "2026-10-13T20:30:49.156391+00:00"
     },
     {
       "recipe": "workshopdemo",
@@ -3738,7 +3894,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T18:55:42.802197+00:00",
+      "checked_at": "2026-10-13T20:30:50.295748+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -3763,7 +3919,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T18:55:43.553586+00:00"
+      "metadata_checked_at": "2026-10-13T20:30:51.108377+00:00"
     }
   ],
   "findings": [
@@ -3804,9 +3960,11 @@
     "mritools: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38340524678)",
     "napari: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38378984024)",
     "openrefine: promotion-failed (https://github.com/neurodesk/neurocontainers/actions/runs/38311690124)",
+    "pals: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38461903935)",
     "panoptica: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38209000133)",
     "pcntoolkit: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38215533821)",
     "qmrlab: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38332255414)",
+    "qsmbly: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38453384443)",
     "quickshear: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38300069639)",
     "qupath: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38399214210)",
     "radtract: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38317861968)",
@@ -3816,6 +3974,7 @@
     "rshrf: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38336788177)",
     "sigviewer: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38333663478)",
     "sovabids: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38331796384)",
+    "synthstrip: pending-promotion (https://github.com/neurodesk/neurocontainers/actions/runs/38463038213)",
     "template: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38363735112)",
     "terastitcher: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38362081096)",
     "topaz: verified-published-metadata (https://github.com/neurodesk/neurocontainers/actions/runs/38214465720)",

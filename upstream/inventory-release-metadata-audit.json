@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-13T18:57:37.163941+00:00",
-  "upstream_ref": "32c3be7c1318dc05eff86d2549b3a52240119ce6",
+  "checked_at": "2026-10-13T20:32:06.052554+00:00",
+  "upstream_ref": "99cfe0286304f146935aa39d31fa2e579810610d",
   "scope": "112 user-requested in-scope recipes;17 OpenRecon exclusions omitted.",
   "policy": "Read-only source-tree audit. Metadata presence/schema does not prove current builds, public artifacts or deployment; exact-candidate publication proofs remain in release-metadata-audit.json. No generated JSON changes or promotion dispatch.",
   "counts": {
-    "pending-arm64-port": 24,
+    "pending-arm64-port": 21,
     "explicit-arm64-metadata-present": 65,
-    "no-current-version-metadata-at-audited-ref": 23
+    "no-current-version-metadata-at-audited-ref": 26
   },
   "containers": [
     {
@@ -1180,9 +1180,11 @@
       "recipe": "pals",
       "version": "2.0.1",
       "declared_architectures": [
-        "x86_64"
+        "x86_64",
+        "aarch64"
       ],
-      "status": "pending-arm64-port"
+      "path": "releases/pals_arm64/2.0.1.json",
+      "status": "no-current-version-metadata-at-audited-ref"
     },
     {
       "recipe": "panoptica",
@@ -1261,9 +1263,11 @@
       "recipe": "qsmbly",
       "version": "0.29.0",
       "declared_architectures": [
-        "x86_64"
+        "x86_64",
+        "aarch64"
       ],
-      "status": "pending-arm64-port"
+      "path": "releases/qsmbly_arm64/0.29.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
     },
     {
       "recipe": "quickshear",
@@ -1497,9 +1501,11 @@
       "recipe": "synthstrip",
       "version": "8.2.0",
       "declared_architectures": [
-        "x86_64"
+        "x86_64",
+        "aarch64"
       ],
-      "status": "pending-arm64-port"
+      "path": "releases/synthstrip_arm64/8.2.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
     },
     {
       "recipe": "synthstroke",

@@ -114,3 +114,17 @@ PR/source/publication evidence is retained in `prior_submissions` when a focused
 followup is needed. Original attempt counts and deadlines persist. Publication
 proof remains attached to its original image source; a test-only followup does
 not create a new release.
+Reuse existing native dependency evidence before diagnosing another missing
+wheel. ANTsPy0.5.4 already built from unmodified upstream source and executed a
+real native identity resampling operation in [SOOP-CT run38425818686](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38425818686).
+Its enclosing trained CT model timed out, so that run does not verify the whole
+SOOP-CT application. The source build uses ordinary CMake/image-library headers
+and the release's NumPy<=2.0.1 requirement; inspect the runtime C++ library as
+recorded in [issue232](https://github.com/Vbitz/neurocontainers-arm64/issues/232).
+A missing ARM wheel alone does not establish a native dependency port blocker.
+
+[BrainLesion issue186](https://github.com/Vbitz/neurocontainers-arm64/issues/186)
+records the official Zenodo checkpoint staging outage. Preflight each relevant
+recipe's actual required URLs before spending another build against that
+outage; do not mark another recipe blocked solely because it also uses Zenodo.
+Keep original clocks and attempt counts when reconsidering recorded work.
