@@ -21810,18 +21810,18 @@
       "port_files": [
         "recipes/openadscpu/build.yaml"
       ],
-      "status": "ready-to-dispatch",
+      "status": "native-running",
       "branch": "arm64/upstream-openadscpu-20261012",
       "baseline_sha": "32c3be7c1318dc05eff86d2549b3a52240119ce6",
       "candidate_sha": "bfae1ec71e495aeef56234c4f2a3f9f4a0c4c9b6",
       "started_at": "2026-10-13T18:38:00+00:00",
       "deadline": "2026-10-14T06:38:00+00:00",
-      "attempts": 0,
-      "run_id": null,
+      "attempts": 1,
+      "run_id": 38452105913,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Native exact-source Docker/architecture/SIF/deploy/fulltest proof, then this recipe only PR and both upstream architecture checks before merge.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -21843,8 +21843,9 @@
         "https://github.com/farialab/OpenADS/blob/6c378d1ae36278c9351c247e00286f19e0a893ac/scripts/run_ads_dwi.py",
         "https://github.com/farialab/OpenADS/blob/6c378d1ae36278c9351c247e00286f19e0a893ac/src/ads/services/preprocessing/adc_calculator.py"
       ],
-      "arm64_attempts": 0,
-      "x86_64_attempts": 0
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38452105913"
     },
     {
       "recipe": "openreconexample",
@@ -24049,7 +24050,89 @@
       "upstream_ci": {
         "candidate_run_id": 38450269213,
         "initial_run_id": 38450269213,
-        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38450269213"
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38450269213",
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "qsmbly",
+          "container": "qsmbly",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "0.29.0",
+          "build_date": "20261014",
+          "docker_archive": "qsmbly_0.29.0_20261014.docker.tar",
+          "sif": "qsmbly_0.29.0_20261014.simg",
+          "candidate_tag": "nd-candidate-qsmbly:f29fad8a1acd",
+          "launcher": "qsmbly",
+          "pr_number": 3593,
+          "head_sha": "f29fad8a1acd06e56bf4e3c5b727472448b23dbc",
+          "tests": {
+            "total": 4,
+            "passed": 4,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 3,
+            "fulltest_passed": 3,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "QSMbly launcher and WebAssembly assets",
+              "Analytical dipole inversion in both actual WASM bundles",
+              "Actual web launcher and exact served assets"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "8.9 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.6 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.3 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "1.1 MB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.7877,
+            "wasted_bytes": 20069319,
+            "wasted_bytes_display": "20 MB",
+            "user_wasted_percent": 0.6015
+          }
+        },
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38450269213",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "f29fad8a1acd06e56bf4e3c5b727472448b23dbc",
+            "job_id": 115479218828,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38450269213/job/115479218828",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        }
       },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
