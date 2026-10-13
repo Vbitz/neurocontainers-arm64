@@ -5373,7 +5373,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T14:10:30.276014+00:00",
+        "checked_at": "2026-10-13T14:41:28.859885+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -5398,7 +5398,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T14:10:31.221864+00:00",
+        "metadata_checked_at": "2026-10-13T14:41:29.622472+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -5937,18 +5937,18 @@
         "recipes/code/build.yaml",
         "recipes/code/fulltest.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-code-20261012",
+      "baseline_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
+      "candidate_sha": "86a5ee5a0d7802e6576ca0e36401861e84a32343",
+      "started_at": "2026-10-13T14:10:00+00:00",
+      "deadline": "2026-10-14T02:10:00+00:00",
+      "attempts": 1,
+      "run_id": 38415156275,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "240320",
@@ -5990,7 +5990,23 @@
           "merge_sha": "e6b6a36a5a80eb6dd83af5e544ddcdb80a25e4d3",
           "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
         }
-      ]
+      ],
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Select the official current ARM64 VSCode1.141.0, Julia1.13.1 and Go1.27.2 archives, each independently confirmedHTTP200, preserving the exact x86 assets/current releases and existing Miniconda/Python environment. Keep ordinary unchanged native SingularityCE4.6.0 source configuration, declaring its official source archive/get_file and checksum update policy. Preserve all84 original cases and scientific outputs; remove head pipelines/nested login shells and use plain Julia commands/heredocs with a private writable depot. Extension checks use the deployed argument-forwarding wrapper and private user data. Add actual native Jupyter-kernel analytical fit/HDF5 output proof, actual VSCode document rendering under Xvfb, and actual nested Singularity SIF build/exec with exact marker/architecture assertions using the already verified Apptainer fixture. No emulation, substituted image, dependency/compiler port or change to scientific algorithms. Separate PID/IPC namespaces and arbitrary third-party editor extensions are not claimed.",
+      "pr_title": "Enable Code ARM64 and verify the editor, Jupyter kernel and nested runtime",
+      "primary_source_review": [
+        "https://code.visualstudio.com/docs/setup/linux",
+        "https://update.code.visualstudio.com/1.141.0/linux-deb-arm64/stable",
+        "https://julialang.org/downloads/",
+        "https://julialang-s3.julialang.org/bin/linux/aarch64/1.13/julia-1.13.1-linux-aarch64.tar.gz",
+        "https://go.dev/dl/",
+        "https://github.com/sylabs/singularity/releases/tag/v4.6.0",
+        "https://docs.sylabs.io/guides/4.6/admin-guide/installation.html"
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38415156275"
     },
     {
       "recipe": "condaenvs",
@@ -12299,7 +12315,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T14:10:36.210839+00:00",
+        "checked_at": "2026-10-13T14:41:30.856185+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -12315,18 +12331,16 @@
           },
           {
             "name": "publish (candidate-globus_arm64-fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "success",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-7zq4q",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Download candidate bundle without executing it"
-            ]
+            "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T14:10:37.155961+00:00"
+        "metadata_checked_at": "2026-10-13T14:41:32.661139+00:00"
       }
     },
     {
@@ -17884,7 +17898,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-13T14:10:38.880065+00:00",
+        "checked_at": "2026-10-13T14:41:33.961569+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -17909,7 +17923,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T14:10:39.752557+00:00",
+        "metadata_checked_at": "2026-10-13T14:41:34.729641+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -21379,7 +21393,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T14:10:41.179958+00:00",
+        "checked_at": "2026-10-13T14:41:35.995071+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -21394,7 +21408,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T14:10:42.011536+00:00",
+        "metadata_checked_at": "2026-10-13T14:41:36.858102+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -24672,7 +24686,107 @@
       "attempts": 4,
       "run_id": 38399590155,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3584",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "romeo",
+          "container": "romeo",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "4.9.0",
+          "build_date": "20261013",
+          "docker_archive": "romeo_4.9.0_20261013.docker.tar",
+          "sif": "romeo_4.9.0_20261013.simg",
+          "candidate_tag": "nd-candidate-romeo:076a343f2513",
+          "launcher": null,
+          "pr_number": 3584,
+          "head_sha": "076a343f25133f11f1e4ceb10c7021bbc71f0c46",
+          "tests": {
+            "total": 106,
+            "passed": 106,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 105,
+            "fulltest_passed": 105,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Version check",
+              "Help display",
+              "Help shows optional arguments header",
+              "Help shows phase argument",
+              "Help shows phase short option",
+              "Help shows magnitude argument",
+              "Help shows magnitude short option",
+              "Help shows output argument",
+              "Help shows output short option",
+              "Help shows default output path",
+              "Help shows mask option",
+              "Help shows mask short option",
+              "Help shows nomask option",
+              "Help shows qualitymask option",
+              "Help shows robustmask option",
+              "Help shows mask-unwrapped option",
+              "Help shows echo-times argument",
+              "Help shows echo-times short option",
+              "Help shows echo-times array syntax"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "3.9 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libapt-pkg.so.6.0.0"
+              },
+              {
+                "count": 3,
+                "wasted_space": "1.9 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "955 kB",
+                "path": "/usr/lib/x86_64-linux-gnu/libapt-private.so.0.0.0"
+              },
+              {
+                "count": 3,
+                "wasted_space": "560 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.0064,
+            "wasted_bytes": 12408099,
+            "wasted_bytes_display": "12 MB",
+            "user_wasted_percent": 1.946
+          }
+        },
+        "candidate_run_id": 38410564004,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38410564004",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "076a343f25133f11f1e4ceb10c7021bbc71f0c46",
+            "job_id": 115341654201,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38410564004/job/115341654201",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        }
+      },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
@@ -26318,11 +26432,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-soopct-20261012",
       "baseline_sha": "c265491023ae2d34beb9438c2b6e1ee2e5f3d5e5",
-      "candidate_sha": "ccbc89d78c8de06e1047f201acf4403bdeaebc61",
+      "candidate_sha": "0d22e1b8b8dace4e652317fce056e787211965d2",
       "started_at": "2026-10-13T11:35:00+00:00",
       "deadline": "2026-10-13T23:35:00+00:00",
-      "attempts": 2,
-      "run_id": 38410948381,
+      "attempts": 3,
+      "run_id": 38415377780,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -26349,9 +26463,9 @@
         "https://github.com/neuroneural/brainchop-cli/tree/51a95a6a1f84546a317aabe171b29f34e093b970",
         "https://github.com/neuroneural/brainchop-models/tree/528f2d8d2ca937968b2d4b2b9ef9fa9170f4b9cf"
       ],
-      "arm64_attempts": 2,
+      "arm64_attempts": 3,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38410948381",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38415377780",
       "candidate_history": [
         {
           "source_sha": "059ef3fdb603337b6fb6c266bba2594e5aac1278",
@@ -26375,9 +26489,32 @@
             }
           ],
           "retry_hypothesis": "The native source build and Docker/architecture/SIF/deployment passed, with9/10 functional cases passing: all6 original cases, exact dependency closure,6783-voxel native ANTs identity operation, and all1287 group-mean values/geometry. Actual BrainChop CT inference stopped in the niimath console launcher before any network execution: the upstream wheel's __init__.py unconditionally chmods its own binary, raising EROFS inside the read-only SIF. Official niimath1.0.20260924 provides native ARM/x86 wheel binaries; its launcher only delegates the arguments and exit status unchanged. At image build time, make that exact bundled binary executable and symlink the niimath command directly to it. Do not patch the binary/library, use another implementation, or make the image writable. Add an assertion that the deployed command resolves to the wheel's own binary. Keep actual model inference, all image/BIDS assertions, unchanged scientific thresholds and original budget. Source inspected from the exact official PyPI wheel and https://github.com/rordenlab/niimath."
+        },
+        {
+          "source_sha": "ccbc89d78c8de06e1047f201acf4403bdeaebc61",
+          "run_id": 38410948381,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38410948381",
+          "counts": {
+            "passed": 10,
+            "failed": 1,
+            "skipped": 0,
+            "total_tests": 11
+          },
+          "failed_tests": [
+            {
+              "duration": 1.9410488605499268,
+              "message": "Expected exit code 0, got 1",
+              "name": "Actual CT model inference and BIDS conversion",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Traceback (most recent call last):\n  File \"/opt/miniconda/bin/brainchop\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/brainchop/cli.py\", line 153, in main\n    vol = load(abs_path, crop=args.crop, ct=args.ct, comply=args.comply)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/brainchop/api.py\", line 182, in load\n    return _load_single(path, crop=crop, ct=ct, comply=comply)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/brainchop/api.py\", line 145, in _load_single\n    return Volume(Tensor(data.copy()), header, crop_coords=coords)\n                  ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/tinygrad/tensor.py\", line 293, in __init__\n    _device:str|tuple[str, ...] = canonicalize_device(device)\n                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/tinygrad/device.py\", line 60, in canonicalize_device\n    if not isinstance(device, (tuple, list)): return Device.canonicalize(device)\n                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/tinygrad/device.py\", line 22, in canonicalize\n    def canonicalize(self, device:str|None) -> str: return self._canonicalize(device if device is not None else Device.DEFAULT)\n                                                                                                                ^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/tinygrad/device.py\", line 44, in DEFAULT\n    def DEFAULT(self) -> str: return DEV.device or self._select_device\n                                                   ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/functools.py\", line 1001, in __get__\n    val = self.func(instance)\n          ^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/tinygrad/device.py\", line 49, in _select_device\n    assert (dev:=next((d for d in self._devices if d not in [\"DISK\", \"TINYFS\", \"NPY\"] and getenv(d) == 1), None)) is None, \\\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: CPU=1 is deprecated, use DEV=CPU instead\nTraceback (most recent call last):\n  File \"/soop-ct/3best2anon.py\", line 73, in do_brainchop\n    subprocess.run(cmd, check=True)\n  File \"/opt/miniconda/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['brainchop', PosixPath('/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-1j7ng0mh/work/test_output/soopct/tmpopu3i8kf/anon/1_ct.nii'), '-m', 'mindgrab', '--no-optimize', '-o', PosixPath('/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-1j7ng0mh/work/test_output/soopct/tmpopu3i8kf/anon/1_ct.nii'), '--ct', '--border', '25']' returned non-zero exit status 1.\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/soop-ct/3best2anon.py\", line 140, in <module>\n    main(Path(args.input_dir), Path(args.output_dir))\n  File \"/soop-ct/3best2anon.py\", line 110, in main\n    do_brainchop(new_nii, new_nii, modality == \"ct\", border)\n  File \"/soop-ct/3best2anon.py\", line 75, in do_brainchop\n    raise RuntimeError(f\"brainchop failed: {e}\")\nRuntimeError: brainchop failed: Command '['brainchop', PosixPath('/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-1j7ng0mh/work/test_output/soopct/tmpopu3i8kf/anon/1_ct.nii'), '-m', 'mindgrab', '--no-optimize', '-o', PosixPath('/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-1j7ng0mh/work/test_output/soopct/tmpopu3i8kf/anon/1_ct.nii'), '--ct', '--border', '25']' returned non-zero exit status 1.\nTraceback (most recent call last):\n  File \"<stdin>\", line 31, in <module>\n  File \"/opt/miniconda/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/opt/miniconda/bin/python', '/soop-ct/3best2anon.py', '/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-1j7ng0mh/work/test_output/soopct/best', '/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-1j7ng0mh/work/test_output/soopct/tmpopu3i8kf/anon']' returned non-zero exit status 1.\n",
+              "stdout": "brainchop :: [1/1] /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-1j7ng0mh/work/test_output/soopct/tmpopu3i8kf/anon/1_ct.nii\n"
+            }
+          ],
+          "retry_hypothesis": "Second native build verified the real niimath command now resolves to the unchanged bundled native binary and passed9/10 functional cases again. CT preprocessing proceeded past the prior EROFS launcher failure. TinyGrad0.14.0 then rejected this test's legacy CPU=1 environment setting with the explicit diagnostic `CPU=1 is deprecated, use DEV=CPU instead`. Set only the documented current child-process selector DEV=CPU; keep the same installed packages, trained weights, full CT input, model execution and every downstream image/BIDS assertion. This is a test/runtime configuration fix, not a JIT/intrinsics/compiler port or dependency-version experiment. Start/deadline and2 prior build attempts persist; require fresh complete native and both upstream suites. Preserve the old logs proving the launcher correction worked."
         }
       ],
-      "retry_hypothesis": "The native source build and Docker/architecture/SIF/deployment passed, with9/10 functional cases passing: all6 original cases, exact dependency closure,6783-voxel native ANTs identity operation, and all1287 group-mean values/geometry. Actual BrainChop CT inference stopped in the niimath console launcher before any network execution: the upstream wheel's __init__.py unconditionally chmods its own binary, raising EROFS inside the read-only SIF. Official niimath1.0.20260924 provides native ARM/x86 wheel binaries; its launcher only delegates the arguments and exit status unchanged. At image build time, make that exact bundled binary executable and symlink the niimath command directly to it. Do not patch the binary/library, use another implementation, or make the image writable. Add an assertion that the deployed command resolves to the wheel's own binary. Keep actual model inference, all image/BIDS assertions, unchanged scientific thresholds and original budget. Source inspected from the exact official PyPI wheel and https://github.com/rordenlab/niimath."
+      "retry_hypothesis": "Second native build verified the real niimath command now resolves to the unchanged bundled native binary and passed9/10 functional cases again. CT preprocessing proceeded past the prior EROFS launcher failure. TinyGrad0.14.0 then rejected this test's legacy CPU=1 environment setting with the explicit diagnostic `CPU=1 is deprecated, use DEV=CPU instead`. Set only the documented current child-process selector DEV=CPU; keep the same installed packages, trained weights, full CT input, model execution and every downstream image/BIDS assertion. This is a test/runtime configuration fix, not a JIT/intrinsics/compiler port or dependency-version experiment. Start/deadline and2 prior build attempts persist; require fresh complete native and both upstream suites. Preserve the old logs proving the launcher correction worked."
     },
     {
       "recipe": "sovabids",

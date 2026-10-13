@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-13T14:10:51.125206+00:00",
+  "checked_at": "2026-10-13T14:41:36.859238+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -561,7 +561,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T14:10:30.276014+00:00",
+      "checked_at": "2026-10-13T14:41:28.859885+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -586,7 +586,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T14:10:31.221864+00:00",
+      "metadata_checked_at": "2026-10-13T14:41:29.622472+00:00",
       "publication_blocker": {
         "classification": "blocked-prerequisite-publication",
         "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -1380,7 +1380,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T14:10:36.210839+00:00",
+      "checked_at": "2026-10-13T14:41:30.856185+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -1396,18 +1396,16 @@
         },
         {
           "name": "publish (candidate-globus_arm64-fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f)",
-          "status": "in_progress",
-          "conclusion": null,
+          "status": "completed",
+          "conclusion": "success",
           "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-7zq4q",
           "labels": [
             "neurodesk-syd-arcrunner-neurocontainers"
           ],
-          "active_steps": [
-            "Download candidate bundle without executing it"
-          ]
+          "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T14:10:37.155961+00:00"
+      "metadata_checked_at": "2026-10-13T14:41:32.661139+00:00"
     },
     {
       "recipe": "hdbet",
@@ -2048,7 +2046,7 @@
           "current_candidate_date_committed": true
         }
       ],
-      "checked_at": "2026-10-13T14:10:38.880065+00:00",
+      "checked_at": "2026-10-13T14:41:33.961569+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -2073,7 +2071,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T14:10:39.752557+00:00",
+      "metadata_checked_at": "2026-10-13T14:41:34.729641+00:00",
       "failure_review": {
         "classification": "blocked-infrastructure",
         "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -2381,7 +2379,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T14:10:41.179958+00:00",
+      "checked_at": "2026-10-13T14:41:35.995071+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -2396,7 +2394,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T14:10:42.011536+00:00",
+      "metadata_checked_at": "2026-10-13T14:41:36.858102+00:00",
       "failure_detail": {
         "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
         "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
