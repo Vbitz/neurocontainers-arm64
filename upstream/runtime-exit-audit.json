@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-13T14:11:43.497278+00:00",
+  "checked_at": "2026-10-13T15:11:10.134095+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     {
@@ -653,6 +653,31 @@
       ]
     },
     {
+      "recipe": "romeo",
+      "findings": [
+        {
+          "test": "Error on missing input file",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "Error on invalid mask option",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "Error on invalid weight option",
+          "return_code": 1,
+          "errors": []
+        },
+        {
+          "test": "Error on missing echo times for multi-echo",
+          "return_code": 1,
+          "errors": []
+        }
+      ]
+    },
+    {
       "recipe": "root",
       "findings": [
         {
@@ -1240,6 +1265,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "romeo",
+      "source_sha": "076a343f25133f11f1e4ceb10c7021bbc71f0c46",
+      "run_id": 38399590155,
+      "reported_passed": 106,
+      "reported_total": 106,
+      "nonzero_command_exits": 4
+    },
+    {
       "recipe": "root",
       "source_sha": "6410b7466ada12982d23dcacd26ec0eee6a96265",
       "run_id": 38387988132,
@@ -1336,7 +1369,7 @@
       "nonzero_command_exits": 0
     }
   ],
-  "reviewed_merged_recipe_count": 79,
+  "reviewed_merged_recipe_count": 80,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [],
@@ -1474,7 +1507,7 @@
     }
   ],
   "cached_deployment_linkage_summary_review": {
-    "reviewed_count": 79,
+    "reviewed_count": 80,
     "outliers": [
       {
         "recipe": "fsl",
@@ -1485,8 +1518,8 @@
         "message": "Skipped 4 linkage entries without filesystem paths."
       }
     ],
-    "checked_at": "2026-10-13T14:11:43.565348+00:00",
-    "method": "Read exact-source cached deployment scan summaries for all79 merged recipes, retaining prior root sources for explicitly recorded current-source gaps. No rebuild. The sole >2 pathless-entry summary is FSL eddy_cuda, with4; source-specific GPU/driver limitation is recorded in its issue. All131 CPU functional cases passed. Ordinary2-entry summaries do not establish full linkage closure because the parser also skips unresolved=>notfound entries.",
+    "checked_at": "2026-10-13T15:11:10.203885+00:00",
+    "method": "Read exact-source cached deployment scan summaries for all80 merged recipes, retaining prior root sources for explicitly recorded current-source gaps. No rebuild. The sole >2 pathless-entry summary is FSL eddy_cuda, with4; source-specific GPU/driver limitation is recorded in its issue. All131 CPU functional cases passed. Ordinary2-entry summaries do not establish full linkage closure because the parser also skips unresolved=>notfound entries.",
     "parser_limitation": "workflows/test_deploy.sh parse_ldd_output treats unresolved=>notfound entries as skipped, not failures. Exact library closure cannot be inferred solely from aggregate deployment success.",
     "active_recipe_reviews": {
       "elastix": "Root38325625311 at429bc011 passed34/34 aggregate: all32 retained scientific/negative cases and independently executed ldd closure for74 libraries per raw ELF passed. A newly added shell version-string assertion was ineffective because builder substitution changed $version_output into5.3.1_output. Actual raw commands executed0 and retained wrapper version checks printed actual5.3.1. Corrected fixture source ff8a87685a1a201bcd76ced4fc52495d8526d312 is pushed but UNTESTED: another root plus two upstream builds exceed2 remaining attempts. Status blocked-verification-budget;4/6 builds and original deadline retained. No current corrected-source runtime proof or upstream PR claimed."

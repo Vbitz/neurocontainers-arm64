@@ -5373,7 +5373,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T14:41:28.859885+00:00",
+        "checked_at": "2026-10-13T15:06:51.825260+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -5398,7 +5398,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T14:41:29.622472+00:00",
+        "metadata_checked_at": "2026-10-13T15:06:52.638159+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -5940,11 +5940,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-code-20261012",
       "baseline_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
-      "candidate_sha": "86a5ee5a0d7802e6576ca0e36401861e84a32343",
+      "candidate_sha": "8c0c9885d44d0009041fda0724648394a79647ee",
       "started_at": "2026-10-13T14:10:00+00:00",
       "deadline": "2026-10-14T02:10:00+00:00",
-      "attempts": 1,
-      "run_id": 38415156275,
+      "attempts": 2,
+      "run_id": 38419163869,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -6004,9 +6004,44 @@
         "https://github.com/sylabs/singularity/releases/tag/v4.6.0",
         "https://docs.sylabs.io/guides/4.6/admin-guide/installation.html"
       ],
-      "arm64_attempts": 1,
+      "arm64_attempts": 2,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38415156275"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38419163869",
+      "candidate_history": [
+        {
+          "source_sha": "86a5ee5a0d7802e6576ca0e36401861e84a32343",
+          "run_id": 38415156275,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38415156275",
+          "counts": {
+            "passed": 86,
+            "failed": 2,
+            "skipped": 0,
+            "total_tests": 88
+          },
+          "failed_tests": [
+            {
+              "duration": 2.6756961345672607,
+              "message": "Expected exit code 0, got 1",
+              "name": "Render the real VSCode editor document",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError\n",
+              "stdout": "\n"
+            },
+            {
+              "duration": 0.36360645294189453,
+              "message": "Expected exit code 0, got 1",
+              "name": "Build and execute a native nested Singularity SIF",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Error for command \"build\": unknown flag: --mksquashfs-args\n\nOptions for build command:\n\n      --arch string             architecture for remote build (default \"arm64\")\n      --authfile string         Docker-style authentication file to use\n                                for writing/reading OCI registry credentials\n  -B, --bind strings            a user-bind path specification. spec has\n                                the format src[:dest[:opts]],where src and\n                                dest are outside and inside paths. If dest\n                                is not given,it is set equal to src. Mount\n                                options ('opts') may be specified as\n                                'ro'(read-only) or 'rw' (read/write, which\n                                is the default).Multiple bind paths can be\n                                given by a comma separated list. (not\n                                supported with remote build)\n      --build-arg strings       provide value to replace {{ variable }}\n                                entries in build definition file, in\n                                variable=value format\n      --build-arg-file string   specifies a file containing variable=value\n                                lines to replace '{{ variable }}' with\n                                value in build definition files\n      --builder string          remote Build Service URL, setting this\n                                implies --remote\n  -d, --detached                submit build job and print build ID (no\n                                real-time logs and requires --remote)\n      --disable-cache           do not use cache or create cache\n      --docker-host string      specify a custom Docker daemon host\n      --docker-login            login to a Docker Repository interactively\n  -e, --encrypt                 build an image with an encrypted file system\n  -f, --fakeroot                build using user namespace to fake root\n                                user (requires a privileged installation)\n      --fix-perms               ensure owner has rwX permissions on all\n                                container content for oci/docker sources\n  -F, --force                   overwrite an image file if it exists\n  -h, --help                    help for build\n      --json                    interpret build definition as JSON\n      --keep-layers             Keep layers when creating an OCI-SIF. Do\n                                not squash to a single layer.\n      --library string          container Library URL\n      --mount stringArray       a mount specification e.g.\n                                'type=bind,source=/opt,destination=/hostopt'.\n      --no-cleanup              do NOT clean up bundle after failed build,\n                                can be helpful for debugging\n      --no-https                use http instead of https for docker://\n                                oras:// and library://<hostname>/... URIs\n      --no-oci                  Launch container with native runtime\n      --no-setgroups            disable setgroups when entering --fakeroot\n                                user namespace\n  -T, --notest                  build without running tests in %test section\n      --nv                      inject host Nvidia libraries during build\n                                for post and test sections (not supported\n                                with remote build)\n      --nvccli                  use nvidia-container-cli for GPU setup\n                                (experimental)\n      --oci                     Launch container with OCI runtime\n                                (experimental)\n      --passphrase              prompt for an encryption passphrase\n      --pem-path string         enter an path to a PEM formatted RSA key\n                                for an encrypted container\n  -r, --remote                  build image remotely (does not require root)\n      --rocm                    inject host Rocm libraries during build\n                                for post and test sections (not supported\n                                with remote build)\n  -s, --sandbox                 build image as sandbox format (chroot\n                                directory structure)\n      --section strings         only run specific section(s) of deffile\n                                (setup, post, files, environment, test,\n                                labels, none) (default [all])\n  -u, --update                  run definition over existing container\n                                (skips header)\n      --writable-tmpfs          during the %test section, makes the file\n                                system accessible as read-write with non\n                                persistent data (with overlay support only)\n\nRun 'singularity --help' for more detailed usage information.\n",
+              "stdout": ""
+            }
+          ],
+          "retry_hypothesis": "The first native candidate built all official ARM assets and SingularityCE4.6.0, verified architecture/SIF/deployment, and passed85/87 functional cases (aggregate86/88), including every84 original case and the real Jupyter-kernel analytical/HDF5 operation. New nested-runtime testing rejected an Apptainer-specific --mksquashfs-args flag before constructing the image; Singularity's actual released help has no such option. Remove only that unsupported test option and retain real SIF construction/SquashFS/native nested execution/exact marker assertions. The new actual editor test observed its launcher exit early after2.7s, with an empty log and no saved exit status. Enable the official --verbose startup diagnostics and include the real exit status in the unchanged strict liveness assertion. This diagnoses the GUI failure without guessing a library/sandbox fix or suppressing the window/render/file assertions. No compiler/source/image dependency changes; any further correction must follow the actual diagnostic. Original clock and one build attempt persist."
+        }
+      ],
+      "retry_hypothesis": "The first native candidate built all official ARM assets and SingularityCE4.6.0, verified architecture/SIF/deployment, and passed85/87 functional cases (aggregate86/88), including every84 original case and the real Jupyter-kernel analytical/HDF5 operation. New nested-runtime testing rejected an Apptainer-specific --mksquashfs-args flag before constructing the image; Singularity's actual released help has no such option. Remove only that unsupported test option and retain real SIF construction/SquashFS/native nested execution/exact marker assertions. The new actual editor test observed its launcher exit early after2.7s, with an empty log and no saved exit status. Enable the official --verbose startup diagnostics and include the real exit status in the unchanged strict liveness assertion. This diagnoses the GUI failure without guessing a library/sandbox fix or suppressing the window/render/file assertions. No compiler/source/image dependency changes; any further correction must follow the actual diagnostic. Original clock and one build attempt persist."
     },
     {
       "recipe": "condaenvs",
@@ -12315,19 +12350,21 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T14:41:30.856185+00:00",
-        "workflow_status": "queued",
+        "checked_at": "2026-10-13T15:06:53.882176+00:00",
+        "workflow_status": "in_progress",
         "workflow_conclusion": null,
         "publish_jobs": [
           {
             "name": "publish (candidate-globus-fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f)",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "runner_name": "",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-2s7wz",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": []
+            "active_steps": [
+              "Publish tested SIF to unique staging object keys"
+            ]
           },
           {
             "name": "publish (candidate-globus_arm64-fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f)",
@@ -12340,7 +12377,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T14:41:32.661139+00:00"
+        "metadata_checked_at": "2026-10-13T15:06:54.819477+00:00"
       }
     },
     {
@@ -17898,7 +17935,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-13T14:41:33.961569+00:00",
+        "checked_at": "2026-10-13T15:06:56.412863+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -17923,7 +17960,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T14:41:34.729641+00:00",
+        "metadata_checked_at": "2026-10-13T15:06:57.251352+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -21393,7 +21430,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T14:41:35.995071+00:00",
+        "checked_at": "2026-10-13T15:06:58.910385+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -21408,7 +21445,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T14:41:36.858102+00:00",
+        "metadata_checked_at": "2026-10-13T15:06:59.692190+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -24677,7 +24714,7 @@
         "recipes/romeo/build.yaml",
         "recipes/romeo/fulltest.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-romeo-20261012",
       "baseline_sha": "b2d0991a985ac119b7cebed45a067f30441356d5",
       "candidate_sha": "076a343f25133f11f1e4ceb10c7021bbc71f0c46",
@@ -24784,11 +24821,108 @@
             "build_sif_fulltest_dive_manifest_gates": "success",
             "fulltest_log_summary_confirmed": true,
             "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "aarch64": {
+            "head_sha": "076a343f25133f11f1e4ceb10c7021bbc71f0c46",
+            "job_id": 115341653961,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38410564004/job/115341653961",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
           }
-        }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "romeo",
+          "container": "romeo_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "4.9.0",
+          "build_date": "20261013",
+          "docker_archive": "romeo_arm64_4.9.0_20261013.docker.tar",
+          "sif": "romeo_arm64_4.9.0_20261013.simg",
+          "candidate_tag": "nd-candidate-romeo_arm64:076a343f2513",
+          "launcher": null,
+          "pr_number": 3584,
+          "head_sha": "076a343f25133f11f1e4ceb10c7021bbc71f0c46",
+          "tests": {
+            "total": 106,
+            "passed": 106,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 105,
+            "fulltest_passed": 105,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Version check",
+              "Help display",
+              "Help shows optional arguments header",
+              "Help shows phase argument",
+              "Help shows phase short option",
+              "Help shows magnitude argument",
+              "Help shows magnitude short option",
+              "Help shows output argument",
+              "Help shows output short option",
+              "Help shows default output path",
+              "Help shows mask option",
+              "Help shows mask short option",
+              "Help shows nomask option",
+              "Help shows qualitymask option",
+              "Help shows robustmask option",
+              "Help shows mask-unwrapped option",
+              "Help shows echo-times argument",
+              "Help shows echo-times short option",
+              "Help shows echo-times array syntax"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "3.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libapt-pkg.so.6.0.0"
+              },
+              {
+                "count": 2,
+                "wasted_space": "2.9 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libc-2.31.so"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libm-2.31.so"
+              }
+            ],
+            "efficiency_percent": 98.6866,
+            "wasted_bytes": 34182359,
+            "wasted_bytes_display": "34 MB",
+            "user_wasted_percent": 2.4588
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "merged_sha": "715ef20edbf68dc9bdebd0198cedbf5d7d1c0cfd",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "3.2.8",
@@ -24904,7 +25038,57 @@
         ]
       },
       "pending_upstream_issue": 3584,
-      "pr_number": 3584
+      "pr_number": 3584,
+      "merged_at": "2026-10-13T14:53:30Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38417277464,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38417277464",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/romeo_arm64/4.9.0.json",
+            "expected_build_date": "20261013",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/romeo/4.9.0.json",
+            "expected_build_date": "20261013",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-13T15:07:02.976446+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-romeo-076a343f25133f11f1e4ceb10c7021bbc71f0c46)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-romeo_arm64-076a343f25133f11f1e4ceb10c7021bbc71f0c46)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-13T15:07:03.749713+00:00"
+      }
     },
     {
       "recipe": "root",
@@ -29505,18 +29689,18 @@
       "port_files": [
         "recipes/wftfi/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-wftfi-20261012",
+      "baseline_sha": "715ef20edbf68dc9bdebd0198cedbf5d7d1c0cfd",
+      "candidate_sha": "8147957cc6a29ffc336dfe180638a9d032279862",
+      "started_at": "2026-10-13T14:53:00+00:00",
+      "deadline": "2026-10-14T02:53:00+00:00",
+      "attempts": 2,
+      "run_id": 38419542784,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -29528,7 +29712,31 @@
         "test_count": 20,
         "patch_conflict": "error: patch failed: recipes/wftfi/build.yaml:6\nerror: recipes/wftfi/build.yaml: patch does not apply",
         "three_way_clean": true
-      }
+      },
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Reuse the proven wfTFI ARM64 declaration and Ubuntu18.04 glibc baseline required by its ARM Miniconda installer, preserving the current x86 Ubuntu16.04 path and exact source/environment pins. Upstream HEAD remains ec5a62cf. Preserve all20 original checks, including the explicit example-data LFS-pointer state, add exact source/Python3.8/NumPy1.24/SciPy1.10 CPU identity and strengthen writable/headless test setup. Add actual unchanged nonlinear wfTFI solver inversion of an independently constructed4096-voxel,3-echo analytical water-fat signal with both components nonzero and the original nine-peak fat model. Require every susceptibility value within64float32 eps, forward dipole eigenmode consistency and unchanged complex signal. The supported noiseless unregularized configuration retains default25outer/10CG iteration limits. Executed this real official-source oracle locally against the pinned NumPy/SciPy stack before native dispatch; no source/algorithm patch or relaxed existing assertion. Full clinical spine/LFS data and CUDA remain outside this CPU mathematical operation.",
+      "pr_title": "Enable wfTFI ARM64 and verify analytical water-fat susceptibility inversion",
+      "primary_source_review": [
+        "https://gitlab.com/thomshaw92/wftfi/-/tree/ec5a62cf2ffb347c752293e6234b7c89cebe711d",
+        "https://gitlab.com/christofboehm/wftfi",
+        "https://doi.org/10.1002/mrm.28903",
+        "https://github.com/BMRRgroup/cbviewer/tree/20c9c8c"
+      ],
+      "arm64_attempts": 2,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38419542784",
+      "candidate_history": [
+        {
+          "source_sha": "8147957cc6a29ffc336dfe180638a9d032279862",
+          "run_id": 38418431386,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38418431386",
+          "outcome": "blocked-infrastructure-transient",
+          "first_error": "Install Apptainer: Launchpad HTTP response was truncated: http.client.IncompleteRead(113359 bytes read). Recipe image build and all tests were never reached."
+        }
+      ],
+      "transient_unchanged_retry_used": true,
+      "retry_hypothesis": "The first dispatch failed before recipe build, while add-apt-repository retrieved the public Launchpad PPA metadata: http.client.IncompleteRead(113359 bytes read). Other native jobs installed this same Apptainer prerequisite successfully. This truncated HTTP response is a clearly transient infrastructure failure; consume the one permitted unchanged retry of exact candidate8147957c. No recipe/source/test change, skipped gate or scientific failure claim."
     },
     {
       "recipe": "workshopdemo",
