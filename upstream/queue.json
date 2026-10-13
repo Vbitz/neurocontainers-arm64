@@ -4009,18 +4009,18 @@
       "port_files": [
         "recipes/brainles-preprocessing/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-brainles-preprocessing-20261012",
+      "baseline_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
+      "candidate_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
+      "started_at": "2026-10-13T15:53:00+00:00",
+      "deadline": "2026-10-14T03:53:00+00:00",
+      "attempts": 1,
+      "run_id": 38429185977,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.13",
@@ -4032,7 +4032,22 @@
         "test_count": 15,
         "patch_conflict": "error: patch failed: recipes/brainles-preprocessing/build.yaml:8\nerror: recipes/brainles-preprocessing/build.yaml: patch does not apply",
         "three_way_clean": true
-      }
+      },
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Enable BrainLesion preprocessing0.6.14 on native ARM, retaining all15 existing functional cases and the x86 installation. Reuse the previously verified official ANTsPy0.5.4 source build on ARM/Ubuntu24/Python3.11 with distribution libstdc++; install official CPU torch2.13.0. The package bundles x86-only NiftyReg executables and SDK: build official released NiftyReg1.5.77 with its supported USE_SSE=OFF, install the actual native executables/SDK for ARM only, and keep x86 packaged executables unchanged. No library/runtime/scientific implementation patches. Add exact dependency/ELF identity and real CPU tensor checks, actual public ANTs and NiftyReg registration plus every-voxel identity resampling/geometry/input checks, and actual HD-BET CPU inference inside the read-only SIF with full masked-voxel/model/input/geometry assertions. The existing actual SynthStrip inference stays. Release0.6.14 officially fixes Zenodo downloading; existing upstream version-only PR3568 is noted, but does not declare or verify ARM. Synthetic model/backend operations do not prove clinical accuracy.",
+      "pr_title": "Enable native BrainLesion preprocessing with both registration backends and CPU inference",
+      "primary_source_review": [
+        "https://pypi.org/pypi/brainles-preprocessing/0.6.14/json",
+        "https://github.com/BrainLesion/preprocessing",
+        "https://github.com/KCL-BMEIS/niftyreg/tree/v1.5.77",
+        "https://pypi.org/pypi/antspyx/0.5.4/json",
+        "https://download.pytorch.org/whl/cpu/torch/",
+        "https://pypi.org/pypi/brainles-hd-bet/0.0.11/json"
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38429185977"
     },
     {
       "recipe": "brainlifecli",
@@ -5373,7 +5388,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T15:06:51.825260+00:00",
+        "checked_at": "2026-10-13T16:16:56.133391+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -5398,7 +5413,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T15:06:52.638159+00:00",
+        "metadata_checked_at": "2026-10-13T16:16:56.938441+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -5940,11 +5955,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-code-20261012",
       "baseline_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
-      "candidate_sha": "8c0c9885d44d0009041fda0724648394a79647ee",
+      "candidate_sha": "680e40b743c6a3ec4f4f6e28c2058cecf48b0aa0",
       "started_at": "2026-10-13T14:10:00+00:00",
       "deadline": "2026-10-14T02:10:00+00:00",
-      "attempts": 2,
-      "run_id": 38419163869,
+      "attempts": 4,
+      "run_id": 38428496033,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -6004,9 +6019,9 @@
         "https://github.com/sylabs/singularity/releases/tag/v4.6.0",
         "https://docs.sylabs.io/guides/4.6/admin-guide/installation.html"
       ],
-      "arm64_attempts": 2,
+      "arm64_attempts": 4,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38419163869",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38428496033",
       "candidate_history": [
         {
           "source_sha": "86a5ee5a0d7802e6576ca0e36401861e84a32343",
@@ -6039,9 +6054,49 @@
             }
           ],
           "retry_hypothesis": "The first native candidate built all official ARM assets and SingularityCE4.6.0, verified architecture/SIF/deployment, and passed85/87 functional cases (aggregate86/88), including every84 original case and the real Jupyter-kernel analytical/HDF5 operation. New nested-runtime testing rejected an Apptainer-specific --mksquashfs-args flag before constructing the image; Singularity's actual released help has no such option. Remove only that unsupported test option and retain real SIF construction/SquashFS/native nested execution/exact marker assertions. The new actual editor test observed its launcher exit early after2.7s, with an empty log and no saved exit status. Enable the official --verbose startup diagnostics and include the real exit status in the unchanged strict liveness assertion. This diagnoses the GUI failure without guessing a library/sandbox fix or suppressing the window/render/file assertions. No compiler/source/image dependency changes; any further correction must follow the actual diagnostic. Original clock and one build attempt persist."
+        },
+        {
+          "source_sha": "8c0c9885d44d0009041fda0724648394a79647ee",
+          "run_id": 38419163869,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38419163869",
+          "counts": {
+            "passed": 86,
+            "failed": 2,
+            "skipped": 0,
+            "total_tests": 88
+          },
+          "failed_tests": [
+            {
+              "duration": 2.671938180923462,
+              "message": "Expected exit code 0, got 1",
+              "name": "Render the real VSCode editor document",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 21, in <module>\nAssertionError: ('Code CLI early exit', 0, 'Marker file for --wait created: /tmp/oFl8F4xX\\n[44182:1013/152444.419230:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\\n[44182:1013/152444.636772:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\\n[44182:1013/152444.637168:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\\n[44182:1013/152444.637211:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\\n[44182:1013/152444.661872:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type:\\n[44182:1013/152444.661969:WARNING:device/bluetooth/dbus/bluez_dbus_manager.cc:209] Floss manager service not available, cannot set Floss enable/disable.\\n[44182:1013/152444.662005:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\\n[44182:1013/152444.669468:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type:\\n[44209:1013/152444.696190:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1655] drmGetDevices2() has not found any devices\\nWARNING: IPC handle \"/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/runtime/vscode-99f76a3a-1.14-main.sock\" is longer than 107 chars, try a shorter --user-data-dir\\n\\x1b[90m[main 2026-10-13T15:24:44.740Z]\\x1b[0m PolicyConfiguration#initialize\\n\\x1b[90m[main 2026-10-13T15:24:44.743Z]\\x1b[0m PolicyConfiguration#updatePolicyDefinitions [\\n  \\'update.mode\\',\\n  \\'update.channel\\',\\n  \\'update.showReleaseNotes\\',\\n  \\'update.showPostInstallInfo\\',\\n  \\'update.titleBar\\',\\n  \\'http.useLocalProxyConfiguration\\',\\n  \\'http.electronFetch\\',\\n  \\'http.proxy\\',\\n  \\'http.proxyStrictSSL\\',\\n  \\'http.proxyKerberosServicePrincipal\\',\\n  \\'http.noProxy\\',\\n  \\'http.proxyAuthorization\\',\\n  \\'http.proxySupport\\',\\n  \\'http.systemCertificates\\',\\n  \\'http.systemCertificatesNode\\',\\n  \\'http.experimental.systemCertificatesV2\\',\\n  \\'http.fetchAdditionalSupport\\',\\n  \\'http.webSocketAdditionalSupport\\',\\n  \\'http.experimental.networkInterfaceCheckInterval\\',\\n  \\'telemetry.telemetryLevel\\',\\n  \\'telemetry.feedback.enabled\\',\\n  \\'telemetry.enableTelemetry\\',\\n  \\'extensions.allowed\\',\\n  \\'chat.agentMerge.enabled\\',\\n  \\'chat.agentMerge.addressReviews\\',\\n  \\'chat.agentMerge.fixCI\\',\\n  \\'chat.agentMerge.resolveConflicts\\',\\n  \\'chat.agentMerge.mergePullRequest\\',\\n  \\'chat.agentMerge.mergeMethod\\',\\n  \\'chat.agentMerge.replyAttribution\\',\\n  \\'chat.agentHost.experimental.activeAgentTitleGeneration\\',\\n  \\'chat.agentHost.experimental.deferredTitleGeneration\\',\\n  \\'chat.artifactTools.enabled\\',\\n  \\'chat.canvases.enabled\\',\\n  \\'chat.agentHost.experimental.autoAttachPullRequests\\',\\n  \\'chat.agentHost.experimental.markdownPlanRichLinks\\',\\n  \\'chat.agentHost.experimental.overlapProviderPreparation\\',\\n  \\'chat.experimental.workspaceSnapshot\\',\\n  \\'chat.agentHost.agentOrchestrationLimits\\',\\n  \\'chat.agentHost.systemProxy.enabled\\',\\n  \\'chat.agentHost.githubMcpServer.enabled\\',\\n  \\'chat.agentHost.experimental.mcpToolRouting\\',\\n  \\'chat.agentHost.claudeAgent.enabled\\',\\n  \\'chat.agentHost.byokModels.enabled\\',\\n  \\'chat.agentHost.codexAgent.enabled\\',\\n  \\'chat.agentHost.otel.enabled\\',\\n  \\'chat.agentHost.otel.exporterType\\',\\n  \\'chat.agentHost.otel.otlpEndpoint\\',\\n  \\'chat.agentHost.otel.captureContent\\',\\n  \\'chat.agentHost.otel.outfile\\',\\n  \\'chat.agentHost.otel.dbSpanExporter.enabled\\',\\n  \\'chat.agentHost.copilotAgent.multiRootEnabled\\',\\n  \\'chat.agentHost.claudeAgent.multiRootEnabled\\',\\n  \\'chat.agentHost.codexAgent.multiRootEnabled\\',\\n  \\'update.enableWindowsBackgroundUpdates\\',\\n  \\'chat.agentHost.copilotAgent.multiRootEnabled\\',\\n  \\'chat.agentHost.claudeAgent.multiRootEnabled\\',\\n  \\'chat.agentHost.codexAgent.multiRootEnabled\\',\\n  \\'chat.agentHost.codexAgent.sdkRoot\\',\\n  \\'chat.agentHost.codexAgent.codexHome\\',\\n  \\'chat.agentHost.codexAgent.binaryArgs\\',\\n  \\'chat.agentHost.otel.otlpProtocol\\',\\n  \\'chat.agentHost.otel.captureIdentity\\',\\n  \\'chat.agentHost.otel.serviceName\\',\\n  \\'chat.agentHost.otel.resourceAttributes\\',\\n  \\'chat.agentHost.otel.headers\\'\\n]\\n\\x1b[90m[main 2026-10-13T15:24:44.756Z]\\x1b[0m [File Watcher (node.js)] Request to start watching: /etc/vscode/policy.json (excludes: <none>, includes: <all>, filter: <none>, correlationId: <none>),/etc/github-copilot/managed-settings.json (excludes: <none>, includes: <all>, filter: <none>, correlationId: <none>),/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/profile/User (excludes: <none>, includes: <all>, filter: <none>, correlationId: <none>),/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/profile/User/settings.json (excludes: <none>, includes: <all>, filter: <none>, correlationId: <none>)\\n\\x1b[90m[main 2026-10-13T15:24:44.760Z]\\x1b[0m PolicyConfiguration#update [\\n  \\'update.mode\\',\\n  \\'telemetry.telemetryLevel\\',\\n  \\'telemetry.feedback.enabled\\',\\n  \\'extensions.allowed\\',\\n  \\'chat.agentHost.claudeAgent.enabled\\',\\n  \\'chat.agentHost.codexAgent.enabled\\',\\n  \\'chat.agentHost.otel.enabled\\',\\n  \\'chat.agentHost.otel.exporterType\\',\\n  \\'chat.agentHost.otel.otlpEndpoint\\',\\n  \\'chat.agentHost.otel.captureContent\\',\\n  \\'chat.agentHost.otel.outfile\\',\\n  \\'chat.agentHost.otel.otlpProtocol\\',\\n  \\'chat.agentHost.otel.captureIdentity\\',\\n  \\'chat.agentHost.otel.serviceName\\',\\n  \\'chat.agentHost.otel.resourceAttributes\\',\\n  \\'chat.agentHost.otel.headers\\'\\n]\\n\\x1b[90m[main 2026-10-13T15:24:44.761Z]\\x1b[0m [File Watcher (node.js)] ignoring a path for watching who\\'s stat info failed to resolve: /etc/vscode/policy.json (error: Error: ENOENT: no such file or directory, stat \\'/etc/vscode/policy.json\\')\\n\\x1b[90m[main 2026-10-13T15:24:44.761Z]\\x1b[0m [File Watcher (node.js)] starting fs.watchFile() on /etc/vscode/policy.json (correlationId: undefined)\\n\\x1b[90m[main 2026-10-13T15:24:44.761Z]\\x1b[0m [File Watcher (node.js)] ignoring a path for watching who\\'s stat info failed to resolve: /etc/github-copilot/managed-settings.json (error: Error: ENOENT: no such file or directory, stat \\'/etc/github-copilot/managed-settings.json\\')\\n\\x1b[90m[main 2026-10-13T15:24:44.762Z]\\x1b[0m [File Watcher (node.js)] starting fs.watchFile() on /etc/github-copilot/managed-settings.json (correlationId: undefined)\\n\\x1b[90m[main 2026-10-13T15:24:44.762Z]\\x1b[0m [File Watcher (node.js)] ignoring a path for watching who\\'s stat info failed to resolve: /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/profile/User/settings.json (error: Error: ENOENT: no such file or directory, stat \\'/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/profile/User/settings.json\\')\\n\\x1b[90m[main 2026-10-13T15:24:44.763Z]\\x1b[0m [File Watcher (node.js)] starting fs.watchFile() on /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/profile/User/settings.json (correlationId: undefined)\\n\\x1b[91m[main 2026-10-13T15:24:44.768Z]\\x1b[0m Error: listen EINVAL: invalid argument /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/runtime/vscode-99f76a3a-1.14-main.sock\\n    at Server.setupListenHandle [as _listen2] (node:net:2306:21)\\n    at listenInCluster (node:net:2437:12)\\n    at Server.listen (node:net:2579:5)\\n    at file:///usr/share/code/resources/app/out/mainImpl.js:37:636\\n    at new Promise (<anonymous>)\\n    at $E (file:///usr/share/code/resources/app/out/mainImpl.js:37:587)\\n    at WC.claimInstance (file:///usr/share/code/resources/app/out/mainImpl.js:190:58591)\\n    at file:///usr/share/code/resources/app/out/mainImpl.js:190:55872\\n    at i.invokeFunction (file:///usr/share/code/resources/app/out/mainImpl.js:186:941)\\n    at WC.startup (file:///usr/share/code/resources/app/out/mainImpl.js:190:55783)\\n\\x1b[90m[main 2026-10-13T15:24:44.768Z]\\x1b[0m Lifecycle#kill()\\n\\x1b[90m[main 2026-10-13T15:24:44.768Z]\\x1b[0m Lifecycle#onWillShutdown.fire()\\n\\x1b[90m[main 2026-10-13T15:24:44.773Z]\\x1b[0m [File Watcher (node.js)] Started watching: \\'/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/profile/User\\'\\n\\x1b[90m[main 2026-10-13T15:24:44.776Z]\\x1b[0m [File Watcher (node.js)] stopping fs.watchFile() on /etc/vscode/policy.json (correlationId: undefined)\\n\\x1b[90m[main 2026-10-13T15:24:44.776Z]\\x1b[0m [File Watcher (node.js)] stopping fs.watchFile() on /etc/github-copilot/managed-settings.json (correlationId: undefined)\\n')\n",
+              "stdout": "Marker file for --wait created: /tmp/oFl8F4xX\n[44182:1013/152444.419230:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[44182:1013/152444.636772:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[44182:1013/152444.637168:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[44182:1013/152444.637211:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory\n[44182:1013/152444.661872:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type:\n[44182:1013/152444.661969:WARNING:device/bluetooth/dbus/bluez_dbus_manager.cc:209] Floss manager service not available, cannot set Floss enable/disable.\n[44182:1013/152444.662005:ERROR:dbus/bus.cc:406] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are \"tcp\" and on UNIX \"unix\")\n[44182:1013/152444.669468:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type:\n[44209:1013/152444.696190:WARNING:media/gpu/vaapi/vaapi_wrapper.cc:1655] drmGetDevices2() has not found any devices\nWARNING: IPC handle \"/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/runtime/vscode-99f76a3a-1.14-main.sock\" is longer than 107 chars, try a shorter --user-data-dir\n\u001b[90m[main 2026-10-13T15:24:44.740Z]\u001b[0m PolicyConfiguration#initialize\n\u001b[90m[main 2026-10-13T15:24:44.743Z]\u001b[0m PolicyConfiguration#updatePolicyDefinitions [\n  'update.mode',\n  'update.channel',\n  'update.showReleaseNotes',\n  'update.showPostInstallInfo',\n  'update.titleBar',\n  'http.useLocalProxyConfiguration',\n  'http.electronFetch',\n  'http.proxy',\n  'http.proxyStrictSSL',\n  'http.proxyKerberosServicePrincipal',\n  'http.noProxy',\n  'http.proxyAuthorization',\n  'http.proxySupport',\n  'http.systemCertificates',\n  'http.systemCertificatesNode',\n  'http.experimental.systemCertificatesV2',\n  'http.fetchAdditionalSupport',\n  'http.webSocketAdditionalSupport',\n  'http.experimental.networkInterfaceCheckInterval',\n  'telemetry.telemetryLevel',\n  'telemetry.feedback.enabled',\n  'telemetry.enableTelemetry',\n  'extensions.allowed',\n  'chat.agentMerge.enabled',\n  'chat.agentMerge.addressReviews',\n  'chat.agentMerge.fixCI',\n  'chat.agentMerge.resolveConflicts',\n  'chat.agentMerge.mergePullRequest',\n  'chat.agentMerge.mergeMethod',\n  'chat.agentMerge.replyAttribution',\n  'chat.agentHost.experimental.activeAgentTitleGeneration',\n  'chat.agentHost.experimental.deferredTitleGeneration',\n  'chat.artifactTools.enabled',\n  'chat.canvases.enabled',\n  'chat.agentHost.experimental.autoAttachPullRequests',\n  'chat.agentHost.experimental.markdownPlanRichLinks',\n  'chat.agentHost.experimental.overlapProviderPreparation',\n  'chat.experimental.workspaceSnapshot',\n  'chat.agentHost.agentOrchestrationLimits',\n  'chat.agentHost.systemProxy.enabled',\n  'chat.agentHost.githubMcpServer.enabled',\n  'chat.agentHost.experimental.mcpToolRouting',\n  'chat.agentHost.claudeAgent.enabled',\n  'chat.agentHost.byokModels.enabled',\n  'chat.agentHost.codexAgent.enabled',\n  'chat.agentHost.otel.enabled',\n  'chat.agentHost.otel.exporterType',\n  'chat.agentHost.otel.otlpEndpoint',\n  'chat.agentHost.otel.captureContent',\n  'chat.agentHost.otel.outfile',\n  'chat.agentHost.otel.dbSpanExporter.enabled',\n  'chat.agentHost.copilotAgent.multiRootEnabled',\n  'chat.agentHost.claudeAgent.multiRootEnabled',\n  'chat.agentHost.codexAgent.multiRootEnabled',\n  'update.enableWindowsBackgroundUpdates',\n  'chat.agentHost.copilotAgent.multiRootEnabled',\n  'chat.agentHost.claudeAgent.multiRootEnabled',\n  'chat.agentHost.codexAgent.multiRootEnabled',\n  'chat.agentHost.codexAgent.sdkRoot',\n  'chat.agentHost.codexAgent.codexHome',\n  'chat.agentHost.codexAgent.binaryArgs',\n  'chat.agentHost.otel.otlpProtocol',\n  'chat.agentHost.otel.captureIdentity',\n  'chat.agentHost.otel.serviceName',\n  'chat.agentHost.otel.resourceAttributes',\n  'chat.agentHost.otel.headers'\n]\n\u001b[90m[main 2026-10-13T15:24:44.756Z]\u001b[0m [File Watcher (node.js)] Request to start watching: /etc/vscode/policy.json (excludes: <none>, includes: <all>, filter: <none>, correlationId: <none>),/etc/github-copilot/managed-settings.json (excludes: <none>, includes: <all>, filter: <none>, correlationId: <none>),/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/profile/User (excludes: <none>, includes: <all>, filter: <none>, correlationId: <none>),/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/profile/User/settings.json (excludes: <none>, includes: <all>, filter: <none>, correlationId: <none>)\n\u001b[90m[main 2026-10-13T15:24:44.760Z]\u001b[0m PolicyConfiguration#update [\n  'update.mode',\n  'telemetry.telemetryLevel',\n  'telemetry.feedback.enabled',\n  'extensions.allowed',\n  'chat.agentHost.claudeAgent.enabled',\n  'chat.agentHost.codexAgent.enabled',\n  'chat.agentHost.otel.enabled',\n  'chat.agentHost.otel.exporterType',\n  'chat.agentHost.otel.otlpEndpoint',\n  'chat.agentHost.otel.captureContent',\n  'chat.agentHost.otel.outfile',\n  'chat.agentHost.otel.otlpProtocol',\n  'chat.agentHost.otel.captureIdentity',\n  'chat.agentHost.otel.serviceName',\n  'chat.agentHost.otel.resourceAttributes',\n  'chat.agentHost.otel.headers'\n]\n\u001b[90m[main 2026-10-13T15:24:44.761Z]\u001b[0m [File Watcher (node.js)] ignoring a path for watching who's stat info failed to resolve: /etc/vscode/policy.json (error: Error: ENOENT: no such file or directory, stat '/etc/vscode/policy.json')\n\u001b[90m[main 2026-10-13T15:24:44.761Z]\u001b[0m [File Watcher (node.js)] starting fs.watchFile() on /etc/vscode/policy.json (correlationId: undefined)\n\u001b[90m[main 2026-10-13T15:24:44.761Z]\u001b[0m [File Watcher (node.js)] ignoring a path for watching who's stat info failed to resolve: /etc/github-copilot/managed-settings.json (error: Error: ENOENT: no such file or directory, stat '/etc/github-copilot/managed-settings.json')\n\u001b[90m[main 2026-10-13T15:24:44.762Z]\u001b[0m [File Watcher (node.js)] starting fs.watchFile() on /etc/github-copilot/managed-settings.json (correlationId: undefined)\n\u001b[90m[main 2026-10-13T15:24:44.762Z]\u001b[0m [File Watcher (node.js)] ignoring a path for watching who's stat info failed to resolve: /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/profile/User/settings.json (error: Error: ENOENT: no such file or directory, stat '/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/profile/User/settings.json')\n\u001b[90m[main 2026-10-13T15:24:44.763Z]\u001b[0m [File Watcher (node.js)] starting fs.watchFile() on /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/profile/User/settings.json (correlationId: undefined)\n\u001b[91m[main 2026-10-13T15:24:44.768Z]\u001b[0m Error: listen EINVAL: invalid argument /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/runtime/vscode-99f76a3a-1.14-main.sock\n    at Server.setupListenHandle [as _listen2] (node:net:2306:21)\n    at listenInCluster (node:net:2437:12)\n    at Server.listen (node:net:2579:5)\n    at file:///usr/share/code/resources/app/out/mainImpl.js:37:636\n    at new Promise (<anonymous>)\n    at $E (file:///usr/share/code/resources/app/out/mainImpl.js:37:587)\n    at WC.claimInstance (file:///usr/share/code/resources/app/out/mainImpl.js:190:58591)\n    at file:///usr/share/code/resources/app/out/mainImpl.js:190:55872\n    at i.invokeFunction (file:///usr/share/code/resources/app/out/mainImpl.js:186:941)\n    at WC.startup (file:///usr/share/code/resources/app/out/mainImpl.js:190:55783)\n\u001b[90m[main 2026-10-13T15:24:44.768Z]\u001b[0m Lifecycle#kill()\n\u001b[90m[main 2026-10-13T15:24:44.768Z]\u001b[0m Lifecycle#onWillShutdown.fire()\n\u001b[90m[main 2026-10-13T15:24:44.773Z]\u001b[0m [File Watcher (node.js)] Started watching: '/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/tmp1t6m_kiy/profile/User'\n\u001b[90m[main 2026-10-13T15:24:44.776Z]\u001b[0m [File Watcher (node.js)] stopping fs.watchFile() on /etc/vscode/policy.json (correlationId: undefined)\n\u001b[90m[main 2026-10-13T15:24:44.776Z]\u001b[0m [File Watcher (node.js)] stopping fs.watchFile() on /etc/github-copilot/managed-settings.json (correlationId: undefined)\n\n"
+            },
+            {
+              "duration": 1.2041504383087158,
+              "message": "Expected exit code 0, got 255",
+              "name": "Build and execute a native nested Singularity SIF",
+              "return_code": 255,
+              "status": "failed",
+              "stderr": "WARNING: 'nodev' mount option set on /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work, it could be a source of failure during build process\nINFO:    Starting build...\nINFO:    Extracting local image...\nINFO:    Inserting Singularity configuration...\nINFO:    Creating SIF file...\nINFO:    Build complete: /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/nested.EfqQxi/nested.sif\nINFO:    Mounting image with FUSE.\nfusermount3: mount failed: Operation not permitted\nWARNING: squashfuse mount failed, falling back to extraction: encountered error while trying to mount image \"/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/nested.EfqQxi/nested.sif\" with FUSE at /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-tfh9i5tc/work/test_output/nested.EfqQxi/tmp/rootfs-229358059/root: exit status 1\nINFO:    Converting SIF file to temporary sandbox...\nFATAL:   while preparing image: extraction failed: root filesystem extraction failed: extract command failed: panic: runtime error: invalid memory address or nil pointer dereference\n[signal SIGSEGV: segmentation violation code=0x1 addr=0x20 pc=0xabaa374ecf90]\n\ngoroutine 8 [running]:\ngithub.com/sylabs/singularity/v4/internal/pkg/runtime/engine/singularity.(*container).addResolvConfMount(0x2a8269e3cb40, 0x2a8269e489c0)\n\tgithub.com/sylabs/singularity/v4/internal/pkg/runtime/engine/singularity/container_linux.go:2339 +0x270\ngithub.com/sylabs/singularity/v4/internal/pkg/runtime/engine/singularity.create({0xabaa37e882d8, 0xabaa37f58220}, 0x2a8269ea5980, 0x2a8269d90930, 0xad69)\n\tgithub.com/sylabs/singularity/v4/internal/pkg/runtime/engine/singularity/container_linux.go:274 +0xc70\ngithub.com/sylabs/singularity/v4/internal/pkg/runtime/engine/singularity.(*EngineOperations).CreateContainer(0x2a8269ea5980, {0xabaa37e882d8, 0xabaa37f58220}, 0xad69, {0xabaa37e8b148?, 0x2a8269d80868?})\n\tgithub.com/sylabs/singularity/v4/internal/pkg/runtime/engine/singularity/create_linux.go:47 +0x20c\ngithub.com/sylabs/singularity/v4/internal/app/starter.createContainer({0xabaa37e882d8, 0xabaa37f58220}, 0x0?, 0xad69, 0x2a8269d90078, 0x2a8269e000e0)\n\tgithub.com/sylabs/singularity/v4/internal/app/starter/master_linux.go:39 +0x138\ncreated by github.com/sylabs/singularity/v4/internal/app/starter.Master in goroutine 5\n\tgithub.com/sylabs/singularity/v4/internal/app/starter/master_linux.go:215 +0xf0\n: exit status 2\n",
+              "stdout": ""
+            }
+          ],
+          "retry_hypothesis": "The second native source8c0c9885 again built/deployed successfully and passed all84 original cases plus real Jupyter. Actual editor diagnostics now identify its startup failure precisely: the runtime/profile socket path exceeds Linux's107-byte Unix-domain pathname limit and listen returnsEINVAL. Move the complete private GUI fixture to short /tmp/code-gui-* paths; retain strict liveness, named-window/rendering and source-byte assertions. The equivalent Unix socket bound successfully in local fixture validation.\n\nThe released SingularityCE4.6.0 built the actual nested SquashFS SIF, but the runner denied FUSE and its official fallback extractor panicked at container_linux.go:2339: c.session.Layer.Dir() when /etc/resolv.conf points into /run. The extractor's internal child deliberately clears its environment, so outer DNS/no-mount flags would not fix that stage. Apply a configuration-only workaround in guarded ephemeral GitHub CI setup: replace the host resolver symlink with a regular file preserving every DNS byte, ownership and mode. Keep DNS enabled, the same released runtime/source and complete native SIF execution/marker/architecture assertions. No compiler/runtime/library patch or replaced implementation. Latest official release is still4.6.0. If another runner/runtime failure remains after this documented host-condition fix, stop rather than developing a private runtime port. Original start14:10UTC/deadline02:10UTC and2 attempts persist; this new source still requires full native and both upstream suites."
+        },
+        {
+          "source_sha": "680e40b743c6a3ec4f4f6e28c2058cecf48b0aa0",
+          "run_id": 38425524040,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38425524040",
+          "outcome": "blocked-infrastructure",
+          "first_error": "Install Apptainer: Launchpad HTTP 504 Gateway Timeout; no image build or runtime tests started."
         }
       ],
-      "retry_hypothesis": "The first native candidate built all official ARM assets and SingularityCE4.6.0, verified architecture/SIF/deployment, and passed85/87 functional cases (aggregate86/88), including every84 original case and the real Jupyter-kernel analytical/HDF5 operation. New nested-runtime testing rejected an Apptainer-specific --mksquashfs-args flag before constructing the image; Singularity's actual released help has no such option. Remove only that unsupported test option and retain real SIF construction/SquashFS/native nested execution/exact marker assertions. The new actual editor test observed its launcher exit early after2.7s, with an empty log and no saved exit status. Enable the official --verbose startup diagnostics and include the real exit status in the unchanged strict liveness assertion. This diagnoses the GUI failure without guessing a library/sandbox fix or suppressing the window/render/file assertions. No compiler/source/image dependency changes; any further correction must follow the actual diagnostic. Original clock and one build attempt persist."
+      "retry_hypothesis": "Launchpad returned HTTP504 during host Apptainer setup before image build. One unchanged retry of exact source680e40b7 is permitted; it leaves exactly two upstream architecture builds within six total. No scientific/runtime result is inferred from the setup failure.",
+      "transient_unchanged_retry_used": true
     },
     {
       "recipe": "condaenvs",
@@ -12327,44 +12382,56 @@
       "release_metadata_audit": {
         "promotion_run_id": 38410722405,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38410722405",
-        "status": "pending-promotion",
+        "status": "verified-published-metadata",
         "metadata": [
-          {
-            "architecture": "aarch64",
-            "path": "releases/globus_arm64/3.3.1.json",
-            "expected_build_date": "20261013",
-            "exists": true,
-            "committed_build_dates": [
-              "20260927"
-            ],
-            "current_candidate_date_committed": false
-          },
           {
             "architecture": "x86_64",
             "path": "releases/globus/3.3.1.json",
             "expected_build_date": "20261013",
-            "exists": true,
             "committed_build_dates": [
-              "20260927"
+              "20261013"
             ],
-            "current_candidate_date_committed": false
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f",
+            "metadata_commit_sha": "25d1b5542b0e4e68478828ba04c516fa97938511",
+            "sif": "globus_3.3.1_20261013.simg",
+            "sif_sha256": "136eb692efae2313b38a4ef332709ac0a4b4bee1cb746fed3dbc679b7766bc71",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/globus_3.3.1_20261013.simg",
+            "public_sif_head_status": 200
+          },
+          {
+            "architecture": "aarch64",
+            "path": "releases/globus_arm64/3.3.1.json",
+            "expected_build_date": "20261013",
+            "committed_build_dates": [
+              "20261013"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f",
+            "metadata_commit_sha": "25d1b5542b0e4e68478828ba04c516fa97938511",
+            "sif": "globus_arm64_3.3.1_20261013.simg",
+            "sif_sha256": "b1cc1c9de30946aec6ad06f7a0df6bf005dd43c22b7c6a5e080c5c50418f5fd3",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/globus_arm64_3.3.1_20261013.simg",
+            "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-13T15:06:53.882176+00:00",
-        "workflow_status": "in_progress",
-        "workflow_conclusion": null,
+        "checked_at": "2026-10-13T15:15:25.213072+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
         "publish_jobs": [
           {
             "name": "publish (candidate-globus-fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "success",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-2s7wz",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Publish tested SIF to unique staging object keys"
-            ]
+            "active_steps": []
           },
           {
             "name": "publish (candidate-globus_arm64-fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f)",
@@ -12377,7 +12444,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T15:06:54.819477+00:00"
+        "metadata_checked_at": "2026-10-13T15:15:33.075241+00:00"
       }
     },
     {
@@ -17935,7 +18002,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-13T15:06:56.412863+00:00",
+        "checked_at": "2026-10-13T16:16:58.230616+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -17960,7 +18027,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T15:06:57.251352+00:00",
+        "metadata_checked_at": "2026-10-13T16:16:59.047874+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -21430,7 +21497,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T15:06:58.910385+00:00",
+        "checked_at": "2026-10-13T16:17:00.301984+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -21445,7 +21512,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T15:06:59.692190+00:00",
+        "metadata_checked_at": "2026-10-13T16:17:01.135122+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -25062,7 +25129,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T15:07:02.976446+00:00",
+        "checked_at": "2026-10-13T16:17:02.685660+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -25087,7 +25154,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T15:07:03.749713+00:00"
+        "metadata_checked_at": "2026-10-13T16:17:03.494331+00:00"
       }
     },
     {
@@ -26616,11 +26683,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-soopct-20261012",
       "baseline_sha": "c265491023ae2d34beb9438c2b6e1ee2e5f3d5e5",
-      "candidate_sha": "0d22e1b8b8dace4e652317fce056e787211965d2",
+      "candidate_sha": "74ea1654007933c3cf0d03aaf7a7cb3760f494cd",
       "started_at": "2026-10-13T11:35:00+00:00",
       "deadline": "2026-10-13T23:35:00+00:00",
-      "attempts": 3,
-      "run_id": 38415377780,
+      "attempts": 4,
+      "run_id": 38425818686,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -26647,9 +26714,9 @@
         "https://github.com/neuroneural/brainchop-cli/tree/51a95a6a1f84546a317aabe171b29f34e093b970",
         "https://github.com/neuroneural/brainchop-models/tree/528f2d8d2ca937968b2d4b2b9ef9fa9170f4b9cf"
       ],
-      "arm64_attempts": 3,
+      "arm64_attempts": 4,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38415377780",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38425818686",
       "candidate_history": [
         {
           "source_sha": "059ef3fdb603337b6fb6c266bba2594e5aac1278",
@@ -26696,9 +26763,32 @@
             }
           ],
           "retry_hypothesis": "Second native build verified the real niimath command now resolves to the unchanged bundled native binary and passed9/10 functional cases again. CT preprocessing proceeded past the prior EROFS launcher failure. TinyGrad0.14.0 then rejected this test's legacy CPU=1 environment setting with the explicit diagnostic `CPU=1 is deprecated, use DEV=CPU instead`. Set only the documented current child-process selector DEV=CPU; keep the same installed packages, trained weights, full CT input, model execution and every downstream image/BIDS assertion. This is a test/runtime configuration fix, not a JIT/intrinsics/compiler port or dependency-version experiment. Start/deadline and2 prior build attempts persist; require fresh complete native and both upstream suites. Preserve the old logs proving the launcher correction worked."
+        },
+        {
+          "source_sha": "0d22e1b8b8dace4e652317fce056e787211965d2",
+          "run_id": 38415377780,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38415377780",
+          "counts": {
+            "passed": 10,
+            "failed": 1,
+            "skipped": 0,
+            "total_tests": 11
+          },
+          "failed_tests": [
+            {
+              "duration": 2100.0512371063232,
+              "message": "Timeout after 2100s",
+              "name": "Actual CT model inference and BIDS conversion",
+              "return_code": 0,
+              "status": "failed",
+              "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 31, in <module>\n  File \"/opt/miniconda/lib/python3.11/subprocess.py\", line 550, in run\n    stdout, stderr = process.communicate(input, timeout=timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/subprocess.py\", line 1209, in communicate\n    stdout, stderr = self._communicate(input, endtime, timeout)\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/subprocess.py\", line 2141, in _communicate\n    self.wait(timeout=self._remaining_time(endtime))\n  File \"/opt/miniconda/lib/python3.11/subprocess.py\", line 1264, in wait\n    return self._wait(timeout=timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/subprocess.py\", line 2045, in _wait\n    raise TimeoutExpired(self.args, timeout)\nsubprocess.TimeoutExpired: Command '['/opt/miniconda/bin/python', '/soop-ct/3best2anon.py', '/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-g5kg2i84/work/test_output/soopct/best', '/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-g5kg2i84/work/test_output/soopct/tmp7jkq8fb3/anon']' timed out after 1799.9999784549996 seconds\nINFO:    Terminating squashfuse_ll after timeout\nINFO:    Timeouts can be caused by a running background process\n",
+              "stdout": "brainchop :: [1/1] /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-g5kg2i84/work/test_output/soopct/tmp7jkq8fb3/anon/1_ct.nii\n"
+            }
+          ],
+          "retry_hypothesis": "Third native source0d22e1b8 built/converted/deployed and passed every original functional case, dependency closure, native ANTs identity oracle and every group-mean voxel (aggregate10/11). The new full-resolution trained mindgrab CPU operation reached the correct DEV=CPU path and exceeded the initial30-minute subprocess allowance; its surviving model child kept the captured pipe open until the outer35-minute timeout. No model inference completion or downstream image/BIDS success is claimed.\n\nGive this newly introduced full CT CPU operation a90-minute allowance inside a100-minute case limit (root job360min; upstream job720min). Every original case/timeout, full clinical CT input, exact official trained weights and all scientific/image/BIDS assertions remain. This is runtime resource allocation for a new expensive CPU operation, not numerical tolerance relaxation, smaller data, deleted tests, a dependency swap or an unchanged transient retry. Record elapsed/CPU/RSS/state for the owned workflow/model process tree every5min and use unbuffered output. On failure/timeout terminate the whole owned process group, preventing the observed surviving child. No scientific/tool source change.\n\nOriginal start11:35UTC/deadline23:35UTC and3 attempts persist. This is the last native attempt that leaves two upstream architecture builds within6 total; if it fails, retain the exact first actionable error/resource evidence and stop this investigation. If it passes, require its own PR and both full suites. Nothing is called verified before those gates."
         }
       ],
-      "retry_hypothesis": "Second native build verified the real niimath command now resolves to the unchanged bundled native binary and passed9/10 functional cases again. CT preprocessing proceeded past the prior EROFS launcher failure. TinyGrad0.14.0 then rejected this test's legacy CPU=1 environment setting with the explicit diagnostic `CPU=1 is deprecated, use DEV=CPU instead`. Set only the documented current child-process selector DEV=CPU; keep the same installed packages, trained weights, full CT input, model execution and every downstream image/BIDS assertion. This is a test/runtime configuration fix, not a JIT/intrinsics/compiler port or dependency-version experiment. Start/deadline and2 prior build attempts persist; require fresh complete native and both upstream suites. Preserve the old logs proving the launcher correction worked."
+      "retry_hypothesis": "Third native source0d22e1b8 built/converted/deployed and passed every original functional case, dependency closure, native ANTs identity oracle and every group-mean voxel (aggregate10/11). The new full-resolution trained mindgrab CPU operation reached the correct DEV=CPU path and exceeded the initial30-minute subprocess allowance; its surviving model child kept the captured pipe open until the outer35-minute timeout. No model inference completion or downstream image/BIDS success is claimed.\n\nGive this newly introduced full CT CPU operation a90-minute allowance inside a100-minute case limit (root job360min; upstream job720min). Every original case/timeout, full clinical CT input, exact official trained weights and all scientific/image/BIDS assertions remain. This is runtime resource allocation for a new expensive CPU operation, not numerical tolerance relaxation, smaller data, deleted tests, a dependency swap or an unchanged transient retry. Record elapsed/CPU/RSS/state for the owned workflow/model process tree every5min and use unbuffered output. On failure/timeout terminate the whole owned process group, preventing the observed surviving child. No scientific/tool source change.\n\nOriginal start11:35UTC/deadline23:35UTC and3 attempts persist. This is the last native attempt that leaves two upstream architecture builds within6 total; if it fails, retain the exact first actionable error/resource evidence and stop this investigation. If it passes, require its own PR and both full suites. Nothing is called verified before those gates."
     },
     {
       "recipe": "sovabids",
@@ -29689,18 +29779,215 @@
       "port_files": [
         "recipes/wftfi/build.yaml"
       ],
-      "status": "native-running",
+      "status": "merged",
       "branch": "arm64/upstream-wftfi-20261012",
       "baseline_sha": "715ef20edbf68dc9bdebd0198cedbf5d7d1c0cfd",
       "candidate_sha": "8147957cc6a29ffc336dfe180638a9d032279862",
       "started_at": "2026-10-13T14:53:00+00:00",
       "deadline": "2026-10-14T02:53:00+00:00",
-      "attempts": 2,
+      "attempts": 4,
       "run_id": 38419542784,
-      "pr_url": null,
-      "upstream_ci": null,
-      "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3585",
+      "upstream_ci": {
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "wftfi",
+          "container": "wftfi_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.0.0",
+          "build_date": "20261014",
+          "docker_archive": "wftfi_arm64_1.0.0_20261014.docker.tar",
+          "sif": "wftfi_arm64_1.0.0_20261014.simg",
+          "candidate_tag": "nd-candidate-wftfi_arm64:8147957cc6a2",
+          "launcher": "wfTFI",
+          "pr_number": 3585,
+          "head_sha": "8147957cc6a29ffc336dfe180638a9d032279862",
+          "tests": {
+            "total": 23,
+            "passed": 23,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 22,
+            "fulltest_passed": 22,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "wfTFI launcher is deployed",
+              "Source tree and sample data exist",
+              "wfTFI Python modules import",
+              "Scientific Python stack imports",
+              "Example data checkout state is explicit",
+              "QSM constructor accepts consistent arrays",
+              "QSM constructor rejects echo mismatch",
+              "Padding helper pads 3D arrays",
+              "Trim helper finds nonzero extent",
+              "Reverse padding coefficients are computed",
+              "Dipole kernel has expected shape",
+              "Gradient weights are finite",
+              "Conjugate gradient solves identity system",
+              "Background field removal returns arrays",
+              "QSM mask generation works",
+              "QSM data weighting works",
+              "QSM padding parameters work",
+              "wfTFI wrapper can run a script file",
+              "README documents wfTFI usage"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "867 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "448 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "361 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 99.5695,
+            "wasted_bytes": 5998506,
+            "wasted_bytes_display": "6.0 MB",
+            "user_wasted_percent": 0.5957
+          }
+        },
+        "candidate_run_id": 38422111371,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38422111371",
+        "native_job_review": {
+          "aarch64": {
+            "head_sha": "8147957cc6a29ffc336dfe180638a9d032279862",
+            "job_id": 115382028471,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38422111371/job/115382028471",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "x86_64": {
+            "head_sha": "8147957cc6a29ffc336dfe180638a9d032279862",
+            "job_id": 115382028875,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38422111371/job/115382028875",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "wftfi",
+          "container": "wftfi",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.0.0",
+          "build_date": "20261014",
+          "docker_archive": "wftfi_1.0.0_20261014.docker.tar",
+          "sif": "wftfi_1.0.0_20261014.simg",
+          "candidate_tag": "nd-candidate-wftfi:8147957cc6a2",
+          "launcher": "wfTFI",
+          "pr_number": 3585,
+          "head_sha": "8147957cc6a29ffc336dfe180638a9d032279862",
+          "tests": {
+            "total": 23,
+            "passed": 23,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 22,
+            "fulltest_passed": 22,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "wfTFI launcher is deployed",
+              "Source tree and sample data exist",
+              "wfTFI Python modules import",
+              "Scientific Python stack imports",
+              "Example data checkout state is explicit",
+              "QSM constructor accepts consistent arrays",
+              "QSM constructor rejects echo mismatch",
+              "Padding helper pads 3D arrays",
+              "Trim helper finds nonzero extent",
+              "Reverse padding coefficients are computed",
+              "Dipole kernel has expected shape",
+              "Gradient weights are finite",
+              "Conjugate gradient solves identity system",
+              "Background field removal returns arrays",
+              "QSM mask generation works",
+              "QSM data weighting works",
+              "QSM padding parameters work",
+              "wfTFI wrapper can run a script file",
+              "README documents wfTFI usage"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial-updates_main_binary-amd64_Packages"
+              },
+              {
+                "count": 2,
+                "wasted_space": "9.0 MB",
+                "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial-updates_main_i18n_Translation-en"
+              },
+              {
+                "count": 2,
+                "wasted_space": "8.9 MB",
+                "path": "/var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_xenial-security_main_binary-amd64_Packages"
+              },
+              {
+                "count": 2,
+                "wasted_space": "8.0 MB",
+                "path": "/var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_xenial-security_main_i18n_Translation-en"
+              },
+              {
+                "count": 2,
+                "wasted_space": "7.2 MB",
+                "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial_main_binary-amd64_Packages"
+              }
+            ],
+            "efficiency_percent": 97.8156,
+            "wasted_bytes": 53820350,
+            "wasted_bytes_display": "54 MB",
+            "user_wasted_percent": 2.3746
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
+      },
+      "merged_sha": "fcd49e63c00e6c20468f94864989621c3dddb5dd",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -29723,8 +30010,8 @@
         "https://doi.org/10.1002/mrm.28903",
         "https://github.com/BMRRgroup/cbviewer/tree/20c9c8c"
       ],
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38419542784",
       "candidate_history": [
         {
@@ -29736,7 +30023,96 @@
         }
       ],
       "transient_unchanged_retry_used": true,
-      "retry_hypothesis": "The first dispatch failed before recipe build, while add-apt-repository retrieved the public Launchpad PPA metadata: http.client.IncompleteRead(113359 bytes read). Other native jobs installed this same Apptainer prerequisite successfully. This truncated HTTP response is a clearly transient infrastructure failure; consume the one permitted unchanged retry of exact candidate8147957c. No recipe/source/test change, skipped gate or scientific failure claim."
+      "retry_hypothesis": "The first dispatch failed before recipe build, while add-apt-repository retrieved the public Launchpad PPA metadata: http.client.IncompleteRead(113359 bytes read). Other native jobs installed this same Apptainer prerequisite successfully. This truncated HTTP response is a clearly transient infrastructure failure; consume the one permitted unchanged retry of exact candidate8147957c. No recipe/source/test change, skipped gate or scientific failure claim.",
+      "native_command_exit_review": {
+        "source_sha": "8147957cc6a29ffc336dfe180638a9d032279862",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "8147957cc6a29ffc336dfe180638a9d032279862",
+        "version": "1.0.0",
+        "counts": {
+          "total_tests": 23,
+          "passed": 23,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 16.702430248260498,
+          "run_timestamp": "2026-10-13T15:13:19.759207",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 22,
+          "total_suites": 1,
+          "total_tests": 22
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38419542784",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3585,
+      "pr_number": 3585,
+      "merged_at": "2026-10-13T15:42:40Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38424395830,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38424395830",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/wftfi_arm64/1.0.0.json",
+            "expected_build_date": "20261014",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/wftfi/1.0.0.json",
+            "expected_build_date": "20261014",
+            "exists": true,
+            "committed_build_dates": [
+              "20260629"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-13T16:17:06.940898+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-wftfi-8147957cc6a29ffc336dfe180638a9d032279862)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-wftfi_arm64-8147957cc6a29ffc336dfe180638a9d032279862)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-13T16:17:07.738517+00:00"
+      }
     },
     {
       "recipe": "workshopdemo",
@@ -30458,9 +30834,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-13T14:13:24.720896+00:00",
-    "previous_sha": "fc590d970f504a77b94c9a2936854d225dd11d80",
-    "new_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
+    "checked_at": "2026-10-13T16:18:09.358138+00:00",
+    "previous_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
+    "new_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },
