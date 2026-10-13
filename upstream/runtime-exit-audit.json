@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-13T18:18:37.713759+00:00",
+  "checked_at": "2026-10-13T18:53:06.228969+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     {
@@ -1121,6 +1121,14 @@
       "nonzero_command_exits": 1
     },
     {
+      "recipe": "mipav",
+      "source_sha": "bc7a259c4905c57481ce07d7955e2364355fdac1",
+      "run_id": 38445553825,
+      "reported_passed": 8,
+      "reported_total": 8,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "mipview",
       "source_sha": "8f6524de0ef725ef6c25486669c7bfe794978585",
       "run_id": 38327220296,
@@ -1393,7 +1401,7 @@
       "nonzero_command_exits": 0
     }
   ],
-  "reviewed_merged_recipe_count": 83,
+  "reviewed_merged_recipe_count": 84,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [],
@@ -1531,7 +1539,7 @@
     }
   ],
   "cached_deployment_linkage_summary_review": {
-    "reviewed_count": 83,
+    "reviewed_count": 84,
     "outliers": [
       {
         "recipe": "fsl",
@@ -1542,8 +1550,8 @@
         "message": "Skipped 4 linkage entries without filesystem paths."
       }
     ],
-    "checked_at": "2026-10-13T18:18:37.805576+00:00",
-    "method": "Read exact-source cached deployment scan summaries for all83 merged recipes, retaining prior root sources for explicitly recorded current-source gaps. No rebuild. The sole >2 pathless-entry summary is FSL eddy_cuda, with4; source-specific GPU/driver limitation is recorded in its issue. All131 CPU functional cases passed. Ordinary2-entry summaries do not establish full linkage closure because the parser also skips unresolved=>notfound entries.",
+    "checked_at": "2026-10-13T18:53:06.319897+00:00",
+    "method": "Read exact-source cached deployment scan summaries for all84 merged recipes, retaining prior root sources for explicitly recorded current-source gaps. No rebuild. The sole >2 pathless-entry summary is FSL eddy_cuda, with4; source-specific GPU/driver limitation is recorded in its issue. All131 CPU functional cases passed. Ordinary2-entry summaries do not establish full linkage closure because the parser also skips unresolved=>notfound entries.",
     "parser_limitation": "workflows/test_deploy.sh parse_ldd_output treats unresolved=>notfound entries as skipped, not failures. Exact library closure cannot be inferred solely from aggregate deployment success.",
     "active_recipe_reviews": {
       "elastix": "Root38325625311 at429bc011 passed34/34 aggregate: all32 retained scientific/negative cases and independently executed ldd closure for74 libraries per raw ELF passed. A newly added shell version-string assertion was ineffective because builder substitution changed $version_output into5.3.1_output. Actual raw commands executed0 and retained wrapper version checks printed actual5.3.1. Corrected fixture source ff8a87685a1a201bcd76ced4fc52495d8526d312 is pushed but UNTESTED: another root plus two upstream builds exceed2 remaining attempts. Status blocked-verification-budget;4/6 builds and original deadline retained. No current corrected-source runtime proof or upstream PR claimed."
@@ -1551,6 +1559,35 @@
     "scope": "Cached deployed-directory scan summaries only; not exhaustive optional-command execution or GPU verification.",
     "accepted_recipe_limitations": {
       "fsl": "Additional source-specific parser review:115 binaries each have2 pathless ldd entries, consistent with Linux vDSO/loader summaries; only eddy_cuda has4. The existing parser does not reject=>notfound, so an empty failure count alone cannot establish full linkage closure. The two extra eddy_cuda entries require GPU/driver investigation on an eligible host; GPU execution and complete CUDA linkage are unverified on this CPU-only runner. All131 actual CPU fulltests passed including exact arithmetic/statistics/ROI/FLIRT and FSLeyes/ASL. Preserve explicit200-executable inventory cap and GPU prerequisite limitation; no exhaustive optional-command/GPU claim. No source change or successful CPU build repeated."
+    }
+  },
+  "accepted_scientific_scope_notes": {
+    "mipav": {
+      "native": {
+        "source_sha": "bc7a259c4905c57481ce07d7955e2364355fdac1",
+        "note": "Native actual plugin completed7.32s with exact1287-voxel addition/threshold, three NIfTI write/read roundtrips, voxel spacing, unchanged source and a real mapped image viewport. All7 functional commands exited0. MIPAV startup logs also report missing ARM bundled libjhdf5.so and Java3D libj3dcore-* resources. HDF5 and Java3D/GPU extensions are NOT verified; this scientific runtime proof covers core NIfTI/image processing and2D viewer only. Existing ARM declaration retained, no native extensions removed or diagnostic suppression.",
+        "case_duration": 7.3201820850372314,
+        "unverified_capabilities": [
+          "HDF5 via bundled jhdf5 native loader",
+          "Java3D/GPU extensions"
+        ]
+      },
+      "upstream": {
+        "aarch64": {
+          "actual_zero_exit_commands": 7,
+          "scientific_case_duration": 9.818664073944092,
+          "source_sha": "bc7a259c4905c57481ce07d7955e2364355fdac1",
+          "scope": "Exact arithmetic, threshold, three NIfTI roundtrips, spacing/input hashes and real mapped image viewport. ARM HDF5/Java3D extensions remain unverified."
+        },
+        "x86_64": {
+          "actual_zero_exit_commands": 7,
+          "scientific_case_duration": 6.8945746421813965,
+          "source_sha": "bc7a259c4905c57481ce07d7955e2364355fdac1",
+          "scope": "Exact arithmetic, threshold, three NIfTI roundtrips, spacing/input hashes and real mapped image viewport. ARM HDF5/Java3D extensions remain unverified."
+        }
+      },
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3592",
+      "note": "All7 real core scientific/GUI commands exited0 on both upstream architectures,8/8 aggregate. Bundled ARM HDF5/Java3D resources remain unavailable/unverified; no complete native-extension claim."
     }
   }
 }
