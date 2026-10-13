@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-13T02:42:10.168928+00:00",
-  "upstream_ref": "11e6636c5cb6b078024da5ebc93fbc51a06f8b26",
+  "checked_at": "2026-10-13T05:44:34.700872+00:00",
+  "upstream_ref": "429d62e48e6cc1db9f460cd3ce6856aa1b542474",
   "scope": "112 user-requested in-scope recipes;17 OpenRecon exclusions omitted.",
   "policy": "Read-only source-tree audit. Metadata presence/schema does not prove current builds, public artifacts or deployment; exact-candidate publication proofs remain in release-metadata-audit.json. No generated JSON changes or promotion dispatch.",
   "counts": {
-    "pending-arm64-port": 38,
-    "explicit-arm64-metadata-present": 50,
-    "no-current-version-metadata-at-audited-ref": 24
+    "pending-arm64-port": 34,
+    "explicit-arm64-metadata-present": 55,
+    "no-current-version-metadata-at-audited-ref": 23
   },
   "containers": [
     {
@@ -182,9 +182,21 @@
       "recipe": "bidsvue",
       "version": "0.1.20260704",
       "declared_architectures": [
-        "x86_64"
+        "x86_64",
+        "aarch64"
       ],
-      "status": "pending-arm64-port"
+      "path": "releases/bidsvue_arm64/0.1.20260704.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "bidsvue",
+      "apps": {
+        "bidsvue_arm64 0.1.20260704": "20261013",
+        "BIDSvue-bidsvue_arm64 0.1.20260704": "20261013"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
     },
     {
       "recipe": "blastct",
@@ -553,7 +565,17 @@
         "aarch64"
       ],
       "path": "releases/fsl_arm64/6.0.7.23.json",
-      "status": "no-current-version-metadata-at-audited-ref"
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "fsl",
+      "apps": {
+        "fsl_arm64 6.0.7.23": "20261013",
+        "fsleyesGUI-fsl_arm64 6.0.7.23": "20261013"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
     },
     {
       "recipe": "fsqc",
@@ -800,9 +822,20 @@
       "recipe": "lipsia",
       "version": "4.1.1",
       "declared_architectures": [
-        "x86_64"
+        "x86_64",
+        "aarch64"
       ],
-      "status": "pending-arm64-port"
+      "path": "releases/lipsia_arm64/4.1.1.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "lipsia",
+      "apps": {
+        "lipsia_arm64 4.1.1": "20261013"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
     },
     {
       "recipe": "lqt",
@@ -961,9 +994,20 @@
       "recipe": "mritools",
       "version": "4.9.0",
       "declared_architectures": [
-        "x86_64"
+        "x86_64",
+        "aarch64"
       ],
-      "status": "pending-arm64-port"
+      "path": "releases/mritools_arm64/4.9.0.json",
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "mritools",
+      "apps": {
+        "mritools_arm64 4.9.0": "20261013"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
     },
     {
       "recipe": "napari",
@@ -1253,7 +1297,16 @@
         "aarch64"
       ],
       "path": "releases/rshrf_arm64/1.7.0.json",
-      "status": "no-current-version-metadata-at-audited-ref"
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "rshrf",
+      "apps": {
+        "rshrf_arm64 1.7.0": "20261013"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
     },
     {
       "recipe": "segmentator",
@@ -1440,9 +1493,11 @@
       "recipe": "vertexwiser",
       "version": "1.5.1",
       "declared_architectures": [
-        "x86_64"
+        "x86_64",
+        "aarch64"
       ],
-      "status": "pending-arm64-port"
+      "path": "releases/vertexwiser_arm64/1.5.1.json",
+      "status": "no-current-version-metadata-at-audited-ref"
     },
     {
       "recipe": "vesselvio",
