@@ -5395,7 +5395,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T16:54:30.088731+00:00",
+        "checked_at": "2026-10-13T17:19:44.186584+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -5420,7 +5420,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T16:54:30.840703+00:00",
+        "metadata_checked_at": "2026-10-13T17:19:45.008014+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -5959,18 +5959,18 @@
         "recipes/code/build.yaml",
         "recipes/code/fulltest.yaml"
       ],
-      "status": "waiting-capacity",
+      "status": "native-running",
       "branch": "arm64/upstream-code-20261012",
       "baseline_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
       "candidate_sha": "c2c0cd3369a1fcd717243deffd9d11f75e112000",
       "started_at": "2026-10-13T14:10:00+00:00",
       "deadline": "2026-10-14T02:10:00+00:00",
-      "attempts": 4,
-      "run_id": null,
+      "attempts": 5,
+      "run_id": 38437637621,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "User authorized7 total builds for Code. When one of the four active investigations finishes, resume pushedc2c0cd33 for one exact native retest (attempt5), then its own upstream ARM/x86 PR (attempts6and7) only if the full native suite passes. Original02:10UTC deadline remains.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "240320",
@@ -6026,9 +6026,9 @@
         "https://github.com/sylabs/singularity/releases/tag/v4.6.0",
         "https://docs.sylabs.io/guides/4.6/admin-guide/installation.html"
       ],
-      "arm64_attempts": 4,
+      "arm64_attempts": 5,
       "x86_64_attempts": 0,
-      "run_url": null,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38437637621",
       "candidate_history": [
         {
           "source_sha": "86a5ee5a0d7802e6576ca0e36401861e84a32343",
@@ -18034,7 +18034,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-13T16:54:32.376845+00:00",
+        "checked_at": "2026-10-13T17:19:46.447364+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -18059,7 +18059,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T16:54:33.131353+00:00",
+        "metadata_checked_at": "2026-10-13T17:19:47.245042+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -21529,7 +21529,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T16:54:34.536725+00:00",
+        "checked_at": "2026-10-13T17:19:48.514533+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -21544,7 +21544,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T16:54:35.363169+00:00",
+        "metadata_checked_at": "2026-10-13T17:19:49.313847+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -25191,7 +25191,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T16:54:36.536660+00:00",
+        "checked_at": "2026-10-13T17:19:50.557950+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -25216,7 +25216,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T16:54:37.344519+00:00"
+        "metadata_checked_at": "2026-10-13T17:19:51.316593+00:00"
       }
     },
     {
@@ -27484,7 +27484,7 @@
       "port_files": [
         "recipes/synthstrip/build.yaml"
       ],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-synthstrip-20261012",
       "baseline_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
       "candidate_sha": "b39a7cf0fd97b9dd6d035b376fabfff59c5d4aad",
@@ -27495,7 +27495,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "7.4.1",
@@ -27528,7 +27528,91 @@
       ],
       "arm64_attempts": 1,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38411073044"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38411073044",
+      "native_command_exit_review": {
+        "source_sha": "b39a7cf0fd97b9dd6d035b376fabfff59c5d4aad",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": [
+          {
+            "test": "Reports installed version",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Help display",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Help mentions input argument",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Help mentions output argument",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Help mentions mask argument",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Help mentions GPU option",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Help mentions border option",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Help mentions no-csf option",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Citation displayed",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Error on missing input",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Error on missing required arguments",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "nib-diff different files",
+            "expected_exit_code": 1
+          }
+        ]
+      },
+      "native_evidence": {
+        "source_sha": "b39a7cf0fd97b9dd6d035b376fabfff59c5d4aad",
+        "version": "8.2.0",
+        "counts": {
+          "total_tests": 73,
+          "passed": 73,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 10290.289503097534,
+          "run_timestamp": "2026-10-13T17:05:31.545589",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 72,
+          "total_suites": 1,
+          "total_tests": 72
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38411073044",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "synthstroke",
@@ -30148,7 +30232,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T16:54:38.434374+00:00",
+        "checked_at": "2026-10-13T17:19:52.430962+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -30173,7 +30257,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T16:54:39.179703+00:00"
+        "metadata_checked_at": "2026-10-13T17:19:53.228255+00:00"
       }
     },
     {
@@ -30849,18 +30933,217 @@
         ]
       },
       "port_files": [],
-      "status": "native-verified",
+      "status": "merged",
       "branch": "arm64/upstream-xnat-20261012",
       "baseline_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
       "candidate_sha": "845d83734f0b98b5c06514048528bccd6646a6c5",
       "started_at": "2026-10-13T16:23:00+00:00",
       "deadline": "2026-10-14T04:23:00+00:00",
-      "attempts": 3,
+      "attempts": 5,
       "run_id": 38434072302,
-      "pr_url": null,
-      "upstream_ci": null,
-      "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3588",
+      "upstream_ci": {
+        "initial_run_id": 38436117500,
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38436117500",
+        "candidate_run_id": 38436117500,
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "xnat",
+          "container": "xnat",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.9.2.1",
+          "build_date": "20261014",
+          "docker_archive": "xnat_1.9.2.1_20261014.docker.tar",
+          "sif": "xnat_1.9.2.1_20261014.simg",
+          "candidate_tag": "nd-candidate-xnat:845d83734f0b",
+          "launcher": null,
+          "pr_number": 3588,
+          "head_sha": "845d83734f0b98b5c06514048528bccd6646a6c5",
+          "tests": {
+            "total": 100,
+            "passed": 100,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 99,
+            "fulltest_passed": 99,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Java version check",
+              "Java OpenJDK verification",
+              "Java runtime environment",
+              "Java classpath functionality",
+              "PostgreSQL initdb version",
+              "PostgreSQL psql version",
+              "PostgreSQL pg_isready help",
+              "PostgreSQL createdb help",
+              "PostgreSQL pg_dump version",
+              "PostgreSQL pg_restore version",
+              "PostgreSQL pg_ctl help",
+              "PostgreSQL configuration",
+              "Tomcat version check",
+              "Tomcat server number",
+              "Tomcat catalina script",
+              "Tomcat startup script",
+              "Tomcat shutdown script",
+              "Tomcat bootstrap jar",
+              "Tomcat configuration directory"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "3.9 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libapt-pkg.so.6.0.0"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.8 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.3 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "955 kB",
+                "path": "/usr/lib/x86_64-linux-gnu/libapt-private.so.0.0.0"
+              },
+              {
+                "count": 4,
+                "wasted_space": "793 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 98.7107,
+            "wasted_bytes": 15943635,
+            "wasted_bytes_display": "16 MB",
+            "user_wasted_percent": 2.188
+          }
+        },
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38436117500",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "845d83734f0b98b5c06514048528bccd6646a6c5",
+            "job_id": 115430566176,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38436117500/job/115430566176",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "aarch64": {
+            "head_sha": "845d83734f0b98b5c06514048528bccd6646a6c5",
+            "job_id": 115430566408,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38436117500/job/115430566408",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "xnat",
+          "container": "xnat_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.9.2.1",
+          "build_date": "20261014",
+          "docker_archive": "xnat_arm64_1.9.2.1_20261014.docker.tar",
+          "sif": "xnat_arm64_1.9.2.1_20261014.simg",
+          "candidate_tag": "nd-candidate-xnat_arm64:845d83734f0b",
+          "launcher": null,
+          "pr_number": 3588,
+          "head_sha": "845d83734f0b98b5c06514048528bccd6646a6c5",
+          "tests": {
+            "total": 100,
+            "passed": 100,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 99,
+            "fulltest_passed": 99,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Java version check",
+              "Java OpenJDK verification",
+              "Java runtime environment",
+              "Java classpath functionality",
+              "PostgreSQL initdb version",
+              "PostgreSQL psql version",
+              "PostgreSQL pg_isready help",
+              "PostgreSQL createdb help",
+              "PostgreSQL pg_dump version",
+              "PostgreSQL pg_restore version",
+              "PostgreSQL pg_ctl help",
+              "PostgreSQL configuration",
+              "Tomcat version check",
+              "Tomcat server number",
+              "Tomcat catalina script",
+              "Tomcat startup script",
+              "Tomcat shutdown script",
+              "Tomcat bootstrap jar",
+              "Tomcat configuration directory"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "3.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libapt-pkg.so.6.0.0"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.8 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.3 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "832 kB",
+                "path": "/usr/lib/aarch64-linux-gnu/libapt-private.so.0.0.0"
+              },
+              {
+                "count": 4,
+                "wasted_space": "793 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 98.6904,
+            "wasted_bytes": 15130203,
+            "wasted_bytes_display": "15 MB",
+            "user_wasted_percent": 2.1839
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
+      },
+      "merged_sha": "2c65fa97b415a35a2855c45bbbe27df6bd394931",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "1.9.2.1",
@@ -30886,8 +31169,8 @@
         "https://wiki.xnat.org/documentation/panel-form",
         "https://groups.google.com/g/xnat_discussion/c/kHK1FlX3mJU"
       ],
-      "arm64_attempts": 3,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 4,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38434072302",
       "candidate_history": [
         {
@@ -30992,6 +31275,60 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
+      },
+      "pending_upstream_issue": 3588,
+      "pr_number": 3588,
+      "merged_at": "2026-10-13T17:17:51Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38437515034,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38437515034",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/xnat_arm64/1.9.2.1.json",
+            "expected_build_date": "20261014",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/xnat/1.9.2.1.json",
+            "expected_build_date": "20261014",
+            "exists": true,
+            "committed_build_dates": [
+              "20250805"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-13T17:19:56.791011+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-xnat_arm64-845d83734f0b98b5c06514048528bccd6646a6c5)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-xnat-845d83734f0b98b5c06514048528bccd6646a6c5)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-13T17:19:57.564957+00:00"
       }
     }
   ],
@@ -31016,9 +31353,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-13T16:18:09.358138+00:00",
-    "previous_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
-    "new_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
+    "checked_at": "2026-10-13T17:20:51.001972+00:00",
+    "previous_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
+    "new_sha": "2c65fa97b415a35a2855c45bbbe27df6bd394931",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },
