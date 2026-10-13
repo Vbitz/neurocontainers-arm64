@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-13T00:13:19.241750+00:00",
+  "checked_at": "2026-10-13T00:40:08.339463+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     {
@@ -404,6 +404,14 @@
       "nonzero_command_exits": 10
     },
     {
+      "recipe": "bidscoin",
+      "source_sha": "8786284d3af9fc4abb55a00978f267c3dd312871",
+      "run_id": 38324346847,
+      "reported_passed": 98,
+      "reported_total": 98,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "bidsmanager",
       "source_sha": "64eb9e1a67908617b0b591e78cfa06f573c66dd8",
       "run_id": 38290676442,
@@ -548,6 +556,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "fitlins",
+      "source_sha": "48f29f3a01d1dd89bf0a60d6a7f0352f2911b357",
+      "run_id": 38326474723,
+      "reported_passed": 8,
+      "reported_total": 8,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "fsl",
       "source_sha": "4bfaf8ea40c71778b11058f8511eeb7199b47e43",
       "run_id": 38314680689,
@@ -665,6 +681,14 @@
       "run_id": 38313557027,
       "reported_passed": 7,
       "reported_total": 7,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "mede",
+      "source_sha": "d1c3d59948134bfb76943e8f3f9f5d895bc98180",
+      "run_id": 38325389216,
+      "reported_passed": 4,
+      "reported_total": 4,
       "nonzero_command_exits": 0
     },
     {
@@ -786,9 +810,17 @@
       "reported_passed": 9,
       "reported_total": 9,
       "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "workshopdemo",
+      "source_sha": "bea003f78d434a38ea562d113fcd5b4e6c10a8c0",
+      "run_id": 38324023794,
+      "reported_passed": 5,
+      "reported_total": 5,
+      "nonzero_command_exits": 0
     }
   ],
-  "reviewed_merged_recipe_count": 53,
+  "reviewed_merged_recipe_count": 57,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [],
@@ -874,6 +906,13 @@
       "root_native_source": "6dc8d4e2fe8ba19ffb332991f04d1f13c6d64223",
       "upstream_run": "https://github.com/neurodesk/neurocontainers/actions/runs/38314938865",
       "note": "Revised upstream source passed both architecture suites; cached root proof verifies earlier source only."
+    },
+    {
+      "recipe": "workshopdemo",
+      "current_upstream_source": "387e00329c25cc4790951d8eb4b9d889e2f245e4",
+      "root_native_source": "bea003f78d434a38ea562d113fcd5b4e6c10a8c0",
+      "upstream_run": "https://github.com/neurodesk/neurocontainers/actions/runs/38325826170",
+      "note": "Revised upstream source passed both architecture suites; cached root proof verifies earlier source only."
     }
   ],
   "diagnostic_reviews": {
@@ -919,7 +958,7 @@
     }
   ],
   "cached_deployment_linkage_summary_review": {
-    "reviewed_count": 53,
+    "reviewed_count": 57,
     "outliers": [
       {
         "recipe": "fsl",
@@ -930,8 +969,8 @@
         "message": "Skipped 4 linkage entries without filesystem paths."
       }
     ],
-    "checked_at": "2026-10-13T00:14:16.850955+00:00",
-    "method": "Read exact-source cached deployment scan summaries for all53 merged recipes, including prior root source for the3 explicitly recorded current-source gaps. No rebuild. The sole >2 pathless-entry summary is FSL eddy_cuda, with4; source-specific GPU/driver limitation is recorded in its issue. All131 CPU functional cases passed. Ordinary2-entry summaries do not establish full linkage closure because the parser also skips unresolved=>notfound entries.",
+    "checked_at": "2026-10-13T00:40:23.719933+00:00",
+    "method": "Read exact-source cached deployment scan summaries for all57 merged recipes, retaining prior root sources for explicitly recorded current-source gaps. No rebuild. The sole >2 pathless-entry summary is FSL eddy_cuda, with4; source-specific GPU/driver limitation is recorded in its issue. All131 CPU functional cases passed. Ordinary2-entry summaries do not establish full linkage closure because the parser also skips unresolved=>notfound entries.",
     "parser_limitation": "workflows/test_deploy.sh parse_ldd_output treats unresolved=>notfound entries as skipped, not failures. Exact library closure cannot be inferred solely from aggregate deployment success.",
     "active_recipe_reviews": {
       "elastix": "Native3decd22f ITK global path fix reduced45 to2 pathless entries per raw ELF; all32 retained scientific/negative cases passed. Independent raw closure check failed before running because image has no Python. Corrected exact shell/ldd/version assertions are now dispatched at429bc011017cb462f049babba5b28f4bd1d6179a in38325625311; no direct closure success claimed yet."
