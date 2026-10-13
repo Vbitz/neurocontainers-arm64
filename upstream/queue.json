@@ -4370,18 +4370,18 @@
       "port_files": [
         "recipes/brats/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
+      "status": "blocked-upstream",
+      "branch": "arm64/upstream-brats-20261012",
+      "baseline_sha": "4167b93854b46d07ab7139d80d9d430db5b4c561",
       "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
+      "started_at": "2026-10-13T22:14:43.050109+00:00",
+      "deadline": "2026-10-14T10:14:43.050109+00:00",
       "attempts": 0,
       "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "BraTS0.1.13 wrapper/Apptainer is portable, but all16 registered CPU-compatible algorithm image tags publish only Linux AMD64. Native scientific inference needs an ARM64 build of at least one same registered algorithm (or a documented portable upstream build plus matching weights). Preserve historical21/21 wrapper proof; do not treat it as current scientific model proof or rerun help-only builds. Revisit when that concrete upstream image/build prerequisite changes.",
       "upstream_review": {
         "exists": true,
         "version": "0.1.13",
@@ -4397,7 +4397,7 @@
           "number": 3488,
           "url": "https://github.com/neurodesk/neurocontainers/pull/3488",
           "title": "brats: show CPU compatibility in brats-algorithms",
-          "status": "OPEN",
+          "status": "MERGED",
           "note": "Independent upstream change observed 2026-10-12. Reconcile before starting to avoid duplicate recipe work."
         }
       ],
@@ -4410,7 +4410,21 @@
           "merge_sha": "bab09bafcdf71fbada352986df5e2ed748d34342",
           "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
         }
-      ]
+      ],
+      "arm64_attempts": 0,
+      "x86_64_attempts": 0,
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "blocker": {
+        "recorded_at": "2026-10-13T22:39:23.110750+00:00",
+        "dependency": "BraTS0.1.13 registered algorithm OCI images",
+        "condition": "All16 CPU-compatible official image tags have onlylinux/amd64; remaining56 registry entries are not CPU-compatible and the runtime rejects them without a GPU. force_cpu controls GPU requests; it does not translate architecture.",
+        "evidence_path": "upstream/brats-cpu-platform-audit.json",
+        "evidence_sha256": "e98d5b2854d27e717d14cfb620289632d178cc3400d671cb5adbc2bc8fbb8dbd",
+        "outer_wrapper": "Historical native Apptainer1.4.4/BraTS0.1.8 wrapper21/21 proof retained. This is not a Python/Go ARM compile failure.",
+        "revisit_condition": "A native Linux ARM64 CPU image for one same registered algorithm, or its documented portable upstream source build and matching model assets, followed by a real MRI inference test."
+      },
+      "preflight_elapsed_seconds": 1480.060641
     },
     {
       "recipe": "brkraw",
@@ -5395,7 +5409,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T22:03:41.175321+00:00",
+        "checked_at": "2026-10-13T23:14:09.431156+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -5420,7 +5434,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T22:03:42.226550+00:00",
+        "metadata_checked_at": "2026-10-13T23:14:10.214383+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -6441,7 +6455,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T22:03:43.463995+00:00",
+        "checked_at": "2026-10-13T23:14:11.510332+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -6466,7 +6480,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T22:03:44.707747+00:00"
+        "metadata_checked_at": "2026-10-13T23:14:12.303608+00:00"
       }
     },
     {
@@ -10184,18 +10198,18 @@
       "port_files": [
         "recipes/flames/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
+      "status": "preparing",
+      "branch": "arm64/upstream-flames-20261012",
+      "baseline_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
       "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
+      "started_at": "2026-10-13T23:13:50.109994+00:00",
+      "deadline": "2026-10-14T11:13:50.109994+00:00",
       "attempts": 0,
       "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Preflight all five exact HD-BET model URLs, pinned FLAMeS weights and official real FLAIR data. Preserve current scientific model and all original tests; use official ARM Miniforge and CPU PyTorch only if assets and a full trained inference operation are available.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -10207,7 +10221,11 @@
         "test_count": 8,
         "patch_conflict": "error: patch failed: recipes/flames/build.yaml:10\nerror: recipes/flames/build.yaml: patch does not apply",
         "three_way_clean": true
-      }
+      },
+      "arm64_attempts": 0,
+      "x86_64_attempts": 0,
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86"
     },
     {
       "recipe": "fsl",
@@ -12286,18 +12304,18 @@
       "port_files": [
         "recipes/gliomoda/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-gliomoda-20261012",
+      "baseline_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
+      "candidate_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
+      "started_at": "2026-10-13T22:41:06.165534+00:00",
+      "deadline": "2026-10-14T10:41:06.165534+00:00",
+      "attempts": 1,
+      "run_id": 38482867040,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.4",
@@ -12307,7 +12325,300 @@
         "port_patch_applies": true,
         "fulltest_version": "0.0.4",
         "test_count": 16
-      }
+      },
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Enable GlioMODA0.0.4 ARM64 using official PyTorch2.6.0 CPU wheels with supplemental PyPI build dependencies, preserving the existing x86 CUDA path, nnU-Net2.5.2 and every bundled1.0.2 model. Independently track main/ARM Torch versions. Retain all16 existing tests and add actual CPU dependency closure plus default trained four-modality inference on all complete official240x240x155/1mm tutorial MRI images. Assert valid nonempty BraTS labels, original physical grid, unchanged inputs and all bundled model files. No model, image resizing, prediction parameters, source algorithm or GPU/clinical accuracy claim.",
+      "pr_title": "Enable GlioMODA ARM64 and test full trained CPU MRI inference",
+      "primary_source_review": [
+        "https://github.com/BrainLesion/GlioMODA",
+        "https://pypi.org/pypi/gliomoda/0.0.4/json",
+        "https://download.pytorch.org/whl/cpu/torch/",
+        "https://zenodo.org/api/records/15625233/files/weights.zip/content",
+        "https://github.com/BrainLesion/tutorials/tree/99c5841fe8985e4004d3d5394ca9590a914e24e7/BraTS/data/segmentation/BraTS-GLI-00001-000"
+      ],
+      "official_full_mri_fixture": {
+        "commit": "99c5841fe8985e4004d3d5394ca9590a914e24e7",
+        "case": "BraTS-GLI-00001-000",
+        "files": [
+          {
+            "modality": "t1c",
+            "url": "https://raw.githubusercontent.com/BrainLesion/tutorials/99c5841fe8985e4004d3d5394ca9590a914e24e7/BraTS/data/segmentation/BraTS-GLI-00001-000/BraTS-GLI-00001-000-t1c.nii.gz",
+            "sha256": "4399faadcc45c8a4541313cdf88aced7d835ed59ac3078d950e0eac293d603f5",
+            "bytes": 2901768,
+            "shape": [
+              240,
+              240,
+              155
+            ],
+            "zooms": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "sform_code": 1,
+            "srows": [
+              [
+                -1.0,
+                -0.0,
+                -0.0,
+                0.0
+              ],
+              [
+                -0.0,
+                -1.0,
+                -0.0,
+                239.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ]
+            ]
+          },
+          {
+            "modality": "t2f",
+            "url": "https://raw.githubusercontent.com/BrainLesion/tutorials/99c5841fe8985e4004d3d5394ca9590a914e24e7/BraTS/data/segmentation/BraTS-GLI-00001-000/BraTS-GLI-00001-000-t2f.nii.gz",
+            "sha256": "82aed8546af5e6d8d94fd91c56227abdcf6120130390d1556c4342a208980604",
+            "bytes": 2802807,
+            "shape": [
+              240,
+              240,
+              155
+            ],
+            "zooms": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "sform_code": 1,
+            "srows": [
+              [
+                -1.0,
+                -0.0,
+                -0.0,
+                0.0
+              ],
+              [
+                -0.0,
+                -1.0,
+                -0.0,
+                239.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ]
+            ]
+          },
+          {
+            "modality": "t1n",
+            "url": "https://raw.githubusercontent.com/BrainLesion/tutorials/99c5841fe8985e4004d3d5394ca9590a914e24e7/BraTS/data/segmentation/BraTS-GLI-00001-000/BraTS-GLI-00001-000-t1n.nii.gz",
+            "sha256": "e860924b936e301ddeba20409fbb59dde322475cb49328f1b46a9235c792e73e",
+            "bytes": 2614637,
+            "shape": [
+              240,
+              240,
+              155
+            ],
+            "zooms": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "sform_code": 1,
+            "srows": [
+              [
+                -1.0,
+                -0.0,
+                -0.0,
+                0.0
+              ],
+              [
+                -0.0,
+                -1.0,
+                -0.0,
+                239.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ]
+            ]
+          },
+          {
+            "modality": "t2w",
+            "url": "https://raw.githubusercontent.com/BrainLesion/tutorials/99c5841fe8985e4004d3d5394ca9590a914e24e7/BraTS/data/segmentation/BraTS-GLI-00001-000/BraTS-GLI-00001-000-t2w.nii.gz",
+            "sha256": "4cd389cc57d12134a30a898c66532228126b9a7d0600ee578e82a32144528b51",
+            "bytes": 2714287,
+            "shape": [
+              240,
+              240,
+              155
+            ],
+            "zooms": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "sform_code": 1,
+            "srows": [
+              [
+                -1.0,
+                -0.0,
+                -0.0,
+                0.0
+              ],
+              [
+                -0.0,
+                -1.0,
+                -0.0,
+                239.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+              ]
+            ]
+          }
+        ]
+      },
+      "official_model_archive_directory_audit": {
+        "archive_bytes": 3306003582,
+        "members": [
+          "t1c/",
+          "t1c/dataset_fingerprint.json",
+          "t1c/fold_all/",
+          "t1c/fold_all/progress.png",
+          "t1c/fold_all/debug.json",
+          "t1c/fold_all/checkpoint_final.pth",
+          "t1c/fold_all/validation/",
+          "t1c/fold_all/validation/summary.json",
+          "t1c/plans.json",
+          "t1c/dataset.json",
+          "t1c-t1n/",
+          "t1c-t1n/dataset_fingerprint.json",
+          "t1c-t1n/fold_all/",
+          "t1c-t1n/fold_all/progress.png",
+          "t1c-t1n/fold_all/debug.json",
+          "t1c-t1n/fold_all/checkpoint_final.pth",
+          "t1c-t1n/fold_all/validation/",
+          "t1c-t1n/fold_all/validation/summary.json",
+          "t1c-t1n/plans.json",
+          "t1c-t1n/dataset.json",
+          "t1c-t1n-t2w/",
+          "t1c-t1n-t2w/dataset_fingerprint.json",
+          "t1c-t1n-t2w/fold_all/",
+          "t1c-t1n-t2w/fold_all/progress.png",
+          "t1c-t1n-t2w/fold_all/debug.json",
+          "t1c-t1n-t2w/fold_all/checkpoint_final.pth",
+          "t1c-t1n-t2w/fold_all/validation/",
+          "t1c-t1n-t2w/fold_all/validation/summary.json",
+          "t1c-t1n-t2w/plans.json",
+          "t1c-t1n-t2w/dataset.json",
+          "t1c-t2f/",
+          "t1c-t2f/dataset_fingerprint.json",
+          "t1c-t2f/fold_all/",
+          "t1c-t2f/fold_all/progress.png",
+          "t1c-t2f/fold_all/debug.json",
+          "t1c-t2f/fold_all/checkpoint_final.pth",
+          "t1c-t2f/fold_all/validation/",
+          "t1c-t2f/fold_all/validation/summary.json",
+          "t1c-t2f/plans.json",
+          "t1c-t2f/dataset.json",
+          "t1c-t2f-t1n-t2w/",
+          "t1c-t2f-t1n-t2w/dataset_fingerprint.json",
+          "t1c-t2f-t1n-t2w/fold_all/",
+          "t1c-t2f-t1n-t2w/fold_all/progress.png",
+          "t1c-t2f-t1n-t2w/fold_all/debug.json",
+          "t1c-t2f-t1n-t2w/fold_all/checkpoint_final.pth",
+          "t1c-t2f-t1n-t2w/fold_all/validation/",
+          "t1c-t2f-t1n-t2w/fold_all/validation/summary.json",
+          "t1c-t2f-t1n-t2w/plans.json",
+          "t1c-t2f-t1n-t2w/dataset.json",
+          "t1c-t2f-t1n-t2w_ResEncL/",
+          "t1c-t2f-t1n-t2w_ResEncL/dataset_fingerprint.json",
+          "t1c-t2f-t1n-t2w_ResEncL/fold_all/",
+          "t1c-t2f-t1n-t2w_ResEncL/fold_all/progress.png",
+          "t1c-t2f-t1n-t2w_ResEncL/fold_all/debug.json",
+          "t1c-t2f-t1n-t2w_ResEncL/fold_all/checkpoint_final.pth",
+          "t1c-t2f-t1n-t2w_ResEncL/fold_all/validation/",
+          "t1c-t2f-t1n-t2w_ResEncL/fold_all/validation/summary.json",
+          "t1c-t2f-t1n-t2w_ResEncL/plans.json",
+          "t1c-t2f-t1n-t2w_ResEncL/dataset.json",
+          "t1c-t2w/",
+          "t1c-t2w/dataset_fingerprint.json",
+          "t1c-t2w/fold_all/",
+          "t1c-t2w/fold_all/progress.png",
+          "t1c-t2w/fold_all/debug.json",
+          "t1c-t2w/fold_all/checkpoint_final.pth",
+          "t1c-t2w/fold_all/validation/",
+          "t1c-t2w/fold_all/validation/summary.json",
+          "t1c-t2w/plans.json",
+          "t1c-t2w/dataset.json",
+          "t2f/",
+          "t2f/dataset_fingerprint.json",
+          "t2f/fold_all/",
+          "t2f/fold_all/progress.png",
+          "t2f/fold_all/debug.json",
+          "t2f/fold_all/checkpoint_final.pth",
+          "t2f/fold_all/validation/",
+          "t2f/fold_all/validation/summary.json",
+          "t2f/plans.json",
+          "t2f/dataset.json",
+          "t2f-t1n/",
+          "t2f-t1n/dataset_fingerprint.json",
+          "t2f-t1n/fold_all/",
+          "t2f-t1n/fold_all/progress.png",
+          "t2f-t1n/fold_all/debug.json",
+          "t2f-t1n/fold_all/checkpoint_final.pth",
+          "t2f-t1n/fold_all/validation/",
+          "t2f-t1n/fold_all/validation/summary.json",
+          "t2f-t1n/plans.json",
+          "t2f-t1n/dataset.json",
+          "t2f-t1n-t2w/",
+          "t2f-t1n-t2w/dataset_fingerprint.json",
+          "t2f-t1n-t2w/fold_all/",
+          "t2f-t1n-t2w/fold_all/progress.png",
+          "t2f-t1n-t2w/fold_all/debug.json",
+          "t2f-t1n-t2w/fold_all/checkpoint_final.pth",
+          "t2f-t1n-t2w/fold_all/validation/",
+          "t2f-t1n-t2w/fold_all/validation/summary.json",
+          "t2f-t1n-t2w/plans.json",
+          "t2f-t1n-t2w/dataset.json",
+          "t2f-t2w/",
+          "t2f-t2w/dataset_fingerprint.json",
+          "t2f-t2w/fold_all/",
+          "t2f-t2w/fold_all/progress.png",
+          "t2f-t2w/fold_all/debug.json",
+          "t2f-t2w/fold_all/checkpoint_final.pth",
+          "t2f-t2w/fold_all/validation/",
+          "t2f-t2w/fold_all/validation/summary.json",
+          "t2f-t2w/plans.json",
+          "t2f-t2w/dataset.json",
+          "t2w/",
+          "t2w/dataset_fingerprint.json",
+          "t2w/fold_all/",
+          "t2w/fold_all/progress.png",
+          "t2w/fold_all/debug.json",
+          "t2w/fold_all/checkpoint_final.pth",
+          "t2w/fold_all/validation/",
+          "t2w/fold_all/validation/summary.json",
+          "t2w/plans.json",
+          "t2w/dataset.json"
+        ]
+      },
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38482867040"
     },
     {
       "recipe": "glmsingle",
@@ -15730,7 +16041,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T22:03:47.827542+00:00",
+        "checked_at": "2026-10-13T23:14:14.543110+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -15755,7 +16066,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T22:03:48.592311+00:00"
+        "metadata_checked_at": "2026-10-13T23:14:15.394600+00:00"
       }
     },
     {
@@ -18223,7 +18534,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T22:03:50.067891+00:00",
+        "checked_at": "2026-10-13T23:14:16.643656+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -18238,7 +18549,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T22:03:50.837913+00:00",
+        "metadata_checked_at": "2026-10-13T23:14:17.530010+00:00",
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
         "resolution_evidence": {
           "automatic_run_id": 38448486794,
@@ -19304,7 +19615,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-13T22:03:52.510930+00:00",
+        "checked_at": "2026-10-13T23:14:19.313204+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -19329,7 +19640,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T22:03:53.587595+00:00",
+        "metadata_checked_at": "2026-10-13T23:14:20.103020+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -22376,7 +22687,7 @@
       "port_files": [
         "recipes/openadscpu/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-openadscpu-20261012",
       "baseline_sha": "32c3be7c1318dc05eff86d2549b3a52240119ce6",
       "candidate_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
@@ -22385,9 +22696,178 @@
       "attempts": 4,
       "run_id": 38463135718,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3602",
-      "upstream_ci": {},
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "upstream_ci": {
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "openadscpu",
+          "container": "openadscpu",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.0.0",
+          "build_date": "20261014",
+          "docker_archive": "openadscpu_1.0.0_20261014.docker.tar",
+          "sif": "openadscpu_1.0.0_20261014.simg",
+          "candidate_tag": "nd-candidate-openadscpu:10f4ed4f27db",
+          "launcher": null,
+          "pr_number": 3602,
+          "head_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+          "tests": {
+            "total": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 5,
+            "fulltest_passed": 5,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "OpenADS launcher",
+              "source revision",
+              "Actual CPU dependency and source configuration",
+              "Analytical ADC calculation and native ANTs operation",
+              "Complete public CPU DWI segmentation and reporting workflow"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "811 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.6778,
+            "wasted_bytes": 19859892,
+            "wasted_bytes_display": "20 MB",
+            "user_wasted_percent": 0.5676
+          }
+        },
+        "candidate_run_id": 38469222277,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38469222277",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+            "job_id": 115545336952,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38469222277/job/115545336952",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "aarch64": {
+            "head_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+            "job_id": 115545337243,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38469222277/job/115545337243",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "openadscpu",
+          "container": "openadscpu_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.0.0",
+          "build_date": "20261014",
+          "docker_archive": "openadscpu_arm64_1.0.0_20261014.docker.tar",
+          "sif": "openadscpu_arm64_1.0.0_20261014.simg",
+          "candidate_tag": "nd-candidate-openadscpu_arm64:10f4ed4f27db",
+          "launcher": null,
+          "pr_number": 3602,
+          "head_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+          "tests": {
+            "total": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 5,
+            "fulltest_passed": 5,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "OpenADS launcher",
+              "source revision",
+              "Actual CPU dependency and source configuration",
+              "Analytical ADC calculation and native ANTs operation",
+              "Complete public CPU DWI segmentation and reporting workflow"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.5 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 5,
+                "wasted_space": "1.1 MB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.616,
+            "wasted_bytes": 20456414,
+            "wasted_bytes_display": "20 MB",
+            "user_wasted_percent": 0.6418
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
+      },
+      "merged_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -22507,7 +22987,99 @@
         "limitations": "Complete official CPU DWI example verified; PWI/GPU/clinical accuracy not inferred."
       },
       "pending_upstream_issue": 3602,
-      "pr_number": 3602
+      "pr_number": 3602,
+      "upstream_image_log_gate_recovery": {
+        "x86_64": {
+          "source_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+          "run_id": 38469222277,
+          "job_id": 115545336952,
+          "raw_job_log_path": "/tmp/openads-upstream-x86-38469222277-job.log",
+          "raw_job_log_sha256": "3344654ef7eb0847e5c8f476227154075b7d95fdc796a91fbe68ca27ac9af042",
+          "functional_tests": 5,
+          "all_functional_commands_exit0": true,
+          "note": "Actual completed native job log and source-specific compact/full reports prove Docker/SIF/deploy/fulltest/Dive/manifest/final gates; job API steps absent. No fabricated API statuses, skipped gate or rebuild."
+        },
+        "aarch64": {
+          "source_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+          "run_id": 38469222277,
+          "job_id": 115545337243,
+          "raw_job_log_path": "/tmp/openads-upstream-arm-38469222277-job.log",
+          "raw_job_log_sha256": "5131eccdfb18bfa3612bb2728dd6c3e312c81ccfd0f26a176d10b94cbd574e14",
+          "functional_tests": 5,
+          "all_functional_commands_exit0": true,
+          "note": "Actual completed native job log and source-specific compact/full reports prove Docker/SIF/deploy/fulltest/Dive/manifest/final gates; job API steps absent. No fabricated API statuses, skipped gate or rebuild."
+        }
+      },
+      "upstream_actual_scientific_review": {
+        "x86_64": {
+          "source_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+          "actual_zero_exit_commands": 5,
+          "analytical_adc_and_native_ants_stdout": "Actual OpenADS315-voxel analytical ADC, serialized geometry and native ANTs identity verified",
+          "full_dwi_stdout": "Actual full DWI workflow still running after0s\nActual full DWI workflow still running after300s\nActual OpenADS full CPU DWI preprocessing/SynthStrip/ANTs registration/trained DAGMNet/reporting workflow verified in439.8s; native lesion voxels16057, all asset hashes unchanged",
+          "full_dwi_case_seconds": 443.75,
+          "full_dwi_native_lesion_voxels": 16057
+        },
+        "aarch64": {
+          "source_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+          "actual_zero_exit_commands": 5,
+          "analytical_adc_and_native_ants_stdout": "Actual OpenADS315-voxel analytical ADC, serialized geometry and native ANTs identity verified",
+          "full_dwi_stdout": "Actual full DWI workflow still running after0s\nActual full DWI workflow still running after300s\nActual full DWI workflow still running after600s\nActual full DWI workflow still running after900s\nActual full DWI workflow still running after1200s\nActual OpenADS full CPU DWI preprocessing/SynthStrip/ANTs registration/trained DAGMNet/reporting workflow verified in1292.5s; native lesion voxels16080, all asset hashes unchanged",
+          "full_dwi_case_seconds": 1298.4757833480835,
+          "full_dwi_native_lesion_voxels": 16080
+        }
+      },
+      "merged_at": "2026-10-13T22:34:59Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38478753314,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38478753314",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/openadscpu_arm64/1.0.0.json",
+            "expected_build_date": "20261014",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/openadscpu/1.0.0.json",
+            "expected_build_date": "20261014",
+            "exists": true,
+            "committed_build_dates": [
+              "20260518"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-13T23:14:23.165174+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-openadscpu-10f4ed4f27db9bff6b37802241fca4ab61bec3fa)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-openadscpu_arm64-10f4ed4f27db9bff6b37802241fca4ab61bec3fa)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-13T23:14:24.716982+00:00"
+      }
     },
     {
       "recipe": "openreconexample",
@@ -22909,7 +23481,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T22:03:54.954973+00:00",
+        "checked_at": "2026-10-13T23:14:26.114202+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -22924,7 +23496,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T22:03:55.758020+00:00",
+        "metadata_checked_at": "2026-10-13T23:14:26.896614+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -23368,7 +23940,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T22:03:56.893617+00:00",
+        "checked_at": "2026-10-13T23:14:28.001062+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -23393,7 +23965,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T22:03:57.696741+00:00"
+        "metadata_checked_at": "2026-10-13T23:14:28.770351+00:00"
       }
     },
     {
@@ -25162,7 +25734,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T22:03:58.689969+00:00",
+        "checked_at": "2026-10-13T23:14:29.876965+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -25187,7 +25759,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T22:03:59.360852+00:00"
+        "metadata_checked_at": "2026-10-13T23:14:30.772113+00:00"
       }
     },
     {
@@ -27156,7 +27728,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T22:04:00.462558+00:00",
+        "checked_at": "2026-10-13T23:14:32.392408+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -27181,7 +27753,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T22:04:01.249952+00:00"
+        "metadata_checked_at": "2026-10-13T23:14:33.393662+00:00"
       }
     },
     {
@@ -29378,11 +29950,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-syncro-20261012",
       "baseline_sha": "670f3eafd0f9393aba110741c05a062948d969d4",
-      "candidate_sha": "232cc213ca3c369a5eaf2f12507e65284b557dd7",
+      "candidate_sha": "08e0b4a389c90485a7d99c030f0fedb6e39517b7",
       "started_at": "2026-10-13T21:20:41.673684+00:00",
       "deadline": "2026-10-14T09:20:41.673684+00:00",
-      "attempts": 1,
-      "run_id": 38474548629,
+      "attempts": 2,
+      "run_id": 38476007098,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -29399,7 +29971,7 @@
         "patch_conflict": "error: patch failed: recipes/syncro/build.yaml:3\nerror: recipes/syncro/build.yaml: patch does not apply",
         "three_way_clean": true
       },
-      "arm64_attempts": 1,
+      "arm64_attempts": 2,
       "x86_64_attempts": 0,
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
@@ -29418,7 +29990,27 @@
           "note": "Validated initial reconstruction, then bound NumPy/TensorFlow test assertions to the existing update targets before the first native dispatch.0 builds used."
         }
       ],
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38474548629"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38476007098",
+      "candidate_history": [
+        {
+          "source_sha": "232cc213ca3c369a5eaf2f12507e65284b557dd7",
+          "run_id": 38474548629,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38474548629",
+          "first_error": "ERROR: No matching distribution found for flit_core<4,>=3.11 while building typing_extensions from exclusive CPU index",
+          "tests": "not run",
+          "retry_hypothesis": "Exclusive PyTorch CPU index selected typing_extensions4.16.0 source after metadata-name rejection, then could not find its flit_core<4,>=3.11 build backend. Add the official PyPI supplemental index for ordinary dependencies/build backends. The exact pinned Torch2.1.2 ARM wheel is published on both indexes with the same SHA256; no source/model/checkpoint/scientific/test change. First attempt failed before native application compilation or runtime testing."
+        }
+      ],
+      "retry_hypothesis": "Exclusive PyTorch CPU index selected typing_extensions4.16.0 source after metadata-name rejection, then could not find its flit_core<4,>=3.11 build backend. Add the official PyPI supplemental index for ordinary dependencies/build backends. The exact pinned Torch2.1.2 ARM wheel is published on both indexes with the same SHA256; no source/model/checkpoint/scientific/test change. First attempt failed before native application compilation or runtime testing.",
+      "torch_index_equivalence": {
+        "version": "2.1.2",
+        "python": "cp310",
+        "architecture": "aarch64",
+        "pypi_filename": "torch-2.1.2-cp310-cp310-manylinux2014_aarch64.whl",
+        "cpu_index_filename": "torch-2.1.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl",
+        "both_published_sha256": "bef6996c27d8f6e92ea4e13a772d89611da0e103b48790de78131e308cf73076",
+        "verified_same_bytes_by_official_metadata": true
+      }
     },
     {
       "recipe": "synthseg",
@@ -30069,7 +30661,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T22:04:02.256402+00:00",
+        "checked_at": "2026-10-13T23:14:34.525931+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -30094,7 +30686,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T22:04:02.999651+00:00"
+        "metadata_checked_at": "2026-10-13T23:14:35.390528+00:00"
       }
     },
     {
@@ -32901,7 +33493,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T22:04:04.184052+00:00",
+        "checked_at": "2026-10-13T23:14:36.609305+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -32926,7 +33518,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T22:04:05.044129+00:00"
+        "metadata_checked_at": "2026-10-13T23:14:37.445941+00:00"
       }
     },
     {
@@ -33972,7 +34564,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T22:04:06.088160+00:00",
+        "checked_at": "2026-10-13T23:14:38.997186+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -33997,7 +34589,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T22:04:06.870246+00:00"
+        "metadata_checked_at": "2026-10-13T23:14:39.753828+00:00"
       }
     }
   ],
@@ -34022,9 +34614,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-13T22:00:12.106270+00:00",
-    "previous_sha": "670f3eafd0f9393aba110741c05a062948d969d4",
-    "new_sha": "4167b93854b46d07ab7139d80d9d430db5b4c561",
+    "checked_at": "2026-10-13T22:42:09.274423+00:00",
+    "previous_sha": "4167b93854b46d07ab7139d80d9d430db5b4c561",
+    "new_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },

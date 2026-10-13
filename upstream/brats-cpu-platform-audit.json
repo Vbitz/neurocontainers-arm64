@@ -1,0 +1,185 @@
+{
+  "checked_at": "2026-10-13T22:21:18.445405+00:00",
+  "brats_version": "0.1.13",
+  "wheel_sha256": "04e7d1fd250e947293913bb239b628c39865cbee4d4bf4d923d4270bf0d526b9",
+  "registered_algorithms": 72,
+  "cpu_compatible_algorithms": 16,
+  "images": [
+    {
+      "task_file": "adult_glioma_pre_and_post_treatment.yml",
+      "algorithm": "BraTS25_2",
+      "image": "brainles/brats25_gli_ecnu:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_gli_ecnu/tags/latest",
+      "tag_digest": "sha256:c2a27297deab0638296e8b90569d19f7dfda1519ed116093cb2602fa8f1f1596",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "adult_glioma_pre_and_post_treatment.yml",
+      "algorithm": "BraTS25_3A",
+      "image": "brainles/brats25_gli_jinlw:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_gli_jinlw/tags/latest",
+      "tag_digest": "sha256:a3d7b6daf006282c7a030fe8fa1f00ef8f95204c48b48e19620c242ae059aab3",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "adult_glioma_pre_and_post_treatment.yml",
+      "algorithm": "BraTS24_3",
+      "image": "brainles/brats24_adult_glioma_mist:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats24_adult_glioma_mist/tags/latest",
+      "tag_digest": "sha256:18337d946229c982cf83592190dad18c74a27ef496b161e6699b8e5011bd2c06",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "africa.yml",
+      "algorithm": "BraTS25_1",
+      "image": "brainles/brats25_ssa_spark_neuro:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_ssa_spark_neuro/tags/latest",
+      "tag_digest": "sha256:e6e56ec41a7c194b86d9fd42cb6175617452f2a62b0d7de828f6ea3e8fa6fd62",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "africa.yml",
+      "algorithm": "BraTS24_2",
+      "image": "brainles/brats24_africa_cuhk_rpai",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats24_africa_cuhk_rpai/tags/latest",
+      "tag_digest": "sha256:a2ff1457e0b7cb20379c183eb165fbf32979e8bb35f775d1999b80e87bb0568a",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "africa.yml",
+      "algorithm": "BraTS23_3",
+      "image": "brainles/brats23_africa_blackbean:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats23_africa_blackbean/tags/latest",
+      "tag_digest": "sha256:f9ea8d53b796659744673ff70bfe2348e7a288cefd9aa473614bdff1b0b4d825",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "inpainting.yml",
+      "algorithm": "BraTS24_1",
+      "image": "brainles/brats24_inpainting_ying_weng:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats24_inpainting_ying_weng/tags/latest",
+      "tag_digest": "sha256:c59daaf334ffccce63d76f65e8f95cedd794dbedd71a3eeefd21b437475fd253",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "inpainting.yml",
+      "algorithm": "BraTS23_1",
+      "image": "brainles/brats23_inpainting_ying_weng:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats23_inpainting_ying_weng/tags/latest",
+      "tag_digest": "sha256:62dc2217e4423af613cac4ae9a8f68fadbd41785b7d60caca1a1089c66a808fd",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "inpainting.yml",
+      "algorithm": "BraTS23_3",
+      "image": "brainles/brats23_inpainting_medsegctrl",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats23_inpainting_medsegctrl/tags/latest",
+      "tag_digest": "sha256:afda20729b045b2dcfea149aefcffec2c89470138bdb7b60b85c03d403905a5f",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "meningioma.yml",
+      "algorithm": "BraTS23_2",
+      "image": "brainles/brats23_meningioma_blackbean:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats23_meningioma_blackbean/tags/latest",
+      "tag_digest": "sha256:90f24c7e71771fa0058a2c59c16c625981c185699a5ab86f5ff3314a18d9783b",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "meningioma_rt.yml",
+      "algorithm": "BraTS25_2",
+      "image": "brainles/brats25_menrt_medimg_sk:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_menrt_medimg_sk/tags/latest",
+      "tag_digest": "sha256:e6abf1c010333ee87ff708ab0554b181c8f31b4e826a5b0ccc39ba12c2485a5e",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "meningioma_rt.yml",
+      "algorithm": "BraTS25_3",
+      "image": "brainles/brats25_menrt_neurotech:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_menrt_neurotech/tags/latest",
+      "tag_digest": "sha256:487f35e5af35512526978be4594e078a04c7a4da6de525d4b1145898dba066cc",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "meningioma_rt.yml",
+      "algorithm": "BraTS24_3",
+      "image": "brainles/brats24_meningioma_faking_it",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats24_meningioma_faking_it/tags/latest",
+      "tag_digest": "sha256:8c119a62d9b726990022bae78a5216aabfb75161305c400e1448b167dfc86e5b",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "metastases.yml",
+      "algorithm": "BraTS25_2",
+      "image": "brainles/brats25_met_weskrikorian:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_met_weskrikorian/tags/latest",
+      "tag_digest": "sha256:7dcdf6f681c7148525df712a016d3a9035294cfbdbdc704bb905277f1fc54541",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "metastases.yml",
+      "algorithm": "BraTS23_3",
+      "image": "brainles/brats23_met_blackbean:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats23_met_blackbean/tags/latest",
+      "tag_digest": "sha256:c33ad6fcec8bbfa11dc70401a6989fbc746cec47f8d265a99090dd3725501abb",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    },
+    {
+      "task_file": "missing_mri.yml",
+      "algorithm": "BraTS25_3",
+      "image": "brainles/brats25_missing_mri_usd-2025-chato-sereda:latest",
+      "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_missing_mri_usd-2025-chato-sereda/tags/latest",
+      "tag_digest": "sha256:90013fb524b17e137d6bf1ceda88a865081cc1151d91e69d66a2c4ace51aa77a",
+      "platforms": [
+        "linux/amd64"
+      ],
+      "status": "metadata-read"
+    }
+  ]
+}
