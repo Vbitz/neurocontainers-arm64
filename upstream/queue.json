@@ -5395,7 +5395,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T17:19:44.186584+00:00",
+        "checked_at": "2026-10-13T18:03:07.948467+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -5420,7 +5420,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T17:19:45.008014+00:00",
+        "metadata_checked_at": "2026-10-13T18:03:08.752559+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -5959,18 +5959,120 @@
         "recipes/code/build.yaml",
         "recipes/code/fulltest.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-code-20261012",
       "baseline_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
       "candidate_sha": "c2c0cd3369a1fcd717243deffd9d11f75e112000",
       "started_at": "2026-10-13T14:10:00+00:00",
       "deadline": "2026-10-14T02:10:00+00:00",
-      "attempts": 5,
+      "attempts": 7,
       "run_id": 38437637621,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3589",
+      "upstream_ci": {
+        "initial_run_id": 38440648976,
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38440648976",
+        "candidate_run_id": 38440648976,
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "code",
+          "container": "code",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "240320",
+          "build_date": "20261014",
+          "docker_archive": "code_240320_20261014.docker.tar",
+          "sif": "code_240320_20261014.simg",
+          "candidate_tag": "nd-candidate-code:c2c0cd3369a1",
+          "launcher": "code",
+          "pr_number": 3589,
+          "head_sha": "c2c0cd3369a1fcd717243deffd9d11f75e112000",
+          "tests": {
+            "total": 88,
+            "passed": 88,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 87,
+            "fulltest_passed": 87,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Singularity version",
+              "VSCode version check",
+              "VSCode help",
+              "VSCode list extensions",
+              "VSCode Python extension",
+              "VSCode Julia extension",
+              "VSCode Jupyter extension",
+              "Python version",
+              "Python3 symlink",
+              "Python help",
+              "Python execution",
+              "Python sys.path",
+              "Pip version",
+              "Pip list packages",
+              "Conda version",
+              "Conda list environments",
+              "NumPy import and version",
+              "NumPy array operations",
+              "SciPy import and version"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "7.6 MB",
+                "path": "/usr/bin/perl"
+              },
+              {
+                "count": 4,
+                "wasted_space": "3.3 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 4,
+                "wasted_space": "3.3 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.3 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/perl-base/auto/re/re.so"
+              },
+              {
+                "count": 4,
+                "wasted_space": "1.0 MB",
+                "path": "/var/lib/dpkg/status"
+              }
+            ],
+            "efficiency_percent": 99.8099,
+            "wasted_bytes": 30144627,
+            "wasted_bytes_display": "30 MB",
+            "user_wasted_percent": 0.3268
+          }
+        },
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38440648976",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "c2c0cd3369a1fcd717243deffd9d11f75e112000",
+            "job_id": 115446169681,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38440648976/job/115446169681",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        }
+      },
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "240320",
@@ -6015,7 +6117,7 @@
       ],
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
-      "change_summary": "Select the official current ARM64 VSCode1.141.0, Julia1.13.1 and Go1.27.2 archives, each independently confirmedHTTP200, preserving the exact x86 assets/current releases and existing Miniconda/Python environment. Keep ordinary unchanged native SingularityCE4.6.0 source configuration, declaring its official source archive/get_file and checksum update policy. Preserve all84 original cases and scientific outputs; remove head pipelines/nested login shells and use plain Julia commands/heredocs with a private writable depot. Extension checks use the deployed argument-forwarding wrapper and private user data. Add actual native Jupyter-kernel analytical fit/HDF5 output proof, actual VSCode document rendering under Xvfb, and actual nested Singularity SIF build/exec with exact marker/architecture assertions using the already verified Apptainer fixture. No emulation, substituted image, dependency/compiler port or change to scientific algorithms. Separate PID/IPC namespaces and arbitrary third-party editor extensions are not claimed.",
+      "change_summary": "The Code recipe selects x86-only VSCode, Julia and Go assets. Select the official ARM assets conditionally and build the same released SingularityCE4.6.0 from its checksummed source. Preserve the existing x86 asset paths and scientific Python/Julia stack.\n\nRetain all84 existing cases and add actual editor rendering, a real Jupyter-kernel analytical/HDF5 operation, and offline nested native SIF construction/execution. Private short GUI paths avoid Linux's Unix-socket pathname limit. On the two supported ephemeral CI repositories only, normalize a symlinked host resolver to a regular file while preserving every DNS byte, owner and mode; this avoids the released runtime's resolver-link panic during its standard extraction fallback. DNS stays enabled and the runtime source is unchanged. The native run encountered denied FUSE and successfully used that official fallback; FUSE availability and separate PID/IPC isolation are not claimed.",
       "pr_title": "Enable Code ARM64 and verify the editor, Jupyter kernel and nested runtime",
       "primary_source_review": [
         "https://code.visualstudio.com/docs/setup/linux",
@@ -6026,8 +6128,8 @@
         "https://github.com/sylabs/singularity/releases/tag/v4.6.0",
         "https://docs.sylabs.io/guides/4.6/admin-guide/installation.html"
       ],
-      "arm64_attempts": 5,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 6,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38437637621",
       "candidate_history": [
         {
@@ -6114,7 +6216,6 @@
       ],
       "retry_hypothesis": "Launchpad returned HTTP504 during host Apptainer setup before image build. One unchanged retry of exact source680e40b7 is permitted; it leaves exactly two upstream architecture builds within six total. No scientific/runtime result is inferred from the setup failure.",
       "transient_unchanged_retry_used": true,
-      "untested_correction_sha": "c2c0cd3369a1fcd717243deffd9d11f75e112000",
       "prior_budget_blocker": {
         "recorded_at": "2026-10-13T16:34:52.950071+00:00",
         "classification": "insufficient-remaining-builds-for-full-verification",
@@ -6128,7 +6229,44 @@
         "answer": "Allow 7 total for Code",
         "authorized_at": "2026-10-13T17:03:39.970889+00:00",
         "scope": "Code only; original four attempts and original deadline retained; no skipped/weakened tests"
-      }
+      },
+      "native_command_exit_review": {
+        "source_sha": "c2c0cd3369a1fcd717243deffd9d11f75e112000",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "c2c0cd3369a1fcd717243deffd9d11f75e112000",
+        "version": "240320",
+        "counts": {
+          "total_tests": 88,
+          "passed": 88,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 75.71467661857605,
+          "run_timestamp": "2026-10-13T17:37:14.563084",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 87,
+          "total_suites": 1,
+          "total_tests": 87
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38437637621",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3589,
+      "pr_number": 3589
     },
     {
       "recipe": "condaenvs",
@@ -14769,18 +14907,18 @@
       "port_files": [
         "recipes/lesionquantificationtoolkit/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-lesionquantificationtoolkit-20261012",
+      "baseline_sha": "2c65fa97b415a35a2855c45bbbe27df6bd394931",
+      "candidate_sha": "5f0a2b535832353618e56b8de54146fb2e527a34",
+      "started_at": "2026-10-13T18:01:38.020128+00:00",
+      "deadline": "2026-10-14T06:01:38.020128+00:00",
+      "attempts": 1,
+      "run_id": 38443568205,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.1.0",
@@ -14790,7 +14928,19 @@
         "port_patch_applies": true,
         "fulltest_version": "0.1.0",
         "test_count": 100
-      }
+      },
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Declare ARM64 for the existing Ubuntu24.04 R source installation without changing x86 inputs or scientific implementation. Retain all100 existing fulltests and add actual public LQT parcel-damage and structural shortest-path calculations using documented cfg input structures. Check all192 NIfTI voxels and geometry for independently known100/50/25/0 percent damage; check exact four-node atlas/patient distances, direct/indirect lesion disconnection matrices, output edge/node files and parcel averages, plus unchanged input hashes. These fixtures supply analytical lesion/parcellation/connectivity data, not stub tools or model outputs. Full DSI Studio tractography and default template-download/configuration workflow remain external prerequisites and are not claimed as verified: the upstream download helper installs a macOS DSI application on Unix and writes into the installed package. No placeholder DSI binary or skipped existing test.",
+      "pr_title": "Enable LQT ARM64 and verify exact lesion damage and structural paths",
+      "primary_source_review": [
+        "https://github.com/jdwor/LQT/tree/ab5801bd5ef2d5a9c3c6d75c332d0ef2fa6968b8",
+        "https://raw.githubusercontent.com/jdwor/LQT/ab5801bd5ef2d5a9c3c6d75c332d0ef2fa6968b8/R/get_parcel_damage.R",
+        "https://raw.githubusercontent.com/jdwor/LQT/ab5801bd5ef2d5a9c3c6d75c332d0ef2fa6968b8/R/get_patient_sspl.R"
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38443568205"
     },
     {
       "recipe": "libreoffice",
@@ -18034,7 +18184,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-13T17:19:46.447364+00:00",
+        "checked_at": "2026-10-13T18:03:10.350163+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -18059,7 +18209,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T17:19:47.245042+00:00",
+        "metadata_checked_at": "2026-10-13T18:03:11.827305+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -21529,7 +21679,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T17:19:48.514533+00:00",
+        "checked_at": "2026-10-13T18:03:13.293829+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -21544,7 +21694,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T17:19:49.313847+00:00",
+        "metadata_checked_at": "2026-10-13T18:03:14.186278+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -21683,7 +21833,7 @@
         "recipes/pals/build.yaml",
         "recipes/pals/fulltest.yaml"
       ],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-pals-20261012",
       "baseline_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
       "candidate_sha": "b2c74585de5d550a5dbd1c80cbfb91e943034d02",
@@ -21694,7 +21844,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "2.0.1",
@@ -21734,6 +21884,41 @@
           "disjoint_overlap": 0
         },
         "scope": "Local macOS fixture/source API validation only; not native Linux ARM proof or proof of ANTs/FSL full preprocessing."
+      },
+      "native_command_exit_review": {
+        "source_sha": "b2c74585de5d550a5dbd1c80cbfb91e943034d02",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "b2c74585de5d550a5dbd1c80cbfb91e943034d02",
+        "version": "2.0.1",
+        "counts": {
+          "total_tests": 7,
+          "passed": 7,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 89.69472169876099,
+          "run_timestamp": "2026-10-13T17:42:16.809325",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 6,
+          "total_suites": 1,
+          "total_tests": 6
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38433253849",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
       }
     },
     {
@@ -25191,7 +25376,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T17:19:50.557950+00:00",
+        "checked_at": "2026-10-13T18:03:15.504552+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -25216,7 +25401,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T17:19:51.316593+00:00"
+        "metadata_checked_at": "2026-10-13T18:03:16.298691+00:00"
       }
     },
     {
@@ -26742,7 +26927,7 @@
       "port_files": [
         "recipes/soopct/build.yaml"
       ],
-      "status": "native-running",
+      "status": "blocked-infrastructure",
       "branch": "arm64/upstream-soopct-20261012",
       "baseline_sha": "c265491023ae2d34beb9438c2b6e1ee2e5f3d5e5",
       "candidate_sha": "74ea1654007933c3cf0d03aaf7a7cb3760f494cd",
@@ -26753,7 +26938,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Preserve experiment; no upstream PR or success claim. Continue next eligible recipe. Revisit only with concrete upstream CPU fix or changed resources and sufficient explicit build budget; do not substitute a smaller CT, stub model, weaken tests or blindly extend timeout.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.0",
@@ -26850,7 +27035,20 @@
           "retry_hypothesis": "Third native source0d22e1b8 built/converted/deployed and passed every original functional case, dependency closure, native ANTs identity oracle and every group-mean voxel (aggregate10/11). The new full-resolution trained mindgrab CPU operation reached the correct DEV=CPU path and exceeded the initial30-minute subprocess allowance; its surviving model child kept the captured pipe open until the outer35-minute timeout. No model inference completion or downstream image/BIDS success is claimed.\n\nGive this newly introduced full CT CPU operation a90-minute allowance inside a100-minute case limit (root job360min; upstream job720min). Every original case/timeout, full clinical CT input, exact official trained weights and all scientific/image/BIDS assertions remain. This is runtime resource allocation for a new expensive CPU operation, not numerical tolerance relaxation, smaller data, deleted tests, a dependency swap or an unchanged transient retry. Record elapsed/CPU/RSS/state for the owned workflow/model process tree every5min and use unbuffered output. On failure/timeout terminate the whole owned process group, preventing the observed surviving child. No scientific/tool source change.\n\nOriginal start11:35UTC/deadline23:35UTC and3 attempts persist. This is the last native attempt that leaves two upstream architecture builds within6 total; if it fails, retain the exact first actionable error/resource evidence and stop this investigation. If it passes, require its own PR and both full suites. Nothing is called verified before those gates."
         }
       ],
-      "retry_hypothesis": "Third native source0d22e1b8 built/converted/deployed and passed every original functional case, dependency closure, native ANTs identity oracle and every group-mean voxel (aggregate10/11). The new full-resolution trained mindgrab CPU operation reached the correct DEV=CPU path and exceeded the initial30-minute subprocess allowance; its surviving model child kept the captured pipe open until the outer35-minute timeout. No model inference completion or downstream image/BIDS success is claimed.\n\nGive this newly introduced full CT CPU operation a90-minute allowance inside a100-minute case limit (root job360min; upstream job720min). Every original case/timeout, full clinical CT input, exact official trained weights and all scientific/image/BIDS assertions remain. This is runtime resource allocation for a new expensive CPU operation, not numerical tolerance relaxation, smaller data, deleted tests, a dependency swap or an unchanged transient retry. Record elapsed/CPU/RSS/state for the owned workflow/model process tree every5min and use unbuffered output. On failure/timeout terminate the whole owned process group, preventing the observed surviving child. No scientific/tool source change.\n\nOriginal start11:35UTC/deadline23:35UTC and3 attempts persist. This is the last native attempt that leaves two upstream architecture builds within6 total; if it fails, retain the exact first actionable error/resource evidence and stop this investigation. If it passes, require its own PR and both full suites. Nothing is called verified before those gates."
+      "retry_hypothesis": "Third native source0d22e1b8 built/converted/deployed and passed every original functional case, dependency closure, native ANTs identity oracle and every group-mean voxel (aggregate10/11). The new full-resolution trained mindgrab CPU operation reached the correct DEV=CPU path and exceeded the initial30-minute subprocess allowance; its surviving model child kept the captured pipe open until the outer35-minute timeout. No model inference completion or downstream image/BIDS success is claimed.\n\nGive this newly introduced full CT CPU operation a90-minute allowance inside a100-minute case limit (root job360min; upstream job720min). Every original case/timeout, full clinical CT input, exact official trained weights and all scientific/image/BIDS assertions remain. This is runtime resource allocation for a new expensive CPU operation, not numerical tolerance relaxation, smaller data, deleted tests, a dependency swap or an unchanged transient retry. Record elapsed/CPU/RSS/state for the owned workflow/model process tree every5min and use unbuffered output. On failure/timeout terminate the whole owned process group, preventing the observed surviving child. No scientific/tool source change.\n\nOriginal start11:35UTC/deadline23:35UTC and3 attempts persist. This is the last native attempt that leaves two upstream architecture builds within6 total; if it fails, retain the exact first actionable error/resource evidence and stop this investigation. If it passes, require its own PR and both full suites. Nothing is called verified before those gates.",
+      "blocker": {
+        "recorded_at": "2026-10-13T17:59:15.909326+00:00",
+        "stage": "real full-resolution mindgrab CPU inference",
+        "first_error": "AssertionError: Actual full-resolution CT model exceeded its90-minute CPU allowance",
+        "counts": {
+          "passed": 10,
+          "failed": 1,
+          "skipped": 0,
+          "total_tests": 11
+        },
+        "observed_resources": "One child continuously runnable at approximately100% of one CPU, CPU time295s at300s through5395.27s at5400s; RSS approximately2.13GiB and steady. No observed OOM or crash. Internal compiler/model stage was not logged and is not inferred.",
+        "revisit_condition": "A documented released CPU configuration/fix or changed runner resources with an explicit sufficient renewed verification budget. Full original clinical CT/model and scientific assertions must remain. Two remaining builds are reserved for required upstream architectures; a further native test plus both upstream builds exceeds the current6-build budget."
+      }
     },
     {
       "recipe": "sovabids",
@@ -27484,18 +27682,22 @@
       "port_files": [
         "recipes/synthstrip/build.yaml"
       ],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-synthstrip-20261012",
       "baseline_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
       "candidate_sha": "b39a7cf0fd97b9dd6d035b376fabfff59c5d4aad",
       "started_at": "2026-10-13T12:50:00+00:00",
       "deadline": "2026-10-14T00:50:00+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38411073044,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3590",
+      "upstream_ci": {
+        "initial_run_id": 38442053909,
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38442053909",
+        "candidate_run_id": 38442053909
+      },
       "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "7.4.1",
@@ -27526,8 +27728,8 @@
         "https://pypi.org/pypi/torch/2.2.2/json",
         "https://github.com/nipy/nibabel/blob/5.4.2/nibabel/cmdline/diff.py"
       ],
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38411073044",
       "native_command_exit_review": {
         "source_sha": "b39a7cf0fd97b9dd6d035b376fabfff59c5d4aad",
@@ -27612,7 +27814,9 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
-      }
+      },
+      "pending_upstream_issue": 3590,
+      "pr_number": 3590
     },
     {
       "recipe": "synthstroke",
@@ -30232,7 +30436,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T17:19:52.430962+00:00",
+        "checked_at": "2026-10-13T18:03:17.428854+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -30257,7 +30461,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T17:19:53.228255+00:00"
+        "metadata_checked_at": "2026-10-13T18:03:18.222911+00:00"
       }
     },
     {
@@ -31303,7 +31507,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T17:19:56.791011+00:00",
+        "checked_at": "2026-10-13T18:03:19.385598+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -31328,7 +31532,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T17:19:57.564957+00:00"
+        "metadata_checked_at": "2026-10-13T18:03:20.221263+00:00"
       }
     }
   ],

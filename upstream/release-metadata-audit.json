@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-13T17:19:57.565922+00:00",
+  "checked_at": "2026-10-13T18:03:20.222369+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -561,7 +561,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T17:19:44.186584+00:00",
+      "checked_at": "2026-10-13T18:03:07.948467+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -586,7 +586,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T17:19:45.008014+00:00",
+      "metadata_checked_at": "2026-10-13T18:03:08.752559+00:00",
       "publication_blocker": {
         "classification": "blocked-prerequisite-publication",
         "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -2060,7 +2060,7 @@
           "current_candidate_date_committed": true
         }
       ],
-      "checked_at": "2026-10-13T17:19:46.447364+00:00",
+      "checked_at": "2026-10-13T18:03:10.350163+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -2085,7 +2085,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T17:19:47.245042+00:00",
+      "metadata_checked_at": "2026-10-13T18:03:11.827305+00:00",
       "failure_review": {
         "classification": "blocked-infrastructure",
         "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -2393,7 +2393,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T17:19:48.514533+00:00",
+      "checked_at": "2026-10-13T18:03:13.293829+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -2408,7 +2408,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T17:19:49.313847+00:00",
+      "metadata_checked_at": "2026-10-13T18:03:14.186278+00:00",
       "failure_detail": {
         "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
         "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -2915,7 +2915,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T17:19:50.557950+00:00",
+      "checked_at": "2026-10-13T18:03:15.504552+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -2940,7 +2940,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T17:19:51.316593+00:00"
+      "metadata_checked_at": "2026-10-13T18:03:16.298691+00:00"
     },
     {
       "recipe": "root",
@@ -3511,7 +3511,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T17:19:52.430962+00:00",
+      "checked_at": "2026-10-13T18:03:17.428854+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -3536,7 +3536,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T17:19:53.228255+00:00"
+      "metadata_checked_at": "2026-10-13T18:03:18.222911+00:00"
     },
     {
       "recipe": "workshopdemo",
@@ -3631,7 +3631,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T17:19:56.791011+00:00",
+      "checked_at": "2026-10-13T18:03:19.385598+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -3656,7 +3656,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T17:19:57.564957+00:00"
+      "metadata_checked_at": "2026-10-13T18:03:20.221263+00:00"
     }
   ],
   "findings": [
