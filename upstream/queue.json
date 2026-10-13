@@ -4009,7 +4009,7 @@
       "port_files": [
         "recipes/brainles-preprocessing/build.yaml"
       ],
-      "status": "native-running",
+      "status": "blocked-infrastructure",
       "branch": "arm64/upstream-brainles-preprocessing-20261012",
       "baseline_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
       "candidate_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
@@ -4020,7 +4020,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Recheck official Zenodo asset availability at the daily queue review; only then consider one unchanged exact-source retry within original deadline/build budget. Continue other eligible recipes. Native compilation/runtime and upstream PR remain unproven.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.13",
@@ -4047,7 +4047,14 @@
       ],
       "arm64_attempts": 1,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38429185977"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38429185977",
+      "blocker": {
+        "recorded_at": "2026-10-13T16:23:06.608668+00:00",
+        "stage": "declared checkpoint staging before Docker",
+        "first_error": "builder.cache.DownloadError: hdbet_0_model https://zenodo.org/api/records/2540695/files/0.model/content HTTP504 after3 internal attempts",
+        "local_cross_check": "The same record API and both atlas/SynthStrip record APIs timed out. The official record2540695 HTML loaded, but its published 0.model download also timed out; record15236131/16535633 pages timed out. No accessible equivalent official checkpoint route found.",
+        "revisit_condition": "Official required Zenodo model and atlas downloads become accessible; retain original clock/attempts, use at most one unchanged infrastructure retry. No scientific capability or ARM build failure inferred."
+      }
     },
     {
       "recipe": "brainlifecli",
@@ -5388,7 +5395,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T16:16:56.133391+00:00",
+        "checked_at": "2026-10-13T16:54:30.088731+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -5413,7 +5420,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T16:16:56.938441+00:00",
+        "metadata_checked_at": "2026-10-13T16:54:30.840703+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -5952,10 +5959,10 @@
         "recipes/code/build.yaml",
         "recipes/code/fulltest.yaml"
       ],
-      "status": "native-running",
+      "status": "blocked-verification-budget",
       "branch": "arm64/upstream-code-20261012",
       "baseline_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
-      "candidate_sha": "680e40b743c6a3ec4f4f6e28c2058cecf48b0aa0",
+      "candidate_sha": "c2c0cd3369a1fcd717243deffd9d11f75e112000",
       "started_at": "2026-10-13T14:10:00+00:00",
       "deadline": "2026-10-14T02:10:00+00:00",
       "attempts": 4,
@@ -5963,7 +5970,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Needs explicitly renewed build budget to verify corrected exact source natively and in its own upstream ARM/x86 PR. Preserve correction and prior reports; continue other eligible recipes.",
       "upstream_review": {
         "exists": true,
         "version": "240320",
@@ -6093,10 +6100,28 @@
           "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38425524040",
           "outcome": "blocked-infrastructure",
           "first_error": "Install Apptainer: Launchpad HTTP 504 Gateway Timeout; no image build or runtime tests started."
+        },
+        {
+          "source_sha": "680e40b743c6a3ec4f4f6e28c2058cecf48b0aa0",
+          "run_id": 38428496033,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38428496033",
+          "outcome": "host-fixture-error",
+          "native_build_architecture_sif_deploy": "passed",
+          "functional_tests_run": 0,
+          "first_error": "Setup(host) /bin/sh: set: Illegal option -o pipefail",
+          "corrected_source_sha": "c2c0cd3369a1fcd717243deffd9d11f75e112000"
         }
       ],
       "retry_hypothesis": "Launchpad returned HTTP504 during host Apptainer setup before image build. One unchanged retry of exact source680e40b7 is permitted; it leaves exactly two upstream architecture builds within six total. No scientific/runtime result is inferred from the setup failure.",
-      "transient_unchanged_retry_used": true
+      "transient_unchanged_retry_used": true,
+      "untested_correction_sha": "c2c0cd3369a1fcd717243deffd9d11f75e112000",
+      "blocker": {
+        "recorded_at": "2026-10-13T16:34:52.950071+00:00",
+        "classification": "insufficient-remaining-builds-for-full-verification",
+        "note": "Four native attempts used (including one Launchpad504 before build). Last source built/converted/deployed, then my host fixture used non-POSIX pipefail with /bin/sh and failed before all87 functional cases. Corrected only host set options to POSIX set -eu; no pipelines exist there, all functional assertions remain. Actual guarded host setup executes via /bin/sh locally. Three new builds required (native plus both upstream architectures), only2 remain. No application/runtime blocker concluded and no corrected-source proof/PR claimed.",
+        "required_additional_builds": 3,
+        "remaining_builds": 2
+      }
     },
     {
       "recipe": "condaenvs",
@@ -18002,7 +18027,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-13T16:16:58.230616+00:00",
+        "checked_at": "2026-10-13T16:54:32.376845+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -18027,7 +18052,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T16:16:59.047874+00:00",
+        "metadata_checked_at": "2026-10-13T16:54:33.131353+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -21497,7 +21522,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T16:17:00.301984+00:00",
+        "checked_at": "2026-10-13T16:54:34.536725+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -21512,7 +21537,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T16:17:01.135122+00:00",
+        "metadata_checked_at": "2026-10-13T16:54:35.363169+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -21651,18 +21676,18 @@
         "recipes/pals/build.yaml",
         "recipes/pals/fulltest.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-pals-20261012",
+      "baseline_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
+      "candidate_sha": "b2c74585de5d550a5dbd1c80cbfb91e943034d02",
+      "started_at": "2026-10-13T16:35:00+00:00",
+      "deadline": "2026-10-14T04:35:00+00:00",
+      "attempts": 1,
+      "run_id": 38433253849,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "2.0.1",
@@ -21672,6 +21697,36 @@
         "port_patch_applies": true,
         "fulltest_version": "2.0.1",
         "test_count": 2
+      },
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Reapply the previously verified recipe-specific ARM Miniconda installer/checksum and actual bundled-atlas lesion-overlap case, retaining both current upstream tests and the x86 installation. Historical green lesion-only tests did not execute ANTs: the2.4.3 binary archive is x86-only. Build the same official ANTs2.4.3 source on ARM using the existing ordinary source template with2 compile jobs, and configure its real bin path; preserve x86 ANTs2.4.3 binaries. Official FSL metadata confirms native avwutils2209.6,bet22111.9,flirt2111.4 and noarch base2604.1. Add pip closure/native ANTs ELF/version/FSL package checks, an independent exact180-voxel1350mm3 lesion oracle for binary/partial/probabilistic/disjoint ROI sums and percentages, and actual complete PALS reorientation/N4/BET/FLIRT/lesion transformation/atlas overlap/QC workflow. Use the full shipped anatomical field of view on its shipped2mm ROI grid, assert finite nonempty stage images, binary labels, physical output geometry/transform, decoded PNG/GIFs and unchanged source images/ROIs. No compiler/library/application patch, algorithm replacement or clinical accuracy claim. All scientific functionality still requires current-source native and both upstream suites before acceptance.",
+      "pr_title": "Enable native PALS with actual preprocessing and exact lesion-overlap tests",
+      "primary_source_review": [
+        "https://github.com/npnl/PALS/tree/b3699e951ba929d5822bd98a8b65414f075f02a8",
+        "https://repo.anaconda.com/miniconda/",
+        "https://github.com/ANTsX/ANTs/releases/tag/v2.4.3",
+        "https://raw.githubusercontent.com/ANTsX/ANTs/v2.4.3/CMakeLists.txt",
+        "https://fsl.fmrib.ox.ac.uk/fsldownloads/fslconda/public/linux-aarch64/repodata.json",
+        "https://fsl.fmrib.ox.ac.uk/fsldownloads/fslconda/public/noarch/repodata.json"
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38433253849",
+      "local_analytical_fixture_review": {
+        "source_sha": "b2c74585de5d550a5dbd1c80cbfb91e943034d02",
+        "application_revision": "b3699e951ba929d5822bd98a8b65414f075f02a8",
+        "operation": "Actual PALS CLI MNI-space analytical lesion volume and four ROI overlaps",
+        "outcome": "passed",
+        "expected": {
+          "lesion_voxels": 180,
+          "lesion_mm3": 1350,
+          "binary_overlap": 180,
+          "partial_overlap": 90,
+          "probabilistic_overlap": 45,
+          "disjoint_overlap": 0
+        },
+        "scope": "Local macOS fixture/source API validation only; not native Linux ARM proof or proof of ANTs/FSL full preprocessing."
       }
     },
     {
@@ -25129,7 +25184,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T16:17:02.685660+00:00",
+        "checked_at": "2026-10-13T16:54:36.536660+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -25154,7 +25209,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T16:17:03.494331+00:00"
+        "metadata_checked_at": "2026-10-13T16:54:37.344519+00:00"
       }
     },
     {
@@ -30086,7 +30141,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T16:17:06.940898+00:00",
+        "checked_at": "2026-10-13T16:54:38.434374+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -30111,7 +30166,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T16:17:07.738517+00:00"
+        "metadata_checked_at": "2026-10-13T16:54:39.179703+00:00"
       }
     },
     {
@@ -30787,18 +30842,18 @@
         ]
       },
       "port_files": [],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-xnat-20261012",
+      "baseline_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
+      "candidate_sha": "845d83734f0b98b5c06514048528bccd6646a6c5",
+      "started_at": "2026-10-13T16:23:00+00:00",
+      "deadline": "2026-10-14T04:23:00+00:00",
+      "attempts": 3,
+      "run_id": 38434072302,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.9.2.1",
@@ -30810,7 +30865,92 @@
         "fulltest_version": "1.9.2.1",
         "test_count": 98
       },
-      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence."
+      "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Retain current upstream XNAT1.9.2.1 and its existing ARM/x86 declarations, Java8/Tomcat9/PostgreSQL12 and official WAR. The98 original tests never start the service. Fix ordinary PostgreSQL bootstrap configuration for Apptainer's host account: explicitly initialize the postgres superuser instead of assuming the runtime account is jovyan; require SQL ON_ERROR_STOP and clean pg_ctl shutdown. Add standard python3 to drive the real integration operation. Keep all98 cases, remove truncating pipelines and error fallbacks, make the Java settings query actually return0 with -version, and explicitly handle the intentionally absent JDK-only utilities in this JRE image. Add actual deployed XNAT server startup and initial setup through its supported API, authenticated project creation, full required T2 NIfTI resource upload/download with exact-byte/catalog-size and unchanged-input checks, native database project confirmation and denied unauthenticated private-file access. Keep all runtime state private/writable and clean up the owned service process group. No Java/application/library patch, fake service, emulation or omitted functional gate. Current recipe version is retained; this is not an application upgrade to newer XNAT releases.",
+      "pr_title": "Verify XNAT service and NIfTI transfers on native ARM64 and x86",
+      "primary_source_review": [
+        "https://api.bitbucket.org/2.0/repositories/xnatdev/xnat-web/downloads?pagelen=100",
+        "https://wiki.xnat.org/documentation/xnat-installation-guide",
+        "https://wiki.xnat.org/documentation/xnat-setup-first-time-configuration",
+        "https://wiki.xnat.org/xnat-api/project-api",
+        "https://wiki.xnat.org/xnat-api/project-resources-and-files-api",
+        "https://wiki.xnat.org/documentation/panel-form",
+        "https://groups.google.com/g/xnat_discussion/c/kHK1FlX3mJU"
+      ],
+      "arm64_attempts": 3,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38434072302",
+      "candidate_history": [
+        {
+          "source_sha": "9fcd8788bfadaf4665d1427099412d854dc5c625",
+          "run_id": 38431373359,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38431373359",
+          "counts": {
+            "passed": 99,
+            "failed": 1,
+            "skipped": 0,
+            "total_tests": 100
+          },
+          "failed_tests": [
+            {
+              "duration": 36.02544069290161,
+              "message": "Expected exit code 0, got 1",
+              "name": "Real XNAT database and authenticated NIfTI resource roundtrip",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 40, in <module>\n  File \"<stdin>\", line 30, in request\n  File \"/usr/lib/python3.8/urllib/request.py\", line 525, in open\n    response = self._open(req, data)\n  File \"/usr/lib/python3.8/urllib/request.py\", line 542, in _open\n    result = self._call_chain(self.handle_open, protocol, protocol +\n  File \"/usr/lib/python3.8/urllib/request.py\", line 502, in _call_chain\n    result = func(*args)\n  File \"/usr/lib/python3.8/urllib/request.py\", line 1383, in http_open\n    return self.do_open(http.client.HTTPConnection, req)\n  File \"/usr/lib/python3.8/urllib/request.py\", line 1358, in do_open\n    r = h.getresponse()\n  File \"/usr/lib/python3.8/http/client.py\", line 1348, in getresponse\n    response.begin()\n  File \"/usr/lib/python3.8/http/client.py\", line 316, in begin\n    version, status, reason = self._read_status()\n  File \"/usr/lib/python3.8/http/client.py\", line 277, in _read_status\n    line = str(self.fp.readline(_MAXLINE + 1), \"iso-8859-1\")\n  File \"/usr/lib/python3.8/socket.py\", line 669, in readinto\n    return self._sock.recv_into(b)\nsocket.timeout: timed out\n",
+              "stdout": "=== XNAT Container Starting ===\nWorking directory: /tmp/xnat-ci-x7e4uuvg\nXNAT_ROOT: /tmp/xnat-ci-x7e4uuvg/xnat-runtime\nXNAT_HOME: /tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home\nCATALINA_BASE: /tmp/xnat-ci-x7e4uuvg/xnat-runtime/tomcat\nPGDATA: /tmp/xnat-ci-x7e4uuvg/xnat-runtime/postgresql\nCreating runtime directories...\nSetting up Tomcat configuration...\nGlobal web.xml configured with default servlet mappings\nDeploying XNAT webapp...\nXNAT web.xml found and deployed successfully\nConfiguring XNAT properties...\nInitializing PostgreSQL database...\nThe files belonging to this database system will be owned by user \"runner\".\nThis user must also own the server process.\n\nThe database cluster will be initialized with locale \"en_US.UTF-8\".\nThe default database encoding has accordingly been set to \"UTF8\".\nThe default text search configuration will be set to \"english\".\n\nData page checksums are disabled.\n\nfixing permissions on existing directory /tmp/xnat-ci-x7e4uuvg/xnat-runtime/postgresql ... ok\ncreating subdirectories ... ok\nselecting dynamic shared memory implementation ... posix\nselecting default max_connections ... 100\nselecting default shared_buffers ... 128MB\nselecting default time zone ... UTC\ncreating configuration files ... ok\nrunning bootstrap script ... ok\nperforming post-bootstrap initialization ... ok\nsyncing data to disk ... ok\n\nSuccess. You can now start the database server using:\n\n    /usr/lib/postgresql/12/bin/pg_ctl -D /tmp/xnat-ci-x7e4uuvg/xnat-runtime/postgresql -l logfile start\n\nWaiting for PostgreSQL to start...\n2026-10-13 16:35:56.706 UTC [19573] LOG:  starting PostgreSQL 12.22 (Ubuntu 12.22-0ubuntu0.20.04.4) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit\n2026-10-13 16:35:56.707 UTC [19573] LOG:  listening on IPv6 address \"::1\", port 5432\n2026-10-13 16:35:56.707 UTC [19573] LOG:  listening on IPv4 address \"127.0.0.1\", port 5432\n2026-10-13 16:35:56.707 UTC [19573] LOG:  could not bind IPv4 address \"127.0.0.1\": Address already in use\n2026-10-13 16:35:56.707 UTC [19573] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.\n2026-10-13 16:35:56.707 UTC [19573] WARNING:  could not create listen socket for \"127.0.0.1\"\n2026-10-13 16:35:56.708 UTC [19573] LOG:  listening on Unix socket \"/tmp/xnat-ci-x7e4uuvg/xnat-runtime/postgresql/.s.PGSQL.5432\"\n2026-10-13 16:35:56.714 UTC [19576] LOG:  database system was shut down at 2026-10-13 16:35:56 UTC\n2026-10-13 16:35:56.716 UTC [19573] LOG:  database system is ready to accept connections\n2026-10-13 16:35:57.713 UTC [19584] FATAL:  role \"runner\" does not exist\nCreating PostgreSQL user and database...\nCREATE ROLE\nCREATE DATABASE\nGRANT\nStopping temporary PostgreSQL instance...\n2026-10-13 16:35:57.767 UTC [19573] LOG:  received fast shutdown request\nwaiting for server to shut down....2026-10-13 16:35:57.767 UTC [19573] LOG:  aborting any active transactions\n2026-10-13 16:35:57.768 UTC [19573] LOG:  background worker \"logical replication launcher\" (PID 19582) exited with exit code 1\n2026-10-13 16:35:57.768 UTC [19577] LOG:  shutting down\n2026-10-13 16:35:57.774 UTC [19573] LOG:  database system is shut down\n done\nserver stopped\nPostgreSQL initialization complete.\nStarting PostgreSQL...\nWaiting for PostgreSQL to be ready...\n2026-10-13 16:35:57.879 UTC [19588] LOG:  starting PostgreSQL 12.22 (Ubuntu 12.22-0ubuntu0.20.04.4) on aarch64-unknown-linux-gnu, compiled by gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0, 64-bit\n2026-10-13 16:35:57.879 UTC [19588] LOG:  listening on IPv6 address \"::1\", port 5432\n2026-10-13 16:35:57.879 UTC [19588] LOG:  listening on IPv4 address \"127.0.0.1\", port 5432\n2026-10-13 16:35:57.880 UTC [19588] LOG:  could not bind IPv4 address \"127.0.0.1\": Address already in use\n2026-10-13 16:35:57.880 UTC [19588] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.\n2026-10-13 16:35:57.880 UTC [19588] WARNING:  could not create listen socket for \"127.0.0.1\"\n2026-10-13 16:35:57.880 UTC [19588] LOG:  listening on Unix socket \"/tmp/xnat-ci-x7e4uuvg/xnat-runtime/postgresql/.s.PGSQL.5432\"\n2026-10-13 16:35:57.886 UTC [19591] LOG:  database system was shut down at 2026-10-13 16:35:57 UTC\n2026-10-13 16:35:57.889 UTC [19588] LOG:  database system is ready to accept connections\nPostgreSQL is ready!\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Server version name:   Apache Tomcat/9.0.31 (Ubuntu)\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Server built:          Apr 2 2025 15:04:23 UTC\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Server version number: 9.0.31.0\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: OS Name:               Linux\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: OS Version:            6.17.0-1022-azure\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Architecture:          aarch64\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Java Home:             /usr/lib/jvm/java-8-openjdk-arm64/jre\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: JVM Version:           1.8.0_452-8u452-ga~us1-0ubuntu1~20.04-b09\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: JVM Vendor:            Private Build\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: CATALINA_BASE:         /tmp/xnat-ci-x7e4uuvg/xnat-runtime/tomcat\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: CATALINA_HOME:         /usr/share/tomcat9\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Command line argument: -Dnop\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Command line argument: -Djdk.tls.ephemeralDHKeySize=2048\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Command line argument: -Dorg.apache.catalina.security.SecurityListener.UMASK=0027\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Command line argument: -Xms256m\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Command line argument: -Xmx4g\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Command line argument: -Dxnat.home=/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Command line argument: -Dignore.endorsed.dirs=\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Command line argument: -Dcatalina.base=/tmp/xnat-ci-x7e4uuvg/xnat-runtime/tomcat\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Command line argument: -Dcatalina.home=/usr/share/tomcat9\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.VersionLoggerListener log\nINFO: Command line argument: -Djava.io.tmpdir=/tmp/xnat-ci-x7e4uuvg/xnat-runtime/tomcat/temp\nOct 13, 2026 4:35:59 PM org.apache.catalina.core.AprLifecycleListener lifecycleEvent\nINFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/.singularity.d/libs:/usr/java/packages/lib/aarch64:/usr/lib/aarch64-linux-gnu/jni:/lib/aarch64-linux-gnu:/usr/lib/aarch64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]\nOct 13, 2026 4:35:59 PM org.apache.coyote.AbstractProtocol init\nINFO: Initializing ProtocolHandler [\"http-nio-0.0.0.0-8080\"]\nOct 13, 2026 4:35:59 PM org.apache.coyote.AbstractProtocol init\nINFO: Initializing ProtocolHandler [\"ajp-nio-0.0.0.0-8009\"]\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.Catalina load\nINFO: Server initialization in [471] milliseconds\nOct 13, 2026 4:35:59 PM org.apache.catalina.core.StandardService startInternal\nINFO: Starting service [Catalina]\nOct 13, 2026 4:35:59 PM org.apache.catalina.core.StandardEngine startInternal\nINFO: Starting Servlet engine: [Apache Tomcat/9.0.31 (Ubuntu)]\nOct 13, 2026 4:35:59 PM org.apache.catalina.startup.HostConfig deployDirectory\nINFO: Deploying web application directory [/tmp/xnat-ci-x7e4uuvg/xnat-runtime/tomcat/webapps/ROOT]\nOct 13, 2026 4:36:06 PM org.apache.jasper.servlet.TldScanner scanJars\nINFO: At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.\nOct 13, 2026 4:36:06 PM org.apache.catalina.core.ApplicationContext log\nINFO: 2 Spring WebApplicationInitializers detected on classpath\nOct 13, 2026 4:36:06 PM org.apache.catalina.core.ApplicationContext log\nINFO: Initializing Spring root WebApplicationContext\n2026-10-13 16:36:18.919 UTC [19624] ERROR:  relation \"arc_archivespecification\" does not exist at character 22\n2026-10-13 16:36:18.919 UTC [19624] STATEMENT:  select count(*) from arc_archivespecification\n\n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/axis.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/prearchive.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/avalon.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/tasks.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/snapshot.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/received.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/restlet.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/cache.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/identifiers.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/runnable.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/eventservice.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/configuration.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/sql.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/turbine.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/access.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/file_access.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/launch.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/xdat.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/scheduler.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/jdbc.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/cache-events.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/jms.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/xnatfs.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/orm.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/security.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/anon.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/application.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/automation.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/spring.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/dicom.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/customvariablemigration.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/velocity.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/events.log \n/tmp/xnat-ci-x7e4uuvg/xnat-runtime/xnat-home/logs/xapi.log \n"
+            }
+          ],
+          "retry_hypothesis": "Native source9fcd8788 built, verified ARM architecture, converted to SIF and passed deployment and all98 original functional cases (aggregate99/100). The new real server test initialized PostgreSQL under the actual runner account, created the xnat role/database, cleanly stopped/restarted PostgreSQL, and launched native Java8/Tomcat9/XNAT. It then stopped after53s on the first30s HTTP read timeout while XNAT was still initializing its schema. The fixture catches TimeoutError, but Python3.8's socket.timeout is a distinct OSError subclass; Python3.10+ aliases it to TimeoutError. Explicitly catch socket.timeout in the existing600s startup polling loop. Do not enlarge that deadline, change the application, omit real API/data/access assertions or call startup verified yet.\n\nAlso use the actual postgres/xnat roles for pg_isready checks (avoids misleading role-runner FATAL diagnostics), and specify localhost once rather than resolving it then attempting the same127.0.0.1 listen address twice. Correct the stale bootstrap-role comment. All99 functional commands, embedded Python, schema, both Docker generations and spelling pass locally. Original start16:23UTC/deadline04:23UTC and1 build persist. Require a full new native suite and both upstream architecture suites before acceptance."
+        }
+      ],
+      "retry_hypothesis": "All100 checks passed atc3c6a488, including actual server/database/authenticated complete NIfTI transfer/access control. stderr warned that squashfuse_ll timed out, consistent with a child process retaining the SIF. The launcher may exit before its JVM shutdown finishes. Wait for every non-zombie member of the owned process group, send SIGKILL if15s graceful shutdown is insufficient, and assert no live owned members remain. Keep explicit clean PostgreSQL shutdown and every scientific/data/access assertion unchanged. No image-input change. This necessary fixture correction requires an exact new-source native suite, then both upstream architectures;3 more builds fit within remaining4.",
+      "successful_candidate_history": [
+        {
+          "source_sha": "c3c6a48806c4ce7394334d7598924fff98a84448",
+          "run_id": 38432769611,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38432769611",
+          "native_evidence": {
+            "source_sha": "c3c6a48806c4ce7394334d7598924fff98a84448",
+            "version": "1.9.2.1",
+            "counts": {
+              "total_tests": 100,
+              "passed": 100,
+              "failed": 0,
+              "skipped": 0
+            },
+            "fulltest_summary": {
+              "duration": 80.79023957252502,
+              "run_timestamp": "2026-10-13T16:46:33.704570",
+              "suites_failed": 0,
+              "suites_passed": 1,
+              "tests_failed": 0,
+              "tests_passed": 99,
+              "total_suites": 1,
+              "total_tests": 99
+            },
+            "deploy_counts": {
+              "total": 1,
+              "passed": 1,
+              "failed": 0,
+              "skipped": 0
+            },
+            "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38432769611",
+            "runner_labels": [
+              "ubuntu-24.04-arm"
+            ]
+          },
+          "native_command_exit_review": {
+            "source_sha": "c3c6a48806c4ce7394334d7598924fff98a84448",
+            "all_unusual_exits_explicitly_asserted": true,
+            "unusual_exits": []
+          },
+          "followup": "All100 application/deployment checks passed, but Apptainer warned that a process kept the SIF open after completion. Strengthen complete owned-process-group cleanup before upstream submission."
+        }
+      ]
     }
   ],
   "pull_request_policy": "Exactly one focused upstream pull request per remaining in-scope container; never combine containers. OpenRecon recipes are excluded by user instruction.",

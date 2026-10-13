@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-13T16:17:07.739454+00:00",
+  "checked_at": "2026-10-13T16:54:39.180712+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -561,7 +561,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T16:16:56.133391+00:00",
+      "checked_at": "2026-10-13T16:54:30.088731+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -586,7 +586,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T16:16:56.938441+00:00",
+      "metadata_checked_at": "2026-10-13T16:54:30.840703+00:00",
       "publication_blocker": {
         "classification": "blocked-prerequisite-publication",
         "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -2060,7 +2060,7 @@
           "current_candidate_date_committed": true
         }
       ],
-      "checked_at": "2026-10-13T16:16:58.230616+00:00",
+      "checked_at": "2026-10-13T16:54:32.376845+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -2085,7 +2085,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T16:16:59.047874+00:00",
+      "metadata_checked_at": "2026-10-13T16:54:33.131353+00:00",
       "failure_review": {
         "classification": "blocked-infrastructure",
         "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -2393,7 +2393,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T16:17:00.301984+00:00",
+      "checked_at": "2026-10-13T16:54:34.536725+00:00",
       "workflow_status": "completed",
       "workflow_conclusion": "failure",
       "publish_jobs": [
@@ -2408,7 +2408,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T16:17:01.135122+00:00",
+      "metadata_checked_at": "2026-10-13T16:54:35.363169+00:00",
       "failure_detail": {
         "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
         "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -2915,7 +2915,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T16:17:02.685660+00:00",
+      "checked_at": "2026-10-13T16:54:36.536660+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -2940,7 +2940,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T16:17:03.494331+00:00"
+      "metadata_checked_at": "2026-10-13T16:54:37.344519+00:00"
     },
     {
       "recipe": "root",
@@ -3511,7 +3511,7 @@
           "current_candidate_date_committed": false
         }
       ],
-      "checked_at": "2026-10-13T16:17:06.940898+00:00",
+      "checked_at": "2026-10-13T16:54:38.434374+00:00",
       "workflow_status": "queued",
       "workflow_conclusion": null,
       "publish_jobs": [
@@ -3536,7 +3536,7 @@
           "active_steps": []
         }
       ],
-      "metadata_checked_at": "2026-10-13T16:17:07.738517+00:00"
+      "metadata_checked_at": "2026-10-13T16:54:39.179703+00:00"
     },
     {
       "recipe": "workshopdemo",
