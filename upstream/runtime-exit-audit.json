@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-13T05:44:32.339927+00:00",
+  "checked_at": "2026-10-13T09:54:25.604670+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     {
@@ -302,6 +302,16 @@
         {
           "test": "nib-diff verbose",
           "return_code": 1,
+          "errors": []
+        }
+      ]
+    },
+    {
+      "recipe": "megnet",
+      "findings": [
+        {
+          "test": "unknown pipeline is rejected",
+          "return_code": 2,
           "errors": []
         }
       ]
@@ -825,6 +835,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "deepdisco",
+      "source_sha": "27164b8a8a9f49c00e201b80769849f71833ba16",
+      "run_id": 38362222102,
+      "reported_passed": 5,
+      "reported_total": 5,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "dicompare",
       "source_sha": "355079c222a60cea8405c52a3bd978faad29abe7",
       "run_id": 38304615691,
@@ -1009,6 +1027,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "megnet",
+      "source_sha": "8e1bafeeb686ff1761ae31342fe5e4170c55a982",
+      "run_id": 38363879332,
+      "reported_passed": 9,
+      "reported_total": 9,
+      "nonzero_command_exits": 1
+    },
+    {
       "recipe": "mipview",
       "source_sha": "8f6524de0ef725ef6c25486669c7bfe794978585",
       "run_id": 38327220296,
@@ -1055,6 +1081,14 @@
       "reported_passed": 56,
       "reported_total": 56,
       "nonzero_command_exits": 4
+    },
+    {
+      "recipe": "napari",
+      "source_sha": "282639d96241a8d858c0a53fa33dab645cee54e3",
+      "run_id": 38367170169,
+      "reported_passed": 7,
+      "reported_total": 7,
+      "nonzero_command_exits": 0
     },
     {
       "recipe": "niftyreg",
@@ -1177,6 +1211,22 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "template",
+      "source_sha": "7a570d44011695ac0b32a340b1d083ae8e30c822",
+      "run_id": 38361339943,
+      "reported_passed": 4,
+      "reported_total": 4,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "terastitcher",
+      "source_sha": "cc59e4497daf24b768331b122fde8542134cdd00",
+      "run_id": 38353357252,
+      "reported_passed": 11,
+      "reported_total": 11,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "topaz",
       "source_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
       "run_id": 38216691578,
@@ -1190,6 +1240,14 @@
       "run_id": 38339841635,
       "reported_passed": 11,
       "reported_total": 11,
+      "nonzero_command_exits": 0
+    },
+    {
+      "recipe": "vesselvio",
+      "source_sha": "0c7d269d0847bae5c7b4392c2abf751f4d48af41",
+      "run_id": 38352654372,
+      "reported_passed": 98,
+      "reported_total": 98,
       "nonzero_command_exits": 0
     },
     {
@@ -1209,7 +1267,7 @@
       "nonzero_command_exits": 0
     }
   ],
-  "reviewed_merged_recipe_count": 70,
+  "reviewed_merged_recipe_count": 76,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [],
@@ -1347,7 +1405,7 @@
     }
   ],
   "cached_deployment_linkage_summary_review": {
-    "reviewed_count": 70,
+    "reviewed_count": 76,
     "outliers": [
       {
         "recipe": "fsl",
@@ -1358,8 +1416,8 @@
         "message": "Skipped 4 linkage entries without filesystem paths."
       }
     ],
-    "checked_at": "2026-10-13T05:44:32.399866+00:00",
-    "method": "Read exact-source cached deployment scan summaries for all70 merged recipes, retaining prior root sources for explicitly recorded current-source gaps. No rebuild. The sole >2 pathless-entry summary is FSL eddy_cuda, with4; source-specific GPU/driver limitation is recorded in its issue. All131 CPU functional cases passed. Ordinary2-entry summaries do not establish full linkage closure because the parser also skips unresolved=>notfound entries.",
+    "checked_at": "2026-10-13T09:55:55.832522+00:00",
+    "method": "Read exact-source cached deployment scan summaries for all76 merged recipes, retaining prior root sources for explicitly recorded current-source gaps. No rebuild. The sole >2 pathless-entry summary is FSL eddy_cuda, with4; source-specific GPU/driver limitation is recorded in its issue. All131 CPU functional cases passed. Ordinary2-entry summaries do not establish full linkage closure because the parser also skips unresolved=>notfound entries.",
     "parser_limitation": "workflows/test_deploy.sh parse_ldd_output treats unresolved=>notfound entries as skipped, not failures. Exact library closure cannot be inferred solely from aggregate deployment success.",
     "active_recipe_reviews": {
       "elastix": "Root38325625311 at429bc011 passed34/34 aggregate: all32 retained scientific/negative cases and independently executed ldd closure for74 libraries per raw ELF passed. A newly added shell version-string assertion was ineffective because builder substitution changed $version_output into5.3.1_output. Actual raw commands executed0 and retained wrapper version checks printed actual5.3.1. Corrected fixture source ff8a87685a1a201bcd76ced4fc52495d8526d312 is pushed but UNTESTED: another root plus two upstream builds exceed2 remaining attempts. Status blocked-verification-budget;4/6 builds and original deadline retained. No current corrected-source runtime proof or upstream PR claimed."
