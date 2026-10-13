@@ -5373,7 +5373,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T09:47:01.073271+00:00",
+        "checked_at": "2026-10-13T14:10:30.276014+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -5398,7 +5398,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T09:47:01.817400+00:00",
+        "metadata_checked_at": "2026-10-13T14:10:31.221864+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -11913,18 +11913,215 @@
       "port_files": [
         "recipes/globus/fulltest.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
-      "pr_url": null,
-      "upstream_ci": null,
-      "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "status": "merged",
+      "branch": "arm64/upstream-globus-20261012",
+      "baseline_sha": "fc590d970f504a77b94c9a2936854d225dd11d80",
+      "candidate_sha": "fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f",
+      "started_at": "2026-10-13T11:12:00+00:00",
+      "deadline": "2026-10-13T23:12:00+00:00",
+      "attempts": 6,
+      "run_id": 38399388909,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3583",
+      "upstream_ci": {
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "globus",
+          "container": "globus_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "3.3.1",
+          "build_date": "20261013",
+          "docker_archive": "globus_arm64_3.3.1_20261013.docker.tar",
+          "sif": "globus_arm64_3.3.1_20261013.simg",
+          "candidate_tag": "nd-candidate-globus_arm64:fc9ef1a5bb7d",
+          "launcher": "globusconnect",
+          "pr_number": 3583,
+          "head_sha": "fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f",
+          "tests": {
+            "total": 73,
+            "passed": 73,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 72,
+            "fulltest_passed": 72,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Help display",
+              "Help display with -h flag",
+              "Version flag display",
+              "Help shows GUI mode",
+              "Help shows setup mode",
+              "Help shows start mode",
+              "Help shows stop mode",
+              "Help shows status mode",
+              "Help shows debug mode",
+              "Help shows trace mode",
+              "Help shows pause options",
+              "Help shows dir option",
+              "Help shows restrict-paths option",
+              "Help shows shared-paths option",
+              "Help shows GUI force option",
+              "Setup help display",
+              "Setup help shows name option",
+              "Setup help shows description option",
+              "Setup help shows owner option"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 3,
+                "wasted_space": "24 MB",
+                "path": "/usr/lib/sysimage/rpm/rpmdb.sqlite"
+              },
+              {
+                "count": 3,
+                "wasted_space": "12 MB",
+                "path": "/var/lib/dnf/history.sqlite-wal"
+              },
+              {
+                "count": 2,
+                "wasted_space": "4.6 MB",
+                "path": "/usr/lib64/libc.so.6"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.8 MB",
+                "path": "/usr/sbin/ldconfig"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.6 MB",
+                "path": "/usr/lib/ld-linux-aarch64.so.1"
+              }
+            ],
+            "efficiency_percent": 94.7971,
+            "wasted_bytes": 53156535,
+            "wasted_bytes_display": "53 MB",
+            "user_wasted_percent": 11.7123
+          }
+        },
+        "candidate_run_id": 38400316105,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38400316105",
+        "native_job_review": {
+          "aarch64": {
+            "head_sha": "fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f",
+            "job_id": 115306042342,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38400316105/job/115306042342",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "x86_64": {
+            "head_sha": "fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f",
+            "job_id": 115306042208,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38400316105/job/115306042208",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "globus",
+          "container": "globus",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "3.3.1",
+          "build_date": "20261013",
+          "docker_archive": "globus_3.3.1_20261013.docker.tar",
+          "sif": "globus_3.3.1_20261013.simg",
+          "candidate_tag": "nd-candidate-globus:fc9ef1a5bb7d",
+          "launcher": "globusconnect",
+          "pr_number": 3583,
+          "head_sha": "fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f",
+          "tests": {
+            "total": 73,
+            "passed": 73,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 72,
+            "fulltest_passed": 72,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Help display",
+              "Help display with -h flag",
+              "Version flag display",
+              "Help shows GUI mode",
+              "Help shows setup mode",
+              "Help shows start mode",
+              "Help shows stop mode",
+              "Help shows status mode",
+              "Help shows debug mode",
+              "Help shows trace mode",
+              "Help shows pause options",
+              "Help shows dir option",
+              "Help shows restrict-paths option",
+              "Help shows shared-paths option",
+              "Help shows GUI force option",
+              "Setup help display",
+              "Setup help shows name option",
+              "Setup help shows description option",
+              "Setup help shows owner option"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 3,
+                "wasted_space": "25 MB",
+                "path": "/usr/lib/sysimage/rpm/rpmdb.sqlite"
+              },
+              {
+                "count": 3,
+                "wasted_space": "12 MB",
+                "path": "/var/lib/dnf/history.sqlite-wal"
+              },
+              {
+                "count": 2,
+                "wasted_space": "4.9 MB",
+                "path": "/usr/lib64/libc.so.6"
+              },
+              {
+                "count": 2,
+                "wasted_space": "2.1 MB",
+                "path": "/usr/lib64/libmvec.so.1"
+              },
+              {
+                "count": 2,
+                "wasted_space": "2.0 MB",
+                "path": "/usr/sbin/ldconfig"
+              }
+            ],
+            "efficiency_percent": 94.4042,
+            "wasted_bytes": 53773487,
+            "wasted_bytes_display": "54 MB",
+            "user_wasted_percent": 12.5259
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
+      },
+      "merged_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "3.3.1",
@@ -11940,6 +12137,196 @@
         "three_way_conflicts": [
           "recipes/globus/fulltest.yaml"
         ]
+      },
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Restore the official Globus Connect Personal3.3.1 controller on both architectures by removing the recipe override with stale3.2.8 code. The official released controller already has the required distribution helper, plus newer FIPS-status and per-configuration abstract socket behavior; preserve its source unchanged and keep the unused local historical file in git. Retain the same official x86/ARM archives and all71 original checks, align fulltest release3.3.1, require the exact real launcher version, remove head pipelines and the status shell fallback, and assert documented disconnected status1 in a short private configuration directory with HOME unset. Add actual shipped native GridFTP server upload/download/retrieval of every1MiB payload byte on loopback, require file-path restrictions and clean server exit. Authenticated Globus.org registration/relay and remote endpoint transfers require a real account and remain outside this local protocol proof. No replaced server, application patches, emulation or skipped gates.",
+      "pr_title": "Restore Globus3.3.1 controller and verify native GridFTP file transfers",
+      "primary_source_review": [
+        "https://docs.globus.org/globus-connect-personal/changes/",
+        "https://downloads.globus.org/globus-connect-personal/v3/linux_aarch64/stable/globusconnectpersonal-aarch64-3.3.1.tgz",
+        "https://downloads.globus.org/globus-connect-personal/v3/linux/stable/globusconnectpersonal-3.3.1.tgz",
+        "https://docs.globus.org/globus-connect-server/v5/man/globus-gridftp-server/"
+      ],
+      "arm64_attempts": 5,
+      "x86_64_attempts": 1,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38399388909",
+      "candidate_history": [
+        {
+          "source_sha": "171ad90e168fcb4fb7afefd0ed616db0c46ae6a9",
+          "run_id": 38389656488,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38389656488",
+          "counts": {
+            "passed": 71,
+            "failed": 2,
+            "skipped": 0,
+            "total_tests": 73
+          },
+          "failed_tests": [
+            {
+              "duration": 0.12399840354919434,
+              "message": "Expected output not found: 'No Globus Connect Personal connected to Globus Onl...'",
+              "name": "Status check without running instance",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Expected output not found: 'No Globus Connect Personal connected to Globus Onl...'",
+              "stdout": "You tried to run Globus Connect Personal with explicit startup options without\nfirst completing setup.\n\nRun\n\n  globusconnectpersonal -setup\n\nand follow the instructions. Or, for more help, go to\n\n  https://docs.globus.org/how-to/globus-connect-personal-linux/\n\nand then try to start again.\n\n"
+            },
+            {
+              "duration": 0.4615447521209717,
+              "message": "Expected exit code 0, got 1",
+              "name": "Real native GridFTP transfer and path isolation",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 47, in <module>\n  File \"/usr/lib64/python3.11/ftplib.py\", line 436, in retrbinary\n    with self.transfercmd(cmd, rest) as conn:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/ftplib.py\", line 393, in transfercmd\n    return self.ntransfercmd(cmd, rest)[0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/ftplib.py\", line 353, in ntransfercmd\n    host, port = self.makepasv()\n                 ^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/ftplib.py\", line 327, in makepasv\n    untrusted_host, port = parse227(self.sendcmd('PASV'))\n                                    ^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/ftplib.py\", line 281, in sendcmd\n    return self.getresp()\n           ^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/ftplib.py\", line 254, in getresp\n    raise error_perm(resp)\nftplib.error_perm: 500-Command failed.\n\n500- : globus_ftp_control_local_pasv failed.\n500-globus_xio: globus_l_xio_tcp_contact_string failed.\n500-globus_xio: globus_libc_addr_to_contact_string failed.\n500-globus_common: globus_libc_gethostaddr failed\n500 End.\n",
+              "stdout": "\n"
+            }
+          ]
+        },
+        {
+          "source_sha": "3b965decbac52c26e8c6de1509b9382d03bed46b",
+          "run_id": 38390569331,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38390569331",
+          "counts": {
+            "passed": 72,
+            "failed": 1,
+            "skipped": 0,
+            "total_tests": 73
+          },
+          "failed_tests": [
+            {
+              "duration": 0.14023780822753906,
+              "message": "Expected exit code 0, got 1",
+              "name": "Real native GridFTP transfer and path isolation",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "  File \"<stdin>\", line 27\n    env['LD_LIBRARY_PATH']=str(toolkit/'lib')+':'+env.get('LD_LIBRARY_PATH','')\nIndentationError: unexpected indent\n",
+              "stdout": ""
+            }
+          ]
+        },
+        {
+          "source_sha": "2c8588158d4b057efe7ebe924829e4edc6052a98",
+          "run_id": 38391338391,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38391338391",
+          "counts": {
+            "passed": 72,
+            "failed": 1,
+            "skipped": 0,
+            "total_tests": 73
+          },
+          "failed_tests": [
+            {
+              "duration": 0.3733229637145996,
+              "message": "Expected exit code 0, got 1",
+              "name": "Real native GridFTP transfer and path isolation",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 58, in <module>\n  File \"/usr/lib64/python3.11/ftplib.py\", line 436, in retrbinary\n    with self.transfercmd(cmd, rest) as conn:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/ftplib.py\", line 393, in transfercmd\n    return self.ntransfercmd(cmd, rest)[0]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/ftplib.py\", line 359, in ntransfercmd\n    resp = self.sendcmd(cmd)\n           ^^^^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/ftplib.py\", line 281, in sendcmd\n    return self.getresp()\n           ^^^^^^^^^^^^^^\n  File \"/usr/lib64/python3.11/ftplib.py\", line 254, in getresp\n    raise error_perm(resp)\nftplib.error_perm: 500 Command failed. : Path not allowed.\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<stdin>\", line 60, in <module>\nAssertionError: 500 Command failed. : Path not allowed.\n",
+              "stdout": "\n"
+            }
+          ],
+          "retry_hypothesis": "The third native attempt built and converted the image, passed deployment and all71 original functional cases. The actual server completed exact1MiB download, upload and retrieval before the negative path test. It correctly rejected RETR /etc/passwd with `500 Command failed. : Path not allowed.`; only the test's assumed550 status failed. Require the observed500 plus exact Path not allowed diagnostic, preserving every byte, forbidden-path and normal server exit assertions. No GridFTP server/library or authentication changes. This correction needs one native plus two upstream builds, exactly the remaining3 build budget; no extra retry is authorized within this investigation."
+        }
+      ],
+      "retry_hypothesis": "The third native attempt built and converted the image, passed deployment and all71 original functional cases. The actual server completed exact1MiB download, upload and retrieval before the negative path test. It correctly rejected RETR /etc/passwd with `500 Command failed. : Path not allowed.`; only the test's assumed550 status failed. Require the observed500 plus exact Path not allowed diagnostic, preserving every byte, forbidden-path and normal server exit assertions. No GridFTP server/library or authentication changes. This correction needs one native plus two upstream builds, exactly the remaining3 build budget; no extra retry is authorized within this investigation.",
+      "native_command_exit_review": {
+        "source_sha": "fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": [
+          {
+            "test": "Status check without running instance",
+            "expected_exit_code": 1
+          }
+        ]
+      },
+      "native_evidence": {
+        "source_sha": "fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f",
+        "version": "3.3.1",
+        "counts": {
+          "total_tests": 73,
+          "passed": 73,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 20.118690967559814,
+          "run_timestamp": "2026-10-13T12:47:06.662698",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 72,
+          "total_suites": 1,
+          "total_tests": 72
+        },
+        "deploy_counts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38399388909",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3583,
+      "pr_number": 3583,
+      "merged_at": "2026-10-13T14:07:50Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38410722405,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38410722405",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/globus_arm64/3.3.1.json",
+            "expected_build_date": "20261013",
+            "exists": true,
+            "committed_build_dates": [
+              "20260927"
+            ],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/globus/3.3.1.json",
+            "expected_build_date": "20261013",
+            "exists": true,
+            "committed_build_dates": [
+              "20260927"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-13T14:10:36.210839+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-globus-fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-globus_arm64-fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f)",
+            "status": "in_progress",
+            "conclusion": null,
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-7zq4q",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": [
+              "Download candidate bundle without executing it"
+            ]
+          }
+        ],
+        "metadata_checked_at": "2026-10-13T14:10:37.155961+00:00"
       }
     },
     {
@@ -17497,7 +17884,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-13T09:47:29.270762+00:00",
+        "checked_at": "2026-10-13T14:10:38.880065+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -17522,7 +17909,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T09:47:30.068937+00:00",
+        "metadata_checked_at": "2026-10-13T14:10:39.752557+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -19061,7 +19448,74 @@
       },
       "pending_upstream_issue": 3579,
       "pr_number": 3579,
-      "merged_at": "2026-10-13T09:48:41Z"
+      "merged_at": "2026-10-13T09:48:41Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38378984024,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38378984024",
+        "status": "verified-published-metadata",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/napari_arm64/0.9.2.json",
+            "expected_build_date": "20261013",
+            "committed_build_dates": [
+              "20261013"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "282639d96241a8d858c0a53fa33dab645cee54e3",
+            "metadata_commit_sha": "b2d0991a985ac119b7cebed45a067f30441356d5",
+            "sif": "napari_arm64_0.9.2_20261013.simg",
+            "sif_sha256": "364a5ab062332fa52a3fb272c26600092c446aa721d7ba70a410122ad2e79a1e",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/napari_arm64_0.9.2_20261013.simg",
+            "public_sif_head_status": 200
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/napari/0.9.2.json",
+            "expected_build_date": "20261013",
+            "committed_build_dates": [
+              "20261013"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "282639d96241a8d858c0a53fa33dab645cee54e3",
+            "metadata_commit_sha": "b2d0991a985ac119b7cebed45a067f30441356d5",
+            "sif": "napari_0.9.2_20261013.simg",
+            "sif_sha256": "a7779df374e72ea16904b923c8c9f9f6ac52cc3f2b5a132785c1781a0cca8ca0",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/napari_0.9.2_20261013.simg",
+            "public_sif_head_status": 200
+          }
+        ],
+        "checked_at": "2026-10-13T11:32:46.253100+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-napari-282639d96241a8d858c0a53fa33dab645cee54e3)",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-d2gp8",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-napari_arm64-282639d96241a8d858c0a53fa33dab645cee54e3)",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-gbx6g",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-13T11:32:58.186065+00:00"
+      }
     },
     {
       "recipe": "neurocommand",
@@ -20925,7 +21379,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T09:47:31.410487+00:00",
+        "checked_at": "2026-10-13T14:10:41.179958+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -20940,7 +21394,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T09:47:32.255184+00:00",
+        "metadata_checked_at": "2026-10-13T14:10:42.011536+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -21784,7 +22238,7 @@
       "port_files": [
         "recipes/pydeface/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "blocked-verification-budget",
       "branch": "arm64/upstream-pydeface-20261012",
       "baseline_sha": "b68a3ddde7d036ea095c91123d27903f0629a829",
       "candidate_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
@@ -21793,9 +22247,246 @@
       "attempts": 4,
       "run_id": 38374199970,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3580",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "candidate_run_id": 38379088144,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38379088144",
+        "failed_architecture_reviews": {
+          "x86_64": {
+            "report": {
+              "schema_version": 3,
+              "recipe": "pydeface",
+              "container": "pydeface",
+              "variant": "",
+              "architecture": "x86_64",
+              "version": "2.1.0",
+              "build_date": "20261013",
+              "docker_archive": "pydeface_2.1.0_20261013.docker.tar",
+              "sif": "pydeface_2.1.0_20261013.simg",
+              "candidate_tag": "nd-candidate-pydeface:7fb8e0ebfa9a",
+              "launcher": "pydeface",
+              "pr_number": 3580,
+              "head_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
+              "tests": {
+                "total": 62,
+                "passed": 61,
+                "failed": 1,
+                "skipped": 0,
+                "fulltest_total": 61,
+                "fulltest_passed": 60,
+                "fulltest_failed": 1,
+                "suites_total": 1,
+                "suites_passed": 0,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "pydeface version check",
+                  "pydeface help",
+                  "Basic defacing with default output",
+                  "Defacing with custom output path",
+                  "Defacing with force overwrite",
+                  "Defacing with mutualinfo cost",
+                  "Defacing with corratio cost",
+                  "Defacing with normcorr cost",
+                  "Defacing with normmi cost",
+                  "Defacing with leastsq cost",
+                  "Defacing with applyto single image",
+                  "Defacing with nocleanup",
+                  "Defacing with verbose output",
+                  "Deface T2 image",
+                  "FSL flirt version check",
+                  "FSL flirt basic registration",
+                  "FSL flirt with mutualinfo cost",
+                  "FSL flirt apply transform",
+                  "FSL convert_xfm invert"
+                ],
+                "failed_tests": [
+                  "Exact architecture-specific runtime versions"
+                ]
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "8.4 MB",
+                    "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial-updates_main_binary-amd64_Packages"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "7.7 MB",
+                    "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial-updates_main_i18n_Translation-en"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "7.3 MB",
+                    "path": "/usr/share/i18n/locales/C"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "7.2 MB",
+                    "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial_main_binary-amd64_Packages"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "6.6 MB",
+                    "path": "/var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_xenial-security_main_i18n_Translation-en"
+                  }
+                ],
+                "efficiency_percent": 99.581,
+                "wasted_bytes": 93402306,
+                "wasted_bytes_display": "93 MB",
+                "user_wasted_percent": 0.5624
+              }
+            },
+            "counts": {
+              "passed": 61,
+              "failed": 1,
+              "skipped": 0,
+              "total_tests": 62
+            },
+            "failed_tests": [
+              {
+                "duration": 0.08912515640258789,
+                "message": "Expected exit code 0, got 1",
+                "name": "Exact architecture-specific runtime versions",
+                "return_code": 1,
+                "status": "failed",
+                "stderr": "Expected exit code 0, got 1",
+                "stdout": ""
+              }
+            ],
+            "evidence_directory": "/tmp/pydeface-upstream-x86-reports"
+          },
+          "aarch64": {
+            "report": {
+              "schema_version": 3,
+              "recipe": "pydeface",
+              "container": "pydeface_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
+              "version": "2.1.0",
+              "build_date": "20261013",
+              "docker_archive": "pydeface_arm64_2.1.0_20261013.docker.tar",
+              "sif": "pydeface_arm64_2.1.0_20261013.simg",
+              "candidate_tag": "nd-candidate-pydeface_arm64:7fb8e0ebfa9a",
+              "launcher": "pydeface",
+              "pr_number": 3580,
+              "head_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
+              "tests": {
+                "total": 62,
+                "passed": 59,
+                "failed": 3,
+                "skipped": 0,
+                "fulltest_total": 61,
+                "fulltest_passed": 58,
+                "fulltest_failed": 3,
+                "suites_total": 1,
+                "suites_passed": 0,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "pydeface version check",
+                  "pydeface help",
+                  "Basic defacing with default output",
+                  "Defacing with custom output path",
+                  "Defacing with force overwrite",
+                  "Defacing with corratio cost",
+                  "Defacing with normcorr cost",
+                  "Defacing with leastsq cost",
+                  "Defacing with applyto single image",
+                  "Defacing with nocleanup",
+                  "Defacing with verbose output",
+                  "FSL flirt version check",
+                  "FSL flirt basic registration",
+                  "FSL flirt with mutualinfo cost",
+                  "FSL flirt apply transform",
+                  "FSL convert_xfm invert",
+                  "FSL fslstats basic",
+                  "FSL fslstats volume",
+                  "FSL fslstats robust range"
+                ],
+                "failed_tests": [
+                  "Defacing with mutualinfo cost",
+                  "Defacing with normmi cost",
+                  "Deface T2 image"
+                ]
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "9.3 MB",
+                    "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "2.7 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.5 MB",
+                    "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.4 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "832 kB",
+                    "path": "/var/log/dpkg.log"
+                  }
+                ],
+                "efficiency_percent": 99.9122,
+                "wasted_bytes": 18148114,
+                "wasted_bytes_display": "18 MB",
+                "user_wasted_percent": 0.1501
+              }
+            },
+            "counts": {
+              "passed": 59,
+              "failed": 3,
+              "skipped": 0,
+              "total_tests": 62
+            },
+            "failed_tests": [
+              {
+                "duration": 600.0319681167603,
+                "message": "Timeout after 600s",
+                "name": "Defacing with mutualinfo cost",
+                "return_code": 0,
+                "status": "failed",
+                "stderr": "Timeout after 600s",
+                "stdout": ""
+              },
+              {
+                "duration": 300.10602355003357,
+                "message": "Timeout after 300s",
+                "name": "Defacing with normmi cost",
+                "return_code": 0,
+                "status": "failed",
+                "stderr": "Timeout after 300s",
+                "stdout": ""
+              },
+              {
+                "duration": 300.10607171058655,
+                "message": "Timeout after 300s",
+                "name": "Deface T2 image",
+                "return_code": 0,
+                "status": "failed",
+                "stderr": "Timeout after 300s",
+                "stdout": ""
+              }
+            ],
+            "evidence_directory": "/tmp/pydeface-upstream-arm-reports"
+          }
+        }
+      },
       "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "next_action": "A renewed per-recipe build budget is needed for at least one fresh native source and both upstream matrices after fixing x86 FSL version diagnostics and documented ARM timeout/thread-resource handling. Preserve current native62/62 and failed upstream evidence; leave PR3580 unmerged. This is not a fundamental ARM incompatibility claim.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.0",
@@ -21912,7 +22603,14 @@
         ]
       },
       "pending_upstream_issue": 3580,
-      "pr_number": 3580
+      "pr_number": 3580,
+      "budget_stop_review": {
+        "checked_at": "2026-10-13T11:14:10.283569+00:00",
+        "attempts_used": 4,
+        "remaining_build_attempts": 2,
+        "minimum_builds_for_changed_source_complete_proof": 3,
+        "reason": "Corrected fulltest/current candidate source requires a fresh root native build plus both upstream architecture builds;2 remaining attempts cannot complete that three-build lifecycle. Original native62/62 source proof retained. No failed source merged or substituted old proof."
+      }
     },
     {
       "recipe": "qmrlab",
@@ -22828,18 +23526,215 @@
       "port_files": [
         "recipes/qupath/build.yaml"
       ],
-      "status": "native-running",
+      "status": "merged",
       "branch": "arm64/upstream-qupath-20261012",
       "baseline_sha": "fc590d970f504a77b94c9a2936854d225dd11d80",
-      "candidate_sha": "5ece2c9e2b8d062bfada1cc1e82b98f18cf18300",
+      "candidate_sha": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
       "started_at": "2026-10-13T08:10:00+00:00",
       "deadline": "2026-10-13T20:10:00+00:00",
-      "attempts": 1,
-      "run_id": 38379565625,
-      "pr_url": null,
-      "upstream_ci": null,
-      "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "attempts": 4,
+      "run_id": 38388526902,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3582",
+      "upstream_ci": {
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "qupath",
+          "container": "qupath",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "0.7.0",
+          "build_date": "20261013",
+          "docker_archive": "qupath_0.7.0_20261013.docker.tar",
+          "sif": "qupath_0.7.0_20261013.simg",
+          "candidate_tag": "nd-candidate-qupath:091ad80b0b76",
+          "launcher": null,
+          "pr_number": 3582,
+          "head_sha": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
+          "tests": {
+            "total": 127,
+            "passed": 127,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 126,
+            "fulltest_passed": 126,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Version check",
+              "Version detailed info",
+              "Cellpose version check",
+              "Cellpose Python environment",
+              "Cellpose extension installed",
+              "Cellpose extension preconfigured",
+              "Main help",
+              "Help command overview",
+              "Help shows script command",
+              "Help shows convert-ome command",
+              "Script subcommand help",
+              "Script help shows groovy option",
+              "Script help shows cmd option",
+              "Script help shows args option",
+              "Script help shows image option",
+              "Script help shows project option",
+              "Script help shows save option",
+              "Script help shows server option",
+              "Convert-OME subcommand help"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "857 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8213,
+            "wasted_bytes": 20173489,
+            "wasted_bytes_display": "20 MB",
+            "user_wasted_percent": 0.2986
+          }
+        },
+        "candidate_run_id": 38390477575,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38390477575",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
+            "job_id": 115272860074,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38390477575/job/115272860074",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "aarch64": {
+            "head_sha": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
+            "job_id": 115272859973,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38390477575/job/115272859973",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "qupath",
+          "container": "qupath_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "0.7.0",
+          "build_date": "20261013",
+          "docker_archive": "qupath_arm64_0.7.0_20261013.docker.tar",
+          "sif": "qupath_arm64_0.7.0_20261013.simg",
+          "candidate_tag": "nd-candidate-qupath_arm64:091ad80b0b76",
+          "launcher": null,
+          "pr_number": 3582,
+          "head_sha": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
+          "tests": {
+            "total": 127,
+            "passed": 127,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 126,
+            "fulltest_passed": 126,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Version check",
+              "Version detailed info",
+              "Cellpose version check",
+              "Cellpose Python environment",
+              "Cellpose extension installed",
+              "Cellpose extension preconfigured",
+              "Main help",
+              "Help command overview",
+              "Help shows script command",
+              "Help shows convert-ome command",
+              "Script subcommand help",
+              "Script help shows groovy option",
+              "Script help shows cmd option",
+              "Script help shows args option",
+              "Script help shows image option",
+              "Script help shows project option",
+              "Script help shows save option",
+              "Script help shows server option",
+              "Convert-OME subcommand help"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.5 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "1.2 MB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.4855,
+            "wasted_bytes": 21136375,
+            "wasted_bytes_display": "21 MB",
+            "user_wasted_percent": 0.8261
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
+      },
+      "merged_sha": "c265491023ae2d34beb9438c2b6e1ee2e5f3d5e5",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "0.7.0",
@@ -22863,9 +23758,204 @@
         "https://www.cellpose.org/static/images/img02.png",
         "https://download.pytorch.org/whl/cpu/torch/"
       ],
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38379565625"
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38388526902",
+      "candidate_history": [
+        {
+          "candidate_sha": "5ece2c9e2b8d062bfada1cc1e82b98f18cf18300",
+          "run_id": 38379565625,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38379565625",
+          "counts": {
+            "passed": 125,
+            "failed": 2,
+            "skipped": 0,
+            "total_tests": 127
+          },
+          "failed_tests": [
+            {
+              "name": "Invalid command error",
+              "status": "failed",
+              "stdout": "Picked up JAVA_TOOL_OPTIONS: -Djava.util.prefs.userRoot=/home/runner/.config/qupath/java-prefs\nWARNING: Unknown module: javafx.graphics specified to --add-opens\nWARNING: Unknown module: javafx.base specified to --add-opens\nWARNING: Unknown module: javafx.web specified to --enable-native-access\nWARNING: Unknown module: javafx.graphics specified to --enable-native-access\nWARNING: Unknown module: javafx.media specified to --enable-native-access\nOct 13, 2026 10:04:09 AM com.sun.javafx.application.PlatformImpl startup\nWARNING: Unsupported JavaFX configuration: classes were loaded from 'unnamed module @131ef10'\nException in thread \"main\" java.lang.UnsupportedOperationException: Unable to open DISPLAY\n\tat com.sun.glass.ui.gtk.GtkApplication.<init>(GtkApplication.java:153)\n\tat com.sun.glass.ui.gtk.GtkPlatformFactory.createApplication(GtkPlatformFactory.java:40)\n\tat com.sun.glass.ui.Application.run(Application.java:143)\n\tat com.sun.javafx.tk.quantum.QuantumToolkit.startup(QuantumToolkit.java:284)\n\tat com.sun.javafx.application.PlatformImpl.startup(PlatformImpl.java:281)\n\tat com.sun.javafx.application.PlatformImpl.startup(PlatformImpl.java:159)\n\tat com.sun.javafx.application.LauncherImpl.startToolkit(LauncherImpl.java:657)\n\tat com.sun.javafx.application.LauncherImpl.launchApplication1(LauncherImpl.java:677)\n\tat com.sun.javafx.application.LauncherImpl.lambda$launchApplication$0(LauncherImpl.java:202)\n\tat java.base/java.lang.Thread.run(Unknown Source)\n",
+              "stderr": "Expected exit code 0, got 1",
+              "return_code": 1,
+              "duration": 1.4148471355438232,
+              "message": "Expected exit code 0, got 1"
+            },
+            {
+              "name": "Actual QuPath Cellpose extension CPU segmentation",
+              "status": "failed",
+              "stdout": "10:06:07.047 [main] [INFO ] qupath.lib.gui.prefs.PathPrefs - Setting default Locale to en_US\n10:06:07.050 [main] [INFO ] qupath.lib.gui.prefs.PathPrefs - Setting Locale for FORMAT to en_US\n10:06:07.051 [main] [INFO ] qupath.lib.gui.prefs.PathPrefs - Setting Locale for DISPLAY to en_US\n10:06:07.085 [main] [INFO ] qupath.lib.common.ThreadTools - Setting parallelism to 3\n10:06:07.103 [main] [INFO ] qupath.ScriptCommand - Setting tile cache size to 1994.00 MB (25.0% max memory)\n10:06:07.287 [main] [INFO ] qupath.lib.scripting.QP - Initializing type adapters\n10:06:08.175 [main] [INFO ] q.l.i.s.b.BioFormatsServerOptions - Setting max Bio-Formats readers to 4\n10:06:09.307 [main] [INFO ] q.ext.biop.cellpose.CellposeBuilder - Provided model '/opt/cellpose/models/cyto3' is a file. Assuming custom model\n10:06:09.308 [main] [ERROR] qupath.ScriptCommand - Cannot invoke \"qupath.lib.projects.Project.getPath()\" because the return value of \"qupath.lib.scripting.QP.getProject()\" is null in qupath-cellpose-integration.groovy at line number 19\njavax.script.ScriptException: Cannot invoke \"qupath.lib.projects.Project.getPath()\" because the return value of \"qupath.lib.scripting.QP.getProject()\" is null in qupath-cellpose-integration.groovy at line number 19\n\tat qupath.lib.gui.scripting.languages.DefaultScriptLanguage.execute(DefaultScriptLanguage.java:309)\n\tat qupath.ScriptCommand.runBatchScript(QuPath.java:524)\n\tat qupath.ScriptCommand.runSingleScript(QuPath.java:475)\n\tat qupath.ScriptCommand.run(QuPath.java:413)\n\tat picocli.CommandLine.executeUserObject(CommandLine.java:2045)\n\tat picocli.CommandLine.access$1500(CommandLine.java:148)\n\tat picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2469)\n\tat picocli.CommandLine$RunLast.handle(CommandLine.java:2461)\n\tat picocli.CommandLine$RunLast.handle(CommandLine.java:2423)\n\tat picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)\n\tat picocli.CommandLine$RunLast.execute(CommandLine.java:2425)\n\tat picocli.CommandLine.execute(CommandLine.java:2174)\n\tat qupath.QuPath.main(QuPath.java:208)\nCaused by: java.lang.NullPointerException: Cannot invoke \"qupath.lib.projects.Project.getPath()\" because the return value of \"qupath.lib.scripting.QP.getProject()\" is null\n\tat qupath.ext.biop.cellpose.CellposeBuilder.build(CellposeBuilder.java:904)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat qupath_cellpose_integration.run(qupath-cellpose-integration.groovy:19)\n\tat org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:331)\n\tat org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:161)\n\tat qupath.lib.gui.scripting.languages.DefaultScriptLanguage.execute(DefaultScriptLanguage.java:231)\n\t... 12 common frames omitted\n10:06:09.312 [main] [WARN ] qupath.QuPath - Calling System.exit with exit code 1\n",
+              "stderr": "Picked up JAVA_TOOL_OPTIONS: -Djava.util.prefs.userRoot=/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-m8zxeubq/work/test_output/qupath-private-prefs\nWARNING: Unknown module: javafx.graphics specified to --add-opens\nWARNING: Unknown module: javafx.base specified to --add-opens\nWARNING: Unknown module: javafx.web specified to --enable-native-access\nWARNING: Unknown module: javafx.graphics specified to --enable-native-access\nWARNING: Unknown module: javafx.media specified to --enable-native-access\njava.lang.RuntimeException: javax.script.ScriptException: Cannot invoke \"qupath.lib.projects.Project.getPath()\" because the return value of \"qupath.lib.scripting.QP.getProject()\" is null in qupath-cellpose-integration.groovy at line number 19\n\tat qupath.ScriptCommand.run(QuPath.java:424)\n\tat picocli.CommandLine.executeUserObject(CommandLine.java:2045)\n\tat picocli.CommandLine.access$1500(CommandLine.java:148)\n\tat picocli.CommandLine$RunLast.executeUserObjectOfLastSubcommandWithSameParent(CommandLine.java:2469)\n\tat picocli.CommandLine$RunLast.handle(CommandLine.java:2461)\n\tat picocli.CommandLine$RunLast.handle(CommandLine.java:2423)\n\tat picocli.CommandLine$AbstractParseResultHandler.execute(CommandLine.java:2277)\n\tat picocli.CommandLine$RunLast.execute(CommandLine.java:2425)\n\tat picocli.CommandLine.execute(CommandLine.java:2174)\n\tat qupath.QuPath.main(QuPath.java:208)\nCaused by: javax.script.ScriptException: Cannot invoke \"qupath.lib.projects.Project.getPath()\" because the return value of \"qupath.lib.scripting.QP.getProject()\" is null in qupath-cellpose-integration.groovy at line number 19\n\tat qupath.lib.gui.scripting.languages.DefaultScriptLanguage.execute(DefaultScriptLanguage.java:309)\n\tat qupath.ScriptCommand.runBatchScript(QuPath.java:524)\n\tat qupath.ScriptCommand.runSingleScript(QuPath.java:475)\n\tat qupath.ScriptCommand.run(QuPath.java:413)\n\t... 9 more\nCaused by: java.lang.NullPointerException: Cannot invoke \"qupath.lib.projects.Project.getPath()\" because the return value of \"qupath.lib.scripting.QP.getProject()\" is null\n\tat qupath.ext.biop.cellpose.CellposeBuilder.build(CellposeBuilder.java:904)\n\tat org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)\n\tat qupath_cellpose_integration.run(qupath-cellpose-integration.groovy:19)\n\tat org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:331)\n\tat org.codehaus.groovy.jsr223.GroovyScriptEngineImpl.eval(GroovyScriptEngineImpl.java:161)\n\tat qupath.lib.gui.scripting.languages.DefaultScriptLanguage.execute(DefaultScriptLanguage.java:231)\n\t... 12 more\nTraceback (most recent call last):\n  File \"<stdin>\", line 51, in <module>\n  File \"/usr/lib/python3.12/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['QuPath', 'script', '--image', '/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-m8zxeubq/work/test_output/qupath-cellpose-img02.png', '/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-m8zxeubq/work/test_output/qupath-cellpose-integration.groovy']' returned non-zero exit status 1.\n",
+              "return_code": 1,
+              "duration": 4.277596712112427,
+              "message": "Expected exit code 0, got 1"
+            }
+          ]
+        }
+      ],
+      "retry_hypothesis": "Native Gradle/jpackage, deploy and124/126 functional cases passed, including every analytical OME sample. The legacy top-level invalidcommand case starts the JavaFX GUI (Unable to open DISPLAY), so it never proved parser rejection. Exercise an actual invalid script option, retaining zero exit plus explicit parser diagnostic documented by QuPath.main. CellposeBuilder0.12.1 unconditionally requires QP.getProject().getPath() even with tempDirectory; create a real project/image entry and set batch project/image through its public API before invoking the unchanged extension. No GUI dependency workaround, fake project, deleted operation or scientific tolerance change.",
+      "deploy_skip_review": {
+        "reviewed": true,
+        "source_sha": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
+        "counts": {
+          "total": 129,
+          "passed": 123,
+          "failed": 0,
+          "skipped": 6
+        },
+        "skips": [
+          {
+            "name": "deploy_bins",
+            "status": "skipped",
+            "message": "DEPLOY_BINS not set."
+          },
+          {
+            "name": "ldd.summary.skipped:/usr/bin/env",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/cellpose/bin/python",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/cellpose/bin/python3",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/cellpose/bin/python3.12",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/usr/local/bin/QuPath/bin/QuPath",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          }
+        ],
+        "note": "Native aggregate127/127 and all126 functional cases passed. Nested deployment129 checks:123pass,0fail,6diagnostic skips: optional DEPLOY_BINS unset for the declared PATH deployment, plus five linkage summaries each omitting2 pathless lines. All declared directories/executable access checks and actual QuPath/Cellpose operations passed, including9216 exact OME pixel samples and the real extension importing102 valid nonempty cell ROIs with unchanged microscopy/model bytes. Omitted raw linkage lines are not retained, so their identities/full dynamic dependency closure are not independently proven. No essential functional test was skipped; this is scoped image/extension runtime proof, not exhaustive whole-slide formats or CUDA execution."
+      },
+      "native_command_exit_review": {
+        "source_sha": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": [
+          {
+            "test": "Missing input file for convert-ome",
+            "expected_exit_code": 255
+          },
+          {
+            "test": "Script syntax error handling",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Script missing file error",
+            "expected_exit_code": 1
+          }
+        ]
+      },
+      "native_evidence": {
+        "source_sha": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
+        "version": "0.7.0",
+        "counts": {
+          "total_tests": 127,
+          "passed": 127,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "total_suites": 1,
+          "suites_passed": 1,
+          "suites_failed": 0,
+          "total_tests": 126,
+          "tests_passed": 126,
+          "tests_failed": 0,
+          "duration": 320.7497172355652,
+          "run_timestamp": "2026-10-13T11:24:55.282999"
+        },
+        "deploy_counts": {
+          "total": 129,
+          "passed": 123,
+          "failed": 0,
+          "skipped": 6
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38388526902",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3582,
+      "pr_number": 3582,
+      "merged_at": "2026-10-13T12:41:52Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38399214210,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38399214210",
+        "status": "verified-published-metadata",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/qupath_arm64/0.7.0.json",
+            "expected_build_date": "20261013",
+            "committed_build_dates": [
+              "20261013"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
+            "metadata_commit_sha": "6da62215f2e485f3cab0ad0c8ae1ce1c87c5a79c",
+            "sif": "qupath_arm64_0.7.0_20261013.simg",
+            "sif_sha256": "c2338de17547af4dbe6f2862bc470a8ad9f6e4d83a7c08a222167608ef560d01",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/qupath_arm64_0.7.0_20261013.simg",
+            "public_sif_head_status": 200
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/qupath/0.7.0.json",
+            "expected_build_date": "20261013",
+            "committed_build_dates": [
+              "20261013"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
+            "metadata_commit_sha": "6da62215f2e485f3cab0ad0c8ae1ce1c87c5a79c",
+            "sif": "qupath_0.7.0_20261013.simg",
+            "sif_sha256": "37e6f745d15564bcb2b153ff6c2b76faf4e6bd4fe67af69f85367e05f82bfcd1",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/qupath_0.7.0_20261013.simg",
+            "public_sif_head_status": 200
+          }
+        ],
+        "checked_at": "2026-10-13T14:10:43.298327+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-qupath-091ad80b0b7659e848a03e07a3236a3cb6e8b41d)",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-lxm26",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-qupath_arm64-091ad80b0b7659e848a03e07a3236a3cb6e8b41d)",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-dmd4l",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-13T14:10:51.124194+00:00"
+      }
     },
     {
       "recipe": "radtract",
@@ -23573,18 +24663,18 @@
         "recipes/romeo/build.yaml",
         "recipes/romeo/fulltest.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
-      "pr_url": null,
-      "upstream_ci": null,
+      "status": "upstream-running",
+      "branch": "arm64/upstream-romeo-20261012",
+      "baseline_sha": "b2d0991a985ac119b7cebed45a067f30441356d5",
+      "candidate_sha": "076a343f25133f11f1e4ceb10c7021bbc71f0c46",
+      "started_at": "2026-10-13T11:20:00+00:00",
+      "deadline": "2026-10-13T23:20:00+00:00",
+      "attempts": 4,
+      "run_id": 38399590155,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3584",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "3.2.8",
@@ -23594,7 +24684,113 @@
         "port_patch_applies": true,
         "fulltest_version": "3.2.8",
         "test_count": 104
-      }
+      },
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Replay the previously accepted ROMEO CompileMRI4.9.0 port, using its official unchanged Julia1.10.12 ARM source-build configuration and matching released x86 archive. ROMEO upstream redirects executable downloads to CompileMRI; preserve both architecture implementations at the same4.9.0 version and the known CLI compatibility corrections. Keep all104 existing cases and make synthetic phase generation mandatory on the host, following the already verified Mritools fixture workflow; remove seven silent synthetic skip branches and four error-handling shell fallbacks, asserting actual exit1 and diagnostics. Add the already independently verified729-voxel analytical phase-ramp oracle, requiring every relative unwrapped phase value within32float32 eps, a span greater than2pi, exact physical header geometry and unchanged input. Track main release, source archive digest and compatible Julia1.10 runtime/digest explicitly. No Julia/compiler/library source port, changed algorithm or weakened existing tolerances. Historical105/105 proof remains separate from this exact new candidate.",
+      "pr_title": "Enable ROMEO ARM64 with mandatory phase tests and analytical unwrapping proof",
+      "primary_source_review": [
+        "https://github.com/korbinian90/ROMEO",
+        "https://github.com/korbinian90/CompileMRI.jl/releases/tag/v4.9.0",
+        "https://github.com/korbinian90/CompileMRI.jl/blob/v4.9.0/README.md",
+        "https://github.com/korbinian90/CompileMRI.jl/blob/v4.9.0/App/Project.toml",
+        "https://julialang-s3.julialang.org/bin/versions.json",
+        "https://github.com/korbinian90/ROMEO.jl/tree/v1.6.0"
+      ],
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38399590155",
+      "candidate_history": [
+        {
+          "source_sha": "b5c44e7ae51794d98376d90a8b53ea6b419f3960",
+          "run_id": 38391152550,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38391152550",
+          "counts": {
+            "passed": 1,
+            "failed": 1,
+            "skipped": 0,
+            "total_tests": 1
+          },
+          "failed_tests": [
+            {
+              "name": "Setup (host)",
+              "status": "failed",
+              "stdout": "",
+              "stderr": "Host setup failed: Traceback (most recent call last):\n  File \"/home/runner/work/_temp/setup-uv-cache/environments-v2/run-tests-acd3fe3e01cbf6a2/lib/python3.10/site-packages/nibabel/loadsave.py\", line 104, in load\n    stat_result = os.stat(filename)\nFileNotFoundError: [Errno 2] No such file or directory: 'ds000001/sub-01/anat/sub-01_T1w.nii.gz'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<stdin>\", line 5, in <module>\n  File \"/home/runner/work/_temp/setup-uv-cache/environments-v2/run-tests-acd3fe3e01cbf6a2/lib/python3.10/site-packages/nibabel/loadsave.py\", line 106, in load\n    raise FileNotFoundError(f\"No such file or no access: '{filename}'\")\nFileNotFoundError: No such file or no access: 'ds000001/sub-01/anat/sub-01_T1w.nii.gz'\n",
+              "return_code": 1,
+              "duration": 0,
+              "message": "Host setup failed: Traceback (most recent call last):\n  File \"/home/runner/work/_temp/setup-uv-cache/environments-v2/run-tests-acd3fe3e01cbf6a2/lib/python3.10/site-packages/nibabel/loadsave.py\", line 104, in load\n    stat_result = os.stat(filename)\nFileNotFoundError: [Errno 2] No such file or directory: 'ds000001/sub-01/anat/sub-01_T1w.nii.gz'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"<stdin>\", line 5, in <module>\n  File \"/home/runner/work/_temp/setup-uv-cache/environments-v2/run-tests-acd3fe3e01cbf6a2/lib/python3.10/site-packages/nibabel/loadsave.py\", line 106, in load\n    raise FileNotFoundError(f\"No such file or no access: '{filename}'\")\nFileNotFoundError: No such file or no access: 'ds000001/sub-01/anat/sub-01_T1w.nii.gz'\n"
+            }
+          ],
+          "retry_hypothesis": "Native compilation, architecture verification and SIF conversion passed. Mandatory host setup then failed before any functional test because its hardcoded relative ds000001 path is not the data loader's host cache path. Use the runner-substituted ${t1w} absolute host input, as the already verified Mritools fixture does. Keep the exact required dataset, synthetic equations/geometry and all105 cases, with no optional fixture fallback. Locally executed the actual host script against a differently located24-cubed NIfTI and verified all5 finite expected synthetic volumes and exact affine, plus parsed105shell commands and embedded Python. This is a fixture path correction, not an image compilation or scientific algorithm failure."
+        }
+      ],
+      "retry_hypothesis": "Native compilation, architecture verification and SIF conversion passed. Mandatory host setup then failed before any functional test because its hardcoded relative ds000001 path is not the data loader's host cache path. Use the runner-substituted ${t1w} absolute host input, as the already verified Mritools fixture does. Keep the exact required dataset, synthetic equations/geometry and all105 cases, with no optional fixture fallback. Locally executed the actual host script against a differently located24-cubed NIfTI and verified all5 finite expected synthetic volumes and exact affine, plus parsed105shell commands and embedded Python. This is a fixture path correction, not an image compilation or scientific algorithm failure.",
+      "deploy_skip_review": {
+        "source_sha": "076a343f25133f11f1e4ceb10c7021bbc71f0c46",
+        "reviewed": true,
+        "counts": {
+          "total": 41,
+          "passed": 34,
+          "failed": 0,
+          "skipped": 7
+        },
+        "note": "Deployment41 checks:34passed,0failed,7diagnostic skips. DEPLOY_BINS is unset because the recipe declares PATH deployment, whose directory/access/executable checks passed. Each of the6 installed Julia/application executables has2 omitted pathless linkage entries; raw omitted lines were not retained, so their identities and full dependency closure are not independently established. All105 functional cases ran and passed, including the729-voxel phase/physical-geometry oracle; no essential functional test was skipped."
+      },
+      "native_command_exit_review": {
+        "source_sha": "076a343f25133f11f1e4ceb10c7021bbc71f0c46",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": [
+          {
+            "test": "Error on missing input file",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Error on invalid mask option",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Error on invalid weight option",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Error on missing echo times for multi-echo",
+            "expected_exit_code": 1
+          }
+        ]
+      },
+      "native_evidence": {
+        "source_sha": "076a343f25133f11f1e4ceb10c7021bbc71f0c46",
+        "version": "4.9.0",
+        "counts": {
+          "total_tests": 106,
+          "passed": 106,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "total_suites": 1,
+          "suites_passed": 1,
+          "suites_failed": 0,
+          "total_tests": 105,
+          "tests_passed": 105,
+          "tests_failed": 0,
+          "duration": 347.99587535858154,
+          "run_timestamp": "2026-10-13T13:15:14.799022"
+        },
+        "deploy_counts": {
+          "total": 41,
+          "passed": 34,
+          "failed": 0,
+          "skipped": 7
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38399590155",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3584,
+      "pr_number": 3584
     },
     {
       "recipe": "root",
@@ -23615,18 +24811,215 @@
         "recipes/root/build.yaml",
         "recipes/root/fulltest.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
-      "pr_url": null,
-      "upstream_ci": null,
-      "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "status": "merged",
+      "branch": "arm64/upstream-root-20261012",
+      "baseline_sha": "fc590d970f504a77b94c9a2936854d225dd11d80",
+      "candidate_sha": "6410b7466ada12982d23dcacd26ec0eee6a96265",
+      "started_at": "2026-10-13T09:10:00+00:00",
+      "deadline": "2026-10-13T21:10:00+00:00",
+      "attempts": 3,
+      "run_id": 38387988132,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3581",
+      "upstream_ci": {
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "root",
+          "container": "root",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "6.24.06",
+          "build_date": "20261013",
+          "docker_archive": "root_6.24.06_20261013.docker.tar",
+          "sif": "root_6.24.06_20261013.simg",
+          "candidate_tag": "nd-candidate-root:6410b7466ada",
+          "launcher": "root",
+          "pr_number": 3581,
+          "head_sha": "6410b7466ada12982d23dcacd26ec0eee6a96265",
+          "tests": {
+            "total": 104,
+            "passed": 104,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 103,
+            "fulltest_passed": 103,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "ROOT version check",
+              "ROOT config version",
+              "ROOT features list",
+              "ROOT has FFTW3",
+              "ROOT has RooFit",
+              "ROOT has TMVA",
+              "ROOT has MathMore",
+              "ROOT has Minuit2",
+              "ROOT has PyROOT",
+              "ROOT architecture",
+              "ROOT library path",
+              "ROOT include path",
+              "ROOT linker flags",
+              "ROOT interpreter basic test",
+              "ROOT cout output",
+              "TMath Pi constant",
+              "TMath E constant",
+              "TMath Abs function",
+              "TMath Sqrt function"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 3,
+                "wasted_space": "119 MB",
+                "path": "/var/lib/rpm/Packages"
+              },
+              {
+                "count": 2,
+                "wasted_space": "16 MB",
+                "path": "/etc/udev/hwdb.bin"
+              },
+              {
+                "count": 3,
+                "wasted_space": "12 MB",
+                "path": "/var/lib/rpm/Basenames"
+              },
+              {
+                "count": 3,
+                "wasted_space": "5.5 MB",
+                "path": "/var/lib/yum/history/history-2021-12-01.sqlite"
+              },
+              {
+                "count": 3,
+                "wasted_space": "5.5 MB",
+                "path": "/var/lib/rpm/Providename"
+              }
+            ],
+            "efficiency_percent": 95.6299,
+            "wasted_bytes": 215599261,
+            "wasted_bytes_display": "216 MB",
+            "user_wasted_percent": 8.273
+          }
+        },
+        "candidate_run_id": 38389386576,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38389386576",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "6410b7466ada12982d23dcacd26ec0eee6a96265",
+            "job_id": 115269253400,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38389386576/job/115269253400",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "aarch64": {
+            "head_sha": "6410b7466ada12982d23dcacd26ec0eee6a96265",
+            "job_id": 115269253338,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38389386576/job/115269253338",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "root",
+          "container": "root_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "6.24.06",
+          "build_date": "20261013",
+          "docker_archive": "root_arm64_6.24.06_20261013.docker.tar",
+          "sif": "root_arm64_6.24.06_20261013.simg",
+          "candidate_tag": "nd-candidate-root_arm64:6410b7466ada",
+          "launcher": "root",
+          "pr_number": 3581,
+          "head_sha": "6410b7466ada12982d23dcacd26ec0eee6a96265",
+          "tests": {
+            "total": 104,
+            "passed": 104,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 103,
+            "fulltest_passed": 103,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "ROOT version check",
+              "ROOT config version",
+              "ROOT features list",
+              "ROOT has FFTW3",
+              "ROOT has RooFit",
+              "ROOT has TMVA",
+              "ROOT has MathMore",
+              "ROOT has Minuit2",
+              "ROOT has PyROOT",
+              "ROOT architecture",
+              "ROOT library path",
+              "ROOT include path",
+              "ROOT linker flags",
+              "ROOT interpreter basic test",
+              "ROOT cout output",
+              "TMath Pi constant",
+              "TMath E constant",
+              "TMath Abs function",
+              "TMath Sqrt function"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "804 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.69,
+            "wasted_bytes": 18018338,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.5447
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
+      },
+      "merged_sha": "35d1a24902a68b0a0858d5ffe3f36753f0f84d1f",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "6.24.06",
@@ -23652,7 +25045,137 @@
           "merge_sha": "a913d5d55e8bb34eaa480b4ce3a904866cd9ff42",
           "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
         }
-      ]
+      ],
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Enable native ROOT6.24.06 ARM64 using its published conda-forge root_base6.24.6/Python3.10 packages in an isolated environment, following ROOT official conda installation/activation instructions. Preserve the exact existing x86 CentOS7 image and release version. Official package metadata confirms12 matching ARM builds; no LLVM/library source port or version upgrade. Activate the native environment in launchers for ROOT and its bundled utilities. Preserve every existing functional case and numerical threshold, remove ignored exits and the hadd shell fallback, and append a final void expression to each ROOT CLI evaluation: source TRint Run processes it only after successful prior interpretation and breaks first on interpreter errors/signals. Assert hadd help documented exit1. Add a deliberate compiler-error case proving normalization cannot hide an error, plus complete deterministic TTree/histogram file roundtrip and real analytical linear-fit checks. No scientific implementation patch or tolerance changes.",
+      "pr_title": "Enable ROOT ARM64 at the existing version with strict interpreter and numerical tests",
+      "primary_source_review": [
+        "https://root.cern.ch/install/",
+        "https://api.anaconda.org/package/conda-forge/root_base",
+        "https://hub.docker.com/v2/repositories/rootproject/root/tags?page_size=100&name=6.24",
+        "https://github.com/root-project/root-docker/blob/master/conda/Dockerfile",
+        "https://github.com/root-project/root-docker/blob/master/conda/entry_point.sh",
+        "https://github.com/root-project/root/blob/v6-24-06/core/rint/src/TRint.cxx",
+        "https://github.com/root-project/root/blob/v6-24-06/main/src/hadd.cxx"
+      ],
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38387988132",
+      "native_command_exit_review": {
+        "source_sha": "6410b7466ada12982d23dcacd26ec0eee6a96265",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": [
+          {
+            "test": "hadd help check",
+            "expected_exit_code": 1
+          },
+          {
+            "test": "Interpreter errors remain strict after successful-result normalization",
+            "expected_exit_code": 1
+          }
+        ]
+      },
+      "native_evidence": {
+        "source_sha": "6410b7466ada12982d23dcacd26ec0eee6a96265",
+        "version": "6.24.06",
+        "counts": {
+          "total_tests": 104,
+          "passed": 104,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 268.26480412483215,
+          "run_timestamp": "2026-10-13T11:17:34.263966",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 103,
+          "total_suites": 1,
+          "total_tests": 103
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38387988132",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3581,
+      "pr_number": 3581,
+      "merged_at": "2026-10-13T11:35:35Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38391289134,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38391289134",
+        "status": "verified-published-metadata",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/root_arm64/6.24.06.json",
+            "expected_build_date": "20261013",
+            "committed_build_dates": [
+              "20261013"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "6410b7466ada12982d23dcacd26ec0eee6a96265",
+            "metadata_commit_sha": "cc96ba166be1bdd9d2a3041e2e1b343f67d54984",
+            "sif": "root_arm64_6.24.06_20261013.simg",
+            "sif_sha256": "a7d97a4b10fea2a5a0328e237050039b0b8b2b276b0887c8a29d0bb7e10db9b9",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/root_arm64_6.24.06_20261013.simg",
+            "public_sif_head_status": 200
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/root/6.24.06.json",
+            "expected_build_date": "20261013",
+            "committed_build_dates": [
+              "20261013"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "6410b7466ada12982d23dcacd26ec0eee6a96265",
+            "metadata_commit_sha": "cc96ba166be1bdd9d2a3041e2e1b343f67d54984",
+            "sif": "root_6.24.06_20261013.simg",
+            "sif_sha256": "7bd8da24b1a4aa8dfa838d046bfcbac262ee1cef04749e24389ac623f1ea2767",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/root_6.24.06_20261013.simg",
+            "public_sif_head_status": 200
+          }
+        ],
+        "checked_at": "2026-10-13T12:45:43.471482+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-root_arm64-6410b7466ada12982d23dcacd26ec0eee6a96265)",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-62rqv",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-root-6410b7466ada12982d23dcacd26ec0eee6a96265)",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-5xrt8",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-13T12:45:51.319862+00:00"
+      }
     },
     {
       "recipe": "rshrf",
@@ -24792,18 +26315,18 @@
       "port_files": [
         "recipes/soopct/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-soopct-20261012",
+      "baseline_sha": "c265491023ae2d34beb9438c2b6e1ee2e5f3d5e5",
+      "candidate_sha": "ccbc89d78c8de06e1047f201acf4403bdeaebc61",
+      "started_at": "2026-10-13T11:35:00+00:00",
+      "deadline": "2026-10-13T23:35:00+00:00",
+      "attempts": 2,
+      "run_id": 38410948381,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.0",
@@ -24813,7 +26336,48 @@
         "port_patch_applies": true,
         "fulltest_version": "0.0.0",
         "test_count": 6
-      }
+      },
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Reuse the already proven SOOP-CT native ARM source-build recipe for official ANTsPy0.5.4 on Python3.11/Ubuntu24, keeping the existing x86 Python3.13/ANTs route. Respect ANTsPy's NumPy<=2.0.1 requirement on ARM and use the distribution libstdc++ runtime already proven for this source build. Pin current BrainChop0.2.5 on both architectures and track its PyPI update plus exact source/fulltest variables. Preserve all6 original cases and the already-upstream CLI compatibility patch. Replace the warning-only nonexistent soopct package installation check with real dependency/script assertions. Add pip closure/source identity, real ANTs analytical identity resampling, every-voxel analytical group mean, and actual trained mindgrab CPU inference through3best2anon plus exact BIDS image/sidecar roundtrip. Model listing/config/weights are official immutable checksummed bytes. No library/compiler port, scientific implementation patch, fake model or replaced operation. Optional MNI normalization still requires external FreeSurfer/SynthSR and a license, as official upstream documents; model runtime consistency does not establish clinical deidentification efficacy.",
+      "pr_title": "Enable SOOP-CT ARM64 and verify CT inference, transforms and image outputs",
+      "primary_source_review": [
+        "https://github.com/rordenlab/soop-ct/tree/9c9d56da66590e9daf6943ee91a18b3d72312c02",
+        "https://pypi.org/pypi/antspyx/0.5.4/json",
+        "https://github.com/ANTsX/ANTsPy",
+        "https://pypi.org/pypi/brainchop/0.2.5/json",
+        "https://github.com/neuroneural/brainchop-cli/tree/51a95a6a1f84546a317aabe171b29f34e093b970",
+        "https://github.com/neuroneural/brainchop-models/tree/528f2d8d2ca937968b2d4b2b9ef9fa9170f4b9cf"
+      ],
+      "arm64_attempts": 2,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38410948381",
+      "candidate_history": [
+        {
+          "source_sha": "059ef3fdb603337b6fb6c266bba2594e5aac1278",
+          "run_id": 38400515276,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38400515276",
+          "counts": {
+            "passed": 10,
+            "failed": 1,
+            "skipped": 0,
+            "total_tests": 11
+          },
+          "failed_tests": [
+            {
+              "duration": 2.2896969318389893,
+              "message": "Expected exit code 0, got 1",
+              "name": "Actual CT model inference and BIDS conversion",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "niimath failed (exit 1): niimath /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-190gj_gc/work/test_output/soopct/tmpf7vqhp8c/anon/1_ct.nii -h2c -conform -gz 0 - -odt char\nTraceback (most recent call last):\n  File \"/opt/miniconda/bin/niimath\", line 5, in <module>\n    from niimath import main\n  File \"/opt/miniconda/lib/python3.11/site-packages/niimath/__init__.py\", line 38, in <module>\n    os.chmod(bin, os.stat(bin).st_mode | 0o111)\nOSError: [Errno 30] Read-only file system: '/opt/miniconda/lib/python3.11/site-packages/niimath/bin/niimath'\nniimath failed (exit 1): niimath - -h2c -conform -gz 0 - -odt char\nTraceback (most recent call last):\n  File \"/opt/miniconda/bin/niimath\", line 5, in <module>\n    from niimath import main\n  File \"/opt/miniconda/lib/python3.11/site-packages/niimath/__init__.py\", line 38, in <module>\n    os.chmod(bin, os.stat(bin).st_mode | 0o111)\nOSError: [Errno 30] Read-only file system: '/opt/miniconda/lib/python3.11/site-packages/niimath/bin/niimath'\nTraceback (most recent call last):\n  File \"/opt/miniconda/lib/python3.11/site-packages/brainchop/niimath/__init__.py\", line 22, in _run_niimath\n    return subprocess.run(cmd, input=input, capture_output=True, check=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['niimath', '/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-190gj_gc/work/test_output/soopct/tmpf7vqhp8c/anon/1_ct.nii', '-h2c', '-conform', '-gz', '0', '-', '-odt', 'char']' returned non-zero exit status 1.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/miniconda/lib/python3.11/site-packages/brainchop/niimath/__init__.py\", line 319, in conform\n    out = _run_niimath(_conform_args(str(inp))).stdout\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/brainchop/niimath/__init__.py\", line 29, in _run_niimath\n    raise RuntimeError(msg) from e\nRuntimeError: niimath failed (exit 1): niimath /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-190gj_gc/work/test_output/soopct/tmpf7vqhp8c/anon/1_ct.nii -h2c -conform -gz 0 - -odt char\nTraceback (most recent call last):\n  File \"/opt/miniconda/bin/niimath\", line 5, in <module>\n    from niimath import main\n  File \"/opt/miniconda/lib/python3.11/site-packages/niimath/__init__.py\", line 38, in <module>\n    os.chmod(bin, os.stat(bin).st_mode | 0o111)\nOSError: [Errno 30] Read-only file system: '/opt/miniconda/lib/python3.11/site-packages/niimath/bin/niimath'\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/opt/miniconda/lib/python3.11/site-packages/brainchop/niimath/__init__.py\", line 22, in _run_niimath\n    return subprocess.run(cmd, input=input, capture_output=True, check=True)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['niimath', '-', '-h2c', '-conform', '-gz', '0', '-', '-odt', 'char']' returned non-zero exit status 1.\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/opt/miniconda/bin/brainchop\", line 8, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/brainchop/cli.py\", line 153, in main\n    vol = load(abs_path, crop=args.crop, ct=args.ct, comply=args.comply)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/brainchop/api.py\", line 182, in load\n    return _load_single(path, crop=crop, ct=ct, comply=comply)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/brainchop/api.py\", line 141, in _load_single\n    data, header = conform(os.path.abspath(path), ct=ct, comply=comply)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/brainchop/niimath/__init__.py\", line 329, in conform\n    out = _run_niimath(_conform_args(\"-\"), input=piped).stdout\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/brainchop/niimath/__init__.py\", line 29, in _run_niimath\n    raise RuntimeError(msg) from e\nRuntimeError: niimath failed (exit 1): niimath - -h2c -conform -gz 0 - -odt char\nTraceback (most recent call last):\n  File \"/opt/miniconda/bin/niimath\", line 5, in <module>\n    from niimath import main\n  File \"/opt/miniconda/lib/python3.11/site-packages/niimath/__init__.py\", line 38, in <module>\n    os.chmod(bin, os.stat(bin).st_mode | 0o111)\nOSError: [Errno 30] Read-only file system: '/opt/miniconda/lib/python3.11/site-packages/niimath/bin/niimath'\nTraceback (most recent call last):\n  File \"/soop-ct/3best2anon.py\", line 73, in do_brainchop\n    subprocess.run(cmd, check=True)\n  File \"/opt/miniconda/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['brainchop', PosixPath('/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-190gj_gc/work/test_output/soopct/tmpf7vqhp8c/anon/1_ct.nii'), '-m', 'mindgrab', '--no-optimize', '-o', PosixPath('/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-190gj_gc/work/test_output/soopct/tmpf7vqhp8c/anon/1_ct.nii'), '--ct', '--border', '25']' returned non-zero exit status 1.\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/soop-ct/3best2anon.py\", line 140, in <module>\n    main(Path(args.input_dir), Path(args.output_dir))\n  File \"/soop-ct/3best2anon.py\", line 110, in main\n    do_brainchop(new_nii, new_nii, modality == \"ct\", border)\n  File \"/soop-ct/3best2anon.py\", line 75, in do_brainchop\n    raise RuntimeError(f\"brainchop failed: {e}\")\nRuntimeError: brainchop failed: Command '['brainchop', PosixPath('/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-190gj_gc/work/test_output/soopct/tmpf7vqhp8c/anon/1_ct.nii'), '-m', 'mindgrab', '--no-optimize', '-o', PosixPath('/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-190gj_gc/work/test_output/soopct/tmpf7vqhp8c/anon/1_ct.nii'), '--ct', '--border', '25']' returned non-zero exit status 1.\nTraceback (most recent call last):\n  File \"<stdin>\", line 31, in <module>\n  File \"/opt/miniconda/lib/python3.11/subprocess.py\", line 571, in run\n    raise CalledProcessError(retcode, process.args,\nsubprocess.CalledProcessError: Command '['/opt/miniconda/bin/python', '/soop-ct/3best2anon.py', '/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-190gj_gc/work/test_output/soopct/best', '/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-190gj_gc/work/test_output/soopct/tmpf7vqhp8c/anon']' returned non-zero exit status 1.\n",
+              "stdout": "brainchop :: [1/1] /home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-190gj_gc/work/test_output/soopct/tmpf7vqhp8c/anon/1_ct.nii\n"
+            }
+          ],
+          "retry_hypothesis": "The native source build and Docker/architecture/SIF/deployment passed, with9/10 functional cases passing: all6 original cases, exact dependency closure,6783-voxel native ANTs identity operation, and all1287 group-mean values/geometry. Actual BrainChop CT inference stopped in the niimath console launcher before any network execution: the upstream wheel's __init__.py unconditionally chmods its own binary, raising EROFS inside the read-only SIF. Official niimath1.0.20260924 provides native ARM/x86 wheel binaries; its launcher only delegates the arguments and exit status unchanged. At image build time, make that exact bundled binary executable and symlink the niimath command directly to it. Do not patch the binary/library, use another implementation, or make the image writable. Add an assertion that the deployed command resolves to the wheel's own binary. Keep actual model inference, all image/BIDS assertions, unchanged scientific thresholds and original budget. Source inspected from the exact official PyPI wheel and https://github.com/rordenlab/niimath."
+        }
+      ],
+      "retry_hypothesis": "The native source build and Docker/architecture/SIF/deployment passed, with9/10 functional cases passing: all6 original cases, exact dependency closure,6783-voxel native ANTs identity operation, and all1287 group-mean values/geometry. Actual BrainChop CT inference stopped in the niimath console launcher before any network execution: the upstream wheel's __init__.py unconditionally chmods its own binary, raising EROFS inside the read-only SIF. Official niimath1.0.20260924 provides native ARM/x86 wheel binaries; its launcher only delegates the arguments and exit status unchanged. At image build time, make that exact bundled binary executable and symlink the niimath command directly to it. Do not patch the binary/library, use another implementation, or make the image writable. Add an assertion that the deployed command resolves to the wheel's own binary. Keep actual model inference, all image/BIDS assertions, unchanged scientific thresholds and original budget. Source inspected from the exact official PyPI wheel and https://github.com/rordenlab/niimath."
     },
     {
       "recipe": "sovabids",
@@ -25447,18 +27011,18 @@
       "port_files": [
         "recipes/synthstrip/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-synthstrip-20261012",
+      "baseline_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
+      "candidate_sha": "b39a7cf0fd97b9dd6d035b376fabfff59c5d4aad",
+      "started_at": "2026-10-13T12:50:00+00:00",
+      "deadline": "2026-10-14T00:50:00+00:00",
+      "attempts": 1,
+      "run_id": 38411073044,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "7.4.1",
@@ -25478,7 +27042,20 @@
           "merge_sha": "1bf329f739577e8aa338653814b9b3dcb9b2f1e8",
           "note": "Read-only duplicate-work check; not adopted or verified. Inspect architecture reports, current build inputs and scientific test coverage before reuse."
         }
-      ]
+      ],
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Enable ARM64 for current SynthStrip8.2.0 using the already proven portable standalone source and unchanged official CPU torch2.2.2, whose CPython3.10 Linux ARM wheel is published. Preserve Ubuntu22, both trained default/no-CSF models, exact x86 installation and every70 original functional case/numerical criterion. Add pip closure and require the installed torch version. Remove shell error fallbacks and explicitly require official SynthStrip help/version/bare-command exit1 plus diagnostics, missing-input exit1, NiBabel different-file exit1 and all other real zero exits. Make repeated binary-mask reproducibility exact. Add every-voxel mask/fill consistency for actual default/no-CSF/T2 outputs with only NIfTI storage precision allowance, physical geometry and unchanged input/checkpoint bytes. Set ordinary2-thread CPU limits in tests, retaining all operations/timeouts. No source/model/algorithm patches, new dependency port or substituted inference.",
+      "pr_title": "Enable native SynthStrip ARM64 and enforce trained-model output checks",
+      "primary_source_review": [
+        "https://surfer.nmr.mgh.harvard.edu/docs/synthstrip/",
+        "https://raw.githubusercontent.com/freesurfer/freesurfer/v8.2.0/mri_synthstrip/mri_synthstrip",
+        "https://pypi.org/pypi/torch/2.2.2/json",
+        "https://github.com/nipy/nibabel/blob/5.4.2/nibabel/cmdline/diff.py"
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38411073044"
     },
     {
       "recipe": "synthstroke",
@@ -28536,11 +30113,11 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "sha": "fc590d970f504a77b94c9a2936854d225dd11d80",
-    "checked_at": "2026-10-13T09:51:10.847284+00:00",
-    "actions_enabled": false,
+    "checked_at": "2026-10-13T14:13:24.720896+00:00",
+    "previous_sha": "fc590d970f504a77b94c9a2936854d225dd11d80",
+    "new_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
     "method": "normal-fast-forward",
-    "previous_sha": "c29a42ecca709cda96875cd0cb6561861c5ba60e"
+    "actions_enabled": false
   },
   "runtime_release_routing_fix": {
     "status": "merged",
