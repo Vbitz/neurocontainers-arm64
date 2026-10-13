@@ -9833,8 +9833,8 @@
         ]
       },
       "native_scientific_review": {
-        "source_sha": "b45f02c6876306edd2dd0208443536687b11c251",
-        "actual_case_duration": 23.75147318840027,
+        "source_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
+        "actual_case_duration": 24.51167869567871,
         "input_shape": [
           256,
           256,
@@ -9853,7 +9853,10 @@
         ],
         "exact_axis_flip_correspondence": true,
         "physical_geometry": "Both original affines/spacing retained within NIfTI float32 storage precision. Earlier candidate origin mismatch up to2mm fixed by one-line application writer selection, not by changed tolerance/resampling.",
-        "limitations": "CPU inference, I/O and model consistency verified; no GPU or clinical accuracy claim."
+        "limitations": "CPU inference, I/O and model consistency verified; no GPU or clinical accuracy claim.",
+        "actual_zero_exit_functional_commands": 4,
+        "model_seconds": 23.2,
+        "native_run_id": 38462896594
       },
       "pending_upstream_issue": 3596,
       "pr_number": 3596,
@@ -9953,7 +9956,32 @@
         }
       ],
       "submission_branch": "arm64/upstream-fetalsynthseg-20261012",
-      "reuse_existing_upstream_pr": true
+      "reuse_existing_upstream_pr": true,
+      "native_scientific_review_history": [
+        {
+          "source_sha": "b45f02c6876306edd2dd0208443536687b11c251",
+          "actual_case_duration": 23.75147318840027,
+          "input_shape": [
+            256,
+            256,
+            256
+          ],
+          "real_model_inputs": 2,
+          "labels": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "exact_axis_flip_correspondence": true,
+          "physical_geometry": "Both original affines/spacing retained within NIfTI float32 storage precision. Earlier candidate origin mismatch up to2mm fixed by one-line application writer selection, not by changed tolerance/resampling.",
+          "limitations": "CPU inference, I/O and model consistency verified; no GPU or clinical accuracy claim."
+        }
+      ]
     },
     {
       "recipe": "fitlins",
@@ -15304,7 +15332,7 @@
       "port_files": [
         "recipes/lesionquantificationtoolkit/build.yaml"
       ],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-lesionquantificationtoolkit-20261012",
       "baseline_sha": "2c65fa97b415a35a2855c45bbbe27df6bd394931",
       "candidate_sha": "c7c1c3b78693ed04ddab60b14d18409c2991e197",
@@ -15315,7 +15343,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "0.1.0",
@@ -15328,8 +15356,8 @@
       },
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
-      "change_summary": "Declare ARM64 for the existing Ubuntu24.04 R source installation without changing x86 inputs or scientific implementation. Retain all100 existing fulltests and add actual public LQT parcel-damage and structural shortest-path calculations using documented cfg input structures. Check all192 NIfTI voxels and geometry for independently known100/50/25/0 percent damage; check exact four-node atlas/patient distances, direct/indirect lesion disconnection matrices, output edge/node files and parcel averages, plus unchanged input hashes. These fixtures supply analytical lesion/parcellation/connectivity data, not stub tools or model outputs. Full DSI Studio tractography and default template-download/configuration workflow remain external prerequisites and are not claimed as verified: the upstream download helper installs a macOS DSI application on Unix and writes into the installed package. No placeholder DSI binary or skipped existing test.",
-      "pr_title": "Enable LQT ARM64 and verify exact lesion damage and structural paths",
+      "change_summary": "LQT0.1.0 writes character-valued graph node matrices with base R write() defaulting to one column, producing malformed external-viewer files after otherwise correct shortest-path calculations. Apply a declared, guarded application I/O correction to exactly two write calls: ncolumns=ncol(C), preserving six XYZ/color/size/label columns and every scientific calculation. Keep the pinned official sourceab5801bd, CRAN/system dependency paths and x86 support, declare ARM64 and expose R/Rscript. Retain all100 original tests and add exact192-voxel100/50/25/0percent parcel damage with NIfTI geometry/input hashes, plus independently known four-node atlas/patient shortest paths, direct/indirect disconnection matrices, exact edge/node output files and parcel averages. Full103/103 native checks passed with zero skips; the earlier NIfTI fixture correction constructs raw arrays before S4 wrapping rather than unsupported empty-index assignment. The node writer is application output formatting, not a third-party native library/compiler port. Public parcel/graph APIs are verified; DSI Studio tractography and the default external-template downloader remain prerequisites and are not claimed as tested.",
+      "pr_title": "Correct LQT graph node files and verify native ARM64 lesion calculations",
       "primary_source_review": [
         "https://github.com/jdwor/LQT/tree/ab5801bd5ef2d5a9c3c6d75c332d0ef2fa6968b8",
         "https://raw.githubusercontent.com/jdwor/LQT/ab5801bd5ef2d5a9c3c6d75c332d0ef2fa6968b8/R/get_parcel_damage.R",
@@ -15393,7 +15421,53 @@
           },
           "note": "Prior stop interpretation was too broad; this is a bounded application output-format repair, not a native library/compiler port."
         }
-      ]
+      ],
+      "native_log_gate_recovery": {
+        "source_sha": "c7c1c3b78693ed04ddab60b14d18409c2991e197",
+        "run_id": 38463195522,
+        "job_id": 115523384492,
+        "job_conclusion": "success",
+        "root_workflow_sha": "8533dd522e8285c433351bc4fe5254ca68887ab2",
+        "raw_job_log_path": "/tmp/lqt-native-38463195522-job.log",
+        "raw_job_log_sha256": "0f8869ef2f07c31369a19049e7ed6660c6650435caad99fee853da620cb97a62",
+        "functional_tests": 102,
+        "note": "GitHub completed-success job has absent/stale API step entries. Actual completed job log and retained reports prove fresh Docker/native platform + architecture-guard-produced image ID, exact daemon-to-SIF conversion and all deploy/fulltests passed. No rebuild or skipped gate."
+      },
+      "native_command_exit_review": {
+        "source_sha": "c7c1c3b78693ed04ddab60b14d18409c2991e197",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "c7c1c3b78693ed04ddab60b14d18409c2991e197",
+        "version": "0.1.0",
+        "counts": {
+          "total_tests": 103,
+          "passed": 103,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 109.46797132492065,
+          "run_timestamp": "2026-10-13T20:47:09.237844",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 102,
+          "total_suites": 1,
+          "total_tests": 102
+        },
+        "deploy_counts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38463195522",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "libreoffice",
@@ -31087,18 +31161,24 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-totalsegmentator-20261012",
       "baseline_sha": "99cfe0286304f146935aa39d31fa2e579810610d",
       "candidate_sha": "b9640c0638161bbb66122714f1dc16997e90f77d",
       "started_at": "2026-10-13T20:33:37.469955+00:00",
       "deadline": "2026-10-14T08:33:37.469955+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38463874119,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3599",
+      "upstream_ci": {
+        "initial_run_id": 38466188437,
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38466188437",
+        "runtime_run_id": 38466188437,
+        "superseded_detection_only_run": 38466187317,
+        "superseded_run_note": "Cancelled detection/placeholder jobs before any actual container build, no extra image attempt."
+      },
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "2.5.0",
@@ -31131,9 +31211,56 @@
         "https://github.com/wasserth/TotalSegmentator/blob/184fa4765456492b2ab81a981cc387465906b003/tests/tests.sh",
         "https://github.com/wasserth/TotalSegmentator/releases/tag/v2.0.0-weights"
       ],
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38463874119"
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38463874119",
+      "native_log_gate_recovery": {
+        "source_sha": "b9640c0638161bbb66122714f1dc16997e90f77d",
+        "run_id": 38463874119,
+        "job_id": 115525690310,
+        "job_conclusion": "success",
+        "root_workflow_sha": "8533dd522e8285c433351bc4fe5254ca68887ab2",
+        "raw_job_log_sha256": "112c0df4d3bff22c03c311d02c8936ccff0b93a3068b1ebae97a0eb3826b6043",
+        "note": "GitHub completed-success job metadata retained stale build=in_progress/test=pending step entries. Actual completed job log and retained reports prove fresh Docker image/native platform + architecture-guard-produced image ID, exact daemon-to-SIF conversion and all deploy/fulltests passed. No rebuild or skipped gate.",
+        "scientific_stdout": "Actual TotalSegmentator public3mm CPU trained inference verified: 40 reference classes, mean Dice0.999999998 >0.99, full(122, 101, 30) geometry and hashes preserved, 23.6s"
+      },
+      "native_command_exit_review": {
+        "source_sha": "b9640c0638161bbb66122714f1dc16997e90f77d",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "b9640c0638161bbb66122714f1dc16997e90f77d",
+        "version": "2.18.0",
+        "counts": {
+          "total_tests": 5,
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 38.52616357803345,
+          "run_timestamp": "2026-10-13T20:44:46.905239",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 4,
+          "total_suites": 1,
+          "total_tests": 4
+        },
+        "deploy_counts": {
+          "total": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38463874119",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3599,
+      "pr_number": 3599
     },
     {
       "recipe": "tractseg",

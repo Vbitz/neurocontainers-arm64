@@ -128,3 +128,13 @@ records the official Zenodo checkpoint staging outage. Preflight each relevant
 recipe's actual required URLs before spending another build against that
 outage; do not mark another recipe blocked solely because it also uses Zenodo.
 Keep original clocks and attempt counts when reconsidering recorded work.
+
+When GitHub reports a completed-success build but its job-step entries remain
+absent or stale, recover the actual completed job log and retained report instead
+of rebuilding. Verify the exact native runner/source, Docker image ID and
+architecture guard, conversion of that daemon image to SIF, and all actual
+command exits/test counts. Record the raw log hash and root workflow SHA in
+`native_log_gate_recovery`; an API display inconsistency does not waive a gate.
+[TotalSegmentator issue39](https://github.com/Vbitz/neurocontainers-arm64/issues/39)
+and [LQT issue182](https://github.com/Vbitz/neurocontainers-arm64/issues/182)
+record this recovery with full scientific proofs.
