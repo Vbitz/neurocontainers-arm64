@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checked_at": "2026-10-14T06:08:20.199978+00:00",
+  "checked_at": "2026-10-14T08:27:18.304909+00:00",
   "method": "Read cached current-source native test-results per-command return codes and diagnostics; no builds repeated. Counts reflect reported suite semantics, not universal feature coverage.",
   "followup_required": [
     {
@@ -830,6 +830,14 @@
   ],
   "reviewed_merged_sources": [
     {
+      "recipe": "aidamri",
+      "source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+      "run_id": 38516496155,
+      "reported_passed": 10,
+      "reported_total": 10,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "amico",
       "source_sha": "410446aa31a5c96fa7226c987b2509ab06691b3f",
       "run_id": 38227423531,
@@ -1310,6 +1318,14 @@
       "nonzero_command_exits": 0
     },
     {
+      "recipe": "neurocommand",
+      "source_sha": "f7d9674296443f4fdd4b6e53577b262724f99d1b",
+      "run_id": 38524678050,
+      "reported_passed": 6,
+      "reported_total": 6,
+      "nonzero_command_exits": 0
+    },
+    {
       "recipe": "niftyreg",
       "source_sha": "2c7fb070118a7bb8f01c7f6647d2c798c53b7eb7",
       "run_id": 38291802437,
@@ -1574,7 +1590,7 @@
       "nonzero_command_exits": 0
     }
   ],
-  "reviewed_merged_recipe_count": 93,
+  "reviewed_merged_recipe_count": 95,
   "native_review_policy": "Future native proof requires every nonzero exit to match an explicit expected_exit_code. Existing masked successes require correction or a concrete blocker.",
   "review_scope_note": "Return codes plus error diagnostics reviewed from exact-source cached reports. Existing dcm2niix/DICOM Tools scans of NIfTI-only directories produce expected no-DICOM diagnostics: they exercise CLI parsing/error paths, not successful conversion with every option. Their aggregate pass counts are not universal feature-coverage claims. Positive DICOM conversion/pixel tests are recorded separately in source suites.",
   "active_followups": [],
@@ -1712,8 +1728,32 @@
     }
   ],
   "cached_deployment_linkage_summary_review": {
-    "reviewed_count": 93,
+    "reviewed_count": 95,
     "outliers": [
+      {
+        "recipe": "aidamri",
+        "source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+        "run_id": 38516496155,
+        "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/assistant6",
+        "status": "skipped",
+        "message": "Skipped 4 linkage entries without filesystem paths."
+      },
+      {
+        "recipe": "aidamri",
+        "source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+        "run_id": 38516496155,
+        "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/designer6",
+        "status": "skipped",
+        "message": "Skipped 5 linkage entries without filesystem paths."
+      },
+      {
+        "recipe": "aidamri",
+        "source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+        "run_id": 38516496155,
+        "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/eddy_cuda",
+        "status": "skipped",
+        "message": "Skipped 4 linkage entries without filesystem paths."
+      },
       {
         "recipe": "fsl",
         "source_sha": "4bfaf8ea40c71778b11058f8511eeb7199b47e43",
@@ -1723,15 +1763,16 @@
         "message": "Skipped 4 linkage entries without filesystem paths."
       }
     ],
-    "checked_at": "2026-10-14T06:08:20.276257+00:00",
-    "method": "Read exact-source cached deployment scan summaries for all93 merged recipes, retaining prior root sources for explicitly recorded current-source gaps. No rebuild. The sole >2 pathless-entry summary is FSL eddy_cuda, with4; source-specific GPU/driver limitation is recorded in its issue. All131 CPU functional cases passed. Ordinary2-entry summaries do not establish full linkage closure because the parser also skips unresolved=>notfound entries.",
+    "checked_at": "2026-10-14T08:27:18.382214+00:00",
+    "method": "Read exact-source cached deployment scan summaries for all95 merged recipes, retaining prior root sources for explicitly recorded current-source gaps. No rebuild. Source-specific >2-entry outliers are FSL eddy_cuda(4) and AIDAmri assistant6(4)/designer6(5)/eddy_cuda(4). Their existing issue/queue reviews explicitly leave GPU/developer-GUI/full-FSL-closure unverified; actual primary CPU operations passed. Ordinary2-entry summaries do not establish full linkage closure because the parser also skips unresolved=>notfound entries.",
     "parser_limitation": "workflows/test_deploy.sh parse_ldd_output treats unresolved=>notfound entries as skipped, not failures. Exact library closure cannot be inferred solely from aggregate deployment success.",
     "active_recipe_reviews": {
       "elastix": "Root38325625311 at429bc011 passed34/34 aggregate: all32 retained scientific/negative cases and independently executed ldd closure for74 libraries per raw ELF passed. A newly added shell version-string assertion was ineffective because builder substitution changed $version_output into5.3.1_output. Actual raw commands executed0 and retained wrapper version checks printed actual5.3.1. Corrected fixture source ff8a87685a1a201bcd76ced4fc52495d8526d312 is pushed but UNTESTED: another root plus two upstream builds exceed2 remaining attempts. Status blocked-verification-budget;4/6 builds and original deadline retained. No current corrected-source runtime proof or upstream PR claimed."
     },
     "scope": "Cached deployed-directory scan summaries only; not exhaustive optional-command execution or GPU verification.",
     "accepted_recipe_limitations": {
-      "fsl": "Additional source-specific parser review:115 binaries each have2 pathless ldd entries, consistent with Linux vDSO/loader summaries; only eddy_cuda has4. The existing parser does not reject=>notfound, so an empty failure count alone cannot establish full linkage closure. The two extra eddy_cuda entries require GPU/driver investigation on an eligible host; GPU execution and complete CUDA linkage are unverified on this CPU-only runner. All131 actual CPU fulltests passed including exact arithmetic/statistics/ROI/FLIRT and FSLeyes/ASL. Preserve explicit200-executable inventory cap and GPU prerequisite limitation; no exhaustive optional-command/GPU claim. No source change or successful CPU build repeated."
+      "fsl": "Additional source-specific parser review:115 binaries each have2 pathless ldd entries, consistent with Linux vDSO/loader summaries; only eddy_cuda has4. The existing parser does not reject=>notfound, so an empty failure count alone cannot establish full linkage closure. The two extra eddy_cuda entries require GPU/driver investigation on an eligible host; GPU execution and complete CUDA linkage are unverified on this CPU-only runner. All131 actual CPU fulltests passed including exact arithmetic/statistics/ROI/FLIRT and FSLeyes/ASL. Preserve explicit200-executable inventory cap and GPU prerequisite limitation; no exhaustive optional-command/GPU claim. No source change or successful CPU build repeated.",
+      "aidamri": "Path-based deployment declares no explicit bins. Eight type skips are data/config/completion files and Python without shebang; batchProc executes successfully with its named interpreter.210 linkage records omit the usual two pathless loader/vDSO entries. Three outliers are Qt assistant/designer GUI tools and eddy_cuda GPU dependencies; neither3D/developer GUI nor GPU operation is verified. The default scan caps FSL/bin at200 executables; do not claim full FSL linkage closure. All required focused CPU operations and actual DSI start passed directly. No functional suite capability/test was skipped or weakened."
     }
   },
   "accepted_scientific_scope_notes": {

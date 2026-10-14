@@ -10488,18 +10488,18 @@
       "port_files": [
         "recipes/deeplabcut/build.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
-      "attempts": 0,
-      "run_id": null,
+      "status": "native-running",
+      "branch": "arm64/upstream-deeplabcut-20261012",
+      "baseline_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
+      "candidate_sha": "095590a65636bb700df290143c04dcab6a65e372",
+      "started_at": "2026-10-14T08:17:00+00:00",
+      "deadline": "2026-10-14T20:17:00+00:00",
+      "attempts": 1,
+      "run_id": 38534958638,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.2",
@@ -10514,7 +10514,21 @@
         "three_way_conflicts": [
           "recipes/deeplabcut/build.yaml"
         ]
-      }
+      },
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Enable current DeepLabCut3.0.2 on native ARM with official Torch2.6/torchvision0.21 CPU wheels, retaining full GUI/modelzoo/TF extras and all original imports/version tests. TensorFlow2.15.1 and CondaPyTables3.10.1 ARM Python3.10 assets verified. Preserve x86 package selection. Add real CPU gradient/NMS/tensor/package checks, actual offscreen DeepLabCut project window, and official trained HRNet+MobileNet SuperAnimal inference/HDF/labeled-video pipeline on three unchanged lossless real-dog frames with36 bodyparts and pinned official checkpoint hashes. No scientific/library patch or GUI omission; no biological accuracy/temporal-tracking/adaptation/GPU claim.",
+      "pr_title": "Enable native ARM64 DeepLabCut with GUI and pretrained pose verification",
+      "primary_source_review": [
+        "https://github.com/DeepLabCut/DeepLabCut/releases/tag/v3.0.2",
+        "https://pypi.org/pypi/tensorflow-cpu-aws/2.15.1/json",
+        "https://api.anaconda.org/release/conda-forge/pytables/3.10.1",
+        "https://download.pytorch.org/whl/cpu/torchvision/",
+        "https://huggingface.co/mwmathis/DeepLabCutModelZoo-SuperAnimal-Quadruped/tree/1ad30fb80cd666f1e5c91578d1cf63bccfa84f80"
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38534958638"
     },
     {
       "recipe": "dicompare",
@@ -35525,7 +35539,7 @@
         "recipes/synthstroke/build.yaml",
         "recipes/synthstroke/fulltest.yaml"
       ],
-      "status": "native-running",
+      "status": "failed-runtime",
       "branch": "arm64/upstream-synthstroke-20261012",
       "baseline_sha": "bfe91f86b95672277ca43f30fba44febcb61a67a",
       "candidate_sha": "b6ae5d8ac1c3b9b269fcb060be1024e208318b3c",
@@ -35536,7 +35550,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Preserve committed candidate/failed complete-MRI assertion. Revisit with an official fix that places probabilities, class prediction and threshold mask in the same original physical space; then fresh native and both upstream tests. Do not relax/remove the every-voxel consistency test, change fixture or publish the failed candidate.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.0",
@@ -35558,7 +35572,30 @@
       ],
       "arm64_attempts": 1,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38533582909"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38533582909",
+      "native_failure": {
+        "source_sha": "b6ae5d8ac1c3b9b269fcb060be1024e208318b3c",
+        "run_id": 38533582909,
+        "counts": {
+          "total_tests": 4,
+          "passed": 3,
+          "failed": 1,
+          "skipped": 0
+        },
+        "first_failed_test": {
+          "duration": 45.89828324317932,
+          "message": "Expected exit code 0, got 1",
+          "name": "Full pretrained baseline MRI inference and physical output contract",
+          "return_code": 1,
+          "status": "failed",
+          "stderr": "/opt/miniconda-latest/lib/python3.10/site-packages/monai/utils/deprecate_utils.py:321: FutureWarning: monai.transforms.spatial.dictionary Orientationd.__init__:labels: Current default value of argument `labels=(('L', 'R'), ('P', 'A'), ('I', 'S'))` was changed in version None from `labels=(('L', 'R'), ('P', 'A'), ('I', 'S'))` to `labels=None`. Default value changed to None meaning that the transform now uses the 'space' of a meta-tensor, if applicable, to determine appropriate axis labels.\n  warn_deprecated(argname, msg, warning_category)\nTraceback (most recent call last):\n  File \"<stdin>\", line 45, in <module>\n  File \"/opt/miniconda-latest/lib/python3.10/site-packages/numpy/_utils/__init__.py\", line 86, in wrapper\n    return fun(*args, **kwargs)\n  File \"/opt/miniconda-latest/lib/python3.10/site-packages/numpy/testing/_private/utils.py\", line 1057, in assert_array_equal\n    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,\n  File \"/opt/miniconda-latest/lib/python3.10/site-packages/numpy/testing/_private/utils.py\", line 921, in assert_array_compare\n    raise AssertionError(msg)\nAssertionError: \nArrays are not equal\n\nMismatched elements: 141144 / 8675289 (1.63%)\nMax absolute difference among violations: 1\nMax relative difference among violations: 1.\n ACTUAL: array([[[0, 0, 0, ..., 0, 0, 0],\n        [0, 0, 0, ..., 0, 0, 0],\n        [0, 0, 0, ..., 0, 0, 0],...\n DESIRED: array([[[0, 0, 0, ..., 0, 0, 0],\n        [0, 0, 0, ..., 0, 0, 0],\n        [0, 0, 0, ..., 0, 0, 0],...\n",
+          "stdout": "No broken requirements found.\nLesion mask: 87262 voxels above threshold 0.5\nDone. Output saved to: /tmp/synthstroke-full-mri-6b20jb25/output\n"
+        },
+        "category": "scientific-output-spatial-consistency",
+        "reason": "Full official197x233x189 MRI executes actual native pretrained baseline but saved discrete prediction differs from argmax of the two saved class probability maps at141144/8675289voxels (1.63%). Sourcef627b57b explicitly skips inverse spatial transforms for multichannel probabilities, while transforming discrete predictions/lesion masks; recipe subsequently stamps original affine on both and re-thresholds probability output. Output spaces are inconsistent; matching headers alone is insufficient. Latest official history for synthstroke_model.py still ends at this exact commit; no released fix found. Correcting preprocessing/inverse channel handling is application scientific postprocessing work beyond an ordinary recipe dependency/configuration fix.",
+        "official_latest_model_commit": "f627b57b8f9291bfa870cb54cb21ddbeb4941d39",
+        "checked_at": "2026-10-14T08:21:37.002781+00:00"
+      }
     },
     {
       "recipe": "template",
