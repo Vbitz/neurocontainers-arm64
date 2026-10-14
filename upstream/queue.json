@@ -13578,7 +13578,10 @@
       "attempts": 6,
       "run_id": 38501634115,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3606",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "candidate_run_id": 38510749442,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38510749442"
+      },
       "merged_sha": null,
       "next_action": "Verify exact corrected-source fresh ARM64/x86_64 suites plus unchanged Dive and all required gates for existing PR3606, then normal merge.6/6; no further builds.",
       "upstream_review": {
@@ -14231,6 +14234,26 @@
           "weights_version": "1.0.2"
         },
         "scope": "Exact corrected packaging source executed complete public BraTS four-modality default CPU inference, all expected labels/nontrivial foreground/physical grid/input hashes and all84 unchanged model files. No crop, model replacement, relaxed gate, GPU inference or clinical-accuracy claim."
+      },
+      "upstream_candidate_observation": {
+        "source_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+        "run_id": 38510749442,
+        "jobs": [
+          {
+            "id": 115678525352,
+            "name": "candidate (gliomoda | 0.0.4 | x86_64)",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ]
+          },
+          {
+            "id": 115678525462,
+            "name": "candidate (gliomoda_arm64 | 0.0.4 | aarch64)",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ]
+          }
+        ]
       }
     },
     {
