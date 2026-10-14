@@ -137,7 +137,7 @@
         "recipes/aidamri/build.yaml",
         "recipes/aidamri/fulltest.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-aidamri-20261012",
       "baseline_sha": "41308ea3d5872faad4d5d00eabaac8393177bb56",
       "candidate_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
@@ -234,11 +234,98 @@
             "build_sif_fulltest_dive_manifest_gates": "success",
             "fulltest_log_summary_confirmed": true,
             "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "aarch64": {
+            "head_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+            "job_id": 115704947346,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38519234452/job/115704947346",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
           }
-        }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "aidamri",
+          "container": "aidamri_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "3.0.0",
+          "build_date": "20261014",
+          "docker_archive": "aidamri_arm64_3.0.0_20261014.docker.tar",
+          "sif": "aidamri_arm64_3.0.0_20261014.simg",
+          "candidate_tag": "nd-candidate-aidamri_arm64:5da4b94239d2",
+          "launcher": null,
+          "pr_number": 3620,
+          "head_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+          "tests": {
+            "total": 10,
+            "passed": 10,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 9,
+            "fulltest_passed": 9,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "AIDAmri source tree exists",
+              "Miniconda Python dependencies import",
+              "AIDAmri batch processor help",
+              "NiftyReg tools available",
+              "FSL tools available",
+              "Deploy path excludes macOS and lock files",
+              "AIDAmri diffusion baseline averaging",
+              "AIDAmri analytical fMRI connectivity matrices",
+              "Architecture matched DSI Studio actually starts"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 5,
+                "wasted_space": "3.6 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 5,
+                "wasted_space": "1.2 MB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 5,
+                "wasted_space": "960 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 4,
+                "wasted_space": "864 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 99.937,
+            "wasted_bytes": 9500324,
+            "wasted_bytes_display": "9.5 MB",
+            "user_wasted_percent": 0.0752
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "merged_sha": "bfe91f86b95672277ca43f30fba44febcb61a67a",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.0",
@@ -1550,8 +1637,55 @@
           ],
           "deploy_skip_review": "Path-based deployment, data/non-shebang type classifications and the capped FSL directory scan are explicitly reviewed. Nonstandard linkage summaries for atlasquery, eddy_cuda, fslview_bin remain unverified; no full FSL ELF closure, atlasquery/FSLView/developer GUI/GPU or full rodent MRI/atlas pipeline claim. Focused primary AIDAmri operations and actual CPU DSI startup passed directly.",
           "clinical_accuracy_unverified": true
+        },
+        "aarch64": {
+          "source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+          "run_id": 38519234452,
+          "actual_zero_exit_functional_commands": 9,
+          "primary_operation_stdout": {
+            "AIDAmri diffusion baseline averaging": "AIDAmri real DWI averaging preserved every13440 expected voxel and physical grid\n",
+            "AIDAmri analytical fMRI connectivity matrices": "AIDAmri primary Pearson p-value Fisher-z and saved ROI-label oracles passed\n",
+            "Architecture matched DSI Studio actually starts": "DSI Studio (doi:10.1038/s41592-025-02762-8), Sun \"\u5b6b\" Oct 12 2026 \n"
+          },
+          "primary_operation_seconds": {
+            "AIDAmri diffusion baseline averaging": 1.8273136615753174,
+            "AIDAmri analytical fMRI connectivity matrices": 2.4974477291107178,
+            "Architecture matched DSI Studio actually starts": 0.5462770462036133
+          },
+          "deploy_counts": {
+            "total": 1993,
+            "passed": 1770,
+            "failed": 0,
+            "skipped": 223
+          },
+          "deploy_skip_categories": {
+            "deploy_bins": 1,
+            "file.type": 8,
+            "ldd.summary.skipped": 213,
+            "deploy_dir.limit": 1
+          },
+          "linkage_outliers": [
+            {
+              "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/assistant6",
+              "status": "skipped",
+              "message": "Skipped 4 linkage entries without filesystem paths."
+            },
+            {
+              "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/designer6",
+              "status": "skipped",
+              "message": "Skipped 5 linkage entries without filesystem paths."
+            },
+            {
+              "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/eddy_cuda",
+              "status": "skipped",
+              "message": "Skipped 4 linkage entries without filesystem paths."
+            }
+          ],
+          "deploy_skip_review": "Path-based deployment, data/non-shebang type classifications and the capped FSL directory scan are explicitly reviewed. Nonstandard linkage summaries for assistant6, designer6, eddy_cuda remain unverified; no full FSL ELF closure, atlasquery/FSLView/developer GUI/GPU or full rodent MRI/atlas pipeline claim. Focused primary AIDAmri operations and actual CPU DSI startup passed directly.",
+          "clinical_accuracy_unverified": true
         }
-      }
+      },
+      "merged_at": "2026-10-14T08:01:32Z"
     },
     {
       "recipe": "amico",
@@ -14913,7 +15047,7 @@
       "port_files": [
         "recipes/gliomoda/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "blocked-verification-budget",
       "branch": "arm64/upstream-gliomoda-20261012",
       "baseline_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
       "candidate_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
@@ -14924,10 +15058,106 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3606",
       "upstream_ci": {
         "candidate_run_id": 38510749442,
-        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38510749442"
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38510749442",
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "gliomoda",
+          "container": "gliomoda_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "0.0.4",
+          "build_date": "20261014",
+          "docker_archive": "gliomoda_arm64_0.0.4_20261014.docker.tar",
+          "sif": "gliomoda_arm64_0.0.4_20261014.simg",
+          "candidate_tag": "nd-candidate-gliomoda_arm64:25477239ed36",
+          "launcher": "gliomoda",
+          "pr_number": 3606,
+          "head_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+          "tests": {
+            "total": 19,
+            "passed": 19,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 18,
+            "fulltest_passed": 18,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "package imports",
+              "reports the packaged version",
+              "runs outside HOME",
+              "torch imports and computes on CPU",
+              "model weights are bundled in the image",
+              "bundled weights are the declared version",
+              "weights are pinned, not fetched at run time",
+              "gliomoda CLI is on PATH and renders help",
+              "the CLI selects a device instead of assuming CUDA",
+              "version reports package and bundled weights",
+              "the bundled models can be listed",
+              "an unbundled modality combination fails with a usable message",
+              "a trailing singleton axis is rejected with a usable message",
+              "forcing cuda without a GPU fails before loading the model",
+              "the thread default reports where its number came from",
+              "the container does not export a python interpreter",
+              "Native CPU model dependency closure",
+              "Full trained four modality glioma MRI inference"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "811 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8096,
+            "wasted_bytes": 18009989,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.3303
+          }
+        },
+        "native_job_review": {
+          "aarch64": {
+            "head_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+            "job_id": 115678525462,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38510749442/job/115678525462",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        }
       },
       "merged_sha": null,
-      "next_action": "Let healthy corrected-source ARM candidate finish without cancellation; record its actual outcome. x86 download failed before Docker: exact3.306GB archive truncated to803.7MB after3 internal HTTP retries.6/6 budget exhausted, no more edits/dispatches. Preserve current root native19/19 and old-head x8619/19/Dive failure separately; current head cannot merge until actual x86 image/gates pass.",
+      "next_action": "Await explicit GlioMODA-specific seventh-build authorization for one unchanged x86-only retry of failed model download. Corrected exact-source ARM19/19 and Dive verified; never rerun passed ARM. Original deadline10:41UTC remains. No merge until current x86/all gates pass.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.4",
@@ -15613,6 +15843,87 @@
             ]
           }
         ]
+      },
+      "upstream_actual_scientific_review": {
+        "aarch64": {
+          "source_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+          "run_id": 38510749442,
+          "actual_zero_exit_functional_commands": 18,
+          "full_mri_case_seconds": 3863.8268780708313,
+          "full_mri_metrics": {
+            "foreground_voxels": 126237,
+            "input_sha256": {
+              "t1c": "4399faadcc45c8a4541313cdf88aced7d835ed59ac3078d950e0eac293d603f5",
+              "t1n": "e860924b936e301ddeba20409fbb59dde322475cb49328f1b46a9235c792e73e",
+              "t2f": "82aed8546af5e6d8d94fd91c56227abdcf6120130390d1556c4342a208980604",
+              "t2w": "4cd389cc57d12134a30a898c66532228126b9a7d0600ee578e82a32144528b51"
+            },
+            "label_counts": [
+              8801763,
+              18458,
+              85535,
+              22244
+            ],
+            "labels": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mode": "t1c-t2f-t1n-t2w",
+            "seconds": 3839.24,
+            "shape": [
+              240,
+              240,
+              155
+            ],
+            "unchanged_weight_files": 84,
+            "weights_version": "1.0.2"
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "811 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8096,
+            "wasted_bytes": 18009989,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.3303
+          },
+          "scope": "Complete four-modality BraTS MRI/default CPU model and augmentation; physical grid, expected labels/nontrivial foreground, input hashes and all84 unchanged model files. Corrected single-layer image passes the unchanged Dive policy. No GPU inference, bitwise architecture parity or clinical-accuracy claim."
+        }
+      },
+      "pending_budget_question": {
+        "requested_at": "2026-10-14T08:05:29.162113+00:00",
+        "requested_max_build_attempts": 7,
+        "scope": "GlioMODA only, one unchanged x86 architecture job; passed corrected ARM must not rerun",
+        "reason": "Six builds used; current x86 failed declared Zenodo archive download before Docker, corrected ARM19/19/Dive passed.",
+        "answered": false
       }
     },
     {
@@ -24740,18 +25051,18 @@
       "port_files": [
         "recipes/neurocommand/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-neurocommand-20261012",
       "baseline_sha": "9df30cc185fa2af32ee99a364492954bf2798a61",
       "candidate_sha": "f7d9674296443f4fdd4b6e53577b262724f99d1b",
       "started_at": "2026-10-14T05:55:43.237296+00:00",
       "deadline": "2026-10-14T17:55:43.237296+00:00",
-      "attempts": 2,
+      "attempts": 4,
       "run_id": 38524678050,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3623",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -24774,8 +25085,8 @@
         "https://apptainer.org/docs/admin/main/installation.html",
         "https://cvmfs.readthedocs.io/en/2.14/cpt-configure/"
       ],
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "pre_dispatch_revisions": [
         {
           "old_source_sha": "e9d8e0e97d29736242e954baecfb2aecdeb31281",
@@ -24807,7 +25118,44 @@
           },
           "outcome": "Native Docker/architecture/SIF succeeded; actual DataLad and nested native SIF passed, private FUSE mount lacked namespace mount permission."
         }
-      ]
+      ],
+      "native_command_exit_review": {
+        "source_sha": "f7d9674296443f4fdd4b6e53577b262724f99d1b",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "f7d9674296443f4fdd4b6e53577b262724f99d1b",
+        "version": "1.0.0",
+        "counts": {
+          "total_tests": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 20.463574171066284,
+          "run_timestamp": "2026-10-14T07:00:08.260483",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 5,
+          "total_suites": 1,
+          "total_tests": 5
+        },
+        "deploy_counts": {
+          "total": 6,
+          "passed": 6,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38524678050",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3623,
+      "pr_number": 3623
     },
     {
       "recipe": "nftsim",
@@ -36381,15 +36729,15 @@
       "status": "native-running",
       "branch": "arm64/upstream-tractseg-20261012",
       "baseline_sha": "98c7b84d8018d7611d847fc43bb78b5056c87970",
-      "candidate_sha": "f91cc6ad7b429702db2b485af2638918cd3049cc",
+      "candidate_sha": "2589f2b92d7defba7dfb6a4ac0101f37c7357a58",
       "started_at": "2026-10-14T02:37:23.297913+00:00",
       "deadline": "2026-10-14T14:37:23.297913+00:00",
-      "attempts": 1,
-      "run_id": 38512553418,
+      "attempts": 2,
+      "run_id": 38532617042,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current native build at exact2.9 source. Before own ARM PR, check concurrent version-only PR3617 and current accepted recipe; if it advances, integrate the ARM changes without reverting it and native-test the new exact source within original budget. One own focused ARM PR, both architectures/all gates required.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "2.9.0",
@@ -36413,9 +36761,9 @@
         "https://pypi.org/pypi/torch/2.4.1/json",
         "https://pypi.org/pypi/numpy/1.26.4/json"
       ],
-      "arm64_attempts": 1,
+      "arm64_attempts": 2,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38512553418",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38532617042",
       "concurrent_upstream_version_update": {
         "number": 3617,
         "url": "https://github.com/neurodesk/neurocontainers/pull/3617",
@@ -36423,7 +36771,176 @@
         "state": "OPEN",
         "title": "Bump tractseg from 2.9.0 to 2.10.0",
         "note": "Separate automatic version-only PR, not this ARM port. Current native candidate tests accepted upstream2.9.0/TractSeg2.9. Let its healthy build finish. If the updater merges first, integrate only the ARM changes onto the new accepted recipe, revalidate and test that exact source within the same budget before own ARM submission; do not revert the update or claim older-version proof for2.10."
-      }
+      },
+      "candidate_history": [
+        {
+          "source_sha": "f91cc6ad7b429702db2b485af2638918cd3049cc",
+          "run_id": 38512553418,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38512553418",
+          "counts": {
+            "passed": 106,
+            "failed": 17,
+            "skipped": 0,
+            "total_tests": 123
+          },
+          "failed_tests": [
+            {
+              "duration": 2.0423824787139893,
+              "message": "Expected exit code 0, got 1",
+              "name": "TractSeg version check",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "/opt/miniconda/bin/TractSeg:13: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n  from pkg_resources import require\nTraceback (most recent call last):\n  File \"/opt/miniconda/bin/TractSeg\", line 18, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n    import dipy.data as dpd\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/__init__.py\", line 14, in <module>\n    from dipy.data.fetcher import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/fetcher.py\", line 25, in <module>\n    from dipy.io.streamline import load_tractogram\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/streamline.py\", line 19, in <module>\n    from dipy.io.vtk import load_vtk_streamlines, save_vtk_streamlines\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/vtk.py\", line 7, in <module>\n    fury, have_fury, setup_module = optional_package(\n                                    ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/utils/optpkg.py\", line 82, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/__init__.py\", line 30, in <module>\n    gfx, _, _ = optional_package(\"pygfx\", min_version=\"0.14.0\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/optpkg.py\", line 195, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/__init__.py\", line 9, in <module>\n    from .objects import *\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/__init__.py\", line 79, in <module>\n    from ._ruler import Ruler\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_ruler.py\", line 8, in <module>\n    from ._text import MultiText\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_text.py\", line 43, in <module>\n    from ..utils import text as textmodule\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/__init__.py\", line 18, in <module>\n    from ._atlas import glyph_atlas  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 432, in <module>\n    glyph_atlas = PygfxGlyphAtlas()\n                  ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 178, in __init__\n    self._set_new_glyphs_array(self._initial_array_size)\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 406, in _set_new_glyphs_array\n    self._texture = Texture(self._array, dim=2, force_contiguous=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 147, in __init__\n    self._view = reshape_array(view, the_size)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 609, in reshape_array\n    view = view.reshape(*expected_shape, -1, copy=False)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'copy' is an invalid keyword argument for this function\n",
+              "stdout": ""
+            },
+            {
+              "duration": 2.0357699394226074,
+              "message": "Expected output not found: 'Segment white matter bundles...'",
+              "name": "TractSeg help output",
+              "return_code": 0,
+              "status": "failed",
+              "stderr": "Expected output not found: 'Segment white matter bundles...'",
+              "stdout": "/opt/miniconda/bin/TractSeg:13: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n  from pkg_resources import require\nTraceback (most recent call last):\n  File \"/opt/miniconda/bin/TractSeg\", line 18, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n    import dipy.data as dpd\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/__init__.py\", line 14, in <module>\n    from dipy.data.fetcher import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/fetcher.py\", line 25, in <module>\n    from dipy.io.streamline import load_tractogram\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/streamline.py\", line 19, in <module>\n    from dipy.io.vtk import load_vtk_streamlines, save_vtk_streamlines\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/vtk.py\", line 7, in <module>\n    fury, have_fury, setup_module = optional_package(\n                                    ^^^^^^^^^^^^^^^^^\n"
+            },
+            {
+              "duration": 2.1014230251312256,
+              "message": "Expected exit code 0, got 1",
+              "name": "TractSeg CSD type options",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Expected exit code 0, got 1",
+              "stdout": "/opt/miniconda/bin/TractSeg:13: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n  from pkg_resources import require\nTraceback (most recent call last):\n  File \"/opt/miniconda/bin/TractSeg\", line 18, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n    import dipy.data as dpd\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/__init__.py\", line 14, in <module>\n    from dipy.data.fetcher import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/fetcher.py\", line 25, in <module>\n    from dipy.io.streamline import load_tractogram\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/streamline.py\", line 19, in <module>\n    from dipy.io.vtk import load_vtk_streamlines, save_vtk_streamlines\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/vtk.py\", line 7, in <module>\n    fury, have_fury, setup_module = optional_package(\n                                    ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/utils/optpkg.py\", line 82, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/__init__.py\", line 30, in <module>\n    gfx, _, _ = optional_package(\"pygfx\", min_version=\"0.14.0\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/optpkg.py\", line 195, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/__init__.py\", line 9, in <module>\n    from .objects import *\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/__init__.py\", line 79, in <module>\n    from ._ruler import Ruler\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_ruler.py\", line 8, in <module>\n    from ._text import MultiText\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_text.py\", line 43, in <module>\n    from ..utils import text as textmodule\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/__init__.py\", line 18, in <module>\n    from ._atlas import glyph_atlas  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 432, in <module>\n    glyph_atlas = PygfxGlyphAtlas()\n                  ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 178, in __init__\n    self._set_new_glyphs_array(self._initial_array_size)\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 406, in _set_new_glyphs_array\n    self._texture = Texture(self._array, dim=2, force_contiguous=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 147, in __init__\n    self._view = reshape_array(view, the_size)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 609, in reshape_array\n    view = view.reshape(*expected_shape, -1, copy=False)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'copy' is an invalid keyword argument for this function\n"
+            },
+            {
+              "duration": 2.060844898223877,
+              "message": "Expected exit code 0, got 1",
+              "name": "TractSeg output type options",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Expected exit code 0, got 1",
+              "stdout": "/opt/miniconda/bin/TractSeg:13: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n  from pkg_resources import require\nTraceback (most recent call last):\n  File \"/opt/miniconda/bin/TractSeg\", line 18, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n    import dipy.data as dpd\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/__init__.py\", line 14, in <module>\n    from dipy.data.fetcher import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/fetcher.py\", line 25, in <module>\n    from dipy.io.streamline import load_tractogram\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/streamline.py\", line 19, in <module>\n    from dipy.io.vtk import load_vtk_streamlines, save_vtk_streamlines\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/vtk.py\", line 7, in <module>\n    fury, have_fury, setup_module = optional_package(\n                                    ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/utils/optpkg.py\", line 82, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/__init__.py\", line 30, in <module>\n    gfx, _, _ = optional_package(\"pygfx\", min_version=\"0.14.0\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/optpkg.py\", line 195, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/__init__.py\", line 9, in <module>\n    from .objects import *\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/__init__.py\", line 79, in <module>\n    from ._ruler import Ruler\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_ruler.py\", line 8, in <module>\n    from ._text import MultiText\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_text.py\", line 43, in <module>\n    from ..utils import text as textmodule\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/__init__.py\", line 18, in <module>\n    from ._atlas import glyph_atlas  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 432, in <module>\n    glyph_atlas = PygfxGlyphAtlas()\n                  ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 178, in __init__\n    self._set_new_glyphs_array(self._initial_array_size)\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 406, in _set_new_glyphs_array\n    self._texture = Texture(self._array, dim=2, force_contiguous=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 147, in __init__\n    self._view = reshape_array(view, the_size)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 609, in reshape_array\n    view = view.reshape(*expected_shape, -1, copy=False)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'copy' is an invalid keyword argument for this function\n"
+            },
+            {
+              "duration": 2.0800163745880127,
+              "message": "Expected exit code 0, got 1",
+              "name": "TractSeg endings segmentation option",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Expected exit code 0, got 1",
+              "stdout": "/opt/miniconda/bin/TractSeg:13: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n  from pkg_resources import require\nTraceback (most recent call last):\n  File \"/opt/miniconda/bin/TractSeg\", line 18, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n    import dipy.data as dpd\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/__init__.py\", line 14, in <module>\n    from dipy.data.fetcher import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/fetcher.py\", line 25, in <module>\n    from dipy.io.streamline import load_tractogram\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/streamline.py\", line 19, in <module>\n    from dipy.io.vtk import load_vtk_streamlines, save_vtk_streamlines\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/vtk.py\", line 7, in <module>\n    fury, have_fury, setup_module = optional_package(\n                                    ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/utils/optpkg.py\", line 82, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/__init__.py\", line 30, in <module>\n    gfx, _, _ = optional_package(\"pygfx\", min_version=\"0.14.0\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/optpkg.py\", line 195, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/__init__.py\", line 9, in <module>\n    from .objects import *\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/__init__.py\", line 79, in <module>\n    from ._ruler import Ruler\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_ruler.py\", line 8, in <module>\n    from ._text import MultiText\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_text.py\", line 43, in <module>\n    from ..utils import text as textmodule\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/__init__.py\", line 18, in <module>\n    from ._atlas import glyph_atlas  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 432, in <module>\n    glyph_atlas = PygfxGlyphAtlas()\n                  ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 178, in __init__\n    self._set_new_glyphs_array(self._initial_array_size)\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 406, in _set_new_glyphs_array\n    self._texture = Texture(self._array, dim=2, force_contiguous=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 147, in __init__\n    self._view = reshape_array(view, the_size)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 609, in reshape_array\n    view = view.reshape(*expected_shape, -1, copy=False)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'copy' is an invalid keyword argument for this function\n"
+            },
+            {
+              "duration": 2.042009115219116,
+              "message": "Expected exit code 0, got 1",
+              "name": "TractSeg TOM option",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Expected exit code 0, got 1",
+              "stdout": "/opt/miniconda/bin/TractSeg:13: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n  from pkg_resources import require\nTraceback (most recent call last):\n  File \"/opt/miniconda/bin/TractSeg\", line 18, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n    import dipy.data as dpd\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/__init__.py\", line 14, in <module>\n    from dipy.data.fetcher import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/fetcher.py\", line 25, in <module>\n    from dipy.io.streamline import load_tractogram\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/streamline.py\", line 19, in <module>\n    from dipy.io.vtk import load_vtk_streamlines, save_vtk_streamlines\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/vtk.py\", line 7, in <module>\n    fury, have_fury, setup_module = optional_package(\n                                    ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/utils/optpkg.py\", line 82, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/__init__.py\", line 30, in <module>\n    gfx, _, _ = optional_package(\"pygfx\", min_version=\"0.14.0\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/optpkg.py\", line 195, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/__init__.py\", line 9, in <module>\n    from .objects import *\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/__init__.py\", line 79, in <module>\n    from ._ruler import Ruler\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_ruler.py\", line 8, in <module>\n    from ._text import MultiText\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_text.py\", line 43, in <module>\n    from ..utils import text as textmodule\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/__init__.py\", line 18, in <module>\n    from ._atlas import glyph_atlas  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 432, in <module>\n    glyph_atlas = PygfxGlyphAtlas()\n                  ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 178, in __init__\n    self._set_new_glyphs_array(self._initial_array_size)\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 406, in _set_new_glyphs_array\n    self._texture = Texture(self._array, dim=2, force_contiguous=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 147, in __init__\n    self._view = reshape_array(view, the_size)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 609, in reshape_array\n    view = view.reshape(*expected_shape, -1, copy=False)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'copy' is an invalid keyword argument for this function\n"
+            },
+            {
+              "duration": 2.0284862518310547,
+              "message": "Expected exit code 0, got 1",
+              "name": "TractSeg raw diffusion input option",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Expected exit code 0, got 1",
+              "stdout": "/opt/miniconda/bin/TractSeg:13: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n  from pkg_resources import require\nTraceback (most recent call last):\n  File \"/opt/miniconda/bin/TractSeg\", line 18, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n    import dipy.data as dpd\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/__init__.py\", line 14, in <module>\n    from dipy.data.fetcher import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/fetcher.py\", line 25, in <module>\n    from dipy.io.streamline import load_tractogram\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/streamline.py\", line 19, in <module>\n    from dipy.io.vtk import load_vtk_streamlines, save_vtk_streamlines\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/vtk.py\", line 7, in <module>\n    fury, have_fury, setup_module = optional_package(\n                                    ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/utils/optpkg.py\", line 82, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/__init__.py\", line 30, in <module>\n    gfx, _, _ = optional_package(\"pygfx\", min_version=\"0.14.0\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/optpkg.py\", line 195, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/__init__.py\", line 9, in <module>\n    from .objects import *\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/__init__.py\", line 79, in <module>\n    from ._ruler import Ruler\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_ruler.py\", line 8, in <module>\n    from ._text import MultiText\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_text.py\", line 43, in <module>\n    from ..utils import text as textmodule\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/__init__.py\", line 18, in <module>\n    from ._atlas import glyph_atlas  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 432, in <module>\n    glyph_atlas = PygfxGlyphAtlas()\n                  ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 178, in __init__\n    self._set_new_glyphs_array(self._initial_array_size)\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 406, in _set_new_glyphs_array\n    self._texture = Texture(self._array, dim=2, force_contiguous=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 147, in __init__\n    self._view = reshape_array(view, the_size)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 609, in reshape_array\n    view = view.reshape(*expected_shape, -1, copy=False)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'copy' is an invalid keyword argument for this function\n"
+            },
+            {
+              "duration": 2.1953794956207275,
+              "message": "Expected output not found: 'Evaluate image...'",
+              "name": "Tractometry help output",
+              "return_code": 0,
+              "status": "failed",
+              "stderr": "Expected output not found: 'Evaluate image...'",
+              "stdout": "Traceback (most recent call last):\n  File \"/opt/miniconda/bin/Tractometry\", line 15, in <module>\n    from tractseg.libs import tractometry\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/tractometry.py\", line 19, in <module>\n    from tractseg.libs import fiber_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/fiber_utils.py\", line 21, in <module>\n    from tractseg.libs import peak_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/peak_utils.py\", line 16, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n"
+            },
+            {
+              "duration": 2.174020767211914,
+              "message": "Expected exit code 0, got 1",
+              "name": "Tractometry input options",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Expected exit code 0, got 1",
+              "stdout": "Traceback (most recent call last):\n  File \"/opt/miniconda/bin/Tractometry\", line 15, in <module>\n    from tractseg.libs import tractometry\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/tractometry.py\", line 19, in <module>\n    from tractseg.libs import fiber_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/fiber_utils.py\", line 21, in <module>\n    from tractseg.libs import peak_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/peak_utils.py\", line 16, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n    import dipy.data as dpd\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/__init__.py\", line 14, in <module>\n    from dipy.data.fetcher import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/fetcher.py\", line 25, in <module>\n    from dipy.io.streamline import load_tractogram\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/streamline.py\", line 19, in <module>\n    from dipy.io.vtk import load_vtk_streamlines, save_vtk_streamlines\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/vtk.py\", line 7, in <module>\n    fury, have_fury, setup_module = optional_package(\n                                    ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/utils/optpkg.py\", line 82, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/__init__.py\", line 30, in <module>\n    gfx, _, _ = optional_package(\"pygfx\", min_version=\"0.14.0\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/optpkg.py\", line 195, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/__init__.py\", line 9, in <module>\n    from .objects import *\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/__init__.py\", line 79, in <module>\n    from ._ruler import Ruler\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_ruler.py\", line 8, in <module>\n    from ._text import MultiText\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_text.py\", line 43, in <module>\n    from ..utils import text as textmodule\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/__init__.py\", line 18, in <module>\n    from ._atlas import glyph_atlas  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 432, in <module>\n    glyph_atlas = PygfxGlyphAtlas()\n                  ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 178, in __init__\n    self._set_new_glyphs_array(self._initial_array_size)\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 406, in _set_new_glyphs_array\n    self._texture = Texture(self._array, dim=2, force_contiguous=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 147, in __init__\n    self._view = reshape_array(view, the_size)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 609, in reshape_array\n    view = view.reshape(*expected_shape, -1, copy=False)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'copy' is an invalid keyword argument for this function\n"
+            },
+            {
+              "duration": 2.17018461227417,
+              "message": "Expected exit code 0, got 1",
+              "name": "Tractometry scalar image option",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Expected exit code 0, got 1",
+              "stdout": "Traceback (most recent call last):\n  File \"/opt/miniconda/bin/Tractometry\", line 15, in <module>\n    from tractseg.libs import tractometry\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/tractometry.py\", line 19, in <module>\n    from tractseg.libs import fiber_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/fiber_utils.py\", line 21, in <module>\n    from tractseg.libs import peak_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/peak_utils.py\", line 16, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n    import dipy.data as dpd\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/__init__.py\", line 14, in <module>\n    from dipy.data.fetcher import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/fetcher.py\", line 25, in <module>\n    from dipy.io.streamline import load_tractogram\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/streamline.py\", line 19, in <module>\n    from dipy.io.vtk import load_vtk_streamlines, save_vtk_streamlines\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/vtk.py\", line 7, in <module>\n    fury, have_fury, setup_module = optional_package(\n                                    ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/utils/optpkg.py\", line 82, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/__init__.py\", line 30, in <module>\n    gfx, _, _ = optional_package(\"pygfx\", min_version=\"0.14.0\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/optpkg.py\", line 195, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/__init__.py\", line 9, in <module>\n    from .objects import *\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/__init__.py\", line 79, in <module>\n    from ._ruler import Ruler\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_ruler.py\", line 8, in <module>\n    from ._text import MultiText\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_text.py\", line 43, in <module>\n    from ..utils import text as textmodule\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/__init__.py\", line 18, in <module>\n    from ._atlas import glyph_atlas  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 432, in <module>\n    glyph_atlas = PygfxGlyphAtlas()\n                  ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 178, in __init__\n    self._set_new_glyphs_array(self._initial_array_size)\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 406, in _set_new_glyphs_array\n    self._texture = Texture(self._array, dim=2, force_contiguous=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 147, in __init__\n    self._view = reshape_array(view, the_size)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 609, in reshape_array\n    view = view.reshape(*expected_shape, -1, copy=False)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'copy' is an invalid keyword argument for this function\n"
+            },
+            {
+              "duration": 2.1321663856506348,
+              "message": "Expected exit code 0, got 1",
+              "name": "Tractometry peak length option",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Expected exit code 0, got 1",
+              "stdout": "Traceback (most recent call last):\n  File \"/opt/miniconda/bin/Tractometry\", line 15, in <module>\n    from tractseg.libs import tractometry\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/tractometry.py\", line 19, in <module>\n    from tractseg.libs import fiber_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/fiber_utils.py\", line 21, in <module>\n    from tractseg.libs import peak_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/peak_utils.py\", line 16, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n    import dipy.data as dpd\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/__init__.py\", line 14, in <module>\n    from dipy.data.fetcher import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/fetcher.py\", line 25, in <module>\n    from dipy.io.streamline import load_tractogram\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/streamline.py\", line 19, in <module>\n    from dipy.io.vtk import load_vtk_streamlines, save_vtk_streamlines\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/vtk.py\", line 7, in <module>\n    fury, have_fury, setup_module = optional_package(\n                                    ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/utils/optpkg.py\", line 82, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/__init__.py\", line 30, in <module>\n    gfx, _, _ = optional_package(\"pygfx\", min_version=\"0.14.0\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/optpkg.py\", line 195, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/__init__.py\", line 9, in <module>\n    from .objects import *\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/__init__.py\", line 79, in <module>\n    from ._ruler import Ruler\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_ruler.py\", line 8, in <module>\n    from ._text import MultiText\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_text.py\", line 43, in <module>\n    from ..utils import text as textmodule\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/__init__.py\", line 18, in <module>\n    from ._atlas import glyph_atlas  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 432, in <module>\n    glyph_atlas = PygfxGlyphAtlas()\n                  ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 178, in __init__\n    self._set_new_glyphs_array(self._initial_array_size)\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 406, in _set_new_glyphs_array\n    self._texture = Texture(self._array, dim=2, force_contiguous=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 147, in __init__\n    self._view = reshape_array(view, the_size)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 609, in reshape_array\n    view = view.reshape(*expected_shape, -1, copy=False)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'copy' is an invalid keyword argument for this function\n"
+            },
+            {
+              "duration": 3.444622755050659,
+              "message": "Expected output not found: 'significant differences...'",
+              "name": "plot_tractometry_results help",
+              "return_code": 0,
+              "status": "failed",
+              "stderr": "Expected output not found: 'significant differences...'",
+              "stdout": "Traceback (most recent call last):\n  File \"/opt/miniconda/bin/plot_tractometry_results\", line 16, in <module>\n    from tractseg.data import dataset_specific_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/data/dataset_specific_utils.py\", line 8, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n"
+            },
+            {
+              "duration": 3.1850242614746094,
+              "message": "Expected exit code 0, got 1",
+              "name": "plot_tractometry_results permutation option",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Expected exit code 0, got 1",
+              "stdout": "Traceback (most recent call last):\n  File \"/opt/miniconda/bin/plot_tractometry_results\", line 16, in <module>\n    from tractseg.data import dataset_specific_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/data/dataset_specific_utils.py\", line 8, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n    import dipy.data as dpd\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/__init__.py\", line 14, in <module>\n    from dipy.data.fetcher import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/fetcher.py\", line 25, in <module>\n    from dipy.io.streamline import load_tractogram\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/streamline.py\", line 19, in <module>\n    from dipy.io.vtk import load_vtk_streamlines, save_vtk_streamlines\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/vtk.py\", line 7, in <module>\n    fury, have_fury, setup_module = optional_package(\n                                    ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/utils/optpkg.py\", line 82, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/__init__.py\", line 30, in <module>\n    gfx, _, _ = optional_package(\"pygfx\", min_version=\"0.14.0\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/optpkg.py\", line 195, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/__init__.py\", line 9, in <module>\n    from .objects import *\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/__init__.py\", line 79, in <module>\n    from ._ruler import Ruler\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_ruler.py\", line 8, in <module>\n    from ._text import MultiText\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_text.py\", line 43, in <module>\n    from ..utils import text as textmodule\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/__init__.py\", line 18, in <module>\n    from ._atlas import glyph_atlas  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 432, in <module>\n    glyph_atlas = PygfxGlyphAtlas()\n                  ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 178, in __init__\n    self._set_new_glyphs_array(self._initial_array_size)\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 406, in _set_new_glyphs_array\n    self._texture = Texture(self._array, dim=2, force_contiguous=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 147, in __init__\n    self._view = reshape_array(view, the_size)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 609, in reshape_array\n    view = view.reshape(*expected_shape, -1, copy=False)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'copy' is an invalid keyword argument for this function\n"
+            },
+            {
+              "duration": 3.164102792739868,
+              "message": "Expected exit code 0, got 1",
+              "name": "plot_tractometry_results 3D plot option",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Expected exit code 0, got 1",
+              "stdout": "Traceback (most recent call last):\n  File \"/opt/miniconda/bin/plot_tractometry_results\", line 16, in <module>\n    from tractseg.data import dataset_specific_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/data/dataset_specific_utils.py\", line 8, in <module>\n    from tractseg.libs import img_utils\n  File \"/opt/miniconda/lib/python3.11/site-packages/tractseg/libs/img_utils.py\", line 17, in <module>\n    from dipy.align.imaffine import AffineMap\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/__init__.py\", line 27, in <module>\n    from dipy.align._public import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/align/_public.py\", line 36, in <module>\n    import dipy.data as dpd\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/__init__.py\", line 14, in <module>\n    from dipy.data.fetcher import (\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/data/fetcher.py\", line 25, in <module>\n    from dipy.io.streamline import load_tractogram\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/streamline.py\", line 19, in <module>\n    from dipy.io.vtk import load_vtk_streamlines, save_vtk_streamlines\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/io/vtk.py\", line 7, in <module>\n    fury, have_fury, setup_module = optional_package(\n                                    ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/dipy/utils/optpkg.py\", line 82, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/__init__.py\", line 30, in <module>\n    gfx, _, _ = optional_package(\"pygfx\", min_version=\"0.14.0\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/optpkg.py\", line 195, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/__init__.py\", line 9, in <module>\n    from .objects import *\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/__init__.py\", line 79, in <module>\n    from ._ruler import Ruler\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_ruler.py\", line 8, in <module>\n    from ._text import MultiText\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_text.py\", line 43, in <module>\n    from ..utils import text as textmodule\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/__init__.py\", line 18, in <module>\n    from ._atlas import glyph_atlas  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 432, in <module>\n    glyph_atlas = PygfxGlyphAtlas()\n                  ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 178, in __init__\n    self._set_new_glyphs_array(self._initial_array_size)\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 406, in _set_new_glyphs_array\n    self._texture = Texture(self._array, dim=2, force_contiguous=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 147, in __init__\n    self._view = reshape_array(view, the_size)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 609, in reshape_array\n    view = view.reshape(*expected_shape, -1, copy=False)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'copy' is an invalid keyword argument for this function\n"
+            },
+            {
+              "duration": 0.6847078800201416,
+              "message": "Expected exit code 0, got 1",
+              "name": "Python fury import",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/__init__.py\", line 30, in <module>\n    gfx, _, _ = optional_package(\"pygfx\", min_version=\"0.14.0\")\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/fury/optpkg.py\", line 195, in optional_package\n    pkg = importlib.import_module(name)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/importlib/__init__.py\", line 126, in import_module\n    return _bootstrap._gcd_import(name[level:], package, level)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/__init__.py\", line 9, in <module>\n    from .objects import *\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/__init__.py\", line 79, in <module>\n    from ._ruler import Ruler\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_ruler.py\", line 8, in <module>\n    from ._text import MultiText\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/objects/_text.py\", line 43, in <module>\n    from ..utils import text as textmodule\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/__init__.py\", line 18, in <module>\n    from ._atlas import glyph_atlas  # noqa: F401\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 432, in <module>\n    glyph_atlas = PygfxGlyphAtlas()\n                  ^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 178, in __init__\n    self._set_new_glyphs_array(self._initial_array_size)\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/utils/text/_atlas.py\", line 406, in _set_new_glyphs_array\n    self._texture = Texture(self._array, dim=2, force_contiguous=True)\n                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 147, in __init__\n    self._view = reshape_array(view, the_size)\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/pygfx/resources/_texture.py\", line 609, in reshape_array\n    view = view.reshape(*expected_shape, -1, copy=False)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: 'copy' is an invalid keyword argument for this function\n",
+              "stdout": ""
+            },
+            {
+              "duration": 0.4032926559448242,
+              "message": "Expected exit code 0, got 1",
+              "name": "Native CPU tensor and package closure",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "/opt/fsl-6.0.7.22/bin/python: No module named pip\nTraceback (most recent call last):\n  File \"<stdin>\", line 4, in <module>\nModuleNotFoundError: No module named 'torch'\n",
+              "stdout": ""
+            },
+            {
+              "duration": 0.8051023483276367,
+              "message": "Expected exit code 0, got 1",
+              "name": "Full pretrained 72-bundle segmentation against official references",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 9, in <module>\nModuleNotFoundError: No module named 'tractseg.data'\n",
+              "stdout": ""
+            }
+          ],
+          "outcome": "Docker/architecture/SIF succeeded. FURY2/pygfx requires NumPy2 but candidate pinned NumPy1; added tests selected FSL Python instead of application interpreter."
+        }
+      ]
     },
     {
       "recipe": "vertexwiser",
@@ -38653,9 +39170,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-14T06:34:36.106187+00:00",
-    "previous_sha": "9df30cc185fa2af32ee99a364492954bf2798a61",
-    "new_sha": "5e37b8e28939eb8e7348c1f492f5f96fa54d239e",
+    "checked_at": "2026-10-14T08:05:34.535761+00:00",
+    "previous_sha": "5e37b8e28939eb8e7348c1f492f5f96fa54d239e",
+    "new_sha": "bfe91f86b95672277ca43f30fba44febcb61a67a",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },
