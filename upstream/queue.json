@@ -5556,7 +5556,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T23:14:09.431156+00:00",
+        "checked_at": "2026-10-14T00:26:40.072452+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -5581,7 +5581,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:10.214383+00:00",
+        "metadata_checked_at": "2026-10-14T00:26:40.863728+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -6602,7 +6602,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T23:14:11.510332+00:00",
+        "checked_at": "2026-10-14T00:26:41.872091+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -6627,7 +6627,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:12.303608+00:00"
+        "metadata_checked_at": "2026-10-14T00:26:43.019376+00:00"
       }
     },
     {
@@ -12666,18 +12666,18 @@
       "port_files": [
         "recipes/gliomoda/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-gliomoda-20261012",
       "baseline_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
       "candidate_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
       "started_at": "2026-10-13T22:41:06.165534+00:00",
       "deadline": "2026-10-14T10:41:06.165534+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38482867040,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3606",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.4",
@@ -12688,11 +12688,11 @@
         "fulltest_version": "0.0.4",
         "test_count": 16
       },
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
-      "change_summary": "Enable GlioMODA0.0.4 ARM64 using official PyTorch2.6.0 CPU wheels with supplemental PyPI build dependencies, preserving the existing x86 CUDA path, nnU-Net2.5.2 and every bundled1.0.2 model. Independently track main/ARM Torch versions. Retain all16 existing tests and add actual CPU dependency closure plus default trained four-modality inference on all complete official240x240x155/1mm tutorial MRI images. Assert valid nonempty BraTS labels, original physical grid, unchanged inputs and all bundled model files. No model, image resizing, prediction parameters, source algorithm or GPU/clinical accuracy claim.",
+      "change_summary": "Enable GlioMODA0.0.4 ARM64 using official PyTorch2.6.0 CPU wheels with supplemental PyPI build dependencies, preserving the existing x86 CUDA path, nnU-Net2.5.2 and every bundled1.0.2 model. Independently track main/ARM Torch versions. Retain all16 existing tests and add actual CPU dependency closure plus default trained four-modality inference on all complete official240x240x155/1mm tutorial MRI images. Assert valid nonempty BraTS labels, original physical grid, unchanged inputs and all bundled model files. No model, image resizing, prediction parameters, source algorithm or GPU/clinical accuracy claim.\n\nObserved native default four-modality inference completed in49minutes with two CPU threads, returning all three glioma labels(126237 foreground voxels), the full240x240x155 grid and unchanged four MRI/84 model-file hashes. This verifies this CPU operation, not clinical accuracy, GPU or every alternative model.",
       "pr_title": "Enable GlioMODA ARM64 and test full trained CPU MRI inference",
       "primary_source_review": [
         "https://github.com/BrainLesion/GlioMODA",
@@ -12980,7 +12980,90 @@
           "t2w/dataset.json"
         ]
       },
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38482867040"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38482867040",
+      "native_command_exit_review": {
+        "source_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
+        "version": "0.0.4",
+        "counts": {
+          "total_tests": 19,
+          "passed": 19,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 3014.034051179886,
+          "run_timestamp": "2026-10-14T00:29:57.610220",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 18,
+          "total_suites": 1,
+          "total_tests": 18
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38482867040",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "native_actual_scientific_review": {
+        "source_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
+        "actual_zero_exit_functional_commands": 18,
+        "full_mri_case_seconds": 2959.1820063591003,
+        "metrics": {
+          "foreground_voxels": 126237,
+          "input_sha256": {
+            "t1c": "4399faadcc45c8a4541313cdf88aced7d835ed59ac3078d950e0eac293d603f5",
+            "t1n": "e860924b936e301ddeba20409fbb59dde322475cb49328f1b46a9235c792e73e",
+            "t2f": "82aed8546af5e6d8d94fd91c56227abdcf6120130390d1556c4342a208980604",
+            "t2w": "4cd389cc57d12134a30a898c66532228126b9a7d0600ee578e82a32144528b51"
+          },
+          "label_counts": [
+            8801763,
+            18458,
+            85535,
+            22244
+          ],
+          "labels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "mode": "t1c-t2f-t1n-t2w",
+          "seconds": 2941.61,
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "unchanged_weight_files": 84,
+          "weights_version": "1.0.2"
+        },
+        "scope": "Default four-modality model, all normal inference stages/augmentation and complete official MRI inputs. Physical grid, valid nonempty labels and all image/model hashes passed. Other modality models, ResEncL, GPU and clinical accuracy are not inferred from this operation."
+      },
+      "pending_upstream_issue": 3606,
+      "pr_number": 3606,
+      "upstream_candidate_run": {
+        "id": 38490805458,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38490805458",
+        "jobs": {
+          "x86_64": 115615368447,
+          "aarch64": 115615368865
+        },
+        "status": "in-progress",
+        "note": "Both actual native architecture candidate jobs started at the exact verified PR head."
+      }
     },
     {
       "recipe": "glmsingle",
@@ -16403,7 +16486,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T23:14:14.543110+00:00",
+        "checked_at": "2026-10-14T00:26:44.104995+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -16428,7 +16511,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:15.394600+00:00"
+        "metadata_checked_at": "2026-10-14T00:26:44.856878+00:00"
       }
     },
     {
@@ -19013,7 +19096,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T23:14:16.643656+00:00",
+        "checked_at": "2026-10-14T00:26:46.154580+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -19028,7 +19111,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:17.530010+00:00",
+        "metadata_checked_at": "2026-10-14T00:26:46.905134+00:00",
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
         "resolution_evidence": {
           "automatic_run_id": 38448486794,
@@ -20094,7 +20177,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-13T23:14:19.313204+00:00",
+        "checked_at": "2026-10-14T00:26:48.657256+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -20119,7 +20202,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:20.103020+00:00",
+        "metadata_checked_at": "2026-10-14T00:26:49.447525+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -23532,7 +23615,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T23:14:23.165174+00:00",
+        "checked_at": "2026-10-14T00:26:50.559317+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -23557,7 +23640,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:24.716982+00:00"
+        "metadata_checked_at": "2026-10-14T00:26:51.401042+00:00"
       }
     },
     {
@@ -23960,7 +24043,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T23:14:26.114202+00:00",
+        "checked_at": "2026-10-14T00:26:52.910648+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -23975,7 +24058,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:26.896614+00:00",
+        "metadata_checked_at": "2026-10-14T00:26:53.706158+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -24419,7 +24502,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T23:14:28.001062+00:00",
+        "checked_at": "2026-10-14T00:26:54.752640+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -24444,7 +24527,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:28.770351+00:00"
+        "metadata_checked_at": "2026-10-14T00:26:55.499235+00:00"
       }
     },
     {
@@ -26213,7 +26296,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T23:14:29.876965+00:00",
+        "checked_at": "2026-10-14T00:26:56.557570+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -26238,7 +26321,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:30.772113+00:00"
+        "metadata_checked_at": "2026-10-14T00:26:57.374997+00:00"
       }
     },
     {
@@ -28207,7 +28290,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T23:14:32.392408+00:00",
+        "checked_at": "2026-10-14T00:26:58.485139+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -28232,7 +28315,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:33.393662+00:00"
+        "metadata_checked_at": "2026-10-14T00:26:59.233431+00:00"
       }
     },
     {
@@ -31343,7 +31426,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T23:14:34.525931+00:00",
+        "checked_at": "2026-10-14T00:27:00.486556+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -31368,7 +31451,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:35.390528+00:00"
+        "metadata_checked_at": "2026-10-14T00:27:01.468398+00:00"
       }
     },
     {
@@ -34175,7 +34258,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T23:14:36.609305+00:00",
+        "checked_at": "2026-10-14T00:27:02.684874+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -34200,7 +34283,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:37.445941+00:00"
+        "metadata_checked_at": "2026-10-14T00:27:03.469960+00:00"
       }
     },
     {
@@ -35246,7 +35329,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-13T23:14:38.997186+00:00",
+        "checked_at": "2026-10-14T00:27:04.661628+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -35271,7 +35354,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T23:14:39.753828+00:00"
+        "metadata_checked_at": "2026-10-14T00:27:05.541852+00:00"
       }
     }
   ],
@@ -35296,8 +35379,8 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-13T22:42:09.274423+00:00",
-    "previous_sha": "4167b93854b46d07ab7139d80d9d430db5b4c561",
+    "checked_at": "2026-10-14T00:30:56.824930+00:00",
+    "previous_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
     "new_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
     "method": "normal-fast-forward",
     "actions_enabled": false
