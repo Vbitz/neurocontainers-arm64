@@ -24743,11 +24743,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-neurocommand-20261012",
       "baseline_sha": "9df30cc185fa2af32ee99a364492954bf2798a61",
-      "candidate_sha": "c65da700c0ab9f8a3e60a7624afbcb93e7d0253a",
+      "candidate_sha": "f7d9674296443f4fdd4b6e53577b262724f99d1b",
       "started_at": "2026-10-14T05:55:43.237296+00:00",
       "deadline": "2026-10-14T17:55:43.237296+00:00",
-      "attempts": 1,
-      "run_id": 38522262263,
+      "attempts": 2,
+      "run_id": 38524678050,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -24774,7 +24774,7 @@
         "https://apptainer.org/docs/admin/main/installation.html",
         "https://cvmfs.readthedocs.io/en/2.14/cpt-configure/"
       ],
-      "arm64_attempts": 1,
+      "arm64_attempts": 2,
       "x86_64_attempts": 0,
       "pre_dispatch_revisions": [
         {
@@ -24783,7 +24783,31 @@
           "reason": "Before first build, require a real nonhidden catalog module to appear in actual Lmod listing; arbitrary nonempty diagnostic output cannot satisfy the functional test.0builds; original deadline retained."
         }
       ],
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38522262263"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38524678050",
+      "candidate_history": [
+        {
+          "source_sha": "c65da700c0ab9f8a3e60a7624afbcb93e7d0253a",
+          "branch": "arm64/upstream-neurocommand-20261012",
+          "run_id": 38522262263,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38522262263",
+          "counts": {
+            "total_tests": 6,
+            "passed": 5,
+            "failed": 1,
+            "skipped": 0
+          },
+          "first_failed_test": {
+            "duration": 1.7333056926727295,
+            "message": "Expected exit code 0, got 1",
+            "name": "Real private CVMFS mount and Neurodesk module access",
+            "return_code": 1,
+            "status": "failed",
+            "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 24, in <module>\nAssertionError: (4, 'Failed to set requested number of open files, using maximum number 65536\\nCernVM-FS: loading Fuse module... done\\nfusermount3: failed to open /etc/mtab: No such file or directory\\nfusermount3: mount failed: Operation not permitted\\nfailed to mount file system\\n', \"Wed Oct 14 06:35:23 2026 re-building cache database\\nWed Oct 14 06:35:23 2026 Mountpoint /tmp/neurocommand-cvmfs-_ggtxay9/mount registered in the group\\nWed Oct 14 06:35:24 2026 (neurodesk.ardc.edu.au) (manager 'standard') switching proxy from (none) to DIRECT. Reason: set random start proxy from the first proxy group [Current host: http://s1osggoc-cvmfs.openhtc.io:8080/cvmfs/neurodesk.ardc.edu.au]\\nWed Oct 14 06:35:24 2026 (neurodesk.ardc.edu.au) (manager 'standard') geographic order of servers retrieved from s1nikhef-cvmfs.openhtc.io\\nWed Oct 14 06:35:24 2026 (neurodesk.ardc.edu.au) (manager 'external') switching proxy from (none) to DIRECT. Reason: cloned [Current host: http://s1bnl-cvmfs.openhtc.io/cvmfs/neurodesk.ardc.edu.au]\\nWed Oct 14 06:35:24 2026 (neurodesk.ardc.edu.au) failed to mount file system\\n\")\n",
+            "stdout": ""
+          },
+          "outcome": "Native Docker/architecture/SIF succeeded; actual DataLad and nested native SIF passed, private FUSE mount lacked namespace mount permission."
+        }
+      ]
     },
     {
       "recipe": "nftsim",
