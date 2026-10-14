@@ -137,7 +137,7 @@
         "recipes/aidamri/build.yaml",
         "recipes/aidamri/fulltest.yaml"
       ],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-aidamri-20261012",
       "baseline_sha": "41308ea3d5872faad4d5d00eabaac8393177bb56",
       "candidate_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
@@ -148,7 +148,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.0",
@@ -209,7 +209,1209 @@
           "reason": "Separate DSI x86/ARM version variables and asset update sources so each updater changes its own URL and checksum together. Declare bundled DSI license. Versions/current URLs/checksums/fulltest unchanged; zero builds dispatched."
         }
       ],
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38516496155"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38516496155",
+      "deploy_skip_review": {
+        "reviewed": true,
+        "source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+        "counts": {
+          "total": 1993,
+          "passed": 1770,
+          "failed": 0,
+          "skipped": 223
+        },
+        "categories": {
+          "deploy_bins": 1,
+          "file.type": 8,
+          "ldd.summary.skipped": 213,
+          "deploy_dir.limit": 1
+        },
+        "skipped_entries": [
+          {
+            "name": "deploy_bins",
+            "status": "skipped",
+            "message": "DEPLOY_BINS not set."
+          },
+          {
+            "name": "file.type:/opt/aidamri-3.0/bin/batchProc.py",
+            "status": "skipped",
+            "message": "File /opt/aidamri-3.0/bin/batchProc.py is not an ELF binary or recognised script."
+          },
+          {
+            "name": "file.type:/opt/aidamri-3.0/bin/stat_result.json",
+            "status": "skipped",
+            "message": "File /opt/aidamri-3.0/bin/stat_result.json is not an ELF binary or recognised script."
+          },
+          {
+            "name": "ldd.summary.skipped:/bin/sh",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/aidamri-3.0/NiftyReg/bin/reg_aladin",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/aidamri-3.0/NiftyReg/bin/reg_average",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/aidamri-3.0/NiftyReg/bin/reg_f3d",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/aidamri-3.0/NiftyReg/bin/reg_jacobian",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/aidamri-3.0/NiftyReg/bin/reg_measure",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/aidamri-3.0/NiftyReg/bin/reg_resample",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/aidamri-3.0/NiftyReg/bin/reg_tools",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/aidamri-3.0/NiftyReg/bin/reg_transform",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/python3.12",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-addr2line",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-ar",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-as",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-c++",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-cc",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "file.type:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu.cfg",
+            "status": "skipped",
+            "message": "File /opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu.cfg is not an ELF binary or recognised script."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-c++filt",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-cpp",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-elfedit",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-g++",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-gcc",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-gcc-ar",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-gcc-nm",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-gcc-ranlib",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-gcov",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-gcov-dump",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-gcov-tool",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-gprof",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-ld",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-ld.bfd",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-nm",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-objcopy",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-objdump",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/usr/bin/env",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-ranlib",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-readelf",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-size",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-strings",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aarch64-conda-linux-gnu-strip",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/acyclic",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/adig",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/ahost",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/bin/bash",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "file.type:/opt/fsl-5.0.11/bin/android_deploy.py",
+            "status": "skipped",
+            "message": "File /opt/fsl-5.0.11/bin/android_deploy.py is not an ELF binary or recognised script."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/annotate",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aomdec",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aomenc",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/applytopup",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/applywarp",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/applyxfm4D",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/aserver",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/asl_file",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/asl_mfree",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/assistant6",
+            "status": "skipped",
+            "message": "Skipped 4 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/attr",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/avscale",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/python",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "file.type:/opt/fsl-5.0.11/bin/aws_bash_completer",
+            "status": "skipped",
+            "message": "File /opt/fsl-5.0.11/bin/aws_bash_completer is not an ELF binary or recognised script."
+          },
+          {
+            "name": "file.type:/opt/fsl-5.0.11/bin/aws.cmd",
+            "status": "skipped",
+            "message": "File /opt/fsl-5.0.11/bin/aws.cmd is not an ELF binary or recognised script."
+          },
+          {
+            "name": "file.type:/opt/fsl-5.0.11/bin/aws_zsh_completer.sh",
+            "status": "skipped",
+            "message": "File /opt/fsl-5.0.11/bin/aws_zsh_completer.sh is not an ELF binary or recognised script."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/b0calc",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/bash",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/bcomps",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/usr/bin/perl",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/bet2",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/betsurf",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/brotli",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/bunzip2",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/bzcat",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/bzip2",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/bzip2recover",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/c++",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/calc_grad_perc_dev",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/captoinfo",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/cbrunsli",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/cc",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/ccomps",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/ccops",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/cct",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/checksum-profile",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/circo",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/cjpeg",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/clear",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/cluster",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/connectedcomp",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/contrast_mgr",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/convertwarp",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/convert_xfm",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/cpp",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/create_lut",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/cs2cs",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/csv-import",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/curve_keygen",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/cutoffcalc",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dav1d",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dbrunsli",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dbus-cleanup-sockets",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dbus-daemon",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dbus-launch",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dbus-monitor",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dbus-run-session",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dbus-send",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dbus-test-tool",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dbus-update-activation-environment",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dbus-uuidgen",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dcm2niix",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dcm-dump",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dcm-getframe",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/delaunay",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "file.type:/opt/fsl-5.0.11/bin/deploy.py",
+            "status": "skipped",
+            "message": "File /opt/fsl-5.0.11/bin/deploy.py is not an ELF binary or recognised script."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/derb",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/designer6",
+            "status": "skipped",
+            "message": "Skipped 5 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/diffimg",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dijkstra",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/distancemap",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/djpeg",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dot",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dot2gxl",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dot_builtins",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/drawmesh",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dtifit",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/dtigen",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/eddy_combine",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/eddy_cpu",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/eddy_cuda",
+            "status": "skipped",
+            "message": "Skipped 4 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/edgepaint",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/exr2aces",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/exrenvmap",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/exrheader",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/exrinfo",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/exrmakepreview",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/exrmaketiled",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/exrmanifest",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "deploy_dir.limit:/opt/fsl-5.0.11/bin",
+            "status": "skipped",
+            "message": "Stopped after 200 executables because DEPLOY_TEST_MAX_PATH_FILES=200."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/python3.10",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/aarch64-conda_cos7-linux-gnu-ld",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/aarch64-conda-linux-gnu-ld",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/adig",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/ahost",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/bsdcat",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/bsdcpio",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/bsdtar",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/bsdunzip",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/bunzip2",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/bzcat",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/bzip2",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/bzip2recover",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/captoinfo",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/clear",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/python",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/conda2solv",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/derb",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/dumpsolv",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/genbrk",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/gencfu",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/gencnval",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/gendict",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/genrb",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/gss-client",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/icuexportdata",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/icuinfo",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/infocmp",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/infotocap",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/installcheck",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/kadmin",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/kdestroy",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/keyctl",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/kinit",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/klist",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/kpasswd",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/kswitch",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/ktutil",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/kvno",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/lz4",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/lz4c",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/lz4cat",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/lzcat",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/lzma",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/lzmadec",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/lzmainfo",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/makeconv",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/mamba-package",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/mergesolv",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/nghttp",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/nghttpd",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/nghttpx",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/openssl",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/pcre2grep",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/pcre2test",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/pkgdata",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/python3",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/python3.1",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/repo2solv",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/reset",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/sclient",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/sim_client",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/sqlite3",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/tabs",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/tclsh",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/tclsh8.6",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/testsolv",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/tic",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/toe",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/tput",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/tset",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/unlz4",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/unlzma",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/unxz",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/unzstd",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/uuclient",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/wish",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/wish8.6",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/xmlcatalog",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/xmllint",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/xz",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/xzcat",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/xzdec",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/zstd",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/zstdcat",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/miniconda-4.7.12.1/bin/zstdmt",
+            "status": "skipped",
+            "message": "Skipped 2 linkage entries without filesystem paths."
+          }
+        ],
+        "linkage_outliers": [
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/assistant6",
+            "status": "skipped",
+            "message": "Skipped 4 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/designer6",
+            "status": "skipped",
+            "message": "Skipped 5 linkage entries without filesystem paths."
+          },
+          {
+            "name": "ldd.summary.skipped:/opt/fsl-5.0.11/bin/eddy_cuda",
+            "status": "skipped",
+            "message": "Skipped 4 linkage entries without filesystem paths."
+          }
+        ],
+        "note": "Path-based deployment declares no explicit bins. Eight type skips are data/config/completion files and Python without shebang; batchProc executes successfully with its named interpreter.210 linkage records omit the usual two pathless loader/vDSO entries. Three outliers are Qt assistant/designer GUI tools and eddy_cuda GPU dependencies; neither3D/developer GUI nor GPU operation is verified. The default scan caps FSL/bin at200 executables; do not claim full FSL linkage closure. All required focused CPU operations and actual DSI start passed directly. No functional suite capability/test was skipped or weakened."
+      },
+      "native_actual_scientific_review": {
+        "source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+        "run_id": 38516496155,
+        "functional_actual_zero_exits": 9,
+        "operation_stdout": {
+          "AIDAmri diffusion baseline averaging": "AIDAmri real DWI averaging preserved every13440 expected voxel and physical grid\n",
+          "AIDAmri analytical fMRI connectivity matrices": "AIDAmri primary Pearson p-value Fisher-z and saved ROI-label oracles passed\n",
+          "Architecture matched DSI Studio actually starts": "DSI Studio (doi:10.1038/s41592-025-02762-8), Sun \"\u5b6b\" Oct 12 2026 \n"
+        },
+        "operation_seconds": {
+          "AIDAmri diffusion baseline averaging": 0.9085385799407959,
+          "AIDAmri analytical fMRI connectivity matrices": 1.1930572986602783,
+          "Architecture matched DSI Studio actually starts": 0.2617495059967041
+        },
+        "scope": "Released AIDAmri low-b DWI averaging/every13440 voxel/grid/input hash and complete analytical Pearson/p-value/Fisher-z/ROI-label matrices. Actual official CPU DSI starts. Focused primary operations; full rodent MRI/atlas pipeline, GUI/GPU and full FSL ELF closure remain unverified."
+      },
+      "native_command_exit_review": {
+        "source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+        "version": "3.0.0",
+        "counts": {
+          "total_tests": 10,
+          "passed": 10,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "total_suites": 1,
+          "suites_passed": 1,
+          "suites_failed": 0,
+          "total_tests": 9,
+          "tests_passed": 9,
+          "tests_failed": 0,
+          "duration": 5.085978746414185,
+          "run_timestamp": "2026-10-14T05:47:34.799694"
+        },
+        "deploy_counts": {
+          "total": 1993,
+          "passed": 1770,
+          "failed": 0,
+          "skipped": 223
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38516496155",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "amico",
