@@ -4009,18 +4009,18 @@
       "port_files": [
         "recipes/brainles-preprocessing/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-brainles-preprocessing-20261012",
       "baseline_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
       "candidate_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
       "started_at": "2026-10-13T15:53:00+00:00",
       "deadline": "2026-10-14T03:53:00+00:00",
-      "attempts": 2,
+      "attempts": 4,
       "run_id": 38493993950,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3610",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.13",
@@ -4045,8 +4045,8 @@
         "https://download.pytorch.org/whl/cpu/torch/",
         "https://pypi.org/pypi/brainles-hd-bet/0.0.11/json"
       ],
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "previous_infrastructure_blockers": [
         {
           "recorded_at": "2026-10-13T16:23:06.608668+00:00",
@@ -4215,7 +4215,44 @@
       ],
       "recovery_retry_hypothesis_posted": true,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38493993950",
-      "unchanged_infrastructure_retry_used": true
+      "unchanged_infrastructure_retry_used": true,
+      "native_command_exit_review": {
+        "source_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
+        "version": "0.6.14",
+        "counts": {
+          "total_tests": 19,
+          "passed": 19,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 110.25523591041565,
+          "run_timestamp": "2026-10-14T01:41:48.413283",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 18,
+          "total_suites": 1,
+          "total_tests": 18
+        },
+        "deploy_counts": {
+          "total": 3,
+          "passed": 3,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38493993950",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3610,
+      "pr_number": 3610
     },
     {
       "recipe": "brainlifecli",
@@ -10360,18 +10397,197 @@
       "port_files": [
         "recipes/flames/build.yaml"
       ],
-      "status": "native-verified",
+      "status": "merged",
       "branch": "arm64/upstream-flames-20261012",
       "baseline_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
       "candidate_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
       "started_at": "2026-10-13T23:13:50.109994+00:00",
       "deadline": "2026-10-14T11:13:50.109994+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38483705386,
-      "pr_url": null,
-      "upstream_ci": null,
-      "merged_sha": null,
-      "next_action": "Open the same focused FLAMeS PR after two slots free, report the poor native reference Dice explicitly, and compare the unchanged full MRI/model workflow on both upstream architectures. All required gates plus honest source-specific numerical/parity review must precede merge; no clinical accuracy claim.",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3609",
+      "upstream_ci": {
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "flames",
+          "container": "flames",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.0.0",
+          "build_date": "20261014",
+          "docker_archive": "flames_1.0.0_20261014.docker.tar",
+          "sif": "flames_1.0.0_20261014.simg",
+          "candidate_tag": "nd-candidate-flames:02ade4a9595b",
+          "launcher": null,
+          "pr_number": 3609,
+          "head_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+          "tests": {
+            "total": 11,
+            "passed": 11,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 10,
+            "fulltest_passed": 10,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "FLAMeS runtime entrypoints",
+              "FLAMeS command help",
+              "Inference Python stack",
+              "CPU tensor execution",
+              "NIfTI image round trip",
+              "FLAMeS model assets",
+              "HD-BET parameter assets",
+              "Runtime paths avoid the home directory",
+              "Native CPU dependency closure",
+              "Full trained MS lesion segmentation with skull stripping"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "794 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8246,
+            "wasted_bytes": 19090425,
+            "wasted_bytes_display": "19 MB",
+            "user_wasted_percent": 0.3057
+          }
+        },
+        "candidate_run_id": 38496175583,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38496175583",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+            "job_id": 115632406706,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38496175583/job/115632406706",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "aarch64": {
+            "head_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+            "job_id": 115632406655,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38496175583/job/115632406655",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "flames",
+          "container": "flames_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.0.0",
+          "build_date": "20261014",
+          "docker_archive": "flames_arm64_1.0.0_20261014.docker.tar",
+          "sif": "flames_arm64_1.0.0_20261014.simg",
+          "candidate_tag": "nd-candidate-flames_arm64:02ade4a9595b",
+          "launcher": null,
+          "pr_number": 3609,
+          "head_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+          "tests": {
+            "total": 11,
+            "passed": 11,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 10,
+            "fulltest_passed": 10,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "FLAMeS runtime entrypoints",
+              "FLAMeS command help",
+              "Inference Python stack",
+              "CPU tensor execution",
+              "NIfTI image round trip",
+              "FLAMeS model assets",
+              "HD-BET parameter assets",
+              "Runtime paths avoid the home directory",
+              "Native CPU dependency closure",
+              "Full trained MS lesion segmentation with skull stripping"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "794 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8241,
+            "wasted_bytes": 18083335,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.3057
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
+      },
+      "merged_sha": "8f21006d83bbcf5c873352632347f7b6b7246694",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -10384,8 +10600,8 @@
         "patch_conflict": "error: patch failed: recipes/flames/build.yaml:10\nerror: recipes/flames/build.yaml: patch does not apply",
         "three_way_clean": true
       },
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
       "change_summary": "Enable FLAMeS1.0.0 ARM64 with the official architecture-specific Miniforge installer and matched CPU Torch2.5.1/torchvision0.20.1 wheels. Preserve pinned FLAMeS model ea055aec, all five HD-BET1.0 checkpoints/sourceae160681 and nnU-Net2.8.1. Pin Python3.11/NumPy1.26.4 and the pre-Torch2.6 load contract for the old HD-BET code on both architectures; no library patches. Correct the wrapper to use pinned HD-BET documented -tta0/integer GPU device arguments, retain its five-model accurate mode, clean temporary state and fail if prediction output is absent. Retain all8 existing tests and add real CPU compiled dependency operations plus full five-fold/default-augmentation FLAMeS inference with actual skull stripping on a complete182x218x182 public MS FLAIR image. Require nonempty binary lesions, physical grid, overlap with known lesions and unchanged input/reference/model assets. No clinical accuracy or GPU execution claim.\n\nNative scientific limitation: Native full-case runtime completed, but this example has very poor agreement with its manual reference:22 predicted voxels vs30620 reference voxels, Dice0.0014359376. This establishes model execution/output integrity only, not segmentation accuracy. Keep the same MRI, reference, all folds/checkpoints and tests; require the planned upstream x86 case comparison before attributing the behavior to ARM or accepting an architecture-parity claim. No easier replacement fixture, threshold tuning or clinical accuracy claim.",
@@ -10598,10 +10814,119 @@
         },
         "reference_lesion_voxels": 30620,
         "limitation": "Native full-case runtime completed, but this example has very poor agreement with its manual reference:22 predicted voxels vs30620 reference voxels, Dice0.0014359376. This establishes model execution/output integrity only, not segmentation accuracy. Keep the same MRI, reference, all folds/checkpoints and tests; require the planned upstream x86 case comparison before attributing the behavior to ARM or accepting an architecture-parity claim. No easier replacement fixture, threshold tuning or clinical accuracy claim.",
-        "parity_review_pending": true,
-        "clinical_accuracy_unverified": true
+        "parity_review_pending": false,
+        "clinical_accuracy_unverified": true,
+        "upstream_architecture_comparison": {
+          "source_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+          "run_id": 38496175583,
+          "equal_recorded_fields": [
+            "folds",
+            "input_sha256",
+            "lesion_voxels",
+            "observed_dice",
+            "reference_overlap_voxels",
+            "shape",
+            "skull_strip",
+            "unchanged_model_files"
+          ],
+          "bitwise_output_comparison_performed": false,
+          "clinical_accuracy_unverified": true
+        }
       },
-      "merge_review_requirement": "Before merge, review actual full MS outputs from both upstream architectures at the exact PR head, record their metrics and explain the poor native reference Dice. Do not infer bitwise parity from counts alone or claim clinical accuracy. The temporary normal merge helper holds FLAMeS until parity_review_pending is explicitly false and both source-specific actual metric reviews exist."
+      "merge_review_requirement": "Before merge, review actual full MS outputs from both upstream architectures at the exact PR head, record their metrics and explain the poor native reference Dice. Do not infer bitwise parity from counts alone or claim clinical accuracy. The temporary normal merge helper holds FLAMeS until parity_review_pending is explicitly false and both source-specific actual metric reviews exist.",
+      "pending_upstream_issue": 3609,
+      "pr_number": 3609,
+      "upstream_image_log_gate_recovery": {
+        "x86_64": {
+          "source_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+          "run_id": 38496175583,
+          "job_id": 115632406706,
+          "raw_job_log_path": "/tmp/flames-upstream-x86-38496175583-job.log",
+          "raw_job_log_sha256": "1fa4ee9d93da2bdc166c01d307388deb6ebe5f79e176d181c293cb2cdb57a151",
+          "functional_tests": 10,
+          "all_functional_commands_match_explicit_contracts": true,
+          "note": "Actual completed native log, compact approval and full raw reports prove fresh Docker/SIF/deploy/fulltest/Dive/manifest/final gates despite absent API steps. Nine0 exits and one explicitly expected help1; no gate waived or image rebuilt."
+        },
+        "aarch64": {
+          "source_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+          "run_id": 38496175583,
+          "job_id": 115632406655,
+          "raw_job_log_path": "/tmp/flames-upstream-arm-38496175583-job.log",
+          "raw_job_log_sha256": "1688bf3c8897fa8706dc689e29d94ea8ab80135beea296c637addf8b6cff03d0",
+          "functional_tests": 10,
+          "all_functional_commands_match_explicit_contracts": true,
+          "note": "Actual completed native log, compact approval and full raw reports prove fresh Docker/SIF/deploy/fulltest/Dive/manifest/final gates despite absent API steps. Nine0 exits and one explicitly expected help1; no gate waived or image rebuilt."
+        }
+      },
+      "upstream_actual_scientific_review": {
+        "x86_64": {
+          "source_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+          "actual_zero_exit_commands": 9,
+          "explicit_expected_help_exit": 1,
+          "full_ms_case_seconds": 114.5109179019928,
+          "full_ms_metrics": {
+            "folds": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "input_sha256": {
+              "flair": "312253bbc7cea9adcd78a98c66e18ba1253b1a2183f31492f6a9f9ce5086e745",
+              "reference": "f35bd723ac2af1b179522f53de48e45ce485c5864e4f6954d24d684140ba0533"
+            },
+            "lesion_voxels": 22,
+            "observed_dice": 0.0014359376019842046,
+            "reference_overlap_voxels": 22,
+            "seconds": 107.36,
+            "shape": [
+              182,
+              218,
+              182
+            ],
+            "skull_strip": true,
+            "unchanged_model_files": 33
+          },
+          "reference_lesion_voxels": 30620,
+          "clinical_accuracy_unverified": true,
+          "scope": "Actual five-CNN HD-BET plus five-fold/default-augmentation FLAMeS, physical output grid and all input/reference/model hashes; poor manual-reference agreement remains explicit. No bitwise architecture-parity or clinical-accuracy claim."
+        },
+        "aarch64": {
+          "source_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+          "actual_zero_exit_commands": 9,
+          "explicit_expected_help_exit": 1,
+          "full_ms_case_seconds": 1446.3303349018097,
+          "full_ms_metrics": {
+            "folds": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ],
+            "input_sha256": {
+              "flair": "312253bbc7cea9adcd78a98c66e18ba1253b1a2183f31492f6a9f9ce5086e745",
+              "reference": "f35bd723ac2af1b179522f53de48e45ce485c5864e4f6954d24d684140ba0533"
+            },
+            "lesion_voxels": 22,
+            "observed_dice": 0.0014359376019842046,
+            "reference_overlap_voxels": 22,
+            "seconds": 1432.95,
+            "shape": [
+              182,
+              218,
+              182
+            ],
+            "skull_strip": true,
+            "unchanged_model_files": 33
+          },
+          "reference_lesion_voxels": 30620,
+          "clinical_accuracy_unverified": true,
+          "scope": "Actual five-CNN HD-BET plus five-fold/default-augmentation FLAMeS, physical output grid and all input/reference/model hashes; poor manual-reference agreement remains explicit. No bitwise architecture-parity or clinical-accuracy claim."
+        }
+      },
+      "merged_at": "2026-10-14T02:21:41Z"
     },
     {
       "recipe": "fsl",
@@ -12691,7 +13016,7 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3606",
       "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "next_action": "Let old-head ARM candidate finish without cancellation. Then dispatch the pushed single-layer correction from its separate branch for exact native proof4/6. Only after native success, update existing PR3606 by normal fast-forward and require both fresh architecture jobs5/6,6/6/all gates. No duplicate PR, test weakening, budget reset or premature original-branch push.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.4",
@@ -13077,7 +13402,108 @@
         },
         "status": "in-progress",
         "note": "Both actual native architecture candidate jobs started at the exact verified PR head."
-      }
+      },
+      "submission_branch": "arm64/upstream-gliomoda-20261012",
+      "prepared_correction": {
+        "branch": "arm64/gliomoda-single-layer-20261014",
+        "source_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+        "baseline_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
+        "reason": "All19 x86 runtime checks passed, but separate Torch install and later recursive chmod copied11GB into a new Docker layer: Dive efficiency65.2214%<80%, user wasted69.8749%>30%, wasted11.267GB>4GB. Restore single-layer environment installation while retaining package paths, all permissions, models and every test. No Dive threshold/test changes.",
+        "validation": "Schema/update-policy/both generated Dockerfiles/spelling/diff checks passed.",
+        "native_test_not_dispatched": true,
+        "existing_pr_head_untouched": true,
+        "budget_plan": "Current3/6; wait for healthy old ARM job to finish, native corrected source4/6, then fast-forward same PR3606 only after native success and reserve its two upstream architectures5/6 and6/6. Original clock/deadline retained."
+      },
+      "upstream_failed_gate_reviews": [
+        {
+          "run_id": 38490805458,
+          "source_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
+          "architecture": "x86_64",
+          "counts": {
+            "total": 19,
+            "passed": 19,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 18,
+            "fulltest_passed": 18,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "package imports",
+              "reports the packaged version",
+              "runs outside HOME",
+              "torch imports and computes on CPU",
+              "model weights are bundled in the image",
+              "bundled weights are the declared version",
+              "weights are pinned, not fetched at run time",
+              "gliomoda CLI is on PATH and renders help",
+              "the CLI selects a device instead of assuming CUDA",
+              "version reports package and bundled weights",
+              "the bundled models can be listed",
+              "an unbundled modality combination fails with a usable message",
+              "a trailing singleton axis is rejected with a usable message",
+              "forcing cuda without a GPU fails before loading the model",
+              "the thread default reports where its number came from",
+              "the container does not export a python interpreter",
+              "Native CPU model dependency closure",
+              "Full trained four modality glioma MRI inference"
+            ],
+            "failed_tests": []
+          },
+          "failed_gate": "Dive image layer efficiency/waste",
+          "dive": {
+            "status": "failure",
+            "failed_checks": [
+              {
+                "name": "highestUserWastedPercent",
+                "actual_percent": 69.87489938407423,
+                "threshold_percent": 30.0
+              },
+              {
+                "name": "lowestEfficiency",
+                "actual_percent": 65.2214311232983,
+                "threshold_percent": 80.0
+              }
+            ],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "1.1 GB",
+                "path": "/opt/gliomoda-0.0.4/lib/python3.12/site-packages/nvidia/cu13/lib/libcublasLt.so.13"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.0 GB",
+                "path": "/opt/gliomoda-0.0.4/lib/python3.12/site-packages/torch/lib/libtorch_cuda.so"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.0 GB",
+                "path": "/opt/gliomoda-0.0.4/lib/python3.12/site-packages/triton/_C/libtriton.so"
+              },
+              {
+                "count": 2,
+                "wasted_space": "893 MB",
+                "path": "/opt/gliomoda-0.0.4/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so"
+              },
+              {
+                "count": 2,
+                "wasted_space": "573 MB",
+                "path": "/opt/gliomoda-0.0.4/lib/python3.12/site-packages/nvidia/cu13/lib/libcufft.so.12"
+              }
+            ],
+            "efficiency_percent": 65.2214,
+            "wasted_bytes": 11267076280,
+            "wasted_bytes_display": "11 GB",
+            "user_wasted_percent": 69.8749
+          },
+          "first_error": "Dive failed: highestUserWastedPercent, highestWastedBytes, lowestEfficiency",
+          "raw_job_log": "/tmp/gliomoda-upstream-x86-38490805458-job.log",
+          "retry_hypothesis": "All19 x86 runtime checks passed, but separate Torch install and later recursive chmod copied11GB into a new Docker layer: Dive efficiency65.2214%<80%, user wasted69.8749%>30%, wasted11.267GB>4GB. Restore single-layer environment installation while retaining package paths, all permissions, models and every test. No Dive threshold/test changes."
+        }
+      ]
     },
     {
       "recipe": "glmsingle",
@@ -18656,18 +19082,18 @@
       "port_files": [
         "recipes/mimosa/build.yaml"
       ],
-      "status": "native-verified",
+      "status": "upstream-running",
       "branch": "arm64/upstream-mimosa-20261012",
       "baseline_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
       "candidate_sha": "46b36c3dabbddaa89db0e62ca34055d713d01b10",
       "started_at": "2026-10-13T23:23:22.786128+00:00",
       "deadline": "2026-10-14T11:23:22.786128+00:00",
-      "attempts": 1,
+      "attempts": 3,
       "run_id": 38484583029,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3612",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.5.8",
@@ -18678,8 +19104,8 @@
         "fulltest_version": "0.5.8",
         "test_count": 20
       },
-      "arm64_attempts": 1,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 2,
+      "x86_64_attempts": 1,
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
       "change_summary": "Enable MIMoSA0.5.8 ARM64 with official FSL6.0.7.22 and compiler-requested large PIC(-fPIC) for ARM R builds; retain existing x86 FSL6.0.7.16/-fpic and all current upstream library source/compatibility steps unchanged. These ordinary recipe changes previously passed native21/21; current source must be retested. Retain all20 existing fulltests and add primary mimosa_fit training on600 analytically known binomial trials/25 held-out predictions, plus full-volume182x218x182 public MS FLAIR/T1 tissue/candidate selection, z-score normalization, native FSL smoothing, ANTsR coupling and the bundled two-modality probability model. Compare every model prediction with an independent coefficient/logistic calculation and verify saved spatial grid and unchanged input/model hashes. No third-party library patches, crop/resampling, clinical accuracy or arbitrary lesion threshold.",
@@ -18847,7 +19273,9 @@
         },
         "scope": "Actual primary600-trial analytic GLM/25 held-out predictions/serialized model, plus complete182x218x182 public MS FLAIR/T1 tissue/candidate selection, z-score normalization, native FSL smoothing/ANTsR coupling, bundled two-modality model and every independent logistic probability/grid/hash assertion. No chosen lesion-threshold or clinical-accuracy claim.",
         "diagnostic_review": "Existing R --slave - commands warn about the trailing dash yet execute stdin/all assertions. rgl reports headless X11 unavailable and uses its null device; no3D GUI validation claimed. Neither diagnostic masks a failed scientific assertion."
-      }
+      },
+      "pending_upstream_issue": 3612,
+      "pr_number": 3612
     },
     {
       "recipe": "mipav",
