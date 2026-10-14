@@ -10491,11 +10491,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-deeplabcut-20261012",
       "baseline_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
-      "candidate_sha": "095590a65636bb700df290143c04dcab6a65e372",
+      "candidate_sha": "7cb82a155f1e154ef35358766b6ac3f7053398ce",
       "started_at": "2026-10-14T08:17:00+00:00",
       "deadline": "2026-10-14T20:17:00+00:00",
-      "attempts": 1,
-      "run_id": 38534958638,
+      "attempts": 3,
+      "run_id": 38543183298,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -10517,7 +10517,7 @@
       },
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
-      "change_summary": "Enable current DeepLabCut3.0.2 on native ARM with official Torch2.6/torchvision0.21 CPU wheels, retaining full GUI/modelzoo/TF extras and all original imports/version tests. TensorFlow2.15.1 and CondaPyTables3.10.1 ARM Python3.10 assets verified. Preserve x86 package selection. Add real CPU gradient/NMS/tensor/package checks, actual offscreen DeepLabCut project window, and official trained HRNet+MobileNet SuperAnimal inference/HDF/labeled-video pipeline on three unchanged lossless real-dog frames with36 bodyparts and pinned official checkpoint hashes. No scientific/library patch or GUI omission; no biological accuracy/temporal-tracking/adaptation/GPU claim.",
+      "change_summary": "Enable current DeepLabCut3.0.2 on native ARM with official Torch2.6/torchvision0.21 CPU wheels, retaining full GUI/modelzoo/TF extras and all original imports/version tests. TensorFlow2.15.1 and CondaPyTables3.10.1 ARM Python3.10 assets verified. Preserve x86 package selection. Add real CPU gradient/NMS/tensor/package checks, actual offscreen DeepLabCut project window, and official trained HRNet+MobileNet SuperAnimal inference/HDF/labeled-video pipeline on three unchanged lossless real-dog frames with39 named bodyparts and pinned official checkpoint hashes. No scientific/library patch or GUI omission; no biological accuracy/temporal-tracking/adaptation/GPU claim.",
       "pr_title": "Enable native ARM64 DeepLabCut with GUI and pretrained pose verification",
       "primary_source_review": [
         "https://github.com/DeepLabCut/DeepLabCut/releases/tag/v3.0.2",
@@ -10526,9 +10526,50 @@
         "https://download.pytorch.org/whl/cpu/torchvision/",
         "https://huggingface.co/mwmathis/DeepLabCutModelZoo-SuperAnimal-Quadruped/tree/1ad30fb80cd666f1e5c91578d1cf63bccfa84f80"
       ],
-      "arm64_attempts": 1,
+      "arm64_attempts": 3,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38534958638"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38543183298",
+      "candidate_history": [
+        {
+          "source_sha": "095590a65636bb700df290143c04dcab6a65e372",
+          "run_id": 38534958638,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38534958638",
+          "counts": {
+            "total_tests": 104,
+            "passed": 102,
+            "failed": 2,
+            "skipped": 0
+          },
+          "failed_tests": [
+            {
+              "duration": 0.2935802936553955,
+              "message": "Expected exit code 0, got 1",
+              "name": "Installed DeepLabCut GUI creates an offscreen project window",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 7, in <module>\nImportError: libglib-2.0.so.0: cannot open shared object file: No such file or directory\n",
+              "stdout": ""
+            },
+            {
+              "duration": 22.68101692199707,
+              "message": "Expected exit code 0, got 1",
+              "name": "Actual pretrained SuperAnimal detection pose HDF and labeled video",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Found invalid empty/null/None value for `Task` in the project config. This is only supported for legacy compatibility. Treating `Task` as unset and using the field default instead.\nFound invalid empty/null/None value for `scorer` in the project config. This is only supported for legacy compatibility. Treating `scorer` as unset and using the field default instead.\nFound invalid empty/null/None value for `date` in the project config. This is only supported for legacy compatibility. Treating `date` as unset and using the field default instead.\nFound invalid empty/null/None value for `multianimalproject` in the project config. This is only supported for legacy compatibility. Treating `multianimalproject` as unset and using the field default instead.\nFound invalid empty/null/None value for `project_path` in the project config. This is only supported for legacy compatibility. Treating `project_path` as unset and using the field default instead.\nFound invalid empty/null/None value for `video_sets` in the project config. This is only supported for legacy compatibility. Treating `video_sets` as unset and using the field default instead.\nFound invalid empty/null/None value for `start` in the project config. This is only supported for legacy compatibility. Treating `start` as unset and using the field default instead.\nFound invalid empty/null/None value for `stop` in the project config. This is only supported for legacy compatibility. Treating `stop` as unset and using the field default instead.\nFound invalid empty/null/None value for `numframes2pick` in the project config. This is only supported for legacy compatibility. Treating `numframes2pick` as unset and using the field default instead.\nFound invalid empty/null/None value for `pcutoff` in the project config. This is only supported for legacy compatibility. Treating `pcutoff` as unset and using the field default instead.\nFound invalid empty/null/None value for `dotsize` in the project config. This is only supported for legacy compatibility. Treating `dotsize` as unset and using the field default instead.\nFound invalid empty/null/None value for `alphavalue` in the project config. This is only supported for legacy compatibility. Treating `alphavalue` as unset and using the field default instead.\nFound invalid empty/null/None value for `TrainingFraction` in the project config. This is only supported for legacy compatibility. Treating `TrainingFraction` as unset and using the field default instead.\nFound invalid empty/null/None value for `default_net_type` in the project config. This is only supported for legacy compatibility. Treating `default_net_type` as unset and using the field default instead.\nFound invalid empty/null/None value for `snapshotindex` in the project config. This is only supported for legacy compatibility. Treating `snapshotindex` as unset and using the field default instead.\nFound invalid empty/null/None value for `cropping` in the project config. This is only supported for legacy compatibility. Treating `cropping` as unset and using the field default instead.\n/opt/miniconda/envs/deeplabcut/lib/python3.10/site-packages/deeplabcut/pose_estimation_pytorch/config/data.py:139: UserWarning: Be careful! Do not train pose models with horizontal flips if you have symmetric keypoints!\n  build_transforms(v)\nDownloading: \"https://download.pytorch.org/models/mobilenet_v3_large-8738ca79.pth\" to /home/runner/.cache/torch/hub/checkpoints/mobilenet_v3_large-8738ca79.pth\n\n  0%|          | 0.00/21.1M [00:00<?, ?B/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 21.1M/21.1M [00:00<00:00, 263MB/s]\n\n  0%|          | 0/3 [00:00<?, ?it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3/3 [00:00<00:00, 69.71it/s]\n\n  0%|          | 0/3 [00:00<?, ?it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3/3 [00:00<00:00, 71.00it/s]\n\n  0%|          | 0/3 [00:00<?, ?it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 3/3 [00:00<00:00, 68.66it/s]\nTraceback (most recent call last):\n  File \"<stdin>\", line 51, in <module>\nAssertionError\n",
+              "stdout": "Running video inference on ['/tmp/dlc-trained-pose-j4v1pqez/animal.avi'] with superanimal_quadruped_hrnet_w32\nUsing pytorch for model hrnet_w32\nProcessing video /tmp/dlc-trained-pose-j4v1pqez/animal.avi\nStarting to analyze /tmp/dlc-trained-pose-j4v1pqez/animal.avi\nVideo metadata: \n  Overall # of frames:    3\n  Duration of video [s]:  0.60\n  fps:                    5.0\n  resolution:             w=500, h=500\n\nRunning detector with batch size 1\nRunning pose prediction with batch size 1\nSaving results to /tmp/dlc-trained-pose-j4v1pqez/output\nSaving results in /tmp/dlc-trained-pose-j4v1pqez/output/animal_superanimal_quadruped_hrnet_w32_fasterrcnn_mobilenet_v3_large_fpn.h5 and /tmp/dlc-trained-pose-j4v1pqez/output/animal_superanimal_quadruped_hrnet_w32_fasterrcnn_mobilenet_v3_large_fpn_full.pickle\nDuration of video [s]: 0.6, recorded with 5.0 fps!\nOverall # of frames: 3 with cropped frame dimensions: 500 500\nGenerating frames and creating video.\nVideo with predictions was saved as /tmp/dlc-trained-pose-j4v1pqez/output/animal_superanimal_quadruped_hrnet_w32_fasterrcnn_mobilenet_v3_large_fpn_labeled_before_adapt.mp4\n"
+            }
+          ],
+          "outcome": "Native Docker/architecture/SIF succeeded. Both learning backends/native NMS and all100 originals passed; GUI missing GLib and test incorrectly expected36 rather than39 published model bodyparts. Actual trained detector/pose/HDF/labeled video executed but final assertion failed."
+        },
+        {
+          "source_sha": "8e8a28244b5cd64614d6eafddad6bd99d84d633e",
+          "run_id": 38542694765,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38542694765",
+          "outcome": "Cancelled known-invalid corrected test during setup after local AST caught unexpected-indent line56. Not a runtime/compiler/architecture failure; attempt2 remains charged.",
+          "first_error": "Local AST: unexpected indent at line56. Metadata block escaped its temporary-directory scope."
+        }
+      ]
     },
     {
       "recipe": "dicompare",
@@ -28814,8 +28855,8 @@
       "candidate_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
       "started_at": "2026-10-14T08:05:42+00:00",
       "deadline": "2026-10-14T20:05:42+00:00",
-      "attempts": 1,
-      "run_id": 38533071070,
+      "attempts": 2,
+      "run_id": 38542571541,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -28840,9 +28881,19 @@
         "https://download.pytorch.org/whl/cpu/torch/",
         "https://github.com/BrainLesion/tutorials/tree/99c5841fe8985e4004d3d5394ca9590a914e24e7/BraTS"
       ],
-      "arm64_attempts": 1,
+      "arm64_attempts": 2,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38533071070"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38542571541",
+      "candidate_history": [
+        {
+          "source_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
+          "run_id": 38533071070,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38533071070",
+          "outcome": "Infrastructure: staging model archive truncated before Docker. No compilation or runtime tests reached.",
+          "first_error": "Content-Length mismatch: expected2764572705 bytes, received1038778828 after3 internal HTTP attempts."
+        }
+      ],
+      "unchanged_infrastructure_retry_used": true
     },
     {
       "recipe": "prostatefiducialseg",
