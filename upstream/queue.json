@@ -140,7 +140,7 @@
       "status": "ready-to-dispatch",
       "branch": "arm64/upstream-aidamri-20261012",
       "baseline_sha": "41308ea3d5872faad4d5d00eabaac8393177bb56",
-      "candidate_sha": "ec5c07a0433ec6d6c22cf3c85f5e16ac69442d07",
+      "candidate_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
       "started_at": "2026-10-14T04:26:22.087120+00:00",
       "deadline": "2026-10-14T16:26:22.087120+00:00",
       "attempts": 0,
@@ -201,7 +201,14 @@
           "aarch64": "dsi-studio-cpu"
         },
         "note": "The official same-tag assets have current digests different from the historical native recipe. Pin the exact currently published digests; checked both actual remote ZIP layouts and corrected x86 directory rename. No guessed checksum or old release copied as current proof."
-      }
+      },
+      "pre_dispatch_revisions": [
+        {
+          "old_source_sha": "ec5c07a0433ec6d6c22cf3c85f5e16ac69442d07",
+          "new_source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+          "reason": "Separate DSI x86/ARM version variables and asset update sources so each updater changes its own URL and checksum together. Declare bundled DSI license. Versions/current URLs/checksums/fulltest unchanged; zero builds dispatched."
+        }
+      ]
     },
     {
       "recipe": "amico",
@@ -14187,6 +14194,43 @@
         "runner_labels": [
           "ubuntu-24.04-arm"
         ]
+      },
+      "native_actual_scientific_review": {
+        "source_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+        "run_id": 38501634115,
+        "functional_actual_zero_exits": 18,
+        "full_mri_case_seconds": 3009.474782705307,
+        "full_mri_metrics": {
+          "foreground_voxels": 126237,
+          "input_sha256": {
+            "t1c": "4399faadcc45c8a4541313cdf88aced7d835ed59ac3078d950e0eac293d603f5",
+            "t1n": "e860924b936e301ddeba20409fbb59dde322475cb49328f1b46a9235c792e73e",
+            "t2f": "82aed8546af5e6d8d94fd91c56227abdcf6120130390d1556c4342a208980604",
+            "t2w": "4cd389cc57d12134a30a898c66532228126b9a7d0600ee578e82a32144528b51"
+          },
+          "label_counts": [
+            8801763,
+            18458,
+            85535,
+            22244
+          ],
+          "labels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "mode": "t1c-t2f-t1n-t2w",
+          "seconds": 2991.72,
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "unchanged_weight_files": 84,
+          "weights_version": "1.0.2"
+        },
+        "scope": "Exact corrected packaging source executed complete public BraTS four-modality default CPU inference, all expected labels/nontrivial foreground/physical grid/input hashes and all84 unchanged model files. No crop, model replacement, relaxed gate, GPU inference or clinical-accuracy claim."
       }
     },
     {
@@ -19775,7 +19819,107 @@
       "attempts": 3,
       "run_id": 38484583029,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3612",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "mimosa",
+          "container": "mimosa",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "0.5.8",
+          "build_date": "20261014",
+          "docker_archive": "mimosa_0.5.8_20261014.docker.tar",
+          "sif": "mimosa_0.5.8_20261014.simg",
+          "candidate_tag": "nd-candidate-mimosa:46b36c3dabbd",
+          "launcher": null,
+          "pr_number": 3612,
+          "head_sha": "46b36c3dabbddaa89db0e62ca34055d713d01b10",
+          "tests": {
+            "total": 23,
+            "passed": 23,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 22,
+            "fulltest_passed": 22,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "R and Rscript are deployed",
+              "mimosa package loads",
+              "Core R dependencies load",
+              "mimosa exports expected functions",
+              "Bundled mimosa model data loads",
+              "mimosa formula includes expected terms",
+              "mimosa formula drops T2 terms",
+              "mimosa formula drops PD terms",
+              "weighted SLR synthetic regression works",
+              "package testthat regression passes",
+              "get_weights returns numeric kernel",
+              "count_stats handles synthetic predictions",
+              "R NIfTI stack creates image",
+              "ANTsRCore creates image",
+              "make_ants_image maps vector to image",
+              "dplyr data manipulation works",
+              "WhiteStripe normalization function loads",
+              "fslr sees FSL installation",
+              "R Markdown stack loads"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "7.2 MB",
+                "path": "/usr/lib/R/lib/libR.so"
+              },
+              {
+                "count": 2,
+                "wasted_space": "4.9 MB",
+                "path": "/usr/lib/R/library/base/help/base.rdb"
+              },
+              {
+                "count": 6,
+                "wasted_space": "4.4 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "4.4 MB",
+                "path": "/usr/lib/R/library/tools/R/tools.rdb"
+              }
+            ],
+            "efficiency_percent": 99.5769,
+            "wasted_bytes": 111409433,
+            "wasted_bytes_display": "111 MB",
+            "user_wasted_percent": 0.7604
+          }
+        },
+        "candidate_run_id": 38500661605,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38500661605",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "46b36c3dabbddaa89db0e62ca34055d713d01b10",
+            "job_id": 115646668373,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38500661605/job/115646668373",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        }
+      },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
@@ -19959,7 +20103,28 @@
         "diagnostic_review": "Existing R --slave - commands warn about the trailing dash yet execute stdin/all assertions. rgl reports headless X11 unavailable and uses its null device; no3D GUI validation claimed. Neither diagnostic masks a failed scientific assertion."
       },
       "pending_upstream_issue": 3612,
-      "pr_number": 3612
+      "pr_number": 3612,
+      "upstream_actual_scientific_review": {
+        "x86_64": {
+          "source_sha": "46b36c3dabbddaa89db0e62ca34055d713d01b10",
+          "run_id": 38500661605,
+          "actual_zero_exit_functional_commands": 22,
+          "training_case_seconds": 2.6990301609039307,
+          "full_mri_case_seconds": 114.57991695404053,
+          "full_mri_candidates": 141103,
+          "known_lesion_probability_mean": 0.1637785,
+          "probability_range": [
+            0.0,
+            0.9105603
+          ],
+          "primary_operation_stdout": {
+            "training": "WARNING: unknown option '-'\n\nMIMoSA analytical training and held-out prediction passed -1.386294 1.386294 \n",
+            "full_mri": "WARNING: unknown option '-'\n\n# Extracting neighborhood data \n# Computing weighted regressions \nfull MIMoSA MRI probability workflow passed; candidates 141103 known-lesion probability mean 0.1637785 range 0 0.9105603 seconds 106.558 \n"
+          },
+          "clinical_accuracy_unverified": true,
+          "scope": "Actual600-trial analytic model fit/25 held-out predictions and serialization; complete182x218x182 FLAIR/T1 native FSL/ANTsR coupling and bundled model probabilities each checked against independent coefficient/logistic oracle within1e-12, saved effective grid and input/model hashes. R trailing-dash/headless rgl null-device warnings reviewed; all assertions/success markers executed. No chosen clinical segmentation threshold or3D GUI claim."
+        }
+      }
     },
     {
       "recipe": "mipav",
@@ -34564,18 +34729,18 @@
         "recipes/tractseg/build.yaml",
         "recipes/tractseg/fulltest.yaml"
       ],
-      "status": "ready-to-dispatch",
+      "status": "native-running",
       "branch": "arm64/upstream-tractseg-20261012",
       "baseline_sha": "98c7b84d8018d7611d847fc43bb78b5056c87970",
       "candidate_sha": "f91cc6ad7b429702db2b485af2638918cd3049cc",
       "started_at": "2026-10-14T02:37:23.297913+00:00",
       "deadline": "2026-10-14T14:37:23.297913+00:00",
-      "attempts": 0,
-      "run_id": null,
+      "attempts": 1,
+      "run_id": 38512553418,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Dispatch exact-source native Docker/SIF/deploy/all original120 plus2 real trained CPU and dependency tests when one build slot frees. Then own upstream PR and both architectures/all gates.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "2.9.0",
@@ -34598,7 +34763,10 @@
         "https://mrtrix.readthedocs.io/en/3.0.4/installation/build_from_source.html",
         "https://pypi.org/pypi/torch/2.4.1/json",
         "https://pypi.org/pypi/numpy/1.26.4/json"
-      ]
+      ],
+      "arm64_attempts": 1,
+      "x86_64_attempts": 0,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38512553418"
     },
     {
       "recipe": "vertexwiser",
