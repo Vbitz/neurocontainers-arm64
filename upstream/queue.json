@@ -137,18 +137,18 @@
         "recipes/aidamri/build.yaml",
         "recipes/aidamri/fulltest.yaml"
       ],
-      "status": "ready-to-dispatch",
+      "status": "native-running",
       "branch": "arm64/upstream-aidamri-20261012",
       "baseline_sha": "41308ea3d5872faad4d5d00eabaac8393177bb56",
       "candidate_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
       "started_at": "2026-10-14T04:26:22.087120+00:00",
       "deadline": "2026-10-14T16:26:22.087120+00:00",
-      "attempts": 0,
-      "run_id": null,
+      "attempts": 1,
+      "run_id": 38516496155,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Native exact-source Docker/architecture/SIF/deploy/fulltest proof, then this recipe only PR and both upstream architecture checks before merge.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.0",
@@ -174,7 +174,7 @@
         "https://github.com/frankyeh/DSI-Studio/releases/tag/2026.7.25",
         "https://fsl.fmrib.ox.ac.uk/fsl/docs/install/linux.html"
       ],
-      "arm64_attempts": 0,
+      "arm64_attempts": 1,
       "x86_64_attempts": 0,
       "source_asset_preflight": {
         "dsi": {
@@ -208,7 +208,8 @@
           "new_source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
           "reason": "Separate DSI x86/ARM version variables and asset update sources so each updater changes its own URL and checksum together. Declare bundled DSI license. Versions/current URLs/checksums/fulltest unchanged; zero builds dispatched."
         }
-      ]
+      ],
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38516496155"
     },
     {
       "recipe": "amico",
@@ -13583,7 +13584,7 @@
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38510749442"
       },
       "merged_sha": null,
-      "next_action": "Verify exact corrected-source fresh ARM64/x86_64 suites plus unchanged Dive and all required gates for existing PR3606, then normal merge.6/6; no further builds.",
+      "next_action": "Let healthy corrected-source ARM candidate finish without cancellation; record its actual outcome. x86 download failed before Docker: exact3.306GB archive truncated to803.7MB after3 internal HTTP retries.6/6 budget exhausted, no more edits/dispatches. Preserve current root native19/19 and old-head x8619/19/Dive failure separately; current head cannot merge until actual x86 image/gates pass.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.4",
@@ -14004,6 +14005,21 @@
           "first_error": "Dive failed: highestUserWastedPercent, highestWastedBytes, lowestEfficiency",
           "raw_job_log": "/tmp/gliomoda-upstream-x86-38490805458-job.log",
           "retry_hypothesis": "All19 x86 runtime checks passed, but separate Torch install and later recursive chmod copied11GB into a new Docker layer: Dive efficiency65.2214%<80%, user wasted69.8749%>30%, wasted11.267GB>4GB. Restore single-layer environment installation while retaining package paths, all permissions, models and every test. No Dive threshold/test changes."
+        },
+        {
+          "source_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+          "run_id": 38510749442,
+          "job_id": 115678525352,
+          "architecture": "x86_64",
+          "outcome": "blocked-infrastructure",
+          "stage": "declared weights download before Docker build",
+          "first_error": "Content-Length mismatch: expected 3306003582 bytes, received 803736092",
+          "declared_asset": "https://zenodo.org/api/records/15625233/files/weights.zip/content",
+          "internal_http_attempts": 3,
+          "build_attempt_count": 6,
+          "tests_run": false,
+          "raw_job_log": "/tmp/gliomoda-corrected-upstream-x86-38510749442-job.log",
+          "revisit_condition": "The original6-build budget is exhausted. If the remaining ARM job passes, an explicitly authorized single unchanged x86-only retry after restored exact asset availability could complete proof; if ARM also fails, account both separately. No source/config change is justified by a truncated external download."
         }
       ],
       "candidate_history": [
