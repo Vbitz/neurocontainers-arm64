@@ -25182,7 +25182,7 @@
       "port_files": [
         "recipes/neurocommand/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-neurocommand-20261012",
       "baseline_sha": "9df30cc185fa2af32ee99a364492954bf2798a61",
       "candidate_sha": "f7d9674296443f4fdd4b6e53577b262724f99d1b",
@@ -25275,11 +25275,94 @@
             "build_sif_fulltest_dive_manifest_gates": "success",
             "fulltest_log_summary_confirmed": true,
             "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "aarch64": {
+            "head_sha": "f7d9674296443f4fdd4b6e53577b262724f99d1b",
+            "job_id": 115746975264,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38532315341/job/115746975264",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
           }
-        }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "neurocommand",
+          "container": "neurocommand_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.0.0",
+          "build_date": "20261014",
+          "docker_archive": "neurocommand_arm64_1.0.0_20261014.docker.tar",
+          "sif": "neurocommand_arm64_1.0.0_20261014.simg",
+          "candidate_tag": "nd-candidate-neurocommand_arm64:f7d967429644",
+          "launcher": "apptainer",
+          "pr_number": 3623,
+          "head_sha": "f7d9674296443f4fdd4b6e53577b262724f99d1b",
+          "tests": {
+            "total": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 5,
+            "fulltest_passed": 5,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "apptainer available",
+              "cvmfs client available",
+              "clone and retrieve real annex content offline",
+              "build and execute a native nested SIF",
+              "Real private CVMFS mount and Neurodesk module access"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "7.9 MB",
+                "path": "/usr/bin/perl"
+              },
+              {
+                "count": 6,
+                "wasted_space": "4.4 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "3.4 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libc.so.6"
+              },
+              {
+                "count": 4,
+                "wasted_space": "3.1 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              }
+            ],
+            "efficiency_percent": 97.5605,
+            "wasted_bytes": 105914750,
+            "wasted_bytes_display": "106 MB",
+            "user_wasted_percent": 4.7114
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "merged_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -25402,8 +25485,38 @@
             "skipped": 0
           },
           "scope": "Real offline64KiB annex retrieval, actual new local native SIF build/execution, private user-namespace FUSE mount of signed Neurodesk CVMFS catalog and exact named Lmod module access. Nested SIF uses stock sandbox conversion fallback because nested squashfuse/fuse2fs/gocryptfs are absent; encrypted/ext3 operation not verified."
+        },
+        "aarch64": {
+          "source_sha": "f7d9674296443f4fdd4b6e53577b262724f99d1b",
+          "run_id": 38532315341,
+          "actual_zero_exit_functional_commands": 5,
+          "operations": {
+            "clone and retrieve real annex content offline": {
+              "stdout": "create(ok): /home/runner/_work/neurocontainers/neurocontainers/candidate/neurocommand_arm64/test-output/fulltest-run-_sym8qy7/work/test_output/neurocommand/annex.xfqqhM/source (dataset)\nadd signal.bin \n\n50%   31.98 KiB         7 MiB/s 0s\n100%  64 KiB           26 MiB/s 0s\n                                  \nok\n(recording state in git...)\nsave(ok): . (dataset)\ninstall(ok): /home/runner/_work/neurocontainers/neurocontainers/candidate/neurocommand_arm64/test-output/fulltest-run-_sym8qy7/work/test_output/neurocommand/annex.xfqqhM/clone (dataset)\nget(ok): signal.bin (file) [from origin...]\nOffline annex clone and exact signal retrieval verified\n",
+              "stderr": "[INFO] Attempting a clone into /home/runner/_work/neurocontainers/neurocontainers/candidate/neurocommand_arm64/test-output/fulltest-run-_sym8qy7/work/test_output/neurocommand/annex.xfqqhM/clone \n[INFO] Attempting to clone from /home/runner/_work/neurocontainers/neurocontainers/candidate/neurocommand_arm64/test-output/fulltest-run-_sym8qy7/work/test_output/neurocommand/annex.xfqqhM/source to /home/runner/_work/neurocontainers/neurocontainers/candidate/neurocommand_arm64/test-output/fulltest-run-_sym8qy7/work/test_output/neurocommand/annex.xfqqhM/clone \n[INFO] Completed clone attempts for Dataset(/home/runner/_work/neurocontainers/neurocontainers/candidate/neurocommand_arm64/test-output/fulltest-run-_sym8qy7/work/test_output/neurocommand/annex.xfqqhM/clone) \n",
+              "seconds": 3.908541440963745
+            },
+            "build and execute a native nested SIF": {
+              "stdout": "Native nested SIF construction and execution verified\n",
+              "stderr": "WARNING: 'nodev' mount option set on /home/runner/_work/neurocontainers/neurocontainers/candidate/neurocommand_arm64/test-output/fulltest-run-_sym8qy7/work, it could be a source of failure during build process\nINFO:    Starting build...\nINFO:    Extracting local image...\nINFO:    Creating SIF file...\nINFO:    Build complete: /home/runner/_work/neurocontainers/neurocontainers/candidate/neurocommand_arm64/test-output/fulltest-run-_sym8qy7/work/test_output/neurocommand/nested.8Raeec/nested.sif\nINFO:    squashfuse not found, will not be able to mount SIF or other squashfs files\nINFO:    fuse2fs not found, will not be able to mount EXT3 filesystems\nINFO:    gocryptfs not found, will not be able to use gocryptfs\nINFO:    Converting SIF file to temporary sandbox...\nWARNING: passwd file doesn't exist in container, not updating\nWARNING: group file doesn't exist in container, not updating\nINFO:    Cleaning up image...\n",
+              "seconds": 1.1454198360443115
+            },
+            "Real private CVMFS mount and Neurodesk module access": {
+              "stdout": "Native CVMFS mounted signed Neurodesk catalog and read module neurodesk-modules/functional_imaging/afni/21.2.00.lua ca97ca887c8e3cdedc0aa5eaf18065b0886d6d755502df7d77c093b92df5b214\nReal native CVMFS and Neurodesk module catalog operation verified\n",
+              "stderr": "",
+              "seconds": 5.770205736160278
+            }
+          },
+          "deploy_counts": {
+            "total": 6,
+            "passed": 6,
+            "failed": 0,
+            "skipped": 0
+          },
+          "scope": "Real offline64KiB annex retrieval, actual new local native SIF build/execution, private user-namespace FUSE mount of signed Neurodesk CVMFS catalog and exact named Lmod module access. Nested SIF uses stock sandbox conversion fallback because nested squashfuse/fuse2fs/gocryptfs are absent; encrypted/ext3 operation not verified."
         }
-      }
+      },
+      "merged_at": "2026-10-14T08:15:59Z"
     },
     {
       "recipe": "nftsim",
@@ -39683,9 +39796,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-14T08:05:34.535761+00:00",
-    "previous_sha": "5e37b8e28939eb8e7348c1f492f5f96fa54d239e",
-    "new_sha": "bfe91f86b95672277ca43f30fba44febcb61a67a",
+    "checked_at": "2026-10-14T08:16:06.561185+00:00",
+    "previous_sha": "bfe91f86b95672277ca43f30fba44febcb61a67a",
+    "new_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },
