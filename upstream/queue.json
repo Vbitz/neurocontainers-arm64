@@ -4048,13 +4048,6 @@
       "arm64_attempts": 1,
       "x86_64_attempts": 0,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38429185977",
-      "blocker": {
-        "recorded_at": "2026-10-13T16:23:06.608668+00:00",
-        "stage": "declared checkpoint staging before Docker",
-        "first_error": "builder.cache.DownloadError: hdbet_0_model https://zenodo.org/api/records/2540695/files/0.model/content HTTP504 after3 internal attempts",
-        "local_cross_check": "The same record API and both atlas/SynthStrip record APIs timed out. The official record2540695 HTML loaded, but its published 0.model download also timed out; record15236131/16535633 pages timed out. No accessible equivalent official checkpoint route found.",
-        "revisit_condition": "Official required Zenodo model and atlas downloads become accessible; retain original clock/attempts, use at most one unchanged infrastructure retry. No scientific capability or ARM build failure inferred."
-      },
       "previous_infrastructure_blockers": [
         {
           "recorded_at": "2026-10-13T16:23:06.608668+00:00",
@@ -10591,8 +10584,10 @@
         },
         "reference_lesion_voxels": 30620,
         "limitation": "Native full-case runtime completed, but this example has very poor agreement with its manual reference:22 predicted voxels vs30620 reference voxels, Dice0.0014359376. This establishes model execution/output integrity only, not segmentation accuracy. Keep the same MRI, reference, all folds/checkpoints and tests; require the planned upstream x86 case comparison before attributing the behavior to ARM or accepting an architecture-parity claim. No easier replacement fixture, threshold tuning or clinical accuracy claim.",
-        "parity_review_pending": true
-      }
+        "parity_review_pending": true,
+        "clinical_accuracy_unverified": true
+      },
+      "merge_review_requirement": "Before merge, review actual full MS outputs from both upstream architectures at the exact PR head, record their metrics and explain the poor native reference Dice. Do not infer bitwise parity from counts alone or claim clinical accuracy. The temporary normal merge helper holds FLAMeS until parity_review_pending is explicitly false and both source-specific actual metric reviews exist."
     },
     {
       "recipe": "fsl",
@@ -30440,7 +30435,107 @@
       "attempts": 4,
       "run_id": 38476007098,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3605",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "syncro",
+          "container": "syncro",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "0.2.0",
+          "build_date": "20261014",
+          "docker_archive": "syncro_0.2.0_20261014.docker.tar",
+          "sif": "syncro_0.2.0_20261014.simg",
+          "candidate_tag": "nd-candidate-syncro:08e0b4a389c9",
+          "launcher": "SYNcro.py",
+          "pr_number": 3605,
+          "head_sha": "08e0b4a389c90485a7d99c030f0fedb6e39517b7",
+          "tests": {
+            "total": 39,
+            "passed": 39,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 38,
+            "fulltest_passed": 38,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Version check",
+              "Help output",
+              "Help shows positional arguments",
+              "SynthStrip available",
+              "SynthStrip help",
+              "SynthStrip skull stripping",
+              "SynthStrip with distance transform",
+              "SynthStrip with custom border",
+              "SynthStrip exclude CSF",
+              "Basic T1w normalization",
+              "Verify normalized output dimensions",
+              "Normalization with debug logging",
+              "Normalization with silent logging",
+              "Normalization with verbose logging",
+              "Force GPU disabled",
+              "Auto GPU detection",
+              "Create synthetic lesion mask",
+              "Normalization with lesion map",
+              "Verify warped lesion is binary"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "7.9 MB",
+                "path": "/usr/bin/perl"
+              },
+              {
+                "count": 7,
+                "wasted_space": "5.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 5,
+                "wasted_space": "4.1 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "4.0 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libc.so.6"
+              },
+              {
+                "count": 2,
+                "wasted_space": "2.0 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libmvec.so.1"
+              }
+            ],
+            "efficiency_percent": 99.2504,
+            "wasted_bytes": 60338141,
+            "wasted_bytes_display": "60 MB",
+            "user_wasted_percent": 1.3213
+          }
+        },
+        "candidate_run_id": 38486489794,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38486489794",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "08e0b4a389c90485a7d99c030f0fedb6e39517b7",
+            "job_id": 115601411189,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38486489794/job/115601411189",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        }
+      },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
@@ -30570,6 +30665,33 @@
         },
         "status": "in-progress",
         "note": "Both actual architecture image jobs started; earlier superseded detect/quality runs are not current proof."
+      },
+      "upstream_actual_scientific_review": {
+        "x86_64": {
+          "source_sha": "08e0b4a389c90485a7d99c030f0fedb6e39517b7",
+          "actual_zero_exit_commands": 35,
+          "explicit_unusual_exits": [
+            {
+              "name": "SynthStrip help",
+              "expected_exit_code": 1
+            },
+            {
+              "name": "Missing input file error",
+              "expected_exit_code": 1
+            },
+            {
+              "name": "Invalid output directory",
+              "expected_exit_code": 1
+            }
+          ],
+          "functional_suite_seconds": 586.5665454864502,
+          "operation_stdout": {
+            "Native CPU frameworks and official model closure": "No broken requirements found.\nActual SYNcro native CPU TensorFlow/PyTorch/ANTs and official model closure verified\n",
+            "Complete trained normalization and lesion image contracts": "Actual full SYNcro SynthSR/SynthStrip/ANTs normalization and lesion/multiple-image outputs preserve physical grids, every masked voxel, distance-transform capability and all input/checkpoint hashes\n"
+          },
+          "artifact_id": 11860875185,
+          "scope": "Actual complete SynthSR/SynthStrip/ANTs normalization, distance-transform, lesions/multiple-image outputs and original overlap test; every masked voxel/physical grid/input-model hash preserved. No GPU or clinical accuracy claim."
+        }
       }
     },
     {
