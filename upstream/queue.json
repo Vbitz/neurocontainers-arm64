@@ -4009,18 +4009,18 @@
       "port_files": [
         "recipes/brainles-preprocessing/build.yaml"
       ],
-      "status": "pending",
+      "status": "native-running",
       "branch": "arm64/upstream-brainles-preprocessing-20261012",
       "baseline_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
       "candidate_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
       "started_at": "2026-10-13T15:53:00+00:00",
       "deadline": "2026-10-14T03:53:00+00:00",
-      "attempts": 1,
-      "run_id": 38429185977,
+      "attempts": 2,
+      "run_id": 38493993950,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Priority recovered prerequisite: all exact HD-BET API and official atlas/SynthStrip file bytes now return206. When an investigation/build slot frees, resume the existing candidate/branch with one unchanged infrastructure retry within original03:53UTC deadline; retain start/attempts1, preserve old run in history, and do not create/restart a new investigation. If deadline expires first, record that verification-budget limit. No native application compilation/runtime or upstream PR is yet proven.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.13",
@@ -4045,9 +4045,8 @@
         "https://download.pytorch.org/whl/cpu/torch/",
         "https://pypi.org/pypi/brainles-hd-bet/0.0.11/json"
       ],
-      "arm64_attempts": 1,
+      "arm64_attempts": 2,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38429185977",
       "previous_infrastructure_blockers": [
         {
           "recorded_at": "2026-10-13T16:23:06.608668+00:00",
@@ -4200,8 +4199,23 @@
           ]
         },
         "whole_file_independent_evidence": "FLAMeS native38483705386 downloaded the same record2540695 five models and executed all five CNNs successfully.",
-        "retry_not_dispatched": true
-      }
+        "retry_not_dispatched": false
+      },
+      "candidate_history": [
+        {
+          "source_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
+          "run_id": 38429185977,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38429185977",
+          "stage": "Declared HD-BET model staging before Docker",
+          "first_error": "builder.cache.DownloadError: hdbet_0_model https://zenodo.org/api/records/2540695/files/0.model/content HTTP504 after3 internal attempts",
+          "counts": null,
+          "tests": "not run",
+          "retry_hypothesis": "All same exact required model URLs and official atlas/SynthStrip files now return206; FLAMeS independently downloaded/used all same-record five HD-BET models. One unchanged exact-source retry tests recovered external availability; no recipe, test, weight, image or CPU source substitution."
+        }
+      ],
+      "recovery_retry_hypothesis_posted": true,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38493993950",
+      "unchanged_infrastructure_retry_used": true
     },
     {
       "recipe": "brainlifecli",
@@ -5556,7 +5570,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T00:26:40.072452+00:00",
+        "checked_at": "2026-10-14T01:13:48.089830+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -5581,7 +5595,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:26:40.863728+00:00",
+        "metadata_checked_at": "2026-10-14T01:13:49.281918+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -6602,7 +6616,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T00:26:41.872091+00:00",
+        "checked_at": "2026-10-14T01:13:50.464648+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -6627,7 +6641,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:26:43.019376+00:00"
+        "metadata_checked_at": "2026-10-14T01:13:51.290991+00:00"
       }
     },
     {
@@ -16486,7 +16500,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T00:26:44.104995+00:00",
+        "checked_at": "2026-10-14T01:13:52.513284+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -16511,7 +16525,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:26:44.856878+00:00"
+        "metadata_checked_at": "2026-10-14T01:13:53.433694+00:00"
       }
     },
     {
@@ -18642,7 +18656,7 @@
       "port_files": [
         "recipes/mimosa/build.yaml"
       ],
-      "status": "native-running",
+      "status": "native-verified",
       "branch": "arm64/upstream-mimosa-20261012",
       "baseline_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
       "candidate_sha": "46b36c3dabbddaa89db0e62ca34055d713d01b10",
@@ -18653,7 +18667,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Open exactly one focused upstream PR when two upstream architecture build slots are free. Require all upstream tests before merge.",
       "upstream_review": {
         "exists": true,
         "version": "0.5.8",
@@ -18780,7 +18794,60 @@
           "note": "Before first native build, inspected public MRI headers: qform1/sform0. Test compares effective physical affine through RNifti rather than requiring identical transform codes, since FSL may populate an equivalent sform. Same spatial storage-precision bound, input/model/data/image sizes/algorithms unchanged. Zero builds used."
         }
       ],
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38484583029"
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38484583029",
+      "native_command_exit_review": {
+        "source_sha": "46b36c3dabbddaa89db0e62ca34055d713d01b10",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "46b36c3dabbddaa89db0e62ca34055d713d01b10",
+        "version": "0.5.8",
+        "counts": {
+          "total_tests": 23,
+          "passed": 23,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 191.56649470329285,
+          "run_timestamp": "2026-10-14T01:02:49.121111",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 22,
+          "total_suites": 1,
+          "total_tests": 22
+        },
+        "deploy_counts": {
+          "total": 2,
+          "passed": 2,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38484583029",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "native_actual_scientific_review": {
+        "source_sha": "46b36c3dabbddaa89db0e62ca34055d713d01b10",
+        "actual_zero_exit_functional_commands": 22,
+        "functional_suite_seconds": 191.56649470329285,
+        "full_mri_case_seconds": 143.50566744804382,
+        "full_mri_candidates": 141103,
+        "known_lesion_probability_mean": 0.1637785,
+        "probability_range": [
+          0,
+          0.9105603
+        ],
+        "operation_stdout": {
+          "Analytical primary model training and prediction": "WARNING: unknown option '-'\n\nMIMoSA analytical training and held-out prediction passed -1.386294 1.386294 \n",
+          "Full MRI features and bundled model probabilities": "WARNING: unknown option '-'\n\n# Extracting neighborhood data \n# Computing weighted regressions \nfull MIMoSA MRI probability workflow passed; candidates 141103 known-lesion probability mean 0.1637785 range 0 0.9105603 seconds 135.491 \n"
+        },
+        "scope": "Actual primary600-trial analytic GLM/25 held-out predictions/serialized model, plus complete182x218x182 public MS FLAIR/T1 tissue/candidate selection, z-score normalization, native FSL smoothing/ANTsR coupling, bundled two-modality model and every independent logistic probability/grid/hash assertion. No chosen lesion-threshold or clinical-accuracy claim.",
+        "diagnostic_review": "Existing R --slave - commands warn about the trailing dash yet execute stdin/all assertions. rgl reports headless X11 unavailable and uses its null device; no3D GUI validation claimed. Neither diagnostic masks a failed scientific assertion."
+      }
     },
     {
       "recipe": "mipav",
@@ -19096,7 +19163,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T00:26:46.154580+00:00",
+        "checked_at": "2026-10-14T01:13:54.609597+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -19111,7 +19178,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:26:46.905134+00:00",
+        "metadata_checked_at": "2026-10-14T01:13:55.507694+00:00",
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
         "resolution_evidence": {
           "automatic_run_id": 38448486794,
@@ -20177,7 +20244,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-14T00:26:48.657256+00:00",
+        "checked_at": "2026-10-14T01:13:56.746166+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -20202,7 +20269,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:26:49.447525+00:00",
+        "metadata_checked_at": "2026-10-14T01:13:57.689478+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -23615,7 +23682,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T00:26:50.559317+00:00",
+        "checked_at": "2026-10-14T01:13:58.838033+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -23640,7 +23707,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:26:51.401042+00:00"
+        "metadata_checked_at": "2026-10-14T01:13:59.694670+00:00"
       }
     },
     {
@@ -24043,7 +24110,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T00:26:52.910648+00:00",
+        "checked_at": "2026-10-14T01:14:00.894264+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -24058,7 +24125,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:26:53.706158+00:00",
+        "metadata_checked_at": "2026-10-14T01:14:02.130824+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -24502,7 +24569,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T00:26:54.752640+00:00",
+        "checked_at": "2026-10-14T01:14:03.319714+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -24527,7 +24594,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:26:55.499235+00:00"
+        "metadata_checked_at": "2026-10-14T01:14:04.104678+00:00"
       }
     },
     {
@@ -26296,7 +26363,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T00:26:56.557570+00:00",
+        "checked_at": "2026-10-14T01:14:05.208380+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -26321,7 +26388,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:26:57.374997+00:00"
+        "metadata_checked_at": "2026-10-14T01:14:05.969595+00:00"
       }
     },
     {
@@ -28290,7 +28357,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T00:26:58.485139+00:00",
+        "checked_at": "2026-10-14T01:14:07.079434+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -28315,7 +28382,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:26:59.233431+00:00"
+        "metadata_checked_at": "2026-10-14T01:14:07.909685+00:00"
       }
     },
     {
@@ -30509,7 +30576,7 @@
         "recipes/syncro/build.yaml",
         "recipes/syncro/fulltest.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-syncro-20261012",
       "baseline_sha": "670f3eafd0f9393aba110741c05a062948d969d4",
       "candidate_sha": "08e0b4a389c90485a7d99c030f0fedb6e39517b7",
@@ -30616,11 +30683,108 @@
             "build_sif_fulltest_dive_manifest_gates": "success",
             "fulltest_log_summary_confirmed": true,
             "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "aarch64": {
+            "head_sha": "08e0b4a389c90485a7d99c030f0fedb6e39517b7",
+            "job_id": 115601411251,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38486489794/job/115601411251",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
           }
-        }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "syncro",
+          "container": "syncro_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "0.2.0",
+          "build_date": "20261014",
+          "docker_archive": "syncro_arm64_0.2.0_20261014.docker.tar",
+          "sif": "syncro_arm64_0.2.0_20261014.simg",
+          "candidate_tag": "nd-candidate-syncro_arm64:08e0b4a389c9",
+          "launcher": "SYNcro.py",
+          "pr_number": 3605,
+          "head_sha": "08e0b4a389c90485a7d99c030f0fedb6e39517b7",
+          "tests": {
+            "total": 39,
+            "passed": 39,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 38,
+            "fulltest_passed": 38,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Version check",
+              "Help output",
+              "Help shows positional arguments",
+              "SynthStrip available",
+              "SynthStrip help",
+              "SynthStrip skull stripping",
+              "SynthStrip with distance transform",
+              "SynthStrip with custom border",
+              "SynthStrip exclude CSF",
+              "Basic T1w normalization",
+              "Verify normalized output dimensions",
+              "Normalization with debug logging",
+              "Normalization with silent logging",
+              "Normalization with verbose logging",
+              "Force GPU disabled",
+              "Auto GPU detection",
+              "Create synthetic lesion mask",
+              "Normalization with lesion map",
+              "Verify warped lesion is binary"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "7.4 MB",
+                "path": "/usr/bin/perl"
+              },
+              {
+                "count": 6,
+                "wasted_space": "4.8 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/perl-base/auto/re/re.so"
+              },
+              {
+                "count": 2,
+                "wasted_space": "956 kB",
+                "path": "/tmp/syncro-cache/pip/http/c/c/1/3/3/cc133da5701a066bc3777b2575e0daa601596f19871db4608ca98b97"
+              }
+            ],
+            "efficiency_percent": 99.5595,
+            "wasted_bytes": 26120739,
+            "wasted_bytes_display": "26 MB",
+            "user_wasted_percent": 0.7309
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "merged_sha": "8c5ac2847b77d5f6892f7531661b4b88c8fd3ae0",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.0",
@@ -30774,7 +30938,82 @@
           },
           "artifact_id": 11860875185,
           "scope": "Actual complete SynthSR/SynthStrip/ANTs normalization, distance-transform, lesions/multiple-image outputs and original overlap test; every masked voxel/physical grid/input-model hash preserved. No GPU or clinical accuracy claim."
+        },
+        "aarch64": {
+          "source_sha": "08e0b4a389c90485a7d99c030f0fedb6e39517b7",
+          "actual_zero_exit_commands": 35,
+          "explicit_unusual_exits": [
+            {
+              "name": "SynthStrip help",
+              "expected_exit_code": 1
+            },
+            {
+              "name": "Missing input file error",
+              "expected_exit_code": 1
+            },
+            {
+              "name": "Invalid output directory",
+              "expected_exit_code": 1
+            }
+          ],
+          "functional_suite_seconds": 2092.3714179992676,
+          "operation_stdout": {
+            "Native CPU frameworks and official model closure": "No broken requirements found.\nActual SYNcro native CPU TensorFlow/PyTorch/ANTs and official model closure verified\n",
+            "Complete trained normalization and lesion image contracts": "Actual full SYNcro SynthSR/SynthStrip/ANTs normalization and lesion/multiple-image outputs preserve physical grids, every masked voxel, distance-transform capability and all input/checkpoint hashes\n"
+          },
+          "artifact_id": 11862907021,
+          "scope": "Actual complete SynthSR/SynthStrip/ANTs normalization, distance-transform, lesions/multiple-image outputs and original overlap test; every masked voxel/physical grid/input-model hash preserved. No GPU or clinical accuracy claim."
         }
+      },
+      "merged_at": "2026-10-14T01:07:22Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38493976001,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38493976001",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/syncro_arm64/0.2.0.json",
+            "expected_build_date": "20261014",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/syncro/0.2.0.json",
+            "expected_build_date": "20261014",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-14T01:14:10.942946+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-syncro-08e0b4a389c90485a7d99c030f0fedb6e39517b7)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-syncro_arm64-08e0b4a389c90485a7d99c030f0fedb6e39517b7)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-14T01:14:11.770304+00:00"
       }
     },
     {
@@ -31426,7 +31665,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T00:27:00.486556+00:00",
+        "checked_at": "2026-10-14T01:14:12.852589+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -31451,7 +31690,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:27:01.468398+00:00"
+        "metadata_checked_at": "2026-10-14T01:14:13.647768+00:00"
       }
     },
     {
@@ -34258,7 +34497,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T00:27:02.684874+00:00",
+        "checked_at": "2026-10-14T01:14:14.964154+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -34283,7 +34522,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:27:03.469960+00:00"
+        "metadata_checked_at": "2026-10-14T01:14:15.800862+00:00"
       }
     },
     {
@@ -35329,7 +35568,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T00:27:04.661628+00:00",
+        "checked_at": "2026-10-14T01:14:16.861903+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -35354,7 +35593,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T00:27:05.541852+00:00"
+        "metadata_checked_at": "2026-10-14T01:14:17.708287+00:00"
       }
     }
   ],
@@ -35379,9 +35618,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-14T00:30:56.824930+00:00",
+    "checked_at": "2026-10-14T01:13:46.483724+00:00",
     "previous_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
-    "new_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
+    "new_sha": "8c5ac2847b77d5f6892f7531661b4b88c8fd3ae0",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },

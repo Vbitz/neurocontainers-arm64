@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-13T23:14:42.404954+00:00",
-  "upstream_ref": "71a77111e2ed10f36382f465f81e4692726aa709",
+  "checked_at": "2026-10-14T01:14:20.367659+00:00",
+  "upstream_ref": "8c5ac2847b77d5f6892f7531661b4b88c8fd3ae0",
   "scope": "112 user-requested in-scope recipes;17 OpenRecon exclusions omitted.",
   "policy": "Read-only source-tree audit. Metadata presence/schema does not prove current builds, public artifacts or deployment; exact-candidate publication proofs remain in release-metadata-audit.json. No generated JSON changes or promotion dispatch.",
   "counts": {
-    "pending-arm64-port": 19,
+    "pending-arm64-port": 18,
     "explicit-arm64-metadata-present": 65,
-    "no-current-version-metadata-at-audited-ref": 28
+    "no-current-version-metadata-at-audited-ref": 29
   },
   "containers": [
     {
@@ -1497,9 +1497,11 @@
       "recipe": "syncro",
       "version": "0.2.0",
       "declared_architectures": [
-        "x86_64"
+        "x86_64",
+        "aarch64"
       ],
-      "status": "pending-arm64-port"
+      "path": "releases/syncro_arm64/0.2.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
     },
     {
       "recipe": "synthstrip",
