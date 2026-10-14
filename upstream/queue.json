@@ -137,18 +137,18 @@
         "recipes/aidamri/build.yaml",
         "recipes/aidamri/fulltest.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
+      "status": "ready-to-dispatch",
+      "branch": "arm64/upstream-aidamri-20261012",
+      "baseline_sha": "41308ea3d5872faad4d5d00eabaac8393177bb56",
+      "candidate_sha": "ec5c07a0433ec6d6c22cf3c85f5e16ac69442d07",
+      "started_at": "2026-10-14T04:26:22.087120+00:00",
+      "deadline": "2026-10-14T16:26:22.087120+00:00",
       "attempts": 0,
       "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Native exact-source Docker/architecture/SIF/deploy/fulltest proof, then this recipe only PR and both upstream architecture checks before merge.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.0",
@@ -163,6 +163,44 @@
         "three_way_conflicts": [
           "recipes/aidamri/build.yaml"
         ]
+      },
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Enable native ARM64 AIDAmri3.0 with the previously successful released NiftyReg2.0/system-libpng/native GCC route, official CPU DSI Studio2026.7.25, FSL6.0.7.22 and Python3.10/Nipype1.7/Traits6.4.3. Keep x86 NiftyReg1.4/FSL5/Python3.6 dependencies; use Ubuntu22.04 and official architecture-matched DSI assets to repair the current nonexistent DSI path. Preserve all6 original fulltests, adding actual AIDAmri low-b DWI averaging with every13440 voxel/grid/hash assertions and complete analytical Pearson/p-value/Fisher-z/ROI-label matrices. These are focused primary operations, not a full rodent MRI pipeline or clinical-validation claim. No third-party source patches.",
+      "pr_title": "Enable native ARM64 and verify AIDAmri image and connectivity operations",
+      "primary_source_review": [
+        "https://github.com/Aswendt-Lab/AIDAmri/tree/v3.0",
+        "https://github.com/KCL-BMEIS/niftyreg/blob/v2.0.0/CMakeLists.txt",
+        "https://github.com/frankyeh/DSI-Studio/releases/tag/2026.7.25",
+        "https://fsl.fmrib.ox.ac.uk/fsl/docs/install/linux.html"
+      ],
+      "arm64_attempts": 0,
+      "x86_64_attempts": 0,
+      "source_asset_preflight": {
+        "dsi": {
+          "tag_name": "2026.7.25",
+          "assets": [
+            {
+              "id": 635348106,
+              "name": "dsi_studio_ubuntu2204_cpu.zip",
+              "size": 266201046,
+              "digest": "sha256:184a5d7999937850f8a1267a3c3df496de8d2d0c04c3d981f8565a5054a37160",
+              "browser_download_url": "https://github.com/frankyeh/DSI-Studio/releases/download/2026.7.25/dsi_studio_ubuntu2204_cpu.zip"
+            },
+            {
+              "id": 635338046,
+              "name": "dsi_studio_ubuntu2204_cpu_arm64.zip",
+              "size": 264710756,
+              "digest": "sha256:20e8d403ea28ec9fd545fac974225b3d3099259aa2eac2a066688076c7dc1deb",
+              "browser_download_url": "https://github.com/frankyeh/DSI-Studio/releases/download/2026.7.25/dsi_studio_ubuntu2204_cpu_arm64.zip"
+            }
+          ]
+        },
+        "zip_roots": {
+          "x86_64": "dsi-studio-cpu",
+          "aarch64": "dsi-studio-cpu"
+        },
+        "note": "The official same-tag assets have current digests different from the historical native recipe. Pin the exact currently published digests; checked both actual remote ZIP layouts and corrected x86 directory rename. No guessed checksum or old release copied as current proof."
       }
     },
     {
@@ -4009,7 +4047,7 @@
       "port_files": [
         "recipes/brainles-preprocessing/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "blocked-verification-budget",
       "branch": "arm64/upstream-brainles-preprocessing-20261012",
       "baseline_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
       "candidate_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
@@ -4020,7 +4058,7 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3610",
       "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "next_action": "Original12-hour deadline expired. Need explicit renewed elapsed/build budget before any edits or dispatch. Preserve separate libgomp correction6fb7c455 untested; x86 NiftyReg missing OpenMP runtime plus upstream ARM SynthStrip600s timeout remain. Require exact corrected native proof and both fresh upstream suites; existing PR3610 remains open/unmerged. No unchanged infrastructure retries left.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.13",
@@ -4252,7 +4290,392 @@
         ]
       },
       "pending_upstream_issue": 3610,
-      "pr_number": 3610
+      "pr_number": 3610,
+      "submission_branch": "arm64/upstream-brainles-preprocessing-20261012",
+      "prepared_correction": {
+        "branch": "arm64/brainles-openmp-runtime-20261014",
+        "source_sha": "6fb7c4557240b5b38c0d7443c744d63297d8d0a8",
+        "baseline_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
+        "reason": "Actual x86 package-provided reg_aladin cannot load libgomp.so.1, exits127 before registration. Install the distribution GCC OpenMP runtime and assert ldd has no missing library for both registration executables. Preserve every original operation/output/numerical assertion.",
+        "native_test_not_dispatched": true,
+        "existing_pr_head_untouched": true
+      },
+      "upstream_failed_gate_reviews": [
+        {
+          "run_id": 38499108197,
+          "source_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
+          "architecture": "x86_64",
+          "failed_test": {
+            "duration": 8.034307956695557,
+            "message": "Expected exit code 0, got 1",
+            "name": "Both actual native registration backends",
+            "return_code": 1,
+            "status": "failed",
+            "stderr": "/opt/miniconda-py311_24.9.2-0/envs/brainles/lib/python3.11/site-packages/brainles_preprocessing/registration/__init__.py:16: UserWarning: itk-elastix package not found. If you want to use it, please install it using 'pip install brainles_preprocessing[itk-elastix]'\n  warnings.warn(\n/opt/miniconda-py311_24.9.2-0/envs/brainles/lib/python3.11/site-packages/brainles_preprocessing/registration/__init__.py:23: UserWarning: picsl_greedy  package not found. If you want to use it, please install it using 'pip install brainles_preprocessing[picsl_greedy]'\n  warnings.warn(\nTraceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('NiftyReg', \"\\n================================================================================\\n--- Executing rigid_reg.sh ---\\n\\n================================================================================\\nInput Parameters: [Path('/opt/miniconda-py311_24.9.2-0/envs/brainles/lib/python3.11/site-packages/brainles_preprocessing/registration/niftyreg/niftyreg_scripts/reg_aladin'), Path('/tmp/brainles-registration-16cbhv7p/asymmetric.nii.gz'), Path('/tmp/brainles-registration-16cbhv7p/asymmetric.nii.gz'), Path('/tmp/brainles-registration-16cbhv7p/NiftyReg-registered.nii.gz'), '/tmp/brainles-registration-16cbhv7p/NiftyReg.txt', '4.93822741489883e-19']\\n[2026-10-14 02:19:13] stdout: Error: NiftyReg registration failed with exit code 127.\\n[2026-10-14 02:19:13] stderr: /opt/miniconda-py311_24.9.2-0/envs/brainles/lib/python3.11/site-packages/brainles_preprocessing/registration/niftyreg/niftyreg_scripts/reg_aladin: error while loading shared libraries: libgomp.so.1: cannot open shared object file: No such file or directory\\n================================================================================\\n--- Finished rigid_reg.sh in 0.01 seconds ---\\n\\n================================================================================\\n\")\n",
+            "stdout": "ANTs actual registration and nearest-neighbour transformation preserved every884736 voxel and physical geometry\n"
+          },
+          "raw_job_log": "/tmp/brainles-upstream-x86-38499108197-job.log",
+          "retry_hypothesis": "Actual x86 package-provided reg_aladin cannot load libgomp.so.1, exits127 before registration. Install the distribution GCC OpenMP runtime and assert ldd has no missing library for both registration executables. Preserve every original operation/output/numerical assertion."
+        }
+      ],
+      "upstream_actual_failure_reviews": {
+        "aarch64": {
+          "source_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
+          "run_id": 38499108197,
+          "counts": {
+            "total": 19,
+            "passed": 18,
+            "failed": 1,
+            "skipped": 0,
+            "fulltest_total": 18,
+            "fulltest_passed": 17,
+            "fulltest_failed": 1,
+            "suites_total": 1,
+            "suites_passed": 0,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "package imports",
+              "reports the packaged version",
+              "the preprocessor entry points import",
+              "the preprocessor console script runs",
+              "the hd-bet console script runs",
+              "the preprocessor atlas default is not a label",
+              "the SRI24 atlas is bundled",
+              "the atlas resolves without touching the network",
+              "the SynthStrip weights are bundled",
+              "the SynthStrip extractor imports",
+              "runs outside HOME",
+              "HD-BET weights are bundled",
+              "brain extraction is configurable from the CLI",
+              "the brain extractor imports",
+              "Native dependency closure and actual CPU tensor operation",
+              "Both actual native registration backends",
+              "HD-BET CPU inference inside the read-only SIF"
+            ],
+            "failed_tests": [
+              "SynthStrip extracts a brain on CPU"
+            ]
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 5,
+                "wasted_space": "3.5 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "2.7 MB",
+                "path": "/opt/miniconda-py311_24.9.2-0/envs/brainles/lib/python3.11/site-packages/brainles_preprocessing/registration/niftyreg/niftyreg_scripts/reg_resample"
+              },
+              {
+                "count": 2,
+                "wasted_space": "2.5 MB",
+                "path": "/opt/miniconda-py311_24.9.2-0/envs/brainles/lib/python3.11/site-packages/brainles_preprocessing/registration/niftyreg/niftyreg_scripts/reg_aladin"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              }
+            ],
+            "efficiency_percent": 99.4642,
+            "wasted_bytes": 25029352,
+            "wasted_bytes_display": "25 MB",
+            "user_wasted_percent": 0.797
+          },
+          "failed_test": {
+            "duration": 600.0524551868439,
+            "message": "Timeout after 600s",
+            "name": "SynthStrip extracts a brain on CPU",
+            "return_code": 0,
+            "status": "failed",
+            "stderr": "\u001b[32m2026-10-14 02:45:00.668\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mbrainles_preprocessing.utils.zenodo\u001b[0m:\u001b[36m_fetch_uncached\u001b[0m:\u001b[36m119\u001b[0m - \u001b[1mFound local SynthStrip: 16535633_v1.0.0\u001b[0m\n\u001b[32m2026-10-14 02:45:00.669\u001b[0m | \u001b[1mINFO    \u001b[0m | \u001b[36mbrainles_preprocessing.utils.zenodo\u001b[0m:\u001b[36m_fetch_uncached\u001b[0m:\u001b[36m130\u001b[0m - \u001b[1mLatest SynthStrip (1.0.0) already present.\u001b[0m\n",
+            "stdout": ""
+          },
+          "actual_successful_tests": [
+            {
+              "name": "Simple Deploy Bins/Path Test",
+              "seconds": null,
+              "return_code": 0
+            },
+            {
+              "name": "package imports",
+              "seconds": 0.2570936679840088,
+              "return_code": 0
+            },
+            {
+              "name": "reports the packaged version",
+              "seconds": 0.39290595054626465,
+              "return_code": 0
+            },
+            {
+              "name": "the preprocessor entry points import",
+              "seconds": 9.05611515045166,
+              "return_code": 0
+            },
+            {
+              "name": "the preprocessor console script runs",
+              "seconds": 8.993955135345459,
+              "return_code": 0
+            },
+            {
+              "name": "the hd-bet console script runs",
+              "seconds": 4.5931620597839355,
+              "return_code": 0
+            },
+            {
+              "name": "the preprocessor atlas default is not a label",
+              "seconds": 8.676334142684937,
+              "return_code": 0
+            },
+            {
+              "name": "the SRI24 atlas is bundled",
+              "seconds": 0.2585422992706299,
+              "return_code": 0
+            },
+            {
+              "name": "the atlas resolves without touching the network",
+              "seconds": 1.4766168594360352,
+              "return_code": 0
+            },
+            {
+              "name": "the SynthStrip weights are bundled",
+              "seconds": 0.2736644744873047,
+              "return_code": 0
+            },
+            {
+              "name": "the SynthStrip extractor imports",
+              "seconds": 5.551959753036499,
+              "return_code": 0
+            },
+            {
+              "name": "runs outside HOME",
+              "seconds": 0.2598094940185547,
+              "return_code": 0
+            },
+            {
+              "name": "HD-BET weights are bundled",
+              "seconds": 5.056330680847168,
+              "return_code": 0
+            },
+            {
+              "name": "brain extraction is configurable from the CLI",
+              "seconds": 9.882948875427246,
+              "return_code": 0
+            },
+            {
+              "name": "the brain extractor imports",
+              "seconds": 5.5049943923950195,
+              "return_code": 0
+            },
+            {
+              "name": "Native dependency closure and actual CPU tensor operation",
+              "seconds": 4.5150697231292725,
+              "return_code": 0
+            },
+            {
+              "name": "Both actual native registration backends",
+              "seconds": 23.49600577354431,
+              "return_code": 0
+            },
+            {
+              "name": "HD-BET CPU inference inside the read-only SIF",
+              "seconds": 259.3415834903717,
+              "return_code": 0
+            }
+          ]
+        },
+        "x86_64": {
+          "source_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
+          "run_id": 38499108197,
+          "counts": {
+            "total": 19,
+            "passed": 18,
+            "failed": 1,
+            "skipped": 0,
+            "fulltest_total": 18,
+            "fulltest_passed": 17,
+            "fulltest_failed": 1,
+            "suites_total": 1,
+            "suites_passed": 0,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "package imports",
+              "reports the packaged version",
+              "the preprocessor entry points import",
+              "the preprocessor console script runs",
+              "the hd-bet console script runs",
+              "the preprocessor atlas default is not a label",
+              "the SRI24 atlas is bundled",
+              "the atlas resolves without touching the network",
+              "the SynthStrip weights are bundled",
+              "SynthStrip extracts a brain on CPU",
+              "the SynthStrip extractor imports",
+              "runs outside HOME",
+              "HD-BET weights are bundled",
+              "brain extraction is configurable from the CLI",
+              "the brain extractor imports",
+              "Native dependency closure and actual CPU tensor operation",
+              "HD-BET CPU inference inside the read-only SIF"
+            ],
+            "failed_tests": [
+              "Both actual native registration backends"
+            ]
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "807 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "451 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "354 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 99.9416,
+            "wasted_bytes": 6264830,
+            "wasted_bytes_display": "6.3 MB",
+            "user_wasted_percent": 0.0791
+          },
+          "failed_test": {
+            "duration": 8.034307956695557,
+            "message": "Expected exit code 0, got 1",
+            "name": "Both actual native registration backends",
+            "return_code": 1,
+            "status": "failed",
+            "stderr": "/opt/miniconda-py311_24.9.2-0/envs/brainles/lib/python3.11/site-packages/brainles_preprocessing/registration/__init__.py:16: UserWarning: itk-elastix package not found. If you want to use it, please install it using 'pip install brainles_preprocessing[itk-elastix]'\n  warnings.warn(\n/opt/miniconda-py311_24.9.2-0/envs/brainles/lib/python3.11/site-packages/brainles_preprocessing/registration/__init__.py:23: UserWarning: picsl_greedy  package not found. If you want to use it, please install it using 'pip install brainles_preprocessing[picsl_greedy]'\n  warnings.warn(\nTraceback (most recent call last):\n  File \"<stdin>\", line 26, in <module>\nAssertionError: ('NiftyReg', \"\\n================================================================================\\n--- Executing rigid_reg.sh ---\\n\\n================================================================================\\nInput Parameters: [Path('/opt/miniconda-py311_24.9.2-0/envs/brainles/lib/python3.11/site-packages/brainles_preprocessing/registration/niftyreg/niftyreg_scripts/reg_aladin'), Path('/tmp/brainles-registration-16cbhv7p/asymmetric.nii.gz'), Path('/tmp/brainles-registration-16cbhv7p/asymmetric.nii.gz'), Path('/tmp/brainles-registration-16cbhv7p/NiftyReg-registered.nii.gz'), '/tmp/brainles-registration-16cbhv7p/NiftyReg.txt', '4.93822741489883e-19']\\n[2026-10-14 02:19:13] stdout: Error: NiftyReg registration failed with exit code 127.\\n[2026-10-14 02:19:13] stderr: /opt/miniconda-py311_24.9.2-0/envs/brainles/lib/python3.11/site-packages/brainles_preprocessing/registration/niftyreg/niftyreg_scripts/reg_aladin: error while loading shared libraries: libgomp.so.1: cannot open shared object file: No such file or directory\\n================================================================================\\n--- Finished rigid_reg.sh in 0.01 seconds ---\\n\\n================================================================================\\n\")\n",
+            "stdout": "ANTs actual registration and nearest-neighbour transformation preserved every884736 voxel and physical geometry\n"
+          },
+          "actual_successful_tests": [
+            {
+              "name": "Simple Deploy Bins/Path Test",
+              "seconds": null,
+              "return_code": 0
+            },
+            {
+              "name": "package imports",
+              "seconds": 0.13755369186401367,
+              "return_code": 0
+            },
+            {
+              "name": "reports the packaged version",
+              "seconds": 0.20768213272094727,
+              "return_code": 0
+            },
+            {
+              "name": "the preprocessor entry points import",
+              "seconds": 5.8026123046875,
+              "return_code": 0
+            },
+            {
+              "name": "the preprocessor console script runs",
+              "seconds": 5.981287956237793,
+              "return_code": 0
+            },
+            {
+              "name": "the hd-bet console script runs",
+              "seconds": 3.3298726081848145,
+              "return_code": 0
+            },
+            {
+              "name": "the preprocessor atlas default is not a label",
+              "seconds": 5.814358949661255,
+              "return_code": 0
+            },
+            {
+              "name": "the SRI24 atlas is bundled",
+              "seconds": 0.1487751007080078,
+              "return_code": 0
+            },
+            {
+              "name": "the atlas resolves without touching the network",
+              "seconds": 1.1152725219726562,
+              "return_code": 0
+            },
+            {
+              "name": "the SynthStrip weights are bundled",
+              "seconds": 0.14784455299377441,
+              "return_code": 0
+            },
+            {
+              "name": "SynthStrip extracts a brain on CPU",
+              "seconds": 11.150692701339722,
+              "return_code": 0
+            },
+            {
+              "name": "the SynthStrip extractor imports",
+              "seconds": 3.8782410621643066,
+              "return_code": 0
+            },
+            {
+              "name": "runs outside HOME",
+              "seconds": 0.1276404857635498,
+              "return_code": 0
+            },
+            {
+              "name": "HD-BET weights are bundled",
+              "seconds": 3.7042763233184814,
+              "return_code": 0
+            },
+            {
+              "name": "brain extraction is configurable from the CLI",
+              "seconds": 5.762956142425537,
+              "return_code": 0
+            },
+            {
+              "name": "the brain extractor imports",
+              "seconds": 3.8734331130981445,
+              "return_code": 0
+            },
+            {
+              "name": "Native dependency closure and actual CPU tensor operation",
+              "seconds": 3.607909679412842,
+              "return_code": 0
+            },
+            {
+              "name": "HD-BET CPU inference inside the read-only SIF",
+              "seconds": 11.891504287719727,
+              "return_code": 0
+            }
+          ]
+        }
+      },
+      "blocker": {
+        "classification": "elapsed-investigation-budget with x86 missing-runtime prerequisite and upstream ARM inference timeout",
+        "x86_first_error": "NiftyReg reg_aladin cannot load libgomp.so.1, exits127 before registration. Separate ordinary package fix prepared but untested.",
+        "arm_first_error": "SynthStrip extracts a brain on CPU: timeout after600s, no output mask verified; prior exact root native case passed. Does not establish architecture impossibility or successful upstream inference.",
+        "revisit_condition": "Explicit renewed investigation budget and concrete timeout diagnosis/resource or documented runtime configuration fix; corrected native source and both fresh upstream architecture gates must pass.",
+        "attempts": 4,
+        "deadline": "2026-10-14T03:53:00+00:00"
+      }
     },
     {
       "recipe": "brainlifecli",
@@ -5607,7 +6030,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T01:13:48.089830+00:00",
+        "checked_at": "2026-10-14T04:20:47.128322+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -5632,7 +6055,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:13:49.281918+00:00",
+        "metadata_checked_at": "2026-10-14T04:20:47.925539+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -6653,7 +7076,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T01:13:50.464648+00:00",
+        "checked_at": "2026-10-14T04:20:50.072136+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -6678,7 +7101,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:13:51.290991+00:00"
+        "metadata_checked_at": "2026-10-14T04:20:50.911982+00:00"
       }
     },
     {
@@ -10926,7 +11349,61 @@
           "scope": "Actual five-CNN HD-BET plus five-fold/default-augmentation FLAMeS, physical output grid and all input/reference/model hashes; poor manual-reference agreement remains explicit. No bitwise architecture-parity or clinical-accuracy claim."
         }
       },
-      "merged_at": "2026-10-14T02:21:41Z"
+      "merged_at": "2026-10-14T02:21:41Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38500621041,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38500621041",
+        "status": "promotion-cancelled-unpublished",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/flames_arm64/1.0.0.json",
+            "expected_build_date": "20261014",
+            "exists": true,
+            "committed_build_dates": [
+              "20261014"
+            ],
+            "current_candidate_date_committed": true
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/flames/1.0.0.json",
+            "expected_build_date": "20261014",
+            "exists": true,
+            "committed_build_dates": [
+              "20261014"
+            ],
+            "current_candidate_date_committed": true
+          }
+        ],
+        "checked_at": "2026-10-14T04:20:54.673447+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "cancelled",
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-flames-02ade4a9595b5fe1cfea5ab09934169357f2d1da)",
+            "status": "completed",
+            "conclusion": "cancelled",
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-flames_arm64-02ade4a9595b5fe1cfea5ab09934169357f2d1da)",
+            "status": "completed",
+            "conclusion": "cancelled",
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-14T04:20:55.713766+00:00",
+        "note": "Both automatic publisher jobs were cancelled without any executed steps. No registry upload or current-candidate publication was verified. The existing native/PR test evidence remains valid; no manual promotion dispatched."
+      }
     },
     {
       "recipe": "fsl",
@@ -13008,15 +13485,15 @@
       "status": "upstream-running",
       "branch": "arm64/upstream-gliomoda-20261012",
       "baseline_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
-      "candidate_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
+      "candidate_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
       "started_at": "2026-10-13T22:41:06.165534+00:00",
       "deadline": "2026-10-14T10:41:06.165534+00:00",
-      "attempts": 3,
-      "run_id": 38482867040,
+      "attempts": 6,
+      "run_id": 38501634115,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3606",
       "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Let old-head ARM candidate finish without cancellation. Then dispatch the pushed single-layer correction from its separate branch for exact native proof4/6. Only after native success, update existing PR3606 by normal fast-forward and require both fresh architecture jobs5/6,6/6/all gates. No duplicate PR, test weakening, budget reset or premature original-branch push.",
+      "next_action": "Verify exact corrected-source fresh ARM64/x86_64 suites plus unchanged Dive and all required gates for existing PR3606, then normal merge.6/6; no further builds.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.4",
@@ -13027,8 +13504,8 @@
         "fulltest_version": "0.0.4",
         "test_count": 16
       },
-      "arm64_attempts": 2,
-      "x86_64_attempts": 1,
+      "arm64_attempts": 4,
+      "x86_64_attempts": 2,
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
       "change_summary": "Enable GlioMODA0.0.4 ARM64 using official PyTorch2.6.0 CPU wheels with supplemental PyPI build dependencies, preserving the existing x86 CUDA path, nnU-Net2.5.2 and every bundled1.0.2 model. Independently track main/ARM Torch versions. Retain all16 existing tests and add actual CPU dependency closure plus default trained four-modality inference on all complete official240x240x155/1mm tutorial MRI images. Assert valid nonempty BraTS labels, original physical grid, unchanged inputs and all bundled model files. No model, image resizing, prediction parameters, source algorithm or GPU/clinical accuracy claim.\n\nObserved native default four-modality inference completed in49minutes with two CPU threads, returning all three glioma labels(126237 foreground voxels), the full240x240x155 grid and unchanged four MRI/84 model-file hashes. This verifies this CPU operation, not clinical accuracy, GPU or every alternative model.",
@@ -13319,77 +13796,11 @@
           "t2w/dataset.json"
         ]
       },
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38482867040",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38501634115",
       "native_command_exit_review": {
-        "source_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
+        "source_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
         "all_unusual_exits_explicitly_asserted": true,
         "unusual_exits": []
-      },
-      "native_evidence": {
-        "source_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
-        "version": "0.0.4",
-        "counts": {
-          "total_tests": 19,
-          "passed": 19,
-          "failed": 0,
-          "skipped": 0
-        },
-        "fulltest_summary": {
-          "duration": 3014.034051179886,
-          "run_timestamp": "2026-10-14T00:29:57.610220",
-          "suites_failed": 0,
-          "suites_passed": 1,
-          "tests_failed": 0,
-          "tests_passed": 18,
-          "total_suites": 1,
-          "total_tests": 18
-        },
-        "deploy_counts": {
-          "total": 1,
-          "passed": 1,
-          "failed": 0,
-          "skipped": 0
-        },
-        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38482867040",
-        "runner_labels": [
-          "ubuntu-24.04-arm"
-        ]
-      },
-      "native_actual_scientific_review": {
-        "source_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
-        "actual_zero_exit_functional_commands": 18,
-        "full_mri_case_seconds": 2959.1820063591003,
-        "metrics": {
-          "foreground_voxels": 126237,
-          "input_sha256": {
-            "t1c": "4399faadcc45c8a4541313cdf88aced7d835ed59ac3078d950e0eac293d603f5",
-            "t1n": "e860924b936e301ddeba20409fbb59dde322475cb49328f1b46a9235c792e73e",
-            "t2f": "82aed8546af5e6d8d94fd91c56227abdcf6120130390d1556c4342a208980604",
-            "t2w": "4cd389cc57d12134a30a898c66532228126b9a7d0600ee578e82a32144528b51"
-          },
-          "label_counts": [
-            8801763,
-            18458,
-            85535,
-            22244
-          ],
-          "labels": [
-            0,
-            1,
-            2,
-            3
-          ],
-          "mode": "t1c-t2f-t1n-t2w",
-          "seconds": 2941.61,
-          "shape": [
-            240,
-            240,
-            155
-          ],
-          "unchanged_weight_files": 84,
-          "weights_version": "1.0.2"
-        },
-        "scope": "Default four-modality model, all normal inference stages/augmentation and complete official MRI inputs. Physical grid, valid nonempty labels and all image/model hashes passed. Other modality models, ResEncL, GPU and clinical accuracy are not inferred from this operation."
       },
       "pending_upstream_issue": 3606,
       "pr_number": 3606,
@@ -13410,9 +13821,10 @@
         "baseline_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
         "reason": "All19 x86 runtime checks passed, but separate Torch install and later recursive chmod copied11GB into a new Docker layer: Dive efficiency65.2214%<80%, user wasted69.8749%>30%, wasted11.267GB>4GB. Restore single-layer environment installation while retaining package paths, all permissions, models and every test. No Dive threshold/test changes.",
         "validation": "Schema/update-policy/both generated Dockerfiles/spelling/diff checks passed.",
-        "native_test_not_dispatched": true,
-        "existing_pr_head_untouched": true,
-        "budget_plan": "Current3/6; wait for healthy old ARM job to finish, native corrected source4/6, then fast-forward same PR3606 only after native success and reserve its two upstream architectures5/6 and6/6. Original clock/deadline retained."
+        "native_test_not_dispatched": false,
+        "existing_pr_head_untouched": false,
+        "budget_plan": "Current3/6; wait for healthy old ARM job to finish, native corrected source4/6, then fast-forward same PR3606 only after native success and reserve its two upstream architectures5/6 and6/6. Original clock/deadline retained.",
+        "old_upstream_arm_completed_success": true
       },
       "upstream_failed_gate_reviews": [
         {
@@ -13503,7 +13915,199 @@
           "raw_job_log": "/tmp/gliomoda-upstream-x86-38490805458-job.log",
           "retry_hypothesis": "All19 x86 runtime checks passed, but separate Torch install and later recursive chmod copied11GB into a new Docker layer: Dive efficiency65.2214%<80%, user wasted69.8749%>30%, wasted11.267GB>4GB. Restore single-layer environment installation while retaining package paths, all permissions, models and every test. No Dive threshold/test changes."
         }
-      ]
+      ],
+      "candidate_history": [
+        {
+          "candidate_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
+          "branch": "arm64/upstream-gliomoda-20261012",
+          "run_id": 38482867040,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38482867040",
+          "native_evidence": {
+            "source_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
+            "version": "0.0.4",
+            "counts": {
+              "total_tests": 19,
+              "passed": 19,
+              "failed": 0,
+              "skipped": 0
+            },
+            "fulltest_summary": {
+              "duration": 3014.034051179886,
+              "run_timestamp": "2026-10-14T00:29:57.610220",
+              "suites_failed": 0,
+              "suites_passed": 1,
+              "tests_failed": 0,
+              "tests_passed": 18,
+              "total_suites": 1,
+              "total_tests": 18
+            },
+            "deploy_counts": {
+              "total": 1,
+              "passed": 1,
+              "failed": 0,
+              "skipped": 0
+            },
+            "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38482867040",
+            "runner_labels": [
+              "ubuntu-24.04-arm"
+            ]
+          },
+          "native_actual_scientific_review": {
+            "source_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
+            "actual_zero_exit_functional_commands": 18,
+            "full_mri_case_seconds": 2959.1820063591003,
+            "metrics": {
+              "foreground_voxels": 126237,
+              "input_sha256": {
+                "t1c": "4399faadcc45c8a4541313cdf88aced7d835ed59ac3078d950e0eac293d603f5",
+                "t1n": "e860924b936e301ddeba20409fbb59dde322475cb49328f1b46a9235c792e73e",
+                "t2f": "82aed8546af5e6d8d94fd91c56227abdcf6120130390d1556c4342a208980604",
+                "t2w": "4cd389cc57d12134a30a898c66532228126b9a7d0600ee578e82a32144528b51"
+              },
+              "label_counts": [
+                8801763,
+                18458,
+                85535,
+                22244
+              ],
+              "labels": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "mode": "t1c-t2f-t1n-t2w",
+              "seconds": 2941.61,
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "unchanged_weight_files": 84,
+              "weights_version": "1.0.2"
+            },
+            "scope": "Default four-modality model, all normal inference stages/augmentation and complete official MRI inputs. Physical grid, valid nonempty labels and all image/model hashes passed. Other modality models, ResEncL, GPU and clinical accuracy are not inferred from this operation."
+          },
+          "upstream_ci": {},
+          "outcome": "Both original architecture runtime suites passed19/19; x86 Dive failed layer waste. Native upstream ARM original source passed all candidate gates. Correction needs new exact source proof.",
+          "old_upstream_run_id": 38490805458,
+          "old_upstream_arm_report": {
+            "schema_version": 3,
+            "recipe": "gliomoda",
+            "container": "gliomoda_arm64",
+            "variant": "arm64",
+            "architecture": "aarch64",
+            "version": "0.0.4",
+            "build_date": "20261014",
+            "docker_archive": "gliomoda_arm64_0.0.4_20261014.docker.tar",
+            "sif": "gliomoda_arm64_0.0.4_20261014.simg",
+            "candidate_tag": "nd-candidate-gliomoda_arm64:8bdda8276f59",
+            "launcher": "gliomoda",
+            "pr_number": 3606,
+            "head_sha": "8bdda8276f59a0f218ff2c97963f54349f0ec1d1",
+            "tests": {
+              "total": 19,
+              "passed": 19,
+              "failed": 0,
+              "skipped": 0,
+              "fulltest_total": 18,
+              "fulltest_passed": 18,
+              "fulltest_failed": 0,
+              "suites_total": 1,
+              "suites_passed": 1,
+              "passed_tests": [
+                "Simple Deploy Bins/Path Test",
+                "package imports",
+                "reports the packaged version",
+                "runs outside HOME",
+                "torch imports and computes on CPU",
+                "model weights are bundled in the image",
+                "bundled weights are the declared version",
+                "weights are pinned, not fetched at run time",
+                "gliomoda CLI is on PATH and renders help",
+                "the CLI selects a device instead of assuming CUDA",
+                "version reports package and bundled weights",
+                "the bundled models can be listed",
+                "an unbundled modality combination fails with a usable message",
+                "a trailing singleton axis is rejected with a usable message",
+                "forcing cuda without a GPU fails before loading the model",
+                "the thread default reports where its number came from",
+                "the container does not export a python interpreter",
+                "Native CPU model dependency closure",
+                "Full trained four modality glioma MRI inference"
+              ],
+              "failed_tests": []
+            },
+            "dive": {
+              "status": "success",
+              "failed_checks": [],
+              "inefficient_files": [
+                {
+                  "count": 2,
+                  "wasted_space": "481 MB",
+                  "path": "/opt/gliomoda-0.0.4/lib/python3.12/site-packages/torch/lib/libtorch_cpu.so"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "50 MB",
+                  "path": "/opt/gliomoda-0.0.4/lib/python3.12/site-packages/torch/lib/libtorch_python.so"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "48 MB",
+                  "path": "/opt/gliomoda-0.0.4/lib/python3.12/site-packages/torch.libs/libopenblasp-r0-bbd0e64a.3.28.so"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "32 MB",
+                  "path": "/opt/gliomoda-0.0.4/lib/python3.12/site-packages/torch.libs/libarm_compute-730de1a5.so"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "9.7 MB",
+                  "path": "/opt/gliomoda-0.0.4/lib/python3.12/site-packages/torch/bin/protoc-3.13.0.0"
+                }
+              ],
+              "efficiency_percent": 91.0023,
+              "wasted_bytes": 1092843805,
+              "wasted_bytes_display": "1.1 GB",
+              "user_wasted_percent": 18.2459
+            }
+          }
+        }
+      ],
+      "reuse_existing_upstream_pr": true,
+      "existing_pr_state": "OPEN",
+      "native_evidence": {
+        "source_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+        "version": "0.0.4",
+        "counts": {
+          "total_tests": 19,
+          "passed": 19,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 3066.9069974422455,
+          "run_timestamp": "2026-10-14T04:03:02.859474",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 18,
+          "total_suites": 1,
+          "total_tests": 18
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38501634115",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      }
     },
     {
       "recipe": "glmsingle",
@@ -16926,7 +17530,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T01:13:52.513284+00:00",
+        "checked_at": "2026-10-14T04:20:56.790236+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -16951,7 +17555,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:13:53.433694+00:00"
+        "metadata_checked_at": "2026-10-14T04:20:57.582481+00:00"
       }
     },
     {
@@ -19591,7 +20195,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T01:13:54.609597+00:00",
+        "checked_at": "2026-10-14T04:20:58.687969+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -19606,7 +20210,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:13:55.507694+00:00",
+        "metadata_checked_at": "2026-10-14T04:21:00.081991+00:00",
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
         "resolution_evidence": {
           "automatic_run_id": 38448486794,
@@ -20672,7 +21276,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-14T01:13:56.746166+00:00",
+        "checked_at": "2026-10-14T04:21:01.963484+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -20697,7 +21301,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:13:57.689478+00:00",
+        "metadata_checked_at": "2026-10-14T04:21:03.172410+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -24110,7 +24714,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T01:13:58.838033+00:00",
+        "checked_at": "2026-10-14T04:21:04.389611+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -24135,7 +24739,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:13:59.694670+00:00"
+        "metadata_checked_at": "2026-10-14T04:21:05.251210+00:00"
       }
     },
     {
@@ -24538,7 +25142,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T01:14:00.894264+00:00",
+        "checked_at": "2026-10-14T04:21:06.838962+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -24553,7 +25157,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:14:02.130824+00:00",
+        "metadata_checked_at": "2026-10-14T04:21:07.875104+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -24997,7 +25601,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T01:14:03.319714+00:00",
+        "checked_at": "2026-10-14T04:21:09.105760+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -25022,7 +25626,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:14:04.104678+00:00"
+        "metadata_checked_at": "2026-10-14T04:21:09.998185+00:00"
       }
     },
     {
@@ -26791,7 +27395,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T01:14:05.208380+00:00",
+        "checked_at": "2026-10-14T04:21:11.182451+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -26816,7 +27420,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:14:05.969595+00:00"
+        "metadata_checked_at": "2026-10-14T04:21:12.073797+00:00"
       }
     },
     {
@@ -28785,7 +29389,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T01:14:07.079434+00:00",
+        "checked_at": "2026-10-14T04:21:13.296051+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -28810,7 +29414,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:14:07.909685+00:00"
+        "metadata_checked_at": "2026-10-14T04:21:14.525860+00:00"
       }
     },
     {
@@ -31397,33 +32001,37 @@
       "release_metadata_audit": {
         "promotion_run_id": 38493976001,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38493976001",
-        "status": "pending-promotion",
+        "status": "promotion-cancelled-unpublished",
         "metadata": [
           {
             "architecture": "aarch64",
             "path": "releases/syncro_arm64/0.2.0.json",
             "expected_build_date": "20261014",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
+            "exists": true,
+            "committed_build_dates": [
+              "20261014"
+            ],
+            "current_candidate_date_committed": true
           },
           {
             "architecture": "x86_64",
             "path": "releases/syncro/0.2.0.json",
             "expected_build_date": "20261014",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
+            "exists": true,
+            "committed_build_dates": [
+              "20261014"
+            ],
+            "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-14T01:14:10.942946+00:00",
-        "workflow_status": "queued",
-        "workflow_conclusion": null,
+        "checked_at": "2026-10-14T04:21:16.834439+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "cancelled",
         "publish_jobs": [
           {
             "name": "publish (candidate-syncro-08e0b4a389c90485a7d99c030f0fedb6e39517b7)",
-            "status": "queued",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "cancelled",
             "runner_name": "",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
@@ -31432,8 +32040,8 @@
           },
           {
             "name": "publish (candidate-syncro_arm64-08e0b4a389c90485a7d99c030f0fedb6e39517b7)",
-            "status": "queued",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "cancelled",
             "runner_name": "",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
@@ -31441,7 +32049,8 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:14:11.770304+00:00"
+        "metadata_checked_at": "2026-10-14T04:21:18.307375+00:00",
+        "note": "Both automatic publisher jobs were cancelled without any executed steps. No registry upload or current-candidate publication was verified. The existing native/PR test evidence remains valid; no manual promotion dispatched."
       }
     },
     {
@@ -32093,7 +32702,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T01:14:12.852589+00:00",
+        "checked_at": "2026-10-14T04:21:19.535344+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -32118,7 +32727,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:14:13.647768+00:00"
+        "metadata_checked_at": "2026-10-14T04:21:20.345249+00:00"
       }
     },
     {
@@ -33795,18 +34404,18 @@
         "recipes/tractseg/build.yaml",
         "recipes/tractseg/fulltest.yaml"
       ],
-      "status": "pending",
-      "branch": null,
-      "baseline_sha": null,
-      "candidate_sha": null,
-      "started_at": null,
-      "deadline": null,
+      "status": "ready-to-dispatch",
+      "branch": "arm64/upstream-tractseg-20261012",
+      "baseline_sha": "98c7b84d8018d7611d847fc43bb78b5056c87970",
+      "candidate_sha": "f91cc6ad7b429702db2b485af2638918cd3049cc",
+      "started_at": "2026-10-14T02:37:23.297913+00:00",
+      "deadline": "2026-10-14T14:37:23.297913+00:00",
       "attempts": 0,
       "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Review current upstream recipe and replay only needed port changes.",
+      "next_action": "Dispatch exact-source native Docker/SIF/deploy/all original120 plus2 real trained CPU and dependency tests when one build slot frees. Then own upstream PR and both architectures/all gates.",
       "upstream_review": {
         "exists": true,
         "version": "2.9.0",
@@ -33818,7 +34427,18 @@
         "test_count": 120,
         "patch_conflict": "error: patch failed: recipes/tractseg/build.yaml:5\nerror: recipes/tractseg/build.yaml: patch does not apply",
         "three_way_clean": true
-      }
+      },
+      "upstream_verification_mode": "image-port",
+      "upstream_ci_runner_label": "ci-blacksmith-x86",
+      "change_summary": "Enable native ARM64 TractSeg2.9 with the previously verified official MRtrix3.0.4 source/viewer build, Python3.11, PyPI CPU Torch2.4.1/NumPy1.26.4 and official FSL6.0.7.22; retain existing x86 installations and all120 fulltests. Add real default three-orientation trained CPU segmentation on the complete official v2.9 peak image, requiring exact every-voxel masks for all72 released bundle references, physical geometry and unchanged input/all9 checkpoint bytes. No model replacement, tolerance relaxation or dependency source patch.",
+      "pr_title": "Enable native ARM64 and verify trained TractSeg bundle segmentation",
+      "primary_source_review": [
+        "https://github.com/MIC-DKFZ/TractSeg/tree/c73bc2f437113a68b5170cc0dcc89e18b1d87bd5",
+        "https://github.com/MIC-DKFZ/TractSeg/blob/v2.9/tests/test_end_to_end.py",
+        "https://mrtrix.readthedocs.io/en/3.0.4/installation/build_from_source.html",
+        "https://pypi.org/pypi/torch/2.4.1/json",
+        "https://pypi.org/pypi/numpy/1.26.4/json"
+      ]
     },
     {
       "recipe": "vertexwiser",
@@ -34925,7 +35545,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T01:14:14.964154+00:00",
+        "checked_at": "2026-10-14T04:21:21.422100+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -34950,7 +35570,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:14:15.800862+00:00"
+        "metadata_checked_at": "2026-10-14T04:21:22.297806+00:00"
       }
     },
     {
@@ -35996,7 +36616,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T01:14:16.861903+00:00",
+        "checked_at": "2026-10-14T04:21:23.559364+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -36021,7 +36641,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T01:14:17.708287+00:00"
+        "metadata_checked_at": "2026-10-14T04:21:24.407382+00:00"
       }
     }
   ],
@@ -36046,9 +36666,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-14T01:13:46.483724+00:00",
-    "previous_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
-    "new_sha": "8c5ac2847b77d5f6892f7531661b4b88c8fd3ae0",
+    "checked_at": "2026-10-14T04:20:17.790261+00:00",
+    "previous_sha": "8c5ac2847b77d5f6892f7531661b4b88c8fd3ae0",
+    "new_sha": "41308ea3d5872faad4d5d00eabaac8393177bb56",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },
