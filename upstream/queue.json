@@ -4009,7 +4009,7 @@
       "port_files": [
         "recipes/brainles-preprocessing/build.yaml"
       ],
-      "status": "blocked-infrastructure",
+      "status": "pending",
       "branch": "arm64/upstream-brainles-preprocessing-20261012",
       "baseline_sha": "14f27158c619bd78ed11e0baa06c2d67039245fb",
       "candidate_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
@@ -4020,7 +4020,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Recheck official Zenodo asset availability at the daily queue review; only then consider one unchanged exact-source retry within original deadline/build budget. Continue other eligible recipes. Native compilation/runtime and upstream PR remain unproven.",
+      "next_action": "Priority recovered prerequisite: all exact HD-BET API and official atlas/SynthStrip file bytes now return206. When an investigation/build slot frees, resume the existing candidate/branch with one unchanged infrastructure retry within original03:53UTC deadline; retain start/attempts1, preserve old run in history, and do not create/restart a new investigation. If deadline expires first, record that verification-budget limit. No native application compilation/runtime or upstream PR is yet proven.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.13",
@@ -4054,6 +4054,160 @@
         "first_error": "builder.cache.DownloadError: hdbet_0_model https://zenodo.org/api/records/2540695/files/0.model/content HTTP504 after3 internal attempts",
         "local_cross_check": "The same record API and both atlas/SynthStrip record APIs timed out. The official record2540695 HTML loaded, but its published 0.model download also timed out; record15236131/16535633 pages timed out. No accessible equivalent official checkpoint route found.",
         "revisit_condition": "Official required Zenodo model and atlas downloads become accessible; retain original clock/attempts, use at most one unchanged infrastructure retry. No scientific capability or ARM build failure inferred."
+      },
+      "previous_infrastructure_blockers": [
+        {
+          "recorded_at": "2026-10-13T16:23:06.608668+00:00",
+          "stage": "declared checkpoint staging before Docker",
+          "first_error": "builder.cache.DownloadError: hdbet_0_model https://zenodo.org/api/records/2540695/files/0.model/content HTTP504 after3 internal attempts",
+          "local_cross_check": "The same record API and both atlas/SynthStrip record APIs timed out. The official record2540695 HTML loaded, but its published 0.model download also timed out; record15236131/16535633 pages timed out. No accessible equivalent official checkpoint route found.",
+          "revisit_condition": "Official required Zenodo model and atlas downloads become accessible; retain original clock/attempts, use at most one unchanged infrastructure retry. No scientific capability or ARM build failure inferred."
+        }
+      ],
+      "infrastructure_recovery_evidence": {
+        "exact_hd_bet_files": {
+          "checked_at": "2026-10-13T23:58:05.172892+00:00",
+          "new_evidence": "FLAMeS native38483705386 actually downloaded and used these same record2540695 model files via the official published record URLs, unlike the earlier BrainLes API504 staging failure. Probe each exact candidate API URL once; no new build yet.",
+          "files": [
+            {
+              "url": "https://zenodo.org/api/records/2540695/files/0.model/content",
+              "status": 206,
+              "content_range": "bytes 0-63/65443735",
+              "prefix_hex": "80028a0a6cfc9c46f9206aa850192e80024de9032e80027d710128551070726f"
+            },
+            {
+              "url": "https://zenodo.org/api/records/2540695/files/1.model/content",
+              "status": 206,
+              "content_range": "bytes 0-63/65443803",
+              "prefix_hex": "80028a0a6cfc9c46f9206aa850192e80024de9032e80027d710128551070726f"
+            },
+            {
+              "url": "https://zenodo.org/api/records/2540695/files/2.model/content",
+              "status": 206,
+              "content_range": "bytes 0-63/65443755",
+              "prefix_hex": "80028a0a6cfc9c46f9206aa850192e80024de9032e80027d710128551070726f"
+            },
+            {
+              "url": "https://zenodo.org/api/records/2540695/files/3.model/content",
+              "status": 206,
+              "content_range": "bytes 0-63/65443847",
+              "prefix_hex": "80028a0a6cfc9c46f9206aa850192e80024de9032e80027d710128551070726f"
+            },
+            {
+              "url": "https://zenodo.org/api/records/2540695/files/4.model/content",
+              "status": 206,
+              "content_range": "bytes 0-63/65443955",
+              "prefix_hex": "80028a0a6cfc9c46f9206aa850192e80024de9032e80027d710128551070726f"
+            }
+          ]
+        },
+        "official_additional_records": [
+          {
+            "record": "15236131",
+            "status": 200,
+            "title": "Atlases for brainles preprocessing package",
+            "files": [
+              {
+                "key": "brats_sri24_skullstripped.nii",
+                "size": 17856352,
+                "checksum": "md5:c10d0d2cd64eff18c83c7ca1540a8c0e",
+                "url": "https://zenodo.org/api/records/15927391/files/brats_sri24_skullstripped.nii/content"
+              },
+              {
+                "key": "brats_sri24.nii",
+                "size": 17856352,
+                "checksum": "md5:605c659c2976f055cf3a43a88a7ad6f3",
+                "url": "https://zenodo.org/api/records/15927391/files/brats_sri24.nii/content"
+              },
+              {
+                "key": "sri24.nii",
+                "size": 17856352,
+                "checksum": "md5:8816c082ede9ef38fbc5388a168052b1",
+                "url": "https://zenodo.org/api/records/15927391/files/sri24.nii/content"
+              },
+              {
+                "key": "brats_MNI152lin_T1_1mm.nii.gz",
+                "size": 3653661,
+                "checksum": "md5:f4099dfba7514885abc1ae0ca03dc05f",
+                "url": "https://zenodo.org/api/records/15927391/files/brats_MNI152lin_T1_1mm.nii.gz/content"
+              },
+              {
+                "key": "sri24_skullstripped.nii",
+                "size": 17856352,
+                "checksum": "md5:81dc54b37d4ed8deee24c9f20821f455",
+                "url": "https://zenodo.org/api/records/15927391/files/sri24_skullstripped.nii/content"
+              },
+              {
+                "key": "mni_icbm152_t1_tal_nlin_sym_09c.nii",
+                "size": 17060394,
+                "checksum": "md5:4ff11b31fa795e0921590525737745a2",
+                "url": "https://zenodo.org/api/records/15927391/files/mni_icbm152_t1_tal_nlin_sym_09c.nii/content"
+              }
+            ]
+          },
+          {
+            "record": "16535633",
+            "status": 200,
+            "title": "NiPreps SynthStrip model weights for BrainLes Preprocessing package",
+            "files": [
+              {
+                "key": "synthstrip_weights.zip",
+                "size": 28309496,
+                "checksum": "md5:5b72b44aabf1b1a6f499b29f900562d7",
+                "url": "https://zenodo.org/api/records/16535634/files/synthstrip_weights.zip/content"
+              }
+            ]
+          }
+        ],
+        "actual_additional_file_bytes": {
+          "checked_at": "2026-10-14T00:01:36.022842+00:00",
+          "files": [
+            {
+              "url": "https://zenodo.org/api/records/15927391/files/brats_sri24_skullstripped.nii/content",
+              "status": 206,
+              "content_range": "bytes 0-63/17856352",
+              "prefix_hex": "5c01000000000000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "url": "https://zenodo.org/api/records/15927391/files/brats_sri24.nii/content",
+              "status": 206,
+              "content_range": "bytes 0-63/17856352",
+              "prefix_hex": "5c01000000000000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "url": "https://zenodo.org/api/records/15927391/files/sri24.nii/content",
+              "status": 206,
+              "content_range": "bytes 0-63/17856352",
+              "prefix_hex": "5c01000000000000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "url": "https://zenodo.org/api/records/15927391/files/brats_MNI152lin_T1_1mm.nii.gz/content",
+              "status": 206,
+              "content_range": "bytes 0-63/3653661",
+              "prefix_hex": "1f8b080000000000000394bdf77b5b59922558b3b39fba2a5329ef4552f4de7b"
+            },
+            {
+              "url": "https://zenodo.org/api/records/15927391/files/sri24_skullstripped.nii/content",
+              "status": 206,
+              "content_range": "bytes 0-63/17856352",
+              "prefix_hex": "5c01000000000000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "url": "https://zenodo.org/api/records/15927391/files/mni_icbm152_t1_tal_nlin_sym_09c.nii/content",
+              "status": 206,
+              "content_range": "bytes 0-63/17060394",
+              "prefix_hex": "5c01000000000000000000000000000000000000000000000000000000000000"
+            },
+            {
+              "url": "https://zenodo.org/api/records/16535634/files/synthstrip_weights.zip/content",
+              "status": 206,
+              "content_range": "bytes 0-63/28309496",
+              "prefix_hex": "504b03041400000008001456fc5a0adb7bea44f7af017dc2d6010f001c007379"
+            }
+          ]
+        },
+        "whole_file_independent_evidence": "FLAMeS native38483705386 downloaded the same record2540695 five models and executed all five CNNs successfully.",
+        "retry_not_dispatched": true
       }
     },
     {
