@@ -16360,7 +16360,7 @@
       "port_files": [
         "recipes/gliomoda/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-gliomoda-20261012",
       "baseline_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
       "candidate_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
@@ -16466,11 +16466,107 @@
             "build_sif_fulltest_dive_manifest_gates": "success",
             "fulltest_log_summary_confirmed": true,
             "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "x86_64": {
+            "head_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+            "job_id": 116230101391,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38510749442/job/116230101391",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
           }
-        }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "gliomoda",
+          "container": "gliomoda",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "0.0.4",
+          "build_date": "20261014",
+          "docker_archive": "gliomoda_0.0.4_20261014.docker.tar",
+          "sif": "gliomoda_0.0.4_20261014.simg",
+          "candidate_tag": "nd-candidate-gliomoda:25477239ed36",
+          "launcher": "gliomoda",
+          "pr_number": 3606,
+          "head_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+          "tests": {
+            "total": 19,
+            "passed": 19,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 18,
+            "fulltest_passed": 18,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "package imports",
+              "reports the packaged version",
+              "runs outside HOME",
+              "torch imports and computes on CPU",
+              "model weights are bundled in the image",
+              "bundled weights are the declared version",
+              "weights are pinned, not fetched at run time",
+              "gliomoda CLI is on PATH and renders help",
+              "the CLI selects a device instead of assuming CUDA",
+              "version reports package and bundled weights",
+              "the bundled models can be listed",
+              "an unbundled modality combination fails with a usable message",
+              "a trailing singleton axis is rejected with a usable message",
+              "forcing cuda without a GPU fails before loading the model",
+              "the thread default reports where its number came from",
+              "the container does not export a python interpreter",
+              "Native CPU model dependency closure",
+              "Full trained four modality glioma MRI inference"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "812 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8953,
+            "wasted_bytes": 19021774,
+            "wasted_bytes_display": "19 MB",
+            "user_wasted_percent": 0.1811
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Review sole final x86 retry/current-source actual reports and latest release/quality gates; preserve already passed ARM job/report.7/7 authorized, no further container attempts.",
+      "merged_sha": "e4b168619a91115fab8b9aca9039cd3843797353",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.4",
@@ -17229,6 +17325,78 @@
             "user_wasted_percent": 0.3303
           },
           "scope": "Complete four-modality BraTS MRI/default CPU model and augmentation; physical grid, expected labels/nontrivial foreground, input hashes and all84 unchanged model files. Corrected single-layer image passes the unchanged Dive policy. No GPU inference, bitwise architecture parity or clinical-accuracy claim."
+        },
+        "x86_64": {
+          "source_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+          "run_id": 38510749442,
+          "actual_zero_exit_functional_commands": 18,
+          "full_mri_case_seconds": 452.92017102241516,
+          "full_mri_metrics": {
+            "foreground_voxels": 126237,
+            "input_sha256": {
+              "t1c": "4399faadcc45c8a4541313cdf88aced7d835ed59ac3078d950e0eac293d603f5",
+              "t1n": "e860924b936e301ddeba20409fbb59dde322475cb49328f1b46a9235c792e73e",
+              "t2f": "82aed8546af5e6d8d94fd91c56227abdcf6120130390d1556c4342a208980604",
+              "t2w": "4cd389cc57d12134a30a898c66532228126b9a7d0600ee578e82a32144528b51"
+            },
+            "label_counts": [
+              8801763,
+              18458,
+              85535,
+              22244
+            ],
+            "labels": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "mode": "t1c-t2f-t1n-t2w",
+            "seconds": 430.69,
+            "shape": [
+              240,
+              240,
+              155
+            ],
+            "unchanged_weight_files": 84,
+            "weights_version": "1.0.2"
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "812 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8953,
+            "wasted_bytes": 19021774,
+            "wasted_bytes_display": "19 MB",
+            "user_wasted_percent": 0.1811
+          },
+          "scope": "Complete four-modality BraTS MRI/default CPU model and augmentation; physical grid, expected labels/nontrivial foreground, input hashes and all84 unchanged model files. Corrected single-layer image passes the unchanged Dive policy. No GPU inference, bitwise architecture parity or clinical-accuracy claim."
         }
       },
       "pending_budget_question": {
@@ -17285,7 +17453,8 @@
           "build_and_test_timestamps_unchanged": true,
           "note": "GitHub assigns a new carried-result job ID in run_attempt2, but all build/fulltest timestamps remain Oct14. ARM was not rebuilt or retested; exactly one x86 retry is charged."
         }
-      }
+      },
+      "merged_at": "2026-10-15T07:32:18Z"
     },
     {
       "recipe": "glmsingle",
@@ -41942,9 +42111,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-15T06:42:42.851106+00:00",
-    "previous_sha": "335c827525e3be92c650c8aeea6134a7dcc41da5",
-    "new_sha": "2b33d14384fa1e1946b8d93ba3dd15b76cf0d530",
+    "checked_at": "2026-10-15T07:32:25.599794+00:00",
+    "previous_sha": "2b33d14384fa1e1946b8d93ba3dd15b76cf0d530",
+    "new_sha": "e4b168619a91115fab8b9aca9039cd3843797353",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },
