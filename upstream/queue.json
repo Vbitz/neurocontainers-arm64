@@ -10507,7 +10507,7 @@
       "status": "ready-to-retry",
       "branch": "arm64/upstream-deeplabcut-20261012",
       "baseline_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
-      "candidate_sha": "223e22f55f244fdd219ca771053c649f8e2004ce",
+      "candidate_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
       "started_at": "2026-10-14T08:17:00+00:00",
       "deadline": "2026-10-15T15:21:33+00:00",
       "attempts": 4,
@@ -10515,7 +10515,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "User approved seven total. Await one physical build slot, then native attempt5 at pushed223e22f5; require all104 cases including real Quit-dialog acceptance. Only after full native pass open own upstream PR for both architectures6and7. Deadline unchanged15:21:33UTC; no successful corrected-source runtime claimed yet.",
+      "next_action": "Authorized7total/4used; await physical slot then native attempt5 at reviewed real Quit-dialog/active receiver source. Require all104 cases, then own PR and both architecture jobs6and7 before renewed deadline. No timeout/test weakening.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.2",
@@ -10631,6 +10631,11 @@
             }
           ],
           "outcome": "Qt Core/Gui/Widgets/XCB DSO closure and actual window creation/show/size assertions succeeded. The fixture blocked on the application mandatory Quit confirmation; all other103 tests passed."
+        },
+        {
+          "source_sha": "223e22f55f244fdd219ca771053c649f8e2004ce",
+          "run_id": null,
+          "outcome": "Untested real Quit-dialog correction superseded after independent review: receiver had never started; restore streams in finally. No build attempt charged."
         }
       ],
       "native_failure": {
@@ -10702,7 +10707,7 @@
         "used_build_attempts_preserved": 3,
         "scope": "User approved bounded continuation for PeTu/DeepLabCut/TractSeg/GlioMODA/FetalSynthSeg. Renew12h elapsed; retain all prior attempts and source evidence. Seven total only for GlioMODA/FetalSynthSeg; other three remain6. Reuse passed native/ARM results."
       },
-      "untested_correction_sha": "223e22f55f244fdd219ca771053c649f8e2004ce",
+      "untested_correction_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
       "pending_budget_question": {
         "requested_at": "2026-10-15T03:45:28.784586+00:00",
         "requested_max_build_attempts": 7,
@@ -10734,7 +10739,14 @@
           "attempt": 4,
           "outcome": "103/104; GUI fixture blocked on real mandatory Quit confirmation; actual font/X11 closure and other103 cases passed."
         }
-      ]
+      ],
+      "gui_independent_review": {
+        "reviewed_source": "223e22f55f244fdd219ca771053c649f8e2004ce",
+        "candidate_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+        "reviewed_at": "2026-10-15T05:22:47.385761+00:00",
+        "finding": "QThread.wait returns true for never-started receiver. Start receiver as the official launcher does, assert running before close/stopped after wait; restore streams in finally. Real Yes-button interaction is sound.",
+        "runtime_verified": false
+      }
     },
     {
       "recipe": "dicompare",
