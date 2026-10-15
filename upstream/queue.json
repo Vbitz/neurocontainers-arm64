@@ -10504,10 +10504,10 @@
       "port_files": [
         "recipes/deeplabcut/build.yaml"
       ],
-      "status": "native-running",
+      "status": "blocked-verification-budget",
       "branch": "arm64/upstream-deeplabcut-20261012",
       "baseline_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
-      "candidate_sha": "71051f77a38a5d21cda94bbcc8a995110afe448b",
+      "candidate_sha": "223e22f55f244fdd219ca771053c649f8e2004ce",
       "started_at": "2026-10-14T08:17:00+00:00",
       "deadline": "2026-10-15T15:21:33+00:00",
       "attempts": 4,
@@ -10515,7 +10515,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Await separate DeepLabCut seven-total-build authorization:4used, corrected native1+both upstream2 would total7. Real GUI Yes-button fixture committed/AST/schema/both generations/spelling validated. Keep current renewed deadline and used counters; no dispatch until authorized.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.2",
@@ -10608,11 +10608,34 @@
           ],
           "outcome": "recipe-gui-runtime-package",
           "retry_hypothesis": "Install the official Qt Linux runtime requirements FreeType/fontconfig/fonts (Ubuntu24 libfreetype6/libfontconfig1/fonts-dejavu-core), preserving every GUI assertion. Inspect native GUI shared-library closure and declared Qt runtime dependencies before spending final available native retry; no library build/patch."
+        },
+        {
+          "source_sha": "71051f77a38a5d21cda94bbcc8a995110afe448b",
+          "run_id": 38676319709,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38676319709",
+          "counts": {
+            "total_tests": 104,
+            "passed": 103,
+            "failed": 1,
+            "skipped": 0
+          },
+          "failed_tests": [
+            {
+              "duration": 120.05196356773376,
+              "message": "Timeout after 120s",
+              "name": "Installed DeepLabCut GUI creates an offscreen project window",
+              "return_code": 0,
+              "status": "failed",
+              "stderr": "This plugin does not support propagateSizeHints()\n",
+              "stdout": ""
+            }
+          ],
+          "outcome": "Qt Core/Gui/Widgets/XCB DSO closure and actual window creation/show/size assertions succeeded. The fixture blocked on the application mandatory Quit confirmation; all other103 tests passed."
         }
       ],
       "native_failure": {
-        "source_sha": "7cb82a155f1e154ef35358766b6ac3f7053398ce",
-        "run_id": 38543183298,
+        "source_sha": "71051f77a38a5d21cda94bbcc8a995110afe448b",
+        "run_id": 38676319709,
         "counts": {
           "total_tests": 104,
           "passed": 103,
@@ -10620,16 +10643,17 @@
           "skipped": 0
         },
         "first_failed_test": {
-          "duration": 0.2863025665283203,
-          "message": "Expected exit code 0, got 1",
+          "duration": 120.05196356773376,
+          "message": "Timeout after 120s",
           "name": "Installed DeepLabCut GUI creates an offscreen project window",
-          "return_code": 1,
+          "return_code": 0,
           "status": "failed",
-          "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 7, in <module>\nImportError: libfreetype.so.6: cannot open shared object file: No such file or directory\n",
+          "stderr": "This plugin does not support propagateSizeHints()\n",
           "stdout": ""
         },
-        "category": "recipe-gui-runtime-package",
-        "planned_fix": "Install the official Qt Linux runtime requirements FreeType/fontconfig/fonts (Ubuntu24 libfreetype6/libfontconfig1/fonts-dejavu-core), preserving every GUI assertion. Inspect native GUI shared-library closure and declared Qt runtime dependencies before spending final available native retry; no library build/patch."
+        "category": "test-interactive-quit-confirmation",
+        "reason": "MainWindow.closeEvent always opens modal QMessageBox.question and waits for explicit Yes. Fixture called close without clicking the real confirmation button; this is fixture interaction failure, not unresolved Qt runtime/architecture inability.",
+        "official_source": "https://github.com/DeepLabCut/DeepLabCut/blob/v3.0.2/deeplabcut/gui/window.py#L1369"
       },
       "native_actual_scientific_review": {
         "source_sha": "7cb82a155f1e154ef35358766b6ac3f7053398ce",
@@ -10677,6 +10701,16 @@
         "renewed_deadline": "2026-10-15T15:21:33+00:00",
         "used_build_attempts_preserved": 3,
         "scope": "User approved bounded continuation for PeTu/DeepLabCut/TractSeg/GlioMODA/FetalSynthSeg. Renew12h elapsed; retain all prior attempts and source evidence. Seven total only for GlioMODA/FetalSynthSeg; other three remain6. Reuse passed native/ARM results."
+      },
+      "untested_correction_sha": "223e22f55f244fdd219ca771053c649f8e2004ce",
+      "pending_budget_question": {
+        "requested_at": "2026-10-15T03:45:28.784586+00:00",
+        "requested_max_build_attempts": 7,
+        "used_attempts": 4,
+        "scope": "DeepLabCut only; one corrected native+two upstream architectures, renewed deadline unchanged",
+        "answered": false,
+        "reviewable_correction_sha": "223e22f55f244fdd219ca771053c649f8e2004ce",
+        "reason": "All103 other checks pass; actual GUI fixture must click real mandatory Quit confirmation. Real Qt Yes-button correction committed/validated; no timeout/gate weakened."
       }
     },
     {
@@ -29193,7 +29227,10 @@
       "attempts": 4,
       "run_id": 38542571541,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3637",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "initial_run_id": 38676101699,
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38676101699"
+      },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
@@ -37698,18 +37735,18 @@
         "recipes/tractseg/build.yaml",
         "recipes/tractseg/fulltest.yaml"
       ],
-      "status": "ready-to-retry",
+      "status": "native-running",
       "branch": "arm64/upstream-tractseg-20261012",
       "baseline_sha": "98c7b84d8018d7611d847fc43bb78b5056c87970",
       "candidate_sha": "1a3be5b32b11d3fe2dfa66d52136bdc149ef47bb",
       "started_at": "2026-10-14T02:37:23.297913+00:00",
       "deadline": "2026-10-15T15:21:33+00:00",
-      "attempts": 2,
-      "run_id": null,
+      "attempts": 3,
+      "run_id": 38677501278,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Exact corrected-source native proof, then own individual upstream PR and both architecture jobs/all gates within authorized remaining budget. Reuse no earlier different-source green result.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "2.9.0",
@@ -37733,9 +37770,9 @@
         "https://pypi.org/pypi/torch/2.4.1/json",
         "https://pypi.org/pypi/numpy/1.26.4/json"
       ],
-      "arm64_attempts": 2,
+      "arm64_attempts": 3,
       "x86_64_attempts": 0,
-      "run_url": null,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38677501278",
       "concurrent_upstream_version_update": {
         "number": 3617,
         "url": "https://github.com/neurodesk/neurocontainers/pull/3617",
