@@ -12226,9 +12226,12 @@
       "attempts": 7,
       "run_id": 38462896594,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3596",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "initial_run_id": 38688123032,
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38688123032"
+      },
       "merged_sha": null,
-      "next_action": "Verify both exact corrected-source upstream reports and all required gates for existing PR3596, then normal merge.7/7 authorized; no further attempts.",
+      "next_action": "Review both exact f2 upstream architecture reports/all gates at run38688123032;7/7 reserved, no native repeat. Hold merge until focused shared updater correction resolves the staged commit/archive URL/checksum concern.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -12507,7 +12510,13 @@
         "resolved": false,
         "comment_url": "https://github.com/neurodesk/neurocontainers/pull/3596#issuecomment-6159658239",
         "reason": "HTTP digest provider does not render source_commit URL from newly staged github_commit observation. Need focused shared updater fix; current pinned nativef2 input/test evidence unaffected.",
-        "candidate_sha": "f2defa075813417c1624535ceed618fd0927ffdc"
+        "candidate_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
+        "investigation": {
+          "branch": "arm64/fetal-updater-archive-context-20261015",
+          "baseline_sha": "06175b7aae993aab77a58f1445b7ad42e87a5392",
+          "checkout": "/tmp/neurocontainers-updater-20261015",
+          "scope": "Update planning and focused provider tests only; preserve all installed inputs and runtime generation. User explicitly allowed concurrent subagent implementation. Instruction files excluded from isolated checkout and untouched."
+        }
       }
     },
     {
