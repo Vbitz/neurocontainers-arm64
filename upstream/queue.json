@@ -1689,53 +1689,69 @@
       "release_metadata_audit": {
         "promotion_run_id": 38532244949,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38532244949",
-        "status": "pending-promotion",
+        "status": "verified-published-metadata",
         "metadata": [
-          {
-            "architecture": "aarch64",
-            "path": "releases/aidamri_arm64/3.0.0.json",
-            "expected_build_date": "20261014",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
-          },
           {
             "architecture": "x86_64",
             "path": "releases/aidamri/3.0.0.json",
             "expected_build_date": "20261014",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
+            "committed_build_dates": [
+              "20261014"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+            "metadata_commit_sha": "a48ed1924601c215de34ba14930204632e77b381",
+            "sif": "aidamri_3.0.0_20261014.simg",
+            "sif_sha256": "cd355e8610868727154c08e658304386b0af9d0c918f1d5ef5e04a379f0c6ac1",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/aidamri_3.0.0_20261014.simg",
+            "public_sif_head_status": 200
+          },
+          {
+            "architecture": "aarch64",
+            "path": "releases/aidamri_arm64/3.0.0.json",
+            "expected_build_date": "20261014",
+            "committed_build_dates": [
+              "20261014"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
+            "metadata_commit_sha": "a48ed1924601c215de34ba14930204632e77b381",
+            "sif": "aidamri_arm64_3.0.0_20261014.simg",
+            "sif_sha256": "5be74f466d9515a8eddcdf057fc1fc4b3ca07d1f4a2fad884c6ce444ab02e427",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/aidamri_arm64_3.0.0_20261014.simg",
+            "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-14T08:14:03.128664+00:00",
-        "workflow_status": "queued",
-        "workflow_conclusion": null,
+        "checked_at": "2026-10-15T03:20:57.794857+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
         "publish_jobs": [
           {
             "name": "publish (candidate-aidamri_arm64-5da4b94239d2fd521d0e8c5f803a200e50c7416f)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "success",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-gdrwv-runner-rljdd",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Download candidate bundle without executing it"
-            ]
+            "active_steps": []
           },
           {
             "name": "publish (candidate-aidamri-5da4b94239d2fd521d0e8c5f803a200e50c7416f)",
-            "status": "queued",
-            "conclusion": null,
-            "runner_name": "",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-gdrwv-runner-w9nc4",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T08:14:04.035488+00:00"
+        "metadata_checked_at": "2026-10-15T03:21:11.046633+00:00"
       }
     },
     {
@@ -7565,7 +7581,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T08:14:05.817708+00:00",
+        "checked_at": "2026-10-15T03:21:15.423492+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -7590,7 +7606,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T08:14:06.608760+00:00",
+        "metadata_checked_at": "2026-10-15T03:21:16.355073+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -10491,11 +10507,11 @@
       "status": "native-running",
       "branch": "arm64/upstream-deeplabcut-20261012",
       "baseline_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
-      "candidate_sha": "7cb82a155f1e154ef35358766b6ac3f7053398ce",
+      "candidate_sha": "71051f77a38a5d21cda94bbcc8a995110afe448b",
       "started_at": "2026-10-14T08:17:00+00:00",
-      "deadline": "2026-10-14T20:17:00+00:00",
-      "attempts": 3,
-      "run_id": 38543183298,
+      "deadline": "2026-10-15T15:21:33+00:00",
+      "attempts": 4,
+      "run_id": 38676319709,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
@@ -10526,9 +10542,9 @@
         "https://download.pytorch.org/whl/cpu/torchvision/",
         "https://huggingface.co/mwmathis/DeepLabCutModelZoo-SuperAnimal-Quadruped/tree/1ad30fb80cd666f1e5c91578d1cf63bccfa84f80"
       ],
-      "arm64_attempts": 3,
+      "arm64_attempts": 4,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38543183298",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38676319709",
       "candidate_history": [
         {
           "source_sha": "095590a65636bb700df290143c04dcab6a65e372",
@@ -10568,8 +10584,100 @@
           "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38542694765",
           "outcome": "Cancelled known-invalid corrected test during setup after local AST caught unexpected-indent line56. Not a runtime/compiler/architecture failure; attempt2 remains charged.",
           "first_error": "Local AST: unexpected indent at line56. Metadata block escaped its temporary-directory scope."
+        },
+        {
+          "source_sha": "7cb82a155f1e154ef35358766b6ac3f7053398ce",
+          "run_id": 38543183298,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38543183298",
+          "counts": {
+            "total_tests": 104,
+            "passed": 103,
+            "failed": 1,
+            "skipped": 0
+          },
+          "failed_tests": [
+            {
+              "duration": 0.2863025665283203,
+              "message": "Expected exit code 0, got 1",
+              "name": "Installed DeepLabCut GUI creates an offscreen project window",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 7, in <module>\nImportError: libfreetype.so.6: cannot open shared object file: No such file or directory\n",
+              "stdout": ""
+            }
+          ],
+          "outcome": "recipe-gui-runtime-package",
+          "retry_hypothesis": "Install the official Qt Linux runtime requirements FreeType/fontconfig/fonts (Ubuntu24 libfreetype6/libfontconfig1/fonts-dejavu-core), preserving every GUI assertion. Inspect native GUI shared-library closure and declared Qt runtime dependencies before spending final available native retry; no library build/patch."
         }
-      ]
+      ],
+      "native_failure": {
+        "source_sha": "7cb82a155f1e154ef35358766b6ac3f7053398ce",
+        "run_id": 38543183298,
+        "counts": {
+          "total_tests": 104,
+          "passed": 103,
+          "failed": 1,
+          "skipped": 0
+        },
+        "first_failed_test": {
+          "duration": 0.2863025665283203,
+          "message": "Expected exit code 0, got 1",
+          "name": "Installed DeepLabCut GUI creates an offscreen project window",
+          "return_code": 1,
+          "status": "failed",
+          "stderr": "Traceback (most recent call last):\n  File \"<stdin>\", line 7, in <module>\nImportError: libfreetype.so.6: cannot open shared object file: No such file or directory\n",
+          "stdout": ""
+        },
+        "category": "recipe-gui-runtime-package",
+        "planned_fix": "Install the official Qt Linux runtime requirements FreeType/fontconfig/fonts (Ubuntu24 libfreetype6/libfontconfig1/fonts-dejavu-core), preserving every GUI assertion. Inspect native GUI shared-library closure and declared Qt runtime dependencies before spending final available native retry; no library build/patch."
+      },
+      "native_actual_scientific_review": {
+        "source_sha": "7cb82a155f1e154ef35358766b6ac3f7053398ce",
+        "run_id": 38543183298,
+        "trained_pose_case_seconds": 21.434016227722168,
+        "metrics": {
+          "bodyparts": 39,
+          "confident_in_frame_points": [
+            38,
+            38,
+            38
+          ],
+          "frames": 3,
+          "image_sha256": "828986ba0cdd909e3f6029d357938efba67d236350f724224b2e45cf0af0841f",
+          "likelihood_range": [
+            0.06256510317325592,
+            1.0
+          ],
+          "model_revision": "1ad30fb80cd666f1e5c91578d1cf63bccfa84f80",
+          "scope": "Three identical real-animal frames; coordinate runtime and HDF/annotated-video contracts, no biological accuracy or temporal-tracking claim",
+          "shape": [
+            500,
+            500
+          ],
+          "unchanged_checkpoints": {
+            "superanimal_quadruped_fasterrcnn_mobilenet_v3_large_fpn.pt": "aac3d9dcd9f1082bd3dd17a277f12b588cdd242859bf0a45b2cf7c4ca1229df5",
+            "superanimal_quadruped_hrnet_w32.pt": "a42e58d56bb32f8b4f4fe17ea9ed9511cebc7b7949ac56b97fa6f3a49587c31e"
+          }
+        },
+        "scope": "Both actual native CPU frameworks/NMS/gradients/package closure, trained HRNet+MobileNet detector on3lossless real-dog frames, all39 bodypart names/HDF/annotated-video/hash contracts passed. GUI remains failed; no biological accuracy/temporal tracking/training/GPU claim."
+      },
+      "elapsed_budget_history": [
+        {
+          "started_at": "2026-10-14T08:17:00+00:00",
+          "deadline": "2026-10-14T20:17:00+00:00",
+          "attempts": 3,
+          "outcome": "Expired before resumed review; no unapproved recipe edits or dispatches."
+        }
+      ],
+      "elapsed_budget_authorization": {
+        "approved": true,
+        "approved_at": "2026-10-15T03:21:33+00:00",
+        "recipe": "deeplabcut",
+        "previous_deadline": "2026-10-14T20:17:00+00:00",
+        "renewed_deadline": "2026-10-15T15:21:33+00:00",
+        "used_build_attempts_preserved": 3,
+        "scope": "User approved bounded continuation for PeTu/DeepLabCut/TractSeg/GlioMODA/FetalSynthSeg. Renew12h elapsed; retain all prior attempts and source evidence. Seven total only for GlioMODA/FetalSynthSeg; other three remain6. Reuse passed native/ARM results."
+      }
     },
     {
       "recipe": "dicompare",
@@ -12040,18 +12148,18 @@
         "recipes/fetalsynthseg/build.yaml",
         "recipes/fetalsynthseg/fulltest.yaml"
       ],
-      "status": "blocked-verification-budget",
+      "status": "waiting-capacity",
       "branch": "arm64/fetalsynthseg-python3-20261013",
       "baseline_sha": "f3c726bd920e9c913fe96b2de28845232ffa76d0",
       "candidate_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
       "started_at": "2026-10-13T19:12:00+00:00",
-      "deadline": "2026-10-14T07:12:00+00:00",
+      "deadline": "2026-10-15T15:21:33+00:00",
       "attempts": 5,
       "run_id": 38462896594,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3596",
       "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Await explicit FetalSynthSeg-only7-total exception: native corrected source5/5 is proven,5 builds used, two upstream architecture builds require7. Preserve original deadline and existing PR3596; do not publish its correction or open a duplicate PR before approval.",
+      "next_action": "Authorized7total and renewed elapsed window; await one investigation and two build slots, then mark native-verified and reuse corrected native5/5 source in existingPR3596. No repeat native build.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -12288,7 +12396,36 @@
           "limitations": "CPU inference, I/O and model consistency verified; no GPU or clinical accuracy claim."
         }
       ],
-      "budget_hold_reason": "Five actual builds used; one remaining under default6, but both current-source upstream architecture builds are required. Explicit seven-build exception requested and unanswered."
+      "budget_hold_reason": "Five actual builds used; one remaining under default6, but both current-source upstream architecture builds are required. Explicit seven-build exception requested and unanswered.",
+      "elapsed_budget_expired_at_resume": "2026-10-15T03:19:32.164444+00:00",
+      "elapsed_budget_history": [
+        {
+          "started_at": "2026-10-13T19:12:00+00:00",
+          "deadline": "2026-10-14T07:12:00+00:00",
+          "attempts": 5,
+          "outcome": "Expired before resumed review; no unapproved recipe edits or dispatches."
+        }
+      ],
+      "elapsed_budget_authorization": {
+        "approved": true,
+        "approved_at": "2026-10-15T03:21:33+00:00",
+        "recipe": "fetalsynthseg",
+        "previous_deadline": "2026-10-14T07:12:00+00:00",
+        "renewed_deadline": "2026-10-15T15:21:33+00:00",
+        "used_build_attempts_preserved": 5,
+        "scope": "User approved bounded continuation for PeTu/DeepLabCut/TractSeg/GlioMODA/FetalSynthSeg. Renew12h elapsed; retain all prior attempts and source evidence. Seven total only for GlioMODA/FetalSynthSeg; other three remain6. Reuse passed native/ARM results."
+      },
+      "max_build_attempts": 7,
+      "build_budget_authorization": {
+        "approved": true,
+        "approved_at": "2026-10-15T03:21:33+00:00",
+        "recipe": "fetalsynthseg",
+        "previous_deadline": "2026-10-14T07:12:00+00:00",
+        "renewed_deadline": "2026-10-15T15:21:33+00:00",
+        "used_build_attempts_preserved": 5,
+        "scope": "User approved bounded continuation for PeTu/DeepLabCut/TractSeg/GlioMODA/FetalSynthSeg. Renew12h elapsed; retain all prior attempts and source evidence. Seven total only for GlioMODA/FetalSynthSeg; other three remain6. Reuse passed native/ARM results.",
+        "max_build_attempts": 7
+      }
     },
     {
       "recipe": "fitlins",
@@ -15233,13 +15370,13 @@
       "port_files": [
         "recipes/gliomoda/build.yaml"
       ],
-      "status": "blocked-verification-budget",
+      "status": "upstream-running",
       "branch": "arm64/upstream-gliomoda-20261012",
       "baseline_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
       "candidate_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
       "started_at": "2026-10-13T22:41:06.165534+00:00",
-      "deadline": "2026-10-14T10:41:06.165534+00:00",
-      "attempts": 6,
+      "deadline": "2026-10-15T15:21:33+00:00",
+      "attempts": 7,
       "run_id": 38501634115,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3606",
       "upstream_ci": {
@@ -15343,7 +15480,7 @@
         }
       },
       "merged_sha": null,
-      "next_action": "Await explicit GlioMODA-specific seventh-build authorization for one unchanged x86-only retry of failed model download. Corrected exact-source ARM19/19 and Dive verified; never rerun passed ARM. Original deadline10:41UTC remains. No merge until current x86/all gates pass.",
+      "next_action": "Review sole final x86 retry/current-source actual reports and latest release/quality gates; preserve already passed ARM job/report.7/7 authorized, no further container attempts.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.4",
@@ -15355,7 +15492,7 @@
         "test_count": 16
       },
       "arm64_attempts": 4,
-      "x86_64_attempts": 2,
+      "x86_64_attempts": 3,
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
       "change_summary": "Enable GlioMODA0.0.4 ARM64 using official PyTorch2.6.0 CPU wheels with supplemental PyPI build dependencies, preserving the existing x86 CUDA path, nnU-Net2.5.2 and every bundled1.0.2 model. Independently track main/ARM Torch versions. Retain all16 existing tests and add actual CPU dependency closure plus default trained four-modality inference on all complete official240x240x155/1mm tutorial MRI images. Assert valid nonempty BraTS labels, original physical grid, unchanged inputs and all bundled model files. No model, image resizing, prediction parameters, source algorithm or GPU/clinical accuracy claim.\n\nObserved native default four-modality inference completed in49minutes with two CPU threads, returning all three glioma labels(126237 foreground voxels), the full240x240x155 grid and unchanged four MRI/84 model-file hashes. This verifies this CPU operation, not clinical accuracy, GPU or every alternative model.",
@@ -16109,7 +16246,55 @@
         "requested_max_build_attempts": 7,
         "scope": "GlioMODA only, one unchanged x86 architecture job; passed corrected ARM must not rerun",
         "reason": "Six builds used; current x86 failed declared Zenodo archive download before Docker, corrected ARM19/19/Dive passed.",
-        "answered": false
+        "answered": true,
+        "answer": "Approved bounded continuation, including renewed12h and seven total for GlioMODA only",
+        "answered_at": "2026-10-15T03:21:33+00:00"
+      },
+      "elapsed_budget_expired_at_resume": "2026-10-15T03:19:32.164444+00:00",
+      "elapsed_budget_history": [
+        {
+          "started_at": "2026-10-13T22:41:06.165534+00:00",
+          "deadline": "2026-10-14T10:41:06.165534+00:00",
+          "attempts": 6,
+          "outcome": "Expired before resumed review; no unapproved recipe edits or dispatches."
+        }
+      ],
+      "elapsed_budget_authorization": {
+        "approved": true,
+        "approved_at": "2026-10-15T03:21:33+00:00",
+        "recipe": "gliomoda",
+        "previous_deadline": "2026-10-14T10:41:06.165534+00:00",
+        "renewed_deadline": "2026-10-15T15:21:33+00:00",
+        "used_build_attempts_preserved": 6,
+        "scope": "User approved bounded continuation for PeTu/DeepLabCut/TractSeg/GlioMODA/FetalSynthSeg. Renew12h elapsed; retain all prior attempts and source evidence. Seven total only for GlioMODA/FetalSynthSeg; other three remain6. Reuse passed native/ARM results."
+      },
+      "max_build_attempts": 7,
+      "build_budget_authorization": {
+        "approved": true,
+        "approved_at": "2026-10-15T03:21:33+00:00",
+        "recipe": "gliomoda",
+        "previous_deadline": "2026-10-14T10:41:06.165534+00:00",
+        "renewed_deadline": "2026-10-15T15:21:33+00:00",
+        "used_build_attempts_preserved": 6,
+        "scope": "User approved bounded continuation for PeTu/DeepLabCut/TractSeg/GlioMODA/FetalSynthSeg. Renew12h elapsed; retain all prior attempts and source evidence. Seven total only for GlioMODA/FetalSynthSeg; other three remain6. Reuse passed native/ARM results.",
+        "max_build_attempts": 7
+      },
+      "unchanged_infrastructure_retry_used": true,
+      "upstream_single_job_retry": {
+        "run_id": 38510749442,
+        "previous_job_id": 115678525352,
+        "architecture": "x86_64",
+        "source_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+        "passed_arm_job_id": 115678525462,
+        "requested_at": "2026-10-15T03:25:00.293716+00:00",
+        "carried_arm_result": {
+          "original_job_id": 115678525462,
+          "github_carried_job_id": 116230126431,
+          "original_started_at": "2026-10-14T04:19:26Z",
+          "original_completed_at": "2026-10-14T07:16:15Z",
+          "build_and_test_timestamps_unchanged": true,
+          "note": "GitHub assigns a new carried-result job ID in run_attempt2, but all build/fulltest timestamps remain Oct14. ARM was not rebuilt or retested; exactly one x86 retry is charged."
+        }
       }
     },
     {
@@ -22161,7 +22346,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T08:14:21.563903+00:00",
+        "checked_at": "2026-10-15T03:21:17.448007+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -22177,7 +22362,7 @@
           }
         ],
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
-        "metadata_checked_at": "2026-10-14T08:14:22.381215+00:00",
+        "metadata_checked_at": "2026-10-15T03:21:18.239786+00:00",
         "resolution_review": {
           "checked_at": "2026-10-14T06:22:54.898590+00:00",
           "actual_resolver_notice": "No merged PR is associated with 9df30cc185fa2af32ee99a364492954bf2798a61; nothing to promote",
@@ -22505,7 +22690,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T08:14:23.556147+00:00",
+        "checked_at": "2026-10-15T03:21:19.416310+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -22520,7 +22705,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T08:14:24.383871+00:00",
+        "metadata_checked_at": "2026-10-15T03:21:20.197602+00:00",
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
         "resolution_evidence": {
           "automatic_run_id": 38448486794,
@@ -23586,7 +23771,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-14T08:14:26.090563+00:00",
+        "checked_at": "2026-10-15T03:21:21.811245+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -23611,7 +23796,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T08:14:26.929790+00:00",
+        "metadata_checked_at": "2026-10-15T03:21:22.673868+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -25571,7 +25756,61 @@
           "scope": "Real offline64KiB annex retrieval, actual new local native SIF build/execution, private user-namespace FUSE mount of signed Neurodesk CVMFS catalog and exact named Lmod module access. Nested SIF uses stock sandbox conversion fallback because nested squashfuse/fuse2fs/gocryptfs are absent; encrypted/ext3 operation not verified."
         }
       },
-      "merged_at": "2026-10-14T08:15:59Z"
+      "merged_at": "2026-10-14T08:15:59Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38533896819,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38533896819",
+        "status": "promotion-cancelled-unpublished",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/neurocommand_arm64/1.0.0.json",
+            "expected_build_date": "20261014",
+            "exists": true,
+            "committed_build_dates": [
+              "20261014"
+            ],
+            "current_candidate_date_committed": true
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/neurocommand/1.0.0.json",
+            "expected_build_date": "20261014",
+            "exists": true,
+            "committed_build_dates": [
+              "20261014"
+            ],
+            "current_candidate_date_committed": true
+          }
+        ],
+        "checked_at": "2026-10-15T03:21:28.060991+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "cancelled",
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-neurocommand-f7d9674296443f4fdd4b6e53577b262724f99d1b)",
+            "status": "completed",
+            "conclusion": "cancelled",
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-neurocommand_arm64-f7d9674296443f4fdd4b6e53577b262724f99d1b)",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-gdrwv-runner-k68gc",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "note": "Original automatic publication was cancelled. Existing metadata alone does not prove this run published; audit any independently completed recovery separately.",
+        "metadata_checked_at": "2026-10-15T03:21:28.912288+00:00"
+      }
     },
     {
       "recipe": "nftsim",
@@ -27312,56 +27551,136 @@
       },
       "merged_at": "2026-10-13T22:34:59Z",
       "release_metadata_audit": {
-        "promotion_run_id": 38478753314,
-        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38478753314",
-        "status": "promotion-failed",
+        "promotion_run_id": 38601113972,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38601113972",
+        "status": "verified-published-metadata",
         "metadata": [
-          {
-            "architecture": "aarch64",
-            "path": "releases/openadscpu_arm64/1.0.0.json",
-            "expected_build_date": "20261014",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
-          },
           {
             "architecture": "x86_64",
             "path": "releases/openadscpu/1.0.0.json",
             "expected_build_date": "20261014",
-            "exists": true,
             "committed_build_dates": [
-              "20260518"
+              "20261014"
             ],
-            "current_candidate_date_committed": false
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+            "metadata_commit_sha": "e40f2930298776bbdb888e6016b8b14efc5dee68",
+            "sif": "openadscpu_1.0.0_20261014.simg",
+            "sif_sha256": "a71ca965518e666a953f0231856462ddf86d870d3f4d3a8e17e35748022f7433",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/openadscpu_1.0.0_20261014.simg",
+            "public_sif_head_status": 200
+          },
+          {
+            "architecture": "aarch64",
+            "path": "releases/openadscpu_arm64/1.0.0.json",
+            "expected_build_date": "20261014",
+            "committed_build_dates": [
+              "20261014"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+            "metadata_commit_sha": "e40f2930298776bbdb888e6016b8b14efc5dee68",
+            "sif": "openadscpu_arm64_1.0.0_20261014.simg",
+            "sif_sha256": "54b6e7e13da49dc08f8ed80f7e9f0136260590c58372a89878582b4f569c8a79",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/openadscpu_arm64_1.0.0_20261014.simg",
+            "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-14T08:14:28.245641+00:00",
+        "checked_at": "2026-10-15T03:21:30.409438+00:00",
         "workflow_status": "completed",
-        "workflow_conclusion": "failure",
+        "workflow_conclusion": "success",
         "publish_jobs": [
-          {
-            "name": "publish (candidate-openadscpu-10f4ed4f27db9bff6b37802241fca4ab61bec3fa)",
-            "status": "completed",
-            "conclusion": "failure",
-            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-gdrwv-runner-zpc2p",
-            "labels": [
-              "neurodesk-syd-arcrunner-neurocontainers"
-            ],
-            "active_steps": []
-          },
           {
             "name": "publish (candidate-openadscpu_arm64-10f4ed4f27db9bff6b37802241fca4ab61bec3fa)",
             "status": "completed",
             "conclusion": "success",
-            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-gdrwv-runner-pzm9j",
+            "runner_name": "blacksmith-8vcpu-ubuntu-2404-z7i2c5fftes6duv7",
             "labels": [
-              "neurodesk-syd-arcrunner-neurocontainers"
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-openadscpu-10f4ed4f27db9bff6b37802241fca4ab61bec3fa)",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "blacksmith-8vcpu-ubuntu-2404-esb4eigzz2m3onic",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
             ],
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T08:14:29.319288+00:00"
-      }
+        "metadata_checked_at": "2026-10-15T03:21:38.100174+00:00",
+        "note": "Independently completed upstream recovery discovered read-only. Exact candidate must match both trusted manifests/previews; this agent dispatched no manual promotion.",
+        "external_recovery": {
+          "run_id": 38601113972,
+          "event": "workflow_dispatch",
+          "workflow_head_sha": "c97effa39037ac215947f9008c8fbb9e4b44a60e",
+          "candidate_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+          "pr_number": 3602,
+          "both_publishers_and_finalize_success": true,
+          "actor": "stebo85",
+          "triggering_actor": "stebo85"
+        }
+      },
+      "promotion_history": [
+        {
+          "promotion_run_id": 38478753314,
+          "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38478753314",
+          "status": "promotion-failed",
+          "metadata": [
+            {
+              "architecture": "aarch64",
+              "path": "releases/openadscpu_arm64/1.0.0.json",
+              "expected_build_date": "20261014",
+              "exists": false,
+              "committed_build_dates": [],
+              "current_candidate_date_committed": false
+            },
+            {
+              "architecture": "x86_64",
+              "path": "releases/openadscpu/1.0.0.json",
+              "expected_build_date": "20261014",
+              "exists": true,
+              "committed_build_dates": [
+                "20260518"
+              ],
+              "current_candidate_date_committed": false
+            }
+          ],
+          "checked_at": "2026-10-14T08:14:28.245641+00:00",
+          "workflow_status": "completed",
+          "workflow_conclusion": "failure",
+          "publish_jobs": [
+            {
+              "name": "publish (candidate-openadscpu-10f4ed4f27db9bff6b37802241fca4ab61bec3fa)",
+              "status": "completed",
+              "conclusion": "failure",
+              "runner_name": "neurodesk-syd-arcrunner-neurocontainers-gdrwv-runner-zpc2p",
+              "labels": [
+                "neurodesk-syd-arcrunner-neurocontainers"
+              ],
+              "active_steps": []
+            },
+            {
+              "name": "publish (candidate-openadscpu_arm64-10f4ed4f27db9bff6b37802241fca4ab61bec3fa)",
+              "status": "completed",
+              "conclusion": "success",
+              "runner_name": "neurodesk-syd-arcrunner-neurocontainers-gdrwv-runner-pzm9j",
+              "labels": [
+                "neurodesk-syd-arcrunner-neurocontainers"
+              ],
+              "active_steps": []
+            }
+          ],
+          "metadata_checked_at": "2026-10-14T08:14:29.319288+00:00"
+        }
+      ]
     },
     {
       "recipe": "openreconexample",
@@ -27763,7 +28082,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-14T08:14:30.780278+00:00",
+        "checked_at": "2026-10-15T03:21:39.523750+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -27778,7 +28097,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T08:14:31.623601+00:00",
+        "metadata_checked_at": "2026-10-15T03:21:40.312486+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -28201,36 +28520,52 @@
       "release_metadata_audit": {
         "promotion_run_id": 38461903935,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38461903935",
-        "status": "promotion-failed",
+        "status": "verified-published-metadata",
         "metadata": [
-          {
-            "architecture": "aarch64",
-            "path": "releases/pals_arm64/2.0.1.json",
-            "expected_build_date": "20261014",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
-          },
           {
             "architecture": "x86_64",
             "path": "releases/pals/2.0.1.json",
             "expected_build_date": "20261014",
-            "exists": true,
             "committed_build_dates": [
-              "20260518"
+              "20261014"
             ],
-            "current_candidate_date_committed": false
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "b2c74585de5d550a5dbd1c80cbfb91e943034d02",
+            "metadata_commit_sha": "85e3243b2705d3a5b9a28adffc314e8fecf48893",
+            "sif": "pals_2.0.1_20261014.simg",
+            "sif_sha256": "7990219f27795f08d30d9b85f55fd76a1e19ecfd98e8e13787e8663ae19e25c6",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/pals_2.0.1_20261014.simg",
+            "public_sif_head_status": 200
+          },
+          {
+            "architecture": "aarch64",
+            "path": "releases/pals_arm64/2.0.1.json",
+            "expected_build_date": "20261014",
+            "committed_build_dates": [
+              "20261014"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "b2c74585de5d550a5dbd1c80cbfb91e943034d02",
+            "metadata_commit_sha": "85e3243b2705d3a5b9a28adffc314e8fecf48893",
+            "sif": "pals_arm64_2.0.1_20261014.simg",
+            "sif_sha256": "11a073a44a05b97bb172575fcd9fc6dca577e3518d027f3f04f5b3c0f7f735aa",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/pals_arm64_2.0.1_20261014.simg",
+            "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-14T08:14:33.134909+00:00",
+        "checked_at": "2026-10-15T03:21:42.486487+00:00",
         "workflow_status": "completed",
-        "workflow_conclusion": "failure",
+        "workflow_conclusion": "success",
         "publish_jobs": [
           {
             "name": "publish (candidate-pals-b2c74585de5d550a5dbd1c80cbfb91e943034d02)",
             "status": "completed",
-            "conclusion": "failure",
-            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-gdrwv-runner-qx6lq",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-gdrwv-runner-d8fdg",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
@@ -28247,7 +28582,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-14T08:14:33.978442+00:00"
+        "metadata_checked_at": "2026-10-15T03:21:52.528302+00:00"
       }
     },
     {
@@ -28849,18 +29184,18 @@
       "port_files": [
         "recipes/petu/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-petu-20261012",
       "baseline_sha": "bfe91f86b95672277ca43f30fba44febcb61a67a",
       "candidate_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
       "started_at": "2026-10-14T08:05:42+00:00",
-      "deadline": "2026-10-14T20:05:42+00:00",
-      "attempts": 2,
+      "deadline": "2026-10-15T15:21:33+00:00",
+      "attempts": 4,
       "run_id": 38542571541,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3637",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.7",
@@ -28881,8 +29216,8 @@
         "https://download.pytorch.org/whl/cpu/torch/",
         "https://github.com/BrainLesion/tutorials/tree/99c5841fe8985e4004d3d5394ca9590a914e24e7/BraTS"
       ],
-      "arm64_attempts": 2,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 3,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38542571541",
       "candidate_history": [
         {
@@ -28893,7 +29228,90 @@
           "first_error": "Content-Length mismatch: expected2764572705 bytes, received1038778828 after3 internal HTTP attempts."
         }
       ],
-      "unchanged_infrastructure_retry_used": true
+      "unchanged_infrastructure_retry_used": true,
+      "native_command_exit_review": {
+        "source_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
+        "version": "0.0.7",
+        "counts": {
+          "total_tests": 15,
+          "passed": 15,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 2326.383214712143,
+          "run_timestamp": "2026-10-14T12:06:01.809587",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 14,
+          "total_suites": 1,
+          "total_tests": 14
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38542571541",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "native_actual_scientific_review": {
+        "source_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
+        "run_id": 38542571541,
+        "actual_zero_exit_functional_commands": 14,
+        "full_mri_seconds": 2286.8028693199158,
+        "metrics": {
+          "component_voxels": {
+            "cc": 3752,
+            "et": 30681,
+            "t2h": 134530
+          },
+          "input_sha256": {
+            "t1c": "4399faadcc45c8a4541313cdf88aced7d835ed59ac3078d950e0eac293d603f5",
+            "t1n": "e860924b936e301ddeba20409fbb59dde322475cb49328f1b46a9235c792e73e",
+            "t2f": "82aed8546af5e6d8d94fd91c56227abdcf6120130390d1556c4342a208980604",
+            "t2w": "4cd389cc57d12134a30a898c66532228126b9a7d0600ee578e82a32144528b51"
+          },
+          "mode": "t1c-fla-t1-t2",
+          "scope": "Adult skull-stripped BraTS runtime example; paediatric accuracy unverified",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "unchanged_weight_files": 84,
+          "weights_version": "1.0.0"
+        },
+        "scope": "Real complete adult skull-stripped BraTS four-modal CPU inference, three binary masks/physical grids/input hashes/all84 model files; analytical threshold/dust checks also pass. Paediatric clinical accuracy and optic-nerve anatomy remain unverified."
+      },
+      "elapsed_budget_history": [
+        {
+          "started_at": "2026-10-14T08:05:42+00:00",
+          "deadline": "2026-10-14T20:05:42+00:00",
+          "attempts": 2,
+          "outcome": "Expired before resumed review; no unapproved recipe edits or dispatches."
+        }
+      ],
+      "elapsed_budget_authorization": {
+        "approved": true,
+        "approved_at": "2026-10-15T03:21:33+00:00",
+        "recipe": "petu",
+        "previous_deadline": "2026-10-14T20:05:42+00:00",
+        "renewed_deadline": "2026-10-15T15:21:33+00:00",
+        "used_build_attempts_preserved": 2,
+        "scope": "User approved bounded continuation for PeTu/DeepLabCut/TractSeg/GlioMODA/FetalSynthSeg. Renew12h elapsed; retain all prior attempts and source evidence. Seven total only for GlioMODA/FetalSynthSeg; other three remain6. Reuse passed native/ARM results."
+      },
+      "pending_upstream_issue": 3637,
+      "pr_number": 3637
     },
     {
       "recipe": "prostatefiducialseg",
@@ -37280,18 +37698,18 @@
         "recipes/tractseg/build.yaml",
         "recipes/tractseg/fulltest.yaml"
       ],
-      "status": "native-running",
+      "status": "ready-to-retry",
       "branch": "arm64/upstream-tractseg-20261012",
       "baseline_sha": "98c7b84d8018d7611d847fc43bb78b5056c87970",
-      "candidate_sha": "2589f2b92d7defba7dfb6a4ac0101f37c7357a58",
+      "candidate_sha": "1a3be5b32b11d3fe2dfa66d52136bdc149ef47bb",
       "started_at": "2026-10-14T02:37:23.297913+00:00",
-      "deadline": "2026-10-14T14:37:23.297913+00:00",
+      "deadline": "2026-10-15T15:21:33+00:00",
       "attempts": 2,
-      "run_id": 38532617042,
+      "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Exact corrected-source native proof, then own individual upstream PR and both architecture jobs/all gates within authorized remaining budget. Reuse no earlier different-source green result.",
       "upstream_review": {
         "exists": true,
         "version": "2.9.0",
@@ -37317,7 +37735,7 @@
       ],
       "arm64_attempts": 2,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38532617042",
+      "run_url": null,
       "concurrent_upstream_version_update": {
         "number": 3617,
         "url": "https://github.com/neurodesk/neurocontainers/pull/3617",
@@ -37493,8 +37911,72 @@
             }
           ],
           "outcome": "Docker/architecture/SIF succeeded. FURY2/pygfx requires NumPy2 but candidate pinned NumPy1; added tests selected FSL Python instead of application interpreter."
+        },
+        {
+          "source_sha": "2589f2b92d7defba7dfb6a4ac0101f37c7357a58",
+          "run_id": 38532617042,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38532617042",
+          "counts": {
+            "total_tests": 123,
+            "passed": 122,
+            "failed": 1,
+            "skipped": 0
+          },
+          "failed_tests": [
+            {
+              "duration": 270.7739911079407,
+              "message": "Expected exit code 0, got 1",
+              "name": "Full pretrained 72-bundle segmentation against official references",
+              "return_code": 1,
+              "status": "failed",
+              "stderr": "/opt/miniconda/bin/TractSeg:13: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n  from pkg_resources import require\n\n  0%|          | 0/144 [00:00<?, ?it/s]\n  1%|          | 1/144 [00:00<01:35,  1.50it/s]\n  1%|\u258f         | 2/144 [00:01<01:28,  1.61it/s]\n  2%|\u258f         | 3/144 [00:01<01:24,  1.67it/s]\n  3%|\u258e         | 4/144 [00:02<01:21,  1.71it/s]\n  3%|\u258e         | 5/144 [00:02<01:20,  1.73it/s]\n  4%|\u258d         | 6/144 [00:03<01:19,  1.74it/s]\n  5%|\u258d         | 7/144 [00:04<01:18,  1.75it/s]\n  6%|\u258c         | 8/144 [00:04<01:17,  1.76it/s]\n  6%|\u258b         | 9/144 [00:05<01:16,  1.76it/s]\n  7%|\u258b         | 10/144 [00:05<01:16,  1.76it/s]\n  8%|\u258a         | 11/144 [00:06<01:15,  1.76it/s]\n  8%|\u258a         | 12/144 [00:06<01:16,  1.74it/s]\n  9%|\u2589         | 13/144 [00:07<01:15,  1.74it/s]\n 10%|\u2589         | 14/144 [00:08<01:14,  1.75it/s]\n 10%|\u2588         | 15/144 [00:08<01:13,  1.75it/s]\n 11%|\u2588         | 16/144 [00:09<01:12,  1.76it/s]\n 12%|\u2588\u258f        | 17/144 [00:09<01:12,  1.76it/s]\n 12%|\u2588\u258e        | 18/144 [00:10<01:11,  1.76it/s]\n 13%|\u2588\u258e        | 19/144 [00:10<01:10,  1.77it/s]\n 14%|\u2588\u258d        | 20/144 [00:11<01:09,  1.77it/s]\n 15%|\u2588\u258d        | 21/144 [00:12<01:09,  1.77it/s]\n 15%|\u2588\u258c        | 22/144 [00:12<01:09,  1.76it/s]\n 16%|\u2588\u258c        | 23/144 [00:13<01:08,  1.76it/s]\n 17%|\u2588\u258b        | 24/144 [00:13<01:08,  1.76it/s]\n 17%|\u2588\u258b        | 25/144 [00:14<01:07,  1.77it/s]\n 18%|\u2588\u258a        | 26/144 [00:14<01:07,  1.75it/s]\n 19%|\u2588\u2589        | 27/144 [00:15<01:06,  1.75it/s]\n 19%|\u2588\u2589        | 28/144 [00:16<01:06,  1.75it/s]\n 20%|\u2588\u2588        | 29/144 [00:16<01:05,  1.75it/s]\n 21%|\u2588\u2588        | 30/144 [00:17<01:05,  1.75it/s]\n 22%|\u2588\u2588\u258f       | 31/144 [00:17<01:04,  1.75it/s]\n 22%|\u2588\u2588\u258f       | 32/144 [00:18<01:04,  1.75it/s]\n 23%|\u2588\u2588\u258e       | 33/144 [00:18<01:03,  1.74it/s]\n 24%|\u2588\u2588\u258e       | 34/144 [00:19<01:02,  1.75it/s]\n 24%|\u2588\u2588\u258d       | 35/144 [00:20<01:02,  1.75it/s]\n 25%|\u2588\u2588\u258c       | 36/144 [00:20<01:01,  1.75it/s]\n 26%|\u2588\u2588\u258c       | 37/144 [00:21<01:00,  1.76it/s]\n 26%|\u2588\u2588\u258b       | 38/144 [00:21<01:00,  1.74it/s]\n 27%|\u2588\u2588\u258b       | 39/144 [00:22<01:00,  1.75it/s]\n 28%|\u2588\u2588\u258a       | 40/144 [00:22<00:59,  1.75it/s]\n 28%|\u2588\u2588\u258a       | 41/144 [00:23<00:58,  1.75it/s]\n 29%|\u2588\u2588\u2589       | 42/144 [00:24<00:58,  1.76it/s]\n 30%|\u2588\u2588\u2589       | 43/144 [00:24<00:57,  1.76it/s]\n 31%|\u2588\u2588\u2588       | 44/144 [00:25<00:56,  1.76it/s]\n 31%|\u2588\u2588\u2588\u258f      | 45/144 [00:25<00:57,  1.74it/s]\n 32%|\u2588\u2588\u2588\u258f      | 46/144 [00:26<00:56,  1.73it/s]\n 33%|\u2588\u2588\u2588\u258e      | 47/144 [00:26<00:55,  1.73it/s]\n 33%|\u2588\u2588\u2588\u258e      | 48/144 [00:27<00:55,  1.74it/s]\n 34%|\u2588\u2588\u2588\u258d      | 49/144 [00:28<00:54,  1.74it/s]\n 35%|\u2588\u2588\u2588\u258d      | 50/144 [00:28<00:54,  1.72it/s]\n 35%|\u2588\u2588\u2588\u258c      | 51/144 [00:29<00:54,  1.72it/s]\n 36%|\u2588\u2588\u2588\u258c      | 52/144 [00:29<00:53,  1.73it/s]\n 37%|\u2588\u2588\u2588\u258b      | 53/144 [00:30<00:52,  1.74it/s]\n 38%|\u2588\u2588\u2588\u258a      | 54/144 [00:30<00:52,  1.73it/s]\n 38%|\u2588\u2588\u2588\u258a      | 55/144 [00:31<00:51,  1.72it/s]\n 39%|\u2588\u2588\u2588\u2589      | 56/144 [00:32<00:51,  1.72it/s]\n 40%|\u2588\u2588\u2588\u2589      | 57/144 [00:32<00:50,  1.73it/s]\n 40%|\u2588\u2588\u2588\u2588      | 58/144 [00:33<00:49,  1.73it/s]\n 41%|\u2588\u2588\u2588\u2588      | 59/144 [00:33<00:49,  1.73it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 60/144 [00:34<00:48,  1.74it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 61/144 [00:34<00:47,  1.74it/s]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 62/144 [00:35<00:47,  1.73it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 63/144 [00:36<00:46,  1.74it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 64/144 [00:36<00:45,  1.74it/s]\n 45%|\u2588\u2588\u2588\u2588\u258c     | 65/144 [00:37<00:45,  1.75it/s]\n 46%|\u2588\u2588\u2588\u2588\u258c     | 66/144 [00:37<00:44,  1.75it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 67/144 [00:38<00:44,  1.75it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 68/144 [00:39<00:43,  1.73it/s]\n 48%|\u2588\u2588\u2588\u2588\u258a     | 69/144 [00:39<00:43,  1.74it/s]\n 49%|\u2588\u2588\u2588\u2588\u258a     | 70/144 [00:40<00:42,  1.74it/s]\n 49%|\u2588\u2588\u2588\u2588\u2589     | 71/144 [00:40<00:41,  1.75it/s]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 72/144 [00:41<00:41,  1.75it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588     | 73/144 [00:41<00:40,  1.76it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588\u258f    | 74/144 [00:42<00:39,  1.76it/s]\n 52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 75/144 [00:42<00:38,  1.77it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 76/144 [00:43<00:38,  1.75it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 77/144 [00:44<00:38,  1.76it/s]\n 54%|\u2588\u2588\u2588\u2588\u2588\u258d    | 78/144 [00:44<00:37,  1.76it/s]\n 55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 79/144 [00:45<00:36,  1.76it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 80/144 [00:45<00:36,  1.76it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258b    | 81/144 [00:46<00:35,  1.75it/s]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 82/144 [00:46<00:35,  1.75it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 83/144 [00:47<00:34,  1.75it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 84/144 [00:48<00:34,  1.75it/s]\n 59%|\u2588\u2588\u2588\u2588\u2588\u2589    | 85/144 [00:48<00:33,  1.75it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2589    | 86/144 [00:49<00:33,  1.75it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 87/144 [00:49<00:32,  1.75it/s]\n 61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 88/144 [00:50<00:31,  1.76it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 89/144 [00:50<00:31,  1.76it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 90/144 [00:51<00:30,  1.77it/s]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 91/144 [00:52<00:30,  1.76it/s]\n 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 92/144 [00:52<00:29,  1.76it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 93/144 [00:53<00:28,  1.77it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 94/144 [00:53<00:28,  1.76it/s]\n 66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 95/144 [00:54<00:28,  1.74it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 96/144 [00:54<00:27,  1.74it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 97/144 [00:55<00:27,  1.74it/s]\n 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 98/144 [00:56<00:26,  1.74it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 99/144 [00:56<00:26,  1.73it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 100/144 [00:57<00:25,  1.73it/s]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 101/144 [00:57<00:24,  1.73it/s]\n 71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 102/144 [00:58<00:24,  1.74it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 103/144 [00:59<00:23,  1.75it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 104/144 [00:59<00:22,  1.75it/s]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 105/144 [01:00<00:22,  1.76it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 106/144 [01:00<00:21,  1.76it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 107/144 [01:01<00:20,  1.76it/s]\n 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 108/144 [01:01<00:20,  1.77it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 109/144 [01:02<00:19,  1.77it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 110/144 [01:02<00:19,  1.77it/s]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 111/144 [01:03<00:18,  1.77it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 112/144 [01:04<00:18,  1.76it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 113/144 [01:04<00:17,  1.74it/s]\n 79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 114/144 [01:05<00:17,  1.75it/s]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 115/144 [01:05<00:16,  1.75it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 116/144 [01:06<00:16,  1.75it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 117/144 [01:06<00:15,  1.75it/s]\n 82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 118/144 [01:07<00:14,  1.76it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 119/144 [01:08<00:14,  1.76it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 120/144 [01:08<00:13,  1.76it/s]\n 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 121/144 [01:09<00:13,  1.76it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 122/144 [01:09<00:12,  1.76it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 123/144 [01:10<00:11,  1.77it/s]\n 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 124/144 [01:10<00:11,  1.77it/s]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 125/144 [01:11<00:10,  1.76it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 126/144 [01:12<00:10,  1.75it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 127/144 [01:12<00:09,  1.76it/s]\n 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 128/144 [01:13<00:09,  1.76it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 129/144 [01:13<00:08,  1.77it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 130/144 [01:14<00:07,  1.77it/s]\n 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 131/144 [01:14<00:07,  1.75it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 132/144 [01:15<00:06,  1.73it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 133/144 [01:16<00:06,  1.74it/s]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 134/144 [01:16<00:05,  1.75it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 135/144 [01:17<00:05,  1.75it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 136/144 [01:17<00:04,  1.75it/s]\n 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 137/144 [01:18<00:03,  1.75it/s]\n 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 138/144 [01:18<00:03,  1.75it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 139/144 [01:19<00:02,  1.75it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 140/144 [01:20<00:02,  1.73it/s]\n 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 141/144 [01:20<00:01,  1.74it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 142/144 [01:21<00:01,  1.75it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 143/144 [01:21<00:00,  1.76it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 144/144 [01:22<00:00,  1.76it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 144/144 [01:22<00:00,  1.75it/s]\n\n  0%|          | 0/144 [00:00<?, ?it/s]\n  1%|          | 1/144 [00:00<01:20,  1.78it/s]\n  1%|\u258f         | 2/144 [00:01<01:19,  1.78it/s]\n  2%|\u258f         | 3/144 [00:01<01:19,  1.77it/s]\n  3%|\u258e         | 4/144 [00:02<01:19,  1.77it/s]\n  3%|\u258e         | 5/144 [00:02<01:18,  1.77it/s]\n  4%|\u258d         | 6/144 [00:03<01:17,  1.77it/s]\n  5%|\u258d         | 7/144 [00:03<01:17,  1.77it/s]\n  6%|\u258c         | 8/144 [00:04<01:16,  1.77it/s]\n  6%|\u258b         | 9/144 [00:05<01:16,  1.76it/s]\n  7%|\u258b         | 10/144 [00:05<01:16,  1.76it/s]\n  8%|\u258a         | 11/144 [00:06<01:15,  1.75it/s]\n  8%|\u258a         | 12/144 [00:06<01:15,  1.76it/s]\n  9%|\u2589         | 13/144 [00:07<01:14,  1.77it/s]\n 10%|\u2589         | 14/144 [00:07<01:13,  1.77it/s]\n 10%|\u2588         | 15/144 [00:08<01:13,  1.77it/s]\n 11%|\u2588         | 16/144 [00:09<01:12,  1.76it/s]\n 12%|\u2588\u258f        | 17/144 [00:09<01:12,  1.76it/s]\n 12%|\u2588\u258e        | 18/144 [00:10<01:11,  1.76it/s]\n 13%|\u2588\u258e        | 19/144 [00:10<01:10,  1.77it/s]\n 14%|\u2588\u258d        | 20/144 [00:11<01:10,  1.77it/s]\n 15%|\u2588\u258d        | 21/144 [00:11<01:09,  1.77it/s]\n 15%|\u2588\u258c        | 22/144 [00:12<01:09,  1.76it/s]\n 16%|\u2588\u258c        | 23/144 [00:13<01:08,  1.76it/s]\n 17%|\u2588\u258b        | 24/144 [00:13<01:08,  1.75it/s]\n 17%|\u2588\u258b        | 25/144 [00:14<01:07,  1.75it/s]\n 18%|\u2588\u258a        | 26/144 [00:14<01:07,  1.75it/s]\n 19%|\u2588\u2589        | 27/144 [00:15<01:07,  1.75it/s]\n 19%|\u2588\u2589        | 28/144 [00:15<01:06,  1.75it/s]\n 20%|\u2588\u2588        | 29/144 [00:16<01:05,  1.74it/s]\n 21%|\u2588\u2588        | 30/144 [00:17<01:05,  1.74it/s]\n 22%|\u2588\u2588\u258f       | 31/144 [00:17<01:04,  1.75it/s]\n 22%|\u2588\u2588\u258f       | 32/144 [00:18<01:04,  1.75it/s]\n 23%|\u2588\u2588\u258e       | 33/144 [00:18<01:03,  1.75it/s]\n 24%|\u2588\u2588\u258e       | 34/144 [00:19<01:02,  1.75it/s]\n 24%|\u2588\u2588\u258d       | 35/144 [00:19<01:02,  1.76it/s]\n 25%|\u2588\u2588\u258c       | 36/144 [00:20<01:01,  1.75it/s]\n 26%|\u2588\u2588\u258c       | 37/144 [00:21<01:00,  1.76it/s]\n 26%|\u2588\u2588\u258b       | 38/144 [00:21<01:00,  1.75it/s]\n 27%|\u2588\u2588\u258b       | 39/144 [00:22<00:59,  1.75it/s]\n 28%|\u2588\u2588\u258a       | 40/144 [00:22<00:59,  1.75it/s]\n 28%|\u2588\u2588\u258a       | 41/144 [00:23<00:58,  1.75it/s]\n 29%|\u2588\u2588\u2589       | 42/144 [00:23<00:58,  1.75it/s]\n 30%|\u2588\u2588\u2589       | 43/144 [00:24<00:57,  1.74it/s]\n 31%|\u2588\u2588\u2588       | 44/144 [00:25<00:57,  1.74it/s]\n 31%|\u2588\u2588\u2588\u258f      | 45/144 [00:25<00:56,  1.74it/s]\n 32%|\u2588\u2588\u2588\u258f      | 46/144 [00:26<00:56,  1.74it/s]\n 33%|\u2588\u2588\u2588\u258e      | 47/144 [00:26<00:55,  1.74it/s]\n 33%|\u2588\u2588\u2588\u258e      | 48/144 [00:27<00:54,  1.75it/s]\n 34%|\u2588\u2588\u2588\u258d      | 49/144 [00:27<00:54,  1.76it/s]\n 35%|\u2588\u2588\u2588\u258d      | 50/144 [00:28<00:53,  1.76it/s]\n 35%|\u2588\u2588\u2588\u258c      | 51/144 [00:29<00:52,  1.77it/s]\n 36%|\u2588\u2588\u2588\u258c      | 52/144 [00:29<00:52,  1.77it/s]\n 37%|\u2588\u2588\u2588\u258b      | 53/144 [00:30<00:51,  1.77it/s]\n 38%|\u2588\u2588\u2588\u258a      | 54/144 [00:30<00:50,  1.77it/s]\n 38%|\u2588\u2588\u2588\u258a      | 55/144 [00:31<00:50,  1.77it/s]\n 39%|\u2588\u2588\u2588\u2589      | 56/144 [00:31<00:49,  1.76it/s]\n 40%|\u2588\u2588\u2588\u2589      | 57/144 [00:32<00:49,  1.76it/s]\n 40%|\u2588\u2588\u2588\u2588      | 58/144 [00:33<00:48,  1.76it/s]\n 41%|\u2588\u2588\u2588\u2588      | 59/144 [00:33<00:48,  1.75it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 60/144 [00:34<00:47,  1.75it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 61/144 [00:34<00:47,  1.75it/s]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 62/144 [00:35<00:46,  1.75it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 63/144 [00:35<00:46,  1.76it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 64/144 [00:36<00:45,  1.76it/s]\n 45%|\u2588\u2588\u2588\u2588\u258c     | 65/144 [00:36<00:44,  1.76it/s]\n 46%|\u2588\u2588\u2588\u2588\u258c     | 66/144 [00:37<00:44,  1.77it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 67/144 [00:38<00:43,  1.77it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 68/144 [00:38<00:43,  1.77it/s]\n 48%|\u2588\u2588\u2588\u2588\u258a     | 69/144 [00:39<00:42,  1.77it/s]\n 49%|\u2588\u2588\u2588\u2588\u258a     | 70/144 [00:39<00:41,  1.77it/s]\n 49%|\u2588\u2588\u2588\u2588\u2589     | 71/144 [00:40<00:41,  1.77it/s]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 72/144 [00:40<00:40,  1.77it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588     | 73/144 [00:41<00:40,  1.77it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588\u258f    | 74/144 [00:42<00:39,  1.77it/s]\n 52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 75/144 [00:42<00:39,  1.76it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 76/144 [00:43<00:38,  1.75it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 77/144 [00:43<00:38,  1.75it/s]\n 54%|\u2588\u2588\u2588\u2588\u2588\u258d    | 78/144 [00:44<00:37,  1.75it/s]\n 55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 79/144 [00:44<00:37,  1.74it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 80/144 [00:45<00:36,  1.75it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258b    | 81/144 [00:46<00:36,  1.74it/s]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 82/144 [00:46<00:35,  1.74it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 83/144 [00:47<00:34,  1.75it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 84/144 [00:47<00:34,  1.75it/s]\n 59%|\u2588\u2588\u2588\u2588\u2588\u2589    | 85/144 [00:48<00:33,  1.75it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2589    | 86/144 [00:48<00:33,  1.75it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 87/144 [00:49<00:32,  1.75it/s]\n 61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 88/144 [00:50<00:31,  1.76it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 89/144 [00:50<00:31,  1.76it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 90/144 [00:51<00:30,  1.75it/s]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 91/144 [00:51<00:30,  1.75it/s]\n 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 92/144 [00:52<00:29,  1.75it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 93/144 [00:52<00:29,  1.75it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 94/144 [00:53<00:28,  1.75it/s]\n 66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 95/144 [00:54<00:28,  1.74it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 96/144 [00:54<00:27,  1.74it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 97/144 [00:55<00:26,  1.74it/s]\n 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 98/144 [00:55<00:26,  1.74it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 99/144 [00:56<00:25,  1.74it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 100/144 [00:56<00:25,  1.74it/s]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 101/144 [00:57<00:24,  1.75it/s]\n 71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 102/144 [00:58<00:23,  1.75it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 103/144 [00:58<00:23,  1.76it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 104/144 [00:59<00:22,  1.76it/s]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 105/144 [00:59<00:22,  1.77it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 106/144 [01:00<00:21,  1.77it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 107/144 [01:00<00:20,  1.77it/s]\n 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 108/144 [01:01<00:20,  1.77it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 109/144 [01:02<00:19,  1.77it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 110/144 [01:02<00:19,  1.76it/s]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 111/144 [01:03<00:18,  1.77it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 112/144 [01:03<00:18,  1.76it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 113/144 [01:04<00:17,  1.76it/s]\n 79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 114/144 [01:04<00:17,  1.75it/s]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 115/144 [01:05<00:16,  1.75it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 116/144 [01:06<00:15,  1.76it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 117/144 [01:06<00:15,  1.76it/s]\n 82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 118/144 [01:07<00:14,  1.77it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 119/144 [01:07<00:14,  1.76it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 120/144 [01:08<00:13,  1.76it/s]\n 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 121/144 [01:08<00:13,  1.76it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 122/144 [01:09<00:12,  1.76it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 123/144 [01:10<00:11,  1.76it/s]\n 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 124/144 [01:10<00:11,  1.76it/s]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 125/144 [01:11<00:10,  1.77it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 126/144 [01:11<00:10,  1.77it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 127/144 [01:12<00:09,  1.76it/s]\n 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 128/144 [01:12<00:09,  1.76it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 129/144 [01:13<00:08,  1.76it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 130/144 [01:13<00:07,  1.76it/s]\n 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 131/144 [01:14<00:07,  1.76it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 132/144 [01:15<00:06,  1.76it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 133/144 [01:15<00:06,  1.76it/s]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 134/144 [01:16<00:05,  1.76it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 135/144 [01:16<00:05,  1.76it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 136/144 [01:17<00:04,  1.76it/s]\n 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 137/144 [01:17<00:03,  1.76it/s]\n 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 138/144 [01:18<00:03,  1.76it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 139/144 [01:19<00:02,  1.77it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 140/144 [01:19<00:02,  1.77it/s]\n 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 141/144 [01:20<00:01,  1.77it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 142/144 [01:20<00:01,  1.77it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 143/144 [01:21<00:00,  1.77it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 144/144 [01:21<00:00,  1.77it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 144/144 [01:21<00:00,  1.76it/s]\n\n  0%|          | 0/144 [00:00<?, ?it/s]\n  1%|          | 1/144 [00:00<01:21,  1.76it/s]\n  1%|\u258f         | 2/144 [00:01<01:20,  1.77it/s]\n  2%|\u258f         | 3/144 [00:01<01:19,  1.77it/s]\n  3%|\u258e         | 4/144 [00:02<01:19,  1.76it/s]\n  3%|\u258e         | 5/144 [00:02<01:19,  1.76it/s]\n  4%|\u258d         | 6/144 [00:03<01:18,  1.76it/s]\n  5%|\u258d         | 7/144 [00:03<01:18,  1.75it/s]\n  6%|\u258c         | 8/144 [00:04<01:17,  1.76it/s]\n  6%|\u258b         | 9/144 [00:05<01:16,  1.75it/s]\n  7%|\u258b         | 10/144 [00:05<01:16,  1.76it/s]\n  8%|\u258a         | 11/144 [00:06<01:15,  1.76it/s]\n  8%|\u258a         | 12/144 [00:06<01:15,  1.76it/s]\n  9%|\u2589         | 13/144 [00:07<01:14,  1.76it/s]\n 10%|\u2589         | 14/144 [00:07<01:13,  1.76it/s]\n 10%|\u2588         | 15/144 [00:08<01:13,  1.76it/s]\n 11%|\u2588         | 16/144 [00:09<01:13,  1.75it/s]\n 12%|\u2588\u258f        | 17/144 [00:09<01:12,  1.75it/s]\n 12%|\u2588\u258e        | 18/144 [00:10<01:11,  1.75it/s]\n 13%|\u2588\u258e        | 19/144 [00:10<01:11,  1.75it/s]\n 14%|\u2588\u258d        | 20/144 [00:11<01:10,  1.75it/s]\n 15%|\u2588\u258d        | 21/144 [00:11<01:10,  1.74it/s]\n 15%|\u2588\u258c        | 22/144 [00:12<01:09,  1.75it/s]\n 16%|\u2588\u258c        | 23/144 [00:13<01:09,  1.75it/s]\n 17%|\u2588\u258b        | 24/144 [00:13<01:08,  1.75it/s]\n 17%|\u2588\u258b        | 25/144 [00:14<01:07,  1.75it/s]\n 18%|\u2588\u258a        | 26/144 [00:14<01:07,  1.75it/s]\n 19%|\u2588\u2589        | 27/144 [00:15<01:06,  1.75it/s]\n 19%|\u2588\u2589        | 28/144 [00:15<01:06,  1.75it/s]\n 20%|\u2588\u2588        | 29/144 [00:16<01:05,  1.75it/s]\n 21%|\u2588\u2588        | 30/144 [00:17<01:05,  1.75it/s]\n 22%|\u2588\u2588\u258f       | 31/144 [00:17<01:04,  1.76it/s]\n 22%|\u2588\u2588\u258f       | 32/144 [00:18<01:03,  1.77it/s]\n 23%|\u2588\u2588\u258e       | 33/144 [00:18<01:02,  1.77it/s]\n 24%|\u2588\u2588\u258e       | 34/144 [00:19<01:02,  1.76it/s]\n 24%|\u2588\u2588\u258d       | 35/144 [00:19<01:01,  1.76it/s]\n 25%|\u2588\u2588\u258c       | 36/144 [00:20<01:01,  1.76it/s]\n 26%|\u2588\u2588\u258c       | 37/144 [00:21<01:00,  1.76it/s]\n 26%|\u2588\u2588\u258b       | 38/144 [00:21<01:00,  1.76it/s]\n 27%|\u2588\u2588\u258b       | 39/144 [00:22<00:59,  1.76it/s]\n 28%|\u2588\u2588\u258a       | 40/144 [00:22<00:59,  1.76it/s]\n 28%|\u2588\u2588\u258a       | 41/144 [00:23<00:58,  1.76it/s]\n 29%|\u2588\u2588\u2589       | 42/144 [00:23<00:58,  1.75it/s]\n 30%|\u2588\u2588\u2589       | 43/144 [00:24<00:57,  1.76it/s]\n 31%|\u2588\u2588\u2588       | 44/144 [00:25<00:56,  1.76it/s]\n 31%|\u2588\u2588\u2588\u258f      | 45/144 [00:25<00:56,  1.76it/s]\n 32%|\u2588\u2588\u2588\u258f      | 46/144 [00:26<00:55,  1.76it/s]\n 33%|\u2588\u2588\u2588\u258e      | 47/144 [00:26<00:55,  1.76it/s]\n 33%|\u2588\u2588\u2588\u258e      | 48/144 [00:27<00:54,  1.76it/s]\n 34%|\u2588\u2588\u2588\u258d      | 49/144 [00:27<00:54,  1.76it/s]\n 35%|\u2588\u2588\u2588\u258d      | 50/144 [00:28<00:53,  1.75it/s]\n 35%|\u2588\u2588\u2588\u258c      | 51/144 [00:29<00:53,  1.75it/s]\n 36%|\u2588\u2588\u2588\u258c      | 52/144 [00:29<00:52,  1.75it/s]\n 37%|\u2588\u2588\u2588\u258b      | 53/144 [00:30<00:52,  1.74it/s]\n 38%|\u2588\u2588\u2588\u258a      | 54/144 [00:30<00:51,  1.74it/s]\n 38%|\u2588\u2588\u2588\u258a      | 55/144 [00:31<00:51,  1.74it/s]\n 39%|\u2588\u2588\u2588\u2589      | 56/144 [00:31<00:50,  1.74it/s]\n 40%|\u2588\u2588\u2588\u2589      | 57/144 [00:32<00:49,  1.74it/s]\n 40%|\u2588\u2588\u2588\u2588      | 58/144 [00:33<00:49,  1.74it/s]\n 41%|\u2588\u2588\u2588\u2588      | 59/144 [00:33<00:48,  1.74it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 60/144 [00:34<00:48,  1.74it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 61/144 [00:34<00:47,  1.75it/s]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 62/144 [00:35<00:46,  1.75it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 63/144 [00:35<00:46,  1.75it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 64/144 [00:36<00:45,  1.75it/s]\n 45%|\u2588\u2588\u2588\u2588\u258c     | 65/144 [00:37<00:44,  1.76it/s]\n 46%|\u2588\u2588\u2588\u2588\u258c     | 66/144 [00:37<00:44,  1.76it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 67/144 [00:38<00:43,  1.76it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 68/144 [00:38<00:43,  1.76it/s]\n 48%|\u2588\u2588\u2588\u2588\u258a     | 69/144 [00:39<00:42,  1.75it/s]\n 49%|\u2588\u2588\u2588\u2588\u258a     | 70/144 [00:39<00:42,  1.75it/s]\n 49%|\u2588\u2588\u2588\u2588\u2589     | 71/144 [00:40<00:41,  1.75it/s]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 72/144 [00:41<00:41,  1.75it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588     | 73/144 [00:41<00:40,  1.75it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588\u258f    | 74/144 [00:42<00:40,  1.74it/s]\n 52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 75/144 [00:42<00:39,  1.74it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 76/144 [00:43<00:38,  1.75it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 77/144 [00:43<00:38,  1.75it/s]\n 54%|\u2588\u2588\u2588\u2588\u2588\u258d    | 78/144 [00:44<00:37,  1.75it/s]\n 55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 79/144 [00:45<00:37,  1.75it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 80/144 [00:45<00:36,  1.75it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258b    | 81/144 [00:46<00:35,  1.76it/s]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 82/144 [00:46<00:35,  1.76it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 83/144 [00:47<00:34,  1.75it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 84/144 [00:47<00:34,  1.76it/s]\n 59%|\u2588\u2588\u2588\u2588\u2588\u2589    | 85/144 [00:48<00:33,  1.76it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2589    | 86/144 [00:49<00:33,  1.75it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 87/144 [00:49<00:32,  1.75it/s]\n 61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 88/144 [00:50<00:31,  1.75it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 89/144 [00:50<00:31,  1.75it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 90/144 [00:51<00:30,  1.75it/s]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 91/144 [00:51<00:30,  1.75it/s]\n 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 92/144 [00:52<00:29,  1.74it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 93/144 [00:53<00:29,  1.74it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 94/144 [00:53<00:28,  1.75it/s]\n 66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 95/144 [00:54<00:28,  1.75it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 96/144 [00:54<00:27,  1.75it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 97/144 [00:55<00:26,  1.75it/s]\n 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 98/144 [00:55<00:26,  1.75it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 99/144 [00:56<00:25,  1.75it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 100/144 [00:57<00:25,  1.76it/s]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 101/144 [00:57<00:24,  1.76it/s]\n 71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 102/144 [00:58<00:23,  1.77it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 103/144 [00:58<00:23,  1.77it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 104/144 [00:59<00:22,  1.77it/s]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 105/144 [00:59<00:22,  1.76it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 106/144 [01:00<00:21,  1.76it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 107/144 [01:01<00:21,  1.76it/s]\n 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 108/144 [01:01<00:20,  1.76it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 109/144 [01:02<00:19,  1.75it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 110/144 [01:02<00:19,  1.75it/s]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 111/144 [01:03<00:18,  1.75it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 112/144 [01:03<00:18,  1.74it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 113/144 [01:04<00:17,  1.74it/s]\n 79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 114/144 [01:05<00:17,  1.75it/s]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 115/144 [01:05<00:16,  1.75it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 116/144 [01:06<00:15,  1.75it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 117/144 [01:06<00:15,  1.75it/s]\n 82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 118/144 [01:07<00:14,  1.76it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 119/144 [01:07<00:14,  1.76it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 120/144 [01:08<00:13,  1.76it/s]\n 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 121/144 [01:09<00:13,  1.76it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 122/144 [01:09<00:12,  1.75it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 123/144 [01:10<00:12,  1.75it/s]\n 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 124/144 [01:10<00:11,  1.74it/s]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 125/144 [01:11<00:10,  1.74it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 126/144 [01:11<00:10,  1.74it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 127/144 [01:12<00:09,  1.74it/s]\n 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 128/144 [01:13<00:09,  1.74it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 129/144 [01:13<00:08,  1.75it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 130/144 [01:14<00:07,  1.75it/s]\n 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 131/144 [01:14<00:07,  1.76it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 132/144 [01:15<00:06,  1.76it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 133/144 [01:15<00:06,  1.76it/s]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 134/144 [01:16<00:05,  1.76it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 135/144 [01:17<00:05,  1.76it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 136/144 [01:17<00:04,  1.76it/s]\n 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 137/144 [01:18<00:03,  1.76it/s]\n 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 138/144 [01:18<00:03,  1.76it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 139/144 [01:19<00:02,  1.76it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 140/144 [01:19<00:02,  1.76it/s]\n 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 141/144 [01:20<00:01,  1.76it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 142/144 [01:20<00:01,  1.76it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 143/144 [01:21<00:00,  1.76it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 144/144 [01:22<00:00,  1.75it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 144/144 [01:22<00:00,  1.75it/s]\nTraceback (most recent call last):\n  File \"<stdin>\", line 32, in <module>\n  File \"/opt/miniconda/lib/python3.11/site-packages/numpy/_utils/__init__.py\", line 86, in wrapper\n    return fun(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/numpy/testing/_private/utils.py\", line 1057, in assert_array_equal\n    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,\n  File \"/opt/miniconda/lib/python3.11/site-packages/numpy/testing/_private/utils.py\", line 921, in assert_array_compare\n    raise AssertionError(msg)\nAssertionError: \nArrays are not equal\nAF_left official released mask\nMismatched elements: 722 / 463623 (0.156%)\nMax absolute difference among violations: 1\nMax relative difference among violations: 1.\n ACTUAL: array([[[0, 0, 0, ..., 0, 0, 0],\n        [0, 0, 0, ..., 0, 0, 0],\n        [0, 0, 0, ..., 0, 0, 0],...\n DESIRED: array([[[0, 0, 0, ..., 0, 0, 0],\n        [0, 0, 0, ..., 0, 0, 0],\n        [0, 0, 0, ..., 0, 0, 0],...\n",
+              "stdout": "Loading weights from: /opt/miniconda/share/TractSeg/weights/pretrained_weights_tract_segmentation_v3.npz\nProcessing direction (1 of 3)\nProcessing direction (2 of 3)\nProcessing direction (3 of 3)\n"
+            }
+          ],
+          "outcome": "test-reference-mode-mismatch",
+          "retry_hypothesis": "Retain complete default3orientation actual inference with all72 binary/nonempty/grid/hash checks; additionally execute the same full fixture with official single_orientation and require every voxel of all72 exact published references. No tolerance relaxation or --test fake model. Recheck concurrent version-only PR3617 before editing."
         }
-      ]
+      ],
+      "native_failure": {
+        "source_sha": "2589f2b92d7defba7dfb6a4ac0101f37c7357a58",
+        "run_id": 38532617042,
+        "counts": {
+          "total_tests": 123,
+          "passed": 122,
+          "failed": 1,
+          "skipped": 0
+        },
+        "first_failed_test": {
+          "duration": 270.7739911079407,
+          "message": "Expected exit code 0, got 1",
+          "name": "Full pretrained 72-bundle segmentation against official references",
+          "return_code": 1,
+          "status": "failed",
+          "stderr": "/opt/miniconda/bin/TractSeg:13: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html\n  from pkg_resources import require\n\n  0%|          | 0/144 [00:00<?, ?it/s]\n  1%|          | 1/144 [00:00<01:35,  1.50it/s]\n  1%|\u258f         | 2/144 [00:01<01:28,  1.61it/s]\n  2%|\u258f         | 3/144 [00:01<01:24,  1.67it/s]\n  3%|\u258e         | 4/144 [00:02<01:21,  1.71it/s]\n  3%|\u258e         | 5/144 [00:02<01:20,  1.73it/s]\n  4%|\u258d         | 6/144 [00:03<01:19,  1.74it/s]\n  5%|\u258d         | 7/144 [00:04<01:18,  1.75it/s]\n  6%|\u258c         | 8/144 [00:04<01:17,  1.76it/s]\n  6%|\u258b         | 9/144 [00:05<01:16,  1.76it/s]\n  7%|\u258b         | 10/144 [00:05<01:16,  1.76it/s]\n  8%|\u258a         | 11/144 [00:06<01:15,  1.76it/s]\n  8%|\u258a         | 12/144 [00:06<01:16,  1.74it/s]\n  9%|\u2589         | 13/144 [00:07<01:15,  1.74it/s]\n 10%|\u2589         | 14/144 [00:08<01:14,  1.75it/s]\n 10%|\u2588         | 15/144 [00:08<01:13,  1.75it/s]\n 11%|\u2588         | 16/144 [00:09<01:12,  1.76it/s]\n 12%|\u2588\u258f        | 17/144 [00:09<01:12,  1.76it/s]\n 12%|\u2588\u258e        | 18/144 [00:10<01:11,  1.76it/s]\n 13%|\u2588\u258e        | 19/144 [00:10<01:10,  1.77it/s]\n 14%|\u2588\u258d        | 20/144 [00:11<01:09,  1.77it/s]\n 15%|\u2588\u258d        | 21/144 [00:12<01:09,  1.77it/s]\n 15%|\u2588\u258c        | 22/144 [00:12<01:09,  1.76it/s]\n 16%|\u2588\u258c        | 23/144 [00:13<01:08,  1.76it/s]\n 17%|\u2588\u258b        | 24/144 [00:13<01:08,  1.76it/s]\n 17%|\u2588\u258b        | 25/144 [00:14<01:07,  1.77it/s]\n 18%|\u2588\u258a        | 26/144 [00:14<01:07,  1.75it/s]\n 19%|\u2588\u2589        | 27/144 [00:15<01:06,  1.75it/s]\n 19%|\u2588\u2589        | 28/144 [00:16<01:06,  1.75it/s]\n 20%|\u2588\u2588        | 29/144 [00:16<01:05,  1.75it/s]\n 21%|\u2588\u2588        | 30/144 [00:17<01:05,  1.75it/s]\n 22%|\u2588\u2588\u258f       | 31/144 [00:17<01:04,  1.75it/s]\n 22%|\u2588\u2588\u258f       | 32/144 [00:18<01:04,  1.75it/s]\n 23%|\u2588\u2588\u258e       | 33/144 [00:18<01:03,  1.74it/s]\n 24%|\u2588\u2588\u258e       | 34/144 [00:19<01:02,  1.75it/s]\n 24%|\u2588\u2588\u258d       | 35/144 [00:20<01:02,  1.75it/s]\n 25%|\u2588\u2588\u258c       | 36/144 [00:20<01:01,  1.75it/s]\n 26%|\u2588\u2588\u258c       | 37/144 [00:21<01:00,  1.76it/s]\n 26%|\u2588\u2588\u258b       | 38/144 [00:21<01:00,  1.74it/s]\n 27%|\u2588\u2588\u258b       | 39/144 [00:22<01:00,  1.75it/s]\n 28%|\u2588\u2588\u258a       | 40/144 [00:22<00:59,  1.75it/s]\n 28%|\u2588\u2588\u258a       | 41/144 [00:23<00:58,  1.75it/s]\n 29%|\u2588\u2588\u2589       | 42/144 [00:24<00:58,  1.76it/s]\n 30%|\u2588\u2588\u2589       | 43/144 [00:24<00:57,  1.76it/s]\n 31%|\u2588\u2588\u2588       | 44/144 [00:25<00:56,  1.76it/s]\n 31%|\u2588\u2588\u2588\u258f      | 45/144 [00:25<00:57,  1.74it/s]\n 32%|\u2588\u2588\u2588\u258f      | 46/144 [00:26<00:56,  1.73it/s]\n 33%|\u2588\u2588\u2588\u258e      | 47/144 [00:26<00:55,  1.73it/s]\n 33%|\u2588\u2588\u2588\u258e      | 48/144 [00:27<00:55,  1.74it/s]\n 34%|\u2588\u2588\u2588\u258d      | 49/144 [00:28<00:54,  1.74it/s]\n 35%|\u2588\u2588\u2588\u258d      | 50/144 [00:28<00:54,  1.72it/s]\n 35%|\u2588\u2588\u2588\u258c      | 51/144 [00:29<00:54,  1.72it/s]\n 36%|\u2588\u2588\u2588\u258c      | 52/144 [00:29<00:53,  1.73it/s]\n 37%|\u2588\u2588\u2588\u258b      | 53/144 [00:30<00:52,  1.74it/s]\n 38%|\u2588\u2588\u2588\u258a      | 54/144 [00:30<00:52,  1.73it/s]\n 38%|\u2588\u2588\u2588\u258a      | 55/144 [00:31<00:51,  1.72it/s]\n 39%|\u2588\u2588\u2588\u2589      | 56/144 [00:32<00:51,  1.72it/s]\n 40%|\u2588\u2588\u2588\u2589      | 57/144 [00:32<00:50,  1.73it/s]\n 40%|\u2588\u2588\u2588\u2588      | 58/144 [00:33<00:49,  1.73it/s]\n 41%|\u2588\u2588\u2588\u2588      | 59/144 [00:33<00:49,  1.73it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 60/144 [00:34<00:48,  1.74it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 61/144 [00:34<00:47,  1.74it/s]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 62/144 [00:35<00:47,  1.73it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 63/144 [00:36<00:46,  1.74it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 64/144 [00:36<00:45,  1.74it/s]\n 45%|\u2588\u2588\u2588\u2588\u258c     | 65/144 [00:37<00:45,  1.75it/s]\n 46%|\u2588\u2588\u2588\u2588\u258c     | 66/144 [00:37<00:44,  1.75it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 67/144 [00:38<00:44,  1.75it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 68/144 [00:39<00:43,  1.73it/s]\n 48%|\u2588\u2588\u2588\u2588\u258a     | 69/144 [00:39<00:43,  1.74it/s]\n 49%|\u2588\u2588\u2588\u2588\u258a     | 70/144 [00:40<00:42,  1.74it/s]\n 49%|\u2588\u2588\u2588\u2588\u2589     | 71/144 [00:40<00:41,  1.75it/s]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 72/144 [00:41<00:41,  1.75it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588     | 73/144 [00:41<00:40,  1.76it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588\u258f    | 74/144 [00:42<00:39,  1.76it/s]\n 52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 75/144 [00:42<00:38,  1.77it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 76/144 [00:43<00:38,  1.75it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 77/144 [00:44<00:38,  1.76it/s]\n 54%|\u2588\u2588\u2588\u2588\u2588\u258d    | 78/144 [00:44<00:37,  1.76it/s]\n 55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 79/144 [00:45<00:36,  1.76it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 80/144 [00:45<00:36,  1.76it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258b    | 81/144 [00:46<00:35,  1.75it/s]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 82/144 [00:46<00:35,  1.75it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 83/144 [00:47<00:34,  1.75it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 84/144 [00:48<00:34,  1.75it/s]\n 59%|\u2588\u2588\u2588\u2588\u2588\u2589    | 85/144 [00:48<00:33,  1.75it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2589    | 86/144 [00:49<00:33,  1.75it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 87/144 [00:49<00:32,  1.75it/s]\n 61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 88/144 [00:50<00:31,  1.76it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 89/144 [00:50<00:31,  1.76it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 90/144 [00:51<00:30,  1.77it/s]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 91/144 [00:52<00:30,  1.76it/s]\n 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 92/144 [00:52<00:29,  1.76it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 93/144 [00:53<00:28,  1.77it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 94/144 [00:53<00:28,  1.76it/s]\n 66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 95/144 [00:54<00:28,  1.74it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 96/144 [00:54<00:27,  1.74it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 97/144 [00:55<00:27,  1.74it/s]\n 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 98/144 [00:56<00:26,  1.74it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 99/144 [00:56<00:26,  1.73it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 100/144 [00:57<00:25,  1.73it/s]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 101/144 [00:57<00:24,  1.73it/s]\n 71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 102/144 [00:58<00:24,  1.74it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 103/144 [00:59<00:23,  1.75it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 104/144 [00:59<00:22,  1.75it/s]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 105/144 [01:00<00:22,  1.76it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 106/144 [01:00<00:21,  1.76it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 107/144 [01:01<00:20,  1.76it/s]\n 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 108/144 [01:01<00:20,  1.77it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 109/144 [01:02<00:19,  1.77it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 110/144 [01:02<00:19,  1.77it/s]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 111/144 [01:03<00:18,  1.77it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 112/144 [01:04<00:18,  1.76it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 113/144 [01:04<00:17,  1.74it/s]\n 79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 114/144 [01:05<00:17,  1.75it/s]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 115/144 [01:05<00:16,  1.75it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 116/144 [01:06<00:16,  1.75it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 117/144 [01:06<00:15,  1.75it/s]\n 82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 118/144 [01:07<00:14,  1.76it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 119/144 [01:08<00:14,  1.76it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 120/144 [01:08<00:13,  1.76it/s]\n 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 121/144 [01:09<00:13,  1.76it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 122/144 [01:09<00:12,  1.76it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 123/144 [01:10<00:11,  1.77it/s]\n 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 124/144 [01:10<00:11,  1.77it/s]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 125/144 [01:11<00:10,  1.76it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 126/144 [01:12<00:10,  1.75it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 127/144 [01:12<00:09,  1.76it/s]\n 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 128/144 [01:13<00:09,  1.76it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 129/144 [01:13<00:08,  1.77it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 130/144 [01:14<00:07,  1.77it/s]\n 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 131/144 [01:14<00:07,  1.75it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 132/144 [01:15<00:06,  1.73it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 133/144 [01:16<00:06,  1.74it/s]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 134/144 [01:16<00:05,  1.75it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 135/144 [01:17<00:05,  1.75it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 136/144 [01:17<00:04,  1.75it/s]\n 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 137/144 [01:18<00:03,  1.75it/s]\n 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 138/144 [01:18<00:03,  1.75it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 139/144 [01:19<00:02,  1.75it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 140/144 [01:20<00:02,  1.73it/s]\n 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 141/144 [01:20<00:01,  1.74it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 142/144 [01:21<00:01,  1.75it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 143/144 [01:21<00:00,  1.76it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 144/144 [01:22<00:00,  1.76it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 144/144 [01:22<00:00,  1.75it/s]\n\n  0%|          | 0/144 [00:00<?, ?it/s]\n  1%|          | 1/144 [00:00<01:20,  1.78it/s]\n  1%|\u258f         | 2/144 [00:01<01:19,  1.78it/s]\n  2%|\u258f         | 3/144 [00:01<01:19,  1.77it/s]\n  3%|\u258e         | 4/144 [00:02<01:19,  1.77it/s]\n  3%|\u258e         | 5/144 [00:02<01:18,  1.77it/s]\n  4%|\u258d         | 6/144 [00:03<01:17,  1.77it/s]\n  5%|\u258d         | 7/144 [00:03<01:17,  1.77it/s]\n  6%|\u258c         | 8/144 [00:04<01:16,  1.77it/s]\n  6%|\u258b         | 9/144 [00:05<01:16,  1.76it/s]\n  7%|\u258b         | 10/144 [00:05<01:16,  1.76it/s]\n  8%|\u258a         | 11/144 [00:06<01:15,  1.75it/s]\n  8%|\u258a         | 12/144 [00:06<01:15,  1.76it/s]\n  9%|\u2589         | 13/144 [00:07<01:14,  1.77it/s]\n 10%|\u2589         | 14/144 [00:07<01:13,  1.77it/s]\n 10%|\u2588         | 15/144 [00:08<01:13,  1.77it/s]\n 11%|\u2588         | 16/144 [00:09<01:12,  1.76it/s]\n 12%|\u2588\u258f        | 17/144 [00:09<01:12,  1.76it/s]\n 12%|\u2588\u258e        | 18/144 [00:10<01:11,  1.76it/s]\n 13%|\u2588\u258e        | 19/144 [00:10<01:10,  1.77it/s]\n 14%|\u2588\u258d        | 20/144 [00:11<01:10,  1.77it/s]\n 15%|\u2588\u258d        | 21/144 [00:11<01:09,  1.77it/s]\n 15%|\u2588\u258c        | 22/144 [00:12<01:09,  1.76it/s]\n 16%|\u2588\u258c        | 23/144 [00:13<01:08,  1.76it/s]\n 17%|\u2588\u258b        | 24/144 [00:13<01:08,  1.75it/s]\n 17%|\u2588\u258b        | 25/144 [00:14<01:07,  1.75it/s]\n 18%|\u2588\u258a        | 26/144 [00:14<01:07,  1.75it/s]\n 19%|\u2588\u2589        | 27/144 [00:15<01:07,  1.75it/s]\n 19%|\u2588\u2589        | 28/144 [00:15<01:06,  1.75it/s]\n 20%|\u2588\u2588        | 29/144 [00:16<01:05,  1.74it/s]\n 21%|\u2588\u2588        | 30/144 [00:17<01:05,  1.74it/s]\n 22%|\u2588\u2588\u258f       | 31/144 [00:17<01:04,  1.75it/s]\n 22%|\u2588\u2588\u258f       | 32/144 [00:18<01:04,  1.75it/s]\n 23%|\u2588\u2588\u258e       | 33/144 [00:18<01:03,  1.75it/s]\n 24%|\u2588\u2588\u258e       | 34/144 [00:19<01:02,  1.75it/s]\n 24%|\u2588\u2588\u258d       | 35/144 [00:19<01:02,  1.76it/s]\n 25%|\u2588\u2588\u258c       | 36/144 [00:20<01:01,  1.75it/s]\n 26%|\u2588\u2588\u258c       | 37/144 [00:21<01:00,  1.76it/s]\n 26%|\u2588\u2588\u258b       | 38/144 [00:21<01:00,  1.75it/s]\n 27%|\u2588\u2588\u258b       | 39/144 [00:22<00:59,  1.75it/s]\n 28%|\u2588\u2588\u258a       | 40/144 [00:22<00:59,  1.75it/s]\n 28%|\u2588\u2588\u258a       | 41/144 [00:23<00:58,  1.75it/s]\n 29%|\u2588\u2588\u2589       | 42/144 [00:23<00:58,  1.75it/s]\n 30%|\u2588\u2588\u2589       | 43/144 [00:24<00:57,  1.74it/s]\n 31%|\u2588\u2588\u2588       | 44/144 [00:25<00:57,  1.74it/s]\n 31%|\u2588\u2588\u2588\u258f      | 45/144 [00:25<00:56,  1.74it/s]\n 32%|\u2588\u2588\u2588\u258f      | 46/144 [00:26<00:56,  1.74it/s]\n 33%|\u2588\u2588\u2588\u258e      | 47/144 [00:26<00:55,  1.74it/s]\n 33%|\u2588\u2588\u2588\u258e      | 48/144 [00:27<00:54,  1.75it/s]\n 34%|\u2588\u2588\u2588\u258d      | 49/144 [00:27<00:54,  1.76it/s]\n 35%|\u2588\u2588\u2588\u258d      | 50/144 [00:28<00:53,  1.76it/s]\n 35%|\u2588\u2588\u2588\u258c      | 51/144 [00:29<00:52,  1.77it/s]\n 36%|\u2588\u2588\u2588\u258c      | 52/144 [00:29<00:52,  1.77it/s]\n 37%|\u2588\u2588\u2588\u258b      | 53/144 [00:30<00:51,  1.77it/s]\n 38%|\u2588\u2588\u2588\u258a      | 54/144 [00:30<00:50,  1.77it/s]\n 38%|\u2588\u2588\u2588\u258a      | 55/144 [00:31<00:50,  1.77it/s]\n 39%|\u2588\u2588\u2588\u2589      | 56/144 [00:31<00:49,  1.76it/s]\n 40%|\u2588\u2588\u2588\u2589      | 57/144 [00:32<00:49,  1.76it/s]\n 40%|\u2588\u2588\u2588\u2588      | 58/144 [00:33<00:48,  1.76it/s]\n 41%|\u2588\u2588\u2588\u2588      | 59/144 [00:33<00:48,  1.75it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 60/144 [00:34<00:47,  1.75it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 61/144 [00:34<00:47,  1.75it/s]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 62/144 [00:35<00:46,  1.75it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 63/144 [00:35<00:46,  1.76it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 64/144 [00:36<00:45,  1.76it/s]\n 45%|\u2588\u2588\u2588\u2588\u258c     | 65/144 [00:36<00:44,  1.76it/s]\n 46%|\u2588\u2588\u2588\u2588\u258c     | 66/144 [00:37<00:44,  1.77it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 67/144 [00:38<00:43,  1.77it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 68/144 [00:38<00:43,  1.77it/s]\n 48%|\u2588\u2588\u2588\u2588\u258a     | 69/144 [00:39<00:42,  1.77it/s]\n 49%|\u2588\u2588\u2588\u2588\u258a     | 70/144 [00:39<00:41,  1.77it/s]\n 49%|\u2588\u2588\u2588\u2588\u2589     | 71/144 [00:40<00:41,  1.77it/s]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 72/144 [00:40<00:40,  1.77it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588     | 73/144 [00:41<00:40,  1.77it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588\u258f    | 74/144 [00:42<00:39,  1.77it/s]\n 52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 75/144 [00:42<00:39,  1.76it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 76/144 [00:43<00:38,  1.75it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 77/144 [00:43<00:38,  1.75it/s]\n 54%|\u2588\u2588\u2588\u2588\u2588\u258d    | 78/144 [00:44<00:37,  1.75it/s]\n 55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 79/144 [00:44<00:37,  1.74it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 80/144 [00:45<00:36,  1.75it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258b    | 81/144 [00:46<00:36,  1.74it/s]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 82/144 [00:46<00:35,  1.74it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 83/144 [00:47<00:34,  1.75it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 84/144 [00:47<00:34,  1.75it/s]\n 59%|\u2588\u2588\u2588\u2588\u2588\u2589    | 85/144 [00:48<00:33,  1.75it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2589    | 86/144 [00:48<00:33,  1.75it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 87/144 [00:49<00:32,  1.75it/s]\n 61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 88/144 [00:50<00:31,  1.76it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 89/144 [00:50<00:31,  1.76it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 90/144 [00:51<00:30,  1.75it/s]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 91/144 [00:51<00:30,  1.75it/s]\n 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 92/144 [00:52<00:29,  1.75it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 93/144 [00:52<00:29,  1.75it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 94/144 [00:53<00:28,  1.75it/s]\n 66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 95/144 [00:54<00:28,  1.74it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 96/144 [00:54<00:27,  1.74it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 97/144 [00:55<00:26,  1.74it/s]\n 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 98/144 [00:55<00:26,  1.74it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 99/144 [00:56<00:25,  1.74it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 100/144 [00:56<00:25,  1.74it/s]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 101/144 [00:57<00:24,  1.75it/s]\n 71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 102/144 [00:58<00:23,  1.75it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 103/144 [00:58<00:23,  1.76it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 104/144 [00:59<00:22,  1.76it/s]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 105/144 [00:59<00:22,  1.77it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 106/144 [01:00<00:21,  1.77it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 107/144 [01:00<00:20,  1.77it/s]\n 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 108/144 [01:01<00:20,  1.77it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 109/144 [01:02<00:19,  1.77it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 110/144 [01:02<00:19,  1.76it/s]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 111/144 [01:03<00:18,  1.77it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 112/144 [01:03<00:18,  1.76it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 113/144 [01:04<00:17,  1.76it/s]\n 79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 114/144 [01:04<00:17,  1.75it/s]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 115/144 [01:05<00:16,  1.75it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 116/144 [01:06<00:15,  1.76it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 117/144 [01:06<00:15,  1.76it/s]\n 82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 118/144 [01:07<00:14,  1.77it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 119/144 [01:07<00:14,  1.76it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 120/144 [01:08<00:13,  1.76it/s]\n 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 121/144 [01:08<00:13,  1.76it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 122/144 [01:09<00:12,  1.76it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 123/144 [01:10<00:11,  1.76it/s]\n 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 124/144 [01:10<00:11,  1.76it/s]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 125/144 [01:11<00:10,  1.77it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 126/144 [01:11<00:10,  1.77it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 127/144 [01:12<00:09,  1.76it/s]\n 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 128/144 [01:12<00:09,  1.76it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 129/144 [01:13<00:08,  1.76it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 130/144 [01:13<00:07,  1.76it/s]\n 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 131/144 [01:14<00:07,  1.76it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 132/144 [01:15<00:06,  1.76it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 133/144 [01:15<00:06,  1.76it/s]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 134/144 [01:16<00:05,  1.76it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 135/144 [01:16<00:05,  1.76it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 136/144 [01:17<00:04,  1.76it/s]\n 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 137/144 [01:17<00:03,  1.76it/s]\n 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 138/144 [01:18<00:03,  1.76it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 139/144 [01:19<00:02,  1.77it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 140/144 [01:19<00:02,  1.77it/s]\n 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 141/144 [01:20<00:01,  1.77it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 142/144 [01:20<00:01,  1.77it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 143/144 [01:21<00:00,  1.77it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 144/144 [01:21<00:00,  1.77it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 144/144 [01:21<00:00,  1.76it/s]\n\n  0%|          | 0/144 [00:00<?, ?it/s]\n  1%|          | 1/144 [00:00<01:21,  1.76it/s]\n  1%|\u258f         | 2/144 [00:01<01:20,  1.77it/s]\n  2%|\u258f         | 3/144 [00:01<01:19,  1.77it/s]\n  3%|\u258e         | 4/144 [00:02<01:19,  1.76it/s]\n  3%|\u258e         | 5/144 [00:02<01:19,  1.76it/s]\n  4%|\u258d         | 6/144 [00:03<01:18,  1.76it/s]\n  5%|\u258d         | 7/144 [00:03<01:18,  1.75it/s]\n  6%|\u258c         | 8/144 [00:04<01:17,  1.76it/s]\n  6%|\u258b         | 9/144 [00:05<01:16,  1.75it/s]\n  7%|\u258b         | 10/144 [00:05<01:16,  1.76it/s]\n  8%|\u258a         | 11/144 [00:06<01:15,  1.76it/s]\n  8%|\u258a         | 12/144 [00:06<01:15,  1.76it/s]\n  9%|\u2589         | 13/144 [00:07<01:14,  1.76it/s]\n 10%|\u2589         | 14/144 [00:07<01:13,  1.76it/s]\n 10%|\u2588         | 15/144 [00:08<01:13,  1.76it/s]\n 11%|\u2588         | 16/144 [00:09<01:13,  1.75it/s]\n 12%|\u2588\u258f        | 17/144 [00:09<01:12,  1.75it/s]\n 12%|\u2588\u258e        | 18/144 [00:10<01:11,  1.75it/s]\n 13%|\u2588\u258e        | 19/144 [00:10<01:11,  1.75it/s]\n 14%|\u2588\u258d        | 20/144 [00:11<01:10,  1.75it/s]\n 15%|\u2588\u258d        | 21/144 [00:11<01:10,  1.74it/s]\n 15%|\u2588\u258c        | 22/144 [00:12<01:09,  1.75it/s]\n 16%|\u2588\u258c        | 23/144 [00:13<01:09,  1.75it/s]\n 17%|\u2588\u258b        | 24/144 [00:13<01:08,  1.75it/s]\n 17%|\u2588\u258b        | 25/144 [00:14<01:07,  1.75it/s]\n 18%|\u2588\u258a        | 26/144 [00:14<01:07,  1.75it/s]\n 19%|\u2588\u2589        | 27/144 [00:15<01:06,  1.75it/s]\n 19%|\u2588\u2589        | 28/144 [00:15<01:06,  1.75it/s]\n 20%|\u2588\u2588        | 29/144 [00:16<01:05,  1.75it/s]\n 21%|\u2588\u2588        | 30/144 [00:17<01:05,  1.75it/s]\n 22%|\u2588\u2588\u258f       | 31/144 [00:17<01:04,  1.76it/s]\n 22%|\u2588\u2588\u258f       | 32/144 [00:18<01:03,  1.77it/s]\n 23%|\u2588\u2588\u258e       | 33/144 [00:18<01:02,  1.77it/s]\n 24%|\u2588\u2588\u258e       | 34/144 [00:19<01:02,  1.76it/s]\n 24%|\u2588\u2588\u258d       | 35/144 [00:19<01:01,  1.76it/s]\n 25%|\u2588\u2588\u258c       | 36/144 [00:20<01:01,  1.76it/s]\n 26%|\u2588\u2588\u258c       | 37/144 [00:21<01:00,  1.76it/s]\n 26%|\u2588\u2588\u258b       | 38/144 [00:21<01:00,  1.76it/s]\n 27%|\u2588\u2588\u258b       | 39/144 [00:22<00:59,  1.76it/s]\n 28%|\u2588\u2588\u258a       | 40/144 [00:22<00:59,  1.76it/s]\n 28%|\u2588\u2588\u258a       | 41/144 [00:23<00:58,  1.76it/s]\n 29%|\u2588\u2588\u2589       | 42/144 [00:23<00:58,  1.75it/s]\n 30%|\u2588\u2588\u2589       | 43/144 [00:24<00:57,  1.76it/s]\n 31%|\u2588\u2588\u2588       | 44/144 [00:25<00:56,  1.76it/s]\n 31%|\u2588\u2588\u2588\u258f      | 45/144 [00:25<00:56,  1.76it/s]\n 32%|\u2588\u2588\u2588\u258f      | 46/144 [00:26<00:55,  1.76it/s]\n 33%|\u2588\u2588\u2588\u258e      | 47/144 [00:26<00:55,  1.76it/s]\n 33%|\u2588\u2588\u2588\u258e      | 48/144 [00:27<00:54,  1.76it/s]\n 34%|\u2588\u2588\u2588\u258d      | 49/144 [00:27<00:54,  1.76it/s]\n 35%|\u2588\u2588\u2588\u258d      | 50/144 [00:28<00:53,  1.75it/s]\n 35%|\u2588\u2588\u2588\u258c      | 51/144 [00:29<00:53,  1.75it/s]\n 36%|\u2588\u2588\u2588\u258c      | 52/144 [00:29<00:52,  1.75it/s]\n 37%|\u2588\u2588\u2588\u258b      | 53/144 [00:30<00:52,  1.74it/s]\n 38%|\u2588\u2588\u2588\u258a      | 54/144 [00:30<00:51,  1.74it/s]\n 38%|\u2588\u2588\u2588\u258a      | 55/144 [00:31<00:51,  1.74it/s]\n 39%|\u2588\u2588\u2588\u2589      | 56/144 [00:31<00:50,  1.74it/s]\n 40%|\u2588\u2588\u2588\u2589      | 57/144 [00:32<00:49,  1.74it/s]\n 40%|\u2588\u2588\u2588\u2588      | 58/144 [00:33<00:49,  1.74it/s]\n 41%|\u2588\u2588\u2588\u2588      | 59/144 [00:33<00:48,  1.74it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 60/144 [00:34<00:48,  1.74it/s]\n 42%|\u2588\u2588\u2588\u2588\u258f     | 61/144 [00:34<00:47,  1.75it/s]\n 43%|\u2588\u2588\u2588\u2588\u258e     | 62/144 [00:35<00:46,  1.75it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 63/144 [00:35<00:46,  1.75it/s]\n 44%|\u2588\u2588\u2588\u2588\u258d     | 64/144 [00:36<00:45,  1.75it/s]\n 45%|\u2588\u2588\u2588\u2588\u258c     | 65/144 [00:37<00:44,  1.76it/s]\n 46%|\u2588\u2588\u2588\u2588\u258c     | 66/144 [00:37<00:44,  1.76it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 67/144 [00:38<00:43,  1.76it/s]\n 47%|\u2588\u2588\u2588\u2588\u258b     | 68/144 [00:38<00:43,  1.76it/s]\n 48%|\u2588\u2588\u2588\u2588\u258a     | 69/144 [00:39<00:42,  1.75it/s]\n 49%|\u2588\u2588\u2588\u2588\u258a     | 70/144 [00:39<00:42,  1.75it/s]\n 49%|\u2588\u2588\u2588\u2588\u2589     | 71/144 [00:40<00:41,  1.75it/s]\n 50%|\u2588\u2588\u2588\u2588\u2588     | 72/144 [00:41<00:41,  1.75it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588     | 73/144 [00:41<00:40,  1.75it/s]\n 51%|\u2588\u2588\u2588\u2588\u2588\u258f    | 74/144 [00:42<00:40,  1.74it/s]\n 52%|\u2588\u2588\u2588\u2588\u2588\u258f    | 75/144 [00:42<00:39,  1.74it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 76/144 [00:43<00:38,  1.75it/s]\n 53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 77/144 [00:43<00:38,  1.75it/s]\n 54%|\u2588\u2588\u2588\u2588\u2588\u258d    | 78/144 [00:44<00:37,  1.75it/s]\n 55%|\u2588\u2588\u2588\u2588\u2588\u258d    | 79/144 [00:45<00:37,  1.75it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258c    | 80/144 [00:45<00:36,  1.75it/s]\n 56%|\u2588\u2588\u2588\u2588\u2588\u258b    | 81/144 [00:46<00:35,  1.76it/s]\n 57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 82/144 [00:46<00:35,  1.76it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 83/144 [00:47<00:34,  1.75it/s]\n 58%|\u2588\u2588\u2588\u2588\u2588\u258a    | 84/144 [00:47<00:34,  1.76it/s]\n 59%|\u2588\u2588\u2588\u2588\u2588\u2589    | 85/144 [00:48<00:33,  1.76it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2589    | 86/144 [00:49<00:33,  1.75it/s]\n 60%|\u2588\u2588\u2588\u2588\u2588\u2588    | 87/144 [00:49<00:32,  1.75it/s]\n 61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 88/144 [00:50<00:31,  1.75it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258f   | 89/144 [00:50<00:31,  1.75it/s]\n 62%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 90/144 [00:51<00:30,  1.75it/s]\n 63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 91/144 [00:51<00:30,  1.75it/s]\n 64%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 92/144 [00:52<00:29,  1.74it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258d   | 93/144 [00:53<00:29,  1.74it/s]\n 65%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 94/144 [00:53<00:28,  1.75it/s]\n 66%|\u2588\u2588\u2588\u2588\u2588\u2588\u258c   | 95/144 [00:54<00:28,  1.75it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 96/144 [00:54<00:27,  1.75it/s]\n 67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 97/144 [00:55<00:26,  1.75it/s]\n 68%|\u2588\u2588\u2588\u2588\u2588\u2588\u258a   | 98/144 [00:55<00:26,  1.75it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 99/144 [00:56<00:25,  1.75it/s]\n 69%|\u2588\u2588\u2588\u2588\u2588\u2588\u2589   | 100/144 [00:57<00:25,  1.76it/s]\n 70%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 101/144 [00:57<00:24,  1.76it/s]\n 71%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588   | 102/144 [00:58<00:23,  1.77it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 103/144 [00:58<00:23,  1.77it/s]\n 72%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f  | 104/144 [00:59<00:22,  1.77it/s]\n 73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 105/144 [00:59<00:22,  1.76it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 106/144 [01:00<00:21,  1.76it/s]\n 74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 107/144 [01:01<00:21,  1.76it/s]\n 75%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 108/144 [01:01<00:20,  1.76it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c  | 109/144 [01:02<00:19,  1.75it/s]\n 76%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 110/144 [01:02<00:19,  1.75it/s]\n 77%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b  | 111/144 [01:03<00:18,  1.75it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 112/144 [01:03<00:18,  1.74it/s]\n 78%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a  | 113/144 [01:04<00:17,  1.74it/s]\n 79%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 114/144 [01:05<00:17,  1.75it/s]\n 80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589  | 115/144 [01:05<00:16,  1.75it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 116/144 [01:06<00:15,  1.75it/s]\n 81%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 117/144 [01:06<00:15,  1.75it/s]\n 82%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f | 118/144 [01:07<00:14,  1.76it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 119/144 [01:07<00:14,  1.76it/s]\n 83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 120/144 [01:08<00:13,  1.76it/s]\n 84%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 121/144 [01:09<00:13,  1.76it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d | 122/144 [01:09<00:12,  1.75it/s]\n 85%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 123/144 [01:10<00:12,  1.75it/s]\n 86%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c | 124/144 [01:10<00:11,  1.74it/s]\n 87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 125/144 [01:11<00:10,  1.74it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 126/144 [01:11<00:10,  1.74it/s]\n 88%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a | 127/144 [01:12<00:09,  1.74it/s]\n 89%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 128/144 [01:13<00:09,  1.74it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589 | 129/144 [01:13<00:08,  1.75it/s]\n 90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 130/144 [01:14<00:07,  1.75it/s]\n 91%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 131/144 [01:14<00:07,  1.76it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 132/144 [01:15<00:06,  1.76it/s]\n 92%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258f| 133/144 [01:15<00:06,  1.76it/s]\n 93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 134/144 [01:16<00:05,  1.76it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 135/144 [01:17<00:05,  1.76it/s]\n 94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 136/144 [01:17<00:04,  1.76it/s]\n 95%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 137/144 [01:18<00:03,  1.76it/s]\n 96%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258c| 138/144 [01:18<00:03,  1.76it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 139/144 [01:19<00:02,  1.76it/s]\n 97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 140/144 [01:19<00:02,  1.76it/s]\n 98%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 141/144 [01:20<00:01,  1.76it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258a| 142/144 [01:20<00:01,  1.76it/s]\n 99%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2589| 143/144 [01:21<00:00,  1.76it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 144/144 [01:22<00:00,  1.75it/s]\n100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 144/144 [01:22<00:00,  1.75it/s]\nTraceback (most recent call last):\n  File \"<stdin>\", line 32, in <module>\n  File \"/opt/miniconda/lib/python3.11/site-packages/numpy/_utils/__init__.py\", line 86, in wrapper\n    return fun(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/miniconda/lib/python3.11/site-packages/numpy/testing/_private/utils.py\", line 1057, in assert_array_equal\n    assert_array_compare(operator.__eq__, actual, desired, err_msg=err_msg,\n  File \"/opt/miniconda/lib/python3.11/site-packages/numpy/testing/_private/utils.py\", line 921, in assert_array_compare\n    raise AssertionError(msg)\nAssertionError: \nArrays are not equal\nAF_left official released mask\nMismatched elements: 722 / 463623 (0.156%)\nMax absolute difference among violations: 1\nMax relative difference among violations: 1.\n ACTUAL: array([[[0, 0, 0, ..., 0, 0, 0],\n        [0, 0, 0, ..., 0, 0, 0],\n        [0, 0, 0, ..., 0, 0, 0],...\n DESIRED: array([[[0, 0, 0, ..., 0, 0, 0],\n        [0, 0, 0, ..., 0, 0, 0],\n        [0, 0, 0, ..., 0, 0, 0],...\n",
+          "stdout": "Loading weights from: /opt/miniconda/share/TractSeg/weights/pretrained_weights_tract_segmentation_v3.npz\nProcessing direction (1 of 3)\nProcessing direction (2 of 3)\nProcessing direction (3 of 3)\n"
+        },
+        "category": "test-reference-mode-mismatch",
+        "reason": "The added fixture incorrectly compares default three-orientation inference against reference masks produced by official tests.sh using --single_orientation. Both actual source commands and exact reference comparison are published at the same immutable2.9 commit. This mismatch does not establish an ARM scientific discrepancy.",
+        "source": "https://github.com/MIC-DKFZ/TractSeg/blob/c73bc2f437113a68b5170cc0dcc89e18b1d87bd5/tests.sh#L21",
+        "planned_fix": "Retain complete default3orientation actual inference with all72 binary/nonempty/grid/hash checks; additionally execute the same full fixture with official single_orientation and require every voxel of all72 exact published references. No tolerance relaxation or --test fake model. Recheck concurrent version-only PR3617 before editing."
+      },
+      "elapsed_budget_history": [
+        {
+          "started_at": "2026-10-14T02:37:23.297913+00:00",
+          "deadline": "2026-10-14T14:37:23.297913+00:00",
+          "attempts": 2,
+          "outcome": "Expired before resumed review; no unapproved recipe edits or dispatches."
+        }
+      ],
+      "elapsed_budget_authorization": {
+        "approved": true,
+        "approved_at": "2026-10-15T03:21:33+00:00",
+        "recipe": "tractseg",
+        "previous_deadline": "2026-10-14T14:37:23.297913+00:00",
+        "renewed_deadline": "2026-10-15T15:21:33+00:00",
+        "used_build_attempts_preserved": 2,
+        "scope": "User approved bounded continuation for PeTu/DeepLabCut/TractSeg/GlioMODA/FetalSynthSeg. Renew12h elapsed; retain all prior attempts and source evidence. Seven total only for GlioMODA/FetalSynthSeg; other three remain6. Reuse passed native/ARM results."
+      }
     },
     {
       "recipe": "vertexwiser",
@@ -39884,9 +40366,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-14T08:16:06.561185+00:00",
-    "previous_sha": "bfe91f86b95672277ca43f30fba44febcb61a67a",
-    "new_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
+    "checked_at": "2026-10-15T03:22:00.938864+00:00",
+    "previous_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
+    "new_sha": "fdfba2d8c36ec6fb16a24f77e75bb5616a0d201b",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },

@@ -75,6 +75,14 @@ original attempts and deadline remain in force. The per-recipe
 `max_build_attempts` and `build_budget_authorization` fields record this exception;
 the default remains six for every other recipe.
 
+On 2026-10-15, the user explicitly approved a renewed twelve-hour elapsed
+window for PeTu, DeepLabCut, TractSeg, GlioMODA and FetalSynthSeg, preserving
+all used attempts and original clocks in each record's budget history. PeTu,
+DeepLabCut and TractSeg retain six total builds. GlioMODA and FetalSynthSeg
+may use seven total: one x86-only retry for GlioMODA and two corrected-source
+upstream jobs for FetalSynthSeg. Reuse their passed native/ARM results. The
+authorization timestamp and renewed deadline are recorded per recipe in the queue.
+
 Durable investigation notes belong in each linked `arm64-container` issue's
 comments. `PLAN.md` records checkpoints. Coverage issue #2 continues to report
 its own accepted architecture inventory and latest build evidence; its historic
