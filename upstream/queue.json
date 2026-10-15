@@ -7581,7 +7581,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T03:21:15.423492+00:00",
+        "checked_at": "2026-10-15T06:35:36.193017+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -7606,7 +7606,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T03:21:16.355073+00:00",
+        "metadata_checked_at": "2026-10-15T06:35:37.056278+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -11129,7 +11129,58 @@
           "scope": "Both CPU backends/native NMS/package closure; real Qt/XCB project window, mandatory Yes-button confirmation, active receiver shutdown and finally-restored streams. Released HRNet/MobileNet SuperAnimal CPU pose pipeline: three unchanged 500x500 real-dog frames, all39 ordered official bodypart names, finite/confident in-frame coordinates, three HDF rows/decoded labeled frames, immutable input video/image and both checkpoints. No biological accuracy, temporal tracking, adaptation/training, GPU or bitwise architecture parity claim."
         }
       },
-      "merged_at": "2026-10-15T06:32:04Z"
+      "merged_at": "2026-10-15T06:32:04Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38692981284,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38692981284",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/deeplabcut_arm64/3.0.2.json",
+            "expected_build_date": "20261015",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/deeplabcut/3.0.2.json",
+            "expected_build_date": "20261015",
+            "exists": true,
+            "committed_build_dates": [
+              "20260924"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-15T06:35:40.484289+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-deeplabcut-b6cc161131342dd953d29c2d040e3c08a08840e6)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-deeplabcut_arm64-b6cc161131342dd953d29c2d040e3c08a08840e6)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-15T06:35:41.333924+00:00"
+      }
     },
     {
       "recipe": "dicompare",
@@ -13303,7 +13354,58 @@
           "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/199#issuecomment-6185546726"
         }
       },
-      "merged_at": "2026-10-15T06:31:53Z"
+      "merged_at": "2026-10-15T06:31:53Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38692961701,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38692961701",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/fetalsynthseg_arm64/1.0.0.json",
+            "expected_build_date": "20261014",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/fetalsynthseg/1.0.0.json",
+            "expected_build_date": "20261014",
+            "exists": true,
+            "committed_build_dates": [
+              "20260722"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-15T06:35:44.844758+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-fetalsynthseg_arm64-f2defa075813417c1624535ceed618fd0927ffdc)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-fetalsynthseg-f2defa075813417c1624535ceed618fd0927ffdc)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-15T06:35:45.603946+00:00"
+      }
     },
     {
       "recipe": "fitlins",
@@ -23224,7 +23326,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T03:21:17.448007+00:00",
+        "checked_at": "2026-10-15T06:35:46.777092+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -23240,7 +23342,7 @@
           }
         ],
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
-        "metadata_checked_at": "2026-10-15T03:21:18.239786+00:00",
+        "metadata_checked_at": "2026-10-15T06:35:47.560836+00:00",
         "resolution_review": {
           "checked_at": "2026-10-14T06:22:54.898590+00:00",
           "actual_resolver_notice": "No merged PR is associated with 9df30cc185fa2af32ee99a364492954bf2798a61; nothing to promote",
@@ -23568,7 +23670,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T03:21:19.416310+00:00",
+        "checked_at": "2026-10-15T06:35:48.771881+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -23583,7 +23685,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T03:21:20.197602+00:00",
+        "metadata_checked_at": "2026-10-15T06:35:49.543738+00:00",
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
         "resolution_evidence": {
           "automatic_run_id": 38448486794,
@@ -24649,7 +24751,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-15T03:21:21.811245+00:00",
+        "checked_at": "2026-10-15T06:35:51.178439+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -24674,7 +24776,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T03:21:22.673868+00:00",
+        "metadata_checked_at": "2026-10-15T06:35:51.986164+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -26661,7 +26763,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-15T03:21:28.060991+00:00",
+        "checked_at": "2026-10-15T06:35:54.300611+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "cancelled",
         "publish_jobs": [
@@ -26687,7 +26789,7 @@
           }
         ],
         "note": "Original automatic publication was cancelled. Existing metadata alone does not prove this run published; audit any independently completed recovery separately.",
-        "metadata_checked_at": "2026-10-15T03:21:28.912288+00:00"
+        "metadata_checked_at": "2026-10-15T06:35:55.053300+00:00"
       }
     },
     {
@@ -28960,7 +29062,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T03:21:39.523750+00:00",
+        "checked_at": "2026-10-15T06:35:56.449560+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -28975,7 +29077,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T03:21:40.312486+00:00",
+        "metadata_checked_at": "2026-10-15T06:35:57.226948+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -30062,7 +30164,7 @@
       "port_files": [
         "recipes/petu/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-petu-20261012",
       "baseline_sha": "bfe91f86b95672277ca43f30fba44febcb61a67a",
       "candidate_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
@@ -30166,11 +30268,103 @@
             "build_sif_fulltest_dive_manifest_gates": "success",
             "fulltest_log_summary_confirmed": true,
             "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "x86_64": {
+            "head_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
+            "job_id": 116234726972,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38676101699/job/116234726972",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
           }
-        }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "petu",
+          "container": "petu",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "0.0.7",
+          "build_date": "20261014",
+          "docker_archive": "petu_0.0.7_20261014.docker.tar",
+          "sif": "petu_0.0.7_20261014.simg",
+          "candidate_tag": "nd-candidate-petu:260e3ebe8ff0",
+          "launcher": "petu",
+          "pr_number": 3637,
+          "head_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
+          "tests": {
+            "total": 15,
+            "passed": 15,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 14,
+            "fulltest_passed": 14,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "package imports",
+              "reports the packaged version",
+              "runs outside HOME",
+              "torch imports and computes on CPU",
+              "model weights are bundled in the image",
+              "bundled weights are the declared version",
+              "weights are pinned, not fetched at run time",
+              "petu CLI is on PATH and renders help",
+              "the CLI selects a device instead of assuming CUDA",
+              "the CLI exposes thread control",
+              "the container does not export a python interpreter",
+              "Native CPU model dependency closure",
+              "Analytical three-component probability and dust processing",
+              "Full trained four-modality PeTu MRI inference"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "812 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8889,
+            "wasted_bytes": 19021774,
+            "wasted_bytes_display": "19 MB",
+            "user_wasted_percent": 0.1922
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "merged_sha": "2b33d14384fa1e1946b8d93ba3dd15b76cf0d530",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.7",
@@ -30351,8 +30545,73 @@
             "user_wasted_percent": 0.3713
           },
           "scope": "Complete adult skull-stripped BraTS MRI/default four-modality CPU inference, three binary masks and physical grids, all input hashes and 84 model files unchanged; exact analytical threshold/dust checks. No paediatric clinical accuracy, optic-nerve accuracy, GPU or bitwise architecture parity claim."
+        },
+        "x86_64": {
+          "source_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
+          "run_id": 38676101699,
+          "actual_zero_exit_functional_commands": 14,
+          "full_mri_seconds": 294.59767389297485,
+          "metrics": {
+            "component_voxels": {
+              "cc": 3752,
+              "et": 30681,
+              "t2h": 134530
+            },
+            "input_sha256": {
+              "t1c": "4399faadcc45c8a4541313cdf88aced7d835ed59ac3078d950e0eac293d603f5",
+              "t1n": "e860924b936e301ddeba20409fbb59dde322475cb49328f1b46a9235c792e73e",
+              "t2f": "82aed8546af5e6d8d94fd91c56227abdcf6120130390d1556c4342a208980604",
+              "t2w": "4cd389cc57d12134a30a898c66532228126b9a7d0600ee578e82a32144528b51"
+            },
+            "mode": "t1c-fla-t1-t2",
+            "scope": "Adult skull-stripped BraTS runtime example; paediatric accuracy unverified",
+            "shape": [
+              240,
+              240,
+              155
+            ],
+            "unchanged_weight_files": 84,
+            "weights_version": "1.0.0"
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "812 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8889,
+            "wasted_bytes": 19021774,
+            "wasted_bytes_display": "19 MB",
+            "user_wasted_percent": 0.1922
+          },
+          "scope": "Complete adult skull-stripped BraTS MRI/default four-modality CPU inference, three binary masks and physical grids, all input hashes and 84 model files unchanged; exact analytical threshold/dust checks. No paediatric clinical accuracy, optic-nerve accuracy, GPU or bitwise architecture parity claim."
         }
-      }
+      },
+      "merged_at": "2026-10-15T06:42:34Z"
     },
     {
       "recipe": "prostatefiducialseg",
@@ -41407,9 +41666,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-15T03:22:00.938864+00:00",
-    "previous_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
-    "new_sha": "fdfba2d8c36ec6fb16a24f77e75bb5616a0d201b",
+    "checked_at": "2026-10-15T06:42:42.851106+00:00",
+    "previous_sha": "335c827525e3be92c650c8aeea6134a7dcc41da5",
+    "new_sha": "2b33d14384fa1e1946b8d93ba3dd15b76cf0d530",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },
