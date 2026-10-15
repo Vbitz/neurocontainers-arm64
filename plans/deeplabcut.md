@@ -43,3 +43,11 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
 ## Accepted implementation — 2026-09-14
 
 Candidate `4d92aaab39c59ea92490b8e456c088633467379e` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **101/101** fulltests in [run 34758030010](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34758030010). The ARM route uses the published CPU TensorFlow packages and preserves the pinned DeepLabCut 2.3.11 tests and x86_64 path.
+
+## Current upstream verification — 2026-10-15
+
+Version `3.0.2` at candidate `b6cc161131342dd953d29c2d040e3c08a08840e6` passed a freshly built [native ARM64 Docker/SIF/deploy/fulltest run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38687927099): **104/104 aggregate tests**. The [upstream candidate workflow](https://github.com/neurodesk/neurocontainers/actions/runs/38689171358) passed **ARM64 104/104** and **x86_64 104/104**, with zero failures/skips and successful Dive and required PR gates. [Individual PR #3644](https://github.com/neurodesk/neurocontainers/pull/3644) merged at `335c827525e3be92c650c8aeea6134a7dcc41da5`. This is separate from the September evidence above.
+
+The current 3.0.2 port uses official ARM CPU Torch/torchvision and TensorFlow packages plus native PyTables, retaining the GUI and model-zoo extras. New tests run both CPU frameworks, create the actual project window, accept its real Quit dialog and stop the running receiver. Released HRNet/MobileNet models process three unchanged real-dog frames, checking all 39 official bodyparts, finite/confident in-frame coordinates, HDF rows, decoded annotated video and immutable input/checkpoint hashes. Biological accuracy, temporal tracking, adaptation/training and GPU operation are not claimed.
+
+Registry publication is tracked separately in the [release metadata audit](../upstream/release-metadata-audit.json); a passed candidate or merged PR is not by itself a published release.

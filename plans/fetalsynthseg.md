@@ -40,3 +40,11 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
 ## Accepted implementation — 2026-09-14
 
 Candidate `e673b917ca5a8ae6e6f7ec74da961cb62e99fc5e` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **4/4** fulltests in [run 34759079934](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34759079934). The ARM route builds the upstream source on Python 3.10 Bookworm with the official checkpoint and preserves the x86_64 image route.
+
+## Current upstream verification — 2026-10-15
+
+Version `1.0.0` at candidate `f2defa075813417c1624535ceed618fd0927ffdc` passed a freshly built [native ARM64 Docker/SIF/deploy/fulltest run](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38462896594): **5/5 aggregate tests**. The [upstream candidate workflow](https://github.com/neurodesk/neurocontainers/actions/runs/38688123032) passed **ARM64 5/5** and **x86_64 5/5**, with zero failures/skips and successful Dive and required PR gates. [Individual PR #3596](https://github.com/neurodesk/neurocontainers/pull/3596) merged at `e56f759dc30b5a099d7310ddc6221600f881ab40`. This is separate from the September evidence above.
+
+The current source runs the released PyTorch/MONAI/Lightning CPU model on the complete official 256×256×256 fetal MRI and a full mirrored copy. Both architectures passed all eight-label, physical-grid, exact mirrored-label correspondence and unchanged input/checkpoint checks. The separate updater repair in PR #3645 resolves future archive checksums against newly observed commits. These runtime tests do not establish clinical or GPU accuracy.
+
+Registry publication is tracked separately in the [release metadata audit](../upstream/release-metadata-audit.json); a passed candidate or merged PR is not by itself a published release.
