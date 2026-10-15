@@ -4849,10 +4849,10 @@
     "Publication is tracked separately from native test success and upstream PR merge. No release JSON is manually edited."
   ],
   "catalog_queue_audit": {
-    "checked_at": "2026-10-15T03:22:05.154030+00:00",
+    "checked_at": "2026-10-15T07:57:28.234303+00:00",
     "repository": "neurodesk/neurocommand",
     "ref": "update-apps-json",
-    "commit_sha": "4e6e7d345ac349ea2e0ef9634515bbc96b180398",
+    "commit_sha": "239cb705119edbe338c78a9a0ef59a669a998621",
     "path": "neurodesk/apps.json",
     "status": "verified-queue-content",
     "note": "Pinned catalog queue matches publication and visibility policy for all120 architecture entries across60 audited image ports. Apps/webapps update workflows succeeded for their metadata commits. Scheduled consolidation/deployment remains separate.",
@@ -6936,7 +6936,7 @@
         "metadata_commit_sha": "ba019deb85cee4246fa548264e40e019df133be2"
       }
     ],
-    "blob_sha": "843367f2d207757fb40c8f5f00aff79326e943db"
+    "blob_sha": "a7023f79ba7a7f8a179a4a4c9b1060e51b4a9886"
   },
   "verification_only_changes": [
     {
