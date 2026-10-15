@@ -7581,7 +7581,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T06:35:36.193017+00:00",
+        "checked_at": "2026-10-15T06:54:09.353223+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -7606,7 +7606,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T06:35:37.056278+00:00",
+        "metadata_checked_at": "2026-10-15T06:54:10.135063+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -11154,7 +11154,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T06:35:40.484289+00:00",
+        "checked_at": "2026-10-15T06:54:11.539496+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -11179,7 +11179,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T06:35:41.333924+00:00"
+        "metadata_checked_at": "2026-10-15T06:54:12.438413+00:00"
       }
     },
     {
@@ -13379,7 +13379,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T06:35:44.844758+00:00",
+        "checked_at": "2026-10-15T06:54:13.615809+00:00",
         "workflow_status": "queued",
         "workflow_conclusion": null,
         "publish_jobs": [
@@ -13404,7 +13404,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T06:35:45.603946+00:00"
+        "metadata_checked_at": "2026-10-15T06:54:14.575635+00:00"
       }
     },
     {
@@ -23326,7 +23326,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T06:35:46.777092+00:00",
+        "checked_at": "2026-10-15T06:54:15.725893+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -23342,7 +23342,7 @@
           }
         ],
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
-        "metadata_checked_at": "2026-10-15T06:35:47.560836+00:00",
+        "metadata_checked_at": "2026-10-15T06:54:16.676566+00:00",
         "resolution_review": {
           "checked_at": "2026-10-14T06:22:54.898590+00:00",
           "actual_resolver_notice": "No merged PR is associated with 9df30cc185fa2af32ee99a364492954bf2798a61; nothing to promote",
@@ -23670,7 +23670,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T06:35:48.771881+00:00",
+        "checked_at": "2026-10-15T06:54:17.812442+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -23685,7 +23685,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T06:35:49.543738+00:00",
+        "metadata_checked_at": "2026-10-15T06:54:18.837370+00:00",
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
         "resolution_evidence": {
           "automatic_run_id": 38448486794,
@@ -24751,7 +24751,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-15T06:35:51.178439+00:00",
+        "checked_at": "2026-10-15T06:54:20.383805+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -24776,7 +24776,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T06:35:51.986164+00:00",
+        "metadata_checked_at": "2026-10-15T06:54:21.254611+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -26763,7 +26763,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-15T06:35:54.300611+00:00",
+        "checked_at": "2026-10-15T06:54:23.122963+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "cancelled",
         "publish_jobs": [
@@ -26789,7 +26789,7 @@
           }
         ],
         "note": "Original automatic publication was cancelled. Existing metadata alone does not prove this run published; audit any independently completed recovery separately.",
-        "metadata_checked_at": "2026-10-15T06:35:55.053300+00:00"
+        "metadata_checked_at": "2026-10-15T06:54:23.945496+00:00"
       }
     },
     {
@@ -29062,7 +29062,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T06:35:56.449560+00:00",
+        "checked_at": "2026-10-15T06:54:25.199292+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -29077,7 +29077,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T06:35:57.226948+00:00",
+        "metadata_checked_at": "2026-10-15T06:54:25.961839+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -30611,7 +30611,58 @@
           "scope": "Complete adult skull-stripped BraTS MRI/default four-modality CPU inference, three binary masks and physical grids, all input hashes and 84 model files unchanged; exact analytical threshold/dust checks. No paediatric clinical accuracy, optic-nerve accuracy, GPU or bitwise architecture parity claim."
         }
       },
-      "merged_at": "2026-10-15T06:42:34Z"
+      "merged_at": "2026-10-15T06:42:34Z",
+      "release_metadata_audit": {
+        "promotion_run_id": 38694041878,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38694041878",
+        "status": "pending-promotion",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/petu_arm64/0.0.7.json",
+            "expected_build_date": "20261014",
+            "exists": false,
+            "committed_build_dates": [],
+            "current_candidate_date_committed": false
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/petu/0.0.7.json",
+            "expected_build_date": "20261014",
+            "exists": true,
+            "committed_build_dates": [
+              "20260822"
+            ],
+            "current_candidate_date_committed": false
+          }
+        ],
+        "checked_at": "2026-10-15T06:54:28.935314+00:00",
+        "workflow_status": "queued",
+        "workflow_conclusion": null,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-petu_arm64-260e3ebe8ff011007e645486129360e1935d5c1a)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-petu-260e3ebe8ff011007e645486129360e1935d5c1a)",
+            "status": "queued",
+            "conclusion": null,
+            "runner_name": "",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-15T06:54:29.721611+00:00"
+      }
     },
     {
       "recipe": "prostatefiducialseg",
@@ -39007,7 +39058,10 @@
       "attempts": 5,
       "run_id": 38677501278,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3646",
-      "upstream_ci": {},
+      "upstream_ci": {
+        "initial_run_id": 38694552852,
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38694552852"
+      },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
