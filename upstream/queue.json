@@ -12217,18 +12217,18 @@
         "recipes/fetalsynthseg/build.yaml",
         "recipes/fetalsynthseg/fulltest.yaml"
       ],
-      "status": "waiting-capacity",
-      "branch": "arm64/fetalsynthseg-python3-20261013",
+      "status": "upstream-running",
+      "branch": "arm64/upstream-fetalsynthseg-20261012",
       "baseline_sha": "f3c726bd920e9c913fe96b2de28845232ffa76d0",
       "candidate_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
       "started_at": "2026-10-13T19:12:00+00:00",
       "deadline": "2026-10-15T15:21:33+00:00",
-      "attempts": 5,
+      "attempts": 7,
       "run_id": 38462896594,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3596",
       "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Authorized7total and renewed elapsed window; await one investigation and two build slots, then mark native-verified and reuse corrected native5/5 source in existingPR3596. No repeat native build.",
+      "next_action": "Verify both exact corrected-source upstream reports and all required gates for existing PR3596, then normal merge.7/7 authorized; no further attempts.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -12251,8 +12251,8 @@
         "https://github.com/Medical-Image-Analysis-Laboratory/FetalSynthSeg/blob/03c439edef02fc830e31a38169c5aa09ca98eeb4/weights/README.md",
         "https://github.com/Medical-Image-Analysis-Laboratory/FetalSynthSeg/tree/03c439edef02fc830e31a38169c5aa09ca98eeb4/data"
       ],
-      "arm64_attempts": 4,
-      "x86_64_attempts": 1,
+      "arm64_attempts": 5,
+      "x86_64_attempts": 2,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38462896594",
       "candidate_history": [
         {
@@ -12502,6 +12502,12 @@
         "trained_case_seconds": 24.51167869567871,
         "stdout": "Official full fetal MRI inference running after0s\nActual FetalSynthSeg trained CPU inference on full official fetal MRI verified in23.2s; shape(256, 256, 256), labels[0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0], exact full-field axis-flip label correspondence, unchanged image/reference/checkpoint hashes\n",
         "scope": "Actual official pretrained FetalSynthSeg checkpoint inference on complete256cubed fetal MRI and full mirrored copy; all8labels present, finite/nonempty foreground, original/reference/checkpoint/derived input unchanged and exact full-field mirrored label correspondence. Affine/zoom bounds only reflect float32 NIfTI encoding, not relaxed biological accuracy. No clinical/GPU accuracy claim."
+      },
+      "updater_merge_hold": {
+        "resolved": false,
+        "comment_url": "https://github.com/neurodesk/neurocontainers/pull/3596#issuecomment-6159658239",
+        "reason": "HTTP digest provider does not render source_commit URL from newly staged github_commit observation. Need focused shared updater fix; current pinned nativef2 input/test evidence unaffected.",
+        "candidate_sha": "f2defa075813417c1624535ceed618fd0927ffdc"
       }
     },
     {
