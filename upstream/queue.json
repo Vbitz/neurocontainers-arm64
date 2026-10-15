@@ -10504,18 +10504,18 @@
       "port_files": [
         "recipes/deeplabcut/build.yaml"
       ],
-      "status": "ready-to-retry",
+      "status": "native-running",
       "branch": "arm64/upstream-deeplabcut-20261012",
       "baseline_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
       "candidate_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
       "started_at": "2026-10-14T08:17:00+00:00",
       "deadline": "2026-10-15T15:21:33+00:00",
-      "attempts": 4,
-      "run_id": null,
+      "attempts": 5,
+      "run_id": 38687927099,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Authorized7total/4used; await physical slot then native attempt5 at reviewed real Quit-dialog/active receiver source. Require all104 cases, then own PR and both architecture jobs6and7 before renewed deadline. No timeout/test weakening.",
+      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.2",
@@ -10542,9 +10542,9 @@
         "https://download.pytorch.org/whl/cpu/torchvision/",
         "https://huggingface.co/mwmathis/DeepLabCutModelZoo-SuperAnimal-Quadruped/tree/1ad30fb80cd666f1e5c91578d1cf63bccfa84f80"
       ],
-      "arm64_attempts": 4,
+      "arm64_attempts": 5,
       "x86_64_attempts": 0,
-      "run_url": null,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38687927099",
       "candidate_history": [
         {
           "source_sha": "095590a65636bb700df290143c04dcab6a65e372",
@@ -40608,5 +40608,13 @@
       "new_resolver_regressions": "All8 passed on both Linux versions",
       "all_required_checks": "success"
     }
+  },
+  "build_concurrency_authorization": {
+    "approved": true,
+    "authorized_by": "user",
+    "approved_at": "2026-10-15T05:38:55.084113+00:00",
+    "answer": "You can use as many slots as you want. BURN!",
+    "max_active_builds": null,
+    "scope": "Lift concurrent build/investigation cap for ready work in the active inventory. Preserve per-recipe deadlines/build counts, exact native evidence, no duplicate recipe/variant attempts, no speculative retries, no skipped tests."
   }
 }

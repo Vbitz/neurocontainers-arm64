@@ -153,3 +153,10 @@ Quit-dialog fixture correction, then two upstream architecture jobs. Its renewed
 deadline remains unchanged; the earlier six-build record stays in elapsed
 history. All GUI, model, scientific assertions and the120-second GUI timeout
 remain in force. The per-recipe queue records this specific authorization.
+
+On 2026-10-15 the user explicitly lifted the concurrent recipe/build slot cap
+("You can use as many slots as you want. BURN!"). Ready authorized investigations
+may proceed concurrently. Per-recipe attempt limits and deadlines, exact-source
+evidence, independent PRs and all scientific gates remain required; never
+duplicate an active recipe/variant or retry a successful unchanged build. The
+queue records this concurrency authorization separately from recipe budgets.
