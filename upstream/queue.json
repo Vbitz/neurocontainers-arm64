@@ -12394,7 +12394,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Preserve corrected pushed branch. Revisit only with explicit additional verification budget or independently supplied exact corrected-source native and upstream proofs; do not rerun old successful source or imply new tests passed.",
+      "next_action": "Await explicit Elastix renewed12h/seven-total approval requestedOct15; preserve4used and olddeadline until response. Pushedff8a876 final version-output assertion correction remains untested. No native/root or upstream dispatch without authorization; no duplicate question.",
       "upstream_review": {
         "exists": true,
         "version": "5.3.1",
@@ -12501,7 +12501,17 @@
         "corrected_source_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
         "correction": "Rename shell variable to actual_tool_version; verify resolved production substitution preserves the variable and exact-version pattern; schema/both generation/spelling/shell syntax passed. Corrected source has no runtime proof yet."
       },
-      "blocker": "Four builds consumed. Corrected fulltest requires one root build plus two upstream architecture builds (3), exceeding the2 remaining within six-build limit. ARM application runtime is demonstrated; final corrected-test/PR lifecycle is unverified."
+      "blocker": "Four builds consumed. Corrected fulltest requires one root build plus two upstream architecture builds (3), exceeding the2 remaining within six-build limit. ARM application runtime is demonstrated; final corrected-test/PR lifecycle is unverified.",
+      "pending_budget_question": {
+        "requested_at": "2026-10-15T07:28:28.836994+00:00",
+        "requested_max_build_attempts": 7,
+        "requested_elapsed_hours": 12,
+        "used_attempts": 4,
+        "answered": false,
+        "reviewable_correction_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
+        "scope": "Elastix only; corrected native attempt5 then own upstream ARM/x86 jobs6and7. Retain all prior clocks/attempts/scientific assertions.",
+        "reason": "Prior native429bc011/run38325625311 passed34/34, but production suite substitution replaced $version_output with literal5.3.1_output. Pushed ff8a876 uses actual_tool_version and passed actual substitution/shell/schema/both generation/spelling. Current upstream still5.3.1; final corrected-source proof needs3jobs with2left, original window expired."
+      }
     },
     {
       "recipe": "emuses",
