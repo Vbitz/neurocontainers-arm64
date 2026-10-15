@@ -12618,7 +12618,7 @@
         }
       },
       "merged_sha": null,
-      "next_action": "All exact corrected-source container tests, actual MRI scientific reports and required upstream gates pass. Only blocker to normal merge is focused shared updater archive-context fix;7/7, no further container builds.",
+      "next_action": "Both exactf2 native/upstream scientific suites and required gates verified. Wait supporting updater PR3645 required Linux checks and normal merge, then lift updater hold and merge existing containerPR3596.7/7, no new container builds.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -12913,6 +12913,23 @@
             "Container release gate"
           ],
           "required_integration_checks": "Full builder tests on Python3.10/3.12, all-recipe policy/schema/generation and BuildKit fixture integration remain selected. No scientific runtime/image generation inputs change for updater-only patch."
+        },
+        "supporting_pr": {
+          "url": "https://github.com/neurodesk/neurocontainers/pull/3645",
+          "number": 3645,
+          "candidate_sha": "d858863c846743923c12975ea866d623c1c0022e",
+          "baseline_sha": "06175b7aae993aab77a58f1445b7ad42e87a5392",
+          "branch": "arm64/fetal-updater-archive-context-20261015",
+          "status": "upstream-ci-pending",
+          "local_validation": {
+            "focused_tests_passed": 17,
+            "builder_suite_passed": 1364,
+            "builder_failures_same_on_baseline": 11,
+            "builder_skipped": 5,
+            "recipes_validated": 280,
+            "dockerfiles_generated": 383,
+            "configured_mypy": "success"
+          }
         }
       },
       "upstream_actual_scientific_review": {
@@ -41368,5 +41385,13 @@
     "answer": "You can use as many slots as you want. BURN!",
     "max_active_builds": null,
     "scope": "Lift concurrent build/investigation cap for ready work in the active inventory. Preserve per-recipe deadlines/build counts, exact native evidence, no duplicate recipe/variant attempts, no speculative retries, no skipped tests."
+  },
+  "subagent_authorization": {
+    "approved": false,
+    "revoked_by": "user",
+    "answer": "stop all subagents",
+    "recorded_at": "2026-10-15T06:24:18.180798+00:00",
+    "all_session_agents_closed": true,
+    "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   }
 }
