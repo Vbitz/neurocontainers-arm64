@@ -10504,18 +10504,18 @@
       "port_files": [
         "recipes/deeplabcut/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-deeplabcut-20261012",
       "baseline_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
       "candidate_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
       "started_at": "2026-10-14T08:17:00+00:00",
       "deadline": "2026-10-15T15:21:33+00:00",
-      "attempts": 5,
+      "attempts": 7,
       "run_id": 38687927099,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3644",
+      "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Verify exact native source and Docker/SIF/deploy/fulltest gates before individual upstream PR.",
+      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.2",
@@ -10533,8 +10533,8 @@
       },
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
-      "change_summary": "Enable current DeepLabCut3.0.2 on native ARM with official Torch2.6/torchvision0.21 CPU wheels, retaining full GUI/modelzoo/TF extras and all original imports/version tests. TensorFlow2.15.1 and CondaPyTables3.10.1 ARM Python3.10 assets verified. Preserve x86 package selection. Add real CPU gradient/NMS/tensor/package checks, actual offscreen DeepLabCut project window, and official trained HRNet+MobileNet SuperAnimal inference/HDF/labeled-video pipeline on three unchanged lossless real-dog frames with39 named bodyparts and pinned official checkpoint hashes. No scientific/library patch or GUI omission; no biological accuracy/temporal-tracking/adaptation/GPU claim.",
-      "pr_title": "Enable native ARM64 DeepLabCut with GUI and pretrained pose verification",
+      "change_summary": "Enable DeepLabCut3.0.2 on native ARM64 with official Torch2.6.0/torchvision0.21.0 CPU wheels, TensorFlow2.15.1 and native PyTables3.10.1, preserving its GUI/model-zoo/TensorFlow extras and the x86 installation path. Install documented Qt font/X11 runtime dependencies. Retain all100 existing tests and add actual CPU tensor/gradient/detection/package checks, a real offscreen project window with real Quit-dialog acceptance and active receiver shutdown, and released pretrained HRNet+MobileNet SuperAnimal inference on three unchanged real-dog frames. Assert all39 official ordered bodypart names, finite/confident in-frame coordinates, HDF rows, decoded labeled-video frames and unchanged source/checkpoint hashes. These runtime contracts do not establish biological accuracy, temporal tracking, adaptation training or GPU operation.",
+      "pr_title": "Enable native ARM64 DeepLabCut and verify GUI and pretrained pose inference",
       "primary_source_review": [
         "https://github.com/DeepLabCut/DeepLabCut/releases/tag/v3.0.2",
         "https://pypi.org/pypi/tensorflow-cpu-aws/2.15.1/json",
@@ -10542,8 +10542,8 @@
         "https://download.pytorch.org/whl/cpu/torchvision/",
         "https://huggingface.co/mwmathis/DeepLabCutModelZoo-SuperAnimal-Quadruped/tree/1ad30fb80cd666f1e5c91578d1cf63bccfa84f80"
       ],
-      "arm64_attempts": 5,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 6,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38687927099",
       "candidate_history": [
         {
@@ -10661,9 +10661,11 @@
         "official_source": "https://github.com/DeepLabCut/DeepLabCut/blob/v3.0.2/deeplabcut/gui/window.py#L1369"
       },
       "native_actual_scientific_review": {
-        "source_sha": "7cb82a155f1e154ef35358766b6ac3f7053398ce",
-        "run_id": 38543183298,
-        "trained_pose_case_seconds": 21.434016227722168,
+        "source_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+        "run_id": 38687927099,
+        "actual_zero_exit_functional_commands": 103,
+        "gui_seconds": 14.536942481994629,
+        "full_pose_case_seconds": 24.46885919570923,
         "metrics": {
           "bodyparts": 39,
           "confident_in_frame_points": [
@@ -10688,7 +10690,7 @@
             "superanimal_quadruped_hrnet_w32.pt": "a42e58d56bb32f8b4f4fe17ea9ed9511cebc7b7949ac56b97fa6f3a49587c31e"
           }
         },
-        "scope": "Both actual native CPU frameworks/NMS/gradients/package closure, trained HRNet+MobileNet detector on3lossless real-dog frames, all39 bodypart names/HDF/annotated-video/hash contracts passed. GUI remains failed; no biological accuracy/temporal tracking/training/GPU claim."
+        "scope": "Both real CPU framework operations, actual Qt/XCB closure and project window with real Quit confirmation and active receiver shutdown. Released trained HRNet/MobileNet SuperAnimal detection/pose/HDF/annotated-video on three unchanged real-dog frames; all39 bodypart names, finite/confident in-frame coordinates,3 HDF rows/decoded annotated frames and immutable fixtures/checkpoints. No biological accuracy, temporal tracking, adaptation/training or GPU claim."
       },
       "elapsed_budget_history": [
         {
@@ -10707,7 +10709,6 @@
         "used_build_attempts_preserved": 3,
         "scope": "User approved bounded continuation for PeTu/DeepLabCut/TractSeg/GlioMODA/FetalSynthSeg. Renew12h elapsed; retain all prior attempts and source evidence. Seven total only for GlioMODA/FetalSynthSeg; other three remain6. Reuse passed native/ARM results."
       },
-      "untested_correction_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
       "pending_budget_question": {
         "requested_at": "2026-10-15T03:45:28.784586+00:00",
         "requested_max_build_attempts": 7,
@@ -10745,8 +10746,46 @@
         "candidate_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
         "reviewed_at": "2026-10-15T05:22:47.385761+00:00",
         "finding": "QThread.wait returns true for never-started receiver. Start receiver as the official launcher does, assert running before close/stopped after wait; restore streams in finally. Real Yes-button interaction is sound.",
-        "runtime_verified": false
-      }
+        "runtime_verified": true,
+        "verification_run_id": 38687927099
+      },
+      "native_command_exit_review": {
+        "source_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+        "all_unusual_exits_explicitly_asserted": true,
+        "unusual_exits": []
+      },
+      "native_evidence": {
+        "source_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+        "version": "3.0.2",
+        "counts": {
+          "total_tests": 104,
+          "passed": 104,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 99.44050908088684,
+          "run_timestamp": "2026-10-15T05:50:23.545035",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 103,
+          "total_suites": 1,
+          "total_tests": 103
+        },
+        "deploy_counts": {
+          "total": 1,
+          "passed": 1,
+          "failed": 0,
+          "skipped": 0
+        },
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38687927099",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ]
+      },
+      "pending_upstream_issue": 3644,
+      "pr_number": 3644
     },
     {
       "recipe": "dicompare",
@@ -12228,7 +12267,91 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3596",
       "upstream_ci": {
         "initial_run_id": 38688123032,
-        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38688123032"
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38688123032",
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "fetalsynthseg",
+          "container": "fetalsynthseg_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.0.0",
+          "build_date": "20261014",
+          "docker_archive": "fetalsynthseg_arm64_1.0.0_20261014.docker.tar",
+          "sif": "fetalsynthseg_arm64_1.0.0_20261014.simg",
+          "candidate_tag": "nd-candidate-fetalsynthseg_arm64:f2defa075813",
+          "launcher": null,
+          "pr_number": 3596,
+          "head_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
+          "tests": {
+            "total": 5,
+            "passed": 5,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 4,
+            "fulltest_passed": 4,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "fetalsynthseg launcher available",
+              "fetalsynthseg help",
+              "CPU framework and official checkpoint closure",
+              "Real trained fetal MRI tissue segmentation"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "7.4 MB",
+                "path": "/usr/bin/perl"
+              },
+              {
+                "count": 4,
+                "wasted_space": "3.1 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.6 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/perl-base/auto/re/re.so"
+              },
+              {
+                "count": 2,
+                "wasted_space": "804 kB",
+                "path": "/usr/lib/aarch64-linux-gnu/perl-base/unicore/To/NFKCCF.pl"
+              }
+            ],
+            "efficiency_percent": 98.9568,
+            "wasted_bytes": 21542498,
+            "wasted_bytes_display": "22 MB",
+            "user_wasted_percent": 2.0327
+          }
+        },
+        "candidate_run_id": 38688123032,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38688123032",
+        "native_job_review": {
+          "aarch64": {
+            "head_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
+            "job_id": 116267668134,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38688123032/job/116267668134",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        }
       },
       "merged_sha": null,
       "next_action": "Review both exact f2 upstream architecture reports/all gates at run38688123032;7/7 reserved, no native repeat. Hold merge until focused shared updater correction resolves the staged commit/archive URL/checksum concern.",
@@ -12516,6 +12639,97 @@
           "baseline_sha": "06175b7aae993aab77a58f1445b7ad42e87a5392",
           "checkout": "/tmp/neurocontainers-updater-20261015",
           "scope": "Update planning and focused provider tests only; preserve all installed inputs and runtime generation. User explicitly allowed concurrent subagent implementation. Instruction files excluded from isolated checkout and untouched."
+        }
+      },
+      "upstream_actual_scientific_review": {
+        "aarch64": {
+          "source_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
+          "run_id": 38688123032,
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38688123032",
+          "pr_number": 3596,
+          "actual_zero_exit_functional_commands": 4,
+          "aggregate_counts": {
+            "passed": 5,
+            "total": 5,
+            "failed": 0,
+            "skipped": 0
+          },
+          "trained_case_seconds": 43.79453635215759,
+          "full_mri_metrics": {
+            "input_shape": [
+              256,
+              256,
+              256
+            ],
+            "labels": [
+              0.0,
+              1.0,
+              2.0,
+              3.0,
+              4.0,
+              5.0,
+              6.0,
+              7.0
+            ],
+            "real_model_inputs": 2,
+            "model_seconds": 42.0,
+            "trained_case_seconds": 43.79453635215759,
+            "exact_axis_flip_correspondence": true,
+            "physical_geometry": "Original and mirrored affines/spacing within existing NIfTI float32 bounds.",
+            "unchanged_hashes": [
+              "official_mri",
+              "official_reference",
+              "checkpoint",
+              "full_mirrored_input"
+            ]
+          },
+          "stdout": "Official full fetal MRI inference running after0s\nActual FetalSynthSeg trained CPU inference on full official fetal MRI verified in42.0s; shape(256, 256, 256), labels[0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0], exact full-field axis-flip label correspondence, unchanged image/reference/checkpoint hashes\n",
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "7.4 MB",
+                "path": "/usr/bin/perl"
+              },
+              {
+                "count": 4,
+                "wasted_space": "3.1 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.6 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/perl-base/auto/re/re.so"
+              },
+              {
+                "count": 2,
+                "wasted_space": "804 kB",
+                "path": "/usr/lib/aarch64-linux-gnu/perl-base/unicore/To/NFKCCF.pl"
+              }
+            ],
+            "efficiency_percent": 98.9568,
+            "wasted_bytes": 21542498,
+            "wasted_bytes_display": "22 MB",
+            "user_wasted_percent": 2.0327
+          },
+          "job_id": 116267668134,
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38688123032/job/116267668134",
+          "runner_labels": [
+            "blacksmith-8vcpu-ubuntu-2404-arm"
+          ],
+          "report_artifact_id": 11950769976,
+          "fulltest_sha256": "09012bceca06e9abe56b47911645f8e795731464d15fae6fa52e14d4e1923df7",
+          "native_proof_run_id": 38462896594,
+          "recorded_at": "2026-10-15T05:48:57.948645+00:00",
+          "scope": "Complete official fetal MRI and full mirrored volume/default released checkpoint CPU inference; unchanged native-proven scientific assertions. No clinical/GPU accuracy or cross-architecture parity claim.",
+          "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/199#issuecomment-6185424830"
         }
       }
     },
@@ -29287,7 +29501,101 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3637",
       "upstream_ci": {
         "initial_run_id": 38676101699,
-        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38676101699"
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38676101699",
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "petu",
+          "container": "petu_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "0.0.7",
+          "build_date": "20261014",
+          "docker_archive": "petu_arm64_0.0.7_20261014.docker.tar",
+          "sif": "petu_arm64_0.0.7_20261014.simg",
+          "candidate_tag": "nd-candidate-petu_arm64:260e3ebe8ff0",
+          "launcher": "petu",
+          "pr_number": 3637,
+          "head_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
+          "tests": {
+            "total": 15,
+            "passed": 15,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 14,
+            "fulltest_passed": 14,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "package imports",
+              "reports the packaged version",
+              "runs outside HOME",
+              "torch imports and computes on CPU",
+              "model weights are bundled in the image",
+              "bundled weights are the declared version",
+              "weights are pinned, not fetched at run time",
+              "petu CLI is on PATH and renders help",
+              "the CLI selects a device instead of assuming CUDA",
+              "the CLI exposes thread control",
+              "the container does not export a python interpreter",
+              "Native CPU model dependency closure",
+              "Analytical three-component probability and dust processing",
+              "Full trained four-modality PeTu MRI inference"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "811 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.7865,
+            "wasted_bytes": 18010005,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.3713
+          }
+        },
+        "candidate_run_id": 38676101699,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38676101699",
+        "native_job_review": {
+          "aarch64": {
+            "head_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
+            "job_id": 116234726948,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38676101699/job/116234726948",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        }
       },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
@@ -29406,7 +29714,73 @@
         "scope": "User approved bounded continuation for PeTu/DeepLabCut/TractSeg/GlioMODA/FetalSynthSeg. Renew12h elapsed; retain all prior attempts and source evidence. Seven total only for GlioMODA/FetalSynthSeg; other three remain6. Reuse passed native/ARM results."
       },
       "pending_upstream_issue": 3637,
-      "pr_number": 3637
+      "pr_number": 3637,
+      "upstream_actual_scientific_review": {
+        "aarch64": {
+          "source_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
+          "run_id": 38676101699,
+          "actual_zero_exit_functional_commands": 14,
+          "full_mri_seconds": 4682.884822368622,
+          "metrics": {
+            "component_voxels": {
+              "cc": 3752,
+              "et": 30681,
+              "t2h": 134530
+            },
+            "input_sha256": {
+              "t1c": "4399faadcc45c8a4541313cdf88aced7d835ed59ac3078d950e0eac293d603f5",
+              "t1n": "e860924b936e301ddeba20409fbb59dde322475cb49328f1b46a9235c792e73e",
+              "t2f": "82aed8546af5e6d8d94fd91c56227abdcf6120130390d1556c4342a208980604",
+              "t2w": "4cd389cc57d12134a30a898c66532228126b9a7d0600ee578e82a32144528b51"
+            },
+            "mode": "t1c-fla-t1-t2",
+            "scope": "Adult skull-stripped BraTS runtime example; paediatric accuracy unverified",
+            "shape": [
+              240,
+              240,
+              155
+            ],
+            "unchanged_weight_files": 84,
+            "weights_version": "1.0.0"
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "811 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.7865,
+            "wasted_bytes": 18010005,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.3713
+          },
+          "scope": "Complete adult skull-stripped BraTS MRI/default four-modality CPU inference, three binary masks and physical grids, all input hashes and 84 model files unchanged; exact analytical threshold/dust checks. No paediatric clinical accuracy, optic-nerve accuracy, GPU or bitwise architecture parity claim."
+        }
+      }
     },
     {
       "recipe": "prostatefiducialseg",
