@@ -146,3 +146,10 @@ command exits/test counts. Record the raw log hash and root workflow SHA in
 [TotalSegmentator issue39](https://github.com/Vbitz/neurocontainers-arm64/issues/39)
 and [LQT issue182](https://github.com/Vbitz/neurocontainers-arm64/issues/182)
 record this recovery with full scientific proofs.
+
+Later on 2026-10-15, the user separately authorized **seven total builds for
+DeepLabCut**: four used attempts, one native run of the committed real GUI
+Quit-dialog fixture correction, then two upstream architecture jobs. Its renewed
+deadline remains unchanged; the earlier six-build record stays in elapsed
+history. All GUI, model, scientific assertions and the120-second GUI timeout
+remain in force. The per-recipe queue records this specific authorization.

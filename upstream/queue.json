@@ -10504,18 +10504,18 @@
       "port_files": [
         "recipes/deeplabcut/build.yaml"
       ],
-      "status": "blocked-verification-budget",
+      "status": "ready-to-retry",
       "branch": "arm64/upstream-deeplabcut-20261012",
       "baseline_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
       "candidate_sha": "223e22f55f244fdd219ca771053c649f8e2004ce",
       "started_at": "2026-10-14T08:17:00+00:00",
       "deadline": "2026-10-15T15:21:33+00:00",
       "attempts": 4,
-      "run_id": 38676319709,
+      "run_id": null,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Await separate DeepLabCut seven-total-build authorization:4used, corrected native1+both upstream2 would total7. Real GUI Yes-button fixture committed/AST/schema/both generations/spelling validated. Keep current renewed deadline and used counters; no dispatch until authorized.",
+      "next_action": "User approved seven total. Await one physical build slot, then native attempt5 at pushed223e22f5; require all104 cases including real Quit-dialog acceptance. Only after full native pass open own upstream PR for both architectures6and7. Deadline unchanged15:21:33UTC; no successful corrected-source runtime claimed yet.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.2",
@@ -10544,7 +10544,7 @@
       ],
       "arm64_attempts": 4,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38676319709",
+      "run_url": null,
       "candidate_history": [
         {
           "source_sha": "095590a65636bb700df290143c04dcab6a65e372",
@@ -10708,10 +10708,33 @@
         "requested_max_build_attempts": 7,
         "used_attempts": 4,
         "scope": "DeepLabCut only; one corrected native+two upstream architectures, renewed deadline unchanged",
-        "answered": false,
+        "answered": true,
         "reviewable_correction_sha": "223e22f55f244fdd219ca771053c649f8e2004ce",
-        "reason": "All103 other checks pass; actual GUI fixture must click real mandatory Quit confirmation. Real Qt Yes-button correction committed/validated; no timeout/gate weakened."
-      }
+        "reason": "All103 other checks pass; actual GUI fixture must click real mandatory Quit confirmation. Real Qt Yes-button correction committed/validated; no timeout/gate weakened.",
+        "answer": "Allow seven total for DeepLabCut",
+        "answered_at": "2026-10-15T05:18:04.858133+00:00"
+      },
+      "max_build_attempts": 7,
+      "build_budget_authorization": {
+        "approved": true,
+        "authorized_by": "user",
+        "answer": "Allow seven total for DeepLabCut",
+        "approved_at": "2026-10-15T05:18:04.858133+00:00",
+        "recipe": "deeplabcut",
+        "max_build_attempts": 7,
+        "used_build_attempts_preserved": 4,
+        "renewed_deadline": "2026-10-15T15:21:33+00:00",
+        "scope": "One corrected-source native run plus both upstream architecture jobs; retain all four attempts, original elapsed history and renewed deadline. No timeout or scientific/GUI test weakening."
+      },
+      "native_run_history": [
+        {
+          "run_id": 38676319709,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38676319709",
+          "source_sha": "71051f77a38a5d21cda94bbcc8a995110afe448b",
+          "attempt": 4,
+          "outcome": "103/104; GUI fixture blocked on real mandatory Quit confirmation; actual font/X11 closure and other103 cases passed."
+        }
+      ]
     },
     {
       "recipe": "dicompare",
