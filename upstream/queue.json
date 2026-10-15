@@ -10504,7 +10504,7 @@
       "port_files": [
         "recipes/deeplabcut/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-deeplabcut-20261012",
       "baseline_sha": "9820cbe9fdfd2e29d8af59e7f28c83b8239e2b7d",
       "candidate_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
@@ -10613,11 +10613,108 @@
             "build_sif_fulltest_dive_manifest_gates": "success",
             "fulltest_log_summary_confirmed": true,
             "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          },
+          "aarch64": {
+            "head_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+            "job_id": 116272936234,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38689171358/job/116272936234",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
           }
-        }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "deeplabcut",
+          "container": "deeplabcut_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "3.0.2",
+          "build_date": "20261015",
+          "docker_archive": "deeplabcut_arm64_3.0.2_20261015.docker.tar",
+          "sif": "deeplabcut_arm64_3.0.2_20261015.simg",
+          "candidate_tag": "nd-candidate-deeplabcut_arm64:b6cc16113134",
+          "launcher": null,
+          "pr_number": 3644,
+          "head_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+          "tests": {
+            "total": 104,
+            "passed": 104,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 103,
+            "fulltest_passed": 103,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "deeplabcut imports",
+              "deeplabcut is discoverable",
+              "deeplabcut reports the expected version",
+              "deeplabcut records installed files",
+              "torch imports",
+              "torch is discoverable",
+              "torch has package metadata",
+              "torch records installed files",
+              "torchvision imports",
+              "torchvision is discoverable",
+              "torchvision has package metadata",
+              "torchvision records installed files",
+              "numpy imports",
+              "numpy is discoverable",
+              "numpy has package metadata",
+              "numpy records installed files",
+              "pandas imports",
+              "pandas is discoverable",
+              "pandas has package metadata"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "813 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8181,
+            "wasted_bytes": 18033369,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.3151
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "merged_sha": "335c827525e3be92c650c8aeea6134a7dcc41da5",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.2",
@@ -10959,8 +11056,80 @@
           },
           "raw_report_folder": "/private/tmp/deeplabcut-upstream-x86-actual-reports",
           "scope": "Both CPU backends/native NMS/package closure; real Qt/XCB project window, mandatory Yes-button confirmation, active receiver shutdown and finally-restored streams. Released HRNet/MobileNet SuperAnimal CPU pose pipeline: three unchanged 500x500 real-dog frames, all39 ordered official bodypart names, finite/confident in-frame coordinates, three HDF rows/decoded labeled frames, immutable input video/image and both checkpoints. No biological accuracy, temporal tracking, adaptation/training, GPU or bitwise architecture parity claim."
+        },
+        "aarch64": {
+          "source_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+          "run_id": 38689171358,
+          "pr_number": 3644,
+          "architecture": "aarch64",
+          "actual_zero_exit_functional_commands": 103,
+          "gui_seconds": 32.30984663963318,
+          "cpu_backends_seconds": 21.156599760055542,
+          "full_pose_case_seconds": 38.89173221588135,
+          "metrics": {
+            "bodyparts": 39,
+            "confident_in_frame_points": [
+              38,
+              38,
+              38
+            ],
+            "frames": 3,
+            "image_sha256": "828986ba0cdd909e3f6029d357938efba67d236350f724224b2e45cf0af0841f",
+            "likelihood_range": [
+              0.06256510317325592,
+              1.0
+            ],
+            "model_revision": "1ad30fb80cd666f1e5c91578d1cf63bccfa84f80",
+            "scope": "Three identical real-animal frames; coordinate runtime and HDF/annotated-video contracts, no biological accuracy or temporal-tracking claim",
+            "shape": [
+              500,
+              500
+            ],
+            "unchanged_checkpoints": {
+              "superanimal_quadruped_fasterrcnn_mobilenet_v3_large_fpn.pt": "aac3d9dcd9f1082bd3dd17a277f12b588cdd242859bf0a45b2cf7c4ca1229df5",
+              "superanimal_quadruped_hrnet_w32.pt": "a42e58d56bb32f8b4f4fe17ea9ed9511cebc7b7949ac56b97fa6f3a49587c31e"
+            }
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "9.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "813 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.8181,
+            "wasted_bytes": 18033369,
+            "wasted_bytes_display": "18 MB",
+            "user_wasted_percent": 0.3151
+          },
+          "raw_report_folder": "/private/tmp/deeplabcut-upstream-arm-actual-reports",
+          "scope": "Both CPU backends/native NMS/package closure; real Qt/XCB project window, mandatory Yes-button confirmation, active receiver shutdown and finally-restored streams. Released HRNet/MobileNet SuperAnimal CPU pose pipeline: three unchanged 500x500 real-dog frames, all39 ordered official bodypart names, finite/confident in-frame coordinates, three HDF rows/decoded labeled frames, immutable input video/image and both checkpoints. No biological accuracy, temporal tracking, adaptation/training, GPU or bitwise architecture parity claim."
         }
-      }
+      },
+      "merged_at": "2026-10-15T06:32:04Z"
     },
     {
       "recipe": "dicompare",
@@ -12431,7 +12600,7 @@
         "recipes/fetalsynthseg/build.yaml",
         "recipes/fetalsynthseg/fulltest.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-fetalsynthseg-20261012",
       "baseline_sha": "f3c726bd920e9c913fe96b2de28845232ffa76d0",
       "candidate_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
@@ -12615,10 +12784,12 @@
           "both": "success",
           "mergeStateStatus": "CLEAN",
           "mergeable": "MERGEABLE"
-        }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Both exactf2 native/upstream scientific suites and required gates verified. Wait supporting updater PR3645 required Linux checks and normal merge, then lift updater hold and merge existing containerPR3596.7/7, no new container builds.",
+      "merged_sha": "e56f759dc30b5a099d7310ddc6221600f881ab40",
+      "next_action": "Native retest and individual upstream PR verified and merged. Audit the automatically triggered promotion and committed release metadata; preserve exact source evidence without rebuilding.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -12894,7 +13065,7 @@
         "scope": "Actual official pretrained FetalSynthSeg checkpoint inference on complete256cubed fetal MRI and full mirrored copy; all8labels present, finite/nonempty foreground, original/reference/checkpoint/derived input unchanged and exact full-field mirrored label correspondence. Affine/zoom bounds only reflect float32 NIfTI encoding, not relaxed biological accuracy. No clinical/GPU accuracy claim."
       },
       "updater_merge_hold": {
-        "resolved": false,
+        "resolved": true,
         "comment_url": "https://github.com/neurodesk/neurocontainers/pull/3596#issuecomment-6159658239",
         "reason": "HTTP digest provider does not render source_commit URL from newly staged github_commit observation. Need focused shared updater fix; current pinned nativef2 input/test evidence unaffected.",
         "candidate_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
@@ -12920,7 +13091,7 @@
           "candidate_sha": "d858863c846743923c12975ea866d623c1c0022e",
           "baseline_sha": "06175b7aae993aab77a58f1445b7ad42e87a5392",
           "branch": "arm64/fetal-updater-archive-context-20261015",
-          "status": "upstream-ci-pending",
+          "status": "merged",
           "local_validation": {
             "focused_tests_passed": 17,
             "builder_suite_passed": 1364,
@@ -12929,8 +13100,28 @@
             "recipes_validated": 280,
             "dockerfiles_generated": 383,
             "configured_mypy": "success"
-          }
-        }
+          },
+          "merged_sha": "890a1c44fad96388ef97878da9af88cad4d5daa6",
+          "merged_at": "2026-10-15T06:31:40Z",
+          "ci_evidence": {
+            "py310": {
+              "summary": "2026-10-15T06:25:22.7134580Z ======================= 1383 passed, 4 skipped in 43.79s =======================",
+              "new_http_commit_cases_passed": 17
+            },
+            "py312": {
+              "summary": "2026-10-15T06:25:24.7881770Z ======================= 1384 passed, 3 skipped in 43.23s =======================",
+              "new_http_commit_cases_passed": 17
+            },
+            "buildkit": {
+              "summary": "2026-10-15T06:25:01.7498996Z ============================== 5 passed in 7.21s ===============================",
+              "all_five_fixture_checks_passed": true
+            }
+          },
+          "quality": "success",
+          "release_gate": "success"
+        },
+        "resolved_at": "2026-10-15T06:31:43.771949+00:00",
+        "resolution": "Supporting updaterPR3645 merged after full Linux unit/BuildKit/recipe/required gates. Current container sourcef2 and installed image inputs/scientific tests are unchanged; no container rebuild required for update-planning-only patch."
       },
       "upstream_actual_scientific_review": {
         "aarch64": {
@@ -13111,7 +13302,8 @@
           "scope": "Complete official fetal MRI and full mirrored volume/default released checkpoint CPU inference; unchanged native-proven scientific assertions. No clinical/GPU accuracy or cross-architecture parity claim.",
           "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/199#issuecomment-6185546726"
         }
-      }
+      },
+      "merged_at": "2026-10-15T06:31:53Z"
     },
     {
       "recipe": "fitlins",
