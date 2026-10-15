@@ -12434,10 +12434,19 @@
             "wasted_bytes_display": "381 MB",
             "user_wasted_percent": 2.3893
           }
+        },
+        "required_gates_review": {
+          "source_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
+          "reviewed_at": "2026-10-15T06:03:02.892224+00:00",
+          "Code quality": "https://github.com/neurodesk/neurocontainers/actions/runs/38688122957/job/116268034065",
+          "Container release gate": "https://github.com/neurodesk/neurocontainers/actions/runs/38688123032/job/116271522120",
+          "both": "success",
+          "mergeStateStatus": "CLEAN",
+          "mergeable": "MERGEABLE"
         }
       },
       "merged_sha": null,
-      "next_action": "Both corrected-source upstream architectures verified5/5 with actual complete MRI/mirrored-volume scientific reports and Dive. Wait latest required gates and focused shared-updater fix before normal merge;7/7, no new container attempts.",
+      "next_action": "All exact corrected-source container tests, actual MRI scientific reports and required upstream gates pass. Only blocker to normal merge is focused shared updater archive-context fix;7/7, no further container builds.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
