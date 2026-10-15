@@ -10515,7 +10515,106 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3644",
       "upstream_ci": {
         "initial_run_id": 38689171358,
-        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38689171358"
+        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38689171358",
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "deeplabcut",
+          "container": "deeplabcut",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "3.0.2",
+          "build_date": "20261015",
+          "docker_archive": "deeplabcut_3.0.2_20261015.docker.tar",
+          "sif": "deeplabcut_3.0.2_20261015.simg",
+          "candidate_tag": "nd-candidate-deeplabcut:b6cc16113134",
+          "launcher": null,
+          "pr_number": 3644,
+          "head_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+          "tests": {
+            "total": 104,
+            "passed": 104,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 103,
+            "fulltest_passed": 103,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "deeplabcut imports",
+              "deeplabcut is discoverable",
+              "deeplabcut reports the expected version",
+              "deeplabcut records installed files",
+              "torch imports",
+              "torch is discoverable",
+              "torch has package metadata",
+              "torch records installed files",
+              "torchvision imports",
+              "torchvision is discoverable",
+              "torchvision has package metadata",
+              "torchvision records installed files",
+              "numpy imports",
+              "numpy is discoverable",
+              "numpy has package metadata",
+              "numpy records installed files",
+              "pandas imports",
+              "pandas is discoverable",
+              "pandas has package metadata"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "814 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.9044,
+            "wasted_bytes": 19045196,
+            "wasted_bytes_display": "19 MB",
+            "user_wasted_percent": 0.165
+          }
+        },
+        "candidate_run_id": 38689171358,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38689171358",
+        "native_job_review": {
+          "x86_64": {
+            "head_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+            "job_id": 116272936236,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38689171358/job/116272936236",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success",
+            "fulltest_log_summary_confirmed": true,
+            "note": "Fresh native Docker/SIF job and strict fulltest contracts; no substituted published image or skipped essential capability."
+          }
+        }
       },
       "merged_sha": null,
       "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
@@ -10788,7 +10887,80 @@
         ]
       },
       "pending_upstream_issue": 3644,
-      "pr_number": 3644
+      "pr_number": 3644,
+      "upstream_actual_scientific_review": {
+        "x86_64": {
+          "source_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+          "run_id": 38689171358,
+          "pr_number": 3644,
+          "architecture": "x86_64",
+          "actual_zero_exit_functional_commands": 103,
+          "gui_seconds": 9.360774040222168,
+          "cpu_backends_seconds": 8.207252502441406,
+          "full_pose_case_seconds": 21.992722988128662,
+          "metrics": {
+            "bodyparts": 39,
+            "confident_in_frame_points": [
+              38,
+              38,
+              38
+            ],
+            "frames": 3,
+            "image_sha256": "828986ba0cdd909e3f6029d357938efba67d236350f724224b2e45cf0af0841f",
+            "likelihood_range": [
+              0.0625651627779007,
+              1.0
+            ],
+            "model_revision": "1ad30fb80cd666f1e5c91578d1cf63bccfa84f80",
+            "scope": "Three identical real-animal frames; coordinate runtime and HDF/annotated-video contracts, no biological accuracy or temporal-tracking claim",
+            "shape": [
+              500,
+              500
+            ],
+            "unchanged_checkpoints": {
+              "superanimal_quadruped_fasterrcnn_mobilenet_v3_large_fpn.pt": "aac3d9dcd9f1082bd3dd17a277f12b588cdd242859bf0a45b2cf7c4ca1229df5",
+              "superanimal_quadruped_hrnet_w32.pt": "a42e58d56bb32f8b4f4fe17ea9ed9511cebc7b7949ac56b97fa6f3a49587c31e"
+            }
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "11 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "814 kB",
+                "path": "/var/log/dpkg.log"
+              }
+            ],
+            "efficiency_percent": 99.9044,
+            "wasted_bytes": 19045196,
+            "wasted_bytes_display": "19 MB",
+            "user_wasted_percent": 0.165
+          },
+          "raw_report_folder": "/private/tmp/deeplabcut-upstream-x86-actual-reports",
+          "scope": "Both CPU backends/native NMS/package closure; real Qt/XCB project window, mandatory Yes-button confirmation, active receiver shutdown and finally-restored streams. Released HRNet/MobileNet SuperAnimal CPU pose pipeline: three unchanged 500x500 real-dog frames, all39 ordered official bodypart names, finite/confident in-frame coordinates, three HDF rows/decoded labeled frames, immutable input video/image and both checkpoints. No biological accuracy, temporal tracking, adaptation/training, GPU or bitwise architecture parity claim."
+        }
+      }
     },
     {
       "recipe": "dicompare",
