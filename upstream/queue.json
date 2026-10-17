@@ -6248,7 +6248,7 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T09:04:18.666840+00:00",
+        "checked_at": "2026-10-17T09:30:08.503909+00:00",
         "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "run_id": 39015848600,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
@@ -6740,7 +6740,28 @@
             }
           ]
         }
-      ]
+      ],
+      "external_configuration_review": {
+        "checked_at": "2026-10-17T09:25:45.022617+00:00",
+        "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
+        "scope": "Read-only recipe build-native.sh, provider.cmake and inline pins review; no dependency-internal investigation or edits. Not a policy/release/ABI/scientific approval.",
+        "build_script_blob_sha": "1671887d1fb21d77b3cede5cc2849a143e3f14a5",
+        "build_script_sha256": "bf4226f7486884b1e32bd2100dcc654417a87537009200547fd6bb32a2abcb6c",
+        "observations": [
+          "Script checks exact pinned official repository/submodule commits and clean source checkouts before configuring.",
+          "Build uses ACL SCons, CMake and PyTorch setup.py; provider.cmake selects OpenBLAS through standard FindBLAS and asserts selected library path. No direct dependency-source patch observed in the reviewed files.",
+          "Configured provider checks compare wheel-member hashes, OpenBLAS LP64/OpenMP/CBLAS attributes, selected Python/compiler/cache paths and installed package versions. These configured assertions are not proof they have executed successfully.",
+          "Inline pins explicitly state original wheel CMake cache/ACL provenance/compiler invocations unavailable, feasibility-only, DIAGNOSTIC_BLOCKED and merge_eligible=false."
+        ],
+        "declared_pins": {
+          "torch_version": "2.13.0+cpu",
+          "torch_commit": "cf30153c4c131c8164ee7798e5022d810682e2cb",
+          "acl_commit": "007264fa740de5723ebddef16b7bb3657692c088",
+          "onednn_commit": "80afa71049cd69a3df32adcccb623b12cd7baa22",
+          "openblas_commit": "62bcfb0dc9f1cfa685fc04135c50e2780c303137"
+        },
+        "limitations": "This review does not prove declared tag/version correspondence, original-wheel build equivalence, native build/import success, complete source-policy compliance or scientific functionality. Preserve diagnostic hold and inspect exact terminal build/scientific evidence; no runtime port or own retry."
+      }
     },
     {
       "recipe": "brainlifecli",
@@ -25848,12 +25869,42 @@
           },
           "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source.",
           "publication_observation": {
-            "checked_at": "2026-10-17T09:04:18.666840+00:00",
+            "checked_at": "2026-10-17T09:30:08.503909+00:00",
             "run_id": 39006597358,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained."
+            "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained.",
+            "publisher_jobs": [
+              {
+                "id": 117320285045,
+                "name": "publish (candidate-mne-1b64eedba421ea318435f220db170a5192e710d6)",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-17T09:07:29Z",
+                "labels": [
+                  "neurodesk-syd-arcrunner-neurocontainers"
+                ],
+                "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358/job/117320285045",
+                "active_steps": [
+                  "Attach tested SIF to staged OCI images"
+                ]
+              },
+              {
+                "id": 117320285054,
+                "name": "publish (candidate-mne_arm64-1b64eedba421ea318435f220db170a5192e710d6)",
+                "status": "in_progress",
+                "conclusion": null,
+                "started_at": "2026-10-17T08:38:19Z",
+                "labels": [
+                  "neurodesk-syd-arcrunner-neurocontainers"
+                ],
+                "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358/job/117320285054",
+                "active_steps": [
+                  "Attach tested SIF to staged OCI images"
+                ]
+              }
+            ]
           }
         }
       ]
@@ -26509,12 +26560,38 @@
           },
           "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source.",
           "publication_observation": {
-            "checked_at": "2026-10-17T09:04:18.666840+00:00",
+            "checked_at": "2026-10-17T09:30:08.503909+00:00",
             "run_id": 39007028913,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
             "status": "queued",
             "conclusion": null,
-            "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained."
+            "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained.",
+            "publisher_jobs": [
+              {
+                "id": 117321521782,
+                "name": "publish (candidate-mneextended_arm64-f874d12f605da513b3eddb380799416b5bf6df76)",
+                "status": "queued",
+                "conclusion": null,
+                "started_at": "2026-10-17T05:39:14Z",
+                "labels": [
+                  "neurodesk-syd-arcrunner-neurocontainers"
+                ],
+                "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913/job/117321521782",
+                "active_steps": []
+              },
+              {
+                "id": 117321521800,
+                "name": "publish (candidate-mneextended-f874d12f605da513b3eddb380799416b5bf6df76)",
+                "status": "queued",
+                "conclusion": null,
+                "started_at": "2026-10-17T05:39:14Z",
+                "labels": [
+                  "neurodesk-syd-arcrunner-neurocontainers"
+                ],
+                "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913/job/117321521800",
+                "active_steps": []
+              }
+            ]
           }
         }
       ]
@@ -45049,9 +45126,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-17T08:39:32.667703+00:00",
-    "previous_sha": "371c24ac8aa01cc3015681a6b7b987aedda58a46",
-    "new_sha": "16bcfd77bc5334fa3b794eeb8a6617563e759e46",
+    "checked_at": "2026-10-17T09:17:03.481787+00:00",
+    "previous_sha": "16bcfd77bc5334fa3b794eeb8a6617563e759e46",
+    "new_sha": "0fbcbca21518d7817dfeb9d2c20e9249d1b610c7",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },
@@ -45229,11 +45306,11 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T09:04:18.666840+00:00",
-    "top_level_base_commit": "1de3b03ceb2200e1b1a6bf1a72361c60e68f99d7",
+    "checked_at": "2026-10-17T09:30:08.503909+00:00",
+    "top_level_base_commit": "66b6ffc2a1672dcf04f4fecb5b5f86e1604c4aae",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
-    "upstream_fork_main_sha": "16bcfd77bc5334fa3b794eeb8a6617563e759e46",
+    "upstream_fork_main_sha": "0fbcbca21518d7817dfeb9d2c20e9249d1b610c7",
     "inventory_status_counts": {
       "excluded-by-user": 17,
       "blocked-prerequisite": 2,
@@ -45253,7 +45330,7 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Continue observing existing BrainLes9564/run39015848600 jobs; review exact terminal reports before any acceptance. MNE/MNEExtended automatic publications remain separately monitored. Six budget questions unanswered; no own retries, deadline resets or repeated passing builds. Full129 inventory/112scope objective remains incomplete.",
+    "next_action": "Observe existing BrainLes9564/run39015848600 native jobs and MNE1b64/run39006597358 publication; review exact terminal scientific reports or trusted publication previews/metadata/publicSIFs. MNEExtended later publication remains queued. Six budget answers pending; preserve all deadlines/counters and original source proofs. Full goal incomplete.",
     "live_external_jobs": [
       {
         "recipe": "brainles-preprocessing",
@@ -45280,26 +45357,82 @@
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735065"
       }
     ],
-    "last_goal_turn_classification": "verified-wait",
-    "progress": "Authoritative BrainLes9564 native jobs remain live in image construction. No new terminal reports or own builds. Corrected stale PyDeface x86-only wording to acknowledge separately verified ARM full-mask registration while retaining normmi/T2 timeout failures.",
+    "last_goal_turn_classification": "progress",
+    "progress": "Fork normal-fast-forward0fb; complete delta from audited16bc changes only outside-inventory mrtrix3src metadata, all target/shared files identical. Limited BrainLes recipe configuration review recorded, explicit diagnostic nonmergeeligible hold preserved. MNE automatic publication started and progressed to SIF attachment; no new scientific builds or terminal publication proof claimed.",
     "active_automatic_promotions": [
       {
         "recipe": "mne",
-        "checked_at": "2026-10-17T09:04:18.666840+00:00",
+        "checked_at": "2026-10-17T09:30:08.503909+00:00",
         "run_id": 39006597358,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358",
-        "status": "queued",
+        "status": "in_progress",
         "conclusion": null,
-        "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained."
+        "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained.",
+        "publisher_jobs": [
+          {
+            "id": 117320285045,
+            "name": "publish (candidate-mne-1b64eedba421ea318435f220db170a5192e710d6)",
+            "status": "in_progress",
+            "conclusion": null,
+            "started_at": "2026-10-17T09:07:29Z",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358/job/117320285045",
+            "active_steps": [
+              "Attach tested SIF to staged OCI images"
+            ]
+          },
+          {
+            "id": 117320285054,
+            "name": "publish (candidate-mne_arm64-1b64eedba421ea318435f220db170a5192e710d6)",
+            "status": "in_progress",
+            "conclusion": null,
+            "started_at": "2026-10-17T08:38:19Z",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358/job/117320285054",
+            "active_steps": [
+              "Attach tested SIF to staged OCI images"
+            ]
+          }
+        ]
       },
       {
         "recipe": "mneextended",
-        "checked_at": "2026-10-17T09:04:18.666840+00:00",
+        "checked_at": "2026-10-17T09:30:08.503909+00:00",
         "run_id": 39007028913,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
         "status": "queued",
         "conclusion": null,
-        "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained."
+        "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained.",
+        "publisher_jobs": [
+          {
+            "id": 117321521782,
+            "name": "publish (candidate-mneextended_arm64-f874d12f605da513b3eddb380799416b5bf6df76)",
+            "status": "queued",
+            "conclusion": null,
+            "started_at": "2026-10-17T05:39:14Z",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913/job/117321521782",
+            "active_steps": []
+          },
+          {
+            "id": 117321521800,
+            "name": "publish (candidate-mneextended-f874d12f605da513b3eddb380799416b5bf6df76)",
+            "status": "queued",
+            "conclusion": null,
+            "started_at": "2026-10-17T05:39:14Z",
+            "labels": [
+              "neurodesk-syd-arcrunner-neurocontainers"
+            ],
+            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913/job/117321521800",
+            "active_steps": []
+          }
+        ]
       }
     ],
     "pending_budget_replies": [

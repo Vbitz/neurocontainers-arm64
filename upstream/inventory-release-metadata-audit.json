@@ -1863,10 +1863,19 @@
     "scope": "Static scan of all current-version x86/ARM app records, including GUI commands, app names and nested Apptainer arguments, within the112 in-scope recipes. No GUI/runtime execution or publication inferred."
   },
   "unchanged_inventory_tree_observation": {
-    "checked_at": "2026-10-17T05:46:40.987940+00:00",
-    "audited_ref": "c30846086dccdda003a13244ecf6116bc9121e6f",
-    "later_ref": "9981d1d79e63cd49670f6f0c44bd9a6583b7cea7",
-    "changed_inventory_recipe_release_or_builder_paths": [],
-    "note": "Later main changes only the outside-inventory Cryosparc recipe. Existing112-recipe metadata/schema findings remain source-bound at the audited ref; no repeat container tests or publication inferred."
-  }
+    "checked_at": "2026-10-17T09:17:35.311586+00:00",
+    "audited_ref": "16bcfd77bc5334fa3b794eeb8a6617563e759e46",
+    "equivalent_newer_ref": "0fbcbca21518d7817dfeb9d2c20e9249d1b610c7",
+    "complete_changed_paths": [
+      "releases/mrtrix3src/latest.json"
+    ],
+    "scope": "Only an outside-inventory release file changed. All target recipe/release paths and every other tracked file, including shared builder/workflows/locked dependencies, are byte-identical. Existing metadata audit remains valid at this newer ref; no new runtime/publication proof or rebuild claimed."
+  },
+  "unchanged_inventory_tree_observation_history": [
+    {
+      "tracking_commit_sha": "66b6ffc2a1672dcf04f4fecb5b5f86e1604c4aae",
+      "path": "upstream/inventory-release-metadata-audit.json",
+      "field": "unchanged_inventory_tree_observation"
+    }
+  ]
 }
