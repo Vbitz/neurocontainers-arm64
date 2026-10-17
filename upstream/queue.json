@@ -3910,7 +3910,7 @@
         }
       },
       "merged_sha": "fefa5cd8fb582461bd0bf6f1e13142c67dc426c5",
-      "next_action": "Native exact-head proof and both upstream merge-source runtime suites verified before individual PR merge. No image-input changes or new release required.",
+      "next_action": "Native exact-head proof and both upstream merge-source runtime suites verified before individual PR merge. No image-input changes or new release required. Later PR3636 adds one unexecuted fulltest assertion (slicereport renders a QC montage with the bundled FSL tools); await renewed12-hour/max9 verification with6used retained. No recipe/test edits needed. Preserve existing runtime/publication proof; do not call the new assertion tested until actual native results exist.",
       "upstream_review": {
         "exists": true,
         "version": "4.6.2",
@@ -4027,6 +4027,31 @@
           "checked_at": "2026-10-13T00:32:23.058260+00:00",
           "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
         }
+      },
+      "current_fulltest_gap": {
+        "observed_at": "2026-10-17T14:17:28.864388+00:00",
+        "current_upstream": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+        "introduced_by_pr": 3636,
+        "introduced_by_source": "0aa3ee7ddeb8c4be065552f13dc6ee3249bae0f1",
+        "merge_sha": "fdfba2d8c36ec6fb16a24f77e75bb5616a0d201b",
+        "test": "slicereport renders a QC montage with the bundled FSL tools",
+        "candidate_jobs": "skipped",
+        "runtime_jobs": "skipped",
+        "note": "One later fulltest assertion is absent from original tested suite. Original recipe/PR proof remains attributed to its actual source. Removing inert build tests is not evidence that these additional active tests executed.",
+        "revisit_when": "Matching independently completed native results or explicit renewed bounded verification. No recipe or test edit is necessary; the stronger assertion already exists upstream.",
+        "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/54#issuecomment-6234979140"
+      },
+      "pending_budget_question": {
+        "asked_at": "2026-10-17T14:17:28.864388+00:00",
+        "answered": false,
+        "requested_window_hours": 12,
+        "requested_max_build_attempts": 9,
+        "attempts_already_used": 6,
+        "original_deadline_unchanged": "2026-10-13T10:44:00+00:00",
+        "request_accepted_by_tool": true,
+        "tool_acceptance_is_not_user_approval": true,
+        "grouped_with": "qupath",
+        "reason": "Later upstream fulltest assertion added in PR3636 skipped actual container jobs. Need targeted native and both upstream current-suite verification; no recipe/test edits or repeated old-source proof. Existing elapsed window expired; three jobs exceed remaining original cap."
       }
     },
     {
@@ -4225,7 +4250,276 @@
           "checked_at": "2026-10-12T18:42:32.054123+00:00",
           "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
         }
-      }
+      },
+      "later_upstream_updates": [
+        {
+          "observed_at": "2026-10-17T14:17:28.864388+00:00",
+          "kind": "independent-later-version-update",
+          "recipe": "bidsmanager",
+          "version": "1.5.0",
+          "pr_number": 3656,
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3656",
+          "source_sha": "2012574aedee80aee28924a1cd2bddc559e31863",
+          "merge_sha": "d3c1af1221fb1a519c2db7b79deb2d40c836b648",
+          "merged_at": "2026-10-16T17:02:54Z",
+          "run_id": 38846831955,
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38846831955",
+          "reports": {
+            "x86_64": {
+              "schema_version": 3,
+              "recipe": "bidsmanager",
+              "container": "bidsmanager",
+              "variant": "",
+              "architecture": "x86_64",
+              "version": "1.5.0",
+              "build_date": "20261016",
+              "docker_archive": "bidsmanager_1.5.0_20261016.docker.tar",
+              "sif": "bidsmanager_1.5.0_20261016.simg",
+              "candidate_tag": "nd-candidate-bidsmanager:2012574aedee",
+              "launcher": "bidsmgr",
+              "pr_number": 3656,
+              "head_sha": "2012574aedee80aee28924a1cd2bddc559e31863",
+              "tests": {
+                "total": 10,
+                "passed": 10,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 9,
+                "fulltest_passed": 9,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "bids-manager package metadata",
+                  "bidsmgr GUI launcher help",
+                  "bidsmgr-create help",
+                  "bidsmgr-scan help",
+                  "bidsmgr-convert help",
+                  "bidsmgr-metadata help",
+                  "bidsmgr-validate help",
+                  "dcm2niix help",
+                  "Create and reopen dataset workspace"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "11 MB",
+                    "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+                  },
+                  {
+                    "count": 3,
+                    "wasted_space": "1.9 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.4 MB",
+                    "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.4 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "854 kB",
+                    "path": "/var/log/dpkg.log"
+                  }
+                ],
+                "efficiency_percent": 99.0172,
+                "wasted_bytes": 18403915,
+                "wasted_bytes_display": "18 MB",
+                "user_wasted_percent": 1.8652
+              }
+            },
+            "aarch64": {
+              "schema_version": 3,
+              "recipe": "bidsmanager",
+              "container": "bidsmanager_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
+              "version": "1.5.0",
+              "build_date": "20261016",
+              "docker_archive": "bidsmanager_arm64_1.5.0_20261016.docker.tar",
+              "sif": "bidsmanager_arm64_1.5.0_20261016.simg",
+              "candidate_tag": "nd-candidate-bidsmanager_arm64:2012574aedee",
+              "launcher": "bidsmgr",
+              "pr_number": 3656,
+              "head_sha": "2012574aedee80aee28924a1cd2bddc559e31863",
+              "tests": {
+                "total": 10,
+                "passed": 10,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 9,
+                "fulltest_passed": 9,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "bids-manager package metadata",
+                  "bidsmgr GUI launcher help",
+                  "bidsmgr-create help",
+                  "bidsmgr-scan help",
+                  "bidsmgr-convert help",
+                  "bidsmgr-metadata help",
+                  "bidsmgr-validate help",
+                  "dcm2niix help",
+                  "Create and reopen dataset workspace"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "9.3 MB",
+                    "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "2.7 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.5 MB",
+                    "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.4 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "853 kB",
+                    "path": "/var/log/dpkg.log"
+                  }
+                ],
+                "efficiency_percent": 99.0288,
+                "wasted_bytes": 18252799,
+                "wasted_bytes_display": "18 MB",
+                "user_wasted_percent": 1.8022
+              }
+            }
+          },
+          "raw_report_review": {
+            "x86_64": {
+              "raw_test_results_sha256": "b08f933c2f0d3dabfd7595dec96b8babc9d3eb79af45341cb389a06771258fda",
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38846831955/job/116799744202",
+              "runner_labels": [
+                "neurodesk-syd-arcrunner-neurocontainers"
+              ],
+              "all_actual_command_exit_contracts_matched": true,
+              "functional_cases": 9,
+              "nonzero_expected_cases": [],
+              "deploy_counts": {
+                "total": 9,
+                "passed": 9,
+                "failed": 0,
+                "skipped": 0
+              },
+              "deploy_diagnostics": [],
+              "positive_case": {
+                "name": "Create and reopen dataset workspace",
+                "duration_seconds": 1.892763376235962,
+                "stdout": "BIDS dataset ready at: /home/runner/_work/neurocontainers/neurocontainers/candidate/bidsmanager/test-output/fulltest-run-3obiaa8r/work/test_output/bidsmanager-0kuggyud/fresh\nBIDS dataset ready at: /home/runner/_work/neurocontainers/neurocontainers/candidate/bidsmanager/test-output/fulltest-run-3obiaa8r/work/test_output/bidsmanager-0kuggyud/fresh\nBIDS dataset ready at: /home/runner/_work/neurocontainers/neurocontainers/candidate/bidsmanager/test-output/fulltest-run-3obiaa8r/work/test_output/bidsmanager-0kuggyud/existing\nBIDS dataset ready at: /home/runner/_work/neurocontainers/neurocontainers/candidate/bidsmanager/test-output/fulltest-run-3obiaa8r/work/test_output/bidsmanager-0kuggyud/existing\nDataset creation, event replay, idempotent reopen and metadata preservation passed\n",
+                "stderr": ""
+              },
+              "scope": "Actual dataset creation/reopen, event replay, idempotence and metadata preservation. dcm2niix --help emits its invalid-option diagnostic while identifying the backend; this is CLI/error-path evidence, not a positive DICOM conversion or GUI-workflow claim."
+            },
+            "aarch64": {
+              "raw_test_results_sha256": "43aed3284716f712199d5c4f95dedf7ee809e2f9e14f80317be7cfa4b96d9518",
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38846831955/job/116799744208",
+              "runner_labels": [
+                "blacksmith-8vcpu-ubuntu-2404-arm"
+              ],
+              "all_actual_command_exit_contracts_matched": true,
+              "functional_cases": 9,
+              "nonzero_expected_cases": [],
+              "deploy_counts": {
+                "total": 9,
+                "passed": 9,
+                "failed": 0,
+                "skipped": 0
+              },
+              "deploy_diagnostics": [],
+              "positive_case": {
+                "name": "Create and reopen dataset workspace",
+                "duration_seconds": 2.239065170288086,
+                "stdout": "BIDS dataset ready at: /home/runner/_work/neurocontainers/neurocontainers/candidate/bidsmanager_arm64/test-output/fulltest-run-_dozyuut/work/test_output/bidsmanager-f08pxicz/fresh\nBIDS dataset ready at: /home/runner/_work/neurocontainers/neurocontainers/candidate/bidsmanager_arm64/test-output/fulltest-run-_dozyuut/work/test_output/bidsmanager-f08pxicz/fresh\nBIDS dataset ready at: /home/runner/_work/neurocontainers/neurocontainers/candidate/bidsmanager_arm64/test-output/fulltest-run-_dozyuut/work/test_output/bidsmanager-f08pxicz/existing\nBIDS dataset ready at: /home/runner/_work/neurocontainers/neurocontainers/candidate/bidsmanager_arm64/test-output/fulltest-run-_dozyuut/work/test_output/bidsmanager-f08pxicz/existing\nDataset creation, event replay, idempotent reopen and metadata preservation passed\n",
+                "stderr": ""
+              },
+              "scope": "Actual dataset creation/reopen, event replay, idempotence and metadata preservation. dcm2niix --help emits its invalid-option diagnostic while identifying the backend; this is CLI/error-path evidence, not a positive DICOM conversion or GUI-workflow claim."
+            }
+          },
+          "scope": "Actual dataset creation/reopen, event replay, idempotence and metadata preservation. dcm2niix --help emits its invalid-option diagnostic while identifying the backend; this is CLI/error-path evidence, not a positive DICOM conversion or GUI-workflow claim. Fresh native architecture candidates pass all actual workflow gates. Original own-port/root source proof and closed investigation counts/windows remain historical; no exact-root proof or publication claim for this later source from these candidate reports alone.",
+          "observed_external_build_jobs": 2,
+          "original_investigation_accounting_preserved": {
+            "attempts": 4,
+            "deadline": "2026-10-13T06:17:59.717422+00:00",
+            "max_build_attempts": 6
+          },
+          "publication_observation": {
+            "checked_at": "2026-10-17T14:17:49.701540+00:00",
+            "run_id": 38936658599,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38936658599",
+            "status": "completed",
+            "conclusion": "success",
+            "note": "Verified in separate publication_audit for this exact later source; original own-port/root evidence remains historical."
+          },
+          "evidence_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/24#issuecomment-6234977786",
+          "publication_audit": {
+            "checked_at": "2026-10-17T14:17:49.701540+00:00",
+            "status": "verified-published-metadata",
+            "source_sha": "2012574aedee80aee28924a1cd2bddc559e31863",
+            "promotion_run_id": 38936658599,
+            "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38936658599",
+            "metadata": [
+              {
+                "architecture": "aarch64",
+                "path": "releases/bidsmanager_arm64/1.5.0.json",
+                "source_sha": "2012574aedee80aee28924a1cd2bddc559e31863",
+                "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "metadata_commit_sha": "f3eb84b29010f6947d7804c1a93434fb8edc1d76",
+                "expected_build_date": "20261016",
+                "trusted_preview_matches": true,
+                "sif": "bidsmanager_arm64_1.5.0_20261016.simg",
+                "sif_sha256": "6169c90a5485c84c98ae073ce35bd5f62e9ff70c562ab476c4b7e7ad01f424d0",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/bidsmanager_arm64_1.5.0_20261016.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              },
+              {
+                "architecture": "x86_64",
+                "path": "releases/bidsmanager/1.5.0.json",
+                "source_sha": "2012574aedee80aee28924a1cd2bddc559e31863",
+                "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "metadata_commit_sha": "f3eb84b29010f6947d7804c1a93434fb8edc1d76",
+                "expected_build_date": "20261016",
+                "trusted_preview_matches": true,
+                "sif": "bidsmanager_1.5.0_20261016.simg",
+                "sif_sha256": "f5a3131c942eb41ca42c5a831bc6e1bf1a23b014cc95f459b6098157ecd7431c",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/bidsmanager_1.5.0_20261016.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              }
+            ],
+            "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
+          }
+        }
+      ]
     },
     {
       "recipe": "bidsme",
@@ -6248,7 +6542,7 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T14:07:03.422686+00:00",
+        "checked_at": "2026-10-17T14:20:46.124140+00:00",
         "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "run_id": 39015848600,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
@@ -21814,7 +22108,296 @@
         "requested_renewed_hours": 12,
         "preserve_used_attempts": 11,
         "reason": "One final exact merged-source rootnative run; both current upstream architecture passes retained. Four-recipe approval question asked together; do not dispatch until explicit approval."
-      }
+      },
+      "later_upstream_updates": [
+        {
+          "observed_at": "2026-10-17T14:17:28.864388+00:00",
+          "kind": "independent-later-version-update",
+          "recipe": "julia",
+          "version": "1.13.2",
+          "pr_number": 3660,
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3660",
+          "source_sha": "f6eca097494296ca8082d856adc72d70598161e6",
+          "merge_sha": "704134f05705863f5d539fe49e8b2ef1fa894040",
+          "merged_at": "2026-10-16T17:06:03Z",
+          "run_id": 38846861297,
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38846861297",
+          "reports": {
+            "x86_64": {
+              "schema_version": 3,
+              "recipe": "julia",
+              "container": "julia",
+              "variant": "",
+              "architecture": "x86_64",
+              "version": "1.13.2",
+              "build_date": "20261016",
+              "docker_archive": "julia_1.13.2_20261016.docker.tar",
+              "sif": "julia_1.13.2_20261016.simg",
+              "candidate_tag": "nd-candidate-julia:f6eca0974942",
+              "launcher": "julia",
+              "pr_number": 3660,
+              "head_sha": "f6eca097494296ca8082d856adc72d70598161e6",
+              "tests": {
+                "total": 140,
+                "passed": 140,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 139,
+                "fulltest_passed": 139,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "Packages work without a writable home",
+                  "Version check",
+                  "Help output",
+                  "Hidden help options",
+                  "Version constant",
+                  "System kernel info",
+                  "Word size check",
+                  "Julia home directory",
+                  "Basic addition",
+                  "Basic subtraction",
+                  "Basic multiplication",
+                  "Basic division",
+                  "Integer division",
+                  "Modulo operation",
+                  "Power operation",
+                  "Float arithmetic",
+                  "Complex numbers",
+                  "Square root",
+                  "Absolute value"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "9.1 MB",
+                    "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/libs/plotly/plotly.min.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "5.1 MB",
+                    "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js.map"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "4.3 MB",
+                    "path": "/opt/vscode-extensions/korbinianeckstein.niivue-2.9.0/niivue/index.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "4.2 MB",
+                    "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js"
+                  },
+                  {
+                    "count": 5,
+                    "wasted_space": "3.6 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  }
+                ],
+                "efficiency_percent": 97.867,
+                "wasted_bytes": 117537409,
+                "wasted_bytes_display": "118 MB",
+                "user_wasted_percent": 4.1083
+              }
+            },
+            "aarch64": {
+              "schema_version": 3,
+              "recipe": "julia",
+              "container": "julia_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
+              "version": "1.13.2",
+              "build_date": "20261016",
+              "docker_archive": "julia_arm64_1.13.2_20261016.docker.tar",
+              "sif": "julia_arm64_1.13.2_20261016.simg",
+              "candidate_tag": "nd-candidate-julia_arm64:f6eca0974942",
+              "launcher": "julia",
+              "pr_number": 3660,
+              "head_sha": "f6eca097494296ca8082d856adc72d70598161e6",
+              "tests": {
+                "total": 140,
+                "passed": 140,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 139,
+                "fulltest_passed": 139,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "Packages work without a writable home",
+                  "Version check",
+                  "Help output",
+                  "Hidden help options",
+                  "Version constant",
+                  "System kernel info",
+                  "Word size check",
+                  "Julia home directory",
+                  "Basic addition",
+                  "Basic subtraction",
+                  "Basic multiplication",
+                  "Basic division",
+                  "Integer division",
+                  "Modulo operation",
+                  "Power operation",
+                  "Float arithmetic",
+                  "Complex numbers",
+                  "Square root",
+                  "Absolute value"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "9.1 MB",
+                    "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/libs/plotly/plotly.min.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "5.1 MB",
+                    "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js.map"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "4.3 MB",
+                    "path": "/opt/vscode-extensions/korbinianeckstein.niivue-2.9.0/niivue/index.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "4.2 MB",
+                    "path": "/opt/vscode-extensions/julialang.language-julia-1.249.2/dist/extension.js"
+                  },
+                  {
+                    "count": 5,
+                    "wasted_space": "3.6 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  }
+                ],
+                "efficiency_percent": 97.8518,
+                "wasted_bytes": 117581836,
+                "wasted_bytes_display": "118 MB",
+                "user_wasted_percent": 4.1264
+              }
+            }
+          },
+          "raw_report_review": {
+            "x86_64": {
+              "raw_test_results_sha256": "783cf4be73051d605192ffeae304f4923c3c395d50ba5ee13ddc6babd2d0e496",
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38846861297/job/116799943090",
+              "runner_labels": [
+                "neurodesk-syd-arcrunner-neurocontainers"
+              ],
+              "all_actual_command_exit_contracts_matched": true,
+              "functional_cases": 139,
+              "nonzero_expected_cases": [],
+              "deploy_counts": {
+                "total": 1,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0
+              },
+              "deploy_diagnostics": [],
+              "positive_case": {
+                "name": "Packages work without a writable home",
+                "duration_seconds": 11.624258995056152,
+                "stdout": "Packages and workers work without home\n",
+                "stderr": ""
+              },
+              "scope": "Actual default launcher selects a writable private0700 depot with bundled package depot retained; local Distributed worker has matching DEPOT_PATH and a distinct PID. All139 actual cases pass. The Boolean test contains Julia logical OR inside its quoted expression, not a shell failure mask. This later1.13.2 proof does not close the separately pending exact-root proof at1.13.1."
+            },
+            "aarch64": {
+              "raw_test_results_sha256": "4df752af48309dfaec586fde116523cefc91d90bfd6be47a02a9cc53c081551d",
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38846861297/job/116799943065",
+              "runner_labels": [
+                "blacksmith-8vcpu-ubuntu-2404-arm"
+              ],
+              "all_actual_command_exit_contracts_matched": true,
+              "functional_cases": 139,
+              "nonzero_expected_cases": [],
+              "deploy_counts": {
+                "total": 1,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0
+              },
+              "deploy_diagnostics": [],
+              "positive_case": {
+                "name": "Packages work without a writable home",
+                "duration_seconds": 13.853691339492798,
+                "stdout": "Packages and workers work without home\n",
+                "stderr": ""
+              },
+              "scope": "Actual default launcher selects a writable private0700 depot with bundled package depot retained; local Distributed worker has matching DEPOT_PATH and a distinct PID. All139 actual cases pass. The Boolean test contains Julia logical OR inside its quoted expression, not a shell failure mask. This later1.13.2 proof does not close the separately pending exact-root proof at1.13.1."
+            }
+          },
+          "scope": "Actual default launcher selects a writable private0700 depot with bundled package depot retained; local Distributed worker has matching DEPOT_PATH and a distinct PID. All139 actual cases pass. The Boolean test contains Julia logical OR inside its quoted expression, not a shell failure mask. This later1.13.2 proof does not close the separately pending exact-root proof at1.13.1. Fresh native architecture candidates pass all actual workflow gates. Original own-port/root source proof and closed investigation counts/windows remain historical; no exact-root proof or publication claim for this later source from these candidate reports alone.",
+          "observed_external_build_jobs": 2,
+          "original_investigation_accounting_preserved": {
+            "attempts": 11,
+            "deadline": "2026-10-13T07:36:02.461377+00:00",
+            "max_build_attempts": 6
+          },
+          "publication_observation": {
+            "checked_at": "2026-10-17T14:18:00.112695+00:00",
+            "run_id": 38937079320,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38937079320",
+            "status": "completed",
+            "conclusion": "success",
+            "note": "Verified in separate publication_audit for this exact later source; original own-port/root evidence remains historical."
+          },
+          "evidence_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/17#issuecomment-6234978008",
+          "publication_audit": {
+            "checked_at": "2026-10-17T14:18:00.112695+00:00",
+            "status": "verified-published-metadata",
+            "source_sha": "f6eca097494296ca8082d856adc72d70598161e6",
+            "promotion_run_id": 38937079320,
+            "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38937079320",
+            "metadata": [
+              {
+                "architecture": "x86_64",
+                "path": "releases/julia/1.13.2.json",
+                "source_sha": "f6eca097494296ca8082d856adc72d70598161e6",
+                "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "metadata_commit_sha": "f36c4585d67fea536edf5dd60172296a2b6aaba5",
+                "expected_build_date": "20261016",
+                "trusted_preview_matches": true,
+                "sif": "julia_1.13.2_20261016.simg",
+                "sif_sha256": "51c60f38648b85f52828fdcf60f720db98e4196fa6464739bf67b1769df64045",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/julia_1.13.2_20261016.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              },
+              {
+                "architecture": "aarch64",
+                "path": "releases/julia_arm64/1.13.2.json",
+                "source_sha": "f6eca097494296ca8082d856adc72d70598161e6",
+                "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "metadata_commit_sha": "f36c4585d67fea536edf5dd60172296a2b6aaba5",
+                "expected_build_date": "20261016",
+                "trusted_preview_matches": true,
+                "sif": "julia_arm64_1.13.2_20261016.simg",
+                "sif_sha256": "689ba8c931d57693db3c07f1c115106e4499f022cf741a2e79513f88b09c83fb",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/julia_arm64_1.13.2_20261016.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              }
+            ],
+            "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
+          }
+        }
+      ]
     },
     {
       "recipe": "laynii",
@@ -23874,7 +24457,264 @@
           "checked_at": "2026-10-13T00:32:24.072503+00:00",
           "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
         }
-      }
+      },
+      "later_upstream_updates": [
+        {
+          "observed_at": "2026-10-17T14:17:28.864388+00:00",
+          "kind": "independent-post-merge-runtime-fix",
+          "recipe": "mede",
+          "version": "0.0.12",
+          "pr_number": 3558,
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3558",
+          "source_sha": "5cb32ea279b231cbb544172268e9ab29bbd27356",
+          "merge_sha": "70e81105602d8868b7491b95e19e62faeb63e0da",
+          "merged_at": "2026-10-13T02:05:21Z",
+          "run_id": 38332790640,
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38332790640",
+          "reports": {
+            "aarch64": {
+              "schema_version": 3,
+              "recipe": "mede",
+              "container": "mede_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
+              "version": "0.0.12",
+              "build_date": "20261013",
+              "docker_archive": "mede_arm64_0.0.12_20261013.docker.tar",
+              "sif": "mede_arm64_0.0.12_20261013.simg",
+              "candidate_tag": "nd-candidate-mede_arm64:5cb32ea279b2",
+              "launcher": "mede-deidentify",
+              "pr_number": 3558,
+              "head_sha": "5cb32ea279b231cbb544172268e9ab29bbd27356",
+              "tests": {
+                "total": 4,
+                "passed": 4,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 3,
+                "fulltest_passed": 3,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "MEDE command line help",
+                  "MEDE Python package and cached OCR models",
+                  "Actual synthetic DICOM metadata de-identification"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "7.4 MB",
+                    "path": "/usr/bin/perl"
+                  },
+                  {
+                    "count": 5,
+                    "wasted_space": "4.0 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "3.2 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.3 MB",
+                    "path": "/usr/lib/aarch64-linux-gnu/perl-base/auto/re/re.so"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "804 kB",
+                    "path": "/usr/lib/aarch64-linux-gnu/perl-base/unicore/To/NFKCCF.pl"
+                  }
+                ],
+                "efficiency_percent": 99.1641,
+                "wasted_bytes": 25007042,
+                "wasted_bytes_display": "25 MB",
+                "user_wasted_percent": 1.4323
+              }
+            },
+            "x86_64": {
+              "schema_version": 3,
+              "recipe": "mede",
+              "container": "mede",
+              "variant": "",
+              "architecture": "x86_64",
+              "version": "0.0.12",
+              "build_date": "20261013",
+              "docker_archive": "mede_0.0.12_20261013.docker.tar",
+              "sif": "mede_0.0.12_20261013.simg",
+              "candidate_tag": "nd-candidate-mede:5cb32ea279b2",
+              "launcher": "mede-deidentify",
+              "pr_number": 3558,
+              "head_sha": "5cb32ea279b231cbb544172268e9ab29bbd27356",
+              "tests": {
+                "total": 4,
+                "passed": 4,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 3,
+                "fulltest_passed": 3,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "MEDE command line help",
+                  "MEDE Python package and cached OCR models",
+                  "Actual synthetic DICOM metadata de-identification"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "7.6 MB",
+                    "path": "/usr/bin/perl"
+                  },
+                  {
+                    "count": 5,
+                    "wasted_space": "4.0 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "3.2 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.3 MB",
+                    "path": "/usr/lib/x86_64-linux-gnu/perl-base/auto/re/re.so"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "804 kB",
+                    "path": "/usr/lib/x86_64-linux-gnu/perl-base/unicore/To/NFKCCF.pl"
+                  }
+                ],
+                "efficiency_percent": 99.7648,
+                "wasted_bytes": 24703297,
+                "wasted_bytes_display": "25 MB",
+                "user_wasted_percent": 0.3839
+              }
+            }
+          },
+          "raw_report_review": {
+            "aarch64": {
+              "raw_test_results_sha256": "4e0348aa60fd20ca399ef407a75c32712d56ed2678dc95894ed9b9254f29ce37",
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38332790640/job/115086148998",
+              "runner_labels": [
+                "blacksmith-8vcpu-ubuntu-2404-arm"
+              ],
+              "all_actual_command_exit_contracts_matched": true,
+              "functional_cases": 3,
+              "nonzero_expected_cases": [],
+              "deploy_counts": {
+                "total": 1,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0
+              },
+              "deploy_diagnostics": [],
+              "positive_case": {
+                "name": "Actual synthetic DICOM metadata de-identification",
+                "duration_seconds": 56.58190107345581,
+                "stdout": "directory ['basicProfile']  INFO:matplotlib.font_manager:generated new fontManager\n\nMEDE removed synthetic identity fields with consistent UIDs and exact pixels and geometry\ndirectory ['basicProfile', 'rtnDevIdOpt']  \nMEDE removed synthetic identity fields with consistent UIDs and exact pixels and geometry\ndirectory ['rtnDevIdOpt', 'basicProfile']  \nMEDE removed synthetic identity fields with consistent UIDs and exact pixels and geometry\ndirectory ['rtnSafePrivOpt'] CLI and Python API rejected before output mutation\ndirectory ['basicProfile', 'rtnSafePrivOpt'] CLI and Python API rejected before output mutation\ndirectory ['rtnSafePrivOpt', 'basicProfile'] CLI and Python API rejected before output mutation\nfile ['basicProfile']  \nMEDE removed synthetic identity fields with consistent UIDs and exact pixels and geometry\nfile ['basicProfile', 'rtnDevIdOpt']  \nMEDE removed synthetic identity fields with consistent UIDs and exact pixels and geometry\nfile ['rtnDevIdOpt', 'basicProfile']  \nMEDE removed synthetic identity fields with consistent UIDs and exact pixels and geometry\nfile ['rtnSafePrivOpt'] CLI and Python API rejected before output mutation\nfile ['basicProfile', 'rtnSafePrivOpt'] CLI and Python API rejected before output mutation\nfile ['rtnSafePrivOpt', 'basicProfile'] CLI and Python API rejected before output mutation\n",
+                "stderr": ""
+              },
+              "scope": "Actual directory/file CLI operations remove recursive private tags and synthetic identity fields, preserve exact pixels/spatial geometry and sources, and produce consistent replacement UIDs. Device-retention option ordering is exercised; CLI and Python safe-private requests reject before output mutation. Scope is synthetic metadata/private-tag behavior, not OCR/image defacing or comprehensive clinical de-identification validation. This independently merged fix includes a hash-guarded application profile/source correction; it is recorded explicitly rather than attributed to the older unmodified-source proof."
+            },
+            "x86_64": {
+              "raw_test_results_sha256": "db816b2221b1cb83b927a8866a19d7840136acdf5ee889e9247e5900db3756db",
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38332790640/job/115086148990",
+              "runner_labels": [
+                "neurodesk-syd-arcrunner-neurocontainers"
+              ],
+              "all_actual_command_exit_contracts_matched": true,
+              "functional_cases": 3,
+              "nonzero_expected_cases": [],
+              "deploy_counts": {
+                "total": 1,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0
+              },
+              "deploy_diagnostics": [],
+              "positive_case": {
+                "name": "Actual synthetic DICOM metadata de-identification",
+                "duration_seconds": 53.52878212928772,
+                "stdout": "directory ['basicProfile']  INFO:matplotlib.font_manager:generated new fontManager\n\nMEDE removed synthetic identity fields with consistent UIDs and exact pixels and geometry\ndirectory ['basicProfile', 'rtnDevIdOpt']  \nMEDE removed synthetic identity fields with consistent UIDs and exact pixels and geometry\ndirectory ['rtnDevIdOpt', 'basicProfile']  \nMEDE removed synthetic identity fields with consistent UIDs and exact pixels and geometry\ndirectory ['rtnSafePrivOpt'] CLI and Python API rejected before output mutation\ndirectory ['basicProfile', 'rtnSafePrivOpt'] CLI and Python API rejected before output mutation\ndirectory ['rtnSafePrivOpt', 'basicProfile'] CLI and Python API rejected before output mutation\nfile ['basicProfile']  \nMEDE removed synthetic identity fields with consistent UIDs and exact pixels and geometry\nfile ['basicProfile', 'rtnDevIdOpt']  \nMEDE removed synthetic identity fields with consistent UIDs and exact pixels and geometry\nfile ['rtnDevIdOpt', 'basicProfile']  \nMEDE removed synthetic identity fields with consistent UIDs and exact pixels and geometry\nfile ['rtnSafePrivOpt'] CLI and Python API rejected before output mutation\nfile ['basicProfile', 'rtnSafePrivOpt'] CLI and Python API rejected before output mutation\nfile ['rtnSafePrivOpt', 'basicProfile'] CLI and Python API rejected before output mutation\n",
+                "stderr": ""
+              },
+              "scope": "Actual directory/file CLI operations remove recursive private tags and synthetic identity fields, preserve exact pixels/spatial geometry and sources, and produce consistent replacement UIDs. Device-retention option ordering is exercised; CLI and Python safe-private requests reject before output mutation. Scope is synthetic metadata/private-tag behavior, not OCR/image defacing or comprehensive clinical de-identification validation. This independently merged fix includes a hash-guarded application profile/source correction; it is recorded explicitly rather than attributed to the older unmodified-source proof."
+            }
+          },
+          "scope": "Actual directory/file CLI operations remove recursive private tags and synthetic identity fields, preserve exact pixels/spatial geometry and sources, and produce consistent replacement UIDs. Device-retention option ordering is exercised; CLI and Python safe-private requests reject before output mutation. Scope is synthetic metadata/private-tag behavior, not OCR/image defacing or comprehensive clinical de-identification validation. This independently merged fix includes a hash-guarded application profile/source correction; it is recorded explicitly rather than attributed to the older unmodified-source proof. Fresh native architecture candidates pass all actual workflow gates. Original own-port/root source proof and closed investigation counts/windows remain historical; no exact-root proof or publication claim for this later source from these candidate reports alone.",
+          "observed_external_build_jobs": 2,
+          "original_investigation_accounting_preserved": {
+            "attempts": 3,
+            "deadline": "2026-10-13T11:58:19+00:00",
+            "max_build_attempts": 6
+          },
+          "publication_observation": {
+            "checked_at": "2026-10-17T14:18:10.060974+00:00",
+            "run_id": 38335224590,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38335224590",
+            "status": "completed",
+            "conclusion": "success",
+            "note": "Verified in separate publication_audit for this exact later source; original own-port/root evidence remains historical."
+          },
+          "evidence_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/52#issuecomment-6234978244",
+          "publication_audit": {
+            "checked_at": "2026-10-17T14:18:10.060974+00:00",
+            "status": "verified-published-metadata",
+            "source_sha": "5cb32ea279b231cbb544172268e9ab29bbd27356",
+            "promotion_run_id": 38335224590,
+            "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38335224590",
+            "metadata": [
+              {
+                "architecture": "aarch64",
+                "path": "releases/mede_arm64/0.0.12.json",
+                "source_sha": "5cb32ea279b231cbb544172268e9ab29bbd27356",
+                "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "metadata_commit_sha": "15a257e91a865417720a4a27242210fa2c961abc",
+                "expected_build_date": "20261013",
+                "trusted_preview_matches": true,
+                "sif": "mede_arm64_0.0.12_20261013.simg",
+                "sif_sha256": "e643e8acfe12810a6744c76e072fc7682a445ae1817347e049eed03211093023",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mede_arm64_0.0.12_20261013.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              },
+              {
+                "architecture": "x86_64",
+                "path": "releases/mede/0.0.12.json",
+                "source_sha": "5cb32ea279b231cbb544172268e9ab29bbd27356",
+                "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "metadata_commit_sha": "15a257e91a865417720a4a27242210fa2c961abc",
+                "expected_build_date": "20261013",
+                "trusted_preview_matches": true,
+                "sif": "mede_0.0.12_20261013.simg",
+                "sif_sha256": "ab9c6a79b9c29eca033bcdb435d40f2b0b47da2fe10d0a1da32c0d655e857f2d",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mede_0.0.12_20261013.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              }
+            ],
+            "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
+          }
+        }
+      ]
     },
     {
       "recipe": "meganorm",
@@ -28631,7 +29471,402 @@
           }
         ],
         "metadata_checked_at": "2026-10-13T05:38:58.294293+00:00"
-      }
+      },
+      "later_upstream_updates": [
+        {
+          "observed_at": "2026-10-17T14:17:28.864388+00:00",
+          "kind": "independent-later-version-update",
+          "recipe": "mritools",
+          "version": "4.9.1",
+          "pr_number": 3638,
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3638",
+          "source_sha": "26a161e7492c3dc3f1d73bb9f4e99b7a8e371caf",
+          "merge_sha": "ae1620d851ad8432d8fb0d36a6b9b38f05671b9d",
+          "merged_at": "2026-10-16T20:51:16Z",
+          "run_id": 38936242395,
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38936242395",
+          "reports": {
+            "x86_64": {
+              "schema_version": 3,
+              "recipe": "mritools",
+              "container": "mritools",
+              "variant": "",
+              "architecture": "x86_64",
+              "version": "4.9.1",
+              "build_date": "20261016",
+              "docker_archive": "mritools_4.9.1_20261016.docker.tar",
+              "sif": "mritools_4.9.1_20261016.simg",
+              "candidate_tag": "nd-candidate-mritools:26a161e7492c",
+              "launcher": null,
+              "pr_number": 3638,
+              "head_sha": "26a161e7492c3dc3f1d73bb9f4e99b7a8e371caf",
+              "tests": {
+                "total": 56,
+                "passed": 56,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 55,
+                "fulltest_passed": 55,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "ROMEO version check",
+                  "ROMEO help",
+                  "CLEARSWI version check",
+                  "CLEARSWI help",
+                  "MCPC3DS version check",
+                  "MCPC3DS help",
+                  "Julia version check",
+                  "Create synthetic phase image from T1w",
+                  "Create synthetic magnitude for testing",
+                  "Create 4D synthetic phase from BOLD",
+                  "ROMEO single-echo unwrapping (nomask)",
+                  "ROMEO single-echo with robustmask",
+                  "ROMEO with quality mask threshold",
+                  "ROMEO with mask unwrapped option",
+                  "ROMEO write quality map",
+                  "ROMEO write all quality maps",
+                  "ROMEO correct global phase offset",
+                  "ROMEO with phase threshold",
+                  "ROMEO with romeo2 weights"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "3.9 MB",
+                    "path": "/usr/lib/x86_64-linux-gnu/libapt-pkg.so.6.0.0"
+                  },
+                  {
+                    "count": 3,
+                    "wasted_space": "1.9 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.4 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "955 kB",
+                    "path": "/usr/lib/x86_64-linux-gnu/libapt-private.so.0.0.0"
+                  },
+                  {
+                    "count": 3,
+                    "wasted_space": "560 kB",
+                    "path": "/var/log/dpkg.log"
+                  }
+                ],
+                "efficiency_percent": 99.0454,
+                "wasted_bytes": 12408099,
+                "wasted_bytes_display": "12 MB",
+                "user_wasted_percent": 1.8614
+              }
+            },
+            "aarch64": {
+              "schema_version": 3,
+              "recipe": "mritools",
+              "container": "mritools_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
+              "version": "4.9.1",
+              "build_date": "20261016",
+              "docker_archive": "mritools_arm64_4.9.1_20261016.docker.tar",
+              "sif": "mritools_arm64_4.9.1_20261016.simg",
+              "candidate_tag": "nd-candidate-mritools_arm64:26a161e7492c",
+              "launcher": null,
+              "pr_number": 3638,
+              "head_sha": "26a161e7492c3dc3f1d73bb9f4e99b7a8e371caf",
+              "tests": {
+                "total": 56,
+                "passed": 56,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 55,
+                "fulltest_passed": 55,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "ROMEO version check",
+                  "ROMEO help",
+                  "CLEARSWI version check",
+                  "CLEARSWI help",
+                  "MCPC3DS version check",
+                  "MCPC3DS help",
+                  "Julia version check",
+                  "Create synthetic phase image from T1w",
+                  "Create synthetic magnitude for testing",
+                  "Create 4D synthetic phase from BOLD",
+                  "ROMEO single-echo unwrapping (nomask)",
+                  "ROMEO single-echo with robustmask",
+                  "ROMEO with quality mask threshold",
+                  "ROMEO with mask unwrapped option",
+                  "ROMEO write quality map",
+                  "ROMEO write all quality maps",
+                  "ROMEO correct global phase offset",
+                  "ROMEO with phase threshold",
+                  "ROMEO with romeo2 weights"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "3.5 MB",
+                    "path": "/usr/lib/aarch64-linux-gnu/libapt-pkg.so.6.0.0"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "2.9 MB",
+                    "path": "/usr/lib/aarch64-linux-gnu/libc-2.31.so"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "2.7 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 3,
+                    "wasted_space": "2.2 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.3 MB",
+                    "path": "/usr/lib/aarch64-linux-gnu/libm-2.31.so"
+                  }
+                ],
+                "efficiency_percent": 98.6971,
+                "wasted_bytes": 34182359,
+                "wasted_bytes_display": "34 MB",
+                "user_wasted_percent": 2.4383
+              }
+            }
+          },
+          "raw_report_review": {
+            "x86_64": {
+              "raw_test_results_sha256": "2611c8eddef1badcf64faab81ca94e871e4d960588faa6dfe997b5e226c15bec",
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38936242395/job/117092505611",
+              "runner_labels": [
+                "neurodesk-syd-arcrunner-neurocontainers"
+              ],
+              "all_actual_command_exit_contracts_matched": true,
+              "functional_cases": 55,
+              "nonzero_expected_cases": [
+                {
+                  "name": "MCPC3DS argument parsing",
+                  "return_code": 1
+                },
+                {
+                  "name": "MCPC3DS echo time validation",
+                  "return_code": 1
+                },
+                {
+                  "name": "ROMEO missing phase file error",
+                  "return_code": 1
+                },
+                {
+                  "name": "CLEARSWI missing magnitude error",
+                  "return_code": 1
+                }
+              ],
+              "deploy_counts": {
+                "total": 41,
+                "passed": 34,
+                "failed": 0,
+                "skipped": 7
+              },
+              "deploy_diagnostics": [
+                {
+                  "name": "deploy_bins",
+                  "status": "skipped",
+                  "message": "DEPLOY_BINS not set."
+                },
+                {
+                  "name": "ldd.summary.skipped:/opt/mritools-4.9.1/bin/clearswi",
+                  "status": "skipped",
+                  "message": "Skipped 2 linkage entries without filesystem paths."
+                },
+                {
+                  "name": "ldd.summary.skipped:/opt/mritools-4.9.1/bin/julia",
+                  "status": "skipped",
+                  "message": "Skipped 2 linkage entries without filesystem paths."
+                },
+                {
+                  "name": "ldd.summary.skipped:/opt/mritools-4.9.1/bin/makehomogeneous",
+                  "status": "skipped",
+                  "message": "Skipped 2 linkage entries without filesystem paths."
+                },
+                {
+                  "name": "ldd.summary.skipped:/opt/mritools-4.9.1/bin/mcpc3ds",
+                  "status": "skipped",
+                  "message": "Skipped 2 linkage entries without filesystem paths."
+                },
+                {
+                  "name": "ldd.summary.skipped:/opt/mritools-4.9.1/bin/romeo",
+                  "status": "skipped",
+                  "message": "Skipped 2 linkage entries without filesystem paths."
+                },
+                {
+                  "name": "ldd.summary.skipped:/opt/mritools-4.9.1/bin/romeo_mask",
+                  "status": "skipped",
+                  "message": "Skipped 2 linkage entries without filesystem paths."
+                }
+              ],
+              "positive_case": {
+                "name": "ROMEO analytical phase ramp",
+                "duration_seconds": 7.598233938217163,
+                "stdout": "ROMEO analytical729-voxel unwrapping and spatial metadata passed\n",
+                "stderr": ""
+              },
+              "scope": "All729 analytical ROMEO voxels satisfy the existing32*Float32eps relative-phase bound after one global offset; geometry and input bytes preserved, unwrapped range exceeds2pi. Four explicit exit1 negative cases match their assertions. MCPC3DS BoundsError is an asserted negative contract, not successful coil combination. Deploy34/41 has7 diagnostic skips: unset DEPLOY_BINS plus six ldd summaries with2 non-path entries each. All six launchers are found/executable; omitted linkage-entry identities and exhaustive ELF closure remain unproven. No fulltest capability is skipped."
+            },
+            "aarch64": {
+              "raw_test_results_sha256": "a05cb64624c69dbe5edf0abbb8795760b71c8ec722e06b4f540bb53a2dbb2036",
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38936242395/job/117092505810",
+              "runner_labels": [
+                "blacksmith-8vcpu-ubuntu-2404-arm"
+              ],
+              "all_actual_command_exit_contracts_matched": true,
+              "functional_cases": 55,
+              "nonzero_expected_cases": [
+                {
+                  "name": "MCPC3DS argument parsing",
+                  "return_code": 1
+                },
+                {
+                  "name": "MCPC3DS echo time validation",
+                  "return_code": 1
+                },
+                {
+                  "name": "ROMEO missing phase file error",
+                  "return_code": 1
+                },
+                {
+                  "name": "CLEARSWI missing magnitude error",
+                  "return_code": 1
+                }
+              ],
+              "deploy_counts": {
+                "total": 41,
+                "passed": 34,
+                "failed": 0,
+                "skipped": 7
+              },
+              "deploy_diagnostics": [
+                {
+                  "name": "deploy_bins",
+                  "status": "skipped",
+                  "message": "DEPLOY_BINS not set."
+                },
+                {
+                  "name": "ldd.summary.skipped:/opt/mritools-4.9.1/bin/clearswi",
+                  "status": "skipped",
+                  "message": "Skipped 2 linkage entries without filesystem paths."
+                },
+                {
+                  "name": "ldd.summary.skipped:/opt/mritools-4.9.1/bin/julia",
+                  "status": "skipped",
+                  "message": "Skipped 2 linkage entries without filesystem paths."
+                },
+                {
+                  "name": "ldd.summary.skipped:/opt/mritools-4.9.1/bin/makehomogeneous",
+                  "status": "skipped",
+                  "message": "Skipped 2 linkage entries without filesystem paths."
+                },
+                {
+                  "name": "ldd.summary.skipped:/opt/mritools-4.9.1/bin/mcpc3ds",
+                  "status": "skipped",
+                  "message": "Skipped 2 linkage entries without filesystem paths."
+                },
+                {
+                  "name": "ldd.summary.skipped:/opt/mritools-4.9.1/bin/romeo",
+                  "status": "skipped",
+                  "message": "Skipped 2 linkage entries without filesystem paths."
+                },
+                {
+                  "name": "ldd.summary.skipped:/opt/mritools-4.9.1/bin/romeo_mask",
+                  "status": "skipped",
+                  "message": "Skipped 2 linkage entries without filesystem paths."
+                }
+              ],
+              "positive_case": {
+                "name": "ROMEO analytical phase ramp",
+                "duration_seconds": 9.534292697906494,
+                "stdout": "ROMEO analytical729-voxel unwrapping and spatial metadata passed\n",
+                "stderr": ""
+              },
+              "scope": "All729 analytical ROMEO voxels satisfy the existing32*Float32eps relative-phase bound after one global offset; geometry and input bytes preserved, unwrapped range exceeds2pi. Four explicit exit1 negative cases match their assertions. MCPC3DS BoundsError is an asserted negative contract, not successful coil combination. Deploy34/41 has7 diagnostic skips: unset DEPLOY_BINS plus six ldd summaries with2 non-path entries each. All six launchers are found/executable; omitted linkage-entry identities and exhaustive ELF closure remain unproven. No fulltest capability is skipped."
+            }
+          },
+          "scope": "All729 analytical ROMEO voxels satisfy the existing32*Float32eps relative-phase bound after one global offset; geometry and input bytes preserved, unwrapped range exceeds2pi. Four explicit exit1 negative cases match their assertions. MCPC3DS BoundsError is an asserted negative contract, not successful coil combination. Deploy34/41 has7 diagnostic skips: unset DEPLOY_BINS plus six ldd summaries with2 non-path entries each. All six launchers are found/executable; omitted linkage-entry identities and exhaustive ELF closure remain unproven. No fulltest capability is skipped. Fresh native architecture candidates pass all actual workflow gates. Original own-port/root source proof and closed investigation counts/windows remain historical; no exact-root proof or publication claim for this later source from these candidate reports alone.",
+          "observed_external_build_jobs": 2,
+          "original_investigation_accounting_preserved": {
+            "attempts": 4,
+            "deadline": "2026-10-13T13:43:10.550541+00:00",
+            "max_build_attempts": 6
+          },
+          "publication_observation": {
+            "checked_at": "2026-10-17T14:18:19.970620+00:00",
+            "run_id": 38965229340,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38965229340",
+            "status": "completed",
+            "conclusion": "success",
+            "note": "Verified in separate publication_audit for this exact later source; original own-port/root evidence remains historical."
+          },
+          "evidence_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/156#issuecomment-6234978537",
+          "publication_audit": {
+            "checked_at": "2026-10-17T14:18:19.970620+00:00",
+            "status": "verified-published-metadata",
+            "source_sha": "26a161e7492c3dc3f1d73bb9f4e99b7a8e371caf",
+            "promotion_run_id": 38965229340,
+            "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38965229340",
+            "metadata": [
+              {
+                "architecture": "x86_64",
+                "path": "releases/mritools/4.9.1.json",
+                "source_sha": "26a161e7492c3dc3f1d73bb9f4e99b7a8e371caf",
+                "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "metadata_commit_sha": "adb5ff3cfe76adec7b4e9933a53451eb08ea0461",
+                "expected_build_date": "20261016",
+                "trusted_preview_matches": true,
+                "sif": "mritools_4.9.1_20261016.simg",
+                "sif_sha256": "ca6a16d6430734ef4d9f6cca0c3e8f0c0f2db086814ddb39f6b30e2185986fac",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mritools_4.9.1_20261016.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              },
+              {
+                "architecture": "aarch64",
+                "path": "releases/mritools_arm64/4.9.1.json",
+                "source_sha": "26a161e7492c3dc3f1d73bb9f4e99b7a8e371caf",
+                "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "metadata_commit_sha": "adb5ff3cfe76adec7b4e9933a53451eb08ea0461",
+                "expected_build_date": "20261016",
+                "trusted_preview_matches": true,
+                "sif": "mritools_arm64_4.9.1_20261016.simg",
+                "sif_sha256": "2ef4c4762c8d9dd88474df57fc2fc32d5aca7937173ea9d0e5175df64c8777d5",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mritools_arm64_4.9.1_20261016.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              }
+            ],
+            "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
+          }
+        }
+      ]
     },
     {
       "recipe": "napari",
@@ -36171,7 +37406,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "c265491023ae2d34beb9438c2b6e1ee2e5f3d5e5",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 091ad80b0b7659e848a03e07a3236a3cb6e8b41d on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38399214210. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 091ad80b0b7659e848a03e07a3236a3cb6e8b41d on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38399214210. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged. Later PR3636 adds one unexecuted fulltest assertion (Cellpose extension installed where the catalog registry expects it); await renewed12-hour/max7 verification with4used retained. No recipe/test edits needed. Preserve existing runtime/publication proof; do not call the new assertion tested until actual native results exist.",
       "upstream_review": {
         "exists": true,
         "version": "0.7.0",
@@ -36392,6 +37627,31 @@
           }
         ],
         "metadata_checked_at": "2026-10-13T14:10:51.124194+00:00"
+      },
+      "current_fulltest_gap": {
+        "observed_at": "2026-10-17T14:17:28.864388+00:00",
+        "current_upstream": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+        "introduced_by_pr": 3636,
+        "introduced_by_source": "0aa3ee7ddeb8c4be065552f13dc6ee3249bae0f1",
+        "merge_sha": "fdfba2d8c36ec6fb16a24f77e75bb5616a0d201b",
+        "test": "Cellpose extension installed where the catalog registry expects it",
+        "candidate_jobs": "skipped",
+        "runtime_jobs": "skipped",
+        "note": "One later fulltest assertion is absent from original tested suite. Original recipe/PR proof remains attributed to its actual source. Removing inert build tests is not evidence that these additional active tests executed.",
+        "revisit_when": "Matching independently completed native results or explicit renewed bounded verification. No recipe or test edit is necessary; the stronger assertion already exists upstream.",
+        "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/229#issuecomment-6234979331"
+      },
+      "pending_budget_question": {
+        "asked_at": "2026-10-17T14:17:28.864388+00:00",
+        "answered": false,
+        "requested_window_hours": 12,
+        "requested_max_build_attempts": 7,
+        "attempts_already_used": 4,
+        "original_deadline_unchanged": "2026-10-13T20:10:00+00:00",
+        "request_accepted_by_tool": true,
+        "tool_acceptance_is_not_user_approval": true,
+        "grouped_with": "bidscoin",
+        "reason": "Later upstream fulltest assertion added in PR3636 skipped actual container jobs. Need targeted native and both upstream current-suite verification; no recipe/test edits or repeated old-source proof. Existing elapsed window expired; three jobs exceed remaining original cap."
       }
     },
     {
@@ -44204,7 +45464,278 @@
           }
         ],
         "metadata_checked_at": "2026-10-13T07:39:04.631083+00:00"
-      }
+      },
+      "later_upstream_updates": [
+        {
+          "observed_at": "2026-10-17T14:17:28.864388+00:00",
+          "kind": "independent-later-version-update",
+          "recipe": "vertexwiser",
+          "version": "1.5.4",
+          "pr_number": 3618,
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3618",
+          "source_sha": "039e1427bb3008263f98566c1532bb5c910beb78",
+          "merge_sha": "d5bc2c54f3fb1babd1b1f61fda90b1b0daf88ee3",
+          "merged_at": "2026-10-16T16:57:27Z",
+          "run_id": 38507594410,
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38507594410",
+          "reports": {
+            "x86_64": {
+              "schema_version": 3,
+              "recipe": "vertexwiser",
+              "container": "vertexwiser",
+              "variant": "",
+              "architecture": "x86_64",
+              "version": "1.5.4",
+              "build_date": "20261014",
+              "docker_archive": "vertexwiser_1.5.4_20261014.docker.tar",
+              "sif": "vertexwiser_1.5.4_20261014.simg",
+              "candidate_tag": "nd-candidate-vertexwiser:039e1427bb30",
+              "launcher": "R",
+              "pr_number": 3618,
+              "head_sha": "039e1427bb3008263f98566c1532bb5c910beb78",
+              "tests": {
+                "total": 11,
+                "passed": 11,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 10,
+                "fulltest_passed": 10,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "Deploy executables are available",
+                  "VertexWiseR package loads",
+                  "Reticulate uses bundled Python",
+                  "BrainStat stack imports",
+                  "Reticulate imports bundled Python stack",
+                  "Bundled demo data loads",
+                  "BrainStat template setup and surface smoothing",
+                  "Surface plotting returns plotly widget",
+                  "RFT vertex analysis returns finite t-stat map",
+                  "Native VTK version and package dependency closure"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "11 MB",
+                    "path": "/usr/lib/x86_64-linux-gnu/libcrypto.so.3"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "2.7 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 3,
+                    "wasted_space": "2.2 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.4 MB",
+                    "path": "/usr/lib/x86_64-linux-gnu/libssl.so.3"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "918 kB",
+                    "path": "/var/log/dpkg.log"
+                  }
+                ],
+                "efficiency_percent": 99.5663,
+                "wasted_bytes": 20588886,
+                "wasted_bytes_display": "21 MB",
+                "user_wasted_percent": 0.7255
+              }
+            },
+            "aarch64": {
+              "schema_version": 3,
+              "recipe": "vertexwiser",
+              "container": "vertexwiser_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
+              "version": "1.5.4",
+              "build_date": "20261014",
+              "docker_archive": "vertexwiser_arm64_1.5.4_20261014.docker.tar",
+              "sif": "vertexwiser_arm64_1.5.4_20261014.simg",
+              "candidate_tag": "nd-candidate-vertexwiser_arm64:039e1427bb30",
+              "launcher": "R",
+              "pr_number": 3618,
+              "head_sha": "039e1427bb3008263f98566c1532bb5c910beb78",
+              "tests": {
+                "total": 11,
+                "passed": 11,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 10,
+                "fulltest_passed": 10,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "Deploy executables are available",
+                  "VertexWiseR package loads",
+                  "Reticulate uses bundled Python",
+                  "BrainStat stack imports",
+                  "Reticulate imports bundled Python stack",
+                  "Bundled demo data loads",
+                  "BrainStat template setup and surface smoothing",
+                  "Surface plotting returns plotly widget",
+                  "RFT vertex analysis returns finite t-stat map",
+                  "Native VTK version and package dependency closure"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "9.3 MB",
+                    "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "2.7 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 3,
+                    "wasted_space": "2.2 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.5 MB",
+                    "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "916 kB",
+                    "path": "/var/log/dpkg.log"
+                  }
+                ],
+                "efficiency_percent": 99.6197,
+                "wasted_bytes": 19579760,
+                "wasted_bytes_display": "20 MB",
+                "user_wasted_percent": 0.6334
+              }
+            }
+          },
+          "raw_report_review": {
+            "x86_64": {
+              "raw_test_results_sha256": "e0ef4fda30cbfd14e2fc4dc3169b1f4f4560e7b5dc64ba0154fc8219e67ec428",
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38507594410/job/115668777078",
+              "runner_labels": [
+                "neurodesk-syd-arcrunner-neurocontainers"
+              ],
+              "all_actual_command_exit_contracts_matched": true,
+              "functional_cases": 10,
+              "nonzero_expected_cases": [],
+              "deploy_counts": {
+                "total": 3,
+                "passed": 3,
+                "failed": 0,
+                "skipped": 0
+              },
+              "deploy_diagnostics": [],
+              "positive_case": {
+                "name": "RFT vertex analysis returns finite t-stat map",
+                "duration_seconds": 28.616786241531372,
+                "stdout": "WARNING: unknown option '-'\n\n2026-10-14 05:45:34,161 - matplotlib.font_manager - INFO - generated new fontManager\nAll20484 age t-statistics match independent OLS\nrft vertices 20484 \n",
+                "stderr": "Checking for VertexWiseR system requirements ... \nChecking for VertexWiseR system requirements ... \nsmooth_FWHM argument was not given. surf_data will not be smoothed here.\n\n"
+              },
+              "scope": "Actual fsaverage5 smoothing, plotly/htmlwidget creation and all20484 age t-statistics agree with independent base-R OLS at unchanged1e-9*(1+abs(expected)) bound. Native VTK and scientific dependency pins/pip closure pass; ARMVTK9.7.0 and x86VTK9.3.1 remain explicitly different. R unknown-option/home-path warnings are nonfatal; no clinical-validation or exhaustive RFT inference claim."
+            },
+            "aarch64": {
+              "raw_test_results_sha256": "f55a1915d0d7d1b53e8cbb6b139c69ea847cd6d3a1b74425025ad1e729cebb60",
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38507594410/job/115668776964",
+              "runner_labels": [
+                "blacksmith-8vcpu-ubuntu-2404-arm"
+              ],
+              "all_actual_command_exit_contracts_matched": true,
+              "functional_cases": 10,
+              "nonzero_expected_cases": [],
+              "deploy_counts": {
+                "total": 3,
+                "passed": 3,
+                "failed": 0,
+                "skipped": 0
+              },
+              "deploy_diagnostics": [],
+              "positive_case": {
+                "name": "RFT vertex analysis returns finite t-stat map",
+                "duration_seconds": 14.360771179199219,
+                "stdout": "WARNING: unknown option '-'\n\n2026-10-14 03:54:28,254 - matplotlib.font_manager - INFO - generated new fontManager\nAll20484 age t-statistics match independent OLS\nrft vertices 20484 \n",
+                "stderr": "Checking for VertexWiseR system requirements ... \nChecking for VertexWiseR system requirements ... \nsmooth_FWHM argument was not given. surf_data will not be smoothed here.\n\n"
+              },
+              "scope": "Actual fsaverage5 smoothing, plotly/htmlwidget creation and all20484 age t-statistics agree with independent base-R OLS at unchanged1e-9*(1+abs(expected)) bound. Native VTK and scientific dependency pins/pip closure pass; ARMVTK9.7.0 and x86VTK9.3.1 remain explicitly different. R unknown-option/home-path warnings are nonfatal; no clinical-validation or exhaustive RFT inference claim."
+            }
+          },
+          "scope": "Actual fsaverage5 smoothing, plotly/htmlwidget creation and all20484 age t-statistics agree with independent base-R OLS at unchanged1e-9*(1+abs(expected)) bound. Native VTK and scientific dependency pins/pip closure pass; ARMVTK9.7.0 and x86VTK9.3.1 remain explicitly different. R unknown-option/home-path warnings are nonfatal; no clinical-validation or exhaustive RFT inference claim. Fresh native architecture candidates pass all actual workflow gates. Original own-port/root source proof and closed investigation counts/windows remain historical; no exact-root proof or publication claim for this later source from these candidate reports alone.",
+          "observed_external_build_jobs": 2,
+          "original_investigation_accounting_preserved": {
+            "attempts": 3,
+            "deadline": "2026-10-13T14:55:00+00:00",
+            "max_build_attempts": 6
+          },
+          "publication_observation": {
+            "checked_at": "2026-10-17T14:18:29.405920+00:00",
+            "run_id": 38935966164,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38935966164",
+            "status": "completed",
+            "conclusion": "success",
+            "note": "Verified in separate publication_audit for this exact later source; original own-port/root evidence remains historical."
+          },
+          "evidence_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/77#issuecomment-6234978875",
+          "publication_audit": {
+            "checked_at": "2026-10-17T14:18:29.405920+00:00",
+            "status": "verified-published-metadata",
+            "source_sha": "039e1427bb3008263f98566c1532bb5c910beb78",
+            "promotion_run_id": 38935966164,
+            "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38935966164",
+            "metadata": [
+              {
+                "architecture": "aarch64",
+                "path": "releases/vertexwiser_arm64/1.5.4.json",
+                "source_sha": "039e1427bb3008263f98566c1532bb5c910beb78",
+                "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "metadata_commit_sha": "cd7dd33584ea81b6d987b04faa535041afb11f82",
+                "expected_build_date": "20261014",
+                "trusted_preview_matches": true,
+                "sif": "vertexwiser_arm64_1.5.4_20261014.simg",
+                "sif_sha256": "3c63e2a9d99724a29211a694ac22c1cc5ff036a216baf2de6a3207819e421ea6",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/vertexwiser_arm64_1.5.4_20261014.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              },
+              {
+                "architecture": "x86_64",
+                "path": "releases/vertexwiser/1.5.4.json",
+                "source_sha": "039e1427bb3008263f98566c1532bb5c910beb78",
+                "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "metadata_commit_sha": "cd7dd33584ea81b6d987b04faa535041afb11f82",
+                "expected_build_date": "20261014",
+                "trusted_preview_matches": true,
+                "sif": "vertexwiser_1.5.4_20261014.simg",
+                "sif_sha256": "30ff2d1d270bf2789e890b90292d469476f62f8ad31b7b0b4ae9c9e58fb146c3",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/vertexwiser_1.5.4_20261014.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              }
+            ],
+            "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
+          }
+        }
+      ]
     },
     {
       "recipe": "vesselboost",
@@ -46431,8 +47962,8 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T14:07:03.422686+00:00",
-    "top_level_base_commit": "3e6c746ca050f473176c1c8c8877e257ba5e0de9",
+    "checked_at": "2026-10-17T14:20:46.124140+00:00",
+    "top_level_base_commit": "3b016d2bdb5a6ea792a54ab8962f7f69689e7047",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
     "upstream_fork_main_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
@@ -46455,7 +47986,7 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Review BrainLes9564 native ARMjob117347735063/run39015848600 when terminal and preserve its diagnostic/provenance hold. Recovered NFTsim manual ARM/x86 proof fills missing-run gap without rebuild but exposes masked ramp/timestamp failures; documented same-input configuration candidate awaits explicit12-hour/max11 renewal with8accounted retained. Nine budget replies remain pending; no edits/dispatch until applicable answer. Current PyDefaceb50 ARM61/63/x8662/63 remains terminal/unmergeable. Full goal active/incomplete.",
+    "next_action": "Review the actual terminal BrainLes9564 ARMjob117347735063/run39015848600 while retaining diagnostic/provenance holds and original20attempt clock. Reuse newly recovered5 independent later native pairs/publications;132catalog records for66recipes now match. BIDScoin/QuPath later PR3636 assertion gaps await their explicit bounded verification replies, with no recipe/test edit required. Nine earlier recipe decisions also remain unanswered. Preserve all own-port/root/source proofs and original budgets; no speculative rebuild, duplicate PR, manual publication or completion claim.",
     "live_external_jobs": [
       {
         "recipe": "brainles-preprocessing",
@@ -46471,29 +48002,40 @@
       }
     ],
     "last_goal_turn_classification": "progress",
-    "progress": "Recovered actual old NFTsim native ARM/x86 manual reports and exact input equivalence without rebuild; diagnosed two masked positive-test failures and documented same-input official configuration route. Ninth budget question is unanswered; no recipe edits/dispatch. Fresh BrainLes live build checked; checkpoint https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-6234866711",
+    "progress": "Recovered5 later independent native ARM/x86 pairs and verified their exact-source automatic publication/trusted metadata/public SIFs. Reconciled132catalog entries/66recipes.100merged recipe inputs classified:69byte-identical directories,23docs/update-policy/inert-only,5later verified native sources,1already proven version-substitution equivalence,2later active fulltest gaps. Eleven recipe budget decisions pending; no own build/source edit. BrainLes nativeARM remains live.",
     "active_automatic_promotions": [],
     "pending_budget_replies": [
       "apptainer",
+      "bidscoin",
       "elastix",
       "emuses",
       "gigaconnectome",
       "glmsingle",
       "julia",
       "nftsim",
+      "qupath",
       "tractseg",
       "workshopdemo"
     ],
-    "verified_published_recipe_count": 64,
-    "catalog_architecture_record_count": 128,
-    "total_pending_budget_questions": 9,
+    "verified_published_recipe_count": 66,
+    "catalog_architecture_record_count": 132,
+    "total_pending_budget_questions": 11,
     "pending_runtime_followup_budget_questions": [
       "glmsingle",
       "nftsim"
     ],
     "pending_new_recipe_window_questions": [
       "emuses"
-    ]
+    ],
+    "pending_later_fulltest_budget_questions": [
+      "bidscoin",
+      "qupath"
+    ],
+    "current_fulltest_gaps": [
+      "bidscoin",
+      "qupath"
+    ],
+    "checkpoint_issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-6235010381"
   },
   "completed_publication_queue_reconciliation": {
     "checked_at": "2026-10-17T11:12:16.974798+00:00",

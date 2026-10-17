@@ -1,0 +1,695 @@
+{
+  "current_upstream": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+  "changes": [
+    {
+      "recipe": "apptainer",
+      "tested_source": "d283242192109fce4d5f9914a41cf97abe98d1eb",
+      "files": [
+        "recipes/apptainer/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "batchheudiconv",
+      "tested_source": "e2729b1ff1c46cb4cccb225a0cbc46af7ec96728",
+      "files": [
+        "recipes/batchheudiconv/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "bidscoin",
+      "tested_source": "8786284d3af9fc4abb55a00978f267c3dd312871",
+      "files": [
+        "recipes/bidscoin/build.yaml",
+        "recipes/bidscoin/fulltest.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "bidsmanager",
+      "tested_source": "64eb9e1a67908617b0b591e78cfa06f573c66dd8",
+      "files": [
+        "recipes/bidsmanager/build.yaml",
+        "recipes/bidsmanager/fulltest.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "bidsme",
+      "tested_source": "4a8ece48b61fb4dd502ed592b7a240fa3fcd5e86",
+      "files": [
+        "recipes/bidsme/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "bidsvue",
+      "tested_source": "c7cb51ccc422a0c638094996abf253f6847c499b",
+      "files": [
+        "recipes/bidsvue/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "blastct",
+      "tested_source": "ae17e85225c1bf8da138f88ef9cd718b2a09f4f6",
+      "files": [
+        "recipes/blastct/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "brainles-aurora",
+      "tested_source": "12dd9fd8e64ffa76ae7eeec61d82a884958ecfff",
+      "files": [
+        "recipes/brainles-aurora/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "cosmomvpa",
+      "tested_source": "4d950f4bbc97683bf411a26c354040265a2c09dd",
+      "files": [
+        "recipes/cosmomvpa/fulltest.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "deep-quality-estimation",
+      "tested_source": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
+      "files": [
+        "recipes/deep-quality-estimation/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "deeplabcut",
+      "tested_source": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+      "files": [
+        "recipes/deeplabcut/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "eharmonize",
+      "tested_source": "58ad6425526133992ec41cdc69046683888b66ed",
+      "files": [
+        "recipes/eharmonize/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "flames",
+      "tested_source": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+      "files": [
+        "recipes/flames/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "fsqc",
+      "tested_source": "bba9c58d834c90e5fe99f6649679bf19ffd87334",
+      "files": [
+        "recipes/fsqc/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "gliomoda",
+      "tested_source": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+      "files": [
+        "recipes/gliomoda/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "julia",
+      "tested_source": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
+      "files": [
+        "recipes/julia/build.yaml",
+        "recipes/julia/fulltest.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "lesionquantificationtoolkit",
+      "tested_source": "c7c1c3b78693ed04ddab60b14d18409c2991e197",
+      "files": [
+        "recipes/lesionquantificationtoolkit/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "lqt",
+      "tested_source": "4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5",
+      "files": [
+        "recipes/lqt/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "mede",
+      "tested_source": "d1c3d59948134bfb76943e8f3f9f5d895bc98180",
+      "files": [
+        "recipes/mede/build.yaml",
+        "recipes/mede/fulltest.yaml",
+        "recipes/mede/patch_private_tags.py"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "meganorm",
+      "tested_source": "0383fec6a76f59c56190fc67502a150bda24e492",
+      "files": [
+        "recipes/meganorm/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "mimosa",
+      "tested_source": "46b36c3dabbddaa89db0e62ca34055d713d01b10",
+      "files": [
+        "recipes/mimosa/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "modsort",
+      "tested_source": "b8764c4d1150f58dafc62913167242a94fc96769",
+      "files": [
+        "recipes/modsort/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "mritools",
+      "tested_source": "38748e19e52c7463700c5550e2bcbbed06d883ba",
+      "files": [
+        "recipes/mritools/build.yaml",
+        "recipes/mritools/fulltest.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "niimath",
+      "tested_source": "38c17ee4e2f5c65d5db5a9077dd754178046fae8",
+      "files": [
+        "recipes/niimath/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "openadscpu",
+      "tested_source": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+      "files": [
+        "recipes/openadscpu/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "openrefine",
+      "tested_source": "53688a6dceaff1d09f0bfebfc29e6d0912430271",
+      "files": [
+        "recipes/openrefine/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "petu",
+      "tested_source": "260e3ebe8ff011007e645486129360e1935d5c1a",
+      "files": [
+        "recipes/petu/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "qupath",
+      "tested_source": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
+      "files": [
+        "recipes/qupath/build.yaml",
+        "recipes/qupath/fulltest.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "rshrf",
+      "tested_source": "c2b243ae0025f0010b3693176ec0656aab3993eb",
+      "files": [
+        "recipes/rshrf/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "totalsegmentator",
+      "tested_source": "b9640c0638161bbb66122714f1dc16997e90f77d",
+      "files": [
+        "recipes/totalsegmentator/build.yaml"
+      ],
+      "later_update_recorded": false
+    },
+    {
+      "recipe": "vertexwiser",
+      "tested_source": "b95e9c42f7a97f19448ec5bb07f50056d1bdc014",
+      "files": [
+        "recipes/vertexwiser/build.yaml",
+        "recipes/vertexwiser/fulltest.yaml"
+      ],
+      "later_update_recorded": false
+    }
+  ],
+  "unread_sources": [],
+  "classified_changes": [
+    {
+      "recipe": "apptainer",
+      "tested_source": "d283242192109fce4d5f9914a41cf97abe98d1eb",
+      "files": [
+        "recipes/apptainer/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "1.5.3",
+      "current_version": "1.5.3",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "batchheudiconv",
+      "tested_source": "e2729b1ff1c46cb4cccb225a0cbc46af7ec96728",
+      "files": [
+        "recipes/batchheudiconv/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "1.0.0",
+      "current_version": "1.0.0",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "bidscoin",
+      "tested_source": "8786284d3af9fc4abb55a00978f267c3dd312871",
+      "files": [
+        "recipes/bidscoin/build.yaml",
+        "recipes/bidscoin/fulltest.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "4.6.2",
+      "current_version": "4.6.2",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": [
+        "tests"
+      ]
+    },
+    {
+      "recipe": "bidsmanager",
+      "tested_source": "64eb9e1a67908617b0b591e78cfa06f573c66dd8",
+      "files": [
+        "recipes/bidsmanager/build.yaml",
+        "recipes/bidsmanager/fulltest.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "1.4.1",
+      "current_version": "1.5.0",
+      "runtime_recipe_changed_keys": [
+        "version"
+      ],
+      "fulltest_changed_keys": [
+        "version"
+      ]
+    },
+    {
+      "recipe": "bidsme",
+      "tested_source": "4a8ece48b61fb4dd502ed592b7a240fa3fcd5e86",
+      "files": [
+        "recipes/bidsme/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "1.9.6",
+      "current_version": "1.9.6",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "bidsvue",
+      "tested_source": "c7cb51ccc422a0c638094996abf253f6847c499b",
+      "files": [
+        "recipes/bidsvue/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "0.1.20260704",
+      "current_version": "0.1.20260704",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "blastct",
+      "tested_source": "ae17e85225c1bf8da138f88ef9cd718b2a09f4f6",
+      "files": [
+        "recipes/blastct/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "2.0.0",
+      "current_version": "2.0.0",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "brainles-aurora",
+      "tested_source": "12dd9fd8e64ffa76ae7eeec61d82a884958ecfff",
+      "files": [
+        "recipes/brainles-aurora/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "0.2.7",
+      "current_version": "0.2.7",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "cosmomvpa",
+      "tested_source": "4d950f4bbc97683bf411a26c354040265a2c09dd",
+      "files": [
+        "recipes/cosmomvpa/fulltest.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "1.1.0",
+      "current_version": "1.1.0",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": [
+        "tests"
+      ]
+    },
+    {
+      "recipe": "deep-quality-estimation",
+      "tested_source": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
+      "files": [
+        "recipes/deep-quality-estimation/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "0.0.3",
+      "current_version": "0.0.3",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "deeplabcut",
+      "tested_source": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+      "files": [
+        "recipes/deeplabcut/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "3.0.2",
+      "current_version": "3.0.2",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "eharmonize",
+      "tested_source": "58ad6425526133992ec41cdc69046683888b66ed",
+      "files": [
+        "recipes/eharmonize/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "1.0.0",
+      "current_version": "1.0.0",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "flames",
+      "tested_source": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
+      "files": [
+        "recipes/flames/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "1.0.0",
+      "current_version": "1.0.0",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "fsqc",
+      "tested_source": "bba9c58d834c90e5fe99f6649679bf19ffd87334",
+      "files": [
+        "recipes/fsqc/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "2.1.7",
+      "current_version": "2.1.7",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "gliomoda",
+      "tested_source": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+      "files": [
+        "recipes/gliomoda/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "0.0.4",
+      "current_version": "0.0.4",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "julia",
+      "tested_source": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
+      "files": [
+        "recipes/julia/build.yaml",
+        "recipes/julia/fulltest.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "1.13.1",
+      "current_version": "1.13.2",
+      "runtime_recipe_changed_keys": [
+        "version"
+      ],
+      "fulltest_changed_keys": [
+        "version"
+      ]
+    },
+    {
+      "recipe": "lesionquantificationtoolkit",
+      "tested_source": "c7c1c3b78693ed04ddab60b14d18409c2991e197",
+      "files": [
+        "recipes/lesionquantificationtoolkit/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "0.1.0",
+      "current_version": "0.1.0",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "lqt",
+      "tested_source": "4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5",
+      "files": [
+        "recipes/lqt/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "0.1.0",
+      "current_version": "0.1.0",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "mede",
+      "tested_source": "d1c3d59948134bfb76943e8f3f9f5d895bc98180",
+      "files": [
+        "recipes/mede/build.yaml",
+        "recipes/mede/fulltest.yaml",
+        "recipes/mede/patch_private_tags.py"
+      ],
+      "later_update_recorded": false,
+      "old_version": "0.0.12",
+      "current_version": "0.0.12",
+      "runtime_recipe_changed_keys": [
+        "build",
+        "files",
+        "variables"
+      ],
+      "fulltest_changed_keys": [
+        "tests"
+      ]
+    },
+    {
+      "recipe": "meganorm",
+      "tested_source": "0383fec6a76f59c56190fc67502a150bda24e492",
+      "files": [
+        "recipes/meganorm/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "0.2.2",
+      "current_version": "0.2.2",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "mimosa",
+      "tested_source": "46b36c3dabbddaa89db0e62ca34055d713d01b10",
+      "files": [
+        "recipes/mimosa/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "0.5.8",
+      "current_version": "0.5.8",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "modsort",
+      "tested_source": "b8764c4d1150f58dafc62913167242a94fc96769",
+      "files": [
+        "recipes/modsort/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "0.0.2",
+      "current_version": "0.0.2",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "mritools",
+      "tested_source": "38748e19e52c7463700c5550e2bcbbed06d883ba",
+      "files": [
+        "recipes/mritools/build.yaml",
+        "recipes/mritools/fulltest.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "4.9.0",
+      "current_version": "4.9.1",
+      "runtime_recipe_changed_keys": [
+        "files",
+        "variables",
+        "version"
+      ],
+      "fulltest_changed_keys": [
+        "upstream_version",
+        "version"
+      ]
+    },
+    {
+      "recipe": "niimath",
+      "tested_source": "38c17ee4e2f5c65d5db5a9077dd754178046fae8",
+      "files": [
+        "recipes/niimath/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "1.0.20260924",
+      "current_version": "1.0.20260924",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "openadscpu",
+      "tested_source": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
+      "files": [
+        "recipes/openadscpu/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "1.0.0",
+      "current_version": "1.0.0",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "openrefine",
+      "tested_source": "53688a6dceaff1d09f0bfebfc29e6d0912430271",
+      "files": [
+        "recipes/openrefine/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "3.10.1",
+      "current_version": "3.10.1",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "petu",
+      "tested_source": "260e3ebe8ff011007e645486129360e1935d5c1a",
+      "files": [
+        "recipes/petu/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "0.0.7",
+      "current_version": "0.0.7",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "qupath",
+      "tested_source": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
+      "files": [
+        "recipes/qupath/build.yaml",
+        "recipes/qupath/fulltest.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "0.7.0",
+      "current_version": "0.7.0",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": [
+        "tests"
+      ]
+    },
+    {
+      "recipe": "rshrf",
+      "tested_source": "c2b243ae0025f0010b3693176ec0656aab3993eb",
+      "files": [
+        "recipes/rshrf/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "1.7.0",
+      "current_version": "1.7.0",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "totalsegmentator",
+      "tested_source": "b9640c0638161bbb66122714f1dc16997e90f77d",
+      "files": [
+        "recipes/totalsegmentator/build.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "2.18.0",
+      "current_version": "2.18.0",
+      "runtime_recipe_changed_keys": [],
+      "fulltest_changed_keys": []
+    },
+    {
+      "recipe": "vertexwiser",
+      "tested_source": "b95e9c42f7a97f19448ec5bb07f50056d1bdc014",
+      "files": [
+        "recipes/vertexwiser/build.yaml",
+        "recipes/vertexwiser/fulltest.yaml"
+      ],
+      "later_update_recorded": false,
+      "old_version": "1.5.1",
+      "current_version": "1.5.4",
+      "runtime_recipe_changed_keys": [
+        "version"
+      ],
+      "fulltest_changed_keys": [
+        "version"
+      ]
+    }
+  ],
+  "checked_at": "2026-10-17T14:17:28.864388+00:00",
+  "examined_merged_recipes": 100,
+  "byte_identical_recipe_directories": 69,
+  "documentation_update_policy_or_legacy_only": 23,
+  "semantic_or_active_test_changes": 8,
+  "reconciled_later_native_results": [
+    "bidsmanager",
+    "julia",
+    "mede",
+    "mritools",
+    "vertexwiser"
+  ],
+  "already_recorded_resolved_suite_equivalence": [
+    "cosmomvpa"
+  ],
+  "remaining_current_fulltest_gaps": [
+    "bidscoin",
+    "qupath"
+  ],
+  "scope": "Recipe-directory comparison only, excluding documentation/update-policy and inert test directives during preliminary structural classification. Not a whole-source, shared-builder, image-byte or runtime equivalence claim. Each native proof retains its actual source SHA; historical root gaps/budgets remain unchanged."
+}

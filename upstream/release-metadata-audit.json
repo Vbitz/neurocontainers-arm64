@@ -4981,12 +4981,12 @@
     "Publication is tracked separately from native test success and upstream PR merge. No release JSON is manually edited."
   ],
   "catalog_queue_audit": {
-    "checked_at": "2026-10-17T10:36:57.179356+00:00",
+    "checked_at": "2026-10-17T14:18:57.624430+00:00",
     "commit_sha": "d4cf2c5e40ab4982b449ffb62705c9e435a095e4",
     "blob_sha": "b2b45484ac791b29b3f5e2bb59f98cc63ce795f1",
     "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
     "counts": {
-      "matches-published-metadata": 128
+      "matches-published-metadata": 132
     },
     "entries": [
       {
@@ -5917,20 +5917,20 @@
       },
       {
         "recipe": "julia",
-        "architecture": "aarch64",
-        "catalog_container": "julia_arm64",
-        "metadata_commit_sha": "216b975fb2f59f0827ae9ccd3ba6f256d461fca9",
-        "build_date": "20261012",
-        "historical_source_sha": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
+        "architecture": "x86_64",
+        "catalog_container": "julia",
+        "metadata_commit_sha": "f36c4585d67fea536edf5dd60172296a2b6aaba5",
+        "build_date": "20261016",
+        "historical_source_sha": "f6eca097494296ca8082d856adc72d70598161e6",
         "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
-          "20261012"
+          "20261016"
         ],
         "all_app_records_match": true,
         "catalog_apps": [
-          "julia_arm64 1.13.1",
-          "vscodeGUI-julia_arm64 1.13.1",
-          "REPLGUI-julia_arm64 1.13.1"
+          "julia 1.13.2",
+          "vscodeGUI-julia 1.13.2",
+          "REPLGUI-julia 1.13.2"
         ],
         "visibility_flags": {},
         "visibility_policy": "visible",
@@ -5938,20 +5938,20 @@
       },
       {
         "recipe": "julia",
-        "architecture": "x86_64",
-        "catalog_container": "julia",
-        "metadata_commit_sha": "216b975fb2f59f0827ae9ccd3ba6f256d461fca9",
-        "build_date": "20261012",
-        "historical_source_sha": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
+        "architecture": "aarch64",
+        "catalog_container": "julia_arm64",
+        "metadata_commit_sha": "f36c4585d67fea536edf5dd60172296a2b6aaba5",
+        "build_date": "20261016",
+        "historical_source_sha": "f6eca097494296ca8082d856adc72d70598161e6",
         "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
-          "20261012"
+          "20261016"
         ],
         "all_app_records_match": true,
         "catalog_apps": [
-          "julia 1.13.1",
-          "vscodeGUI-julia 1.13.1",
-          "REPLGUI-julia 1.13.1"
+          "julia_arm64 1.13.2",
+          "vscodeGUI-julia_arm64 1.13.2",
+          "REPLGUI-julia_arm64 1.13.2"
         ],
         "visibility_flags": {},
         "visibility_policy": "visible",
@@ -6343,18 +6343,18 @@
       },
       {
         "recipe": "mritools",
-        "architecture": "aarch64",
-        "catalog_container": "mritools_arm64",
-        "metadata_commit_sha": "3e4396cadbc0d4dd278ea9513960d830f96c72ca",
-        "build_date": "20261013",
-        "historical_source_sha": "38748e19e52c7463700c5550e2bcbbed06d883ba",
+        "architecture": "x86_64",
+        "catalog_container": "mritools",
+        "metadata_commit_sha": "adb5ff3cfe76adec7b4e9933a53451eb08ea0461",
+        "build_date": "20261016",
+        "historical_source_sha": "26a161e7492c3dc3f1d73bb9f4e99b7a8e371caf",
         "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
-          "20261013"
+          "20261016"
         ],
         "all_app_records_match": true,
         "catalog_apps": [
-          "mritools_arm64 4.9.0"
+          "mritools 4.9.1"
         ],
         "visibility_flags": {},
         "visibility_policy": "visible",
@@ -6362,18 +6362,18 @@
       },
       {
         "recipe": "mritools",
-        "architecture": "x86_64",
-        "catalog_container": "mritools",
-        "metadata_commit_sha": "3e4396cadbc0d4dd278ea9513960d830f96c72ca",
-        "build_date": "20261013",
-        "historical_source_sha": "38748e19e52c7463700c5550e2bcbbed06d883ba",
+        "architecture": "aarch64",
+        "catalog_container": "mritools_arm64",
+        "metadata_commit_sha": "adb5ff3cfe76adec7b4e9933a53451eb08ea0461",
+        "build_date": "20261016",
+        "historical_source_sha": "26a161e7492c3dc3f1d73bb9f4e99b7a8e371caf",
         "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
-          "20261013"
+          "20261016"
         ],
         "all_app_records_match": true,
         "catalog_apps": [
-          "mritools 4.9.0"
+          "mritools_arm64 4.9.1"
         ],
         "visibility_flags": {},
         "visibility_policy": "visible",
@@ -7227,18 +7227,18 @@
       },
       {
         "recipe": "vertexwiser",
-        "architecture": "x86_64",
-        "catalog_container": "vertexwiser",
-        "metadata_commit_sha": "9706cf90ee7f26e092f633539f6a39dfcc3787d8",
-        "build_date": "20261013",
-        "historical_source_sha": "b95e9c42f7a97f19448ec5bb07f50056d1bdc014",
+        "architecture": "aarch64",
+        "catalog_container": "vertexwiser_arm64",
+        "metadata_commit_sha": "cd7dd33584ea81b6d987b04faa535041afb11f82",
+        "build_date": "20261014",
+        "historical_source_sha": "039e1427bb3008263f98566c1532bb5c910beb78",
         "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
-          "20261013"
+          "20261014"
         ],
         "all_app_records_match": true,
         "catalog_apps": [
-          "vertexwiser 1.5.1"
+          "vertexwiser_arm64 1.5.4"
         ],
         "visibility_flags": {},
         "visibility_policy": "visible",
@@ -7246,18 +7246,18 @@
       },
       {
         "recipe": "vertexwiser",
-        "architecture": "aarch64",
-        "catalog_container": "vertexwiser_arm64",
-        "metadata_commit_sha": "9706cf90ee7f26e092f633539f6a39dfcc3787d8",
-        "build_date": "20261013",
-        "historical_source_sha": "b95e9c42f7a97f19448ec5bb07f50056d1bdc014",
+        "architecture": "x86_64",
+        "catalog_container": "vertexwiser",
+        "metadata_commit_sha": "cd7dd33584ea81b6d987b04faa535041afb11f82",
+        "build_date": "20261014",
+        "historical_source_sha": "039e1427bb3008263f98566c1532bb5c910beb78",
         "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
-          "20261013"
+          "20261014"
         ],
         "all_app_records_match": true,
         "catalog_apps": [
-          "vertexwiser_arm64 1.5.1"
+          "vertexwiser 1.5.4"
         ],
         "visibility_flags": {},
         "visibility_policy": "visible",
@@ -7384,6 +7384,44 @@
         "status": "matches-published-metadata"
       },
       {
+        "recipe": "bidsmanager",
+        "architecture": "aarch64",
+        "catalog_container": "bidsmanager_arm64",
+        "metadata_commit_sha": "f3eb84b29010f6947d7804c1a93434fb8edc1d76",
+        "build_date": "20261016",
+        "historical_source_sha": "2012574aedee80aee28924a1cd2bddc559e31863",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+        "current_metadata_build_dates": [
+          "20261016"
+        ],
+        "all_app_records_match": true,
+        "catalog_apps": [
+          "bidsmanager_arm64 1.5.0"
+        ],
+        "visibility_flags": {},
+        "visibility_policy": "visible",
+        "status": "matches-published-metadata"
+      },
+      {
+        "recipe": "bidsmanager",
+        "architecture": "x86_64",
+        "catalog_container": "bidsmanager",
+        "metadata_commit_sha": "f3eb84b29010f6947d7804c1a93434fb8edc1d76",
+        "build_date": "20261016",
+        "historical_source_sha": "2012574aedee80aee28924a1cd2bddc559e31863",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+        "current_metadata_build_dates": [
+          "20261016"
+        ],
+        "all_app_records_match": true,
+        "catalog_apps": [
+          "bidsmanager 1.5.0"
+        ],
+        "visibility_flags": {},
+        "visibility_policy": "visible",
+        "status": "matches-published-metadata"
+      },
+      {
         "recipe": "dicompare",
         "architecture": "x86_64",
         "catalog_container": "dicompare",
@@ -7416,6 +7454,44 @@
         "all_app_records_match": true,
         "catalog_apps": [
           "dicompare_arm64 0.15.4"
+        ],
+        "visibility_flags": {},
+        "visibility_policy": "visible",
+        "status": "matches-published-metadata"
+      },
+      {
+        "recipe": "mede",
+        "architecture": "aarch64",
+        "catalog_container": "mede_arm64",
+        "metadata_commit_sha": "15a257e91a865417720a4a27242210fa2c961abc",
+        "build_date": "20261013",
+        "historical_source_sha": "5cb32ea279b231cbb544172268e9ab29bbd27356",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+        "current_metadata_build_dates": [
+          "20261013"
+        ],
+        "all_app_records_match": true,
+        "catalog_apps": [
+          "mede_arm64 0.0.12"
+        ],
+        "visibility_flags": {},
+        "visibility_policy": "visible",
+        "status": "matches-published-metadata"
+      },
+      {
+        "recipe": "mede",
+        "architecture": "x86_64",
+        "catalog_container": "mede",
+        "metadata_commit_sha": "15a257e91a865417720a4a27242210fa2c961abc",
+        "build_date": "20261013",
+        "historical_source_sha": "5cb32ea279b231cbb544172268e9ab29bbd27356",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+        "current_metadata_build_dates": [
+          "20261013"
+        ],
+        "all_app_records_match": true,
+        "catalog_apps": [
+          "mede 0.0.12"
         ],
         "visibility_flags": {},
         "visibility_policy": "visible",
@@ -7460,7 +7536,7 @@
         "status": "matches-published-metadata"
       }
     ],
-    "verified_recipe_count": 64,
+    "verified_recipe_count": 66,
     "note": "Pinned current catalog compared with current committed app records and visibility. Older independently verified publication evidence is retained at its original source/date; later rebuild metadata is not attributed to those earlier tests. Scheduled deployment remains separate."
   },
   "verification_only_changes": [
@@ -8252,9 +8328,55 @@
       "tracking_path": "upstream/release-metadata-audit.json",
       "json_field": "catalog_queue_audit",
       "note": "Previous full catalog evidence retained in immutable git history."
+    },
+    {
+      "tracking_commit_sha": "3b016d2bdb5a6ea792a54ab8962f7f69689e7047",
+      "tracking_path": "upstream/release-metadata-audit.json",
+      "json_field": "catalog_queue_audit",
+      "note": "Previous full catalog evidence retained in immutable git history."
     }
   ],
   "later_update_publications": [
+    {
+      "recipe": "bidsmanager",
+      "version": "1.5.0",
+      "checked_at": "2026-10-17T14:17:49.701540+00:00",
+      "status": "verified-published-metadata",
+      "source_sha": "2012574aedee80aee28924a1cd2bddc559e31863",
+      "promotion_run_id": 38936658599,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38936658599",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/bidsmanager_arm64/1.5.0.json",
+          "source_sha": "2012574aedee80aee28924a1cd2bddc559e31863",
+          "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "metadata_commit_sha": "f3eb84b29010f6947d7804c1a93434fb8edc1d76",
+          "expected_build_date": "20261016",
+          "trusted_preview_matches": true,
+          "sif": "bidsmanager_arm64_1.5.0_20261016.simg",
+          "sif_sha256": "6169c90a5485c84c98ae073ce35bd5f62e9ff70c562ab476c4b7e7ad01f424d0",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/bidsmanager_arm64_1.5.0_20261016.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/bidsmanager/1.5.0.json",
+          "source_sha": "2012574aedee80aee28924a1cd2bddc559e31863",
+          "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "metadata_commit_sha": "f3eb84b29010f6947d7804c1a93434fb8edc1d76",
+          "expected_build_date": "20261016",
+          "trusted_preview_matches": true,
+          "sif": "bidsmanager_1.5.0_20261016.simg",
+          "sif_sha256": "f5a3131c942eb41ca42c5a831bc6e1bf1a23b014cc95f459b6098157ecd7431c",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/bidsmanager_1.5.0_20261016.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+        }
+      ],
+      "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
+    },
     {
       "recipe": "code",
       "version": "240320",
@@ -8336,6 +8458,86 @@
       "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
     },
     {
+      "recipe": "julia",
+      "version": "1.13.2",
+      "checked_at": "2026-10-17T14:18:00.112695+00:00",
+      "status": "verified-published-metadata",
+      "source_sha": "f6eca097494296ca8082d856adc72d70598161e6",
+      "promotion_run_id": 38937079320,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38937079320",
+      "metadata": [
+        {
+          "architecture": "x86_64",
+          "path": "releases/julia/1.13.2.json",
+          "source_sha": "f6eca097494296ca8082d856adc72d70598161e6",
+          "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "metadata_commit_sha": "f36c4585d67fea536edf5dd60172296a2b6aaba5",
+          "expected_build_date": "20261016",
+          "trusted_preview_matches": true,
+          "sif": "julia_1.13.2_20261016.simg",
+          "sif_sha256": "51c60f38648b85f52828fdcf60f720db98e4196fa6464739bf67b1769df64045",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/julia_1.13.2_20261016.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+        },
+        {
+          "architecture": "aarch64",
+          "path": "releases/julia_arm64/1.13.2.json",
+          "source_sha": "f6eca097494296ca8082d856adc72d70598161e6",
+          "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "metadata_commit_sha": "f36c4585d67fea536edf5dd60172296a2b6aaba5",
+          "expected_build_date": "20261016",
+          "trusted_preview_matches": true,
+          "sif": "julia_arm64_1.13.2_20261016.simg",
+          "sif_sha256": "689ba8c931d57693db3c07f1c115106e4499f022cf741a2e79513f88b09c83fb",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/julia_arm64_1.13.2_20261016.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+        }
+      ],
+      "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
+    },
+    {
+      "recipe": "mede",
+      "version": "0.0.12",
+      "checked_at": "2026-10-17T14:18:10.060974+00:00",
+      "status": "verified-published-metadata",
+      "source_sha": "5cb32ea279b231cbb544172268e9ab29bbd27356",
+      "promotion_run_id": 38335224590,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38335224590",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/mede_arm64/0.0.12.json",
+          "source_sha": "5cb32ea279b231cbb544172268e9ab29bbd27356",
+          "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "metadata_commit_sha": "15a257e91a865417720a4a27242210fa2c961abc",
+          "expected_build_date": "20261013",
+          "trusted_preview_matches": true,
+          "sif": "mede_arm64_0.0.12_20261013.simg",
+          "sif_sha256": "e643e8acfe12810a6744c76e072fc7682a445ae1817347e049eed03211093023",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mede_arm64_0.0.12_20261013.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/mede/0.0.12.json",
+          "source_sha": "5cb32ea279b231cbb544172268e9ab29bbd27356",
+          "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "metadata_commit_sha": "15a257e91a865417720a4a27242210fa2c961abc",
+          "expected_build_date": "20261013",
+          "trusted_preview_matches": true,
+          "sif": "mede_0.0.12_20261013.simg",
+          "sif_sha256": "ab9c6a79b9c29eca033bcdb435d40f2b0b47da2fe10d0a1da32c0d655e857f2d",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mede_0.0.12_20261013.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+        }
+      ],
+      "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
+    },
+    {
       "recipe": "mne",
       "version": "1.13.2",
       "checked_at": "2026-10-17T09:34:36.912707+00:00",
@@ -8409,6 +8611,86 @@
           "sif": "mneextended_1.2.0_20261017.simg",
           "sif_sha256": "3d32b026591709aad3acd4a950acf72c75bdf4db38e657bc053aff1bb89cdfe9",
           "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mneextended_1.2.0_20261017.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+        }
+      ],
+      "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
+    },
+    {
+      "recipe": "mritools",
+      "version": "4.9.1",
+      "checked_at": "2026-10-17T14:18:19.970620+00:00",
+      "status": "verified-published-metadata",
+      "source_sha": "26a161e7492c3dc3f1d73bb9f4e99b7a8e371caf",
+      "promotion_run_id": 38965229340,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38965229340",
+      "metadata": [
+        {
+          "architecture": "x86_64",
+          "path": "releases/mritools/4.9.1.json",
+          "source_sha": "26a161e7492c3dc3f1d73bb9f4e99b7a8e371caf",
+          "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "metadata_commit_sha": "adb5ff3cfe76adec7b4e9933a53451eb08ea0461",
+          "expected_build_date": "20261016",
+          "trusted_preview_matches": true,
+          "sif": "mritools_4.9.1_20261016.simg",
+          "sif_sha256": "ca6a16d6430734ef4d9f6cca0c3e8f0c0f2db086814ddb39f6b30e2185986fac",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mritools_4.9.1_20261016.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+        },
+        {
+          "architecture": "aarch64",
+          "path": "releases/mritools_arm64/4.9.1.json",
+          "source_sha": "26a161e7492c3dc3f1d73bb9f4e99b7a8e371caf",
+          "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "metadata_commit_sha": "adb5ff3cfe76adec7b4e9933a53451eb08ea0461",
+          "expected_build_date": "20261016",
+          "trusted_preview_matches": true,
+          "sif": "mritools_arm64_4.9.1_20261016.simg",
+          "sif_sha256": "2ef4c4762c8d9dd88474df57fc2fc32d5aca7937173ea9d0e5175df64c8777d5",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mritools_arm64_4.9.1_20261016.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+        }
+      ],
+      "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
+    },
+    {
+      "recipe": "vertexwiser",
+      "version": "1.5.4",
+      "checked_at": "2026-10-17T14:18:29.405920+00:00",
+      "status": "verified-published-metadata",
+      "source_sha": "039e1427bb3008263f98566c1532bb5c910beb78",
+      "promotion_run_id": 38935966164,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38935966164",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/vertexwiser_arm64/1.5.4.json",
+          "source_sha": "039e1427bb3008263f98566c1532bb5c910beb78",
+          "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "metadata_commit_sha": "cd7dd33584ea81b6d987b04faa535041afb11f82",
+          "expected_build_date": "20261014",
+          "trusted_preview_matches": true,
+          "sif": "vertexwiser_arm64_1.5.4_20261014.simg",
+          "sif_sha256": "3c63e2a9d99724a29211a694ac22c1cc5ff036a216baf2de6a3207819e421ea6",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/vertexwiser_arm64_1.5.4_20261014.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/vertexwiser/1.5.4.json",
+          "source_sha": "039e1427bb3008263f98566c1532bb5c910beb78",
+          "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "metadata_commit_sha": "cd7dd33584ea81b6d987b04faa535041afb11f82",
+          "expected_build_date": "20261014",
+          "trusted_preview_matches": true,
+          "sif": "vertexwiser_1.5.4_20261014.simg",
+          "sif_sha256": "30ff2d1d270bf2789e890b90292d469476f62f8ad31b7b0b4ae9c9e58fb146c3",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/vertexwiser_1.5.4_20261014.simg",
           "public_sif_head_status": 200,
           "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
         }

@@ -1812,5 +1812,382 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3592",
       "note": "All7 real core scientific/GUI commands exited0 on both upstream architectures,8/8 aggregate. Bundled ARM HDF5/Java3D resources remain unavailable/unverified; no complete native-extension claim."
     }
-  }
+  },
+  "later_independent_update_reviews": [
+    {
+      "recipe": "bidsmanager",
+      "version": "1.5.0",
+      "source_sha": "2012574aedee80aee28924a1cd2bddc559e31863",
+      "run_id": 38846831955,
+      "reviewed_at": "2026-10-17T14:17:28.864388+00:00",
+      "counts": {
+        "aarch64": {
+          "total": 10,
+          "passed": 10,
+          "failed": 0,
+          "skipped": 0,
+          "fulltest_total": 9,
+          "fulltest_passed": 9,
+          "fulltest_failed": 0,
+          "suites_total": 1,
+          "suites_passed": 1,
+          "passed_tests": [
+            "Simple Deploy Bins/Path Test",
+            "bids-manager package metadata",
+            "bidsmgr GUI launcher help",
+            "bidsmgr-create help",
+            "bidsmgr-scan help",
+            "bidsmgr-convert help",
+            "bidsmgr-metadata help",
+            "bidsmgr-validate help",
+            "dcm2niix help",
+            "Create and reopen dataset workspace"
+          ],
+          "failed_tests": []
+        },
+        "x86_64": {
+          "total": 10,
+          "passed": 10,
+          "failed": 0,
+          "skipped": 0,
+          "fulltest_total": 9,
+          "fulltest_passed": 9,
+          "fulltest_failed": 0,
+          "suites_total": 1,
+          "suites_passed": 1,
+          "passed_tests": [
+            "Simple Deploy Bins/Path Test",
+            "bids-manager package metadata",
+            "bidsmgr GUI launcher help",
+            "bidsmgr-create help",
+            "bidsmgr-scan help",
+            "bidsmgr-convert help",
+            "bidsmgr-metadata help",
+            "bidsmgr-validate help",
+            "dcm2niix help",
+            "Create and reopen dataset workspace"
+          ],
+          "failed_tests": []
+        }
+      },
+      "raw_report_sha256": {
+        "aarch64": "43aed3284716f712199d5c4f95dedf7ee809e2f9e14f80317be7cfa4b96d9518",
+        "x86_64": "b08f933c2f0d3dabfd7595dec96b8babc9d3eb79af45341cb389a06771258fda"
+      },
+      "scope": "Actual dataset creation/reopen, event replay, idempotence and metadata preservation. dcm2niix --help emits its invalid-option diagnostic while identifying the backend; this is CLI/error-path evidence, not a positive DICOM conversion or GUI-workflow claim.",
+      "evidence_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/24#issuecomment-6234977786"
+    },
+    {
+      "recipe": "julia",
+      "version": "1.13.2",
+      "source_sha": "f6eca097494296ca8082d856adc72d70598161e6",
+      "run_id": 38846861297,
+      "reviewed_at": "2026-10-17T14:17:28.864388+00:00",
+      "counts": {
+        "aarch64": {
+          "total": 140,
+          "passed": 140,
+          "failed": 0,
+          "skipped": 0,
+          "fulltest_total": 139,
+          "fulltest_passed": 139,
+          "fulltest_failed": 0,
+          "suites_total": 1,
+          "suites_passed": 1,
+          "passed_tests": [
+            "Simple Deploy Bins/Path Test",
+            "Packages work without a writable home",
+            "Version check",
+            "Help output",
+            "Hidden help options",
+            "Version constant",
+            "System kernel info",
+            "Word size check",
+            "Julia home directory",
+            "Basic addition",
+            "Basic subtraction",
+            "Basic multiplication",
+            "Basic division",
+            "Integer division",
+            "Modulo operation",
+            "Power operation",
+            "Float arithmetic",
+            "Complex numbers",
+            "Square root",
+            "Absolute value"
+          ],
+          "failed_tests": []
+        },
+        "x86_64": {
+          "total": 140,
+          "passed": 140,
+          "failed": 0,
+          "skipped": 0,
+          "fulltest_total": 139,
+          "fulltest_passed": 139,
+          "fulltest_failed": 0,
+          "suites_total": 1,
+          "suites_passed": 1,
+          "passed_tests": [
+            "Simple Deploy Bins/Path Test",
+            "Packages work without a writable home",
+            "Version check",
+            "Help output",
+            "Hidden help options",
+            "Version constant",
+            "System kernel info",
+            "Word size check",
+            "Julia home directory",
+            "Basic addition",
+            "Basic subtraction",
+            "Basic multiplication",
+            "Basic division",
+            "Integer division",
+            "Modulo operation",
+            "Power operation",
+            "Float arithmetic",
+            "Complex numbers",
+            "Square root",
+            "Absolute value"
+          ],
+          "failed_tests": []
+        }
+      },
+      "raw_report_sha256": {
+        "aarch64": "4df752af48309dfaec586fde116523cefc91d90bfd6be47a02a9cc53c081551d",
+        "x86_64": "783cf4be73051d605192ffeae304f4923c3c395d50ba5ee13ddc6babd2d0e496"
+      },
+      "scope": "Actual default launcher selects a writable private0700 depot with bundled package depot retained; local Distributed worker has matching DEPOT_PATH and a distinct PID. All139 actual cases pass. The Boolean test contains Julia logical OR inside its quoted expression, not a shell failure mask. This later1.13.2 proof does not close the separately pending exact-root proof at1.13.1.",
+      "evidence_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/17#issuecomment-6234978008"
+    },
+    {
+      "recipe": "mede",
+      "version": "0.0.12",
+      "source_sha": "5cb32ea279b231cbb544172268e9ab29bbd27356",
+      "run_id": 38332790640,
+      "reviewed_at": "2026-10-17T14:17:28.864388+00:00",
+      "counts": {
+        "aarch64": {
+          "total": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "fulltest_total": 3,
+          "fulltest_passed": 3,
+          "fulltest_failed": 0,
+          "suites_total": 1,
+          "suites_passed": 1,
+          "passed_tests": [
+            "Simple Deploy Bins/Path Test",
+            "MEDE command line help",
+            "MEDE Python package and cached OCR models",
+            "Actual synthetic DICOM metadata de-identification"
+          ],
+          "failed_tests": []
+        },
+        "x86_64": {
+          "total": 4,
+          "passed": 4,
+          "failed": 0,
+          "skipped": 0,
+          "fulltest_total": 3,
+          "fulltest_passed": 3,
+          "fulltest_failed": 0,
+          "suites_total": 1,
+          "suites_passed": 1,
+          "passed_tests": [
+            "Simple Deploy Bins/Path Test",
+            "MEDE command line help",
+            "MEDE Python package and cached OCR models",
+            "Actual synthetic DICOM metadata de-identification"
+          ],
+          "failed_tests": []
+        }
+      },
+      "raw_report_sha256": {
+        "aarch64": "4e0348aa60fd20ca399ef407a75c32712d56ed2678dc95894ed9b9254f29ce37",
+        "x86_64": "db816b2221b1cb83b927a8866a19d7840136acdf5ee889e9247e5900db3756db"
+      },
+      "scope": "Actual directory/file CLI operations remove recursive private tags and synthetic identity fields, preserve exact pixels/spatial geometry and sources, and produce consistent replacement UIDs. Device-retention option ordering is exercised; CLI and Python safe-private requests reject before output mutation. Scope is synthetic metadata/private-tag behavior, not OCR/image defacing or comprehensive clinical de-identification validation. This independently merged fix includes a hash-guarded application profile/source correction; it is recorded explicitly rather than attributed to the older unmodified-source proof.",
+      "evidence_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/52#issuecomment-6234978244"
+    },
+    {
+      "recipe": "mritools",
+      "version": "4.9.1",
+      "source_sha": "26a161e7492c3dc3f1d73bb9f4e99b7a8e371caf",
+      "run_id": 38936242395,
+      "reviewed_at": "2026-10-17T14:17:28.864388+00:00",
+      "counts": {
+        "aarch64": {
+          "total": 56,
+          "passed": 56,
+          "failed": 0,
+          "skipped": 0,
+          "fulltest_total": 55,
+          "fulltest_passed": 55,
+          "fulltest_failed": 0,
+          "suites_total": 1,
+          "suites_passed": 1,
+          "passed_tests": [
+            "Simple Deploy Bins/Path Test",
+            "ROMEO version check",
+            "ROMEO help",
+            "CLEARSWI version check",
+            "CLEARSWI help",
+            "MCPC3DS version check",
+            "MCPC3DS help",
+            "Julia version check",
+            "Create synthetic phase image from T1w",
+            "Create synthetic magnitude for testing",
+            "Create 4D synthetic phase from BOLD",
+            "ROMEO single-echo unwrapping (nomask)",
+            "ROMEO single-echo with robustmask",
+            "ROMEO with quality mask threshold",
+            "ROMEO with mask unwrapped option",
+            "ROMEO write quality map",
+            "ROMEO write all quality maps",
+            "ROMEO correct global phase offset",
+            "ROMEO with phase threshold",
+            "ROMEO with romeo2 weights"
+          ],
+          "failed_tests": []
+        },
+        "x86_64": {
+          "total": 56,
+          "passed": 56,
+          "failed": 0,
+          "skipped": 0,
+          "fulltest_total": 55,
+          "fulltest_passed": 55,
+          "fulltest_failed": 0,
+          "suites_total": 1,
+          "suites_passed": 1,
+          "passed_tests": [
+            "Simple Deploy Bins/Path Test",
+            "ROMEO version check",
+            "ROMEO help",
+            "CLEARSWI version check",
+            "CLEARSWI help",
+            "MCPC3DS version check",
+            "MCPC3DS help",
+            "Julia version check",
+            "Create synthetic phase image from T1w",
+            "Create synthetic magnitude for testing",
+            "Create 4D synthetic phase from BOLD",
+            "ROMEO single-echo unwrapping (nomask)",
+            "ROMEO single-echo with robustmask",
+            "ROMEO with quality mask threshold",
+            "ROMEO with mask unwrapped option",
+            "ROMEO write quality map",
+            "ROMEO write all quality maps",
+            "ROMEO correct global phase offset",
+            "ROMEO with phase threshold",
+            "ROMEO with romeo2 weights"
+          ],
+          "failed_tests": []
+        }
+      },
+      "raw_report_sha256": {
+        "aarch64": "a05cb64624c69dbe5edf0abbb8795760b71c8ec722e06b4f540bb53a2dbb2036",
+        "x86_64": "2611c8eddef1badcf64faab81ca94e871e4d960588faa6dfe997b5e226c15bec"
+      },
+      "scope": "All729 analytical ROMEO voxels satisfy the existing32*Float32eps relative-phase bound after one global offset; geometry and input bytes preserved, unwrapped range exceeds2pi. Four explicit exit1 negative cases match their assertions. MCPC3DS BoundsError is an asserted negative contract, not successful coil combination. Deploy34/41 has7 diagnostic skips: unset DEPLOY_BINS plus six ldd summaries with2 non-path entries each. All six launchers are found/executable; omitted linkage-entry identities and exhaustive ELF closure remain unproven. No fulltest capability is skipped.",
+      "evidence_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/156#issuecomment-6234978537"
+    },
+    {
+      "recipe": "vertexwiser",
+      "version": "1.5.4",
+      "source_sha": "039e1427bb3008263f98566c1532bb5c910beb78",
+      "run_id": 38507594410,
+      "reviewed_at": "2026-10-17T14:17:28.864388+00:00",
+      "counts": {
+        "aarch64": {
+          "total": 11,
+          "passed": 11,
+          "failed": 0,
+          "skipped": 0,
+          "fulltest_total": 10,
+          "fulltest_passed": 10,
+          "fulltest_failed": 0,
+          "suites_total": 1,
+          "suites_passed": 1,
+          "passed_tests": [
+            "Simple Deploy Bins/Path Test",
+            "Deploy executables are available",
+            "VertexWiseR package loads",
+            "Reticulate uses bundled Python",
+            "BrainStat stack imports",
+            "Reticulate imports bundled Python stack",
+            "Bundled demo data loads",
+            "BrainStat template setup and surface smoothing",
+            "Surface plotting returns plotly widget",
+            "RFT vertex analysis returns finite t-stat map",
+            "Native VTK version and package dependency closure"
+          ],
+          "failed_tests": []
+        },
+        "x86_64": {
+          "total": 11,
+          "passed": 11,
+          "failed": 0,
+          "skipped": 0,
+          "fulltest_total": 10,
+          "fulltest_passed": 10,
+          "fulltest_failed": 0,
+          "suites_total": 1,
+          "suites_passed": 1,
+          "passed_tests": [
+            "Simple Deploy Bins/Path Test",
+            "Deploy executables are available",
+            "VertexWiseR package loads",
+            "Reticulate uses bundled Python",
+            "BrainStat stack imports",
+            "Reticulate imports bundled Python stack",
+            "Bundled demo data loads",
+            "BrainStat template setup and surface smoothing",
+            "Surface plotting returns plotly widget",
+            "RFT vertex analysis returns finite t-stat map",
+            "Native VTK version and package dependency closure"
+          ],
+          "failed_tests": []
+        }
+      },
+      "raw_report_sha256": {
+        "aarch64": "f55a1915d0d7d1b53e8cbb6b139c69ea847cd6d3a1b74425025ad1e729cebb60",
+        "x86_64": "e0ef4fda30cbfd14e2fc4dc3169b1f4f4560e7b5dc64ba0154fc8219e67ec428"
+      },
+      "scope": "Actual fsaverage5 smoothing, plotly/htmlwidget creation and all20484 age t-statistics agree with independent base-R OLS at unchanged1e-9*(1+abs(expected)) bound. Native VTK and scientific dependency pins/pip closure pass; ARMVTK9.7.0 and x86VTK9.3.1 remain explicitly different. R unknown-option/home-path warnings are nonfatal; no clinical-validation or exhaustive RFT inference claim.",
+      "evidence_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/77#issuecomment-6234978875"
+    }
+  ],
+  "current_fulltest_gaps": [
+    {
+      "recipe": "bidscoin",
+      "observed_at": "2026-10-17T14:17:28.864388+00:00",
+      "current_upstream": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+      "introduced_by_pr": 3636,
+      "introduced_by_source": "0aa3ee7ddeb8c4be065552f13dc6ee3249bae0f1",
+      "merge_sha": "fdfba2d8c36ec6fb16a24f77e75bb5616a0d201b",
+      "test": "slicereport renders a QC montage with the bundled FSL tools",
+      "candidate_jobs": "skipped",
+      "runtime_jobs": "skipped",
+      "note": "One later fulltest assertion is absent from original tested suite. Original recipe/PR proof remains attributed to its actual source. Removing inert build tests is not evidence that these additional active tests executed.",
+      "revisit_when": "Matching independently completed native results or explicit renewed bounded verification. No recipe or test edit is necessary; the stronger assertion already exists upstream.",
+      "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/54#issuecomment-6234979140"
+    },
+    {
+      "recipe": "qupath",
+      "observed_at": "2026-10-17T14:17:28.864388+00:00",
+      "current_upstream": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+      "introduced_by_pr": 3636,
+      "introduced_by_source": "0aa3ee7ddeb8c4be065552f13dc6ee3249bae0f1",
+      "merge_sha": "fdfba2d8c36ec6fb16a24f77e75bb5616a0d201b",
+      "test": "Cellpose extension installed where the catalog registry expects it",
+      "candidate_jobs": "skipped",
+      "runtime_jobs": "skipped",
+      "note": "One later fulltest assertion is absent from original tested suite. Original recipe/PR proof remains attributed to its actual source. Removing inert build tests is not evidence that these additional active tests executed.",
+      "revisit_when": "Matching independently completed native results or explicit renewed bounded verification. No recipe or test edit is necessary; the stronger assertion already exists upstream.",
+      "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/229#issuecomment-6234979331"
+    }
+  ]
 }
