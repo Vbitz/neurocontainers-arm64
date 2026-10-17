@@ -6248,7 +6248,7 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T09:30:08.503909+00:00",
+        "checked_at": "2026-10-17T09:43:44.816794+00:00",
         "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "run_id": 39015848600,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
@@ -6260,10 +6260,10 @@
             "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
             "status": "in_progress",
             "conclusion": null,
+            "started_at": "2026-10-17T08:02:35Z",
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404-arm"
             ],
-            "started_at": "2026-10-17T08:02:35Z",
             "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735063",
             "active_steps": [
               "Stage and build candidate"
@@ -6274,10 +6274,10 @@
             "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
             "status": "in_progress",
             "conclusion": null,
+            "started_at": "2026-10-17T08:02:31Z",
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404"
             ],
-            "started_at": "2026-10-17T08:02:31Z",
             "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735065",
             "active_steps": [
               "Stage and build candidate"
@@ -9243,6 +9243,13 @@
           "both_publishers_and_finalize_success": true,
           "actor": "kylemaps",
           "triggering_actor": "kylemaps"
+        },
+        "later_verified_publication": {
+          "source_sha": "84bd8081a0f96225ff81b3580a733822bfe85113",
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3657",
+          "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38936814782",
+          "version": "240320",
+          "scope": "Later independently tested and published source. Original status/date/metadata_commit fields remain historical proof for their original candidate; they are not claims about current file contents or proof this original candidate was republished."
         }
       },
       "promotion_history": [
@@ -9297,6 +9304,327 @@
           ],
           "metadata_checked_at": "2026-10-14T06:34:41.329275+00:00",
           "note": "Original automatic publication was cancelled. Existing metadata alone does not prove this run published; audit any independently completed recovery separately."
+        }
+      ],
+      "later_upstream_updates": [
+        {
+          "checked_at": "2026-10-17T09:39:08.425667+00:00",
+          "version": "240320",
+          "source_sha": "84bd8081a0f96225ff81b3580a733822bfe85113",
+          "pr_number": 3657,
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3657",
+          "merge_sha": "98f9527ebd4c2f6e81f58969b1e634417f4729c6",
+          "merged_at": "2026-10-16T17:04:03Z",
+          "candidate_run_id": 38846841741,
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38846841741",
+          "reports": {
+            "aarch64": {
+              "schema_version": 3,
+              "recipe": "code",
+              "container": "code_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
+              "version": "240320",
+              "build_date": "20261016",
+              "docker_archive": "code_arm64_240320_20261016.docker.tar",
+              "sif": "code_arm64_240320_20261016.simg",
+              "candidate_tag": "nd-candidate-code_arm64:84bd8081a0f9",
+              "launcher": "code",
+              "pr_number": 3657,
+              "head_sha": "84bd8081a0f96225ff81b3580a733822bfe85113",
+              "tests": {
+                "total": 88,
+                "passed": 88,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 87,
+                "fulltest_passed": 87,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "Singularity version",
+                  "VSCode version check",
+                  "VSCode help",
+                  "VSCode list extensions",
+                  "VSCode Python extension",
+                  "VSCode Julia extension",
+                  "VSCode Jupyter extension",
+                  "Python version",
+                  "Python3 symlink",
+                  "Python help",
+                  "Python execution",
+                  "Python sys.path",
+                  "Pip version",
+                  "Pip list packages",
+                  "Conda version",
+                  "Conda list environments",
+                  "NumPy import and version",
+                  "NumPy array operations",
+                  "SciPy import and version"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "7.4 MB",
+                    "path": "/usr/bin/perl"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "3.3 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "3.3 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.3 MB",
+                    "path": "/usr/lib/aarch64-linux-gnu/perl-base/auto/re/re.so"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "1.0 MB",
+                    "path": "/var/lib/dpkg/status"
+                  }
+                ],
+                "efficiency_percent": 99.807,
+                "wasted_bytes": 30553049,
+                "wasted_bytes_display": "31 MB",
+                "user_wasted_percent": 0.3333
+              }
+            },
+            "x86_64": {
+              "schema_version": 3,
+              "recipe": "code",
+              "container": "code",
+              "variant": "",
+              "architecture": "x86_64",
+              "version": "240320",
+              "build_date": "20261016",
+              "docker_archive": "code_240320_20261016.docker.tar",
+              "sif": "code_240320_20261016.simg",
+              "candidate_tag": "nd-candidate-code:84bd8081a0f9",
+              "launcher": "code",
+              "pr_number": 3657,
+              "head_sha": "84bd8081a0f96225ff81b3580a733822bfe85113",
+              "tests": {
+                "total": 88,
+                "passed": 88,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 87,
+                "fulltest_passed": 87,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "Singularity version",
+                  "VSCode version check",
+                  "VSCode help",
+                  "VSCode list extensions",
+                  "VSCode Python extension",
+                  "VSCode Julia extension",
+                  "VSCode Jupyter extension",
+                  "Python version",
+                  "Python3 symlink",
+                  "Python help",
+                  "Python execution",
+                  "Python sys.path",
+                  "Pip version",
+                  "Pip list packages",
+                  "Conda version",
+                  "Conda list environments",
+                  "NumPy import and version",
+                  "NumPy array operations",
+                  "SciPy import and version"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "7.6 MB",
+                    "path": "/usr/bin/perl"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "3.3 MB",
+                    "path": "/var/cache/debconf/templates.dat"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "3.3 MB",
+                    "path": "/var/cache/debconf/templates.dat-old"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "1.3 MB",
+                    "path": "/usr/lib/x86_64-linux-gnu/perl-base/auto/re/re.so"
+                  },
+                  {
+                    "count": 4,
+                    "wasted_space": "1.0 MB",
+                    "path": "/var/lib/dpkg/status"
+                  }
+                ],
+                "efficiency_percent": 99.8105,
+                "wasted_bytes": 29869550,
+                "wasted_bytes_display": "30 MB",
+                "user_wasted_percent": 0.3254
+              }
+            }
+          },
+          "raw_scientific_review": {
+            "aarch64": {
+              "checked_at": "2026-10-17T09:39:08.425667+00:00",
+              "job_id": 116799474345,
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38846841741/job/116799474345",
+              "labels": [
+                "blacksmith-8vcpu-ubuntu-2404-arm"
+              ],
+              "gates": {
+                "Stage and build candidate": "success",
+                "Create immutable candidate files": "success",
+                "Run deploy and fulltest checks": "success",
+                "Run Dive policy check": "success",
+                "Generate manifest and release preview": "success",
+                "Require candidate tests to pass": "success"
+              },
+              "actual_functional_commands": 87,
+              "all_functional_exits": 0,
+              "deploy_counts": {
+                "total": 1,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0
+              },
+              "real_cases": [
+                {
+                  "name": "Execute a real native Jupyter kernel",
+                  "duration_seconds": 2.40360164642334,
+                  "stdout": "Real native Python Jupyter kernel recovered the exact analytical coefficients and every1287 HDF5 image voxel"
+                },
+                {
+                  "name": "Render the real VSCode editor document",
+                  "duration_seconds": 7.230393886566162,
+                  "stdout": "Actual native VSCode mapped and rendered the named Python document with unchanged file bytes"
+                },
+                {
+                  "name": "Build and execute a native nested Singularity SIF",
+                  "duration_seconds": 1.261756420135498,
+                  "stdout": "Native nested SIF construction and execution verified"
+                }
+              ],
+              "raw_test_results_sha256": "234fb9c508f5e1669a01d5371aada1c419f2368945d2ef58f69ebeb9f094127d",
+              "fulltest_suite_sha256": "892e2edb7b86cd877118f900ce9842703945df91e1af93fe5403d112e64ea0f8",
+              "scope": "Actual native editor mapped/painted the named unchanged Python document, real Jupyter kernel recovered analytical coefficients within64machine eps and every1287HDF5 voxel exactly, native Singularity constructed/executed a new SIF from this tested image. Nested user/contain/cleanenv mode verified; separate PID/IPC namespaces and clinical accuracy not claimed."
+            },
+            "x86_64": {
+              "checked_at": "2026-10-17T09:39:08.425667+00:00",
+              "job_id": 116799474410,
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38846841741/job/116799474410",
+              "labels": [
+                "neurodesk-syd-arcrunner-neurocontainers"
+              ],
+              "gates": {
+                "Stage and build candidate": "success",
+                "Create immutable candidate files": "success",
+                "Run deploy and fulltest checks": "success",
+                "Run Dive policy check": "success",
+                "Generate manifest and release preview": "success",
+                "Require candidate tests to pass": "success"
+              },
+              "actual_functional_commands": 87,
+              "all_functional_exits": 0,
+              "deploy_counts": {
+                "total": 1,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0
+              },
+              "real_cases": [
+                {
+                  "name": "Execute a real native Jupyter kernel",
+                  "duration_seconds": 2.2463924884796143,
+                  "stdout": "Real native Python Jupyter kernel recovered the exact analytical coefficients and every1287 HDF5 image voxel"
+                },
+                {
+                  "name": "Render the real VSCode editor document",
+                  "duration_seconds": 7.4462785720825195,
+                  "stdout": "Actual native VSCode mapped and rendered the named Python document with unchanged file bytes"
+                },
+                {
+                  "name": "Build and execute a native nested Singularity SIF",
+                  "duration_seconds": 2.004625082015991,
+                  "stdout": "Native nested SIF construction and execution verified"
+                }
+              ],
+              "raw_test_results_sha256": "b0f7e4d286229f68e02f2b158af44c2fa710d54b530d5e09509c08ceab43b473",
+              "fulltest_suite_sha256": "892e2edb7b86cd877118f900ce9842703945df91e1af93fe5403d112e64ea0f8",
+              "scope": "Actual native editor mapped/painted the named unchanged Python document, real Jupyter kernel recovered analytical coefficients within64machine eps and every1287HDF5 voxel exactly, native Singularity constructed/executed a new SIF from this tested image. Nested user/contain/cleanenv mode verified; separate PID/IPC namespaces and clinical accuracy not claimed."
+            }
+          },
+          "independently_observed_candidate_jobs": 2,
+          "scope": "Independent later dependency update changes VSCode1.141.0to1.142.0 and Julia1.13.1to1.13.2, with matching fulltest variables; scientific assertions/test commands unchanged. Both fresh native candidates88/88 and raw real operations reviewed. Original ownPR3589/c2c0/root proof and seven used attempts retain their completed investigation; no own build or budget reset. No current root-workflow proof attributed to this later source.",
+          "publication_observation": {
+            "checked_at": "2026-10-17T09:43:44.816794+00:00",
+            "run_id": 38936814782,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38936814782",
+            "status": "completed",
+            "conclusion": "success",
+            "note": "Verified in publication_audit for this exact later source; original own-port/root proof remains historical."
+          },
+          "publication_audit": {
+            "checked_at": "2026-10-17T09:39:11.477911+00:00",
+            "status": "verified-published-metadata",
+            "source_sha": "84bd8081a0f96225ff81b3580a733822bfe85113",
+            "promotion_run_id": 38936814782,
+            "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38936814782",
+            "metadata": [
+              {
+                "architecture": "x86_64",
+                "path": "releases/code/240320.json",
+                "source_sha": "84bd8081a0f96225ff81b3580a733822bfe85113",
+                "metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+                "metadata_commit_sha": "be8ff4d1ba9e7f86cdd00f5bb2e8eeab447e9c61",
+                "expected_build_date": "20261016",
+                "trusted_preview_matches": true,
+                "sif": "code_240320_20261016.simg",
+                "sif_sha256": "45a90f8d8d057141bc2519f39ad1d7e260a43cf16539a9868bbc1d24aa633868",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/code_240320_20261016.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              },
+              {
+                "architecture": "aarch64",
+                "path": "releases/code_arm64/240320.json",
+                "source_sha": "84bd8081a0f96225ff81b3580a733822bfe85113",
+                "metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+                "metadata_commit_sha": "be8ff4d1ba9e7f86cdd00f5bb2e8eeab447e9c61",
+                "expected_build_date": "20261016",
+                "trusted_preview_matches": true,
+                "sif": "code_arm64_240320_20261016.simg",
+                "sif_sha256": "319271609913ea7149387b9a4c07ea2f994f66ae1d91111a912a530bc5ab66c3",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/code_arm64_240320_20261016.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              }
+            ],
+            "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
+          }
         }
       ]
     },
@@ -11966,6 +12294,13 @@
           "artifact_count": 0,
           "checked_at": "2026-10-12T21:13:05.969567+00:00",
           "note": "Fulltest-only merge resolved without a candidate; no image publication or generated release metadata was produced."
+        },
+        "later_verified_publication": {
+          "source_sha": "3a350c6ba6c242d7c258f1d2fd839dd678972caf",
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3681",
+          "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39004780986",
+          "version": "0.15.4",
+          "scope": "Later independently tested and published source. Original status/date/metadata_commit fields remain historical proof for their original candidate; they are not claims about current file contents or proof this original candidate was republished."
         }
       },
       "later_upstream_updates": [
@@ -25634,7 +25969,14 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-13T00:57:57.398877+00:00"
+        "metadata_checked_at": "2026-10-13T00:57:57.398877+00:00",
+        "later_verified_publication": {
+          "source_sha": "1b64eedba421ea318435f220db170a5192e710d6",
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3682",
+          "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358",
+          "version": "1.13.2",
+          "scope": "Later independently tested and published source. Original status/date/metadata_commit fields remain historical proof for their original candidate; they are not claims about current file contents or proof this original candidate was republished."
+        }
       },
       "later_upstream_updates": [
         {
@@ -25869,12 +26211,12 @@
           },
           "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source.",
           "publication_observation": {
-            "checked_at": "2026-10-17T09:30:08.503909+00:00",
+            "checked_at": "2026-10-17T09:43:44.816794+00:00",
             "run_id": 39006597358,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358",
-            "status": "in_progress",
-            "conclusion": null,
-            "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained.",
+            "status": "completed",
+            "conclusion": "success",
+            "note": "Verified in publication_audit for this exact later source; original own-port/root proof remains historical.",
             "publisher_jobs": [
               {
                 "id": 117320285045,
@@ -25905,6 +26247,44 @@
                 ]
               }
             ]
+          },
+          "publication_audit": {
+            "checked_at": "2026-10-17T09:34:36.912707+00:00",
+            "status": "verified-published-metadata",
+            "source_sha": "1b64eedba421ea318435f220db170a5192e710d6",
+            "promotion_run_id": 39006597358,
+            "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358",
+            "metadata": [
+              {
+                "architecture": "aarch64",
+                "path": "releases/mne_arm64/1.13.2.json",
+                "source_sha": "1b64eedba421ea318435f220db170a5192e710d6",
+                "metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+                "metadata_commit_sha": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+                "expected_build_date": "20261017",
+                "trusted_preview_matches": true,
+                "sif": "mne_arm64_1.13.2_20261017.simg",
+                "sif_sha256": "8bc6639e53e61c99f7b75eb38293e717d70f538bc2ed3cd0614e2ac56b78635d",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mne_arm64_1.13.2_20261017.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              },
+              {
+                "architecture": "x86_64",
+                "path": "releases/mne/1.13.2.json",
+                "source_sha": "1b64eedba421ea318435f220db170a5192e710d6",
+                "metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+                "metadata_commit_sha": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+                "expected_build_date": "20261017",
+                "trusted_preview_matches": true,
+                "sif": "mne_1.13.2_20261017.simg",
+                "sif_sha256": "4101c1b00fc4aca1a3b5bdabee235d16d7b9896e7615e8e1d7fc05f6be6bf7d4",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mne_1.13.2_20261017.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              }
+            ],
+            "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
           }
         }
       ]
@@ -26560,36 +26940,40 @@
           },
           "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source.",
           "publication_observation": {
-            "checked_at": "2026-10-17T09:30:08.503909+00:00",
+            "checked_at": "2026-10-17T09:43:44.816794+00:00",
             "run_id": 39007028913,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
             "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained.",
             "publisher_jobs": [
               {
                 "id": 117321521782,
                 "name": "publish (candidate-mneextended_arm64-f874d12f605da513b3eddb380799416b5bf6df76)",
-                "status": "queued",
+                "status": "in_progress",
                 "conclusion": null,
-                "started_at": "2026-10-17T05:39:14Z",
+                "started_at": "2026-10-17T09:31:27Z",
                 "labels": [
                   "neurodesk-syd-arcrunner-neurocontainers"
                 ],
                 "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913/job/117321521782",
-                "active_steps": []
+                "active_steps": [
+                  "Download candidate bundle without executing it"
+                ]
               },
               {
                 "id": 117321521800,
                 "name": "publish (candidate-mneextended-f874d12f605da513b3eddb380799416b5bf6df76)",
-                "status": "queued",
+                "status": "in_progress",
                 "conclusion": null,
-                "started_at": "2026-10-17T05:39:14Z",
+                "started_at": "2026-10-17T09:33:15Z",
                 "labels": [
                   "neurodesk-syd-arcrunner-neurocontainers"
                 ],
                 "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913/job/117321521800",
-                "active_steps": []
+                "active_steps": [
+                  "Download candidate bundle without executing it"
+                ]
               }
             ]
           }
@@ -45126,9 +45510,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-17T09:17:03.481787+00:00",
-    "previous_sha": "16bcfd77bc5334fa3b794eeb8a6617563e759e46",
-    "new_sha": "0fbcbca21518d7817dfeb9d2c20e9249d1b610c7",
+    "checked_at": "2026-10-17T09:35:33.667275+00:00",
+    "previous_sha": "0fbcbca21518d7817dfeb9d2c20e9249d1b610c7",
+    "new_sha": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },
@@ -45306,11 +45690,11 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T09:30:08.503909+00:00",
-    "top_level_base_commit": "66b6ffc2a1672dcf04f4fecb5b5f86e1604c4aae",
+    "checked_at": "2026-10-17T09:43:44.816794+00:00",
+    "top_level_base_commit": "e64b45838e9dde8dc29093ee97e9081fffb5cbfd",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
-    "upstream_fork_main_sha": "0fbcbca21518d7817dfeb9d2c20e9249d1b610c7",
+    "upstream_fork_main_sha": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
     "inventory_status_counts": {
       "excluded-by-user": 17,
       "blocked-prerequisite": 2,
@@ -45330,7 +45714,7 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Observe existing BrainLes9564/run39015848600 native jobs and MNE1b64/run39006597358 publication; review exact terminal scientific reports or trusted publication previews/metadata/publicSIFs. MNEExtended later publication remains queued. Six budget answers pending; preserve all deadlines/counters and original source proofs. Full goal incomplete.",
+    "next_action": "Observe existing BrainLes9564/run39015848600 two native image builds and MNEExtendedf874/run39007028913 publisher; review exact terminal evidence. Code/MNE/Dicompare later publications verified separately, original historical proofs retained. Six budget questions remain unanswered; no new own build or reset. Full goal incomplete.",
     "live_external_jobs": [
       {
         "recipe": "brainles-preprocessing",
@@ -45358,79 +45742,44 @@
       }
     ],
     "last_goal_turn_classification": "progress",
-    "progress": "Fork normal-fast-forward0fb; complete delta from audited16bc changes only outside-inventory mrtrix3src metadata, all target/shared files identical. Limited BrainLes recipe configuration review recorded, explicit diagnostic nonmergeeligible hold preserved. MNE automatic publication started and progressed to SIF attachment; no new scientific builds or terminal publication proof claimed.",
+    "progress": "MNE later1b64 exact-source publication verified. Recovered Code updater3657/source84bd native88/88 both architectures, actual editor/Jupyter1287voxels/nestedSIF operations and exact-source successful publication without rebuilding; all126catalog entries/63publishedrecipes now match verified source-specific publication records. Fork976 normalFF/Actionsdisabled. Original own-port/root proofs, budgets and full objective preserved.",
     "active_automatic_promotions": [
       {
-        "recipe": "mne",
-        "checked_at": "2026-10-17T09:30:08.503909+00:00",
-        "run_id": 39006597358,
-        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358",
-        "status": "in_progress",
-        "conclusion": null,
-        "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained.",
-        "publisher_jobs": [
-          {
-            "id": 117320285045,
-            "name": "publish (candidate-mne-1b64eedba421ea318435f220db170a5192e710d6)",
-            "status": "in_progress",
-            "conclusion": null,
-            "started_at": "2026-10-17T09:07:29Z",
-            "labels": [
-              "neurodesk-syd-arcrunner-neurocontainers"
-            ],
-            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358/job/117320285045",
-            "active_steps": [
-              "Attach tested SIF to staged OCI images"
-            ]
-          },
-          {
-            "id": 117320285054,
-            "name": "publish (candidate-mne_arm64-1b64eedba421ea318435f220db170a5192e710d6)",
-            "status": "in_progress",
-            "conclusion": null,
-            "started_at": "2026-10-17T08:38:19Z",
-            "labels": [
-              "neurodesk-syd-arcrunner-neurocontainers"
-            ],
-            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358/job/117320285054",
-            "active_steps": [
-              "Attach tested SIF to staged OCI images"
-            ]
-          }
-        ]
-      },
-      {
         "recipe": "mneextended",
-        "checked_at": "2026-10-17T09:30:08.503909+00:00",
+        "checked_at": "2026-10-17T09:43:44.816794+00:00",
         "run_id": 39007028913,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
-        "status": "queued",
+        "status": "in_progress",
         "conclusion": null,
         "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained.",
         "publisher_jobs": [
           {
             "id": 117321521782,
             "name": "publish (candidate-mneextended_arm64-f874d12f605da513b3eddb380799416b5bf6df76)",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "started_at": "2026-10-17T05:39:14Z",
+            "started_at": "2026-10-17T09:31:27Z",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913/job/117321521782",
-            "active_steps": []
+            "active_steps": [
+              "Download candidate bundle without executing it"
+            ]
           },
           {
             "id": 117321521800,
             "name": "publish (candidate-mneextended-f874d12f605da513b3eddb380799416b5bf6df76)",
-            "status": "queued",
+            "status": "in_progress",
             "conclusion": null,
-            "started_at": "2026-10-17T05:39:14Z",
+            "started_at": "2026-10-17T09:33:15Z",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913/job/117321521800",
-            "active_steps": []
+            "active_steps": [
+              "Download candidate bundle without executing it"
+            ]
           }
         ]
       }

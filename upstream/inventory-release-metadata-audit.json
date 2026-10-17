@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-17T08:39:35.178066+00:00",
-  "upstream_ref": "16bcfd77bc5334fa3b794eeb8a6617563e759e46",
+  "checked_at": "2026-10-17T09:35:36.302124+00:00",
+  "upstream_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
   "scope": "112 user-requested in-scope recipes;17 OpenRecon exclusions omitted.",
   "policy": "Read-only source-tree audit. Metadata presence/schema does not prove current builds, public artifacts or deployment; exact-candidate publication proofs remain in release-metadata-audit.json. No generated JSON changes or promotion dispatch.",
   "counts": {
@@ -1036,7 +1036,7 @@
       "variant": "arm64",
       "source_recipe": "mne",
       "apps": {
-        "mne_arm64 1.13.2": "20261014"
+        "mne_arm64 1.13.2": "20261017"
       },
       "incorrect_identity_fields": {},
       "missing_identity_fields": [],
@@ -1862,20 +1862,17 @@
     "unresolved_template_values": [],
     "scope": "Static scan of all current-version x86/ARM app records, including GUI commands, app names and nested Apptainer arguments, within the112 in-scope recipes. No GUI/runtime execution or publication inferred."
   },
-  "unchanged_inventory_tree_observation": {
-    "checked_at": "2026-10-17T09:17:35.311586+00:00",
-    "audited_ref": "16bcfd77bc5334fa3b794eeb8a6617563e759e46",
-    "equivalent_newer_ref": "0fbcbca21518d7817dfeb9d2c20e9249d1b610c7",
-    "complete_changed_paths": [
-      "releases/mrtrix3src/latest.json"
-    ],
-    "scope": "Only an outside-inventory release file changed. All target recipe/release paths and every other tracked file, including shared builder/workflows/locked dependencies, are byte-identical. Existing metadata audit remains valid at this newer ref; no new runtime/publication proof or rebuild claimed."
-  },
   "unchanged_inventory_tree_observation_history": [
     {
       "tracking_commit_sha": "66b6ffc2a1672dcf04f4fecb5b5f86e1604c4aae",
       "path": "upstream/inventory-release-metadata-audit.json",
       "field": "unchanged_inventory_tree_observation"
+    },
+    {
+      "tracking_commit_sha": "e64b45838e9dde8dc29093ee97e9081fffb5cbfd",
+      "path": "upstream/inventory-release-metadata-audit.json",
+      "field": "unchanged_inventory_tree_observation",
+      "note": "Prior source-tree equivalence observation is historical; refreshed metadata audit covers newer in-scope publication changes."
     }
   ]
 }
