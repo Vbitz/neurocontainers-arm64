@@ -4039,7 +4039,13 @@
         "runtime_jobs": "skipped",
         "note": "One later fulltest assertion is absent from original tested suite. Original recipe/PR proof remains attributed to its actual source. Removing inert build tests is not evidence that these additional active tests executed.",
         "revisit_when": "Matching independently completed native results or explicit renewed bounded verification. No recipe or test edit is necessary; the stronger assertion already exists upstream.",
-        "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/54#issuecomment-6234979140"
+        "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/54#issuecomment-6234979140",
+        "readonly_recipe_preflight": {
+          "checked_at": "2026-10-17T15:37:36.834236+00:00",
+          "source_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "build_yaml_git_blob": "980266e3c788919f1a9ed83fbe3f2f6fbaf07068",
+          "finding": "Recipe declares aarch64 and obtains fsl-libvis/fsl-avwutils/fsl-flirt through its conda environment from the official FSL channel. No explicit x86-only slicer URL in this recipe. This is source configuration only: exact resolved package versions, native ELF execution and real QC montage remain unproven for the newly added assertion. Existing successful DICOM workflow evidence remains at its tested source; no new build or license/runtime bypass."
+        }
       },
       "pending_budget_question": {
         "asked_at": "2026-10-17T14:17:28.864388+00:00",
@@ -6547,7 +6553,7 @@
         "revisit_condition": "Concrete supported ordinary recipe packaging/provenance remedy plus explicit renewed budget before own edits/dispatch. All native/upstream exact-source gates must pass; no deep library/runtime port, erased scientific assertion or loosened Dive threshold."
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T14:53:16.615990+00:00",
+        "checked_at": "2026-10-17T15:37:36.834236+00:00",
         "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "run_id": 39015848600,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
@@ -35110,7 +35116,7 @@
         }
       },
       "merged_sha": null,
-      "next_action": "Observe exact326 ARM job117418545476/run39040375251. Current326 x8662/63 rawreviewed:61functional cases meet exit contracts, only explicitreviewgatefails; all5898240voxel maskproduct34.61s and geometry/immutability pass. Diagnostic-only recorder-stop admission update has not proven FSLperformance repair; prior b50 ARM61/63/normmi timeout remain separately archived.20observedattempts/originalclock/cap/mergehold retained; no own retry, private runtimeport, weaker assertions or merge.",
+      "next_action": "Exact326dc9ce/run39040375251 terminalARM60/63(normmi300.021s,T2300.018s,explicitreviewgate),x8662/63(onlyreviewgate). Full5898240voxel registered-mask product100.55s, geometry/immutability and mutualinfo573.25s/600 pass. Profiler now accepts requested SIGINT and decodes49preflight samples, but12[vdso] samples are unbound to captured objects; raw_capture=false/source_attribution unresolved. Need correct admitted actual profiling and concrete supported FSL/runtime/resource remedy plus renewed allowance before own edits/builds. Preserve20accounted attempts/original6cap/expiredwindow/reviewhold; no ignored DSOs, unbound attribution, private runtimeport, timeout/tolerance change or merge.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.0",
@@ -35236,12 +35242,12 @@
         "reason": "Corrected fulltest/current candidate source requires a fresh root native build plus both upstream architecture builds;2 remaining attempts cannot complete that three-build lifecycle. Original native62/62 source proof retained. No failed source merged or substituted old proof."
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T14:54:46.807838+00:00",
+        "checked_at": "2026-10-17T15:37:36.834236+00:00",
         "source_sha": "326dc9ce8ff8842399c5d8f4a0b021e9f302c627",
         "run_id": 39040375251,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39040375251",
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "failure",
         "jobs": [
           {
             "id": 117418545434,
@@ -35258,16 +35264,14 @@
           {
             "id": 117418545476,
             "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "failure",
             "started_at": "2026-10-17T14:21:38Z",
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404-arm"
             ],
             "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39040375251/job/117418545476",
-            "active_steps": [
-              "Run deploy and fulltest checks"
-            ]
+            "active_steps": []
           }
         ],
         "dispatched_by_this_continuation": false,
@@ -35646,8 +35650,8 @@
             "run_id": 39040375251,
             "attempt": 1,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39040375251",
-            "run_status": "in_progress",
-            "run_conclusion": null,
+            "run_status": "completed",
+            "run_conclusion": "failure",
             "jobs": [
               {
                 "job_id": 117418545434,
@@ -35668,22 +35672,20 @@
                 "architecture": "aarch64",
                 "id": 117418545476,
                 "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
-                "status": "in_progress",
-                "conclusion": null,
+                "status": "completed",
+                "conclusion": "failure",
                 "started_at": "2026-10-17T14:21:38Z",
                 "labels": [
                   "blacksmith-8vcpu-ubuntu-2404-arm"
                 ],
                 "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39040375251/job/117418545476",
-                "active_steps": [
-                  "Install Apptainer"
-                ]
+                "active_steps": []
               }
             ]
           }
         ],
         "policy": "Count every non-skipped candidate job reservation, retaining cancelled/unstarted attempts. Carried successes with identical run/name/start are not rebuilt attempts. These independent external jobs do not expand local authorization.",
-        "checked_at": "2026-10-17T14:24:19.855650+00:00",
+        "checked_at": "2026-10-17T15:35:11.469595+00:00",
         "root_native_attempts": 2,
         "total_recorded_attempts": 20,
         "local_max_build_attempts": 6,
@@ -35835,6 +35837,296 @@
             "release": "DIAGNOSTICBLOCKED"
           },
           "candidate_artifact_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39040375251/artifacts/12104392525"
+        },
+        "aarch64": {
+          "checked_at": "2026-10-17T15:35:11.469595+00:00",
+          "source_sha": "326dc9ce8ff8842399c5d8f4a0b021e9f302c627",
+          "run_id": 39040375251,
+          "job_id": 117418545476,
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39040375251/job/117418545476",
+          "architecture": "aarch64",
+          "report": {
+            "schema_version": 3,
+            "recipe": "pydeface",
+            "container": "pydeface_arm64",
+            "variant": "arm64",
+            "architecture": "aarch64",
+            "version": "2.1.0",
+            "build_date": "20261017",
+            "docker_archive": "pydeface_arm64_2.1.0_20261017.docker.tar",
+            "sif": "pydeface_arm64_2.1.0_20261017.simg",
+            "candidate_tag": "nd-candidate-pydeface_arm64:326dc9ce8ff8",
+            "launcher": "pydeface",
+            "pr_number": 3580,
+            "head_sha": "326dc9ce8ff8842399c5d8f4a0b021e9f302c627",
+            "tests": {
+              "total": 63,
+              "passed": 60,
+              "failed": 3,
+              "skipped": 0,
+              "fulltest_total": 62,
+              "fulltest_passed": 59,
+              "fulltest_failed": 3,
+              "suites_total": 1,
+              "suites_passed": 0,
+              "passed_tests": [
+                "Simple Deploy Bins/Path Test",
+                "pydeface version check",
+                "pydeface help",
+                "Basic defacing with default output",
+                "Defacing with custom output path",
+                "Defacing with force overwrite",
+                "Defacing with mutualinfo cost",
+                "Defacing with corratio cost",
+                "Defacing with normcorr cost",
+                "Defacing with leastsq cost",
+                "Defacing with applyto single image",
+                "Defacing with nocleanup",
+                "Defacing with verbose output",
+                "FSL flirt version check",
+                "FSL flirt basic registration",
+                "FSL flirt with mutualinfo cost",
+                "FSL flirt apply transform",
+                "FSL convert_xfm invert",
+                "FSL fslstats basic",
+                "FSL fslstats volume"
+              ],
+              "failed_tests": [
+                "Defacing with normmi cost",
+                "Deface T2 image",
+                "Native ARM diagnosis requires review"
+              ]
+            },
+            "dive": {
+              "status": "success",
+              "failed_checks": [],
+              "inefficient_files": [
+                {
+                  "count": 4,
+                  "wasted_space": "2.7 MB",
+                  "path": "/var/cache/debconf/templates.dat"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "1.4 MB",
+                  "path": "/var/cache/debconf/templates.dat-old"
+                },
+                {
+                  "count": 4,
+                  "wasted_space": "830 kB",
+                  "path": "/var/log/dpkg.log"
+                },
+                {
+                  "count": 4,
+                  "wasted_space": "509 kB",
+                  "path": "/var/lib/dpkg/status"
+                },
+                {
+                  "count": 3,
+                  "wasted_space": "422 kB",
+                  "path": "/var/lib/dpkg/status-old"
+                }
+              ],
+              "efficiency_percent": 99.9615,
+              "wasted_bytes": 6136797,
+              "wasted_bytes_display": "6.1 MB",
+              "user_wasted_percent": 0.0507
+            }
+          },
+          "overall_status": "failed-runtime-and-explicit-diagnostic-gate",
+          "passed_functional_cases": 59,
+          "actual_zero_exit_passed_functional_commands": 55,
+          "explicitly_asserted_unusual_exits": [
+            {
+              "test": "FSL fslsplit check",
+              "expected_exit_code": 1
+            },
+            {
+              "test": "FSL fslmerge check",
+              "expected_exit_code": 1
+            },
+            {
+              "test": "pydeface with missing input",
+              "expected_exit_code": 1
+            },
+            {
+              "test": "pydeface with invalid cost function",
+              "expected_exit_code": 1
+            }
+          ],
+          "expected_negative_traceback_cases": [
+            "pydeface with missing input",
+            "pydeface with invalid cost function"
+          ],
+          "deploy_counts": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          "failed_tests": [
+            {
+              "name": "Defacing with normmi cost",
+              "duration_seconds": 300.0205671787262,
+              "message": "Timeout after 300s",
+              "reported_return_code": 0,
+              "expected_exit_code": 0
+            },
+            {
+              "name": "Deface T2 image",
+              "duration_seconds": 300.0180068016052,
+              "message": "Timeout after 300s",
+              "reported_return_code": 0,
+              "expected_exit_code": 0
+            },
+            {
+              "name": "Native ARM diagnosis requires review",
+              "duration_seconds": 0.17501401901245117,
+              "message": "Expected exit code 0, got 1",
+              "reported_return_code": 1,
+              "expected_exit_code": 0
+            }
+          ],
+          "timeout_return_code_note": "Timeout return_code0 is a reporting placeholder, not a completed successful command exit.",
+          "full_mask_product_case_seconds": 100.55033779144287,
+          "mutualinfo_seconds": 573.2453577518463,
+          "metrics": {
+            "voxels": 5898240,
+            "removed": 1076007,
+            "retained": 4320559,
+            "nifti_quantization_bound": 0.010797647,
+            "count_scope": "Every input voxel checked; removed/retained counts include only originally nonzero input voxels.",
+            "originally_nonzero_input_voxels": 5396566,
+            "originally_zero_input_voxels": 501674
+          },
+          "profiling_manifest": {
+            "at": 1462.299167768,
+            "baseline": "a3cd2eb0a42da42030d1547179b20dab066355a5",
+            "cleanup": {
+              "complete": true,
+              "reaped": [
+                {
+                  "pid": 53068,
+                  "status": 15
+                },
+                {
+                  "pid": 53069,
+                  "status": 0
+                }
+              ]
+            },
+            "handoff": {
+              "acknowledged": 1458.019955248,
+              "cleared": 1458.019755369,
+              "ready": 1458.019056632
+            },
+            "outcome": "refused",
+            "raw_capture": false,
+            "reason": "Refusal: preflight sample DSO cannot be bound to a mapped object",
+            "release": "DIAGNOSTICBLOCKED",
+            "source_attribution": "unresolved",
+            "stage": "preflight",
+            "supply_cleanup": {
+              "complete": true,
+              "excluded_work": true
+            }
+          },
+          "profiling_preflight_review": {
+            "timing_receipt": {
+              "argv": [
+                "/home/runner/_work/neurocontainers/neurocontainers/candidate/pydeface_arm64/test-output/fulltest-run-lqqmvf_9/work/native-perf-3ybpzoiy/perf",
+                "record",
+                "--no-buildid-cache",
+                "--no-inherit",
+                "-e",
+                "cpu-clock:u",
+                "-F",
+                "49",
+                "--strict-freq",
+                "-m",
+                "64",
+                "-D",
+                "-1",
+                "--control=fd:5,9",
+                "-p",
+                "53068",
+                "-o",
+                "/home/runner/_work/neurocontainers/neurocontainers/candidate/pydeface_arm64/test-output/fulltest-run-lqqmvf_9/native-profile/preflight.data"
+              ],
+              "numeric_pid_attach_nonatomic": true,
+              "raw_status": 2,
+              "requested_interval": 1,
+              "returncode": -2,
+              "stop": {
+                "outcome": "requested",
+                "pre_stop": null,
+                "requested_signal": 2,
+                "terminal": {
+                  "si_code": 2,
+                  "si_status": 2
+                }
+              },
+              "times": {
+                "disable_ack": 1460.96010256,
+                "disable_send": 1460.956216718,
+                "enable_ack": 1459.956137448,
+                "enable_send": 1459.948747882,
+                "ended": 1460.980551504,
+                "interval_lower": 1.0000792700000147,
+                "interval_upper": 1.0113546780000888,
+                "last_validation": 1459.948744502,
+                "ping_ack": 1459.924464855,
+                "ping_send": 1459.881211557,
+                "post_identity": 1460.980468025,
+                "pre_spawn": 1459.876226821,
+                "stop_attempt": 1460.96013014,
+                "stop_checked": 1460.9601262,
+                "stop_returned": 1460.96016446,
+                "terminal_observed": 1460.980301686
+              }
+            },
+            "decoded_quality": {
+              "dsos": {
+                "/home/runner/.local/share/uv/python/cpython-3.10.22-linux-aarch64-gnu/bin/python3.10": 37,
+                "[vdso]": 12
+              },
+              "events": {
+                "cpu-clock:u": 49
+              },
+              "first_time": 1459.713061,
+              "last_time": 1460.692671,
+              "lost": 0,
+              "tids": {
+                "53068": 49
+              },
+              "total": 49,
+              "unknown_dsos": 0,
+              "unknown_fraction": 0.24489795918367346,
+              "unknown_symbols": 12
+            },
+            "unbound_dsos": [
+              "[vdso]"
+            ],
+            "mapped_regular_file_paths": [
+              "/home/runner/.local/share/uv/python/cpython-3.10.22-linux-aarch64-gnu/bin/python3.10",
+              "/usr/lib/aarch64-linux-gnu/libc.so.6",
+              "/usr/lib/aarch64-linux-gnu/librt.so.1",
+              "/usr/lib/aarch64-linux-gnu/libm.so.6",
+              "/usr/lib/aarch64-linux-gnu/libutil.so.1",
+              "/usr/lib/aarch64-linux-gnu/libdl.so.2",
+              "/usr/lib/aarch64-linux-gnu/libpthread.so.0",
+              "/usr/lib/aarch64-linux-gnu/ld-linux-aarch64.so.1"
+            ],
+            "quality_sha256": "db88f1ee617e019132c29c0332727b7fce0258faa49b12b55df192b7273478d3",
+            "timing_sha256": "1723de73fe584f12b1b2975ba112aa42edfd87ba0e16a17a971e2a8b3264c8d8",
+            "finding": "Requested non-core SIGINT stop progresses beyond previous status refusal.49samples/0lost from busy Python preflight,37bound to Python executable and12to[vdso], which is absent from captured regular-file objects. The explicit set-membership check then refuses. Preserve mapping/unknown-symbol assertions; do not silently discard[vdso] samples, accept unbound data or relabel preflight as actual FSL capture. This explains diagnostic refusal only."
+          },
+          "raw_test_results_sha256": "4d510137559c6d0209cc875c1c015e4851edc17087f7dbec431bfd5eff17b2d3",
+          "profiling_manifest_sha256": "580793341a5db6e9f80b65ad03fae3ed62bb89a7f34b22637ac55dd573097e49",
+          "candidate_artifact_id": 12105104162,
+          "candidate_artifact_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39040375251/artifacts/12105104162",
+          "scope": "Exact current nativeARM suite fails two scientific300-second timeouts plus deliberate review gate.59functional strict passes include every5898240voxel actual registered-mask product, input/geometry invariants, officialFSL6.0.7.23 closure and mutualinfo within600s. Prior b50 T2pass276.09s is historical, not proof of stable performance or a pass at this source. Profiler accepted requested SIGINT-stop status and decoded49preflight samples;12[vdso] samples fail mapped-object binding. This is not an admitted FSL-operation capture or source attribution and does not identify timeout cause. No clinical accuracy, cross-architecture bitwise parity, exact-root-source, publication or merge claim.",
+          "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/161#issuecomment-6235852241"
         }
       },
       "external_source_evidence_history": [
@@ -37699,7 +37991,13 @@
         "runtime_jobs": "skipped",
         "note": "One later fulltest assertion is absent from original tested suite. Original recipe/PR proof remains attributed to its actual source. Removing inert build tests is not evidence that these additional active tests executed.",
         "revisit_when": "Matching independently completed native results or explicit renewed bounded verification. No recipe or test edit is necessary; the stronger assertion already exists upstream.",
-        "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/229#issuecomment-6234979331"
+        "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/229#issuecomment-6234979331",
+        "readonly_recipe_preflight": {
+          "checked_at": "2026-10-17T15:37:36.834236+00:00",
+          "source_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "build_yaml_git_blob": "aadb36eace4f6a55198ee06f76fa0647cee37423",
+          "finding": "Registry installedVersion and extraction directory use the same v-prefixed cellpose_extension_version, matching the added assertion path construction. This does not inspect archive contents or prove runtime JAR/QC-script existence; the new assertion still requires actual execution. No new source/test edit or build."
+        }
       },
       "pending_budget_question": {
         "asked_at": "2026-10-17T14:17:28.864388+00:00",
@@ -48022,8 +48320,8 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T14:54:46.807838+00:00",
-    "top_level_base_commit": "1f1a79ad12be4a21dc649c5b7fd99cbc5561466a",
+    "checked_at": "2026-10-17T15:37:36.834236+00:00",
+    "top_level_base_commit": "5b587a0404e268b91b63826c97e1336b103bf19b",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
     "upstream_fork_main_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
@@ -48046,23 +48344,10 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Observe PyDeface326 ARMjob117418545476/run39040375251 actual scientific and profiler-admission artifacts. Preserve current BrainLes9564 failed review/Dive/provenance gates and successful native scientific-component evidence separately. Own recipe edits/dispatch need applicable renewed allowance;11budget recipe decisions unanswered, no duplicate runs or completion claim.",
-    "live_external_jobs": [
-      {
-        "recipe": "pydeface",
-        "source_sha": "326dc9ce8ff8842399c5d8f4a0b021e9f302c627",
-        "run_id": 39040375251,
-        "job_id": 117418545476,
-        "status": "in_progress",
-        "conclusion": null,
-        "active_steps": [
-          "Run deploy and fulltest checks"
-        ],
-        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39040375251/job/117418545476"
-      }
-    ],
+    "next_action": "Await applicable explicit replies for the11prepared bounded recipe verifications/fixes; do not reask or infer consent. Current BrainLes requires concrete maintainable packaging/provenance correction and current PyDeface requires actual admitted profiling plus supported performance remedy before own retries. All known candidate jobs are terminal, current PR heads match recorded source, fork/main067ab0cf stays synchronized/Actionsdisabled. Reuse all successful native/publication proofs; preserve two added-test gaps, five old exact-root gaps and masked runtime followups. Overall goal incomplete; classify this turn as progress, not completion or a three-turn impasse.",
+    "live_external_jobs": [],
     "last_goal_turn_classification": "progress",
-    "progress": "Actual BrainLes9564 ARM Docker/SIF/source build and scientific operations complete;17strict functional passes plus SynthStrip all-output assertions39.51s before intentional review refusal. Overall18/19 plus Dive32.8833%>30 fail; diagnostic/provenance hold remains.20accounted attempts/oldclock preserved. Current PyDeface326 x8662/63 rawreviewed, ARMstill running;20accounted attempts.66published/132catalog and11pending budget recipe decisions retained.",
+    "progress": "Current BrainLes9564 and PyDeface326 are terminal and raw-reviewed, with successful native scientific components preserved alongside actual failing gates. BrainLes18/19: SynthStrip all assertions39.51s before review refusal, Dive32.8833%>30 fails. PyDefaceARM60/63: normmi/T2300s timeouts plusreviewgate; x8662/63. Profiler49preflight samples with12unbound[vdso], no actual FSL capture/source attribution. No live jobs,20accounted attempts each/originalcaps/windows retained. Read-only BIDScoin/QuPath recipe preflights find no direct configuration contradiction but do not execute their added assertions.11budget recipe replies pending,66published/132catalog unchanged.",
     "active_automatic_promotions": [],
     "pending_budget_replies": [
       "apptainer",

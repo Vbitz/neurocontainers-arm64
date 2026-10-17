@@ -1755,6 +1755,112 @@
       "scope": "Native ARM source build/Docker/SIF completed.17functional cases pass strict exit0 plus deploy3/3. SynthStrip diagnostic command completes its actual model and every existing mask/voxel/geometry/input/weight assertion before deliberately exiting1 at its explicit ARM review guard; it remains a failed test, not a green scientific suite. Both registration backends perform self-registration and transformation on the same96-cubed phantom, not general inter-subject accuracy. Actual HD-BET fold0 CPU inference is exercised;5checkpoint files are checked, not five-fold inference. Original-wheel CMake cache/ACL/compiler provenance, whole policy/ABI equivalence and release eligibility remain unresolved. Dive waste policy also fails; no threshold/assertion/gate changed or merge/publication claimed.",
       "raw_test_results_sha256": "9720a2867afebb1754bc0be833cb52da64111771bc62f6db6209bd2fe426fbde",
       "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-6235350064"
+    },
+    "pydeface-326-arm": {
+      "source_sha": "326dc9ce8ff8842399c5d8f4a0b021e9f302c627",
+      "run_id": 39040375251,
+      "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39040375251/job/117418545476",
+      "reported_counts": {
+        "total": 63,
+        "passed": 60,
+        "failed": 3,
+        "skipped": 0,
+        "fulltest_total": 62,
+        "fulltest_passed": 59,
+        "fulltest_failed": 3,
+        "suites_total": 1,
+        "suites_passed": 0,
+        "passed_tests": [
+          "Simple Deploy Bins/Path Test",
+          "pydeface version check",
+          "pydeface help",
+          "Basic defacing with default output",
+          "Defacing with custom output path",
+          "Defacing with force overwrite",
+          "Defacing with mutualinfo cost",
+          "Defacing with corratio cost",
+          "Defacing with normcorr cost",
+          "Defacing with leastsq cost",
+          "Defacing with applyto single image",
+          "Defacing with nocleanup",
+          "Defacing with verbose output",
+          "FSL flirt version check",
+          "FSL flirt basic registration",
+          "FSL flirt with mutualinfo cost",
+          "FSL flirt apply transform",
+          "FSL convert_xfm invert",
+          "FSL fslstats basic",
+          "FSL fslstats volume"
+        ],
+        "failed_tests": [
+          "Defacing with normmi cost",
+          "Deface T2 image",
+          "Native ARM diagnosis requires review"
+        ]
+      },
+      "failed_tests": [
+        {
+          "name": "Defacing with normmi cost",
+          "duration_seconds": 300.0205671787262,
+          "message": "Timeout after 300s",
+          "reported_return_code": 0,
+          "expected_exit_code": 0
+        },
+        {
+          "name": "Deface T2 image",
+          "duration_seconds": 300.0180068016052,
+          "message": "Timeout after 300s",
+          "reported_return_code": 0,
+          "expected_exit_code": 0
+        },
+        {
+          "name": "Native ARM diagnosis requires review",
+          "duration_seconds": 0.17501401901245117,
+          "message": "Expected exit code 0, got 1",
+          "reported_return_code": 1,
+          "expected_exit_code": 0
+        }
+      ],
+      "raw_test_results_sha256": "4d510137559c6d0209cc875c1c015e4851edc17087f7dbec431bfd5eff17b2d3",
+      "profile_outcome": {
+        "at": 1462.299167768,
+        "baseline": "a3cd2eb0a42da42030d1547179b20dab066355a5",
+        "cleanup": {
+          "complete": true,
+          "reaped": [
+            {
+              "pid": 53068,
+              "status": 15
+            },
+            {
+              "pid": 53069,
+              "status": 0
+            }
+          ]
+        },
+        "handoff": {
+          "acknowledged": 1458.019955248,
+          "cleared": 1458.019755369,
+          "ready": 1458.019056632
+        },
+        "outcome": "refused",
+        "raw_capture": false,
+        "reason": "Refusal: preflight sample DSO cannot be bound to a mapped object",
+        "release": "DIAGNOSTICBLOCKED",
+        "source_attribution": "unresolved",
+        "stage": "preflight",
+        "supply_cleanup": {
+          "complete": true,
+          "excluded_work": true
+        }
+      },
+      "preflight_unbound_dsos": [
+        "[vdso]"
+      ],
+      "preflight_total_samples": 49,
+      "preflight_unbound_vdso_samples": 12,
+      "scope": "Exact current nativeARM suite fails two scientific300-second timeouts plus deliberate review gate.59functional strict passes include every5898240voxel actual registered-mask product, input/geometry invariants, officialFSL6.0.7.23 closure and mutualinfo within600s. Prior b50 T2pass276.09s is historical, not proof of stable performance or a pass at this source. Profiler accepted requested SIGINT-stop status and decoded49preflight samples;12[vdso] samples fail mapped-object binding. This is not an admitted FSL-operation capture or source attribution and does not identify timeout cause. No clinical accuracy, cross-architecture bitwise parity, exact-root-source, publication or merge claim.",
+      "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/161#issuecomment-6235852241"
     }
   },
   "resolved_input_equivalences": [
