@@ -3158,6 +3158,14 @@
           }
         ],
         "metadata_checked_at": "2026-10-12T23:52:42.524632+00:00"
+      },
+      "pending_budget_question": {
+        "asked_at": "2026-10-17T04:16:43.090676+00:00",
+        "answered": false,
+        "requested_max_build_attempts": 9,
+        "requested_renewed_hours": 12,
+        "preserve_used_attempts": 8,
+        "reason": "One final exact merged-source rootnative run; both current upstream architecture passes retained. Four-recipe approval question asked together; do not dispatch until explicit approval."
       }
     },
     {
@@ -5609,7 +5617,7 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3610",
       "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Original12-hour deadline expired. Need explicit renewed elapsed/build budget before any edits or dispatch. Preserve separate libgomp correction6fb7c455 untested; x86 NiftyReg missing OpenMP runtime plus upstream ARM SynthStrip600s timeout remain. Require exact corrected native proof and both fresh upstream suites; existing PR3610 remains open/unmerged. No unchanged infrastructure retries left.",
+      "next_action": "Observe independent upstream run38998886975 and sourcec49672731f337d723e1762996b1800499eeedd91. Current upstream CBLAS/Torch feasibility experiment explicitly declares DIAGNOSTIC_BLOCKED/merge_eligible=false and intentionally fails the ARM SynthStrip diagnostic gate even if inference completes. Build/import feasibility is not a verified releasable scientific container. Original budget, scientific failure history and untested local candidate retained; no own retry authorized.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.13",
@@ -6226,6 +6234,48 @@
         "revisit_condition": "Explicit renewed investigation budget and concrete timeout diagnosis/resource or documented runtime configuration fix; corrected native source and both fresh upstream architecture gates must pass.",
         "attempts": 4,
         "deadline": "2026-10-14T03:53:00+00:00"
+      },
+      "external_continuation_observation": {
+        "checked_at": "2026-10-17T04:09:07.954849+00:00",
+        "source_sha": "c49672731f337d723e1762996b1800499eeedd91",
+        "run_id": 38998886975,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38998886975",
+        "status": "in_progress",
+        "conclusion": null,
+        "jobs": [
+          {
+            "id": 117297477563,
+            "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+            "status": "in_progress",
+            "conclusion": null,
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "active_steps": [
+              "Stage and build candidate"
+            ]
+          },
+          {
+            "id": 117297477614,
+            "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+            "status": "in_progress",
+            "conclusion": null,
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "active_steps": [
+              "Stage and build candidate"
+            ]
+          }
+        ],
+        "dispatched_by_this_continuation": false,
+        "note": "Independently revised upstream head and actual live native candidate jobs. Original candidate/budget/blocker retained pending final reports and source review. Do not dispatch duplicates or treat historical native proof as this new source. External attempt history must be reconciled before any future retry."
+      },
+      "external_merge_hold": {
+        "checked_at": "2026-10-17T04:14:01.434163+00:00",
+        "source_sha": "c49672731f337d723e1762996b1800499eeedd91",
+        "reason": "Current upstream CBLAS/Torch feasibility experiment explicitly declares DIAGNOSTIC_BLOCKED/merge_eligible=false and intentionally fails the ARM SynthStrip diagnostic gate even if inference completes. Build/import feasibility is not a verified releasable scientific container.",
+        "next_action": "Observe existing healthy jobs and retain evidence. Do not remove the gate, port the runtime, claim full scientific success, or merge this diagnostic experiment."
       }
     },
     {
@@ -7581,7 +7631,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T07:48:51.480983+00:00",
+        "checked_at": "2026-10-17T04:05:37.970142+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -7606,7 +7656,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T07:48:52.524210+00:00",
+        "metadata_checked_at": "2026-10-17T04:05:38.781240+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -11133,7 +11183,7 @@
       "release_metadata_audit": {
         "promotion_run_id": 38692981284,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38692981284",
-        "status": "pending-promotion",
+        "status": "promotion-failed",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -11154,34 +11204,42 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T07:48:53.672055+00:00",
-        "workflow_status": "queued",
-        "workflow_conclusion": null,
+        "checked_at": "2026-10-17T04:05:40.268964+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "failure",
         "publish_jobs": [
           {
             "name": "publish (candidate-deeplabcut-b6cc161131342dd953d29c2d040e3c08a08840e6)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "failure",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-l2s7v",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Download candidate bundle without executing it"
-            ]
+            "active_steps": []
           },
           {
             "name": "publish (candidate-deeplabcut_arm64-b6cc161131342dd953d29c2d040e3c08a08840e6)",
-            "status": "queued",
-            "conclusion": null,
-            "runner_name": "",
+            "status": "completed",
+            "conclusion": "failure",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-tcj5z",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T07:48:54.611148+00:00"
+        "metadata_checked_at": "2026-10-17T04:05:41.015149+00:00",
+        "failure_review": {
+          "checked_at": "2026-10-17T04:14:01.434163+00:00",
+          "failed_job_id": 116283031424,
+          "first_actionable_error": "RuntimeError: Merged recipe differs from tested candidate",
+          "classification": "candidate-identity-publication-blocker",
+          "candidate_sha": "b6cc161131342dd953d29c2d040e3c08a08840e6",
+          "merged_sha": "335c827525e3be92c650c8aeea6134a7dcc41da5",
+          "recipe_diff": "Only legacy nested test directives removed at merge; fulltest and all other recipe files unchanged. Raw recipe fingerprint differs.",
+          "next_action": "Preserve actual green runtime reports. Publication requires a separately reviewed source/identity resolution; do not bypass fingerprint validation, edit generated releases, rebuild merely for reporting, or dispatch manual promotion."
+        }
       }
     },
     {
@@ -13370,30 +13428,46 @@
       "release_metadata_audit": {
         "promotion_run_id": 38692961701,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38692961701",
-        "status": "pending-promotion",
+        "status": "verified-published-metadata",
         "metadata": [
           {
             "architecture": "aarch64",
             "path": "releases/fetalsynthseg_arm64/1.0.0.json",
             "expected_build_date": "20261014",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
+            "committed_build_dates": [
+              "20261014"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
+            "metadata_commit_sha": "2dfa21b927a00cba5912fb664e5a74addd4ab6e1",
+            "sif": "fetalsynthseg_arm64_1.0.0_20261014.simg",
+            "sif_sha256": "28aa49279ae0d4fb9b6172acb1699d690f5997743bbb8cbb1eaa2cfc9a2fe1cc",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/fetalsynthseg_arm64_1.0.0_20261014.simg",
+            "public_sif_head_status": 200
           },
           {
             "architecture": "x86_64",
             "path": "releases/fetalsynthseg/1.0.0.json",
             "expected_build_date": "20261014",
-            "exists": true,
             "committed_build_dates": [
-              "20260722"
+              "20261014"
             ],
-            "current_candidate_date_committed": false
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
+            "metadata_commit_sha": "2dfa21b927a00cba5912fb664e5a74addd4ab6e1",
+            "sif": "fetalsynthseg_1.0.0_20261014.simg",
+            "sif_sha256": "9930e89d30920191e554be55afcd8041666c3cbb4ea11700d7ba9e677419e715",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/fetalsynthseg_1.0.0_20261014.simg",
+            "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-15T07:48:55.744741+00:00",
-        "workflow_status": "in_progress",
-        "workflow_conclusion": null,
+        "checked_at": "2026-10-17T04:05:42.762013+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
         "publish_jobs": [
           {
             "name": "publish (candidate-fetalsynthseg_arm64-f2defa075813417c1624535ceed618fd0927ffdc)",
@@ -13407,18 +13481,16 @@
           },
           {
             "name": "publish (candidate-fetalsynthseg-f2defa075813417c1624535ceed618fd0927ffdc)",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "success",
             "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-4md52",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
-            "active_steps": [
-              "Download candidate bundle without executing it"
-            ]
+            "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T07:48:56.603456+00:00"
+        "metadata_checked_at": "2026-10-17T04:05:55.070309+00:00"
       }
     },
     {
@@ -15771,6 +15843,14 @@
           }
         ],
         "metadata_checked_at": "2026-10-12T23:44:58.253310+00:00"
+      },
+      "pending_budget_question": {
+        "asked_at": "2026-10-17T04:16:43.090676+00:00",
+        "answered": false,
+        "requested_max_build_attempts": 8,
+        "requested_renewed_hours": 12,
+        "preserve_used_attempts": 7,
+        "reason": "One final exact merged-source rootnative run; both current upstream architecture passes retained. Four-recipe approval question asked together; do not dispatch until explicit approval."
       }
     },
     {
@@ -17462,7 +17542,7 @@
       "release_metadata_audit": {
         "promotion_run_id": 38699427259,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38699427259",
-        "status": "pending-promotion",
+        "status": "promotion-failed",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -17483,15 +17563,15 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T07:48:59.876642+00:00",
-        "workflow_status": "queued",
-        "workflow_conclusion": null,
+        "checked_at": "2026-10-17T04:05:56.678286+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "failure",
         "publish_jobs": [
           {
             "name": "publish (candidate-gliomoda-25477239ed36b65fc45d4fd3ff29e3c08c99f888)",
-            "status": "queued",
-            "conclusion": null,
-            "runner_name": "",
+            "status": "completed",
+            "conclusion": "failure",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-cndzw",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
@@ -17499,16 +17579,26 @@
           },
           {
             "name": "publish (candidate-gliomoda_arm64-25477239ed36b65fc45d4fd3ff29e3c08c99f888)",
-            "status": "queued",
-            "conclusion": null,
-            "runner_name": "",
+            "status": "completed",
+            "conclusion": "failure",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-jdtds",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T07:49:00.775529+00:00"
+        "metadata_checked_at": "2026-10-17T04:05:57.784709+00:00",
+        "failure_review": {
+          "checked_at": "2026-10-17T04:14:01.434163+00:00",
+          "failed_job_id": 116303849818,
+          "first_actionable_error": "RuntimeError: Merged recipe differs from tested candidate",
+          "classification": "candidate-identity-publication-blocker",
+          "candidate_sha": "25477239ed36b65fc45d4fd3ff29e3c08c99f888",
+          "merged_sha": "e4b168619a91115fab8b9aca9039cd3843797353",
+          "recipe_diff": "Only legacy nested test directives removed at merge; fulltest and all other recipe files unchanged. Raw recipe fingerprint differs.",
+          "next_action": "Preserve actual green runtime reports. Publication requires a separately reviewed source/identity resolution; do not bypass fingerprint validation, edit generated releases, rebuild merely for reporting, or dispatch manual promotion."
+        }
       }
     },
     {
@@ -20132,6 +20222,14 @@
           }
         ],
         "metadata_checked_at": "2026-10-13T00:57:44.215026+00:00"
+      },
+      "pending_budget_question": {
+        "asked_at": "2026-10-17T04:16:43.090676+00:00",
+        "answered": false,
+        "requested_max_build_attempts": 12,
+        "requested_renewed_hours": 12,
+        "preserve_used_attempts": 11,
+        "reason": "One final exact merged-source rootnative run; both current upstream architecture passes retained. Four-recipe approval question asked together; do not dispatch until explicit approval."
       }
     },
     {
@@ -23560,7 +23658,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T07:49:02.090810+00:00",
+        "checked_at": "2026-10-17T04:05:58.909074+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -23576,7 +23674,7 @@
           }
         ],
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
-        "metadata_checked_at": "2026-10-15T07:49:03.253616+00:00",
+        "metadata_checked_at": "2026-10-17T04:05:59.678770+00:00",
         "resolution_review": {
           "checked_at": "2026-10-14T06:22:54.898590+00:00",
           "actual_resolver_notice": "No merged PR is associated with 9df30cc185fa2af32ee99a364492954bf2798a61; nothing to promote",
@@ -23904,7 +24002,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T07:49:04.708950+00:00",
+        "checked_at": "2026-10-17T04:06:00.760511+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -23919,7 +24017,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T07:49:05.538642+00:00",
+        "metadata_checked_at": "2026-10-17T04:06:01.629587+00:00",
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
         "resolution_evidence": {
           "automatic_run_id": 38448486794,
@@ -24985,7 +25083,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-15T07:49:07.212621+00:00",
+        "checked_at": "2026-10-17T04:06:03.288936+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -25010,7 +25108,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T07:49:08.127529+00:00",
+        "metadata_checked_at": "2026-10-17T04:06:04.066289+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -26997,7 +27095,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-15T07:49:10.385943+00:00",
+        "checked_at": "2026-10-17T04:06:06.404812+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "cancelled",
         "publish_jobs": [
@@ -27023,7 +27121,7 @@
           }
         ],
         "note": "Original automatic publication was cancelled. Existing metadata alone does not prove this run published; audit any independently completed recovery separately.",
-        "metadata_checked_at": "2026-10-15T07:49:11.228825+00:00"
+        "metadata_checked_at": "2026-10-17T04:06:07.174631+00:00"
       }
     },
     {
@@ -29305,7 +29403,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T07:49:12.588628+00:00",
+        "checked_at": "2026-10-17T04:06:08.560697+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -29320,7 +29418,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T07:49:13.365641+00:00",
+        "metadata_checked_at": "2026-10-17T04:06:09.327029+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -30858,7 +30956,7 @@
       "release_metadata_audit": {
         "promotion_run_id": 38694041878,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38694041878",
-        "status": "pending-promotion",
+        "status": "promotion-failed",
         "metadata": [
           {
             "architecture": "aarch64",
@@ -30879,15 +30977,15 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-15T07:49:14.591183+00:00",
-        "workflow_status": "queued",
-        "workflow_conclusion": null,
+        "checked_at": "2026-10-17T04:06:10.966506+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "failure",
         "publish_jobs": [
           {
             "name": "publish (candidate-petu_arm64-260e3ebe8ff011007e645486129360e1935d5c1a)",
-            "status": "queued",
-            "conclusion": null,
-            "runner_name": "",
+            "status": "completed",
+            "conclusion": "failure",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-hr8pp",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
@@ -30895,16 +30993,26 @@
           },
           {
             "name": "publish (candidate-petu-260e3ebe8ff011007e645486129360e1935d5c1a)",
-            "status": "queued",
-            "conclusion": null,
-            "runner_name": "",
+            "status": "completed",
+            "conclusion": "failure",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-hmvjq",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-15T07:49:15.483384+00:00"
+        "metadata_checked_at": "2026-10-17T04:06:11.752896+00:00",
+        "failure_review": {
+          "checked_at": "2026-10-17T04:14:01.434163+00:00",
+          "failed_job_id": 116286451736,
+          "first_actionable_error": "RuntimeError: Merged recipe differs from tested candidate",
+          "classification": "candidate-identity-publication-blocker",
+          "candidate_sha": "260e3ebe8ff011007e645486129360e1935d5c1a",
+          "merged_sha": "2b33d14384fa1e1946b8d93ba3dd15b76cf0d530",
+          "recipe_diff": "Only legacy nested test directives removed at merge; fulltest and all other recipe files unchanged. Raw recipe fingerprint differs.",
+          "next_action": "Preserve actual green runtime reports. Publication requires a separately reviewed source/identity resolution; do not bypass fingerprint validation, edit generated releases, rebuild merely for reporting, or dispatch manual promotion."
+        }
       }
     },
     {
@@ -31339,6 +31447,42 @@
         "remaining_build_attempts": 2,
         "minimum_builds_for_changed_source_complete_proof": 3,
         "reason": "Corrected fulltest/current candidate source requires a fresh root native build plus both upstream architecture builds;2 remaining attempts cannot complete that three-build lifecycle. Original native62/62 source proof retained. No failed source merged or substituted old proof."
+      },
+      "external_continuation_observation": {
+        "checked_at": "2026-10-17T04:09:07.954849+00:00",
+        "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
+        "run_id": 39001037271,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271",
+        "status": "in_progress",
+        "conclusion": null,
+        "jobs": [
+          {
+            "id": 117303854783,
+            "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+            "status": "in_progress",
+            "conclusion": null,
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "active_steps": [
+              "Stage and build candidate"
+            ]
+          },
+          {
+            "id": 117303854813,
+            "name": "candidate (pydeface | 2.1.0 | x86_64)",
+            "status": "in_progress",
+            "conclusion": null,
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "active_steps": [
+              "Create immutable candidate files"
+            ]
+          }
+        ],
+        "dispatched_by_this_continuation": false,
+        "note": "Independently revised upstream head and actual live native candidate jobs. Original candidate/budget/blocker retained pending final reports and source review. Do not dispatch duplicates or treat historical native proof as this new source. External attempt history must be reconciled before any future retry."
       }
     },
     {
@@ -39292,21 +39436,209 @@
         "recipes/tractseg/build.yaml",
         "recipes/tractseg/fulltest.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-tractseg-20261012",
       "baseline_sha": "98c7b84d8018d7611d847fc43bb78b5056c87970",
-      "candidate_sha": "1a3be5b32b11d3fe2dfa66d52136bdc149ef47bb",
+      "candidate_sha": "c757d0c0dd01b3c14ca5173cc1d92a98f408feb2",
       "started_at": "2026-10-14T02:37:23.297913+00:00",
       "deadline": "2026-10-15T15:21:33+00:00",
-      "attempts": 5,
+      "attempts": 7,
       "run_id": 38677501278,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3646",
       "upstream_ci": {
-        "initial_run_id": 38694552852,
-        "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38694552852"
+        "candidate_run_id": 38938294195,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38938294195",
+        "native_job_review": {
+          "aarch64": {
+            "head_sha": "c757d0c0dd01b3c14ca5173cc1d92a98f408feb2",
+            "job_id": 117099405891,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38938294195/job/117099405891",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404-arm"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success"
+          },
+          "x86_64": {
+            "head_sha": "c757d0c0dd01b3c14ca5173cc1d92a98f408feb2",
+            "job_id": 117099406070,
+            "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38938294195/job/117099406070",
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "build_sif_fulltest_dive_manifest_gates": "success"
+          }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "tractseg",
+          "container": "tractseg_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "2.10.0",
+          "build_date": "20261016",
+          "docker_archive": "tractseg_arm64_2.10.0_20261016.docker.tar",
+          "sif": "tractseg_arm64_2.10.0_20261016.simg",
+          "candidate_tag": "nd-candidate-tractseg_arm64:c757d0c0dd01",
+          "launcher": null,
+          "pr_number": 3646,
+          "head_sha": "c757d0c0dd01b3c14ca5173cc1d92a98f408feb2",
+          "tests": {
+            "total": 123,
+            "passed": 123,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 122,
+            "fulltest_passed": 122,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "TractSeg version check",
+              "TractSeg help output",
+              "TractSeg CSD type options",
+              "TractSeg output type options",
+              "TractSeg endings segmentation option",
+              "TractSeg TOM option",
+              "TractSeg raw diffusion input option",
+              "Tractometry help output",
+              "Tractometry input options",
+              "Tractometry scalar image option",
+              "Tractometry peak length option",
+              "plot_tractometry_results help",
+              "plot_tractometry_results permutation option",
+              "plot_tractometry_results 3D plot option",
+              "MRtrix3 version check",
+              "mrinfo basic usage",
+              "mrinfo dimensions",
+              "mrinfo spacing",
+              "mrinfo data type"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 7,
+                "wasted_space": "5.4 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 7,
+                "wasted_space": "1.8 MB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 7,
+                "wasted_space": "1.6 MB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 6,
+                "wasted_space": "1.5 MB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 99.9121,
+            "wasted_bytes": 15631938,
+            "wasted_bytes_display": "16 MB",
+            "user_wasted_percent": 0.1035
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "tractseg",
+          "container": "tractseg",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "2.10.0",
+          "build_date": "20261016",
+          "docker_archive": "tractseg_2.10.0_20261016.docker.tar",
+          "sif": "tractseg_2.10.0_20261016.simg",
+          "candidate_tag": "nd-candidate-tractseg:c757d0c0dd01",
+          "launcher": null,
+          "pr_number": 3646,
+          "head_sha": "c757d0c0dd01b3c14ca5173cc1d92a98f408feb2",
+          "tests": {
+            "total": 123,
+            "passed": 123,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 122,
+            "fulltest_passed": 122,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "TractSeg version check",
+              "TractSeg help output",
+              "TractSeg CSD type options",
+              "TractSeg output type options",
+              "TractSeg endings segmentation option",
+              "TractSeg TOM option",
+              "TractSeg raw diffusion input option",
+              "Tractometry help output",
+              "Tractometry input options",
+              "Tractometry scalar image option",
+              "Tractometry peak length option",
+              "plot_tractometry_results help",
+              "plot_tractometry_results permutation option",
+              "plot_tractometry_results 3D plot option",
+              "MRtrix3 version check",
+              "mrinfo basic usage",
+              "mrinfo dimensions",
+              "mrinfo spacing",
+              "mrinfo data type"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 6,
+                "wasted_space": "4.5 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 6,
+                "wasted_space": "1.4 MB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 6,
+                "wasted_space": "967 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 5,
+                "wasted_space": "870 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 99.9277,
+            "wasted_bytes": 12696117,
+            "wasted_bytes_display": "13 MB",
+            "user_wasted_percent": 0.0887
+          }
+        }
       },
-      "merged_sha": null,
-      "next_action": "Verify exact PR head in both upstream architecture reports and all required checks, then merge individually.",
+      "merged_sha": "2533c632db33846a2e6cdd5e9cd646584277c65c",
+      "next_action": "Root native38677501278 proves1a3/2.9. Finalc757/2.10 independently passes fresh upstream nativeARM and x86123/123 but has no root-workflow exact-source native run. Changed installed inputs prevent equivalence. Needs explicit renewed window/eight-total authorization for one final root native build; reuse passing upstream reports. Automatic promotion38973893880 queued; no manual publishing.",
       "upstream_review": {
         "exists": true,
         "version": "2.9.0",
@@ -39330,16 +39662,16 @@
         "https://pypi.org/pypi/torch/2.4.1/json",
         "https://pypi.org/pypi/numpy/1.26.4/json"
       ],
-      "arm64_attempts": 4,
-      "x86_64_attempts": 1,
+      "arm64_attempts": 5,
+      "x86_64_attempts": 2,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38677501278",
       "concurrent_upstream_version_update": {
         "number": 3617,
         "url": "https://github.com/neurodesk/neurocontainers/pull/3617",
-        "head_sha": "842e22b98d7b8a01aae1140f67a209fed72e8242",
-        "state": "OPEN",
+        "head_sha": "64ff329d4f185d9c1503ff67f8fa5b4ae6ed3011",
+        "state": "CLOSED",
         "title": "Bump tractseg from 2.9.0 to 2.10.0",
-        "note": "Separate automatic version-only PR, not this ARM port. Current native candidate tests accepted upstream2.9.0/TractSeg2.9. Let its healthy build finish. If the updater merges first, integrate only the ARM changes onto the new accepted recipe, revalidate and test that exact source within the same budget before own ARM submission; do not revert the update or claim older-version proof for2.10."
+        "note": "Version2.10 integrated into ownARM PR3646 rather than the separate updaterPR; do not create a second containerPR."
       },
       "candidate_history": [
         {
@@ -39785,7 +40117,380 @@
         "legacy_negative_cli_limit": "Both original negative CLI wrappers pipe head; wrapper exit0 is not CLI exit verification. Only missing-file case emits the expected Nibabel stat traceback; no positive operation does."
       },
       "pending_upstream_issue": 3646,
-      "pr_number": 3646
+      "pr_number": 3646,
+      "external_source_history": [
+        {
+          "candidate_sha": "1a3be5b32b11d3fe2dfa66d52136bdc149ef47bb",
+          "attempts": 5,
+          "arm64_attempts": 4,
+          "x86_64_attempts": 1,
+          "status": "upstream-running",
+          "upstream_ci": {
+            "initial_run_id": 38694552852,
+            "initial_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38694552852"
+          },
+          "change_summary": "Enable native ARM64 TractSeg2.9.0 using official MRtrix3.0.4 portable source with all CLI tools/Qt viewer retained, ARM-compatible FSL6.0.7.22 and Python3.11/Torch2.6.0/NumPy2.2.6. Preserve the existing x86 package and binary paths. Retain all120 original tests and add CPU tensor/package closure plus full pretrained inference on complete official73x87x73x9 peaks: all72 default three-orientation masks and grids, then every voxel of all72 published single-orientation reference masks, with unchanged fixtures and9 models. The reference mode follows the official upstream tests.sh. Existing piped negative CLI tests remain unchanged and do not independently prove CLI exit codes or graceful error handling; no positive scientific command contains a traceback. No model/tolerance/data reduction, fake test model, clinical accuracy or GPU claim."
+        }
+      ],
+      "merged_at": "2026-10-16T22:08:09Z",
+      "upstream_actual_scientific_review": {
+        "aarch64": {
+          "source_sha": "c757d0c0dd01b3c14ca5173cc1d92a98f408feb2",
+          "run_id": 38938294195,
+          "actual_zero_exit_functional_commands": 122,
+          "full_trained_case_seconds": 533.3624923229218,
+          "metrics": {
+            "default_three_orientation_voxels": {
+              "AF_left": 5332,
+              "AF_right": 5139,
+              "ATR_left": 2886,
+              "ATR_right": 2690,
+              "CA": 440,
+              "CC": 31072,
+              "CC_1": 1146,
+              "CC_2": 9325,
+              "CC_3": 1649,
+              "CC_4": 3282,
+              "CC_5": 3295,
+              "CC_6": 12550,
+              "CC_7": 4820,
+              "CG_left": 3314,
+              "CG_right": 2765,
+              "CST_left": 2030,
+              "CST_right": 2015,
+              "FPT_left": 3706,
+              "FPT_right": 3356,
+              "FX_left": 76,
+              "FX_right": 72,
+              "ICP_left": 1056,
+              "ICP_right": 963,
+              "IFO_left": 4970,
+              "IFO_right": 4770,
+              "ILF_left": 1760,
+              "ILF_right": 1558,
+              "MCP": 2950,
+              "MLF_left": 5039,
+              "MLF_right": 4707,
+              "OR_left": 1975,
+              "OR_right": 1666,
+              "POPT_left": 3856,
+              "POPT_right": 3804,
+              "SCP_left": 1472,
+              "SCP_right": 1440,
+              "SLF_III_left": 1521,
+              "SLF_III_right": 1767,
+              "SLF_II_left": 2626,
+              "SLF_II_right": 3478,
+              "SLF_I_left": 2416,
+              "SLF_I_right": 3085,
+              "STR_left": 957,
+              "STR_right": 1038,
+              "ST_FO_left": 1199,
+              "ST_FO_right": 935,
+              "ST_OCC_left": 2479,
+              "ST_OCC_right": 2339,
+              "ST_PAR_left": 5687,
+              "ST_PAR_right": 5790,
+              "ST_POSTC_left": 2189,
+              "ST_POSTC_right": 2048,
+              "ST_PREC_left": 2935,
+              "ST_PREC_right": 2696,
+              "ST_PREF_left": 5321,
+              "ST_PREF_right": 4844,
+              "ST_PREM_left": 1540,
+              "ST_PREM_right": 1193,
+              "T_OCC_left": 2157,
+              "T_OCC_right": 1895,
+              "T_PAR_left": 5177,
+              "T_PAR_right": 4744,
+              "T_POSTC_left": 1736,
+              "T_POSTC_right": 1607,
+              "T_PREC_left": 2406,
+              "T_PREC_right": 2302,
+              "T_PREF_left": 4806,
+              "T_PREF_right": 4440,
+              "T_PREM_left": 1593,
+              "T_PREM_right": 1348,
+              "UF_left": 1090,
+              "UF_right": 1099
+            },
+            "exact_reference_mode": "single_orientation",
+            "official_single_orientation_voxels": {
+              "AF_left": 5388,
+              "AF_right": 5022,
+              "ATR_left": 3010,
+              "ATR_right": 2794,
+              "CA": 435,
+              "CC": 31199,
+              "CC_1": 1219,
+              "CC_2": 9518,
+              "CC_3": 1628,
+              "CC_4": 3420,
+              "CC_5": 3363,
+              "CC_6": 12634,
+              "CC_7": 4728,
+              "CG_left": 3540,
+              "CG_right": 2966,
+              "CST_left": 2215,
+              "CST_right": 2155,
+              "FPT_left": 3886,
+              "FPT_right": 3491,
+              "FX_left": 82,
+              "FX_right": 62,
+              "ICP_left": 1064,
+              "ICP_right": 932,
+              "IFO_left": 5240,
+              "IFO_right": 4897,
+              "ILF_left": 1847,
+              "ILF_right": 1696,
+              "MCP": 3019,
+              "MLF_left": 5022,
+              "MLF_right": 4617,
+              "OR_left": 2035,
+              "OR_right": 1711,
+              "POPT_left": 3992,
+              "POPT_right": 3973,
+              "SCP_left": 1550,
+              "SCP_right": 1464,
+              "SLF_III_left": 1536,
+              "SLF_III_right": 1748,
+              "SLF_II_left": 2754,
+              "SLF_II_right": 3560,
+              "SLF_I_left": 2491,
+              "SLF_I_right": 3065,
+              "STR_left": 1087,
+              "STR_right": 1111,
+              "ST_FO_left": 1250,
+              "ST_FO_right": 1012,
+              "ST_OCC_left": 2508,
+              "ST_OCC_right": 2351,
+              "ST_PAR_left": 5757,
+              "ST_PAR_right": 5912,
+              "ST_POSTC_left": 2208,
+              "ST_POSTC_right": 2112,
+              "ST_PREC_left": 2951,
+              "ST_PREC_right": 2767,
+              "ST_PREF_left": 5464,
+              "ST_PREF_right": 4997,
+              "ST_PREM_left": 1542,
+              "ST_PREM_right": 1219,
+              "T_OCC_left": 2187,
+              "T_OCC_right": 1911,
+              "T_PAR_left": 5246,
+              "T_PAR_right": 4879,
+              "T_POSTC_left": 1811,
+              "T_POSTC_right": 1691,
+              "T_PREC_left": 2516,
+              "T_PREC_right": 2340,
+              "T_PREF_left": 4987,
+              "T_PREF_right": 4535,
+              "T_PREM_left": 1613,
+              "T_PREM_right": 1372,
+              "UF_left": 1105,
+              "UF_right": 1177
+            },
+            "shape": [
+              73,
+              87,
+              73,
+              9
+            ],
+            "unchanged_models": 9
+          },
+          "expected_negative_traceback_cases": [
+            "TractSeg missing input error"
+          ],
+          "legacy_negative_cli_limit": "Both original negative CLI wrappers pipe head; wrapper exit0 is not CLI exit verification. Only missing-file case emits the expected Nibabel stat traceback; no positive operation does.",
+          "scope": "Complete official peaks, full default three-orientation operation and exact every-voxel comparison of all72 official single-orientation reference masks, all grids and unchanged fixtures/9 models. No GPU or clinical accuracy claim."
+        },
+        "x86_64": {
+          "source_sha": "c757d0c0dd01b3c14ca5173cc1d92a98f408feb2",
+          "run_id": 38938294195,
+          "actual_zero_exit_functional_commands": 122,
+          "full_trained_case_seconds": 104.45956945419312,
+          "metrics": {
+            "default_three_orientation_voxels": {
+              "AF_left": 5332,
+              "AF_right": 5139,
+              "ATR_left": 2886,
+              "ATR_right": 2690,
+              "CA": 440,
+              "CC": 31072,
+              "CC_1": 1146,
+              "CC_2": 9325,
+              "CC_3": 1649,
+              "CC_4": 3282,
+              "CC_5": 3295,
+              "CC_6": 12550,
+              "CC_7": 4820,
+              "CG_left": 3314,
+              "CG_right": 2765,
+              "CST_left": 2030,
+              "CST_right": 2015,
+              "FPT_left": 3706,
+              "FPT_right": 3356,
+              "FX_left": 76,
+              "FX_right": 72,
+              "ICP_left": 1056,
+              "ICP_right": 963,
+              "IFO_left": 4970,
+              "IFO_right": 4770,
+              "ILF_left": 1760,
+              "ILF_right": 1558,
+              "MCP": 2950,
+              "MLF_left": 5039,
+              "MLF_right": 4707,
+              "OR_left": 1975,
+              "OR_right": 1666,
+              "POPT_left": 3856,
+              "POPT_right": 3804,
+              "SCP_left": 1472,
+              "SCP_right": 1440,
+              "SLF_III_left": 1521,
+              "SLF_III_right": 1767,
+              "SLF_II_left": 2626,
+              "SLF_II_right": 3478,
+              "SLF_I_left": 2416,
+              "SLF_I_right": 3085,
+              "STR_left": 957,
+              "STR_right": 1038,
+              "ST_FO_left": 1199,
+              "ST_FO_right": 935,
+              "ST_OCC_left": 2479,
+              "ST_OCC_right": 2339,
+              "ST_PAR_left": 5687,
+              "ST_PAR_right": 5790,
+              "ST_POSTC_left": 2189,
+              "ST_POSTC_right": 2048,
+              "ST_PREC_left": 2935,
+              "ST_PREC_right": 2696,
+              "ST_PREF_left": 5321,
+              "ST_PREF_right": 4844,
+              "ST_PREM_left": 1540,
+              "ST_PREM_right": 1193,
+              "T_OCC_left": 2157,
+              "T_OCC_right": 1895,
+              "T_PAR_left": 5177,
+              "T_PAR_right": 4744,
+              "T_POSTC_left": 1736,
+              "T_POSTC_right": 1607,
+              "T_PREC_left": 2406,
+              "T_PREC_right": 2302,
+              "T_PREF_left": 4806,
+              "T_PREF_right": 4440,
+              "T_PREM_left": 1593,
+              "T_PREM_right": 1348,
+              "UF_left": 1090,
+              "UF_right": 1099
+            },
+            "exact_reference_mode": "single_orientation",
+            "official_single_orientation_voxels": {
+              "AF_left": 5388,
+              "AF_right": 5022,
+              "ATR_left": 3010,
+              "ATR_right": 2794,
+              "CA": 435,
+              "CC": 31199,
+              "CC_1": 1219,
+              "CC_2": 9518,
+              "CC_3": 1628,
+              "CC_4": 3420,
+              "CC_5": 3363,
+              "CC_6": 12634,
+              "CC_7": 4728,
+              "CG_left": 3540,
+              "CG_right": 2966,
+              "CST_left": 2215,
+              "CST_right": 2155,
+              "FPT_left": 3886,
+              "FPT_right": 3491,
+              "FX_left": 82,
+              "FX_right": 62,
+              "ICP_left": 1064,
+              "ICP_right": 932,
+              "IFO_left": 5240,
+              "IFO_right": 4897,
+              "ILF_left": 1847,
+              "ILF_right": 1696,
+              "MCP": 3019,
+              "MLF_left": 5022,
+              "MLF_right": 4617,
+              "OR_left": 2035,
+              "OR_right": 1711,
+              "POPT_left": 3992,
+              "POPT_right": 3973,
+              "SCP_left": 1550,
+              "SCP_right": 1464,
+              "SLF_III_left": 1536,
+              "SLF_III_right": 1748,
+              "SLF_II_left": 2754,
+              "SLF_II_right": 3560,
+              "SLF_I_left": 2491,
+              "SLF_I_right": 3065,
+              "STR_left": 1087,
+              "STR_right": 1111,
+              "ST_FO_left": 1250,
+              "ST_FO_right": 1012,
+              "ST_OCC_left": 2508,
+              "ST_OCC_right": 2351,
+              "ST_PAR_left": 5757,
+              "ST_PAR_right": 5912,
+              "ST_POSTC_left": 2208,
+              "ST_POSTC_right": 2112,
+              "ST_PREC_left": 2951,
+              "ST_PREC_right": 2767,
+              "ST_PREF_left": 5464,
+              "ST_PREF_right": 4997,
+              "ST_PREM_left": 1542,
+              "ST_PREM_right": 1219,
+              "T_OCC_left": 2187,
+              "T_OCC_right": 1911,
+              "T_PAR_left": 5246,
+              "T_PAR_right": 4879,
+              "T_POSTC_left": 1811,
+              "T_POSTC_right": 1691,
+              "T_PREC_left": 2516,
+              "T_PREC_right": 2340,
+              "T_PREF_left": 4987,
+              "T_PREF_right": 4535,
+              "T_PREM_left": 1613,
+              "T_PREM_right": 1372,
+              "UF_left": 1105,
+              "UF_right": 1177
+            },
+            "shape": [
+              73,
+              87,
+              73,
+              9
+            ],
+            "unchanged_models": 9
+          },
+          "expected_negative_traceback_cases": [
+            "TractSeg missing input error"
+          ],
+          "legacy_negative_cli_limit": "Both original negative CLI wrappers pipe head; wrapper exit0 is not CLI exit verification. Only missing-file case emits the expected Nibabel stat traceback; no positive operation does.",
+          "scope": "Complete official peaks, full default three-orientation operation and exact every-voxel comparison of all72 official single-orientation reference masks, all grids and unchanged fixtures/9 models. No GPU or clinical accuracy claim."
+        }
+      },
+      "root_current_source_gap": true,
+      "external_continuation": {
+        "checked_at": "2026-10-17T04:08:15.217350+00:00",
+        "source_sha": "c757d0c0dd01b3c14ca5173cc1d92a98f408feb2",
+        "added_container_build_attempts": 2,
+        "run_id": 38938294195,
+        "dispatched_by_this_continuation": false,
+        "note": "Upstream independently integrated current2.10 Python3.11/CPU Torch2.6 and merged existing ownPR. Preserve original12h/six-build limits; independent external builds are recorded, not authorization for additional local dispatch."
+      },
+      "root_current_source_gap_reason": "Root native38677501278 proves1a3/2.9. Finalc757/2.10 independently passes fresh upstream nativeARM and x86123/123 but has no root-workflow exact-source native run. Changed installed inputs prevent equivalence. Needs explicit renewed window/eight-total authorization for one final root native build; reuse passing upstream reports.",
+      "pending_budget_question": {
+        "asked_at": "2026-10-17T04:09:07.954849+00:00",
+        "answered": false,
+        "requested_max_build_attempts": 8,
+        "requested_renewed_hours": 12,
+        "preserve_used_attempts": 7,
+        "reason": "One exact finalc757/2.10 root native run; upstream independently passed both architectures123/123 and merged. No repeated upstream builds."
+      }
     },
     {
       "recipe": "vertexwiser",
@@ -41656,6 +42361,14 @@
           }
         ],
         "metadata_checked_at": "2026-10-13T00:58:19.098030+00:00"
+      },
+      "pending_budget_question": {
+        "asked_at": "2026-10-17T04:16:43.090676+00:00",
+        "answered": false,
+        "requested_max_build_attempts": 7,
+        "requested_renewed_hours": 12,
+        "preserve_used_attempts": 6,
+        "reason": "One final exact merged-source rootnative run; both current upstream architecture passes retained. Four-recipe approval question asked together; do not dispatch until explicit approval."
       }
     },
     {
@@ -42175,9 +42888,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-15T07:32:25.599794+00:00",
-    "previous_sha": "2b33d14384fa1e1946b8d93ba3dd15b76cf0d530",
-    "new_sha": "e4b168619a91115fab8b9aca9039cd3843797353",
+    "checked_at": "2026-10-17T04:09:35.880540+00:00",
+    "previous_sha": "e4b168619a91115fab8b9aca9039cd3843797353",
+    "new_sha": "64017cba950709ffdb667fd978dff34c57a2c5cf",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },
@@ -42353,5 +43066,32 @@
     "recorded_at": "2026-10-15T06:24:18.180798+00:00",
     "all_session_agents_closed": true,
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
+  },
+  "last_session_checkpoint": {
+    "checked_at": "2026-10-17T04:16:43.090676+00:00",
+    "top_level_base_commit": "0c13e7e7f047f315627a20d6de1ae7e0d4f94de1",
+    "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
+    "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
+    "upstream_fork_main_sha": "64017cba950709ffdb667fd978dff34c57a2c5cf",
+    "inventory_status_counts": {
+      "excluded-by-user": 17,
+      "blocked-prerequisite": 2,
+      "merged": 100,
+      "blocked-verification-budget": 4,
+      "blocked-upstream": 3,
+      "failed-runtime": 2,
+      "blocked-infrastructure": 1
+    },
+    "all_subagents_stopped": true,
+    "builds_dispatched": 0,
+    "pending_final_native_budget_questions": [
+      "tractseg",
+      "apptainer",
+      "gigaconnectome",
+      "julia",
+      "workshopdemo"
+    ],
+    "existing_pending_other_budget_question": "elastix",
+    "next_action": "Observe independently running BrainLes/PyDeface exact heads; review complete final reports and diagnostic gates. Pending explicit native-budget replies permit final root-source proof without repeating green upstream builds. No goal completion or blanket ARM-success claim."
   }
 }

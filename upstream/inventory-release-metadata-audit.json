@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-15T07:57:25.277866+00:00",
-  "upstream_ref": "e4b168619a91115fab8b9aca9039cd3843797353",
+  "checked_at": "2026-10-17T04:12:23.895037+00:00",
+  "upstream_ref": "64017cba950709ffdb667fd978dff34c57a2c5cf",
   "scope": "112 user-requested in-scope recipes;17 OpenRecon exclusions omitted.",
   "policy": "Read-only source-tree audit. Metadata presence/schema does not prove current builds, public artifacts or deployment; exact-candidate publication proofs remain in release-metadata-audit.json. No generated JSON changes or promotion dispatch.",
   "counts": {
-    "pending-arm64-port": 10,
+    "pending-arm64-port": 9,
     "explicit-arm64-metadata-present": 79,
-    "no-current-version-metadata-at-audited-ref": 23
+    "no-current-version-metadata-at-audited-ref": 24
   },
   "containers": [
     {
@@ -143,17 +143,17 @@
     },
     {
       "recipe": "bidsmanager",
-      "version": "1.4.1",
+      "version": "1.5.0",
       "declared_architectures": [
         "x86_64",
         "aarch64"
       ],
-      "path": "releases/bidsmanager_arm64/1.4.1.json",
+      "path": "releases/bidsmanager_arm64/1.5.0.json",
       "architecture": "aarch64",
       "variant": "arm64",
       "source_recipe": "bidsmanager",
       "apps": {
-        "bidsmanager_arm64 1.4.1": "20260927"
+        "bidsmanager_arm64 1.5.0": "20261016"
       },
       "incorrect_identity_fields": {},
       "missing_identity_fields": [],
@@ -240,7 +240,7 @@
     },
     {
       "recipe": "brainles-preprocessing",
-      "version": "0.6.13",
+      "version": "0.6.14",
       "declared_architectures": [
         "x86_64"
       ],
@@ -333,7 +333,7 @@
       "variant": "arm64",
       "source_recipe": "code",
       "apps": {
-        "code_arm64 240320": "20261014"
+        "code_arm64 240320": "20261016"
       },
       "incorrect_identity_fields": {},
       "missing_identity_fields": [],
@@ -575,7 +575,16 @@
         "aarch64"
       ],
       "path": "releases/fetalsynthseg_arm64/1.0.0.json",
-      "status": "no-current-version-metadata-at-audited-ref"
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "fetalsynthseg",
+      "apps": {
+        "fetalsynthseg_arm64 1.0.0": "20261014"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
     },
     {
       "recipe": "fitlins",
@@ -813,19 +822,19 @@
     },
     {
       "recipe": "julia",
-      "version": "1.13.1",
+      "version": "1.13.2",
       "declared_architectures": [
         "x86_64",
         "aarch64"
       ],
-      "path": "releases/julia_arm64/1.13.1.json",
+      "path": "releases/julia_arm64/1.13.2.json",
       "architecture": "aarch64",
       "variant": "arm64",
       "source_recipe": "julia",
       "apps": {
-        "julia_arm64 1.13.1": "20261012",
-        "vscodeGUI-julia_arm64 1.13.1": "20261012",
-        "REPLGUI-julia_arm64 1.13.1": "20261012"
+        "julia_arm64 1.13.2": "20261016",
+        "vscodeGUI-julia_arm64 1.13.2": "20261016",
+        "REPLGUI-julia_arm64 1.13.2": "20261016"
       },
       "incorrect_identity_fields": {},
       "missing_identity_fields": [],
@@ -1027,7 +1036,7 @@
       "variant": "arm64",
       "source_recipe": "mne",
       "apps": {
-        "mne_arm64 1.13.2": "20261013"
+        "mne_arm64 1.13.2": "20261014"
       },
       "incorrect_identity_fields": {},
       "missing_identity_fields": [],
@@ -1094,22 +1103,13 @@
     },
     {
       "recipe": "mritools",
-      "version": "4.9.0",
+      "version": "4.9.1",
       "declared_architectures": [
         "x86_64",
         "aarch64"
       ],
-      "path": "releases/mritools_arm64/4.9.0.json",
-      "architecture": "aarch64",
-      "variant": "arm64",
-      "source_recipe": "mritools",
-      "apps": {
-        "mritools_arm64 4.9.0": "20261013"
-      },
-      "incorrect_identity_fields": {},
-      "missing_identity_fields": [],
-      "problems": [],
-      "status": "explicit-arm64-metadata-present"
+      "path": "releases/mritools_arm64/4.9.1.json",
+      "status": "no-current-version-metadata-at-audited-ref"
     },
     {
       "recipe": "napari",
@@ -1723,25 +1723,27 @@
     },
     {
       "recipe": "tractseg",
-      "version": "2.9.0",
-      "declared_architectures": [
-        "x86_64"
-      ],
-      "status": "pending-arm64-port"
-    },
-    {
-      "recipe": "vertexwiser",
-      "version": "1.5.1",
+      "version": "2.10.0",
       "declared_architectures": [
         "x86_64",
         "aarch64"
       ],
-      "path": "releases/vertexwiser_arm64/1.5.1.json",
+      "path": "releases/tractseg_arm64/2.10.0.json",
+      "status": "no-current-version-metadata-at-audited-ref"
+    },
+    {
+      "recipe": "vertexwiser",
+      "version": "1.5.4",
+      "declared_architectures": [
+        "x86_64",
+        "aarch64"
+      ],
+      "path": "releases/vertexwiser_arm64/1.5.4.json",
       "architecture": "aarch64",
       "variant": "arm64",
       "source_recipe": "vertexwiser",
       "apps": {
-        "vertexwiser_arm64 1.5.1": "20261013"
+        "vertexwiser_arm64 1.5.4": "20261014"
       },
       "incorrect_identity_fields": {},
       "missing_identity_fields": [],
