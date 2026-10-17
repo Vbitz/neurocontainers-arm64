@@ -6248,7 +6248,7 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T10:17:26.035375+00:00",
+        "checked_at": "2026-10-17T10:41:27.570489+00:00",
         "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "run_id": 39015848600,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
@@ -19061,7 +19061,7 @@
         }
       },
       "merged_sha": "1209f28fd0d8056bc41607be0311a73b285e06fb",
-      "next_action": "Own PR merged and model-fitting operation verified, but Turbo colormap remains explicitly unverified: existing fallback masks scipy interpolation error. Await released upstream correction containing9b7f685 and explicit renewed build allowance, then remove masking and assert actual finite colormap output on both architectures; no claim that reported78/78 proves this capability.",
+      "next_action": "Official README permits Git installation; unmodified upstream9b7f685 contains the colormap fix. Await explicit renewed12h/max9total preserving6used, then pin source coherently, remove masked Turbo fallback, align upstream package metadata1.2 and preserve/retest all model-fitting assertions. Full revision includes33commits, so no scientific equivalence assumed and no private patch.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.0",
@@ -19242,7 +19242,7 @@
         "run_id": 38283250023,
         "upstream_fix_commit": "9b7f685100366fb79c222c37661924ea25d78743",
         "upstream_fix_status": "main fix uses numpy interpolation; highest published tag remains1.2 at888e6ced650306374fc9941345f269182dd51682",
-        "next_action": "Released upstream fix containing9b7f685 plus explicit renewed build allowance, then remove masked failure and verify actual finite colormap output on both architectures. No private library patch or seventh build.",
+        "next_action": "Official README permits Git installation; unmodified upstream9b7f685 contains the colormap fix. Await explicit renewed12h/max9total preserving6used, then pin source coherently, remove masked Turbo fallback, align upstream package metadata1.2 and preserve/retest all model-fitting assertions. Full revision includes33commits, so no scientific equivalence assumed and no private patch.",
         "release_recheck": {
           "checked_at": "2026-10-17T08:20:20.363526+00:00",
           "latest_release_tag": "1.2",
@@ -19252,7 +19252,86 @@
           "upstream_fix_sha": "9b7f685100366fb79c222c37661924ea25d78743",
           "upstream_fix_url": "https://github.com/cvnlab/GLMsingle/commit/9b7f685100366fb79c222c37661924ea25d78743",
           "outcome": "Latest published release remains1.2; known interpolation correction is newer untagged upstream code. No newly released fix identified; no build or budget reset."
+        },
+        "supported_source_followup": {
+          "checked_at": "2026-10-17T10:26:57.760724+00:00",
+          "outcome": "feasible-official-source-followup-awaiting-budget",
+          "official_installation_url": "https://github.com/cvnlab/GLMsingle#python",
+          "documented_route": "Project README explicitly documents installing Python GLMsingle directly from its Git repository. Pinning an unmodified official revision can follow that route; a new release tag is not a prerequisite.",
+          "fix_sha": "9b7f685100366fb79c222c37661924ea25d78743",
+          "fix_url": "https://github.com/cvnlab/GLMsingle/commit/9b7f685100366fb79c222c37661924ea25d78743",
+          "baseline_tag_sha": "888e6ced650306374fc9941345f269182dd51682",
+          "baseline_to_fix_commits": 33,
+          "baseline_to_fix_changed_files": [
+            {
+              "changes": 44,
+              "filename": ".readthedocs.yaml",
+              "status": "added"
+            },
+            {
+              "changes": 26,
+              "filename": ".readthedocs.yml",
+              "status": "removed"
+            },
+            {
+              "changes": 10,
+              "filename": "docs/source/wiki.md",
+              "status": "modified"
+            },
+            {
+              "changes": 6,
+              "filename": "examples/example5_average_single_trial_betas_t_stat.ipynb",
+              "status": "modified"
+            },
+            {
+              "changes": 128,
+              "filename": "glmsingle/glmsingle.py",
+              "status": "modified"
+            },
+            {
+              "changes": 47,
+              "filename": "glmsingle/ols/glm_estimatemodel.py",
+              "status": "modified"
+            },
+            {
+              "changes": 17,
+              "filename": "glmsingle/utils/calcdmetric.py",
+              "status": "modified"
+            },
+            {
+              "changes": 2,
+              "filename": "glmsingle/utils/cmapturbo.py",
+              "status": "modified"
+            },
+            {
+              "changes": 302,
+              "filename": "matlab/GLMestimatesingletrial.m",
+              "status": "modified"
+            },
+            {
+              "changes": 2,
+              "filename": "setup.py",
+              "status": "modified"
+            }
+          ],
+          "scope": "The fix commit itself changes interpolation in cmapturbo, but taking its full upstream revision also includes model/OLS/calcdmetric changes and setup.py metadata0.0.1to1.2. This is an upstream-source upgrade, not a one-line private patch; full model-fitting tests must be rerun without weaker tolerances.",
+          "concrete_recipe_proposal": [
+            "Pin installation to official unmodified source9b7f685 instead of the defective1.2tag; retain explicit container-release/software-version/revision fields and coherent source update policy.",
+            "Replace Turbo colormap failure-echo fallback with an actual cmapturbo operation asserting expected RGB shape, finite values and valid range; keep all existing model-fitting assertions/tolerances.",
+            "Align actual installed package-version assertion with upstream setup.py1.2 instead of old tag metadata0.0.1; verify source provenance.",
+            "After explicit renewed budget, validate/generate both variants and obtain one native root run plus two required upstream architecture jobs. Existing merged ownport3518 remains historical; any required corrective PR stays focused on this scientific followup."
+          ],
+          "not_done": "No recipe/test edits, source upgrade, container build, dispatch or policy-budget reset performed. Scientific/ARM success remains unproven."
         }
+      },
+      "pending_budget_question": {
+        "asked_at": "2026-10-17T10:26:57.760724+00:00",
+        "answered": false,
+        "requested_max_build_attempts": 9,
+        "requested_renewed_hours": 12,
+        "preserve_used_attempts": 6,
+        "source_fix_sha": "9b7f685100366fb79c222c37661924ea25d78743",
+        "reason": "Official Git-source installation is documented, so waiting for a new release tag was overrestrictive. Need source pin/full scientific followup with actual finite colormap output;33core-source commits require preserved model tests. Three jobs: one rootnative and two upstream. Original cap/deadline stay until explicit reply."
       }
     },
     {
@@ -26801,6 +26880,13 @@
           "arm64_publication_job": "failure",
           "metadata_finalization": "skipped; ARM current metadata absent and x86 current metadata not advanced",
           "revisit_condition": "Publisher runner filesystem repaired and existing trusted publication recovered by its owner; do not rebuild passing images, manually promote or edit release JSONs."
+        },
+        "later_verified_publication": {
+          "source_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3683",
+          "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
+          "version": "1.2.0",
+          "scope": "Later independently tested and published source. Original status/date/metadata_commit fields remain historical proof for their original candidate; they are not claims about current file contents or proof this original candidate was republished."
         }
       },
       "later_upstream_updates": [
@@ -27070,12 +27156,12 @@
           },
           "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source.",
           "publication_observation": {
-            "checked_at": "2026-10-17T10:17:26.035375+00:00",
+            "checked_at": "2026-10-17T10:41:27.570489+00:00",
             "run_id": 39007028913,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
-            "status": "in_progress",
-            "conclusion": null,
-            "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained.",
+            "status": "completed",
+            "conclusion": "success",
+            "note": "Later exact-source publication verified in publication_audit; original failed source publication remains historical, not republished.",
             "publisher_jobs": [
               {
                 "id": 117321521782,
@@ -27105,6 +27191,44 @@
               }
             ],
             "started_observation_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/71#issuecomment-6232504762"
+          },
+          "publication_audit": {
+            "checked_at": "2026-10-17T10:35:11.164630+00:00",
+            "status": "verified-published-metadata",
+            "source_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+            "promotion_run_id": 39007028913,
+            "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
+            "metadata": [
+              {
+                "architecture": "aarch64",
+                "path": "releases/mneextended_arm64/1.2.0.json",
+                "source_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+                "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "metadata_commit_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "expected_build_date": "20261017",
+                "trusted_preview_matches": true,
+                "sif": "mneextended_arm64_1.2.0_20261017.simg",
+                "sif_sha256": "fd06eb2c54bb4c254d56d0ca829c3b4324b18983e1d6ac52fd26995c982f5fd3",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mneextended_arm64_1.2.0_20261017.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              },
+              {
+                "architecture": "x86_64",
+                "path": "releases/mneextended/1.2.0.json",
+                "source_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+                "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "metadata_commit_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+                "expected_build_date": "20261017",
+                "trusted_preview_matches": true,
+                "sif": "mneextended_1.2.0_20261017.simg",
+                "sif_sha256": "3d32b026591709aad3acd4a950acf72c75bdf4db38e657bc053aff1bb89cdfe9",
+                "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mneextended_1.2.0_20261017.simg",
+                "public_sif_head_status": 200,
+                "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+              }
+            ],
+            "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
           }
         }
       ]
@@ -33460,7 +33584,7 @@
         "reason": "Corrected fulltest/current candidate source requires a fresh root native build plus both upstream architecture builds;2 remaining attempts cannot complete that three-build lifecycle. Original native62/62 source proof retained. No failed source merged or substituted old proof."
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T10:17:26.035375+00:00",
+        "checked_at": "2026-10-17T10:41:27.570489+00:00",
         "source_sha": "d2117de849159ca8d66f18a227851086ecfaba1f",
         "run_id": 39022650295,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39022650295",
@@ -33478,7 +33602,7 @@
             ],
             "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39022650295/job/117367411343",
             "active_steps": [
-              "Create immutable candidate files"
+              "Run deploy and fulltest checks"
             ]
           },
           {
@@ -33787,7 +33911,7 @@
                 ],
                 "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39022650295/job/117367411343",
                 "active_steps": [
-                  "Create immutable candidate files"
+                  "Run deploy and fulltest checks"
                 ]
               },
               {
@@ -45569,9 +45693,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-17T09:35:33.667275+00:00",
-    "previous_sha": "0fbcbca21518d7817dfeb9d2c20e9249d1b610c7",
-    "new_sha": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+    "checked_at": "2026-10-17T10:36:50.669367+00:00",
+    "previous_sha": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+    "new_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },
@@ -45749,11 +45873,11 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T10:17:26.035375+00:00",
-    "top_level_base_commit": "2b95dc4ccbf69620e2f13e4f7229bea5970406b4",
+    "checked_at": "2026-10-17T10:41:27.570489+00:00",
+    "top_level_base_commit": "fc4033b65eaf5ad43f839dab52434a89daaddfab",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
-    "upstream_fork_main_sha": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+    "upstream_fork_main_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
     "inventory_status_counts": {
       "excluded-by-user": 17,
       "blocked-prerequisite": 2,
@@ -45773,7 +45897,7 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Resume exact ARM jobs BrainLes9564/run39015848600/job117347735063 and PyDefaced211/run39022650295/job117367411343. Review first actual native failure or complete scientific reports when terminal; preserve source-specific x86 successes and old e5a0 ARM timeout proof separately. Observe MNEExtendedf874 automatic publisher39007028913 and verify trusted metadata/publicSIFs when complete. Six budget answers pending; full goal incomplete.",
+    "next_action": "Observe exact BrainLes9564 ARMjob117347735063/run39015848600 and PyDefaced211 ARMjob117367411343/run39022650295; review actual terminal errors/raw scientific results. No publisher jobs remain active in scope. GLMsingle official unmodified-source upgrade is feasible but needs explicit budget reply before edits/dispatch; six older budget questions also pending. Keep all original clocks/counts and historical source proofs; full goal incomplete.",
     "live_external_jobs": [
       {
         "recipe": "brainles-preprocessing",
@@ -45795,53 +45919,14 @@
         "status": "in_progress",
         "conclusion": null,
         "active_steps": [
-          "Create immutable candidate files"
+          "Run deploy and fulltest checks"
         ],
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39022650295/job/117367411343"
       }
     ],
     "last_goal_turn_classification": "progress",
-    "progress": "Observed independent PyDefaced211 diagnostic-discovery fix and two actual jobs;16total attempts, prior e5a0 ARM60/63/x8662/63 archived byimmutable2b95. Currentd211x86 raw62/63 confirms61functional strict-exit passes and full5898240voxel maskproduct35.07s, only deliberate reviewgatefails. BrainLes9564 currentx86 raw19/19 verifies18actualzeroexitfunctional/deploy3, real SynthStrip/bothselfregistrationbackends/HDBetCPU; ARM and diagnostic holds remain. No own builds or budget resets.",
-    "active_automatic_promotions": [
-      {
-        "recipe": "mneextended",
-        "checked_at": "2026-10-17T10:17:26.035375+00:00",
-        "run_id": 39007028913,
-        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
-        "status": "in_progress",
-        "conclusion": null,
-        "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained.",
-        "publisher_jobs": [
-          {
-            "id": 117321521782,
-            "name": "publish (candidate-mneextended_arm64-f874d12f605da513b3eddb380799416b5bf6df76)",
-            "status": "in_progress",
-            "conclusion": null,
-            "started_at": "2026-10-17T09:31:27Z",
-            "labels": [
-              "neurodesk-syd-arcrunner-neurocontainers"
-            ],
-            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913/job/117321521782",
-            "active_steps": [
-              "Publish exact tested Docker archive to unique staging tags"
-            ]
-          },
-          {
-            "id": 117321521800,
-            "name": "publish (candidate-mneextended-f874d12f605da513b3eddb380799416b5bf6df76)",
-            "status": "completed",
-            "conclusion": "success",
-            "started_at": "2026-10-17T09:33:15Z",
-            "labels": [
-              "neurodesk-syd-arcrunner-neurocontainers"
-            ],
-            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913/job/117321521800",
-            "active_steps": []
-          }
-        ],
-        "started_observation_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/71#issuecomment-6232504762"
-      }
-    ],
+    "progress": "MNEExtended laterf874 publication verified on both architectures against trusted previews/committed metadata/publicSIFs; original failed promotion retained historically. Fork067 normalFF/Actionsdisabled, all128catalog entries/64verifiedpublishedrecipes match current source-specific evidence. New GLMsingle official Git-install documentation removes unnecessary waiting-for-tag prerequisite; pinned9b7 fix includes33core-model commits and package metadata change, full scientific retest proposed, max9/renewed12h requested with6used preserved. No recipe/test edits or own builds.",
+    "active_automatic_promotions": [],
     "pending_budget_replies": [
       "apptainer",
       "elastix",
@@ -45850,7 +45935,11 @@
       "tractseg",
       "workshopdemo"
     ],
-    "verified_published_recipe_count": 63,
-    "catalog_architecture_record_count": 126
+    "verified_published_recipe_count": 64,
+    "catalog_architecture_record_count": 128,
+    "total_pending_budget_questions": 7,
+    "pending_runtime_followup_budget_questions": [
+      "glmsingle"
+    ]
   }
 }

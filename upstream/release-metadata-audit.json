@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-17T08:42:19.017622+00:00",
+  "checked_at": "2026-10-17T10:41:27.570489+00:00",
   "policy": "Read-only audit. Candidate success and merged PRs are not proof of publication. Generated JSON files are never edited manually.",
   "completed_promotion_controls": [
     {
@@ -2703,6 +2703,13 @@
         "arm64_publication_job": "failure",
         "metadata_finalization": "skipped; ARM current metadata absent and x86 current metadata not advanced",
         "revisit_condition": "Publisher runner filesystem repaired and existing trusted publication recovered by its owner; do not rebuild passing images, manually promote or edit release JSONs."
+      },
+      "later_verified_publication": {
+        "source_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+        "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3683",
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
+        "version": "1.2.0",
+        "scope": "Later independently tested and published source. Original status/date/metadata_commit fields remain historical proof for their original candidate; they are not claims about current file contents or proof this original candidate was republished."
       }
     },
     {
@@ -4974,12 +4981,12 @@
     "Publication is tracked separately from native test success and upstream PR merge. No release JSON is manually edited."
   ],
   "catalog_queue_audit": {
-    "checked_at": "2026-10-17T09:40:33.475498+00:00",
-    "commit_sha": "d84a786f67894c6f82449638a968fc16658aefc6",
-    "blob_sha": "22735e99466832704afc36922c21460614bb5db5",
-    "metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+    "checked_at": "2026-10-17T10:36:57.179356+00:00",
+    "commit_sha": "d4cf2c5e40ab4982b449ffb62705c9e435a095e4",
+    "blob_sha": "b2b45484ac791b29b3f5e2bb59f98cc63ce795f1",
+    "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
     "counts": {
-      "matches-published-metadata": 126
+      "matches-published-metadata": 128
     },
     "entries": [
       {
@@ -4989,7 +4996,7 @@
         "metadata_commit_sha": "8e633432dc4af2f4ed2d61139ef03f5712e34175",
         "build_date": "20261012",
         "historical_source_sha": "f58b9e6755f6af3db1753d44ba3b390270c7cde0",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5008,7 +5015,7 @@
         "metadata_commit_sha": "8e633432dc4af2f4ed2d61139ef03f5712e34175",
         "build_date": "20261012",
         "historical_source_sha": "f58b9e6755f6af3db1753d44ba3b390270c7cde0",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5027,7 +5034,7 @@
         "metadata_commit_sha": "a48ed1924601c215de34ba14930204632e77b381",
         "build_date": "20261014",
         "historical_source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -5046,7 +5053,7 @@
         "metadata_commit_sha": "a48ed1924601c215de34ba14930204632e77b381",
         "build_date": "20261014",
         "historical_source_sha": "5da4b94239d2fd521d0e8c5f803a200e50c7416f",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -5065,7 +5072,7 @@
         "metadata_commit_sha": "c9a061920b7ef95dfc23790201987be1651b173f",
         "build_date": "20261012",
         "historical_source_sha": "d283242192109fce4d5f9914a41cf97abe98d1eb",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5087,7 +5094,7 @@
         "metadata_commit_sha": "c9a061920b7ef95dfc23790201987be1651b173f",
         "build_date": "20261012",
         "historical_source_sha": "d283242192109fce4d5f9914a41cf97abe98d1eb",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5109,7 +5116,7 @@
         "metadata_commit_sha": "d3cfb58df69ad1e70a15fdfee044c2321d67bfb3",
         "build_date": "20261012",
         "historical_source_sha": "5496bbdb1363839a80b7b582b8eb3e5bbd9f320f",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5128,7 +5135,7 @@
         "metadata_commit_sha": "d3cfb58df69ad1e70a15fdfee044c2321d67bfb3",
         "build_date": "20261012",
         "historical_source_sha": "5496bbdb1363839a80b7b582b8eb3e5bbd9f320f",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5147,7 +5154,7 @@
         "metadata_commit_sha": "1361eae40c65f447c144db43c63666a1e1eb3800",
         "build_date": "20261013",
         "historical_source_sha": "c7cb51ccc422a0c638094996abf253f6847c499b",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -5167,7 +5174,7 @@
         "metadata_commit_sha": "1361eae40c65f447c144db43c63666a1e1eb3800",
         "build_date": "20261013",
         "historical_source_sha": "c7cb51ccc422a0c638094996abf253f6847c499b",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -5187,7 +5194,7 @@
         "metadata_commit_sha": "ad4813f274014435d173e13f7ec53ce3b3796bbe",
         "build_date": "20261012",
         "historical_source_sha": "12dd9fd8e64ffa76ae7eeec61d82a884958ecfff",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5206,7 +5213,7 @@
         "metadata_commit_sha": "ad4813f274014435d173e13f7ec53ce3b3796bbe",
         "build_date": "20261012",
         "historical_source_sha": "12dd9fd8e64ffa76ae7eeec61d82a884958ecfff",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5225,7 +5232,7 @@
         "metadata_commit_sha": "cbd8b8de076603d29447347670dec9a753039319",
         "build_date": "20261012",
         "historical_source_sha": "fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5244,7 +5251,7 @@
         "metadata_commit_sha": "cbd8b8de076603d29447347670dec9a753039319",
         "build_date": "20261012",
         "historical_source_sha": "fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5263,7 +5270,7 @@
         "metadata_commit_sha": "85c2cb512f1f45306b7b1f2760a6b167596cacb5",
         "build_date": "20261012",
         "historical_source_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5282,7 +5289,7 @@
         "metadata_commit_sha": "85c2cb512f1f45306b7b1f2760a6b167596cacb5",
         "build_date": "20261012",
         "historical_source_sha": "a481dbdd858a93571320960b3322002e65ac3e07",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5301,7 +5308,7 @@
         "metadata_commit_sha": "3074741662d65ad1c7aa4042248ab4bfd72eec36",
         "build_date": "20261012",
         "historical_source_sha": "83de01a91c3fe525ddef4e60924c9b9797ad6371",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5320,7 +5327,7 @@
         "metadata_commit_sha": "3074741662d65ad1c7aa4042248ab4bfd72eec36",
         "build_date": "20261012",
         "historical_source_sha": "83de01a91c3fe525ddef4e60924c9b9797ad6371",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5339,7 +5346,7 @@
         "metadata_commit_sha": "be8ff4d1ba9e7f86cdd00f5bb2e8eeab447e9c61",
         "build_date": "20261016",
         "historical_source_sha": "84bd8081a0f96225ff81b3580a733822bfe85113",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261016"
         ],
@@ -5358,7 +5365,7 @@
         "metadata_commit_sha": "be8ff4d1ba9e7f86cdd00f5bb2e8eeab447e9c61",
         "build_date": "20261016",
         "historical_source_sha": "84bd8081a0f96225ff81b3580a733822bfe85113",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261016"
         ],
@@ -5377,7 +5384,7 @@
         "metadata_commit_sha": "a11929e82fc8b7e866c18a07cb41d4d3ef13fae3",
         "build_date": "20261012",
         "historical_source_sha": "00d52a64cd5bc7dff2d4957d83b284d2fbe8f752",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5396,7 +5403,7 @@
         "metadata_commit_sha": "a11929e82fc8b7e866c18a07cb41d4d3ef13fae3",
         "build_date": "20261012",
         "historical_source_sha": "00d52a64cd5bc7dff2d4957d83b284d2fbe8f752",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5415,7 +5422,7 @@
         "metadata_commit_sha": "080e8b3a4cf6e2ddbec99ad817410dd9cbe3d6a9",
         "build_date": "20261012",
         "historical_source_sha": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5434,7 +5441,7 @@
         "metadata_commit_sha": "080e8b3a4cf6e2ddbec99ad817410dd9cbe3d6a9",
         "build_date": "20261012",
         "historical_source_sha": "6569b8dbc61243e1880ee86d055542f9dff80dd5",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5453,7 +5460,7 @@
         "metadata_commit_sha": "41b588c978b8e61ab9f30b0191f22a92979fab5e",
         "build_date": "20261013",
         "historical_source_sha": "27164b8a8a9f49c00e201b80769849f71833ba16",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -5473,7 +5480,7 @@
         "metadata_commit_sha": "41b588c978b8e61ab9f30b0191f22a92979fab5e",
         "build_date": "20261013",
         "historical_source_sha": "27164b8a8a9f49c00e201b80769849f71833ba16",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -5493,7 +5500,7 @@
         "metadata_commit_sha": "04a24b6ebfaf018c2323c73c232df4c013a7ccc1",
         "build_date": "20261012",
         "historical_source_sha": "983b27d1fd8aecf2da4d0244053fe8479149864a",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5512,7 +5519,7 @@
         "metadata_commit_sha": "04a24b6ebfaf018c2323c73c232df4c013a7ccc1",
         "build_date": "20261012",
         "historical_source_sha": "983b27d1fd8aecf2da4d0244053fe8479149864a",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5531,7 +5538,7 @@
         "metadata_commit_sha": "f5e5c6f3264ac8e7a42bbaf665b9a1a33b771d19",
         "build_date": "20261012",
         "historical_source_sha": "d973046690b93979fa394715a2dd842c2f7b8d8e",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5550,7 +5557,7 @@
         "metadata_commit_sha": "f5e5c6f3264ac8e7a42bbaf665b9a1a33b771d19",
         "build_date": "20261012",
         "historical_source_sha": "d973046690b93979fa394715a2dd842c2f7b8d8e",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5569,7 +5576,7 @@
         "metadata_commit_sha": "0253128b73841282c9bbdb78d177537365649927",
         "build_date": "20261013",
         "historical_source_sha": "58ad6425526133992ec41cdc69046683888b66ed",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -5588,7 +5595,7 @@
         "metadata_commit_sha": "0253128b73841282c9bbdb78d177537365649927",
         "build_date": "20261013",
         "historical_source_sha": "58ad6425526133992ec41cdc69046683888b66ed",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -5607,7 +5614,7 @@
         "metadata_commit_sha": "2dfa21b927a00cba5912fb664e5a74addd4ab6e1",
         "build_date": "20261014",
         "historical_source_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -5626,7 +5633,7 @@
         "metadata_commit_sha": "2dfa21b927a00cba5912fb664e5a74addd4ab6e1",
         "build_date": "20261014",
         "historical_source_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -5645,7 +5652,7 @@
         "metadata_commit_sha": "cf7024c6c8a3aa4e5921d9c95003f7a8114a4054",
         "build_date": "20261014",
         "historical_source_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -5664,7 +5671,7 @@
         "metadata_commit_sha": "cf7024c6c8a3aa4e5921d9c95003f7a8114a4054",
         "build_date": "20261014",
         "historical_source_sha": "02ade4a9595b5fe1cfea5ab09934169357f2d1da",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -5683,7 +5690,7 @@
         "metadata_commit_sha": "75e393e14eeb89b436b3dc30eb3c9ff0b6f1438b",
         "build_date": "20261013",
         "historical_source_sha": "4bfaf8ea40c71778b11058f8511eeb7199b47e43",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -5703,7 +5710,7 @@
         "metadata_commit_sha": "75e393e14eeb89b436b3dc30eb3c9ff0b6f1438b",
         "build_date": "20261013",
         "historical_source_sha": "4bfaf8ea40c71778b11058f8511eeb7199b47e43",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -5723,7 +5730,7 @@
         "metadata_commit_sha": "5142bce43f973c62b8a8bea7534b0f89ad33611f",
         "build_date": "20261012",
         "historical_source_sha": "bba9c58d834c90e5fe99f6649679bf19ffd87334",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5742,7 +5749,7 @@
         "metadata_commit_sha": "5142bce43f973c62b8a8bea7534b0f89ad33611f",
         "build_date": "20261012",
         "historical_source_sha": "bba9c58d834c90e5fe99f6649679bf19ffd87334",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5761,7 +5768,7 @@
         "metadata_commit_sha": "f8c78db8c2b6f30881636ad2a66847d2b5d881bc",
         "build_date": "20261012",
         "historical_source_sha": "11049ac1e499f13b68a5a150a0a94fa8fe2711fc",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5780,7 +5787,7 @@
         "metadata_commit_sha": "f8c78db8c2b6f30881636ad2a66847d2b5d881bc",
         "build_date": "20261012",
         "historical_source_sha": "11049ac1e499f13b68a5a150a0a94fa8fe2711fc",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5799,7 +5806,7 @@
         "metadata_commit_sha": "17b8db7eff48eb1ff9f73e67079b355c2ce452c1",
         "build_date": "20261012",
         "historical_source_sha": "07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5818,7 +5825,7 @@
         "metadata_commit_sha": "17b8db7eff48eb1ff9f73e67079b355c2ce452c1",
         "build_date": "20261012",
         "historical_source_sha": "07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5837,7 +5844,7 @@
         "metadata_commit_sha": "25d1b5542b0e4e68478828ba04c516fa97938511",
         "build_date": "20261013",
         "historical_source_sha": "fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -5857,7 +5864,7 @@
         "metadata_commit_sha": "25d1b5542b0e4e68478828ba04c516fa97938511",
         "build_date": "20261013",
         "historical_source_sha": "fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -5877,7 +5884,7 @@
         "metadata_commit_sha": "9abe4d5fa1a7873cb27899f6d899ffccb0c3535a",
         "build_date": "20261012",
         "historical_source_sha": "20835db5be6559a46dd369e4982cfac77a46cb91",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5896,7 +5903,7 @@
         "metadata_commit_sha": "9abe4d5fa1a7873cb27899f6d899ffccb0c3535a",
         "build_date": "20261012",
         "historical_source_sha": "20835db5be6559a46dd369e4982cfac77a46cb91",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5915,7 +5922,7 @@
         "metadata_commit_sha": "216b975fb2f59f0827ae9ccd3ba6f256d461fca9",
         "build_date": "20261012",
         "historical_source_sha": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5936,7 +5943,7 @@
         "metadata_commit_sha": "216b975fb2f59f0827ae9ccd3ba6f256d461fca9",
         "build_date": "20261012",
         "historical_source_sha": "6fb4d1f46c2f4b41c0327b1a8abce66178075333",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5957,7 +5964,7 @@
         "metadata_commit_sha": "18c2ec5ed864449aaf464649f2262ff197ee281a",
         "build_date": "20261012",
         "historical_source_sha": "926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5976,7 +5983,7 @@
         "metadata_commit_sha": "18c2ec5ed864449aaf464649f2262ff197ee281a",
         "build_date": "20261012",
         "historical_source_sha": "926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -5995,7 +6002,7 @@
         "metadata_commit_sha": "0f822f54df639787cbd1a3e24d9144f8d41e3fbc",
         "build_date": "20261014",
         "historical_source_sha": "c7c1c3b78693ed04ddab60b14d18409c2991e197",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -6014,7 +6021,7 @@
         "metadata_commit_sha": "0f822f54df639787cbd1a3e24d9144f8d41e3fbc",
         "build_date": "20261014",
         "historical_source_sha": "c7c1c3b78693ed04ddab60b14d18409c2991e197",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -6033,7 +6040,7 @@
         "metadata_commit_sha": "4db4075616554f349e57cdbe2a130eda2b4c9d8e",
         "build_date": "20261013",
         "historical_source_sha": "170236a0a8af387d460df51fd6e299a711c32a57",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6052,7 +6059,7 @@
         "metadata_commit_sha": "4db4075616554f349e57cdbe2a130eda2b4c9d8e",
         "build_date": "20261013",
         "historical_source_sha": "170236a0a8af387d460df51fd6e299a711c32a57",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6071,7 +6078,7 @@
         "metadata_commit_sha": "d103505812ccaf4bb8be91553eb0038f6406af40",
         "build_date": "20261013",
         "historical_source_sha": "4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6090,7 +6097,7 @@
         "metadata_commit_sha": "d103505812ccaf4bb8be91553eb0038f6406af40",
         "build_date": "20261013",
         "historical_source_sha": "4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6109,7 +6116,7 @@
         "metadata_commit_sha": "36520dbcb15c00597b0dc6afb7fd255e9fbcdc33",
         "build_date": "20261012",
         "historical_source_sha": "0383fec6a76f59c56190fc67502a150bda24e492",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -6128,7 +6135,7 @@
         "metadata_commit_sha": "36520dbcb15c00597b0dc6afb7fd255e9fbcdc33",
         "build_date": "20261012",
         "historical_source_sha": "0383fec6a76f59c56190fc67502a150bda24e492",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -6147,7 +6154,7 @@
         "metadata_commit_sha": "b0158fd41cf2e020a2d80189daffaadb39775513",
         "build_date": "20261013",
         "historical_source_sha": "8e1bafeeb686ff1761ae31342fe5e4170c55a982",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6166,7 +6173,7 @@
         "metadata_commit_sha": "b0158fd41cf2e020a2d80189daffaadb39775513",
         "build_date": "20261013",
         "historical_source_sha": "8e1bafeeb686ff1761ae31342fe5e4170c55a982",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6185,7 +6192,7 @@
         "metadata_commit_sha": "219f069ef25741ffd59cf82b183809dff6c01487",
         "build_date": "20261013",
         "historical_source_sha": "8f6524de0ef725ef6c25486669c7bfe794978585",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6205,7 +6212,7 @@
         "metadata_commit_sha": "219f069ef25741ffd59cf82b183809dff6c01487",
         "build_date": "20261013",
         "historical_source_sha": "8f6524de0ef725ef6c25486669c7bfe794978585",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6225,7 +6232,7 @@
         "metadata_commit_sha": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
         "build_date": "20261017",
         "historical_source_sha": "1b64eedba421ea318435f220db170a5192e710d6",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261017"
         ],
@@ -6244,7 +6251,7 @@
         "metadata_commit_sha": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
         "build_date": "20261017",
         "historical_source_sha": "1b64eedba421ea318435f220db170a5192e710d6",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261017"
         ],
@@ -6263,7 +6270,7 @@
         "metadata_commit_sha": "c96a8ec22c9d8bfd02515cc42d876d205a306d91",
         "build_date": "20261012",
         "historical_source_sha": "b8764c4d1150f58dafc62913167242a94fc96769",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -6283,7 +6290,7 @@
         "metadata_commit_sha": "c96a8ec22c9d8bfd02515cc42d876d205a306d91",
         "build_date": "20261012",
         "historical_source_sha": "b8764c4d1150f58dafc62913167242a94fc96769",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -6303,7 +6310,7 @@
         "metadata_commit_sha": "240121623c0d89738fa140c916769ba748c0a13b",
         "build_date": "20261013",
         "historical_source_sha": "f15b35a532a34d317e5a49d88d5b0bffebe1508d",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6322,7 +6329,7 @@
         "metadata_commit_sha": "240121623c0d89738fa140c916769ba748c0a13b",
         "build_date": "20261013",
         "historical_source_sha": "f15b35a532a34d317e5a49d88d5b0bffebe1508d",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6341,7 +6348,7 @@
         "metadata_commit_sha": "3e4396cadbc0d4dd278ea9513960d830f96c72ca",
         "build_date": "20261013",
         "historical_source_sha": "38748e19e52c7463700c5550e2bcbbed06d883ba",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6360,7 +6367,7 @@
         "metadata_commit_sha": "3e4396cadbc0d4dd278ea9513960d830f96c72ca",
         "build_date": "20261013",
         "historical_source_sha": "38748e19e52c7463700c5550e2bcbbed06d883ba",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6379,7 +6386,7 @@
         "metadata_commit_sha": "b2d0991a985ac119b7cebed45a067f30441356d5",
         "build_date": "20261013",
         "historical_source_sha": "282639d96241a8d858c0a53fa33dab645cee54e3",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6401,7 +6408,7 @@
         "metadata_commit_sha": "b2d0991a985ac119b7cebed45a067f30441356d5",
         "build_date": "20261013",
         "historical_source_sha": "282639d96241a8d858c0a53fa33dab645cee54e3",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6423,7 +6430,7 @@
         "metadata_commit_sha": "e40f2930298776bbdb888e6016b8b14efc5dee68",
         "build_date": "20261014",
         "historical_source_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -6442,7 +6449,7 @@
         "metadata_commit_sha": "e40f2930298776bbdb888e6016b8b14efc5dee68",
         "build_date": "20261014",
         "historical_source_sha": "10f4ed4f27db9bff6b37802241fca4ab61bec3fa",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -6461,7 +6468,7 @@
         "metadata_commit_sha": "85e3243b2705d3a5b9a28adffc314e8fecf48893",
         "build_date": "20261014",
         "historical_source_sha": "b2c74585de5d550a5dbd1c80cbfb91e943034d02",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -6480,7 +6487,7 @@
         "metadata_commit_sha": "85e3243b2705d3a5b9a28adffc314e8fecf48893",
         "build_date": "20261014",
         "historical_source_sha": "b2c74585de5d550a5dbd1c80cbfb91e943034d02",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -6499,7 +6506,7 @@
         "metadata_commit_sha": "5da36a28ffa9fd847e98df5bce020e5700b4a078",
         "build_date": "20261012",
         "historical_source_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -6518,7 +6525,7 @@
         "metadata_commit_sha": "5da36a28ffa9fd847e98df5bce020e5700b4a078",
         "build_date": "20261012",
         "historical_source_sha": "85689c2ead33e71e549b830a2b4093f9cc2c3f3f",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -6537,7 +6544,7 @@
         "metadata_commit_sha": "653f2cd77169ec3c6e1aff8f237faec3f283c7c6",
         "build_date": "20261012",
         "historical_source_sha": "64d88b79ce7299c91813e28dfdc8b95375b6ab6e",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -6556,7 +6563,7 @@
         "metadata_commit_sha": "653f2cd77169ec3c6e1aff8f237faec3f283c7c6",
         "build_date": "20261012",
         "historical_source_sha": "64d88b79ce7299c91813e28dfdc8b95375b6ab6e",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -6575,7 +6582,7 @@
         "metadata_commit_sha": "56a1f22321695a12db1ca4bbe389f9dce1597a85",
         "build_date": "20261013",
         "historical_source_sha": "730cde221c7617438a1a0d1d6f8ceaed47236b4f",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6594,7 +6601,7 @@
         "metadata_commit_sha": "56a1f22321695a12db1ca4bbe389f9dce1597a85",
         "build_date": "20261013",
         "historical_source_sha": "730cde221c7617438a1a0d1d6f8ceaed47236b4f",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6613,7 +6620,7 @@
         "metadata_commit_sha": "ac5c416b90710c244b002c2c7f6ff4b6bce07724",
         "build_date": "20261014",
         "historical_source_sha": "f29fad8a1acd06e56bf4e3c5b727472448b23dbc",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -6632,7 +6639,7 @@
         "metadata_commit_sha": "ac5c416b90710c244b002c2c7f6ff4b6bce07724",
         "build_date": "20261014",
         "historical_source_sha": "f29fad8a1acd06e56bf4e3c5b727472448b23dbc",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -6651,7 +6658,7 @@
         "metadata_commit_sha": "bc7d8fb37fbb727d74fb33a5e95d9ba614a83639",
         "build_date": "20261012",
         "historical_source_sha": "7a8c6946266afbf3d53ca438d6357c3e6699fc57",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -6670,7 +6677,7 @@
         "metadata_commit_sha": "bc7d8fb37fbb727d74fb33a5e95d9ba614a83639",
         "build_date": "20261012",
         "historical_source_sha": "7a8c6946266afbf3d53ca438d6357c3e6699fc57",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -6689,7 +6696,7 @@
         "metadata_commit_sha": "6da62215f2e485f3cab0ad0c8ae1ce1c87c5a79c",
         "build_date": "20261013",
         "historical_source_sha": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6709,7 +6716,7 @@
         "metadata_commit_sha": "6da62215f2e485f3cab0ad0c8ae1ce1c87c5a79c",
         "build_date": "20261013",
         "historical_source_sha": "091ad80b0b7659e848a03e07a3236a3cb6e8b41d",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6729,7 +6736,7 @@
         "metadata_commit_sha": "d984cb5c88eb1b3ed55309e8c979cda0b8dad396",
         "build_date": "20261013",
         "historical_source_sha": "7e0a4afb361194694f9242d2858d8414580f6079",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6748,7 +6755,7 @@
         "metadata_commit_sha": "d984cb5c88eb1b3ed55309e8c979cda0b8dad396",
         "build_date": "20261013",
         "historical_source_sha": "7e0a4afb361194694f9242d2858d8414580f6079",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6767,7 +6774,7 @@
         "metadata_commit_sha": "5e08c582c83aad4ac28b6c52735e2702d000064d",
         "build_date": "20261013",
         "historical_source_sha": "4b30a1173fbd09ce08b307cef621515d80cd82ea",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6786,7 +6793,7 @@
         "metadata_commit_sha": "5e08c582c83aad4ac28b6c52735e2702d000064d",
         "build_date": "20261013",
         "historical_source_sha": "4b30a1173fbd09ce08b307cef621515d80cd82ea",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6805,7 +6812,7 @@
         "metadata_commit_sha": "19c872812003ccaac71e33643982a141340263fb",
         "build_date": "20261013",
         "historical_source_sha": "076a343f25133f11f1e4ceb10c7021bbc71f0c46",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6824,7 +6831,7 @@
         "metadata_commit_sha": "19c872812003ccaac71e33643982a141340263fb",
         "build_date": "20261013",
         "historical_source_sha": "076a343f25133f11f1e4ceb10c7021bbc71f0c46",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6843,7 +6850,7 @@
         "metadata_commit_sha": "cc96ba166be1bdd9d2a3041e2e1b343f67d54984",
         "build_date": "20261013",
         "historical_source_sha": "6410b7466ada12982d23dcacd26ec0eee6a96265",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6862,7 +6869,7 @@
         "metadata_commit_sha": "cc96ba166be1bdd9d2a3041e2e1b343f67d54984",
         "build_date": "20261013",
         "historical_source_sha": "6410b7466ada12982d23dcacd26ec0eee6a96265",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6881,7 +6888,7 @@
         "metadata_commit_sha": "dd229cfa2abd46c19a3063a4b89a855890523334",
         "build_date": "20261013",
         "historical_source_sha": "c2b243ae0025f0010b3693176ec0656aab3993eb",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6900,7 +6907,7 @@
         "metadata_commit_sha": "dd229cfa2abd46c19a3063a4b89a855890523334",
         "build_date": "20261013",
         "historical_source_sha": "c2b243ae0025f0010b3693176ec0656aab3993eb",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6919,7 +6926,7 @@
         "metadata_commit_sha": "e81b1b72c2367a65170e883ea4551004afed5fa0",
         "build_date": "20261013",
         "historical_source_sha": "e23083920dbdf467fcf59abe8724421471c9d317",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6939,7 +6946,7 @@
         "metadata_commit_sha": "e81b1b72c2367a65170e883ea4551004afed5fa0",
         "build_date": "20261013",
         "historical_source_sha": "e23083920dbdf467fcf59abe8724421471c9d317",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6959,7 +6966,7 @@
         "metadata_commit_sha": "5ec3b1761857f116bbe798c6024edec198f35945",
         "build_date": "20261013",
         "historical_source_sha": "8aec6b757626d3d868d2495cf330ad595c52cefe",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6978,7 +6985,7 @@
         "metadata_commit_sha": "5ec3b1761857f116bbe798c6024edec198f35945",
         "build_date": "20261013",
         "historical_source_sha": "8aec6b757626d3d868d2495cf330ad595c52cefe",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -6997,7 +7004,7 @@
         "metadata_commit_sha": "41308ea3d5872faad4d5d00eabaac8393177bb56",
         "build_date": "20261014",
         "historical_source_sha": "08e0b4a389c90485a7d99c030f0fedb6e39517b7",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -7016,7 +7023,7 @@
         "metadata_commit_sha": "41308ea3d5872faad4d5d00eabaac8393177bb56",
         "build_date": "20261014",
         "historical_source_sha": "08e0b4a389c90485a7d99c030f0fedb6e39517b7",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -7035,7 +7042,7 @@
         "metadata_commit_sha": "4a17f988cb87651ff7430004014b2254dbf78203",
         "build_date": "20261014",
         "historical_source_sha": "b39a7cf0fd97b9dd6d035b376fabfff59c5d4aad",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -7054,7 +7061,7 @@
         "metadata_commit_sha": "4a17f988cb87651ff7430004014b2254dbf78203",
         "build_date": "20261014",
         "historical_source_sha": "b39a7cf0fd97b9dd6d035b376fabfff59c5d4aad",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -7073,7 +7080,7 @@
         "metadata_commit_sha": "afebd9fc92bd379009dd3cb16ef03fcb1273c933",
         "build_date": "20261013",
         "historical_source_sha": "7a570d44011695ac0b32a340b1d083ae8e30c822",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -7092,7 +7099,7 @@
         "metadata_commit_sha": "afebd9fc92bd379009dd3cb16ef03fcb1273c933",
         "build_date": "20261013",
         "historical_source_sha": "7a570d44011695ac0b32a340b1d083ae8e30c822",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -7111,7 +7118,7 @@
         "metadata_commit_sha": "cd2c7a6e18729c192aca47b7a2cc8eca73c52e2a",
         "build_date": "20261013",
         "historical_source_sha": "cc59e4497daf24b768331b122fde8542134cdd00",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -7130,7 +7137,7 @@
         "metadata_commit_sha": "cd2c7a6e18729c192aca47b7a2cc8eca73c52e2a",
         "build_date": "20261013",
         "historical_source_sha": "cc59e4497daf24b768331b122fde8542134cdd00",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -7149,7 +7156,7 @@
         "metadata_commit_sha": "ddc25e0d0cb13525b189621c356a365be217c5d8",
         "build_date": "20261012",
         "historical_source_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -7168,7 +7175,7 @@
         "metadata_commit_sha": "ddc25e0d0cb13525b189621c356a365be217c5d8",
         "build_date": "20261012",
         "historical_source_sha": "b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261012"
         ],
@@ -7187,7 +7194,7 @@
         "metadata_commit_sha": "371c24ac8aa01cc3015681a6b7b987aedda58a46",
         "build_date": "20261016",
         "historical_source_sha": "c757d0c0dd01b3c14ca5173cc1d92a98f408feb2",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261016"
         ],
@@ -7206,7 +7213,7 @@
         "metadata_commit_sha": "371c24ac8aa01cc3015681a6b7b987aedda58a46",
         "build_date": "20261016",
         "historical_source_sha": "c757d0c0dd01b3c14ca5173cc1d92a98f408feb2",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261016"
         ],
@@ -7225,7 +7232,7 @@
         "metadata_commit_sha": "9706cf90ee7f26e092f633539f6a39dfcc3787d8",
         "build_date": "20261013",
         "historical_source_sha": "b95e9c42f7a97f19448ec5bb07f50056d1bdc014",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -7244,7 +7251,7 @@
         "metadata_commit_sha": "9706cf90ee7f26e092f633539f6a39dfcc3787d8",
         "build_date": "20261013",
         "historical_source_sha": "b95e9c42f7a97f19448ec5bb07f50056d1bdc014",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -7263,7 +7270,7 @@
         "metadata_commit_sha": "b31632f783e076fea26790ff684897cfb53cb713",
         "build_date": "20261014",
         "historical_source_sha": "8147957cc6a29ffc336dfe180638a9d032279862",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -7282,7 +7289,7 @@
         "metadata_commit_sha": "b31632f783e076fea26790ff684897cfb53cb713",
         "build_date": "20261014",
         "historical_source_sha": "8147957cc6a29ffc336dfe180638a9d032279862",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -7301,7 +7308,7 @@
         "metadata_commit_sha": "e50626b0e9e2715a4bae011b79a0ff58c3ba8bf1",
         "build_date": "20261013",
         "historical_source_sha": "387e00329c25cc4790951d8eb4b9d889e2f245e4",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -7323,7 +7330,7 @@
         "metadata_commit_sha": "e50626b0e9e2715a4bae011b79a0ff58c3ba8bf1",
         "build_date": "20261013",
         "historical_source_sha": "387e00329c25cc4790951d8eb4b9d889e2f245e4",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261013"
         ],
@@ -7345,7 +7352,7 @@
         "metadata_commit_sha": "ba019deb85cee4246fa548264e40e019df133be2",
         "build_date": "20261014",
         "historical_source_sha": "845d83734f0b98b5c06514048528bccd6646a6c5",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -7364,7 +7371,7 @@
         "metadata_commit_sha": "ba019deb85cee4246fa548264e40e019df133be2",
         "build_date": "20261014",
         "historical_source_sha": "845d83734f0b98b5c06514048528bccd6646a6c5",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261014"
         ],
@@ -7383,7 +7390,7 @@
         "metadata_commit_sha": "3cdbba72a7e95c7f5f3fa9c177a7a00872a267be",
         "build_date": "20261017",
         "historical_source_sha": "3a350c6ba6c242d7c258f1d2fd839dd678972caf",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261017"
         ],
@@ -7402,7 +7409,7 @@
         "metadata_commit_sha": "3cdbba72a7e95c7f5f3fa9c177a7a00872a267be",
         "build_date": "20261017",
         "historical_source_sha": "3a350c6ba6c242d7c258f1d2fd839dd678972caf",
-        "current_metadata_ref": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
         "current_metadata_build_dates": [
           "20261017"
         ],
@@ -7413,9 +7420,47 @@
         "visibility_flags": {},
         "visibility_policy": "visible",
         "status": "matches-published-metadata"
+      },
+      {
+        "recipe": "mneextended",
+        "architecture": "aarch64",
+        "catalog_container": "mneextended_arm64",
+        "metadata_commit_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+        "build_date": "20261017",
+        "historical_source_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+        "current_metadata_build_dates": [
+          "20261017"
+        ],
+        "all_app_records_match": true,
+        "catalog_apps": [
+          "mneextended_arm64 1.2.0"
+        ],
+        "visibility_flags": {},
+        "visibility_policy": "visible",
+        "status": "matches-published-metadata"
+      },
+      {
+        "recipe": "mneextended",
+        "architecture": "x86_64",
+        "catalog_container": "mneextended",
+        "metadata_commit_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+        "build_date": "20261017",
+        "historical_source_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+        "current_metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+        "current_metadata_build_dates": [
+          "20261017"
+        ],
+        "all_app_records_match": true,
+        "catalog_apps": [
+          "mneextended 1.2.0"
+        ],
+        "visibility_flags": {},
+        "visibility_policy": "visible",
+        "status": "matches-published-metadata"
       }
     ],
-    "verified_recipe_count": 63,
+    "verified_recipe_count": 64,
     "note": "Pinned current catalog compared with current committed app records and visibility. Older independently verified publication evidence is retained at its original source/date; later rebuild metadata is not attributed to those earlier tests. Scheduled deployment remains separate."
   },
   "verification_only_changes": [
@@ -8201,6 +8246,12 @@
         "catalog-tracks-newer-metadata": 2
       },
       "note": "Intermediate observation summary: pinned upstream catalog/blob and metadata ref retain its inputs. Full intermediate row table was not committed; no claim it exists at an unrelated tracking commit. Source-specific original and later publication proofs remain retained."
+    },
+    {
+      "tracking_commit_sha": "fc4033b65eaf5ad43f839dab52434a89daaddfab",
+      "tracking_path": "upstream/release-metadata-audit.json",
+      "json_field": "catalog_queue_audit",
+      "note": "Previous full catalog evidence retained in immutable git history."
     }
   ],
   "later_update_publications": [
@@ -8318,6 +8369,46 @@
           "sif": "mne_1.13.2_20261017.simg",
           "sif_sha256": "4101c1b00fc4aca1a3b5bdabee235d16d7b9896e7615e8e1d7fc05f6be6bf7d4",
           "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mne_1.13.2_20261017.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+        }
+      ],
+      "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
+    },
+    {
+      "recipe": "mneextended",
+      "version": "1.2.0",
+      "checked_at": "2026-10-17T10:35:11.164630+00:00",
+      "status": "verified-published-metadata",
+      "source_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+      "promotion_run_id": 39007028913,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/mneextended_arm64/1.2.0.json",
+          "source_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+          "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "metadata_commit_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "expected_build_date": "20261017",
+          "trusted_preview_matches": true,
+          "sif": "mneextended_arm64_1.2.0_20261017.simg",
+          "sif_sha256": "fd06eb2c54bb4c254d56d0ca829c3b4324b18983e1d6ac52fd26995c982f5fd3",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mneextended_arm64_1.2.0_20261017.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/mneextended/1.2.0.json",
+          "source_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+          "metadata_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "metadata_commit_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "expected_build_date": "20261017",
+          "trusted_preview_matches": true,
+          "sif": "mneextended_1.2.0_20261017.simg",
+          "sif_sha256": "3d32b026591709aad3acd4a950acf72c75bdf4db38e657bc053aff1bb89cdfe9",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/mneextended_1.2.0_20261017.simg",
           "public_sif_head_status": 200,
           "scope": "Committed metadata equals trusted preview; manifest retains tested source and SIF digest, public object HEAD200. Public image bytes not redownloaded."
         }
