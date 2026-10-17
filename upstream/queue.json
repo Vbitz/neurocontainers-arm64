@@ -31323,7 +31323,7 @@
         }
       },
       "merged_sha": null,
-      "next_action": "A renewed per-recipe build budget is needed for at least one fresh native source and both upstream matrices after fixing x86 FSL version diagnostics and documented ARM timeout/thread-resource handling. Preserve current native62/62 and failed upstream evidence; leave PR3580 unmerged. This is not a fundamental ARM incompatibility claim.",
+      "next_action": "Observe independent upstream run39001037271 at source62f355c77b9b6d062815ba5e30c4adfef566d57e. Current independently revised fulltest explicitly adds Native ARM diagnosis requires review: unconditional exit1 with expected_exit_code0. Both candidate suites must fail this diagnostic review gate; scientific registration is explicitly not repaired/approved. Original expired budget and source history retained; no own retry authorized.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.0",
@@ -31483,6 +31483,12 @@
         ],
         "dispatched_by_this_continuation": false,
         "note": "Independently revised upstream head and actual live native candidate jobs. Original candidate/budget/blocker retained pending final reports and source review. Do not dispatch duplicates or treat historical native proof as this new source. External attempt history must be reconciled before any future retry."
+      },
+      "external_merge_hold": {
+        "checked_at": "2026-10-17T04:18:21.639978+00:00",
+        "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
+        "reason": "Current independently revised fulltest explicitly adds Native ARM diagnosis requires review: unconditional exit1 with expected_exit_code0. Both candidate suites must fail this diagnostic review gate; scientific registration is explicitly not repaired/approved.",
+        "next_action": "Retain actual diagnostic results and prior native62/62 separately. Do not remove/bypass the gate, claim current-source success, merge, or dispatch a duplicate. Await independently reviewed repair and all exact-source scientific/gate results."
       }
     },
     {
