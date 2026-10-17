@@ -6248,7 +6248,7 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T09:43:44.816794+00:00",
+        "checked_at": "2026-10-17T09:53:14.520910+00:00",
         "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "run_id": 39015848600,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
@@ -26940,7 +26940,7 @@
           },
           "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source.",
           "publication_observation": {
-            "checked_at": "2026-10-17T09:43:44.816794+00:00",
+            "checked_at": "2026-10-17T09:53:14.520910+00:00",
             "run_id": 39007028913,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
             "status": "in_progress",
@@ -26972,10 +26972,11 @@
                 ],
                 "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913/job/117321521800",
                 "active_steps": [
-                  "Download candidate bundle without executing it"
+                  "Publish exact tested Docker archive to unique staging tags"
                 ]
               }
-            ]
+            ],
+            "started_observation_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/71#issuecomment-6232504762"
           }
         }
       ]
@@ -45690,8 +45691,8 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T09:43:44.816794+00:00",
-    "top_level_base_commit": "e64b45838e9dde8dc29093ee97e9081fffb5cbfd",
+    "checked_at": "2026-10-17T09:53:14.520910+00:00",
+    "top_level_base_commit": "5f23fdccd1db3c351e93674e1f46328468d952cf",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
     "upstream_fork_main_sha": "976898609eeb2cd4a11a30c3d74c4c82042068e2",
@@ -45714,7 +45715,7 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Observe existing BrainLes9564/run39015848600 two native image builds and MNEExtendedf874/run39007028913 publisher; review exact terminal evidence. Code/MNE/Dicompare later publications verified separately, original historical proofs retained. Six budget questions remain unanswered; no new own build or reset. Full goal incomplete.",
+    "next_action": "Resume exact live BrainLes9564/run39015848600 jobs and MNEExtendedf874/run39007028913 publisher. Inspect first actionable error/raw scientific results for any terminal build, or trusted manifests/previews/current metadata/public SIFs for terminal publication. Six budget answers remain pending; no duplicate passing build or budget/clock reset. Full goal incomplete.",
     "live_external_jobs": [
       {
         "recipe": "brainles-preprocessing",
@@ -45741,12 +45742,12 @@
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735065"
       }
     ],
-    "last_goal_turn_classification": "progress",
-    "progress": "MNE later1b64 exact-source publication verified. Recovered Code updater3657/source84bd native88/88 both architectures, actual editor/Jupyter1287voxels/nestedSIF operations and exact-source successful publication without rebuilding; all126catalog entries/63publishedrecipes now match verified source-specific publication records. Fork976 normalFF/Actionsdisabled. Original own-port/root proofs, budgets and full objective preserved.",
+    "last_goal_turn_classification": "verified-wait",
+    "progress": "Authoritative BrainLes9564 jobs and MNEExtendedf874 publishers confirmed live. ARM/x86 partial log endpoints currently404 while jobs remain active; no compile failure or terminal state inferred. No own dispatch or new terminal scientific/publication outcome. Current126catalog/source-specific publication proofs retained.",
     "active_automatic_promotions": [
       {
         "recipe": "mneextended",
-        "checked_at": "2026-10-17T09:43:44.816794+00:00",
+        "checked_at": "2026-10-17T09:53:14.520910+00:00",
         "run_id": 39007028913,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
         "status": "in_progress",
@@ -45778,10 +45779,11 @@
             ],
             "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913/job/117321521800",
             "active_steps": [
-              "Download candidate bundle without executing it"
+              "Publish exact tested Docker archive to unique staging tags"
             ]
           }
-        ]
+        ],
+        "started_observation_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/71#issuecomment-6232504762"
       }
     ],
     "pending_budget_replies": [
