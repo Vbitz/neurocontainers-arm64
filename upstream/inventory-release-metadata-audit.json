@@ -1836,5 +1836,19 @@
       "problems": [],
       "status": "explicit-arm64-metadata-present"
     }
-  ]
+  ],
+  "app_template_scan": {
+    "checked_at": "2026-10-17T05:46:40.987940+00:00",
+    "ref": "9981d1d79e63cd49670f6f0c44bd9a6583b7cea7",
+    "metadata_files_checked": 183,
+    "unresolved_template_values": [],
+    "scope": "Static scan of all current-version x86/ARM app records, including GUI commands, app names and nested Apptainer arguments, within the112 in-scope recipes. No GUI/runtime execution or publication inferred."
+  },
+  "unchanged_inventory_tree_observation": {
+    "checked_at": "2026-10-17T05:46:40.987940+00:00",
+    "audited_ref": "c30846086dccdda003a13244ecf6116bc9121e6f",
+    "later_ref": "9981d1d79e63cd49670f6f0c44bd9a6583b7cea7",
+    "changed_inventory_recipe_release_or_builder_paths": [],
+    "note": "Later main changes only the outside-inventory Cryosparc recipe. Existing112-recipe metadata/schema findings remain source-bound at the audited ref; no repeat container tests or publication inferred."
+  }
 }
