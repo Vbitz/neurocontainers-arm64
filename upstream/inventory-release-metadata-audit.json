@@ -1,12 +1,12 @@
 {
-  "checked_at": "2026-10-17T08:19:25.455937+00:00",
-  "upstream_ref": "371c24ac8aa01cc3015681a6b7b987aedda58a46",
+  "checked_at": "2026-10-17T08:39:35.178066+00:00",
+  "upstream_ref": "16bcfd77bc5334fa3b794eeb8a6617563e759e46",
   "scope": "112 user-requested in-scope recipes;17 OpenRecon exclusions omitted.",
   "policy": "Read-only source-tree audit. Metadata presence/schema does not prove current builds, public artifacts or deployment; exact-candidate publication proofs remain in release-metadata-audit.json. No generated JSON changes or promotion dispatch.",
   "counts": {
     "pending-arm64-port": 9,
-    "explicit-arm64-metadata-present": 80,
-    "no-current-version-metadata-at-audited-ref": 23
+    "explicit-arm64-metadata-present": 81,
+    "no-current-version-metadata-at-audited-ref": 22
   },
   "containers": [
     {
@@ -483,7 +483,16 @@
         "aarch64"
       ],
       "path": "releases/dicompare_arm64/0.15.4.json",
-      "status": "no-current-version-metadata-at-audited-ref"
+      "architecture": "aarch64",
+      "variant": "arm64",
+      "source_recipe": "dicompare",
+      "apps": {
+        "dicompare_arm64 0.15.4": "20261017"
+      },
+      "incorrect_identity_fields": {},
+      "missing_identity_fields": [],
+      "problems": [],
+      "status": "explicit-arm64-metadata-present"
     },
     {
       "recipe": "dicomtools",
