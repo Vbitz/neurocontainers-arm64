@@ -116,6 +116,18 @@
           "https://github.com/freesurfer/freesurfer/blob/v7.4.1/README.md"
         ],
         "historical_evidence_limit": "Previous114/114 runs verified AFNI tests but never executed or architecture-checked bundled FreeSurfer mris_convert. Retain their actual AFNI outcomes without promoting complete dependency support."
+      },
+      "official_prerequisite_release_recheck": {
+        "checked_at": "2026-10-17T06:02:50.413796+00:00",
+        "outcome": "prerequisite-unchanged",
+        "finding": "Official FreeSurfer8.2.0/current-development download tables still list Linuxx86/AMD64 and macOSARM assets, not a compatible nativeLinuxARM7.4.1 package. No documented supported portable prerequisite build identified in this review. This is a FreeSurfer prerequisite gap, not proof that AFNI source cannot compile on ARM.",
+        "sources": [
+          "https://surfer.nmr.mgh.harvard.edu/fswiki/rel7downloads",
+          "https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/dev/"
+        ],
+        "report_path": "upstream/blocker-release-recheck.json",
+        "attempts_unchanged": 0,
+        "original_deadline_unchanged": "2026-10-13T14:11:06.877059+00:00"
       }
     },
     {
@@ -5612,12 +5624,12 @@
       "candidate_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
       "started_at": "2026-10-13T15:53:00+00:00",
       "deadline": "2026-10-14T03:53:00+00:00",
-      "attempts": 18,
+      "attempts": 20,
       "run_id": 38493993950,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3610",
       "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Observe independent1adb/run39006288392 libpython preflight correction; previousc496 evidence archived.18/6actualattempts/originaldeadline remain, no own retry. Source change addresses missing staticarchive path by selecting sharedlibpython and retainingassertion; build/import/scientific functionality still unproven. All explicit diagnostic/nonmergeeligible gates unchanged; do not remove them or port the runtime.",
+      "next_action": "Observe independent9564/run39015848600 (20actual builds), original expired window/cap preserved. Prior1adb both fail on invalid SynthStrip ZIP during image construction; declared checksum-pinned asset correction now independently building. No finalSIF/runtime result for newhead; preserve diagnostic/nonmergeeligible hold and do not perform runtime ports or own retries.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.13",
@@ -5642,8 +5654,8 @@
         "https://download.pytorch.org/whl/cpu/torch/",
         "https://pypi.org/pypi/brainles-hd-bet/0.0.11/json"
       ],
-      "arm64_attempts": 10,
-      "x86_64_attempts": 8,
+      "arm64_attempts": 11,
+      "x86_64_attempts": 9,
       "previous_infrastructure_blockers": [
         {
           "recorded_at": "2026-10-13T16:23:06.608668+00:00",
@@ -6236,45 +6248,49 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T05:46:40.987940+00:00",
-        "source_sha": "1adb52a00862033fe0ec7642e2179326ce1700b4",
-        "run_id": 39006288392,
-        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006288392",
+        "checked_at": "2026-10-17T08:19:08.820814+00:00",
+        "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
+        "run_id": 39015848600,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
         "status": "in_progress",
         "conclusion": null,
         "jobs": [
           {
-            "id": 117319413259,
-            "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
-            "status": "in_progress",
-            "conclusion": null,
-            "labels": [
-              "blacksmith-8vcpu-ubuntu-2404"
-            ],
             "active_steps": [
               "Stage and build candidate"
-            ]
-          },
-          {
-            "id": 117319413295,
-            "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
-            "status": "in_progress",
+            ],
             "conclusion": null,
+            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735063",
+            "id": 117347735063,
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404-arm"
             ],
+            "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+            "started_at": "2026-10-17T08:02:35Z",
+            "status": "in_progress"
+          },
+          {
             "active_steps": [
               "Stage and build candidate"
-            ]
+            ],
+            "conclusion": null,
+            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735065",
+            "id": 117347735065,
+            "labels": [
+              "blacksmith-8vcpu-ubuntu-2404"
+            ],
+            "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+            "started_at": "2026-10-17T08:02:31Z",
+            "status": "in_progress"
           }
         ],
+        "hypothesis": "Declare SynthStrip record16535634/version1.0.0 weights with SHA256 and get_file, install the checked archive with exact member assertion; separately parse CMakeCache line by line. This addresses the observed unvalidated ZIP download and cache-key parsing; no current scientific success established.",
         "dispatched_by_this_continuation": false,
-        "hypothesis": "Conda LDLIBRARY points to an omitted static archive. Select the shipped shared library using LDVERSION/SHLIB_SUFFIX and retain the existence assertion with path diagnostics. This addresses the observed preflight assertion, not scientific runtime or merge eligibility.",
-        "note": "Only the ARM diagnostic build script changed within this recipe. All scientific tests and DIAGNOSTIC_BLOCKED/merge_eligible=false gates unchanged. Prior source-specific results archived, not relabeled as this new source; preserve original elapsed/build limits."
+        "note": "All scientific and diagnostic nonmergeeligible gates remain; no own dispatch or budget reset."
       },
       "external_merge_hold": {
-        "checked_at": "2026-10-17T05:35:16.854497+00:00",
-        "source_sha": "1adb52a00862033fe0ec7642e2179326ce1700b4",
+        "checked_at": "2026-10-17T08:19:08.820814+00:00",
+        "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "reason": "Current upstream CBLAS/Torch feasibility experiment explicitly declares DIAGNOSTIC_BLOCKED/merge_eligible=false and intentionally fails the ARM SynthStrip diagnostic gate even if inference completes. Build/import feasibility is not a verified releasable scientific container.",
         "next_action": "Observe existing healthy jobs and retain evidence. Do not remove the gate, port the runtime, claim full scientific success, or merge this diagnostic experiment."
       },
@@ -6299,13 +6315,23 @@
             "deadline": "2026-10-14T03:53:00+00:00"
           },
           "reason": "Two new independent upstream candidate jobs at1adb, not dispatched by this continuation. Original budget/clock not renewed."
+        },
+        {
+          "checked_at": "2026-10-17T08:19:08.820814+00:00",
+          "previous": {
+            "attempts": 18,
+            "arm64_attempts": 10,
+            "x86_64_attempts": 8,
+            "deadline": "2026-10-14T03:53:00+00:00"
+          },
+          "reason": "Two independent upstream candidate jobs, not dispatched here; old window and limits retained."
         }
       ],
       "external_attempt_audit": {
         "recipe": "brainles-preprocessing",
         "upstream_candidate_attempts_by_architecture": {
-          "aarch64": 8,
-          "x86_64": 8
+          "aarch64": 9,
+          "x86_64": 9
         },
         "runs": [
           {
@@ -6565,46 +6591,82 @@
             "run_id": 39006288392,
             "attempt": 1,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006288392",
-            "run_status": "in_progress",
-            "run_conclusion": null,
+            "run_status": "completed",
+            "run_conclusion": "failure",
             "jobs": [
               {
                 "job_id": 117319413259,
                 "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
                 "architecture": "x86_64",
                 "started_at": "2026-10-17T05:27:25Z",
-                "status": "in_progress",
-                "conclusion": null,
+                "status": "completed",
+                "conclusion": "failure",
                 "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006288392/job/117319413259",
                 "labels": [
                   "blacksmith-8vcpu-ubuntu-2404"
                 ],
-                "active_steps": [
-                  "Stage and build candidate"
-                ]
+                "active_steps": []
               },
               {
                 "job_id": 117319413295,
                 "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
                 "architecture": "aarch64",
                 "started_at": "2026-10-17T05:27:29Z",
-                "status": "in_progress",
-                "conclusion": null,
+                "status": "completed",
+                "conclusion": "failure",
                 "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006288392/job/117319413295",
                 "labels": [
                   "blacksmith-8vcpu-ubuntu-2404-arm"
                 ],
+                "active_steps": []
+              }
+            ]
+          },
+          {
+            "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
+            "run_id": 39015848600,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
+            "run_status": "in_progress",
+            "run_conclusion": null,
+            "jobs": [
+              {
+                "job_id": 117347735063,
+                "architecture": "aarch64",
                 "active_steps": [
                   "Stage and build candidate"
-                ]
+                ],
+                "conclusion": null,
+                "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735063",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+                "started_at": "2026-10-17T08:02:35Z",
+                "status": "in_progress"
+              },
+              {
+                "job_id": 117347735065,
+                "architecture": "x86_64",
+                "active_steps": [
+                  "Stage and build candidate"
+                ],
+                "conclusion": null,
+                "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735065",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+                "started_at": "2026-10-17T08:02:31Z",
+                "status": "in_progress"
               }
             ]
           }
         ],
         "policy": "Count every non-skipped candidate job reservation, retaining cancelled/unstarted attempts. Carried successes with identical run/name/start are not rebuilt attempts. These independent external jobs do not expand local authorization.",
-        "checked_at": "2026-10-17T05:35:16.854497+00:00",
+        "checked_at": "2026-10-17T08:19:08.820814+00:00",
         "root_native_attempts": 2,
-        "total_recorded_attempts": 18,
+        "total_recorded_attempts": 20,
         "local_max_build_attempts": 6,
         "original_deadline": "2026-10-14T03:53:00+00:00",
         "note": "Original counters/clocks retained in history. Independent external work is observed, not authorization to dispatch or reset budgets. No newer root workflow runs exist after Oct15; no duplicated green native builds."
@@ -6653,6 +6715,30 @@
             }
           ],
           "tracking_commit_sha": "06a7d2593c0114ae8cd73b080fbc7e2f4e8fa41d"
+        },
+        {
+          "source_sha": "1adb52a00862033fe0ec7642e2179326ce1700b4",
+          "run_id": 39006288392,
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006288392",
+          "status": "completed",
+          "conclusion": "failure",
+          "first_actionable_error": "Both architectures fail in bake_atlases.py when opening downloaded synthstrip_weights.zip: zipfile.BadZipFile: File is not a zip file. No final candidate SIF/fulltest proof. Response contents/cause not established; this does not prove a native compiler or scientific-runtime failure.",
+          "jobs": [
+            {
+              "id": 117319413259,
+              "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+              "conclusion": "failure",
+              "completed_at": "2026-10-17T06:55:05Z",
+              "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006288392/job/117319413259"
+            },
+            {
+              "id": 117319413295,
+              "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+              "conclusion": "failure",
+              "completed_at": "2026-10-17T07:20:42Z",
+              "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006288392/job/117319413295"
+            }
+          ]
         }
       ]
     },
@@ -7024,7 +7110,36 @@
         "outer_wrapper": "Historical native Apptainer1.4.4/BraTS0.1.8 wrapper21/21 proof retained. This is not a Python/Go ARM compile failure.",
         "revisit_condition": "A native Linux ARM64 CPU image for one same registered algorithm, or its documented portable upstream source build and matching model assets, followed by a real MRI inference test."
       },
-      "preflight_elapsed_seconds": 1480.060641
+      "preflight_elapsed_seconds": 1480.060641,
+      "official_prerequisite_release_recheck": {
+        "checked_at": "2026-10-17T06:02:50.413796+00:00",
+        "outcome": "prerequisite-unchanged",
+        "finding": "Latest public wrapper remains0.1.13. All16 registered CPU-compatible model tags are metadata-readable, have identical digests to the Oct13 audit, and still publish onlylinux/amd64. Wrapper portability/help tests do not establish nativeARM trained-model inference.",
+        "sources": [
+          "https://hub.docker.com/v2/repositories/brainles/brats25_gli_ecnu/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats25_gli_jinlw/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats24_adult_glioma_mist/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats25_ssa_spark_neuro/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats24_africa_cuhk_rpai/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats23_africa_blackbean/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats24_inpainting_ying_weng/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats23_inpainting_ying_weng/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats23_inpainting_medsegctrl/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats23_meningioma_blackbean/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats25_menrt_medimg_sk/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats25_menrt_neurotech/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats24_meningioma_faking_it/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats25_met_weskrikorian/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats23_met_blackbean/tags/latest",
+          "https://hub.docker.com/v2/repositories/brainles/brats25_missing_mri_usd-2025-chato-sereda/tags/latest"
+        ],
+        "latest_version": "0.1.13",
+        "registered_cpu_models": 16,
+        "all_digest_platform_records_unchanged": true,
+        "report_path": "upstream/blocker-release-recheck.json",
+        "attempts_unchanged": 0,
+        "original_deadline_unchanged": "2026-10-14T10:14:43.050109+00:00"
+      }
     },
     {
       "recipe": "brkraw",
@@ -8009,7 +8124,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-17T05:26:18.652388+00:00",
+        "checked_at": "2026-10-17T08:17:59.949707+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -8034,7 +8149,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-17T05:26:19.400743+00:00",
+        "metadata_checked_at": "2026-10-17T08:18:00.716707+00:00",
         "publication_blocker": {
           "classification": "blocked-prerequisite-publication",
           "checked_at": "2026-10-13T00:46:24.154138+00:00",
@@ -11582,7 +11697,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-17T05:26:21.038281+00:00",
+        "checked_at": "2026-10-17T08:18:02.451220+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -11607,7 +11722,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-17T05:26:21.791444+00:00",
+        "metadata_checked_at": "2026-10-17T08:18:03.201626+00:00",
         "failure_review": {
           "checked_at": "2026-10-17T04:14:01.434163+00:00",
           "failed_job_id": 116283031424,
@@ -13238,6 +13353,20 @@
         "note": "Current released EMUSES v1.3.0 builds natively on ARM64, converts to SIF and passes deploy plus original help/import tests, but strict runtime proof fails:3/5 aggregate,2/4 functional. pip check reports missing pytest/pytest-asyncio required by released setup.py (its embedded distribution version is0.7.0, distinct from release tag1.3.0). The actual nested UMAP/HDBSCAN pipeline fits the embedding and initial clusterer, then all-fixed documented parameter configuration fails when inner_optimize_hdbscan falls back to raw {value:...} dictionaries and passes them to final HDBSCAN instead of integers: ValueError: Min samples and min cluster size must be integers! Released clustering_utils.py lines223-256 confirm the cause. Other released helper API errors were also observed statically. Latest official release remainsv1.3.0; no directly applicable released fix found. This is an upstream application runtime defect, not evidence of an ARM64 compiler limitation. Adding packaging dependencies alone cannot repair scientific pipeline execution. Preserve the failing capability check and experimental branch; no application patch, substituted implementation, parameter-mode workaround or ignored error. Revisit with an official released correction for fixed-parameter final-model construction and complete dependency metadata, then retest actual outputs/model persistence.",
         "classification": "upstream-application-runtime-not-arm-compiler",
         "reviewed_at": "2026-10-13T02:35:35.739087+00:00"
+      },
+      "official_prerequisite_release_recheck": {
+        "checked_at": "2026-10-17T06:02:50.413796+00:00",
+        "outcome": "no-new-released-fix-identified",
+        "finding": "Latest official GitHubrelease remainsv1.3.0 (2025-08-07), the failed candidate release. Latermain exists but no new released correction clearing the observed fixed-parameter HDBSCAN/Optuna scientific workflow failure was identified. PublicPyPIemuses returned404; no conclusion about source availability or architecture follows from that lookup.",
+        "sources": [
+          "https://github.com/chrisfoulon/emuses/releases/tag/v1.3.0",
+          "https://github.com/chrisfoulon/emuses/commit/2e2013e1cda26979588e87e8bff078762e1bb758"
+        ],
+        "latest_release": "v1.3.0",
+        "latest_source_head": "2e2013e1cda26979588e87e8bff078762e1bb758",
+        "report_path": "upstream/blocker-release-recheck.json",
+        "attempts_unchanged": 1,
+        "original_deadline_unchanged": "2026-10-13T14:14:00+00:00"
       }
     },
     {
@@ -18143,7 +18272,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-17T05:26:23.334893+00:00",
+        "checked_at": "2026-10-17T08:18:04.656224+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -18168,7 +18297,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-17T05:26:24.113423+00:00",
+        "metadata_checked_at": "2026-10-17T08:18:05.452396+00:00",
         "failure_review": {
           "checked_at": "2026-10-17T04:14:01.434163+00:00",
           "failed_job_id": 116303849818,
@@ -18284,7 +18413,7 @@
         }
       },
       "merged_sha": "1209f28fd0d8056bc41607be0311a73b285e06fb",
-      "next_action": "Independent merge reconciled with final exact-head native78/78 and both upstream78/78. Actual original/new root source proofs and merge timestamps retained; no test-only publication or more builds required.",
+      "next_action": "Own PR merged and model-fitting operation verified, but Turbo colormap remains explicitly unverified: existing fallback masks scipy interpolation error. Await released upstream correction containing9b7f685 and explicit renewed build allowance, then remove masking and assert actual finite colormap output on both architectures; no claim that reported78/78 proves this capability.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.0",
@@ -18465,7 +18594,17 @@
         "run_id": 38283250023,
         "upstream_fix_commit": "9b7f685100366fb79c222c37661924ea25d78743",
         "upstream_fix_status": "main fix uses numpy interpolation; highest published tag remains1.2 at888e6ced650306374fc9941345f269182dd51682",
-        "next_action": "Released upstream fix containing9b7f685 plus explicit renewed build allowance, then remove masked failure and verify actual finite colormap output on both architectures. No private library patch or seventh build."
+        "next_action": "Released upstream fix containing9b7f685 plus explicit renewed build allowance, then remove masked failure and verify actual finite colormap output on both architectures. No private library patch or seventh build.",
+        "release_recheck": {
+          "checked_at": "2026-10-17T08:20:20.363526+00:00",
+          "latest_release_tag": "1.2",
+          "published_at": "2023-10-31T17:41:52Z",
+          "release_url": "https://github.com/cvnlab/GLMsingle/releases/tag/1.2",
+          "tag_sha": "888e6ced650306374fc9941345f269182dd51682",
+          "upstream_fix_sha": "9b7f685100366fb79c222c37661924ea25d78743",
+          "upstream_fix_url": "https://github.com/cvnlab/GLMsingle/commit/9b7f685100366fb79c222c37661924ea25d78743",
+          "outcome": "Latest published release remains1.2; known interpolation correction is newer untagged upstream code. No newly released fix identified; no build or budget reset."
+        }
       }
     },
     {
@@ -24238,7 +24377,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-17T05:26:25.215079+00:00",
+        "checked_at": "2026-10-17T08:18:06.613593+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -24254,7 +24393,7 @@
           }
         ],
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
-        "metadata_checked_at": "2026-10-17T05:26:25.968408+00:00",
+        "metadata_checked_at": "2026-10-17T08:18:07.453512+00:00",
         "resolution_review": {
           "checked_at": "2026-10-14T06:22:54.898590+00:00",
           "actual_resolver_notice": "No merged PR is associated with 9df30cc185fa2af32ee99a364492954bf2798a61; nothing to promote",
@@ -24582,7 +24721,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-17T05:26:27.309279+00:00",
+        "checked_at": "2026-10-17T08:18:08.525175+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "success",
         "publish_jobs": [
@@ -24597,7 +24736,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-17T05:26:28.097111+00:00",
+        "metadata_checked_at": "2026-10-17T08:18:09.289796+00:00",
         "note": "Automatic workflow succeeded without publishing; no current-candidate release metadata or registry success inferred. Review its resolver evidence separately.",
         "resolution_evidence": {
           "automatic_run_id": 38448486794,
@@ -25313,7 +25452,241 @@
           }
         ],
         "metadata_checked_at": "2026-10-13T00:57:57.398877+00:00"
-      }
+      },
+      "later_upstream_updates": [
+        {
+          "checked_at": "2026-10-17T08:18:33.529333+00:00",
+          "version": "1.13.2",
+          "source_sha": "1b64eedba421ea318435f220db170a5192e710d6",
+          "pr_number": 3682,
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3682",
+          "merge_sha": "ebb3d369723a3bd36580c93a2e13c04680715f79",
+          "merged_at": "2026-10-17T05:31:49Z",
+          "candidate_run_id": 38999221876,
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38999221876",
+          "reports": {
+            "aarch64": {
+              "schema_version": 3,
+              "recipe": "mne",
+              "container": "mne_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
+              "version": "1.13.2",
+              "build_date": "20261017",
+              "docker_archive": "mne_arm64_1.13.2_20261017.docker.tar",
+              "sif": "mne_arm64_1.13.2_20261017.simg",
+              "candidate_tag": "nd-candidate-mne_arm64:1b64eedba421",
+              "launcher": "code",
+              "pr_number": 3682,
+              "head_sha": "1b64eedba421ea318435f220db170a5192e710d6",
+              "tests": {
+                "total": 8,
+                "passed": 8,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 7,
+                "fulltest_passed": 7,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "MNE conda environment exists",
+                  "MNE version check",
+                  "MNE core dependencies import",
+                  "MNE creates synthetic raw data",
+                  "VS Code wrapper resolves",
+                  "VS Code version and bundled extensions",
+                  "MNE Qt browser and 3D rendering"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "70 MB",
+                    "path": "/opt/vscode-extensions/ms-python.vscode-python-envs-1.40.0-linux-arm64/python-env-tools/bin/pet"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "70 MB",
+                    "path": "/opt/vscode-extensions/ms-python.python-2026.10.0-linux-arm64/python-env-tools/bin/pet"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "18 MB",
+                    "path": "/opt/vscode-extensions/ms-python.vscode-pylance-2026.4.1/dist/copilot-vendor.bundle.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "14 MB",
+                    "path": "/opt/vscode-extensions/ms-toolsai.jupyter-renderers-1.3.0/out/client_renderer/vega.bundle.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "12 MB",
+                    "path": "/opt/vscode-extensions/ms-python.vscode-pylance-2026.4.1/dist/browser.async.bundle.js"
+                  }
+                ],
+                "efficiency_percent": 95.8752,
+                "wasted_bytes": 549471903,
+                "wasted_bytes_display": "550 MB",
+                "user_wasted_percent": 8.2011
+              }
+            },
+            "x86_64": {
+              "schema_version": 3,
+              "recipe": "mne",
+              "container": "mne",
+              "variant": "",
+              "architecture": "x86_64",
+              "version": "1.13.2",
+              "build_date": "20261017",
+              "docker_archive": "mne_1.13.2_20261017.docker.tar",
+              "sif": "mne_1.13.2_20261017.simg",
+              "candidate_tag": "nd-candidate-mne:1b64eedba421",
+              "launcher": "code",
+              "pr_number": 3682,
+              "head_sha": "1b64eedba421ea318435f220db170a5192e710d6",
+              "tests": {
+                "total": 8,
+                "passed": 8,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 7,
+                "fulltest_passed": 7,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "MNE conda environment exists",
+                  "MNE version check",
+                  "MNE core dependencies import",
+                  "MNE creates synthetic raw data",
+                  "VS Code wrapper resolves",
+                  "VS Code version and bundled extensions",
+                  "MNE Qt browser and 3D rendering"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "72 MB",
+                    "path": "/opt/vscode-extensions/ms-python.python-2026.10.0-linux-x64/python-env-tools/bin/pet"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "72 MB",
+                    "path": "/opt/vscode-extensions/ms-python.vscode-python-envs-1.40.0-linux-x64/python-env-tools/bin/pet"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "18 MB",
+                    "path": "/opt/vscode-extensions/ms-python.vscode-pylance-2026.4.1/dist/copilot-vendor.bundle.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "14 MB",
+                    "path": "/opt/vscode-extensions/ms-toolsai.jupyter-renderers-1.3.0/out/client_renderer/vega.bundle.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "12 MB",
+                    "path": "/opt/vscode-extensions/ms-python.vscode-pylance-2026.4.1/dist/browser.async.bundle.js"
+                  }
+                ],
+                "efficiency_percent": 95.7088,
+                "wasted_bytes": 603527205,
+                "wasted_bytes_display": "604 MB",
+                "user_wasted_percent": 8.5483
+              }
+            }
+          },
+          "raw_scientific_review": {
+            "aarch64": {
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38999221876/job/117298443563",
+              "labels": [
+                "blacksmith-8vcpu-ubuntu-2404-arm"
+              ],
+              "gates": {
+                "Stage and build candidate": "success",
+                "Create immutable candidate files": "success",
+                "Run deploy and fulltest checks": "success",
+                "Run Dive policy check": "success",
+                "Generate manifest and release preview": "success",
+                "Require candidate tests to pass": "success"
+              },
+              "actual_functional_commands": 7,
+              "all_functional_exits": 0,
+              "deploy_counts": {
+                "total": 1,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0
+              },
+              "scientific_cases": [
+                {
+                  "name": "MNE creates synthetic raw data",
+                  "duration_seconds": 2.909548759460449,
+                  "stdout": "Creating RawArray with float64 data, n_channels=3, n_times=1000\n    Range : 32 ... 1031 =      0.125 ...     4.027 secs\nReady.\nWriting /home/runner/_work/neurocontainers/neurocontainers/candidate/mne_arm64/test-output/fulltest-run-sph09eoi/work/test_output/mne-fif-pk3vuu0o/fixture_raw.fif\nClosing /home/runner/_work/neurocontainers/neurocontainers/candidate/mne_arm64/test-output/fulltest-run-sph09eoi/work/test_output/mne-fif-pk3vuu0o/fixture_raw.fif\n[done]\nOpening raw data file /home/runner/_work/neurocontainers/neurocontainers/candidate/mne_arm64/test-output/fulltest-run-sph09eoi/work/test_output/mne-fif-pk3vuu0o/fixture_raw.fif...\nIsotrak not found\n    Range : 32 ... 1031 =      0.125 ...     4.027 secs\nReady.\nReading 0 ... 999  =      0.000 ...     3.902 secs...\nMNE exact FIF signal and metadata roundtrip verified: 3 channels\n"
+                },
+                {
+                  "name": "MNE Qt browser and 3D rendering",
+                  "duration_seconds": 10.212024211883545,
+                  "stdout": "Using qt as 2D backend.\nCreating RawArray with float64 data, n_channels=3, n_times=256\n    Range : 0 ... 255 =      0.000 ...     0.996 secs\nReady.\n/opt/miniconda-latest/envs/mne-1.13.2/lib/python3.13/site-packages/mne_qt_browser/_utils.py:36: RuntimeWarning: libpyside: Failed to disconnect (None) from signal \"triggered()\".\n  sig.disconnect()\n/opt/miniconda-latest/envs/mne-1.13.2/lib/python3.13/site-packages/mne_qt_browser/_utils.py:36: RuntimeWarning: libpyside: Failed to disconnect (None) from signal \"triggered()\".\n  sig.disconnect()\n/opt/miniconda-latest/envs/mne-1.13.2/lib/python3.13/site-packages/mne_qt_browser/_utils.py:36: RuntimeWarning: libpyside: Failed to disconnect (None) from signal \"triggered()\".\n  sig.disconnect()\n/opt/miniconda-latest/envs/mne-1.13.2/lib/python3.13/site-packages/mne_qt_browser/_utils.py:36: RuntimeWarning: libpyside: Failed to disconnect (None) from signal \"triggered()\".\n  sig.disconnect()\n/opt/miniconda-latest/envs/mne-1.13.2/lib/python3.13/site-packages/mne_qt_browser/_utils.py:36: RuntimeWarning: libpyside: Failed to disconnect (None) from signal \"triggered()\".\n  sig.disconnect()\nChannels marked as bad:\nnone\nAttempting to create new mne-python configuration file:\n/tmp/tmp00xz6sdl/.mne/mne-python.json\nCould not read the /tmp/tmp00xz6sdl/.mne/mne-python.json json file during the writing. Assuming it is empty. Got: Expecting value: line 1 column 1 (char 0)\nUsing pyvistaqt 3d backend.\nMNE Qt browser and native 3D rendering verified\n"
+                }
+              ],
+              "raw_test_results_sha256": "b7415512b7eddc617e8e6f44955416600260bbd4f62b3615c535b0a810b68301",
+              "scope": "Exact FIF samples/times and channel metadata round trip; visible Qt browser and finite nonzero 128x128 native PyVistaQt screenshot with PNG signature. Nonfatal Qt disconnect/config warnings occur. Synthetic operation and interface checks, not clinical validation or proof for another commit."
+            },
+            "x86_64": {
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38999221876/job/117298443558",
+              "labels": [
+                "neurodesk-syd-arcrunner-neurocontainers"
+              ],
+              "gates": {
+                "Stage and build candidate": "success",
+                "Create immutable candidate files": "success",
+                "Run deploy and fulltest checks": "success",
+                "Run Dive policy check": "success",
+                "Generate manifest and release preview": "success",
+                "Require candidate tests to pass": "success"
+              },
+              "actual_functional_commands": 7,
+              "all_functional_exits": 0,
+              "deploy_counts": {
+                "total": 1,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0
+              },
+              "scientific_cases": [
+                {
+                  "name": "MNE creates synthetic raw data",
+                  "duration_seconds": 2.646411657333374,
+                  "stdout": "Creating RawArray with float64 data, n_channels=3, n_times=1000\n    Range : 32 ... 1031 =      0.125 ...     4.027 secs\nReady.\nWriting /home/runner/_work/neurocontainers/neurocontainers/candidate/mne/test-output/fulltest-run-a468i9ab/work/test_output/mne-fif-975op7bs/fixture_raw.fif\nClosing /home/runner/_work/neurocontainers/neurocontainers/candidate/mne/test-output/fulltest-run-a468i9ab/work/test_output/mne-fif-975op7bs/fixture_raw.fif\n[done]\nOpening raw data file /home/runner/_work/neurocontainers/neurocontainers/candidate/mne/test-output/fulltest-run-a468i9ab/work/test_output/mne-fif-975op7bs/fixture_raw.fif...\nIsotrak not found\n    Range : 32 ... 1031 =      0.125 ...     4.027 secs\nReady.\nReading 0 ... 999  =      0.000 ...     3.902 secs...\nMNE exact FIF signal and metadata roundtrip verified: 3 channels\n"
+                },
+                {
+                  "name": "MNE Qt browser and 3D rendering",
+                  "duration_seconds": 8.506806373596191,
+                  "stdout": "Using qt as 2D backend.\nCreating RawArray with float64 data, n_channels=3, n_times=256\n    Range : 0 ... 255 =      0.000 ...     0.996 secs\nReady.\n/opt/miniconda-latest/envs/mne-1.13.2/lib/python3.13/site-packages/mne_qt_browser/_utils.py:36: RuntimeWarning: libpyside: Failed to disconnect (None) from signal \"triggered()\".\n  sig.disconnect()\n/opt/miniconda-latest/envs/mne-1.13.2/lib/python3.13/site-packages/mne_qt_browser/_utils.py:36: RuntimeWarning: libpyside: Failed to disconnect (None) from signal \"triggered()\".\n  sig.disconnect()\n/opt/miniconda-latest/envs/mne-1.13.2/lib/python3.13/site-packages/mne_qt_browser/_utils.py:36: RuntimeWarning: libpyside: Failed to disconnect (None) from signal \"triggered()\".\n  sig.disconnect()\n/opt/miniconda-latest/envs/mne-1.13.2/lib/python3.13/site-packages/mne_qt_browser/_utils.py:36: RuntimeWarning: libpyside: Failed to disconnect (None) from signal \"triggered()\".\n  sig.disconnect()\n/opt/miniconda-latest/envs/mne-1.13.2/lib/python3.13/site-packages/mne_qt_browser/_utils.py:36: RuntimeWarning: libpyside: Failed to disconnect (None) from signal \"triggered()\".\n  sig.disconnect()\nChannels marked as bad:\nnone\nAttempting to create new mne-python configuration file:\n/tmp/tmpxm3mhdot/.mne/mne-python.json\nCould not read the /tmp/tmpxm3mhdot/.mne/mne-python.json json file during the writing. Assuming it is empty. Got: Expecting value: line 1 column 1 (char 0)\nUsing pyvistaqt 3d backend.\nMNE Qt browser and native 3D rendering verified\n"
+                }
+              ],
+              "raw_test_results_sha256": "9d0abd81cea814729ca2798690140ab3bb70b216f54fce24ea5f05d547732839",
+              "scope": "Exact FIF samples/times and channel metadata round trip; visible Qt browser and finite nonzero 128x128 native PyVistaQt screenshot with PNG signature. Nonfatal Qt disconnect/config warnings occur. Synthetic operation and interface checks, not clinical validation or proof for another commit."
+            }
+          },
+          "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source."
+        }
+      ]
     },
     {
       "recipe": "mneextended",
@@ -25663,7 +26036,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-17T05:26:29.645357+00:00",
+        "checked_at": "2026-10-17T08:18:10.971342+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -25688,7 +26061,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-17T05:26:30.540418+00:00",
+        "metadata_checked_at": "2026-10-17T08:18:11.735843+00:00",
         "failure_review": {
           "classification": "blocked-infrastructure",
           "first_actionable_error": "ARM publication shell: error reading input file: Input/output error; runner subsequently cannot read action manifests or write environment/output state files.",
@@ -25698,7 +26071,275 @@
           "metadata_finalization": "skipped; ARM current metadata absent and x86 current metadata not advanced",
           "revisit_condition": "Publisher runner filesystem repaired and existing trusted publication recovered by its owner; do not rebuild passing images, manually promote or edit release JSONs."
         }
-      }
+      },
+      "later_upstream_updates": [
+        {
+          "checked_at": "2026-10-17T08:18:33.529333+00:00",
+          "version": "1.2.0",
+          "source_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+          "pr_number": 3683,
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3683",
+          "merge_sha": "fa0c4b0379ab36769647a99ac8a774668e1b8b7f",
+          "merged_at": "2026-10-17T05:38:55Z",
+          "candidate_run_id": 38999227593,
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38999227593",
+          "reports": {
+            "aarch64": {
+              "schema_version": 3,
+              "recipe": "mneextended",
+              "container": "mneextended_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
+              "version": "1.2.0",
+              "build_date": "20261017",
+              "docker_archive": "mneextended_arm64_1.2.0_20261017.docker.tar",
+              "sif": "mneextended_arm64_1.2.0_20261017.simg",
+              "candidate_tag": "nd-candidate-mneextended_arm64:f874d12f605d",
+              "launcher": "code",
+              "pr_number": 3683,
+              "head_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+              "tests": {
+                "total": 116,
+                "passed": 116,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 115,
+                "fulltest_passed": 115,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "Python imports mne",
+                  "Python locates mne",
+                  "Python imports jupyter",
+                  "Python locates jupyter",
+                  "Python imports mne_bids",
+                  "Python locates mne_bids",
+                  "Python imports mnelab",
+                  "Python locates mnelab",
+                  "Python imports nb_conda_kernels",
+                  "Python locates nb_conda_kernels",
+                  "Python imports tables",
+                  "Python locates tables",
+                  "Python imports h5py",
+                  "Python locates h5py",
+                  "Python imports h5io",
+                  "Python locates h5io",
+                  "Python imports pymatreader",
+                  "Python locates pymatreader",
+                  "Python imports seaborn"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "70 MB",
+                    "path": "/opt/vscode-extensions/ms-python.vscode-python-envs-1.40.0-linux-arm64/python-env-tools/bin/pet"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "70 MB",
+                    "path": "/opt/vscode-extensions/ms-python.python-2026.10.0-linux-arm64/python-env-tools/bin/pet"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "18 MB",
+                    "path": "/opt/vscode-extensions/ms-python.vscode-pylance-2026.4.1/dist/copilot-vendor.bundle.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "14 MB",
+                    "path": "/opt/vscode-extensions/ms-toolsai.jupyter-renderers-1.3.0/out/client_renderer/vega.bundle.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "12 MB",
+                    "path": "/opt/vscode-extensions/ms-python.vscode-pylance-2026.4.1/dist/browser.async.bundle.js"
+                  }
+                ],
+                "efficiency_percent": 96.4752,
+                "wasted_bytes": 535354635,
+                "wasted_bytes_display": "535 MB",
+                "user_wasted_percent": 7.1091
+              }
+            },
+            "x86_64": {
+              "schema_version": 3,
+              "recipe": "mneextended",
+              "container": "mneextended",
+              "variant": "",
+              "architecture": "x86_64",
+              "version": "1.2.0",
+              "build_date": "20261017",
+              "docker_archive": "mneextended_1.2.0_20261017.docker.tar",
+              "sif": "mneextended_1.2.0_20261017.simg",
+              "candidate_tag": "nd-candidate-mneextended:f874d12f605d",
+              "launcher": "code",
+              "pr_number": 3683,
+              "head_sha": "f874d12f605da513b3eddb380799416b5bf6df76",
+              "tests": {
+                "total": 116,
+                "passed": 116,
+                "failed": 0,
+                "skipped": 0,
+                "fulltest_total": 115,
+                "fulltest_passed": 115,
+                "fulltest_failed": 0,
+                "suites_total": 1,
+                "suites_passed": 1,
+                "passed_tests": [
+                  "Simple Deploy Bins/Path Test",
+                  "Python imports mne",
+                  "Python locates mne",
+                  "Python imports jupyter",
+                  "Python locates jupyter",
+                  "Python imports mne_bids",
+                  "Python locates mne_bids",
+                  "Python imports mnelab",
+                  "Python locates mnelab",
+                  "Python imports nb_conda_kernels",
+                  "Python locates nb_conda_kernels",
+                  "Python imports tables",
+                  "Python locates tables",
+                  "Python imports h5py",
+                  "Python locates h5py",
+                  "Python imports h5io",
+                  "Python locates h5io",
+                  "Python imports pymatreader",
+                  "Python locates pymatreader",
+                  "Python imports seaborn"
+                ],
+                "failed_tests": []
+              },
+              "dive": {
+                "status": "success",
+                "failed_checks": [],
+                "inefficient_files": [
+                  {
+                    "count": 2,
+                    "wasted_space": "72 MB",
+                    "path": "/opt/vscode-extensions/ms-python.vscode-python-envs-1.40.0-linux-x64/python-env-tools/bin/pet"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "72 MB",
+                    "path": "/opt/vscode-extensions/ms-python.python-2026.10.0-linux-x64/python-env-tools/bin/pet"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "18 MB",
+                    "path": "/opt/vscode-extensions/ms-python.vscode-pylance-2026.4.1/dist/copilot-vendor.bundle.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "14 MB",
+                    "path": "/opt/vscode-extensions/ms-toolsai.jupyter-renderers-1.3.0/out/client_renderer/vega.bundle.js"
+                  },
+                  {
+                    "count": 2,
+                    "wasted_space": "12 MB",
+                    "path": "/opt/vscode-extensions/ms-python.vscode-pylance-2026.4.1/dist/browser.async.bundle.js"
+                  }
+                ],
+                "efficiency_percent": 96.2654,
+                "wasted_bytes": 588583164,
+                "wasted_bytes_display": "589 MB",
+                "user_wasted_percent": 7.5388
+              }
+            }
+          },
+          "raw_scientific_review": {
+            "aarch64": {
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38999227593/job/117298459448",
+              "labels": [
+                "blacksmith-8vcpu-ubuntu-2404-arm"
+              ],
+              "gates": {
+                "Stage and build candidate": "success",
+                "Create immutable candidate files": "success",
+                "Run deploy and fulltest checks": "success",
+                "Run Dive policy check": "success",
+                "Generate manifest and release preview": "success",
+                "Require candidate tests to pass": "success"
+              },
+              "actual_functional_commands": 115,
+              "all_functional_exits": 0,
+              "deploy_counts": {
+                "total": 1,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0
+              },
+              "scientific_cases": [
+                {
+                  "name": "MNE BIDS BrainVision round trip preserves EEG data",
+                  "duration_seconds": 3.3196451663970947,
+                  "stdout": "BIDS EEG round trip succeeded\n"
+                },
+                {
+                  "name": "FLUX first-look notebook on synthetic MEG data",
+                  "duration_seconds": 5.275315523147583,
+                  "stdout": "Creating RawArray with float64 data, n_channels=2, n_times=30000\n    Range : 0 ... 29999 =      0.000 ...    29.999 secs\nReady.\n/tmp/tmp0gscu8__/sub-01/ses-01/meg/sub-01_ses-01_task-SpAtt_run-01_meg.fif\nEffective window size : 2.000 (s)\nFLUX notebook loading and PSD passed (2, 119)\n"
+                },
+                {
+                  "name": "PyEDFlib EDF and BDF signal roundtrip",
+                  "duration_seconds": 0.8145368099212646,
+                  "stdout": "edf two-channel 100Hz samples and event roundtrip passed\nbdf two-channel 100Hz samples and event roundtrip passed\n"
+                }
+              ],
+              "raw_test_results_sha256": "c7bafeaf4e4ba2f131a128dc18abaa9ead09ec4be4181ba7044798555f9836b5",
+              "scope": "BIDS BrainVision EEG data round trip at atol1e-12 and matching channel names; packaged FLUX synthetic MEG first-look loading/PSD; exact EDF/BDF digital signals, channel names and event annotations. Synthetic operation and interface checks, not clinical validation or proof for another commit."
+            },
+            "x86_64": {
+              "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38999227593/job/117298459459",
+              "labels": [
+                "neurodesk-syd-arcrunner-neurocontainers"
+              ],
+              "gates": {
+                "Stage and build candidate": "success",
+                "Create immutable candidate files": "success",
+                "Run deploy and fulltest checks": "success",
+                "Run Dive policy check": "success",
+                "Generate manifest and release preview": "success",
+                "Require candidate tests to pass": "success"
+              },
+              "actual_functional_commands": 115,
+              "all_functional_exits": 0,
+              "deploy_counts": {
+                "total": 1,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0
+              },
+              "scientific_cases": [
+                {
+                  "name": "MNE BIDS BrainVision round trip preserves EEG data",
+                  "duration_seconds": 2.607665777206421,
+                  "stdout": "BIDS EEG round trip succeeded\n"
+                },
+                {
+                  "name": "FLUX first-look notebook on synthetic MEG data",
+                  "duration_seconds": 4.105065584182739,
+                  "stdout": "Creating RawArray with float64 data, n_channels=2, n_times=30000\n    Range : 0 ... 29999 =      0.000 ...    29.999 secs\nReady.\n/tmp/tmpaogh_xew/sub-01/ses-01/meg/sub-01_ses-01_task-SpAtt_run-01_meg.fif\nEffective window size : 2.000 (s)\nFLUX notebook loading and PSD passed (2, 119)\n"
+                },
+                {
+                  "name": "PyEDFlib EDF and BDF signal roundtrip",
+                  "duration_seconds": 0.6257832050323486,
+                  "stdout": "edf two-channel 100Hz samples and event roundtrip passed\nbdf two-channel 100Hz samples and event roundtrip passed\n"
+                }
+              ],
+              "raw_test_results_sha256": "0df39af050c4cb808838c7ef5bb015126248fe21078bf008aa77bbd4bf5d01d1",
+              "scope": "BIDS BrainVision EEG data round trip at atol1e-12 and matching channel names; packaged FLUX synthetic MEG first-look loading/PSD; exact EDF/BDF digital signals, channel names and event annotations. Synthetic operation and interface checks, not clinical validation or proof for another commit."
+            }
+          },
+          "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source."
+        }
+      ]
     },
     {
       "recipe": "modsort",
@@ -27675,7 +28316,7 @@
             "current_candidate_date_committed": true
           }
         ],
-        "checked_at": "2026-10-17T05:26:32.779349+00:00",
+        "checked_at": "2026-10-17T08:18:13.882012+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "cancelled",
         "publish_jobs": [
@@ -27701,7 +28342,7 @@
           }
         ],
         "note": "Original automatic publication was cancelled. Existing metadata alone does not prove this run published; audit any independently completed recovery separately.",
-        "metadata_checked_at": "2026-10-17T05:26:33.632947+00:00"
+        "metadata_checked_at": "2026-10-17T08:18:14.652589+00:00"
       }
     },
     {
@@ -29990,7 +30631,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-17T05:26:34.973950+00:00",
+        "checked_at": "2026-10-17T08:18:16.064645+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -30005,7 +30646,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-17T05:26:35.713229+00:00",
+        "metadata_checked_at": "2026-10-17T08:18:16.809343+00:00",
         "failure_detail": {
           "first_error": "Candidate run38310977204 completed with cancelled; await_candidate selected older run before successful38310977914 for same head, whose creation timestamp is identical.",
           "supporting_pr": "https://github.com/neurodesk/neurocontainers/pull/3541",
@@ -30123,6 +30764,21 @@
         ],
         "fixed": "Nine previously masked missing-package failures now succeed with octave-image/statistics; all56 fulltests retained with strict exits and completion outputs. Analytical t=+/-3/seed repeat passed.",
         "revisit_condition": "Released upstream PALM/Octave runtime fix that supports both original operations without private patches, dropping tests or changing scientific implementation."
+      },
+      "official_prerequisite_release_recheck": {
+        "checked_at": "2026-10-17T06:02:50.413796+00:00",
+        "outcome": "no-directly-applicable-fix-identified",
+        "finding": "OfficialPALMmain remains9086eff (July13 LICENSEchange), with no tagged releases returned. OfficialOctave9/10/11 release notes reviewed did not identify a direct correction for both observed Pearsonsvds/eigs and singleprecisionME(1) failures. This does not prove newer Octave cannot work; none was tested and no dependency-version roulette is authorized.",
+        "sources": [
+          "https://github.com/andersonwinkler/PALM/commit/9086eff76dcacf4afde12c9af5400a1fe0033b9e",
+          "https://octave.org/NEWS-9.html",
+          "https://octave.org/NEWS-10.html",
+          "https://octave.org/NEWS-11.html"
+        ],
+        "latest_source_head": "9086eff76dcacf4afde12c9af5400a1fe0033b9e",
+        "report_path": "upstream/blocker-release-recheck.json",
+        "attempts_unchanged": 2,
+        "original_deadline_unchanged": "2026-10-13T00:37:31.605287+00:00"
       }
     },
     {
@@ -31564,7 +32220,7 @@
             "current_candidate_date_committed": false
           }
         ],
-        "checked_at": "2026-10-17T05:26:37.334954+00:00",
+        "checked_at": "2026-10-17T08:18:18.375804+00:00",
         "workflow_status": "completed",
         "workflow_conclusion": "failure",
         "publish_jobs": [
@@ -31589,7 +32245,7 @@
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-17T05:26:38.102829+00:00",
+        "metadata_checked_at": "2026-10-17T08:18:19.139945+00:00",
         "failure_review": {
           "checked_at": "2026-10-17T04:14:01.434163+00:00",
           "failed_job_id": 116286451736,
@@ -37067,6 +37723,20 @@
         },
         "observed_resources": "One child continuously runnable at approximately100% of one CPU, CPU time295s at300s through5395.27s at5400s; RSS approximately2.13GiB and steady. No observed OOM or crash. Internal compiler/model stage was not logged and is not inferred.",
         "revisit_condition": "A documented released CPU configuration/fix or changed runner resources with an explicit sufficient renewed verification budget. Full original clinical CT/model and scientific assertions must remain. Two remaining builds are reserved for required upstream architectures; a further native test plus both upstream builds exceeds the current6-build budget."
+      },
+      "official_prerequisite_release_recheck": {
+        "checked_at": "2026-10-17T06:02:50.413796+00:00",
+        "outcome": "no-new-supported-cpu-fix-identified",
+        "finding": "Officialsoop-ct head remains9c9d56d (2025-06-27); latest publicbrainchop package remains0.2.5 (2026-06-24). No new released CPU correction clearing the observed fullCT MindGrab90-minute timeout was identified. The old resource failure is not an OOM or architecture-incompatibility finding; no smaller data or blind timeout extension.",
+        "sources": [
+          "https://github.com/rordenlab/soop-ct/commit/9c9d56da66590e9daf6943ee91a18b3d72312c02",
+          "https://pypi.org/pypi/brainchop/json"
+        ],
+        "latest_source_head": "9c9d56da66590e9daf6943ee91a18b3d72312c02",
+        "brainchop_version": "0.2.5",
+        "report_path": "upstream/blocker-release-recheck.json",
+        "attempts_unchanged": 4,
+        "original_deadline_unchanged": "2026-10-13T23:35:00+00:00"
       }
     },
     {
@@ -37528,7 +38198,21 @@
         ],
         "revisit_condition": "A released fix or documented same-method argument configuration that passes nucleus into the internal constructor and preserves all analytical fitting assertions."
       },
-      "investigation_stopped_at": "2026-10-12T23:16:01.592552+00:00"
+      "investigation_stopped_at": "2026-10-12T23:16:01.592552+00:00",
+      "official_prerequisite_release_recheck": {
+        "checked_at": "2026-10-17T06:02:50.413796+00:00",
+        "outcome": "no-new-released-fix-identified",
+        "finding": "Latest official release and source remain4.5.0/3ed80fd (Oct2), the version already tested. No newer released correction for the VARPRO_3P missingnuc failure exists in the queried release/head records. Keep the actual quantification assertion and existing failed evidence.",
+        "sources": [
+          "https://github.com/martin3141/spant/releases/tag/v4.5.0",
+          "https://github.com/martin3141/spant/commit/3ed80fdc8d79f65b4c3511e6244cd961527d409b"
+        ],
+        "latest_release": "v4.5.0",
+        "latest_source_head": "3ed80fdc8d79f65b4c3511e6244cd961527d409b",
+        "report_path": "upstream/blocker-release-recheck.json",
+        "attempts_unchanged": 1,
+        "original_deadline_unchanged": "2026-10-13T10:33:20+00:00"
+      }
     },
     {
       "recipe": "spmpython",
@@ -37593,6 +38277,19 @@
         ],
         "no_build_dispatched": true,
         "historical_scope_correction": "82/82 wrapper/import/availability/NumPy checks did not execute compiled SPM computations."
+      },
+      "official_prerequisite_release_recheck": {
+        "checked_at": "2026-10-17T06:02:50.413796+00:00",
+        "outcome": "prerequisite-unchanged",
+        "finding": "CurrentR2026b MATLABLinux system requirements still specify Intel/AMDx86-64. Runtime download ARM entries are macOS; Linux installer remainsglnxa64. Newer vendor releases do not clear the nativeLinuxARM runtime/deployedSPM binary prerequisite.",
+        "sources": [
+          "https://www.mathworks.com/support/requirements/matlab-linux.html",
+          "https://www.mathworks.com/products/compiler/matlab-runtime.html",
+          "https://www.mathworks.com/help/compiler/install-the-matlab-runtime.html"
+        ],
+        "report_path": "upstream/blocker-release-recheck.json",
+        "attempts_unchanged": 0,
+        "original_deadline_unchanged": "2026-10-13T13:35:28.757561+00:00"
       }
     },
     {
@@ -38907,6 +39604,18 @@
         "reason": "Full official197x233x189 MRI executes actual native pretrained baseline but saved discrete prediction differs from argmax of the two saved class probability maps at141144/8675289voxels (1.63%). Sourcef627b57b explicitly skips inverse spatial transforms for multichannel probabilities, while transforming discrete predictions/lesion masks; recipe subsequently stamps original affine on both and re-thresholds probability output. Output spaces are inconsistent; matching headers alone is insufficient. Latest official history for synthstroke_model.py still ends at this exact commit; no released fix found. Correcting preprocessing/inverse channel handling is application scientific postprocessing work beyond an ordinary recipe dependency/configuration fix.",
         "official_latest_model_commit": "f627b57b8f9291bfa870cb54cb21ddbeb4941d39",
         "checked_at": "2026-10-14T08:21:37.002781+00:00"
+      },
+      "official_prerequisite_release_recheck": {
+        "checked_at": "2026-10-17T06:02:50.413796+00:00",
+        "outcome": "source-unchanged",
+        "finding": "Official source remainsf627b57 (2025-11-27), exactly the failed native candidate source pin; no releases returned. No new upstream original-space probability/class-prediction correction exists in the queried head/release records. Preserve fullMRI physical-space consistency assertions rather than relabeling successful inference as a complete pass.",
+        "sources": [
+          "https://github.com/liamchalcroft/SynthStroke/commit/f627b57b8f9291bfa870cb54cb21ddbeb4941d39"
+        ],
+        "latest_source_head": "f627b57b8f9291bfa870cb54cb21ddbeb4941d39",
+        "report_path": "upstream/blocker-release-recheck.json",
+        "attempts_unchanged": 1,
+        "original_deadline_unchanged": "2026-10-14T20:09:05+00:00"
       }
     },
     {
@@ -41599,34 +42308,52 @@
       "release_metadata_audit": {
         "promotion_run_id": 38973893880,
         "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38973893880",
-        "status": "pending-promotion",
+        "status": "verified-published-metadata",
         "metadata": [
-          {
-            "architecture": "aarch64",
-            "path": "releases/tractseg_arm64/2.10.0.json",
-            "expected_build_date": "20261016",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
-          },
           {
             "architecture": "x86_64",
             "path": "releases/tractseg/2.10.0.json",
             "expected_build_date": "20261016",
-            "exists": false,
-            "committed_build_dates": [],
-            "current_candidate_date_committed": false
+            "committed_build_dates": [
+              "20261016"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "c757d0c0dd01b3c14ca5173cc1d92a98f408feb2",
+            "metadata_commit_sha": "371c24ac8aa01cc3015681a6b7b987aedda58a46",
+            "sif": "tractseg_2.10.0_20261016.simg",
+            "sif_sha256": "f43a54c5cd878dd335780454b50f1a508bf1eab1f53d8f73ae14d52d6fd016c7",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/tractseg_2.10.0_20261016.simg",
+            "public_sif_head_status": 200
+          },
+          {
+            "architecture": "aarch64",
+            "path": "releases/tractseg_arm64/2.10.0.json",
+            "expected_build_date": "20261016",
+            "committed_build_dates": [
+              "20261016"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "source_sha": "c757d0c0dd01b3c14ca5173cc1d92a98f408feb2",
+            "metadata_commit_sha": "371c24ac8aa01cc3015681a6b7b987aedda58a46",
+            "sif": "tractseg_arm64_2.10.0_20261016.simg",
+            "sif_sha256": "bc4c3586d3a97ca0474697c92594e31e9cbbf9bb63cdfaf18fd0ae93d1b18a86",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/tractseg_arm64_2.10.0_20261016.simg",
+            "public_sif_head_status": 200
           }
         ],
-        "checked_at": "2026-10-17T05:26:41.201815+00:00",
-        "workflow_status": "queued",
-        "workflow_conclusion": null,
+        "checked_at": "2026-10-17T08:18:20.250233+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
         "publish_jobs": [
           {
             "name": "publish (candidate-tractseg_arm64-c757d0c0dd01b3c14ca5173cc1d92a98f408feb2)",
-            "status": "queued",
-            "conclusion": null,
-            "runner_name": "",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-5jxcc",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
@@ -41634,16 +42361,16 @@
           },
           {
             "name": "publish (candidate-tractseg-c757d0c0dd01b3c14ca5173cc1d92a98f408feb2)",
-            "status": "queued",
-            "conclusion": null,
-            "runner_name": "",
+            "status": "completed",
+            "conclusion": "success",
+            "runner_name": "neurodesk-syd-arcrunner-neurocontainers-czv9k-runner-bt29n",
             "labels": [
               "neurodesk-syd-arcrunner-neurocontainers"
             ],
             "active_steps": []
           }
         ],
-        "metadata_checked_at": "2026-10-17T05:26:41.940393+00:00"
+        "metadata_checked_at": "2026-10-17T08:18:32.304596+00:00"
       }
     },
     {
@@ -44042,9 +44769,9 @@
     "upstream_validation": "All required checks, Python 3.10/3.12 full builder unit suites, BuildKit, recipe validation, fork policy and code quality passed."
   },
   "last_fork_main_sync": {
-    "checked_at": "2026-10-17T05:31:28.992976+00:00",
-    "previous_sha": "c30846086dccdda003a13244ecf6116bc9121e6f",
-    "new_sha": "9981d1d79e63cd49670f6f0c44bd9a6583b7cea7",
+    "checked_at": "2026-10-17T08:19:15.597107+00:00",
+    "previous_sha": "fa0c4b0379ab36769647a99ac8a774668e1b8b7f",
+    "new_sha": "371c24ac8aa01cc3015681a6b7b987aedda58a46",
     "method": "normal-fast-forward",
     "actions_enabled": false
   },

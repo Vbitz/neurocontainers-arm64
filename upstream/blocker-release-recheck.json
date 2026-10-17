@@ -1,0 +1,423 @@
+{
+  "checked_at": "2026-10-17T06:02:50.413796+00:00",
+  "scope": "Read-only official source/release/platform recheck of eight unresolved prerequisite/runtime/resource recipes, separate from the budget-limited cases.",
+  "policy": "No build, code patch, clock reset, unsupported package substitution, alternate algorithm, relaxed test, new root-source equivalence or publication claim. Absence of a matching fix in these records is not a proof of permanent ARM impossibility.",
+  "recipes": {
+    "afni": {
+      "outcome": "prerequisite-unchanged",
+      "finding": "Official FreeSurfer8.2.0/current-development download tables still list Linuxx86/AMD64 and macOSARM assets, not a compatible nativeLinuxARM7.4.1 package. No documented supported portable prerequisite build identified in this review. This is a FreeSurfer prerequisite gap, not proof that AFNI source cannot compile on ARM.",
+      "sources": [
+        "https://surfer.nmr.mgh.harvard.edu/fswiki/rel7downloads",
+        "https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/dev/"
+      ]
+    },
+    "spmpython": {
+      "outcome": "prerequisite-unchanged",
+      "finding": "CurrentR2026b MATLABLinux system requirements still specify Intel/AMDx86-64. Runtime download ARM entries are macOS; Linux installer remainsglnxa64. Newer vendor releases do not clear the nativeLinuxARM runtime/deployedSPM binary prerequisite.",
+      "sources": [
+        "https://www.mathworks.com/support/requirements/matlab-linux.html",
+        "https://www.mathworks.com/products/compiler/matlab-runtime.html",
+        "https://www.mathworks.com/help/compiler/install-the-matlab-runtime.html"
+      ]
+    },
+    "brats": {
+      "outcome": "prerequisite-unchanged",
+      "finding": "Latest public wrapper remains0.1.13. All16 registered CPU-compatible model tags are metadata-readable, have identical digests to the Oct13 audit, and still publish onlylinux/amd64. Wrapper portability/help tests do not establish nativeARM trained-model inference.",
+      "sources": [
+        "https://hub.docker.com/v2/repositories/brainles/brats25_gli_ecnu/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats25_gli_jinlw/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats24_adult_glioma_mist/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats25_ssa_spark_neuro/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats24_africa_cuhk_rpai/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats23_africa_blackbean/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats24_inpainting_ying_weng/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats23_inpainting_ying_weng/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats23_inpainting_medsegctrl/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats23_meningioma_blackbean/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats25_menrt_medimg_sk/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats25_menrt_neurotech/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats24_meningioma_faking_it/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats25_met_weskrikorian/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats23_met_blackbean/tags/latest",
+        "https://hub.docker.com/v2/repositories/brainles/brats25_missing_mri_usd-2025-chato-sereda/tags/latest"
+      ],
+      "latest_version": "0.1.13",
+      "registered_cpu_models": 16,
+      "all_digest_platform_records_unchanged": true
+    },
+    "emuses": {
+      "outcome": "no-new-released-fix-identified",
+      "finding": "Latest official GitHubrelease remainsv1.3.0 (2025-08-07), the failed candidate release. Latermain exists but no new released correction clearing the observed fixed-parameter HDBSCAN/Optuna scientific workflow failure was identified. PublicPyPIemuses returned404; no conclusion about source availability or architecture follows from that lookup.",
+      "sources": [
+        "https://github.com/chrisfoulon/emuses/releases/tag/v1.3.0",
+        "https://github.com/chrisfoulon/emuses/commit/2e2013e1cda26979588e87e8bff078762e1bb758"
+      ],
+      "latest_release": "v1.3.0",
+      "latest_source_head": "2e2013e1cda26979588e87e8bff078762e1bb758"
+    },
+    "palm": {
+      "outcome": "no-directly-applicable-fix-identified",
+      "finding": "OfficialPALMmain remains9086eff (July13 LICENSEchange), with no tagged releases returned. OfficialOctave9/10/11 release notes reviewed did not identify a direct correction for both observed Pearsonsvds/eigs and singleprecisionME(1) failures. This does not prove newer Octave cannot work; none was tested and no dependency-version roulette is authorized.",
+      "sources": [
+        "https://github.com/andersonwinkler/PALM/commit/9086eff76dcacf4afde12c9af5400a1fe0033b9e",
+        "https://octave.org/NEWS-9.html",
+        "https://octave.org/NEWS-10.html",
+        "https://octave.org/NEWS-11.html"
+      ],
+      "latest_source_head": "9086eff76dcacf4afde12c9af5400a1fe0033b9e"
+    },
+    "spant": {
+      "outcome": "no-new-released-fix-identified",
+      "finding": "Latest official release and source remain4.5.0/3ed80fd (Oct2), the version already tested. No newer released correction for the VARPRO_3P missingnuc failure exists in the queried release/head records. Keep the actual quantification assertion and existing failed evidence.",
+      "sources": [
+        "https://github.com/martin3141/spant/releases/tag/v4.5.0",
+        "https://github.com/martin3141/spant/commit/3ed80fdc8d79f65b4c3511e6244cd961527d409b"
+      ],
+      "latest_release": "v4.5.0",
+      "latest_source_head": "3ed80fdc8d79f65b4c3511e6244cd961527d409b"
+    },
+    "soopct": {
+      "outcome": "no-new-supported-cpu-fix-identified",
+      "finding": "Officialsoop-ct head remains9c9d56d (2025-06-27); latest publicbrainchop package remains0.2.5 (2026-06-24). No new released CPU correction clearing the observed fullCT MindGrab90-minute timeout was identified. The old resource failure is not an OOM or architecture-incompatibility finding; no smaller data or blind timeout extension.",
+      "sources": [
+        "https://github.com/rordenlab/soop-ct/commit/9c9d56da66590e9daf6943ee91a18b3d72312c02",
+        "https://pypi.org/pypi/brainchop/json"
+      ],
+      "latest_source_head": "9c9d56da66590e9daf6943ee91a18b3d72312c02",
+      "brainchop_version": "0.2.5"
+    },
+    "synthstroke": {
+      "outcome": "source-unchanged",
+      "finding": "Official source remainsf627b57 (2025-11-27), exactly the failed native candidate source pin; no releases returned. No new upstream original-space probability/class-prediction correction exists in the queried head/release records. Preserve fullMRI physical-space consistency assertions rather than relabeling successful inference as a complete pass.",
+      "sources": [
+        "https://github.com/liamchalcroft/SynthStroke/commit/f627b57b8f9291bfa870cb54cb21ddbeb4941d39"
+      ],
+      "latest_source_head": "f627b57b8f9291bfa870cb54cb21ddbeb4941d39"
+    }
+  },
+  "github_release_head_observations": [
+    {
+      "repository": "chrisfoulon/emuses",
+      "releases": [
+        {
+          "tag": "v1.3.0",
+          "sha": null,
+          "published_at": "2025-08-07T10:57:10Z",
+          "date": null,
+          "url": "https://github.com/chrisfoulon/emuses/releases/tag/v1.3.0"
+        },
+        {
+          "tag": "v1.2.0",
+          "sha": null,
+          "published_at": "2025-08-05T12:31:11Z",
+          "date": null,
+          "url": "https://github.com/chrisfoulon/emuses/releases/tag/v1.2.0"
+        },
+        {
+          "tag": "v1.1.0",
+          "sha": null,
+          "published_at": "2025-08-03T19:20:16Z",
+          "date": null,
+          "url": "https://github.com/chrisfoulon/emuses/releases/tag/v1.1.0"
+        }
+      ],
+      "head": [
+        {
+          "tag": null,
+          "sha": "2e2013e1cda26979588e87e8bff078762e1bb758",
+          "published_at": null,
+          "date": "2026-09-17T21:44:40Z",
+          "url": "https://github.com/chrisfoulon/emuses/commit/2e2013e1cda26979588e87e8bff078762e1bb758"
+        }
+      ]
+    },
+    {
+      "repository": "martin3141/spant",
+      "releases": [
+        {
+          "tag": "v4.5.0",
+          "sha": null,
+          "published_at": "2026-10-02T14:24:39Z",
+          "date": null,
+          "url": "https://github.com/martin3141/spant/releases/tag/v4.5.0"
+        },
+        {
+          "tag": "v4.4.0",
+          "sha": null,
+          "published_at": "2026-08-25T10:16:13Z",
+          "date": null,
+          "url": "https://github.com/martin3141/spant/releases/tag/v4.4.0"
+        },
+        {
+          "tag": "v4.3.0",
+          "sha": null,
+          "published_at": "2026-07-07T18:52:13Z",
+          "date": null,
+          "url": "https://github.com/martin3141/spant/releases/tag/v4.3.0"
+        }
+      ],
+      "head": [
+        {
+          "tag": null,
+          "sha": "3ed80fdc8d79f65b4c3511e6244cd961527d409b",
+          "published_at": null,
+          "date": "2026-10-02T09:52:26Z",
+          "url": "https://github.com/martin3141/spant/commit/3ed80fdc8d79f65b4c3511e6244cd961527d409b"
+        }
+      ]
+    },
+    {
+      "repository": "liamchalcroft/SynthStroke",
+      "releases": [],
+      "head": [
+        {
+          "tag": null,
+          "sha": "f627b57b8f9291bfa870cb54cb21ddbeb4941d39",
+          "published_at": null,
+          "date": "2025-11-27T17:59:15Z",
+          "url": "https://github.com/liamchalcroft/SynthStroke/commit/f627b57b8f9291bfa870cb54cb21ddbeb4941d39"
+        }
+      ]
+    },
+    {
+      "repository": "rordenlab/soop-ct",
+      "releases": [],
+      "head": [
+        {
+          "tag": null,
+          "sha": "9c9d56da66590e9daf6943ee91a18b3d72312c02",
+          "published_at": null,
+          "date": "2025-06-27T16:27:22Z",
+          "url": "https://github.com/rordenlab/soop-ct/commit/9c9d56da66590e9daf6943ee91a18b3d72312c02"
+        }
+      ]
+    },
+    {
+      "repository": "andersonwinkler/PALM",
+      "releases": [],
+      "head": [
+        {
+          "tag": null,
+          "sha": "9086eff76dcacf4afde12c9af5400a1fe0033b9e",
+          "published_at": null,
+          "date": "2026-07-13T22:14:06Z",
+          "url": "https://github.com/andersonwinkler/PALM/commit/9086eff76dcacf4afde12c9af5400a1fe0033b9e"
+        }
+      ]
+    }
+  ],
+  "brats_cpu_registry_observations": {
+    "checked_at": "2026-10-17T05:57:49.391660+00:00",
+    "brats_registry_version_reviewed": "0.1.13",
+    "cpu_compatible_algorithms": 16,
+    "images": [
+      {
+        "algorithm": "BraTS25_2",
+        "image": "brainles/brats25_gli_ecnu:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_gli_ecnu/tags/latest",
+        "previous_digest": "sha256:c2a27297deab0638296e8b90569d19f7dfda1519ed116093cb2602fa8f1f1596",
+        "tag_digest": "sha256:c2a27297deab0638296e8b90569d19f7dfda1519ed116093cb2602fa8f1f1596",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS25_3A",
+        "image": "brainles/brats25_gli_jinlw:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_gli_jinlw/tags/latest",
+        "previous_digest": "sha256:a3d7b6daf006282c7a030fe8fa1f00ef8f95204c48b48e19620c242ae059aab3",
+        "tag_digest": "sha256:a3d7b6daf006282c7a030fe8fa1f00ef8f95204c48b48e19620c242ae059aab3",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS24_3",
+        "image": "brainles/brats24_adult_glioma_mist:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats24_adult_glioma_mist/tags/latest",
+        "previous_digest": "sha256:18337d946229c982cf83592190dad18c74a27ef496b161e6699b8e5011bd2c06",
+        "tag_digest": "sha256:18337d946229c982cf83592190dad18c74a27ef496b161e6699b8e5011bd2c06",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS25_1",
+        "image": "brainles/brats25_ssa_spark_neuro:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_ssa_spark_neuro/tags/latest",
+        "previous_digest": "sha256:e6e56ec41a7c194b86d9fd42cb6175617452f2a62b0d7de828f6ea3e8fa6fd62",
+        "tag_digest": "sha256:e6e56ec41a7c194b86d9fd42cb6175617452f2a62b0d7de828f6ea3e8fa6fd62",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS24_2",
+        "image": "brainles/brats24_africa_cuhk_rpai",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats24_africa_cuhk_rpai/tags/latest",
+        "previous_digest": "sha256:a2ff1457e0b7cb20379c183eb165fbf32979e8bb35f775d1999b80e87bb0568a",
+        "tag_digest": "sha256:a2ff1457e0b7cb20379c183eb165fbf32979e8bb35f775d1999b80e87bb0568a",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS23_3",
+        "image": "brainles/brats23_africa_blackbean:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats23_africa_blackbean/tags/latest",
+        "previous_digest": "sha256:f9ea8d53b796659744673ff70bfe2348e7a288cefd9aa473614bdff1b0b4d825",
+        "tag_digest": "sha256:f9ea8d53b796659744673ff70bfe2348e7a288cefd9aa473614bdff1b0b4d825",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS24_1",
+        "image": "brainles/brats24_inpainting_ying_weng:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats24_inpainting_ying_weng/tags/latest",
+        "previous_digest": "sha256:c59daaf334ffccce63d76f65e8f95cedd794dbedd71a3eeefd21b437475fd253",
+        "tag_digest": "sha256:c59daaf334ffccce63d76f65e8f95cedd794dbedd71a3eeefd21b437475fd253",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS23_1",
+        "image": "brainles/brats23_inpainting_ying_weng:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats23_inpainting_ying_weng/tags/latest",
+        "previous_digest": "sha256:62dc2217e4423af613cac4ae9a8f68fadbd41785b7d60caca1a1089c66a808fd",
+        "tag_digest": "sha256:62dc2217e4423af613cac4ae9a8f68fadbd41785b7d60caca1a1089c66a808fd",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS23_3",
+        "image": "brainles/brats23_inpainting_medsegctrl",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats23_inpainting_medsegctrl/tags/latest",
+        "previous_digest": "sha256:afda20729b045b2dcfea149aefcffec2c89470138bdb7b60b85c03d403905a5f",
+        "tag_digest": "sha256:afda20729b045b2dcfea149aefcffec2c89470138bdb7b60b85c03d403905a5f",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS23_2",
+        "image": "brainles/brats23_meningioma_blackbean:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats23_meningioma_blackbean/tags/latest",
+        "previous_digest": "sha256:90f24c7e71771fa0058a2c59c16c625981c185699a5ab86f5ff3314a18d9783b",
+        "tag_digest": "sha256:90f24c7e71771fa0058a2c59c16c625981c185699a5ab86f5ff3314a18d9783b",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS25_2",
+        "image": "brainles/brats25_menrt_medimg_sk:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_menrt_medimg_sk/tags/latest",
+        "previous_digest": "sha256:e6abf1c010333ee87ff708ab0554b181c8f31b4e826a5b0ccc39ba12c2485a5e",
+        "tag_digest": "sha256:e6abf1c010333ee87ff708ab0554b181c8f31b4e826a5b0ccc39ba12c2485a5e",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS25_3",
+        "image": "brainles/brats25_menrt_neurotech:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_menrt_neurotech/tags/latest",
+        "previous_digest": "sha256:487f35e5af35512526978be4594e078a04c7a4da6de525d4b1145898dba066cc",
+        "tag_digest": "sha256:487f35e5af35512526978be4594e078a04c7a4da6de525d4b1145898dba066cc",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS24_3",
+        "image": "brainles/brats24_meningioma_faking_it",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats24_meningioma_faking_it/tags/latest",
+        "previous_digest": "sha256:8c119a62d9b726990022bae78a5216aabfb75161305c400e1448b167dfc86e5b",
+        "tag_digest": "sha256:8c119a62d9b726990022bae78a5216aabfb75161305c400e1448b167dfc86e5b",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS25_2",
+        "image": "brainles/brats25_met_weskrikorian:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_met_weskrikorian/tags/latest",
+        "previous_digest": "sha256:7dcdf6f681c7148525df712a016d3a9035294cfbdbdc704bb905277f1fc54541",
+        "tag_digest": "sha256:7dcdf6f681c7148525df712a016d3a9035294cfbdbdc704bb905277f1fc54541",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS23_3",
+        "image": "brainles/brats23_met_blackbean:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats23_met_blackbean/tags/latest",
+        "previous_digest": "sha256:c33ad6fcec8bbfa11dc70401a6989fbc746cec47f8d265a99090dd3725501abb",
+        "tag_digest": "sha256:c33ad6fcec8bbfa11dc70401a6989fbc746cec47f8d265a99090dd3725501abb",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      },
+      {
+        "algorithm": "BraTS25_3",
+        "image": "brainles/brats25_missing_mri_usd-2025-chato-sereda:latest",
+        "metadata_url": "https://hub.docker.com/v2/repositories/brainles/brats25_missing_mri_usd-2025-chato-sereda/tags/latest",
+        "previous_digest": "sha256:90013fb524b17e137d6bf1ceda88a865081cc1151d91e69d66a2c4ace51aa77a",
+        "tag_digest": "sha256:90013fb524b17e137d6bf1ceda88a865081cc1151d91e69d66a2c4ace51aa77a",
+        "platforms": [
+          "linux/amd64"
+        ],
+        "status": "metadata-read"
+      }
+    ],
+    "latest_pypi_versions": {
+      "brats": {
+        "version": "0.1.13",
+        "release_files": [
+          {
+            "name": "brats-0.1.13-py3-none-any.whl",
+            "uploaded_at": "2026-10-01T15:57:39.344572Z"
+          },
+          {
+            "name": "brats-0.1.13.tar.gz",
+            "uploaded_at": "2026-10-01T15:57:40.551698Z"
+          }
+        ]
+      },
+      "emuses": {
+        "error": "HTTP Error 404: Not Found"
+      },
+      "brainchop": {
+        "version": "0.2.5",
+        "release_files": [
+          {
+            "name": "brainchop-0.2.5-py3-none-any.whl",
+            "uploaded_at": "2026-06-24T15:00:28.466353Z"
+          },
+          {
+            "name": "brainchop-0.2.5.tar.gz",
+            "uploaded_at": "2026-06-24T15:00:29.356136Z"
+          }
+        ]
+      }
+    }
+  }
+}
