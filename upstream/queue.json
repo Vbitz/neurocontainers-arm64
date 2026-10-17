@@ -6248,7 +6248,7 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T08:52:04.807077+00:00",
+        "checked_at": "2026-10-17T09:04:18.666840+00:00",
         "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "run_id": 39015848600,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
@@ -25848,7 +25848,7 @@
           },
           "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source.",
           "publication_observation": {
-            "checked_at": "2026-10-17T08:41:02.852150+00:00",
+            "checked_at": "2026-10-17T09:04:18.666840+00:00",
             "run_id": 39006597358,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358",
             "status": "queued",
@@ -26509,7 +26509,7 @@
           },
           "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source.",
           "publication_observation": {
-            "checked_at": "2026-10-17T08:41:02.852150+00:00",
+            "checked_at": "2026-10-17T09:04:18.666840+00:00",
             "run_id": 39007028913,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
             "status": "queued",
@@ -33304,7 +33304,7 @@
             "retained": 4320339,
             "nifti_quantization_bound": 0.010797647
           },
-          "scope": "Actual current x86 registration/full mask product and version closure succeed. Complete suite and merge remain failed by deliberate review gate; ARM registration remains unproven. No clinical accuracy, architecture parity, root-source equivalence or published release claim."
+          "scope": "Actual current x86 registration/full mask product and version closure succeed. Complete suite and merge remain failed by deliberate review gate; The separate same-source ARM report verifies full registered-mask application, while normmi and T2 defacing fail their unchanged300-second deadlines. No clinical accuracy, architecture parity, root-source equivalence or published release claim."
         },
         "aarch64": {
           "checked_at": "2026-10-17T08:50:59.514434+00:00",
@@ -45229,8 +45229,8 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T08:52:04.807077+00:00",
-    "top_level_base_commit": "3f512b855ce75989924ab0465fbbb50da5fc5a68",
+    "checked_at": "2026-10-17T09:04:18.666840+00:00",
+    "top_level_base_commit": "1de3b03ceb2200e1b1a6bf1a72361c60e68f99d7",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
     "upstream_fork_main_sha": "16bcfd77bc5334fa3b794eeb8a6617563e759e46",
@@ -45253,7 +45253,7 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Resume BrainLes9564/run39015848600 two native image builds and review exact terminal reports when available. PyDefacee5a0/run39013054134 is completedfailed, fully recorded; do not repeat unchanged or remove diagnosticgate. Six prior budget answers pending. Observe queued MNE/MNEExtended later automatic promotions with /tmp/verify-later-update-publications.py; keep original source proofs and full goal incomplete.",
+    "next_action": "Continue observing existing BrainLes9564/run39015848600 jobs; review exact terminal reports before any acceptance. MNE/MNEExtended automatic publications remain separately monitored. Six budget questions unanswered; no own retries, deadline resets or repeated passing builds. Full129 inventory/112scope objective remains incomplete.",
     "live_external_jobs": [
       {
         "recipe": "brainles-preprocessing",
@@ -45280,12 +45280,12 @@
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735065"
       }
     ],
-    "last_goal_turn_classification": "progress",
-    "progress": "Terminal e5a0 nativeARM60/63 raw reports reviewed: normmi/T2 unchanged300s timeouts, full5898240voxel maskproduct and mutualinfo526.58s pass, profiling prerequisite read-byte-limit failure gives no attribution. Both native scientific suites/source-specific original proofs preserved; no own retries. LaterDicompare0.15.4 publication/catalog verified, fork16bc normalFF/Actionsdisabled;63verifiedpublishedrecipes. Two BrainLes native imagebuilds still live.",
+    "last_goal_turn_classification": "verified-wait",
+    "progress": "Authoritative BrainLes9564 native jobs remain live in image construction. No new terminal reports or own builds. Corrected stale PyDeface x86-only wording to acknowledge separately verified ARM full-mask registration while retaining normmi/T2 timeout failures.",
     "active_automatic_promotions": [
       {
         "recipe": "mne",
-        "checked_at": "2026-10-17T08:41:02.852150+00:00",
+        "checked_at": "2026-10-17T09:04:18.666840+00:00",
         "run_id": 39006597358,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358",
         "status": "queued",
@@ -45294,7 +45294,7 @@
       },
       {
         "recipe": "mneextended",
-        "checked_at": "2026-10-17T08:41:02.852150+00:00",
+        "checked_at": "2026-10-17T09:04:18.666840+00:00",
         "run_id": 39007028913,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
         "status": "queued",
