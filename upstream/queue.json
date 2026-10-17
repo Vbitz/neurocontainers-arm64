@@ -5617,7 +5617,7 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3610",
       "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Observe independent upstream run38998886975 and sourcec49672731f337d723e1762996b1800499eeedd91. Current upstream CBLAS/Torch feasibility experiment explicitly declares DIAGNOSTIC_BLOCKED/merge_eligible=false and intentionally fails the ARM SynthStrip diagnostic gate even if inference completes. Build/import feasibility is not a verified releasable scientific container. Original budget, scientific failure history and untested local candidate retained; no own retry authorized.",
+      "next_action": "Independent current ARM run38998886975 failed the tools-phase constructed Python library path assertion before replacementTorch sources/configure/compile. Exact c496 x8619/19/science remains verified; no current ARM SIF/science proof. Diagnostic-only/merge-ineligible hold and16/6/expired original window retained. Revisit only with a separately reviewed correction and explicit renewed authorization; do not infer upstream architecture incompatibility, bypass the assertion/gate, port the runtime, or retry unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.13",
@@ -6236,12 +6236,12 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T04:35:09.125212+00:00",
+        "checked_at": "2026-10-17T04:56:07.836686+00:00",
         "source_sha": "c49672731f337d723e1762996b1800499eeedd91",
         "run_id": 38998886975,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38998886975",
-        "status": "in_progress",
-        "conclusion": null,
+        "status": "completed",
+        "conclusion": "failure",
         "jobs": [
           {
             "job_id": 117297477563,
@@ -6263,15 +6263,13 @@
             "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
             "architecture": "aarch64",
             "started_at": "2026-10-17T03:28:40Z",
-            "status": "in_progress",
-            "conclusion": null,
+            "status": "completed",
+            "conclusion": "failure",
             "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38998886975/job/117297477614",
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404-arm"
             ],
-            "active_steps": [
-              "Stage and build candidate"
-            ]
+            "active_steps": []
           }
         ],
         "dispatched_by_this_continuation": false,
@@ -6676,6 +6674,25 @@
             }
           },
           "scope": "Synthetic runtime examples prove operation/output contracts only, not clinical accuracy, ARM functionality or merge eligibility. Original source/native evidence and explicit ARM diagnostic hold retained."
+        },
+        "aarch64": {
+          "checked_at": "2026-10-17T04:56:07.836686+00:00",
+          "source_sha": "c49672731f337d723e1762996b1800499eeedd91",
+          "run_id": 38998886975,
+          "job_id": 117297477614,
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38998886975/job/117297477614",
+          "architecture": "aarch64",
+          "outcome": "failed-build-diagnostic-precondition",
+          "classification": "recipe/configuration",
+          "first_actionable_error": "build-native.sh tools-phase Python line26: assert Path(runtime['lib']).is_file() -> AssertionError",
+          "phase": "tools",
+          "phase_elapsed_seconds": 18,
+          "computed_library_path_source": "Runtime interpreter sysconfig LIBDIR + '/' + LDLIBRARY; actual resolved value was not printed before the assertion.",
+          "replacement_torch_sources_configure_compile_started": false,
+          "final_sif_built": false,
+          "current_source_arm_scientific_suite_run": false,
+          "failure_excerpt": "phase=tools status=1 elapsed_seconds=18 release=DIAGNOSTIC_BLOCKED merge_eligible=false\nFile \"<stdin>\", line26\nAssertionError",
+          "scope": "The diagnostic prerequisite assertion failed, not an upstream Torch compiler or scientific test. No ARM incompatibility or missing installed libpython is established; the computed path may be wrong. Current ARM scientific functionality and all explicit merge holds remain unproven."
         }
       }
     },
@@ -28173,7 +28190,14 @@
         "cold_workflow": "No recipe/architecture dispatch input; bounded global due-target planner. Do not launch inventory to manufacture one missing proof.",
         "legacy_manual_workflow": "Expands all declared variants and architectures; legacy build-app route does not supply required fulltest/Dive candidate proof. No manual build/publish dispatched.",
         "current_recipe_delta": "Current acceptedmain removes only an inert nested test directive from candidate04e422; fulltest identical. No new source/image equivalence or ARM success inferred from this inspection.",
-        "next_condition": "Separately attributable fresh upstream nativeARM current-source build/fulltest/gates, a supported targeted verification route and explicit renewed budget, or independently supplied matching proof. Existing currentnative69/69 and upstreamx8669/69 remain preserved."
+        "next_condition": "Separately attributable fresh upstream nativeARM current-source build/fulltest/gates, a supported targeted verification route and explicit renewed budget, or independently supplied matching proof. Existing currentnative69/69 and upstreamx8669/69 remain preserved.",
+        "last_readonly_recheck": {
+          "checked_at": "2026-10-17T04:57:23.669188+00:00",
+          "retained_cold_result_nftsim_arm64_artifacts": 0,
+          "latest_scheduled_cold_run_id": 38996430525,
+          "latest_scheduled_cold_run_conclusion": "success",
+          "note": "Actual Oct17 cold sweep completed, but no retained NFTsimARM result exists. The sweep success is not this recipe proof. No global/manual build or promotion dispatched."
+        }
       }
     },
     {
@@ -31850,7 +31874,7 @@
         "reason": "Corrected fulltest/current candidate source requires a fresh root native build plus both upstream architecture builds;2 remaining attempts cannot complete that three-build lifecycle. Original native62/62 source proof retained. No failed source merged or substituted old proof."
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T04:35:09.125212+00:00",
+        "checked_at": "2026-10-17T04:57:23.669188+00:00",
         "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
         "run_id": 39001037271,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271",
@@ -43821,8 +43845,8 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T04:35:09.125212+00:00",
-    "top_level_base_commit": "be9085fc36818c91996b5b5e6bbdbff51099ebf8",
+    "checked_at": "2026-10-17T04:57:23.669188+00:00",
+    "top_level_base_commit": "3d5aff55f7b1feb29a416dab750d071e6bac77fe",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
     "upstream_fork_main_sha": "64017cba950709ffdb667fd978dff34c57a2c5cf",
@@ -43845,19 +43869,8 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Wait for existing external ARM jobs; retain explicit diagnostic gates and source-specific holds. Pending explicit native budget exceptions remain unanswered; no repeated green upstream/native builds.",
+    "next_action": "Resume current PyDefaceARM job117303854783/run39001037271 until terminal; review raw first errors/currentscientific results. BrainLes currentARM experiment is blocked before compilation; preserve all diagnostic gates and await separately reviewed correction/authorization. Existing exact-source root-native and Elastix budget questions remain unanswered.",
     "live_external_jobs": [
-      {
-        "recipe": "brainles-preprocessing",
-        "run_id": 38998886975,
-        "job_id": 117297477614,
-        "source_sha": "c49672731f337d723e1762996b1800499eeedd91",
-        "status": "in_progress",
-        "conclusion": null,
-        "active_steps": [
-          "Stage and build candidate"
-        ]
-      },
       {
         "recipe": "pydeface",
         "run_id": 39001037271,
@@ -43871,6 +43884,6 @@
       }
     ],
     "last_goal_turn_classification": "progress",
-    "progress": "Reconciled every independent BrainLes/PyDeface candidate build attempt; reviewed current-source raw x86 scientific reports, strict exit contracts and native build gates; mirrored outcomes in issues/coverage. No own builds/agents."
+    "progress": "Observed terminal BrainLesARM failure and classified exact tools-phase constructedPythonlibrarypath assertion before replacementTorch source/compile/science. Preserved currentx8619/19 and all original budgets; PyDefaceARM remains confirmedlive. No own build/agent."
   }
 }
