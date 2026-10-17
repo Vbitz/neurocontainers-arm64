@@ -6248,7 +6248,7 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T08:19:08.820814+00:00",
+        "checked_at": "2026-10-17T08:23:39.246095+00:00",
         "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "run_id": 39015848600,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
@@ -6256,32 +6256,32 @@
         "conclusion": null,
         "jobs": [
           {
-            "active_steps": [
-              "Stage and build candidate"
-            ],
-            "conclusion": null,
-            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735063",
             "id": 117347735063,
+            "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+            "status": "in_progress",
+            "conclusion": null,
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404-arm"
             ],
-            "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
             "started_at": "2026-10-17T08:02:35Z",
-            "status": "in_progress"
-          },
-          {
+            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735063",
             "active_steps": [
               "Stage and build candidate"
-            ],
-            "conclusion": null,
-            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735065",
+            ]
+          },
+          {
             "id": 117347735065,
+            "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+            "status": "in_progress",
+            "conclusion": null,
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404"
             ],
-            "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
             "started_at": "2026-10-17T08:02:31Z",
-            "status": "in_progress"
+            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735065",
+            "active_steps": [
+              "Stage and build candidate"
+            ]
           }
         ],
         "hypothesis": "Declare SynthStrip record16535634/version1.0.0 weights with SHA256 and get_file, install the checked archive with exact member assertion; separately parse CMakeCache line by line. This addresses the observed unvalidated ZIP download and cache-key parsing; no current scientific success established.",
@@ -12146,7 +12146,15 @@
               "build_sif_deploy_fulltest_dive_manifest_and_final_gates": "success"
             }
           },
-          "scope": "Independent later automatic software update after the original port PR3537 completed. Both current-version upstream compact runtime reports/native fresh Docker-SIF gates reviewed; individual raw scientific commands not re-audited here. Original root0.15.3 proof remains at its source/version and is not attributed to0.15.4. No extra own PR, root build, upstream build or release promotion."
+          "scope": "Independent later automatic software update after the original port PR3537 completed. Both current-version upstream compact runtime reports/native fresh Docker-SIF gates reviewed; individual raw scientific commands not re-audited here. Original root0.15.3 proof remains at its source/version and is not attributed to0.15.4. No extra own PR, root build, upstream build or release promotion.",
+          "publication_observation": {
+            "checked_at": "2026-10-17T08:22:06.901167+00:00",
+            "run_id": 39004780986,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39004780986",
+            "status": "in_progress",
+            "conclusion": null,
+            "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained."
+          }
         }
       ]
     },
@@ -25684,7 +25692,15 @@
               "scope": "Exact FIF samples/times and channel metadata round trip; visible Qt browser and finite nonzero 128x128 native PyVistaQt screenshot with PNG signature. Nonfatal Qt disconnect/config warnings occur. Synthetic operation and interface checks, not clinical validation or proof for another commit."
             }
           },
-          "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source."
+          "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source.",
+          "publication_observation": {
+            "checked_at": "2026-10-17T08:22:06.901167+00:00",
+            "run_id": 39006597358,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358",
+            "status": "queued",
+            "conclusion": null,
+            "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained."
+          }
         }
       ]
     },
@@ -26337,7 +26353,15 @@
               "scope": "BIDS BrainVision EEG data round trip at atol1e-12 and matching channel names; packaged FLUX synthetic MEG first-look loading/PSD; exact EDF/BDF digital signals, channel names and event annotations. Synthetic operation and interface checks, not clinical validation or proof for another commit."
             }
           },
-          "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source."
+          "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source.",
+          "publication_observation": {
+            "checked_at": "2026-10-17T08:22:06.901167+00:00",
+            "run_id": 39007028913,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
+            "status": "queued",
+            "conclusion": null,
+            "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained."
+          }
         }
       ]
     },
@@ -32324,7 +32348,7 @@
       "candidate_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
       "started_at": "2026-10-13T07:35:00+00:00",
       "deadline": "2026-10-13T19:35:00+00:00",
-      "attempts": 12,
+      "attempts": 14,
       "run_id": 38374199970,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3580",
       "upstream_ci": {
@@ -32566,7 +32590,7 @@
         }
       },
       "merged_sha": null,
-      "next_action": "Current62f/run39001037271 ARM60/63: normmi andT2 defacing each exceed unchanged300s; deliberate diagnosticgate also fails. Realfull5,898,240voxel maskproduct/geometry and mutualinfo584.5s pass; perf attribution refused kernel-matchedtargetmissing. Currentx8662/63 fails onlygate. Keep entireportfailed, originalnative7fb sourceproof separate,12/6/olddeadline anddiagnosticmergehold. Revisit only with a concrete supported FSL/runtime/resource correction and explicit renewed authorization, preserving all costfunctions/fullinputs/timeouts/scientificassertions; no private library port, masking, smallerdata or retry unchanged.",
+      "next_action": "Observe independent e5a0 ARMfullsuite. Current x8662/63 rawreviewed: full5,898,240voxel actual registered maskproduct passes34.57s, only diagnosticgate fails.14observedattempts/originalexpireddeadline retained. Prior62f ARM normmi/T2timeouts not fixed by unchangedscientificcases; preserve mergehold and no ownretry.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.0",
@@ -32604,8 +32628,8 @@
         "https://git.fmrib.ox.ac.uk/fsl/avwutils/-/raw/master/fslsplit.cc",
         "https://git.fmrib.ox.ac.uk/fsl/avwutils/-/raw/master/fslmerge.cc"
       ],
-      "arm64_attempts": 7,
-      "x86_64_attempts": 5,
+      "arm64_attempts": 8,
+      "x86_64_attempts": 6,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38374199970",
       "candidate_history": [
         {
@@ -32692,46 +32716,46 @@
         "reason": "Corrected fulltest/current candidate source requires a fresh root native build plus both upstream architecture builds;2 remaining attempts cannot complete that three-build lifecycle. Original native62/62 source proof retained. No failed source merged or substituted old proof."
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T05:15:25.250224+00:00",
-        "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
-        "run_id": 39001037271,
-        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271",
-        "status": "completed",
-        "conclusion": "failure",
+        "checked_at": "2026-10-17T08:23:39.246095+00:00",
+        "source_sha": "e5a0d98cddb5f254ed3d58ad3c4ec9f248806f2c",
+        "run_id": 39013054134,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39013054134",
+        "status": "in_progress",
+        "conclusion": null,
         "jobs": [
           {
-            "job_id": 117303854783,
+            "id": 117339506073,
             "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
-            "architecture": "aarch64",
-            "started_at": "2026-10-17T04:02:30Z",
-            "status": "completed",
-            "conclusion": "failure",
-            "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271/job/117303854783",
+            "status": "in_progress",
+            "conclusion": null,
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404-arm"
             ],
-            "active_steps": []
+            "started_at": "2026-10-17T07:17:27Z",
+            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39013054134/job/117339506073",
+            "active_steps": [
+              "Run deploy and fulltest checks"
+            ]
           },
           {
-            "job_id": 117303854813,
+            "id": 117339506081,
             "name": "candidate (pydeface | 2.1.0 | x86_64)",
-            "architecture": "x86_64",
-            "started_at": "2026-10-17T04:02:27Z",
             "status": "completed",
             "conclusion": "failure",
-            "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271/job/117303854813",
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404"
             ],
+            "started_at": "2026-10-17T07:17:23Z",
+            "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39013054134/job/117339506081",
             "active_steps": []
           }
         ],
         "dispatched_by_this_continuation": false,
-        "note": "Independently revised upstream head and actual live native candidate jobs. Original candidate/budget/blocker retained pending final reports and source review. Do not dispatch duplicates or treat historical native proof as this new source. External attempt history must be reconciled before any future retry."
+        "hypothesis": "Diagnostic setup supplies pinned perf tool and worker-contained package decompression. Actual fulltest test dictionaries, scientific fixtures/assertions/timeouts and deliberate review gate unchanged from62f. No scientific fix inferred from diagnostic-only changes."
       },
       "external_merge_hold": {
-        "checked_at": "2026-10-17T04:18:21.639978+00:00",
-        "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
+        "checked_at": "2026-10-17T08:22:06.901167+00:00",
+        "source_sha": "e5a0d98cddb5f254ed3d58ad3c4ec9f248806f2c",
         "reason": "Current independently revised fulltest explicitly adds Native ARM diagnosis requires review: unconditional exit1 with expected_exit_code0. Both candidate suites must fail this diagnostic review gate; scientific registration is explicitly not repaired/approved.",
         "next_action": "Retain actual diagnostic results and prior native62/62 separately. Do not remove/bypass the gate, claim current-source success, merge, or dispatch a duplicate. Await independently reviewed repair and all exact-source scientific/gate results."
       },
@@ -32746,13 +32770,23 @@
             "candidate_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09"
           },
           "reason": "Reconciled independently dispatched upstream candidate matrices after the original investigation expired; no new local dispatch."
+        },
+        {
+          "checked_at": "2026-10-17T08:22:06.901167+00:00",
+          "previous": {
+            "attempts": 12,
+            "arm64_attempts": 7,
+            "x86_64_attempts": 5,
+            "deadline": "2026-10-13T19:35:00+00:00"
+          },
+          "reason": "Two independent upstream jobs; do not renew old investigation limits."
         }
       ],
       "external_attempt_audit": {
         "recipe": "pydeface",
         "upstream_candidate_attempts_by_architecture": {
-          "aarch64": 5,
-          "x86_64": 5
+          "aarch64": 6,
+          "x86_64": 6
         },
         "runs": [
           {
@@ -32938,23 +32972,69 @@
                 ]
               }
             ]
+          },
+          {
+            "source_sha": "e5a0d98cddb5f254ed3d58ad3c4ec9f248806f2c",
+            "run_id": 39013054134,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39013054134",
+            "run_status": "in_progress",
+            "run_conclusion": null,
+            "jobs": [
+              {
+                "job_id": 117339506073,
+                "architecture": "aarch64",
+                "id": 117339506073,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "status": "in_progress",
+                "conclusion": null,
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "started_at": "2026-10-17T07:17:27Z",
+                "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39013054134/job/117339506073",
+                "active_steps": [
+                  "Run deploy and fulltest checks"
+                ]
+              },
+              {
+                "job_id": 117339506081,
+                "architecture": "x86_64",
+                "id": 117339506081,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "started_at": "2026-10-17T07:17:23Z",
+                "html_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39013054134/job/117339506081",
+                "active_steps": []
+              }
+            ]
           }
         ],
         "policy": "Count every non-skipped candidate job reservation, retaining cancelled/unstarted attempts. Carried successes with identical run/name/start are not rebuilt attempts. These independent external jobs do not expand local authorization.",
-        "checked_at": "2026-10-17T04:26:24.548610+00:00",
+        "checked_at": "2026-10-17T08:22:06.901167+00:00",
         "root_native_attempts": 2,
-        "total_recorded_attempts": 12,
+        "total_recorded_attempts": 14,
         "local_max_build_attempts": 6,
         "original_deadline": "2026-10-13T19:35:00+00:00",
         "note": "Original counters/clocks retained in history. Independent external work is observed, not authorization to dispatch or reset budgets. No newer root workflow runs exist after Oct15; no duplicated green native builds."
       },
       "external_current_source_evidence": {
         "x86_64": {
-          "checked_at": "2026-10-17T04:32:42.629774+00:00",
-          "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
-          "run_id": 39001037271,
-          "job_id": 117303854813,
-          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271/job/117303854813",
+          "deploy_counts": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          "checked_at": "2026-10-17T08:22:34.950182+00:00",
+          "source_sha": "e5a0d98cddb5f254ed3d58ad3c4ec9f248806f2c",
+          "run_id": 39013054134,
+          "job_id": 117339506081,
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39013054134/job/117339506081",
           "architecture": "x86_64",
           "report": {
             "schema_version": 3,
@@ -32966,10 +33046,10 @@
             "build_date": "20261017",
             "docker_archive": "pydeface_2.1.0_20261017.docker.tar",
             "sif": "pydeface_2.1.0_20261017.simg",
-            "candidate_tag": "nd-candidate-pydeface:62f355c77b9b",
+            "candidate_tag": "nd-candidate-pydeface:e5a0d98cddb5",
             "launcher": "pydeface",
             "pr_number": 3580,
-            "head_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
+            "head_sha": "e5a0d98cddb5f254ed3d58ad3c4ec9f248806f2c",
             "tests": {
               "total": 63,
               "passed": 62,
@@ -33067,7 +33147,7 @@
             "pydeface with missing input",
             "pydeface with invalid cost function"
           ],
-          "full_mask_product_case_seconds": 40.9725124835968,
+          "full_mask_product_case_seconds": 34.57318091392517,
           "metrics": {
             "voxels": 5898240,
             "removed": 1076215,
@@ -33075,176 +33155,58 @@
             "nifti_quantization_bound": 0.010797647
           },
           "scope": "Actual current x86 registration/full mask product and version closure succeed. Complete suite and merge remain failed by deliberate review gate; ARM registration remains unproven. No clinical accuracy, architecture parity, root-source equivalence or published release claim."
-        },
-        "aarch64": {
+        }
+      },
+      "external_source_evidence_history": [
+        {
+          "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
+          "tracking_commit_sha": "78e1086cbd01b276895e9e57ef6b61f63bb965b5",
+          "tracking_path": "upstream/queue.json",
+          "container": "pydeface",
+          "json_field": "external_current_source_evidence",
+          "outcomes": "Full raw ARM60/63 (normmi/T2timeouts and diagnosticgate), x8662/63 (diagnosticgate), everyvoxel mask-product successes and failed profiler preflight retained at immutable tracking commit."
+        }
+      ],
+      "external_observation_history": [
+        {
           "checked_at": "2026-10-17T05:15:25.250224+00:00",
           "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
           "run_id": 39001037271,
-          "job_id": 117303854783,
-          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271/job/117303854783",
-          "architecture": "aarch64",
-          "report": {
-            "schema_version": 3,
-            "recipe": "pydeface",
-            "container": "pydeface_arm64",
-            "variant": "arm64",
-            "architecture": "aarch64",
-            "version": "2.1.0",
-            "build_date": "20261017",
-            "docker_archive": "pydeface_arm64_2.1.0_20261017.docker.tar",
-            "sif": "pydeface_arm64_2.1.0_20261017.simg",
-            "candidate_tag": "nd-candidate-pydeface_arm64:62f355c77b9b",
-            "launcher": "pydeface",
-            "pr_number": 3580,
-            "head_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
-            "tests": {
-              "total": 63,
-              "passed": 60,
-              "failed": 3,
-              "skipped": 0,
-              "fulltest_total": 62,
-              "fulltest_passed": 59,
-              "fulltest_failed": 3,
-              "suites_total": 1,
-              "suites_passed": 0,
-              "passed_tests": [
-                "Simple Deploy Bins/Path Test",
-                "pydeface version check",
-                "pydeface help",
-                "Basic defacing with default output",
-                "Defacing with custom output path",
-                "Defacing with force overwrite",
-                "Defacing with mutualinfo cost",
-                "Defacing with corratio cost",
-                "Defacing with normcorr cost",
-                "Defacing with leastsq cost",
-                "Defacing with applyto single image",
-                "Defacing with nocleanup",
-                "Defacing with verbose output",
-                "FSL flirt version check",
-                "FSL flirt basic registration",
-                "FSL flirt with mutualinfo cost",
-                "FSL flirt apply transform",
-                "FSL convert_xfm invert",
-                "FSL fslstats basic",
-                "FSL fslstats volume"
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271",
+          "status": "completed",
+          "conclusion": "failure",
+          "jobs": [
+            {
+              "job_id": 117303854783,
+              "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+              "architecture": "aarch64",
+              "started_at": "2026-10-17T04:02:30Z",
+              "status": "completed",
+              "conclusion": "failure",
+              "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271/job/117303854783",
+              "labels": [
+                "blacksmith-8vcpu-ubuntu-2404-arm"
               ],
-              "failed_tests": [
-                "Defacing with normmi cost",
-                "Deface T2 image",
-                "Native ARM diagnosis requires review"
-              ]
+              "active_steps": []
             },
-            "dive": {
-              "status": "success",
-              "failed_checks": [],
-              "inefficient_files": [
-                {
-                  "count": 4,
-                  "wasted_space": "2.7 MB",
-                  "path": "/var/cache/debconf/templates.dat"
-                },
-                {
-                  "count": 2,
-                  "wasted_space": "1.4 MB",
-                  "path": "/var/cache/debconf/templates.dat-old"
-                },
-                {
-                  "count": 4,
-                  "wasted_space": "830 kB",
-                  "path": "/var/log/dpkg.log"
-                },
-                {
-                  "count": 4,
-                  "wasted_space": "509 kB",
-                  "path": "/var/lib/dpkg/status"
-                },
-                {
-                  "count": 3,
-                  "wasted_space": "422 kB",
-                  "path": "/var/lib/dpkg/status-old"
-                }
+            {
+              "job_id": 117303854813,
+              "name": "candidate (pydeface | 2.1.0 | x86_64)",
+              "architecture": "x86_64",
+              "started_at": "2026-10-17T04:02:27Z",
+              "status": "completed",
+              "conclusion": "failure",
+              "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271/job/117303854813",
+              "labels": [
+                "blacksmith-8vcpu-ubuntu-2404"
               ],
-              "efficiency_percent": 99.9615,
-              "wasted_bytes": 6136821,
-              "wasted_bytes_display": "6.1 MB",
-              "user_wasted_percent": 0.0507
-            }
-          },
-          "outcome": "failed-runtime-and-diagnostic-gate",
-          "failed_cases": [
-            {
-              "name": "Defacing with normmi cost",
-              "status": "failed",
-              "message": "Timeout after 300s",
-              "duration": 300.023086309433,
-              "reported_return_code": 0,
-              "note": "Timeout return_code0 is a harness placeholder, not a successful command exit."
-            },
-            {
-              "name": "Deface T2 image",
-              "status": "failed",
-              "message": "Timeout after 300s",
-              "duration": 300.02509331703186,
-              "reported_return_code": 0,
-              "note": "Timeout return_code0 is a harness placeholder, not a successful command exit."
-            },
-            {
-              "name": "Native ARM diagnosis requires review",
-              "status": "failed",
-              "message": "Expected exit code 0, got 1",
-              "duration": 0.18417096138000488,
-              "reported_return_code": 1,
-              "note": "Intentional review gate returns1, expected0."
+              "active_steps": []
             }
           ],
-          "passed_functional_cases": 59,
-          "actual_zero_exit_passed_functional_commands": 55,
-          "explicitly_asserted_unusual_exits": [
-            {
-              "test": "FSL fslsplit check",
-              "expected_exit_code": 1
-            },
-            {
-              "test": "FSL fslmerge check",
-              "expected_exit_code": 1
-            },
-            {
-              "test": "pydeface with missing input",
-              "expected_exit_code": 1
-            },
-            {
-              "test": "pydeface with invalid cost function",
-              "expected_exit_code": 1
-            }
-          ],
-          "expected_negative_traceback_cases": [
-            "pydeface with missing input",
-            "pydeface with invalid cost function"
-          ],
-          "deploy_counts": {
-            "passed": 1,
-            "total": 1,
-            "failed": 0,
-            "skipped": 0
-          },
-          "full_mask_product_case_seconds": 109.49080920219421,
-          "metrics": {
-            "voxels": 5898240,
-            "removed": 1076007,
-            "retained": 4320559,
-            "nifti_quantization_bound": 0.010797647
-          },
-          "mutualinfo_case_seconds": 584.5039150714874,
-          "profiling_prerequisite": {
-            "outcome": "refused",
-            "stage": "preflight",
-            "reason": "Refusal: kernel-matched perf target missing",
-            "note": "No sampled perf attribution or profiling-based cause established."
-          },
-          "scope": "Fresh native ARM Docker/SIF/Dive passed. Full real mask-product/geometry/immutability and mutualinfo operation pass, but normmi/T2 require current300-second deadlines and fail. Entire port remains failed. Different official FSL versions/registration masks prevent bitwise architecture parity claims; no clinical accuracy, unsupportedARM-compiler conclusion or root-source equivalence."
+          "dispatched_by_this_continuation": false,
+          "note": "Independently revised upstream head and actual live native candidate jobs. Original candidate/budget/blocker retained pending final reports and source review. Do not dispatch duplicates or treat historical native proof as this new source. External attempt history must be reconciled before any future retry."
         }
-      }
+      ]
     },
     {
       "recipe": "qmrlab",
