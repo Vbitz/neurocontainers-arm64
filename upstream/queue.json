@@ -337,7 +337,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "bfe91f86b95672277ca43f30fba44febcb61a67a",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 5da4b94239d2fd521d0e8c5f803a200e50c7416f on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38532244949. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 5da4b94239d2fd521d0e8c5f803a200e50c7416f on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38532244949. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.0",
@@ -2043,7 +2043,7 @@
         }
       },
       "merged_sha": "6e1e85a267f49406e6825c0408856c4c9609ffbc",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source f58b9e6755f6af3db1753d44ba3b390270c7cde0 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38219752715. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source f58b9e6755f6af3db1753d44ba3b390270c7cde0 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38219752715. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "2.6.5",
@@ -2685,7 +2685,7 @@
         }
       },
       "merged_sha": "bf44d516939eeb90ab918bae634e4646fa8e4a1d",
-      "next_action": "Current source passed both actual upstream native suites and merged. Earlier root proof remains at7ad06c20, separately attributed; exact new-source root proof requires renewed budget (8/6 independently observed). Publication already verified for source d283242192109fce4d5f9914a41cf97abe98d1eb on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38283169300. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source. The separate final root-workflow run still awaits its existing explicit budget reply; publication does not close that gap.",
+      "next_action": "Current source passed both actual upstream native suites and merged. Earlier root proof remains at7ad06c20, separately attributed; exact new-source root proof requires renewed budget (8/6 independently observed). Publication already verified for source d283242192109fce4d5f9914a41cf97abe98d1eb on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38283169300. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged. The separate final root-workflow run still awaits its existing explicit budget reply; publication does not close that gap.",
       "upstream_review": {
         "exists": true,
         "version": "1.5.3",
@@ -3466,7 +3466,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "8ffc4cca756fd5099c7e1a65d22f93ad354da01f",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 5496bbdb1363839a80b7b582b8eb3e5bbd9f320f on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38208442867. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 5496bbdb1363839a80b7b582b8eb3e5bbd9f320f on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38208442867. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.00",
@@ -4866,7 +4866,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "138036e2f58a9c76df690537da4cd3e658a63e54",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source c7cb51ccc422a0c638094996abf253f6847c499b on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38339609045. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source c7cb51ccc422a0c638094996abf253f6847c499b on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38339609045. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.1.20260704",
@@ -5463,7 +5463,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "38251876538f054f265a3d2fed4304baf357dc2d",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 12dd9fd8e64ffa76ae7eeec61d82a884958ecfff on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38235908870. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 12dd9fd8e64ffa76ae7eeec61d82a884958ecfff on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38235908870. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.7",
@@ -6248,7 +6248,7 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T11:13:55.621506+00:00",
+        "checked_at": "2026-10-17T11:24:46.349200+00:00",
         "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "run_id": 39015848600,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
@@ -6285,7 +6285,7 @@
         "hypothesis": "Declare SynthStrip record16535634/version1.0.0 weights with SHA256 and get_file, install the checked archive with exact member assertion; separately parse CMakeCache line by line. This addresses the observed unvalidated ZIP download and cache-key parsing; no current scientific success established.",
         "dispatched_by_this_continuation": false,
         "note": "All scientific and diagnostic nonmergeeligible gates remain; no own dispatch or budget reset.",
-        "checkpoint_issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-6233194925"
+        "checkpoint_issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-6233320564"
       },
       "external_merge_hold": {
         "checked_at": "2026-10-17T08:19:08.820814+00:00",
@@ -7095,7 +7095,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "6cc801cddf421c6cfcfaee1bdf6c9c13a2f82ef8",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38210939803. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source fc5fe0b58ace1b4e9b4d8d6d54e66c37fe1bb1b8 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38210939803. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.8.2",
@@ -7495,7 +7495,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "ce4c5ca2886a75b0c259fb256d34bee216896f61",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source a481dbdd858a93571320960b3322002e65ac3e07 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38265545390. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source a481dbdd858a93571320960b3322002e65ac3e07 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38265545390. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.5.7",
@@ -8567,7 +8567,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "aa21a7df2d78c08b6f71e2a3d3af2b95d928b809",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 83de01a91c3fe525ddef4e60924c9b9797ad6371 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38248983163. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 83de01a91c3fe525ddef4e60924c9b9797ad6371 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38248983163. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.7.0",
@@ -9050,7 +9050,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "11609fe185ddad29d26d888fb153aeb1ef1a81c1",
-      "next_action": "Individual own-port PR is merged; original own-port/root-source evidence remains historical. Later independently tested update: Publication already verified for source 84bd8081a0f96225ff81b3580a733822bfe85113 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38936814782. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source. Do not relabel the original candidate as this later source.",
+      "next_action": "Individual own-port PR is merged; original own-port/root-source evidence remains historical. Later independently tested update: Publication already verified for source 84bd8081a0f96225ff81b3580a733822bfe85113 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38936814782. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged. Do not relabel the original candidate as this later source.",
       "upstream_review": {
         "exists": true,
         "version": "240320",
@@ -9928,7 +9928,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "ce9ce4b722cb0c6c6f9524faded05583cac61dc5",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 00d52a64cd5bc7dff2d4957d83b284d2fbe8f752 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38229766906. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 00d52a64cd5bc7dff2d4957d83b284d2fbe8f752 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38229766906. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.1.0",
@@ -11049,7 +11049,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "e35419a8aea87ae0c6024c3e29663e3c65612dd3",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 6569b8dbc61243e1880ee86d055542f9dff80dd5 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38227134210. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 6569b8dbc61243e1880ee86d055542f9dff80dd5 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38227134210. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.3",
@@ -11378,7 +11378,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "c634259f64a72b4f40f609db2048f666609044ec",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 27164b8a8a9f49c00e201b80769849f71833ba16 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38365154488. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 27164b8a8a9f49c00e201b80769849f71833ba16 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38365154488. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "20251008",
@@ -12318,7 +12318,7 @@
         }
       },
       "merged_sha": "c7f7754d1fbe036798049004e8d5e267468ff3e9",
-      "next_action": "Individual own-port PR is merged; original own-port/root-source evidence remains historical. Later independently tested update: Publication already verified for source 3a350c6ba6c242d7c258f1d2fd839dd678972caf on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/39004780986. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source. Do not relabel the original candidate as this later source.",
+      "next_action": "Individual own-port PR is merged; original own-port/root-source evidence remains historical. Later independently tested update: Publication already verified for source 3a350c6ba6c242d7c258f1d2fd839dd678972caf on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/39004780986. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged. Do not relabel the original candidate as this later source.",
       "upstream_review": {
         "exists": true,
         "version": "0.15.3",
@@ -13002,7 +13002,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "5c13f2e1cb89493c732394981ae780380e12b2fc",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 983b27d1fd8aecf2da4d0244053fe8479149864a on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38247345717. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 983b27d1fd8aecf2da4d0244053fe8479149864a on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38247345717. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.1.0",
@@ -13311,7 +13311,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "14f4ee815e739d12be6c379d0b5a6c74726a6bb7",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source d973046690b93979fa394715a2dd842c2f7b8d8e on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38227215604. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source d973046690b93979fa394715a2dd842c2f7b8d8e on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38227215604. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -13636,7 +13636,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "e1c866ef60cfe99f148e5e310eec25c1491fc75b",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 58ad6425526133992ec41cdc69046683888b66ed on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38309924254. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 58ad6425526133992ec41cdc69046683888b66ed on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38309924254. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -14289,7 +14289,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "e56f759dc30b5a099d7310ddc6221600f881ab40",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source f2defa075813417c1624535ceed618fd0927ffdc on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38692961701. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source f2defa075813417c1624535ceed618fd0927ffdc on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38692961701. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -15263,7 +15263,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "8f21006d83bbcf5c873352632347f7b6b7246694",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 02ade4a9595b5fe1cfea5ab09934169357f2d1da on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38503263365. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 02ade4a9595b5fe1cfea5ab09934169357f2d1da on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38503263365. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -15964,7 +15964,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "1f3d279ba4e8f36f0963be6da2da6eb9e6f8b9a5",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 4bfaf8ea40c71778b11058f8511eeb7199b47e43 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38324855490. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 4bfaf8ea40c71778b11058f8511eeb7199b47e43 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38324855490. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "6.0.7.23",
@@ -16334,7 +16334,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "30e2a13598847c1bef193b9efd3eea5ccefe754f",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source bba9c58d834c90e5fe99f6649679bf19ffd87334 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38221551205. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source bba9c58d834c90e5fe99f6649679bf19ffd87334 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38221551205. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.7",
@@ -16845,7 +16845,7 @@
         }
       },
       "merged_sha": "d93c0da6d0e8cf96c8e9e97a921a4d42ebea7db5",
-      "next_action": "Upstream revised and merged this PR independently; both exact-source suites94/94. Earlier root native proof remains attached to5b949c5e, not revised11049ac1. Root-current-source gap is recorded; no new dispatch beyond persistent budget. Publication already verified for source 11049ac1e499f13b68a5a150a0a94fa8fe2711fc on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38263440929. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source. The separate final root-workflow run still awaits its existing explicit budget reply; publication does not close that gap.",
+      "next_action": "Upstream revised and merged this PR independently; both exact-source suites94/94. Earlier root native proof remains attached to5b949c5e, not revised11049ac1. Root-current-source gap is recorded; no new dispatch beyond persistent budget. Publication already verified for source 11049ac1e499f13b68a5a150a0a94fa8fe2711fc on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38263440929. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged. The separate final root-workflow run still awaits its existing explicit budget reply; publication does not close that gap.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.0",
@@ -17680,7 +17680,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "b35e38baed8ba39f0ddc8707e0e98d52e32acf8a",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38258952820. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 07a3b2f42a7e92dcc575b9d3c9a7b4ab2f9ffda5 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38258952820. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "4.0.0",
@@ -19582,7 +19582,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "166ca77258277d97f563cc02e9d6be858cdb6f77",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38410722405. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source fc9ef1a5bb7da66c735c270f82d2e7dc7e6ea29f on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38410722405. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "3.3.1",
@@ -19977,7 +19977,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "bf78348b3a85e781049cd9e54ac9571077c0a1c8",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 20835db5be6559a46dd369e4982cfac77a46cb91 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38255340625. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 20835db5be6559a46dd369e4982cfac77a46cb91 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38255340625. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "2.0.1",
@@ -20955,7 +20955,7 @@
         }
       },
       "merged_sha": "6aca40899920a8dfe3cbfd503771ae34e333f239",
-      "next_action": "Final independently merged source passed both actual native upstream suites; the original root-workflow proof verifies earlier image inputs only. Root-current-source gap remains: no further own build is authorized within the exhausted original budget. Publication already verified for source 6fb4d1f46c2f4b41c0327b1a8abce66178075333 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38318568095. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source. The separate final root-workflow run still awaits its existing explicit budget reply; publication does not close that gap.",
+      "next_action": "Final independently merged source passed both actual native upstream suites; the original root-workflow proof verifies earlier image inputs only. Root-current-source gap remains: no further own build is authorized within the exhausted original budget. Publication already verified for source 6fb4d1f46c2f4b41c0327b1a8abce66178075333 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38318568095. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged. The separate final root-workflow run still awaits its existing explicit budget reply; publication does not close that gap.",
       "upstream_review": {
         "exists": true,
         "version": "1.13.1",
@@ -21909,7 +21909,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "d6d5aef5e968f942b2a7ad2e8f3f03619ab56b2b",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38251408959. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 926f5dc88396b1c3d41fef2ccb79e4b0392bbdf9 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38251408959. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "2.10.0",
@@ -22310,7 +22310,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "4565d2987d9a615d40819e434e7daff633270913",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source c7c1c3b78693ed04ddab60b14d18409c2991e197 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38472722310. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source c7c1c3b78693ed04ddab60b14d18409c2991e197 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38472722310. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.1.0",
@@ -23081,7 +23081,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "4fc38a9a81e211116231adaaca1706efb63c4d2b",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 170236a0a8af387d460df51fd6e299a711c32a57 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38340248971. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 170236a0a8af387d460df51fd6e299a711c32a57 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38340248971. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "4.1.1",
@@ -23432,7 +23432,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "b5f76ee4cdee68c127f1478cfd7cdec56811afce",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38317291245. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 4c6ab5e599aca1aa1144c7e958d6f18cac8d20c5 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38317291245. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.1.0",
@@ -23945,7 +23945,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "e40c9527bf4fe0434605b2d851300735f42a7e9e",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 0383fec6a76f59c56190fc67502a150bda24e492 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38220896254. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 0383fec6a76f59c56190fc67502a150bda24e492 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38220896254. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.2",
@@ -24470,7 +24470,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "75f93ed4bdb1f4ecbe5cb1b1ee3ba20025db881a",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 8e1bafeeb686ff1761ae31342fe5e4170c55a982 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38366996377. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 8e1bafeeb686ff1761ae31342fe5e4170c55a982 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38366996377. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.1.0",
@@ -25698,7 +25698,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "baf16d272a842d0d120a45cd034e421aa66f2475",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 8f6524de0ef725ef6c25486669c7bfe794978585 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38328855220. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 8f6524de0ef725ef6c25486669c7bfe794978585 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38328855220. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.2",
@@ -26031,7 +26031,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "fe6eeaeda4e781017870326f661d4f2d902f128e",
-      "next_action": "Individual own-port PR is merged; original own-port/root-source evidence remains historical. Later independently tested update: Publication already verified for source 1b64eedba421ea318435f220db170a5192e710d6 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/39006597358. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source. Do not relabel the original candidate as this later source.",
+      "next_action": "Individual own-port PR is merged; original own-port/root-source evidence remains historical. Later independently tested update: Publication already verified for source 1b64eedba421ea318435f220db170a5192e710d6 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/39006597358. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged. Do not relabel the original candidate as this later source.",
       "upstream_review": {
         "exists": true,
         "version": "1.13.2",
@@ -26746,7 +26746,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "9545cba27a176c0c9af44c03fe23c9962e71e531",
-      "next_action": "Individual own-port PR is merged; original own-port/root-source evidence remains historical. Later independently tested update: Publication already verified for source f874d12f605da513b3eddb380799416b5bf6df76 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/39007028913. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source. Do not relabel the original candidate as this later source.",
+      "next_action": "Individual own-port PR is merged; original own-port/root-source evidence remains historical. Later independently tested update: Publication already verified for source f874d12f605da513b3eddb380799416b5bf6df76 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/39007028913. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged. Do not relabel the original candidate as this later source.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.0",
@@ -27432,7 +27432,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "577a7335949d3f89a9ee30e9c89d06ea7a0f26fb",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source b8764c4d1150f58dafc62913167242a94fc96769 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38219491260. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source b8764c4d1150f58dafc62913167242a94fc96769 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38219491260. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.0.2",
@@ -27771,7 +27771,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "c29a42ecca709cda96875cd0cb6561861c5ba60e",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source f15b35a532a34d317e5a49d88d5b0bffebe1508d on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38352845517. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source f15b35a532a34d317e5a49d88d5b0bffebe1508d on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38352845517. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.20211006",
@@ -28337,7 +28337,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "a71ebf658d3abe213c855f5d5f9c9a6a5612958d",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 38748e19e52c7463700c5550e2bcbbed06d883ba on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38340524678. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 38748e19e52c7463700c5550e2bcbbed06d883ba on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38340524678. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "4.9.0",
@@ -28717,7 +28717,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "fc590d970f504a77b94c9a2936854d225dd11d80",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 282639d96241a8d858c0a53fa33dab645cee54e3 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38378984024. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 282639d96241a8d858c0a53fa33dab645cee54e3 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38378984024. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.9.2",
@@ -30851,7 +30851,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "71a77111e2ed10f36382f465f81e4692726aa709",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 10f4ed4f27db9bff6b37802241fca4ab61bec3fa on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38601113972. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 10f4ed4f27db9bff6b37802241fca4ab61bec3fa on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38601113972. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -31898,7 +31898,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "d110b5e1c632f312b23000380f6c5b0161bea80e",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source b2c74585de5d550a5dbd1c80cbfb91e943034d02 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38461903935. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source b2c74585de5d550a5dbd1c80cbfb91e943034d02 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38461903935. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "2.0.1",
@@ -32245,7 +32245,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "12ff48cd6220c32d699b5b5df98688bfa5de2040",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 85689c2ead33e71e549b830a2b4093f9cc2c3f3f on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38209000133. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 85689c2ead33e71e549b830a2b4093f9cc2c3f3f on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38209000133. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.7",
@@ -32529,7 +32529,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "4b7c56594d009bcf0d226760405c856603b38406",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 64d88b79ce7299c91813e28dfdc8b95375b6ab6e on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38215533821. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 64d88b79ce7299c91813e28dfdc8b95375b6ab6e on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38215533821. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.3.0",
@@ -34617,7 +34617,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "ff4961ece3a76e10456f7ba9a2207a5a4b0f3af6",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 730cde221c7617438a1a0d1d6f8ceaed47236b4f on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38332255414. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 730cde221c7617438a1a0d1d6f8ceaed47236b4f on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38332255414. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "3.0.0",
@@ -34967,7 +34967,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "0deef6a9f961e4e2e56e80c6ca646ba594b1751b",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source f29fad8a1acd06e56bf4e3c5b727472448b23dbc on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38453384443. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source f29fad8a1acd06e56bf4e3c5b727472448b23dbc on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38453384443. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.29.0",
@@ -35419,7 +35419,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "a5c2ee9a3cc631414ec188e820e4c89b1f8885b3",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 7a8c6946266afbf3d53ca438d6357c3e6699fc57 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38300069639. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 7a8c6946266afbf3d53ca438d6357c3e6699fc57 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38300069639. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.0",
@@ -35834,7 +35834,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "c265491023ae2d34beb9438c2b6e1ee2e5f3d5e5",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 091ad80b0b7659e848a03e07a3236a3cb6e8b41d on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38399214210. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 091ad80b0b7659e848a03e07a3236a3cb6e8b41d on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38399214210. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.7.0",
@@ -36253,7 +36253,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "6fd5191af670e314def4e49af3b01483a850ac7f",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 7e0a4afb361194694f9242d2858d8414580f6079 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38317861968. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 7e0a4afb361194694f9242d2858d8414580f6079 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38317861968. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.4",
@@ -36605,7 +36605,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "fdd1906d9b002208192973431f79c16ec577aca4",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 4b30a1173fbd09ce08b307cef621515d80cd82ea on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38304440005. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 4b30a1173fbd09ce08b307cef621515d80cd82ea on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38304440005. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "3.2.0",
@@ -36971,7 +36971,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "715ef20edbf68dc9bdebd0198cedbf5d7d1c0cfd",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 076a343f25133f11f1e4ceb10c7021bbc71f0c46 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38515958736. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 076a343f25133f11f1e4ceb10c7021bbc71f0c46 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38515958736. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "3.2.8",
@@ -37451,7 +37451,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "35d1a24902a68b0a0858d5ffe3f36753f0f84d1f",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 6410b7466ada12982d23dcacd26ec0eee6a96265 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38391289134. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 6410b7466ada12982d23dcacd26ec0eee6a96265 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38391289134. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "6.24.06",
@@ -37803,7 +37803,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "0fad280db53eb30a9f9dfe388d8f7f3543a881cf",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source c2b243ae0025f0010b3693176ec0656aab3993eb on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38336788177. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source c2b243ae0025f0010b3693176ec0656aab3993eb on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38336788177. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.7.0",
@@ -38438,7 +38438,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "4ddb930f409db55b5036fe347c7aef16095e1911",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source e23083920dbdf467fcf59abe8724421471c9d317 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38333663478. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source e23083920dbdf467fcf59abe8724421471c9d317 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38333663478. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.4",
@@ -39111,7 +39111,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "95beea83ed81b81a1dd75c927d9993e8c0ec1e30",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 8aec6b757626d3d868d2495cf330ad595c52cefe on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38331796384. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 8aec6b757626d3d868d2495cf330ad595c52cefe on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38331796384. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.4.7",
@@ -39664,7 +39664,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "8c5ac2847b77d5f6892f7531661b4b88c8fd3ae0",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 08e0b4a389c90485a7d99c030f0fedb6e39517b7 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38505207217. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 08e0b4a389c90485a7d99c030f0fedb6e39517b7 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38505207217. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.0",
@@ -40253,7 +40253,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "99cfe0286304f146935aa39d31fa2e579810610d",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source b39a7cf0fd97b9dd6d035b376fabfff59c5d4aad on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38463038213. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source b39a7cf0fd97b9dd6d035b376fabfff59c5d4aad on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38463038213. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "7.4.1",
@@ -40958,7 +40958,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "b68a3ddde7d036ea095c91123d27903f0629a829",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 7a570d44011695ac0b32a340b1d083ae8e30c822 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38363735112. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 7a570d44011695ac0b32a340b1d083ae8e30c822 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38363735112. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.1.5",
@@ -41297,7 +41297,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "1fa18adfc6c21a7b5ecd76e37e8f7d3d473346fb",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source cc59e4497daf24b768331b122fde8542134cdd00 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38362081096. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source cc59e4497daf24b768331b122fde8542134cdd00 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38362081096. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.11.10",
@@ -41793,7 +41793,7 @@
         }
       },
       "merged_sha": "33397bf941477438716487a3355c5379bc857fad",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38214465720. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source b23cbd4aebfaf291b7a20bc5670ad2e2e8a5d6e2 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38214465720. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "0.2.5",
@@ -42597,7 +42597,7 @@
         }
       },
       "merged_sha": "2533c632db33846a2e6cdd5e9cd646584277c65c",
-      "next_action": "Root native38677501278 proves1a3/2.9. Finalc757/2.10 independently passes fresh upstream nativeARM and x86123/123 but has no root-workflow exact-source native run. Changed installed inputs prevent equivalence. Needs explicit renewed window/eight-total authorization for one final root native build; reuse passing upstream reports. Publication already verified for source c757d0c0dd01b3c14ca5173cc1d92a98f408feb2 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38973893880. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source. The separate final root-workflow run still awaits its existing explicit budget reply; publication does not close that gap.",
+      "next_action": "Root native38677501278 proves1a3/2.9. Finalc757/2.10 independently passes fresh upstream nativeARM and x86123/123 but has no root-workflow exact-source native run. Changed installed inputs prevent equivalence. Needs explicit renewed window/eight-total authorization for one final root native build; reuse passing upstream reports. Publication already verified for source c757d0c0dd01b3c14ca5173cc1d92a98f408feb2 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38973893880. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged. The separate final root-workflow run still awaits its existing explicit budget reply; publication does not close that gap.",
       "upstream_review": {
         "exists": true,
         "version": "2.9.0",
@@ -43726,7 +43726,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "429d62e48e6cc1db9f460cd3ce6856aa1b542474",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source b95e9c42f7a97f19448ec5bb07f50056d1bdc014 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38352169423. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source b95e9c42f7a97f19448ec5bb07f50056d1bdc014 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38352169423. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.5.1",
@@ -44524,7 +44524,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "fcd49e63c00e6c20468f94864989621c3dddb5dd",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 8147957cc6a29ffc336dfe180638a9d032279862 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38515978343. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 8147957cc6a29ffc336dfe180638a9d032279862 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38515978343. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -44938,7 +44938,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "264a18c9fdd0362d7f8fb682b692c2b4ae7f0747",
-      "next_action": "Final independently revised source passed both actual native upstream suites and unchanged Dive gates; current-source root-workflow gap remains after6/6 observed builds. Earlier rootbea003f7 verifies earlier base only. No further own build within original budget. Publication already verified for source 387e00329c25cc4790951d8eb4b9d889e2f245e4 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38326367257. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source. The separate final root-workflow run still awaits its existing explicit budget reply; publication does not close that gap.",
+      "next_action": "Final independently revised source passed both actual native upstream suites and unchanged Dive gates; current-source root-workflow gap remains after6/6 observed builds. Earlier rootbea003f7 verifies earlier base only. No further own build within original budget. Publication already verified for source 387e00329c25cc4790951d8eb4b9d889e2f245e4 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38326367257. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged. The separate final root-workflow run still awaits its existing explicit budget reply; publication does not close that gap.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.0",
@@ -45623,7 +45623,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "2c65fa97b415a35a2855c45bbbe27df6bd394931",
-      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 845d83734f0b98b5c06514048528bccd6646a6c5 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38515999144. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this unchanged source.",
+      "next_action": "Individual PR merged and its source-specific runtime evidence is retained. Publication already verified for source 845d83734f0b98b5c06514048528bccd6646a6c5 on both architectures: https://github.com/neurodesk/neurocontainers/actions/runs/38515999144. Preserve that recorded trusted-artifact/metadata proof; no duplicate publication audit or build is required for this completed publication. Audit any newly observed promotion/artifact identity separately, even if its recipe commit is unchanged.",
       "upstream_review": {
         "exists": true,
         "version": "1.9.2.1",
@@ -46094,8 +46094,8 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T11:13:55.621506+00:00",
-    "top_level_base_commit": "5a61dc4c2c4f1e5ebe19dab949bbd94563e4e0e2",
+    "checked_at": "2026-10-17T11:24:46.349200+00:00",
+    "top_level_base_commit": "d45e8e95764de432f3d2d6bc8a4030f607f78ec4",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
     "upstream_fork_main_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
@@ -46134,7 +46134,7 @@
       }
     ],
     "last_goal_turn_classification": "progress",
-    "progress": "Reconciled64 stale publication next actions with existing trusted exact-source publication evidence. Four later-update sources remain separately attributed; all five final-root-workflow source gaps and seven pending budget replies preserved. No scientific/build/release evidence or budgets changed. BrainLes9564 ARM job is confirmed live; previous PyDefaced211 terminal failures remain recorded.",
+    "progress": "Corrected74 stale next actions:64 completed exact-publication audits,8 terminal publication blockers and2 completed test-only observations. Verified100 merged queue records have100 distinct PR URLs. All scientific evidence/statuses/budgets preserved, including five final root gaps and seven pending replies. New publication/artifact identities still require separate review even with unchanged recipe commit. BrainLes9564 native ARM job remains confirmed live; no new runtime result or own build.",
     "active_automatic_promotions": [],
     "pending_budget_replies": [
       "apptainer",
@@ -46254,6 +46254,7 @@
     "shared_fixes_already_merged": {
       "3541": "cf6a35afcc86b2b57519bad90a50f6ffc05fc0eb",
       "3621": "5e37b8e28939eb8e7348c1f492f5f96fa54d239e"
-    }
+    },
+    "reuse_scope": "Do not repeat a completed publication audit or successful scientific build for the same evidence. A newly observed promotion run, build date, artifact or metadata identity still requires separate source-specific publication review, even if the recipe commit is unchanged. No release-proof equivalence inferred from source equality alone."
   }
 }
