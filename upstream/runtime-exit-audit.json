@@ -1704,6 +1704,57 @@
         "json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes"
       ],
       "note": "Actual cached diagnostics match deliberate invalid-input fixtures. Legacy wrappers return0; these are negative/error-path tests, not successful conversions. The new synthetic real DICOM/BIDS operation passes without ignored exits and verifies exact output."
+    },
+    "brainles-preprocessing-9564-arm": {
+      "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
+      "run_id": 39015848600,
+      "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735063",
+      "reported_counts": {
+        "total": 19,
+        "passed": 18,
+        "failed": 1,
+        "skipped": 0,
+        "fulltest_total": 18,
+        "fulltest_passed": 17,
+        "fulltest_failed": 1,
+        "suites_total": 1,
+        "suites_passed": 0,
+        "passed_tests": [
+          "Simple Deploy Bins/Path Test",
+          "package imports",
+          "reports the packaged version",
+          "the preprocessor entry points import",
+          "the preprocessor console script runs",
+          "the hd-bet console script runs",
+          "the preprocessor atlas default is not a label",
+          "the SRI24 atlas is bundled",
+          "the atlas resolves without touching the network",
+          "the SynthStrip weights are bundled",
+          "the SynthStrip extractor imports",
+          "runs outside HOME",
+          "HD-BET weights are bundled",
+          "brain extraction is configurable from the CLI",
+          "the brain extractor imports",
+          "Native dependency closure and actual CPU tensor operation",
+          "Both actual native registration backends",
+          "HD-BET CPU inference inside the read-only SIF"
+        ],
+        "failed_tests": [
+          "SynthStrip extracts a brain on CPU"
+        ]
+      },
+      "synthstrip_scientific_assertions_completed": true,
+      "intentional_review_guard_exit": 1,
+      "synthstrip_command_seconds": 39.50857329368591,
+      "foreground_voxels": 176784,
+      "dive_failed_check": {
+        "name": "highestUserWastedPercent",
+        "actual_percent": 32.883261154506066,
+        "threshold_percent": 30.0
+      },
+      "scope": "Native ARM source build/Docker/SIF completed.17functional cases pass strict exit0 plus deploy3/3. SynthStrip diagnostic command completes its actual model and every existing mask/voxel/geometry/input/weight assertion before deliberately exiting1 at its explicit ARM review guard; it remains a failed test, not a green scientific suite. Both registration backends perform self-registration and transformation on the same96-cubed phantom, not general inter-subject accuracy. Actual HD-BET fold0 CPU inference is exercised;5checkpoint files are checked, not five-fold inference. Original-wheel CMake cache/ACL/compiler provenance, whole policy/ABI equivalence and release eligibility remain unresolved. Dive waste policy also fails; no threshold/assertion/gate changed or merge/publication claimed.",
+      "raw_test_results_sha256": "9720a2867afebb1754bc0be833cb52da64111771bc62f6db6209bd2fe426fbde",
+      "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-6235350064"
     }
   },
   "resolved_input_equivalences": [
