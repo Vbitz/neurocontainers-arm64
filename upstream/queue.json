@@ -5629,7 +5629,7 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3610",
       "upstream_ci": {},
       "merged_sha": null,
-      "next_action": "Current9564 x86 source now verified19/19/all18functionalzeroexits/deploy3/3 with real SynthStrip, both native self-registration backends and HD-BET. Observe same-source ARM build117347735063/run39015848600 and review terminal evidence; explicit DIAGNOSTIC_BLOCKED/mergeeligiblefalse stays,20actualattempts/oldclock preserved. No own retry, runtimeport, weaker assertions, publication or merge.",
+      "next_action": "Current9564 x86 source now verified19/19/all18functionalzeroexits/deploy3/3 with real SynthStrip, both native self-registration backends and HD-BET. Observe same-source ARM build117347735063/run39015848600 and review terminal evidence; explicit DIAGNOSTIC_BLOCKED/mergeeligiblefalse stays,20actualattempts/oldclock preserved. No own retry, runtimeport, weaker assertions, publication or merge. Official PyTorch v2.13.0/iDeep/oneDNN source-pin correspondence is now independently verified in external_configuration_review; original wheel/cache/ABI and native-runtime equivalence remain separate and unproven.",
       "upstream_review": {
         "exists": true,
         "version": "0.6.13",
@@ -6248,7 +6248,7 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T12:51:55.594214+00:00",
+        "checked_at": "2026-10-17T13:34:42.999183+00:00",
         "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "run_id": 39015848600,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
@@ -6898,7 +6898,39 @@
           "onednn_commit": "80afa71049cd69a3df32adcccb623b12cd7baa22",
           "openblas_commit": "62bcfb0dc9f1cfa685fc04135c50e2780c303137"
         },
-        "limitations": "This review does not prove declared tag/version correspondence, original-wheel build equivalence, native build/import success, complete source-policy compliance or scientific functionality. Preserve diagnostic hold and inspect exact terminal build/scientific evidence; no runtime port or own retry."
+        "limitations": "This review does not prove declared tag/version correspondence, original-wheel build equivalence, native build/import success, complete source-policy compliance or scientific functionality. Preserve diagnostic hold and inspect exact terminal build/scientific evidence; no runtime port or own retry.",
+        "official_pytorch_release_mapping": {
+          "checked_at": "2026-10-17T13:01:38.622571+00:00",
+          "candidate_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
+          "candidate_build_yaml_git_blob_sha": "f8195bda0b9bf992903a72ebe69fcb2f4da1d704",
+          "official_tag": {
+            "object": {
+              "sha": "cf30153c4c131c8164ee7798e5022d810682e2cb",
+              "type": "commit",
+              "url": "https://api.github.com/repos/pytorch/pytorch/git/commits/cf30153c4c131c8164ee7798e5022d810682e2cb"
+            },
+            "ref": "refs/tags/v2.13.0"
+          },
+          "torch_release_url": "https://github.com/pytorch/pytorch/tree/v2.13.0",
+          "torch_release_documentation_url": "https://github.com/pytorch/pytorch/blob/cf30153c4c131c8164ee7798e5022d810682e2cb/README.md#from-source",
+          "torch_release_ideep_gitlink": {
+            "html_url": "https://github.com/intel/ideep/tree/e087b6e4b32a7ba684db82231d1558123968ac1d",
+            "path": "third_party/ideep",
+            "sha": "e087b6e4b32a7ba684db82231d1558123968ac1d",
+            "submodule_git_url": "https://github.com/intel/ideep",
+            "type": "submodule"
+          },
+          "ideep_onednn_gitlink": {
+            "html_url": "https://github.com/intel/mkl-dnn/tree/80afa71049cd69a3df32adcccb623b12cd7baa22",
+            "path": "mkl-dnn",
+            "sha": "80afa71049cd69a3df32adcccb623b12cd7baa22",
+            "submodule_git_url": "https://github.com/intel/mkl-dnn.git",
+            "type": "submodule"
+          },
+          "candidate_pins_match_release_chain": true,
+          "scope": "Verifies released PyTorch source plus its declared iDeep/oneDNN gitlink identities and documented generic Linux source-install route. No claim that the README CPU-only Windows subsection establishes Linux ARM support. Original wheel/cache/ABI identity, ACL/BLAS provenance, whole-candidate policy compliance and native compile/import/scientific functionality remain separate questions. Feasibility-only/DIAGNOSTIC_BLOCKED/merge_eligible=false holds and original budget are unchanged.",
+          "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-6234188920"
+        }
       }
     },
     {
@@ -13953,7 +13985,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Await a directly applicable official correction (tagged or documented supported Git source) for the preserved all-fixed value-form final HDBSCAN construction, or documented equivalent public API that preserves the scientific operation/assertions. Currentmain helper is AST-identical tov1.3.0 and retains the observed raw-dictionary fallback. Git installation alone is not a remedy; no private patch, param-mode workaround, packaging-only success claim or unchanged native retry. Old1attempt/expiredwindow preserved.",
+      "next_action": "Await explicit renewed12-hour window, retaining1used/six-total cap, to try unmodifiedv1.3.0 with documented literal fixed HDBSCAN8/4. Released pure helpers prove all resolved UMAP/HDBSCAN values and fixed classification identical. Preserve72points/seeds/trials/ARI>0.9/persistence/reload/plots/360s and all other assertions; fix source-declared missing pytest deps and exact distribution0.7.0 expectation. No upstream library patch or source upgrade needed for this proposal. Current value-form native failure stays documented; no native success is claimed before fresh full proof.",
       "upstream_review": {
         "exists": true,
         "version": "1.3.0",
@@ -14029,6 +14061,70 @@
           "attempts_unchanged": 1,
           "original_deadline_unchanged": "2026-10-13T14:14:00+00:00",
           "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/94#issuecomment-6232986399"
+        },
+        "literal_fixed_configuration_proposal": {
+          "checked_at": "2026-10-17T13:29:40.236436+00:00",
+          "source_tag": "v1.3.0",
+          "source_url": "https://github.com/chrisfoulon/emuses/blob/v1.3.0/emuses/tools/optim_utils.py#L67",
+          "package_metadata_url": "https://github.com/chrisfoulon/emuses/blob/v1.3.0/setup.py#L5",
+          "pure_configuration_preflight": {
+            "original_hdbscan_encoding": {
+              "min_cluster_size": {
+                "value": 8
+              },
+              "min_samples": {
+                "value": 4
+              }
+            },
+            "proposed_hdbscan_encoding": {
+              "min_cluster_size": 8,
+              "min_samples": 4
+            },
+            "released_helpers_resolved_original": {
+              "umap": {
+                "n_neighbors": 8,
+                "min_dist": 0.1,
+                "n_components": 2,
+                "metric": "euclidean"
+              },
+              "hdbscan": {
+                "min_cluster_size": 8,
+                "min_samples": 4
+              }
+            },
+            "released_helpers_resolved_proposed": {
+              "umap": {
+                "n_neighbors": 8,
+                "min_dist": 0.1,
+                "n_components": 2,
+                "metric": "euclidean"
+              },
+              "hdbscan": {
+                "min_cluster_size": 8,
+                "min_samples": 4
+              }
+            },
+            "both_are_fixed": true,
+            "umap_parameters_metrics_and_trial_mode_identical": true,
+            "planned_all_scientific_assertions_unchanged": true,
+            "released_helpers_ast_sha256": {
+              "_make_unique_name": "318a31bdc71d6004ac9e8e1e4c85e1b7c59a3e6a6805a570a18a891c931829cb",
+              "_suggest_single": "70e24d82527bd5936498372c2dcdbc759996ed9944f5e5f6012d241de3df303c",
+              "suggest_parameters": "b6001f0f3852fd168cdb2b95e3f0a1ed5085d30d4be99687264b1fc21567a055",
+              "are_parameters_fixed": "74b46cdebad7811b1470e3bd6b19b3ab72fe3cfc1fee1ba6a5499c9c820686eb"
+            },
+            "scope": "Executed only four unmodified released pure configuration helpers, with deferred annotations and unused trial=None on fixed-value branches. No model fitting, substituted scientific implementation, native Linux ARM proof or recipe/test edit."
+          },
+          "proposed_changes": [
+            "Keep unmodified released EMUSES v1.3.0. Encode only HDBSCAN min_cluster_size8/min_samples4 as supported literal integers instead of value dictionaries.",
+            "Preserve all72points, seeds, UMAP parameters, fixed1outer/1inner trials, threads, every output/numerical/persistence/reload/plot assertion and360-second limit.",
+            "Install the source-declared missing pytest/pytest-asyncio dependencies with verified explicit compatible versions; assert the actual released distribution metadata0.7.0 separately from recipe/release version1.3.0."
+          ],
+          "public_pipeline_review": "Current main UMAPStage forwards optim_dict to train_and_save_umap_optim_with_nested_clustering, which forwards the same config into the unchanged inner_optimize_hdbscan. A public entry-point switch alone does not repair value-form fallback. Released literal fixed parameters preserve the exact intended fixed operation and avoid that invalid raw dictionary argument.",
+          "correction_to_prior_agent_note": "The earlier blanket prohibition on configuration-representation changes was an agent interpretation, not an AGENTS.md requirement. The upstream-supported literal encoding preserves the same resolved model parameters and fixed trial mode; no optimization-mode substitution or weakened scientific assertion is proposed. The upstream value-dictionary bug remains documented and unfixed; no claim that every config syntax works.",
+          "native_proof_status": "not-run; pure config resolution is not native model/runtime proof",
+          "budget_requirement": "Original12-hour window expired. Need explicit renewed12-hour window before recipe/test edits or dispatch. Preserve1used attempt and existing six-total cap; one native plus two upstream jobs would bring total to4, leaving2within existing cap.",
+          "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/94#issuecomment-6234455302"
         }
       },
       "official_prerequisite_release_recheck": {
@@ -14044,6 +14140,19 @@
         "report_path": "upstream/blocker-release-recheck.json",
         "attempts_unchanged": 1,
         "original_deadline_unchanged": "2026-10-13T14:14:00+00:00"
+      },
+      "pending_budget_question": {
+        "asked_at": "2026-10-17T13:31:28.856353+00:00",
+        "answered": false,
+        "requested_window_hours": 12,
+        "requested_max_build_attempts": 6,
+        "attempts_already_used": 1,
+        "existing_max_build_attempts": 6,
+        "original_deadline_unchanged": "2026-10-13T14:14:00+00:00",
+        "reason": "Released literal fixed-parameter encoding has identical pure resolution/trial classification and preserves all scientific assertions; candidate needs renewed elapsed window, no count increase. No recipe/test edit or build until explicit reply.",
+        "proposal_issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/94#issuecomment-6234455302",
+        "request_accepted_by_tool": true,
+        "tool_acceptance_is_not_user_approval": true
       }
     },
     {
@@ -46243,8 +46352,8 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T12:52:59.567891+00:00",
-    "top_level_base_commit": "ed1edc38aaaa5d74918c75f9f3100a14e0620ba1",
+    "checked_at": "2026-10-17T13:34:42.999183+00:00",
+    "top_level_base_commit": "663e9ce31a9c7f5ccef1741bff0307fafad826ed",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
     "upstream_fork_main_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
@@ -46267,7 +46376,7 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Observe exact BrainLes9564 ARMjob117347735063/run39015848600. Preserve PyDefaceb50 normmi failure and explicit review hold; correct diagnostic termination contract is needed for usable attribution, then a concrete supported runtime/resource remedy and renewed allowance before any own edits/builds. Seven existing budget replies pending; full goal incomplete.",
+    "next_action": "Observe BrainLes9564 ARMjob117347735063/run39015848600 and tracked PR heads. EMUSES concrete supported-literal configuration candidate awaits explicit window reply before edits/dispatch; preserve all old counts/windows and eight pending budget questions. Review actual new-source evidence without repeating successful builds; full goal incomplete.",
     "live_external_jobs": [
       {
         "recipe": "brainles-preprocessing",
@@ -46283,11 +46392,12 @@
       }
     ],
     "last_goal_turn_classification": "progress",
-    "progress": "Exact PyDefaceb50 ARM terminal61/63 reviewed; normmi300.020s and diagnostic review gate fail. ExistingT2case276.09s now passes within unchanged300; no stable performance fix claimed. Every5898240voxel maskproduct103.32s and mutualinfo527.80s pass. Profiler handshake reaches preflight recorder exit; explicit SIGINT leads to receipt-2 rejected by nonzero-status guard, no admitted FSL capture/source attribution. Same-source x8662/63 proof retained.18observedattempts/oldcap/window preserved; BrainLes9564 ARM remains building.",
+    "progress": "Official BrainLes Torch2.13.0/iDeep/oneDNN pin chain independently matched primary Git objects; original wheel/cache/ABI and native/runtime holds remain. EMUSES released pure helpers resolve literal HDBSCAN8/4 exactly identically to original value-form settings, preserving fixed mode/all72point scientific assertions; concrete v1.3 config/dependency/metadata candidate documented. Requested renewed12-hour window with1used/six-total cap unchanged; no recipe/test edits or new build. Eight budget questions pending; BrainLes existing ARM job remains live.",
     "active_automatic_promotions": [],
     "pending_budget_replies": [
       "apptainer",
       "elastix",
+      "emuses",
       "gigaconnectome",
       "glmsingle",
       "julia",
@@ -46296,9 +46406,12 @@
     ],
     "verified_published_recipe_count": 64,
     "catalog_architecture_record_count": 128,
-    "total_pending_budget_questions": 7,
+    "total_pending_budget_questions": 8,
     "pending_runtime_followup_budget_questions": [
       "glmsingle"
+    ],
+    "pending_new_recipe_window_questions": [
+      "emuses"
     ]
   },
   "completed_publication_queue_reconciliation": {
