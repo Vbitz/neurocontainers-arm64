@@ -6248,7 +6248,7 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T10:41:27.570489+00:00",
+        "checked_at": "2026-10-17T10:56:20.367424+00:00",
         "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "run_id": 39015848600,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
@@ -13945,7 +13945,7 @@
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Await directly applicable official released scientific-pipeline correction; preserve failed source/test evidence without accepting or publishing candidate.",
+      "next_action": "Await a directly applicable official correction (tagged or documented supported Git source) for the preserved all-fixed value-form final HDBSCAN construction, or documented equivalent public API that preserves the scientific operation/assertions. Currentmain helper is AST-identical tov1.3.0 and retains the observed raw-dictionary fallback. Git installation alone is not a remedy; no private patch, param-mode workaround, packaging-only success claim or unchanged native retry. Old1attempt/expiredwindow preserved.",
       "upstream_review": {
         "exists": true,
         "version": "1.3.0",
@@ -14000,7 +14000,28 @@
         "functional_total": 4,
         "note": "Current released EMUSES v1.3.0 builds natively on ARM64, converts to SIF and passes deploy plus original help/import tests, but strict runtime proof fails:3/5 aggregate,2/4 functional. pip check reports missing pytest/pytest-asyncio required by released setup.py (its embedded distribution version is0.7.0, distinct from release tag1.3.0). The actual nested UMAP/HDBSCAN pipeline fits the embedding and initial clusterer, then all-fixed documented parameter configuration fails when inner_optimize_hdbscan falls back to raw {value:...} dictionaries and passes them to final HDBSCAN instead of integers: ValueError: Min samples and min cluster size must be integers! Released clustering_utils.py lines223-256 confirm the cause. Other released helper API errors were also observed statically. Latest official release remainsv1.3.0; no directly applicable released fix found. This is an upstream application runtime defect, not evidence of an ARM64 compiler limitation. Adding packaging dependencies alone cannot repair scientific pipeline execution. Preserve the failing capability check and experimental branch; no application patch, substituted implementation, parameter-mode workaround or ignored error. Revisit with an official released correction for fixed-parameter final-model construction and complete dependency metadata, then retest actual outputs/model persistence.",
         "classification": "upstream-application-runtime-not-arm-compiler",
-        "reviewed_at": "2026-10-13T02:35:35.739087+00:00"
+        "reviewed_at": "2026-10-13T02:35:35.739087+00:00",
+        "main_source_review": {
+          "checked_at": "2026-10-17T10:46:51.368430+00:00",
+          "source_head": "2e2013e1cda26979588e87e8bff078762e1bb758",
+          "official_installation_url": "https://github.com/chrisfoulon/emuses",
+          "source_file_url": "https://github.com/chrisfoulon/emuses/blob/2e2013e1cda26979588e87e8bff078762e1bb758/emuses/tools/clustering_utils.py#L222",
+          "function": "inner_optimize_hdbscan",
+          "release_tag": "v1.3.0",
+          "release_function_ast_sha256": "c7a71bd4691656758a85fe19d8f59b0d9838f4bcb35e129f06840fbad281176b",
+          "current_function_ast_sha256": "c7a71bd4691656758a85fe19d8f59b0d9838f4bcb35e129f06840fbad281176b",
+          "latest_commit_changed_files": [
+            ".codebase-memory/adr.md",
+            "STATUS.md",
+            "dev-docs/methodology/bbs_disconnectome_run_plan.md",
+            "tests/regression/test_numerical_regression.py"
+          ],
+          "finding": "Official README supports Git installation, but the exact helper behind the preserved released value-form all-fixed parameter failure is unchanged structurally in current main. It still forwards raw value dictionaries into final HDBSCAN when Optuna best_params is empty. The recent confidence-guard commit provides no directly matching helper correction.",
+          "scope": "Limited read-only recipe-relevant helper/README/setup review. No new native run; no blanket claim that every newer CLI route is unusable. A newly documented API preserving the same fixed-parameter scientific operation would need separate evidence, not a switch of parameter mode merely to evade the failed capability.",
+          "attempts_unchanged": 1,
+          "original_deadline_unchanged": "2026-10-13T14:14:00+00:00",
+          "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/94#issuecomment-6232986399"
+        }
       },
       "official_prerequisite_release_recheck": {
         "checked_at": "2026-10-17T06:02:50.413796+00:00",
@@ -33584,7 +33605,7 @@
         "reason": "Corrected fulltest/current candidate source requires a fresh root native build plus both upstream architecture builds;2 remaining attempts cannot complete that three-build lifecycle. Original native62/62 source proof retained. No failed source merged or substituted old proof."
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T10:41:27.570489+00:00",
+        "checked_at": "2026-10-17T10:56:20.367424+00:00",
         "source_sha": "d2117de849159ca8d66f18a227851086ecfaba1f",
         "run_id": 39022650295,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39022650295",
@@ -45873,8 +45894,8 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T10:41:27.570489+00:00",
-    "top_level_base_commit": "fc4033b65eaf5ad43f839dab52434a89daaddfab",
+    "checked_at": "2026-10-17T10:56:20.367424+00:00",
+    "top_level_base_commit": "59107faf80f410f9b98e804852ac78119c7ddc4c",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
     "upstream_fork_main_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
@@ -45897,7 +45918,7 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Observe exact BrainLes9564 ARMjob117347735063/run39015848600 and PyDefaced211 ARMjob117367411343/run39022650295; review actual terminal errors/raw scientific results. No publisher jobs remain active in scope. GLMsingle official unmodified-source upgrade is feasible but needs explicit budget reply before edits/dispatch; six older budget questions also pending. Keep all original clocks/counts and historical source proofs; full goal incomplete.",
+    "next_action": "Review exact BrainLes9564/run39015848600 and PyDefaced211/run39022650295 ARM terminal reports when available. Preserve diagnostic holds, all original counts/windows, historical source proofs and pending seven budget replies. GLMsingle source upgrade awaits explicit bounded renewal; do not repeat successful builds. Full goal incomplete.",
     "live_external_jobs": [
       {
         "recipe": "brainles-preprocessing",
@@ -45925,12 +45946,13 @@
       }
     ],
     "last_goal_turn_classification": "progress",
-    "progress": "MNEExtended laterf874 publication verified on both architectures against trusted previews/committed metadata/publicSIFs; original failed promotion retained historically. Fork067 normalFF/Actionsdisabled, all128catalog entries/64verifiedpublishedrecipes match current source-specific evidence. New GLMsingle official Git-install documentation removes unnecessary waiting-for-tag prerequisite; pinned9b7 fix includes33core-model commits and package metadata change, full scientific retest proposed, max9/renewed12h requested with6used preserved. No recipe/test edits or own builds.",
+    "progress": "Read-only EMUSES supported-source review: currentmain2e2013 and releasev1.3.0 have AST-identical inner_optimize_hdbscan; raw fixed value dictionaries still reach final HDBSCAN in the preserved failed operation. Official Git installation is supported, but the recent confidence guard is not a matching correction. Limited helper review does not rule out all newer public APIs. Durable issue94comment6232986399. No new builds or recipe edits; BrainLes9564 and PyDefaced211 ARM jobs still active.",
     "active_automatic_promotions": [],
     "pending_budget_replies": [
       "apptainer",
       "elastix",
       "gigaconnectome",
+      "glmsingle",
       "julia",
       "tractseg",
       "workshopdemo"
