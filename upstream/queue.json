@@ -12146,14 +12146,130 @@
               "build_sif_deploy_fulltest_dive_manifest_and_final_gates": "success"
             }
           },
-          "scope": "Independent later automatic software update after the original port PR3537 completed. Both current-version upstream compact runtime reports/native fresh Docker-SIF gates reviewed; individual raw scientific commands not re-audited here. Original root0.15.3 proof remains at its source/version and is not attributed to0.15.4. No extra own PR, root build, upstream build or release promotion.",
+          "scope": "Independent later automatic software update after own portPR3537. Both fresh native Docker/SIF/fulltest/Dive/final gates and all87 actual exit contracts reviewed; eight real deployed-launcher HTTP/file-content checks pass, schemas/functions parsed. Browser WebAssembly DICOM validation itself not executed by this suite; no clinical claim. Original root0.15.3 proof remains at its source/version, not0.15.4. No new own PR/build/promotion.",
           "publication_observation": {
-            "checked_at": "2026-10-17T08:22:06.901167+00:00",
+            "checked_at": "2026-10-17T08:37:13.144537+00:00",
             "run_id": 39004780986,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39004780986",
             "status": "in_progress",
             "conclusion": null,
             "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained."
+          },
+          "raw_scientific_review": {
+            "aarch64": {
+              "checked_at": "2026-10-17T08:34:05.518411+00:00",
+              "source_sha": "3a350c6ba6c242d7c258f1d2fd839dd678972caf",
+              "actual_functional_commands": 87,
+              "all_functional_exit_codes": 0,
+              "deploy_counts": {
+                "total": 1,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0
+              },
+              "http_cases": [
+                {
+                  "name": "Web server can start",
+                  "duration_seconds": 1.2071433067321777,
+                  "stdout": "Verified deployed Dicompare HTTP: start"
+                },
+                {
+                  "name": "Web server serves index.html",
+                  "duration_seconds": 1.1996917724609375,
+                  "stdout": "Verified deployed Dicompare HTTP: index"
+                },
+                {
+                  "name": "Web server serves favicon",
+                  "duration_seconds": 1.210054636001587,
+                  "stdout": "Verified deployed Dicompare HTTP: favicon"
+                },
+                {
+                  "name": "Web server serves manifest.json",
+                  "duration_seconds": 1.1807096004486084,
+                  "stdout": "Verified deployed Dicompare HTTP: manifest"
+                },
+                {
+                  "name": "Web server serves schema files",
+                  "duration_seconds": 1.2079575061798096,
+                  "stdout": "Verified deployed Dicompare HTTP: schemas"
+                },
+                {
+                  "name": "Web server serves validation functions",
+                  "duration_seconds": 1.4252870082855225,
+                  "stdout": "Verified deployed Dicompare HTTP: functions"
+                },
+                {
+                  "name": "Web server single page mode works",
+                  "duration_seconds": 1.214709997177124,
+                  "stdout": "Verified deployed Dicompare HTTP: spa"
+                },
+                {
+                  "name": "Browser application and Pyodide worker assets are served",
+                  "duration_seconds": 1.2644972801208496,
+                  "stdout": "Verified deployed Dicompare HTTP: bundle"
+                }
+              ],
+              "raw_test_results_sha256": "12b14e9dd4410ded3a5552cc4377eb4606478e2a29352c4d2c4227811ceb3e65",
+              "fulltest_suite_sha256": "2d40d9e84bc0e31b76683794d2e4bb8d5e015b352c369f5272de7ea9e9cdf10e",
+              "scope": "Eight operations start actual deployed dicompare launcher, assert HTTP200 and exact served file bytes, JSON schema/function content, SPA routing, JavaScript/CSS MIME and built Pyodide worker delivery without HTML fallback. All indexed schemas/functions parsed. This verifies native web serving and assets, not execution of browser WebAssembly DICOM protocol validation or clinical correctness."
+            },
+            "x86_64": {
+              "checked_at": "2026-10-17T08:34:05.534825+00:00",
+              "source_sha": "3a350c6ba6c242d7c258f1d2fd839dd678972caf",
+              "actual_functional_commands": 87,
+              "all_functional_exit_codes": 0,
+              "deploy_counts": {
+                "total": 1,
+                "passed": 1,
+                "failed": 0,
+                "skipped": 0
+              },
+              "http_cases": [
+                {
+                  "name": "Web server can start",
+                  "duration_seconds": 1.1346702575683594,
+                  "stdout": "Verified deployed Dicompare HTTP: start"
+                },
+                {
+                  "name": "Web server serves index.html",
+                  "duration_seconds": 1.1366090774536133,
+                  "stdout": "Verified deployed Dicompare HTTP: index"
+                },
+                {
+                  "name": "Web server serves favicon",
+                  "duration_seconds": 1.137343168258667,
+                  "stdout": "Verified deployed Dicompare HTTP: favicon"
+                },
+                {
+                  "name": "Web server serves manifest.json",
+                  "duration_seconds": 1.152071475982666,
+                  "stdout": "Verified deployed Dicompare HTTP: manifest"
+                },
+                {
+                  "name": "Web server serves schema files",
+                  "duration_seconds": 1.1420447826385498,
+                  "stdout": "Verified deployed Dicompare HTTP: schemas"
+                },
+                {
+                  "name": "Web server serves validation functions",
+                  "duration_seconds": 1.2129285335540771,
+                  "stdout": "Verified deployed Dicompare HTTP: functions"
+                },
+                {
+                  "name": "Web server single page mode works",
+                  "duration_seconds": 1.1363718509674072,
+                  "stdout": "Verified deployed Dicompare HTTP: spa"
+                },
+                {
+                  "name": "Browser application and Pyodide worker assets are served",
+                  "duration_seconds": 1.2012856006622314,
+                  "stdout": "Verified deployed Dicompare HTTP: bundle"
+                }
+              ],
+              "raw_test_results_sha256": "df3ff4e22e143b0808d73e39523e0c0ecb92ee6bcf20d0bb3f700b8f1ab43456",
+              "fulltest_suite_sha256": "2d40d9e84bc0e31b76683794d2e4bb8d5e015b352c369f5272de7ea9e9cdf10e",
+              "scope": "Eight operations start actual deployed dicompare launcher, assert HTTP200 and exact served file bytes, JSON schema/function content, SPA routing, JavaScript/CSS MIME and built Pyodide worker delivery without HTML fallback. All indexed schemas/functions parsed. This verifies native web serving and assets, not execution of browser WebAssembly DICOM protocol validation or clinical correctness."
+            }
           }
         }
       ]
@@ -25694,7 +25810,7 @@
           },
           "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source.",
           "publication_observation": {
-            "checked_at": "2026-10-17T08:22:06.901167+00:00",
+            "checked_at": "2026-10-17T08:37:14.208397+00:00",
             "run_id": 39006597358,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358",
             "status": "queued",
@@ -26355,7 +26471,7 @@
           },
           "scope": "Independent later VS Code1.142.0 and pipeline-source update; both fresh native architecture candidates pass all gates and reviewed real operations. Original own port candidate/native evidence, counts and completed PR remain unchanged. No root-workflow proof or publication claim for this later source.",
           "publication_observation": {
-            "checked_at": "2026-10-17T08:22:06.901167+00:00",
+            "checked_at": "2026-10-17T08:37:15.259843+00:00",
             "run_id": 39007028913,
             "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
             "status": "queued",
@@ -44911,11 +45027,11 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T05:46:40.987940+00:00",
-    "top_level_base_commit": "06a7d2593c0114ae8cd73b080fbc7e2f4e8fa41d",
+    "checked_at": "2026-10-17T08:37:49.719220+00:00",
+    "top_level_base_commit": "3b99d10ba1cfa1eeecb6ddd7d6a69c9da1777c88",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
-    "upstream_fork_main_sha": "9981d1d79e63cd49670f6f0c44bd9a6583b7cea7",
+    "upstream_fork_main_sha": "371c24ac8aa01cc3015681a6b7b987aedda58a46",
     "inventory_status_counts": {
       "excluded-by-user": 17,
       "blocked-prerequisite": 2,
@@ -44935,39 +45051,74 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Resume existing BrainLes run39006288392/jobs117319413259and117319413295; no duplicate dispatch. Scientific/diagnostic merge holds remain. All six native-budget replies are pending. Observe queued automaticTractSeg publication; keep source/version-specific proof and goal incomplete.",
+    "next_action": "Resume live BrainLes9564/run39015848600 and PyDefacee5a0/run39013054134. Review terminal raw native scientific reports before changing recipe/merge status. TractSeg publication verified, later independent Dicompare/MNE/MNEExtended automatic promotions still observed separately. Six budget answers pending; full objective incomplete.",
     "live_external_jobs": [
       {
         "recipe": "brainles-preprocessing",
-        "source_sha": "1adb52a00862033fe0ec7642e2179326ce1700b4",
-        "run_id": 39006288392,
-        "job_id": 117319413259,
+        "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
+        "run_id": 39015848600,
+        "job_id": 117347735063,
         "status": "in_progress",
         "conclusion": null,
         "active_steps": [
           "Stage and build candidate"
-        ]
+        ],
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735063"
       },
       {
         "recipe": "brainles-preprocessing",
-        "source_sha": "1adb52a00862033fe0ec7642e2179326ce1700b4",
-        "run_id": 39006288392,
-        "job_id": 117319413295,
+        "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
+        "run_id": 39015848600,
+        "job_id": 117347735065,
         "status": "in_progress",
         "conclusion": null,
         "active_steps": [
           "Stage and build candidate"
-        ]
+        ],
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600/job/117347735065"
+      },
+      {
+        "recipe": "pydeface",
+        "source_sha": "e5a0d98cddb5f254ed3d58ad3c4ec9f248806f2c",
+        "run_id": 39013054134,
+        "job_id": 117339506073,
+        "status": "in_progress",
+        "conclusion": null,
+        "active_steps": [
+          "Run deploy and fulltest checks"
+        ],
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39013054134/job/117339506073"
       }
     ],
     "last_goal_turn_classification": "progress",
-    "progress": "Observed new independentBrainLes1adb preflight fix/current nativejobs and reconciled18actualattempts, preserving previousc496 results byimmutableGit reference. ForknormalFF9981, current183releaseapp records have no unresolvedtemplates; targetrecipe/release/buildertrees unchanged from prior metadataaudit. No own build/agent.",
+    "progress": "Reviewed later Dicompare0.15.4 raw reports: both88/88, all87actual exits0 and eight actual deployed-launcher HTTP/file/schema/function/JS/CSS/Pyodide-worker assertions pass; browser-side DICOM computation not claimed. Repaired stale global resume pointers. Three actual native jobs confirmed live and Dicompare automatic finalizer observed; no own build, duplicate PR or budget reset.",
     "active_automatic_promotions": [
       {
-        "recipe": "tractseg",
-        "run_id": 38973893880,
+        "recipe": "dicompare",
+        "checked_at": "2026-10-17T08:27:31.779501+00:00",
+        "run_id": 39004780986,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39004780986",
+        "status": "in_progress",
+        "conclusion": null,
+        "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained."
+      },
+      {
+        "recipe": "mne",
+        "checked_at": "2026-10-17T08:27:31.779501+00:00",
+        "run_id": 39006597358,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39006597358",
         "status": "queued",
-        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38973893880"
+        "conclusion": null,
+        "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained."
+      },
+      {
+        "recipe": "mneextended",
+        "checked_at": "2026-10-17T08:27:31.779501+00:00",
+        "run_id": 39007028913,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39007028913",
+        "status": "queued",
+        "conclusion": null,
+        "note": "Automatic promotion only observed; no new-source committed metadata/public-artifact verification or manual action. Original historical publication evidence retained."
       }
     ],
     "pending_budget_replies": [
