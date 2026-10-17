@@ -6248,7 +6248,7 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T13:34:42.999183+00:00",
+        "checked_at": "2026-10-17T14:07:03.422686+00:00",
         "source_sha": "9564b429c5b1cedb29524592672d1a56eabdd01d",
         "run_id": 39015848600,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39015848600",
@@ -29393,13 +29393,13 @@
       "port_files": [
         "recipes/nftsim/build.yaml"
       ],
-      "status": "blocked-verification-budget",
+      "status": "failed-runtime",
       "branch": "arm64/upstream-nftsim-current-proof-20261012",
       "baseline_sha": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
       "candidate_sha": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
       "started_at": "2026-10-12T12:46:00+00:00",
       "deadline": "2026-10-13T00:46:00+00:00",
-      "attempts": 6,
+      "attempts": 8,
       "run_id": 38285990994,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3514",
       "upstream_ci": {
@@ -29494,7 +29494,7 @@
         "x86_64_status": "cancelled-unstarted-after-known-ARM-timeout; attempt reservation retained"
       },
       "merged_sha": "517b0cabd8453256ef39daafdea63ee3cf670f94",
-      "next_action": "Native current ARM69/69 and current upstream x8669/69 are proven. Await separately attributable upstream ARM proof or explicit new budget before additional builds. Existing PR3514 remains the sole PR; current-source publication is absent.",
+      "next_action": "Recovered old upstream ARM/x86 proof at a4e1e854; no duplicate run needed to fill evidence gap. Reported69/69 on both hides coupling-ramp abort and timestamp-output failure, also present in root04e report. Await explicit12-hour/max11 renewal (8accounted, including1unstarted reservation) before correcting documented nus-to-nu fixture syntax and timestamp writable location with strict real outputs, then native+both upstream verification. Preserve all scientific inputs/assertions and source-specific proof. Current candidate is not fully verified or published.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.2",
@@ -29514,14 +29514,28 @@
       "source_archive_sha256": "7f61425f2f88c87f2416474e7630cd899e5508983082a1a540a92c6d9699538d",
       "vendor_manifest_digest": "sha256:db920c1b7d7bdd237480981a023d86723607a1d0b3781f7cfcb5f73e7be7c647",
       "preflight_note": "Vendor index amd64 only; official master still0bd35df. Generic CXXFLAGS override supported by unmodified Makefile. Source commit independently update-tracked, acquisition binding validated; x86 image/version untouched. All67 tests unchanged plus finite/monotonic EIRS output.",
-      "arm64_attempts": 4,
-      "x86_64_attempts": 2,
+      "arm64_attempts": 5,
+      "x86_64_attempts": 3,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38285990994",
       "runtime_review": {
-        "outcome": "expected-negative-exit",
-        "test": "PAS plasticity",
-        "return_code": 1,
-        "detail": "Existing description explicitly says fCaP coupling unavailable in this version; actual output Invalid coupling type fCaP matches negative prerequisite case. Do not claim PAS support. Replace broad ignored exit with explicit1/diagnostic and freshly verify changed source."
+        "outcome": "followup-required",
+        "source_sha": "a4e1e854343618b78b84723e31846e6ac1c0c73d",
+        "run_id": 38271284459,
+        "findings": [
+          "Coupling ramp SIGABRT masked by || true and ignore_exit_code",
+          "Timestamp output write error masked by fallback listing"
+        ],
+        "supported_configuration_followup": {
+          "source_commit": "0bd35df203e9e713018ce94c45119f1c794d61a2",
+          "official_parameter_rename": "https://github.com/BrainDynamicsUSYD/nftsim/commit/c47418b60c73db33fc7cb1a08590f3e9cda126dc",
+          "official_old_example": "https://github.com/BrainDynamicsUSYD/nftsim/blob/0bd35df203e9e713018ce94c45119f1c794d61a2/configs/test_coupling_ramp.conf",
+          "official_cli": "https://github.com/BrainDynamicsUSYD/nftsim/blob/0bd35df203e9e713018ce94c45119f1c794d61a2/src/main.cpp#L77",
+          "ramp_change": "Copy the actual bundled example into a writable test directory; require exactly one Ramp - nus: token and rename only that token to documented Ramp - nu:. Keep every numerical parameter, 900nodes, 0.15s and 0.0001 timestep unchanged. Run the actual simulator with strict exit0 and require new nonempty finite time-series output, consistent columns and increasing timestamps. Existing EIRS coupling ramp already executes successfully with nu; this does not prove the corrected separate fixture until tested.",
+          "timestamp_change": "Copy the unchanged stimuli-only configuration into a fresh writable directory and run nftsim -i <copied-config> -t without -o. Require exactly one new nonempty output with ISO timestamp filename and real numeric samples. An explicit -o would override timestamp naming in the documented CLI and is therefore not a valid test of -t.",
+          "negative_contracts": "Replace the two Error handled shell fallbacks with actual documented nonzero exits and substantive diagnostics once observed; preserve negative-test intent. Retain exact PAS exit1/missing-fCaP assertion and every other scientific test.",
+          "provenance_limit": "Current suite checks vendor version and only the 40-hex format of source-commit; it does not record/assert the actual vendor source commit. Historical upstream rename is documented, not proof that every vendor source byte equals official0bd35df. No dependency/application-source patch proposed.",
+          "budget": "No recipe/test edits or dispatch before explicit renewed12-hour/max11 allowance. Eight accounted attempts now include two recovered external jobs and one earlier unstarted reservation; retain original start/deadline and all old proof. Three fresh jobs would bring total11. No claim of native success or automatic publication."
+        }
       },
       "native_attempt_history": [
         {
@@ -29602,30 +29616,32 @@
       },
       "pr_number": 3514,
       "blocker": {
-        "category": "verification-budget",
-        "detail": "Current native ARM and upstream x86 passed. Independently merged PR3514 skipped both current-source matrices; required upstream ARM evidence remains missing. Original6/6 budget exhausted; no application ARM incompatibility inferred.",
-        "revisit_when": "External current-source upstream ARM proof with identical inputs, or explicit renewed build budget.",
+        "category": "runtime-test-masks-failures",
+        "detail": "Missing upstream ARM result recovered at exact PR head with matching input footprint. Both architectures report69/69 but Coupling ramp test hides SIGABRT/std::length_error/vector::reserve and Timestamped output hides failure to write /app/configs. Same two failures occur in current root report. Complete runtime success remains unproven.",
+        "revisit_when": "Explicit renewed12-hour/max11 allowance for documented same-input configuration/test corrections and fresh native plus upstream architecture verification; no private source port or weaker assertions.",
         "application_native_arm_verified": true,
         "upstream_x86_verified": true,
-        "upstream_arm_verified": false,
-        "publication_verified": false
+        "upstream_arm_verified": true,
+        "publication_verified": false,
+        "upstream_arm_verification_scope": "Native execution/reported test contracts recovered; masked positive capabilities are not verified.",
+        "all_capabilities_verified": false
       },
       "external_progress": {
         "revised_source": "febbdebb43a7932504a2ab15fbd49601f84f75d6",
         "run_id": 38270040430,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38270040430",
         "quality_run_id": 38270606133,
-        "status": "post-merge-partial-proof",
-        "external_build_attempts": 0,
+        "status": "post-merge-runtime-proof-with-masked-failures",
+        "external_build_attempts": 2,
         "discovered_at": "2026-10-12T15:30:31.869875+00:00",
-        "note": "Independently merged mixed shared-builder/recipe PR. Final candidate run skipped both matrices and has zero actual container tests. Formatting is fixed and builder checks pass; that does not verify this new image source.",
+        "note": "Original candidate PR matrices skipped; separately recovered manual run38271284459 at exact PR head actually built/tested both native architectures. Both69/69 reports contain two masked runtime failures. Older missing-proof notes remain historical, not current conclusions.",
         "changes": "ARM compiles C++ source/configs extracted from vendor x86 OCI layers without executing x86 binaries; EIRS300s allowance retains simulation/output assertions; source/vendor identity added. Shared copy-from-image builder path remains unaccepted/unverified as a port.",
         "head_sha": "a4e1e854343618b78b84723e31846e6ac1c0c73d",
         "merged_sha": "517b0cabd8453256ef39daafdea63ee3cf670f94",
         "merged_at": "2026-10-12T15:49:36Z",
         "candidate_run_id": 38270606406,
         "quality_status": "passed",
-        "actual_container_builds": 0,
+        "actual_container_builds": 2,
         "root_current_source_verified": true,
         "promotion_observation": {
           "run_id": 38273049270,
@@ -30023,14 +30039,77 @@
         "cold_workflow": "No recipe/architecture dispatch input; bounded global due-target planner. Do not launch inventory to manufacture one missing proof.",
         "legacy_manual_workflow": "Expands all declared variants and architectures; legacy build-app route does not supply required fulltest/Dive candidate proof. No manual build/publish dispatched.",
         "current_recipe_delta": "Current acceptedmain removes only an inert nested test directive from candidate04e422; fulltest identical. No new source/image equivalence or ARM success inferred from this inspection.",
-        "next_condition": "Separately attributable fresh upstream nativeARM current-source build/fulltest/gates, a supported targeted verification route and explicit renewed budget, or independently supplied matching proof. Existing currentnative69/69 and upstreamx8669/69 remain preserved.",
+        "next_condition": "Recovered old upstream ARM/x86 proof at a4e1e854; no duplicate run needed to fill evidence gap. Reported69/69 on both hides coupling-ramp abort and timestamp-output failure, also present in root04e report. Await explicit12-hour/max11 renewal (8accounted, including1unstarted reservation) before correcting documented nus-to-nu fixture syntax and timestamp writable location with strict real outputs, then native+both upstream verification. Preserve all scientific inputs/assertions and source-specific proof. Current candidate is not fully verified or published.",
         "last_readonly_recheck": {
           "checked_at": "2026-10-17T04:57:23.669188+00:00",
           "retained_cold_result_nftsim_arm64_artifacts": 0,
           "latest_scheduled_cold_run_id": 38996430525,
           "latest_scheduled_cold_run_conclusion": "success",
           "note": "Actual Oct17 cold sweep completed, but no retained NFTsimARM result exists. The sweep success is not this recipe proof. No global/manual build or promotion dispatched."
+        },
+        "recovered_targeted_route": {
+          "checked_source_ref": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+          "inputs": {
+            "debug": false,
+            "recipes": "nftsim",
+            "architecture": "arm64",
+            "run-tests": true
+          },
+          "targets": [
+            {
+              "recipe": "nftsim",
+              "container": "nftsim_arm64",
+              "variant": "arm64",
+              "architecture": "aarch64",
+              "version": "1.0.2"
+            }
+          ],
+          "selection_source_blob_matches_current_and_prior_upstream_x86": {
+            "workflows/recipe_ci.py": {
+              "local": "fce9e7e0d9c9fae8d51004dd2e2878f0f24fb631",
+              "current_upstream": "fce9e7e0d9c9fae8d51004dd2e2878f0f24fb631",
+              "prior_x86_proof": "fce9e7e0d9c9fae8d51004dd2e2878f0f24fb631"
+            },
+            "builder/variants.py": {
+              "local": "6a7caee763b5dc46f097d87ead44012894cb0e61",
+              "current_upstream": "6a7caee763b5dc46f097d87ead44012894cb0e61",
+              "prior_x86_proof": "6a7caee763b5dc46f097d87ead44012894cb0e61"
+            },
+            ".github/workflows/recipes-ci.yml": {
+              "local": "22e588774dfac58c465d343553859d07eb481bfc",
+              "current_upstream": "22e588774dfac58c465d343553859d07eb481bfc",
+              "prior_x86_proof": "22e588774dfac58c465d343553859d07eb481bfc"
+            }
+          },
+          "scope": "Pure target-selection preflight only. Selects exactly one ARM job and no x86/global inventory build. Recipes CI performs fresh Docker/SIF/deploy/fulltest on native Blacksmith ARM. It does not publish or include a Dive step; no complete promotion/Dive proof or whole-source equivalence is asserted. Shared builder/runtime setup changes since previous proof remain separately noted."
         }
+      },
+      "recovered_manual_upstream_proof": {
+        "source_sha": "a4e1e854343618b78b84723e31846e6ac1c0c73d",
+        "run_id": 38271284459,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38271284459",
+        "review_file": "upstream/nftsim-recovered-runtime-review.json",
+        "reported_both_architectures": "69/69, zero failures/skips",
+        "native_machine_confirmed": true,
+        "complete_functionality_verified": false,
+        "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/222#issuecomment-6234854433"
+      },
+      "attempt_accounting_before_recovered_proof": {
+        "attempts": 6,
+        "arm64_attempts": 4,
+        "x86_64_attempts": 2,
+        "note": "Two pre-existing independently executed jobs from Oct12 were absent from tracking. Recovering evidence does not dispatch builds or reset budgets. One original unstarted x86 reservation remains counted."
+      },
+      "pending_budget_question": {
+        "asked_at": "2026-10-17T14:05:51.700425+00:00",
+        "answered": false,
+        "requested_window_hours": 12,
+        "requested_max_build_attempts": 11,
+        "attempts_already_used": 8,
+        "original_deadline_unchanged": "2026-10-13T00:46:00+00:00",
+        "request_accepted_by_tool": true,
+        "tool_acceptance_is_not_user_approval": true,
+        "reason": "Recovered2old upstream jobs resolve evidence gap but expose two masked runtime failures. Same numerical ramp input with documented parameter spelling and unchanged timestamp fixture in a writable directory are concrete ordinary configuration corrections; native and both upstream gates need3jobs."
       }
     },
     {
@@ -46352,8 +46431,8 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T13:34:42.999183+00:00",
-    "top_level_base_commit": "663e9ce31a9c7f5ccef1741bff0307fafad826ed",
+    "checked_at": "2026-10-17T14:07:03.422686+00:00",
+    "top_level_base_commit": "3e6c746ca050f473176c1c8c8877e257ba5e0de9",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
     "upstream_fork_main_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
@@ -46361,9 +46440,9 @@
       "excluded-by-user": 17,
       "blocked-prerequisite": 2,
       "merged": 100,
-      "blocked-verification-budget": 4,
+      "blocked-verification-budget": 3,
       "blocked-upstream": 3,
-      "failed-runtime": 2,
+      "failed-runtime": 3,
       "blocked-infrastructure": 1
     },
     "all_subagents_stopped": true,
@@ -46376,7 +46455,7 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Observe BrainLes9564 ARMjob117347735063/run39015848600 and tracked PR heads. EMUSES concrete supported-literal configuration candidate awaits explicit window reply before edits/dispatch; preserve all old counts/windows and eight pending budget questions. Review actual new-source evidence without repeating successful builds; full goal incomplete.",
+    "next_action": "Review BrainLes9564 native ARMjob117347735063/run39015848600 when terminal and preserve its diagnostic/provenance hold. Recovered NFTsim manual ARM/x86 proof fills missing-run gap without rebuild but exposes masked ramp/timestamp failures; documented same-input configuration candidate awaits explicit12-hour/max11 renewal with8accounted retained. Nine budget replies remain pending; no edits/dispatch until applicable answer. Current PyDefaceb50 ARM61/63/x8662/63 remains terminal/unmergeable. Full goal active/incomplete.",
     "live_external_jobs": [
       {
         "recipe": "brainles-preprocessing",
@@ -46392,7 +46471,7 @@
       }
     ],
     "last_goal_turn_classification": "progress",
-    "progress": "Official BrainLes Torch2.13.0/iDeep/oneDNN pin chain independently matched primary Git objects; original wheel/cache/ABI and native/runtime holds remain. EMUSES released pure helpers resolve literal HDBSCAN8/4 exactly identically to original value-form settings, preserving fixed mode/all72point scientific assertions; concrete v1.3 config/dependency/metadata candidate documented. Requested renewed12-hour window with1used/six-total cap unchanged; no recipe/test edits or new build. Eight budget questions pending; BrainLes existing ARM job remains live.",
+    "progress": "Recovered actual old NFTsim native ARM/x86 manual reports and exact input equivalence without rebuild; diagnosed two masked positive-test failures and documented same-input official configuration route. Ninth budget question is unanswered; no recipe edits/dispatch. Fresh BrainLes live build checked; checkpoint https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-6234866711",
     "active_automatic_promotions": [],
     "pending_budget_replies": [
       "apptainer",
@@ -46401,14 +46480,16 @@
       "gigaconnectome",
       "glmsingle",
       "julia",
+      "nftsim",
       "tractseg",
       "workshopdemo"
     ],
     "verified_published_recipe_count": 64,
     "catalog_architecture_record_count": 128,
-    "total_pending_budget_questions": 8,
+    "total_pending_budget_questions": 9,
     "pending_runtime_followup_budget_questions": [
-      "glmsingle"
+      "glmsingle",
+      "nftsim"
     ],
     "pending_new_recipe_window_questions": [
       "emuses"

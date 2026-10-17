@@ -10,6 +10,15 @@
       "run_id": 38283250023,
       "first_error": "Existing Turbo colormap test masks ValueError: A value (256.0) in x_new is above the interpolation range maximum255. Source calls scipy interp1d with1-based resampling indices against0-based input. Its shell fallback echoes the expected bug text and returns0; reported78/78 does not verify Turbo colormap.",
       "revisit_when": "Released upstream fix containing9b7f685 plus explicit renewed build allowance, then remove masked failure and verify actual finite colormap output on both architectures. No private library patch or seventh build."
+    },
+    {
+      "recipe": "nftsim",
+      "capability": "Coupling-ramp example and timestamped output",
+      "source_sha": "a4e1e854343618b78b84723e31846e6ac1c0c73d",
+      "run_id": 38271284459,
+      "first_error": "Missing upstream ARM result recovered at exact PR head with matching input footprint. Both architectures report69/69 but Coupling ramp test hides SIGABRT/std::length_error/vector::reserve and Timestamped output hides failure to write /app/configs. Same two failures occur in current root report. Complete runtime success remains unproven.",
+      "revisit_when": "Explicit renewed12-hour/max11 allowance for documented same-input configuration/test corrections and fresh native plus upstream architecture verification; no private source port or weaker assertions.",
+      "review_file": "upstream/nftsim-recovered-runtime-review.json"
     }
   ],
   "expected_negative_cases": [

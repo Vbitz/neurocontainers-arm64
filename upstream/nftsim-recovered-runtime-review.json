@@ -1,0 +1,276 @@
+{
+  "reviewed_at": "2026-10-17T14:05:51.700425+00:00",
+  "source_sha": "a4e1e854343618b78b84723e31846e6ac1c0c73d",
+  "run_id": 38271284459,
+  "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38271284459",
+  "source_footprint": {
+    "identical_to_root_source": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
+    "identical_to_later_x86_source": "8a3e5382b520328dbbfb75be8362b5af0b7dd7dd",
+    "paths": [
+      "recipes/nftsim",
+      "builder",
+      "workflows",
+      ".github/workflows/recipes-ci.yml",
+      ".github/actions/setup-apptainer",
+      "pyproject.toml",
+      "uv.lock"
+    ],
+    "scope": "Git object comparison is empty for every listed application/build/runtime/locked input. Actual full source SHAs remain separately attributed; this does not verify later changed shared inputs."
+  },
+  "architectures": {
+    "aarch64": {
+      "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38271284459/job/114885939207",
+      "artifact_id": 11757911121,
+      "artifact_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38271284459/artifacts/11757911121",
+      "reported_counts": {
+        "total_tests": 69,
+        "passed": 69,
+        "failed": 0,
+        "skipped": 0
+      },
+      "fulltest_summary": {
+        "duration": 581.3336822986603,
+        "run_timestamp": "2026-10-12T15:47:15.346634",
+        "suites_failed": 0,
+        "suites_passed": 1,
+        "tests_failed": 0,
+        "tests_passed": 68,
+        "total_suites": 1,
+        "total_tests": 68
+      },
+      "deploy_counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0
+      },
+      "native_observation": {
+        "container": "nftsim_arm64",
+        "version": "1.0.2",
+        "machine": "aarch64",
+        "status": "passed",
+        "observed_at": "2026-10-12T15:47:15.468581+00:00",
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38271284459",
+        "recipe_sha256": "ec91bedfbcf0440b38a7a4d995c896020a3fe808109e803768d06511db43c17e",
+        "image_id": "sha256:27f5a213aa7cc44395853bcf3e07c7f7b69c77f67867ee5d516f22e59e264ff7",
+        "candidate_sha256": "a97faa3f211f76d15317a931be32ea0fdad3aba6807606374154aeb35e0fc35c"
+      },
+      "report_sha256": "842ef0db445b9828b146257ebccb76cf88bdc787966d47e7e2b6a44e57cfee18",
+      "reviewed_cases": [
+        {
+          "duration": 410.65102553367615,
+          "message": "OK",
+          "name": "EIRS TMS simulation",
+          "return_code": 0,
+          "status": "passed",
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "duration": 16.748204708099365,
+          "message": "OK",
+          "name": "EIRS coupling ramp",
+          "return_code": 0,
+          "status": "passed",
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "duration": 0.25115227699279785,
+          "message": "OK",
+          "name": "Coupling ramp test",
+          "return_code": 0,
+          "status": "passed",
+          "stderr": "/home/runner/_work/neurocontainers/neurocontainers/check/nftsim_arm64/test-output/fulltest-run-kmzf3u9h/work/.test_3oh4xam8.sh: line 2: 10297 Aborted                 (core dumped) nftsim -i /app/configs/test_coupling_ramp.conf -o test_output/test-coupling-ramp.output 2>&1\n",
+          "stdout": "WARNING: Value of total simulation Time not divisible by Deltat.\n    It is STRONGLY RECOMMENDED that any times that you specify\n    in your configuration files be exact integer multiples of\n    Deltat. Due to the finite precision of floating-point numbers,\n    exact multiples are only possible for machine representable\n    values of Deltat. A simple means of achieving this is to use\n    powers of two for Deltat (eg. 2^-13 == 1.220703125e-04).\nterminate called after throwing an instance of 'std::length_error'\n  what():  vector::reserve\n"
+        },
+        {
+          "duration": 96.78467154502869,
+          "message": "OK",
+          "name": "EIRS BCM plasticity",
+          "return_code": 0,
+          "status": "passed",
+          "stderr": "WARNING: Value of total simulation Time not divisible by Deltat.\n    It is STRONGLY RECOMMENDED that any times that you specify\n    in your configuration files be exact integer multiples of\n    Deltat. Due to the finite precision of floating-point numbers,\n    exact multiples are only possible for machine representable\n    values of Deltat. A simple means of achieving this is to use\n    powers of two for Deltat (eg. 2^-13 == 1.220703125e-04).\nWARNING: Value of Tau not divisible by Deltat!\n  It is recommended that Tau be specified as an exact integer\n  multiple of Deltat. Your simulation will be run using:\n    Tau: 4.25000000000000031e-02\nWARNING: Value of Tau not divisible by Deltat!\n  It is recommended that Tau be specified as an exact integer\n  multiple of Deltat. Your simulation will be run using:\n    Tau: 4.25000000000000031e-02\nWARNING: Value of Tau not divisible by Deltat!\n  It is recommended that Tau be specified as an exact integer\n  multiple of Deltat. Your simulation will be run using:\n    Tau: 4.25000000000000031e-02\nWARNING: Value of Tau not divisible by Deltat!\n  It is recommended that Tau be specified as an exact integer\n  multiple of Deltat. Your simulation will be run using:\n    Tau: 4.25000000000000031e-02\nWARNING: Value of output Interval NOT divisible by Deltat.\n    It is STRONGLY RECOMMENDED that any times that you specify\n    Interval (ie, output sampling period) in your configuration files\n    be exact integer multiples of Deltat. Due to the finite precision\n    of floating-point numbers, exact multiples are only possible for machine representable\n    values of Deltat. A simple means of achieving this is to use\n    powers of two for Deltat (eg. 2^-13 == 1.220703125e-04).\n",
+          "stdout": ""
+        },
+        {
+          "duration": 0.16892313957214355,
+          "message": "OK",
+          "name": "PAS plasticity",
+          "return_code": 1,
+          "status": "passed",
+          "stderr": "",
+          "stdout": "WARNING: Value of total simulation Time not divisible by Deltat.\n    It is STRONGLY RECOMMENDED that any times that you specify\n    in your configuration files be exact integer multiples of\n    Deltat. Due to the finite precision of floating-point numbers,\n    exact multiples are only possible for machine representable\n    values of Deltat. A simple means of achieving this is to use\n    powers of two for Deltat (eg. 2^-13 == 1.220703125e-04).\nInvalid coupling type 'fCaP'.\n"
+        },
+        {
+          "duration": 0.17536187171936035,
+          "message": "OK",
+          "name": "Timestamped output",
+          "return_code": 0,
+          "status": "passed",
+          "stderr": "Error, cannot open file'/app/configs/stimuli-only_2026-10-12T154700.output' for output.\n",
+          "stdout": ""
+        },
+        {
+          "duration": 0.570880651473999,
+          "message": "OK",
+          "name": "Finite corticothalamic time series",
+          "return_code": 0,
+          "status": "passed",
+          "stderr": "",
+          "stdout": "Finite corticothalamic time series validated\n"
+        }
+      ],
+      "unusual_exit": "PAS plasticity explicitly expects exit1 and missing fCaP diagnostic; it does not prove positive PAS functionality.",
+      "weak_negative_tests": [
+        "Invalid config file handling",
+        "Missing input flag value"
+      ]
+    },
+    "x86_64": {
+      "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38271284459/job/114885939056",
+      "artifact_id": 11757447171,
+      "artifact_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38271284459/artifacts/11757447171",
+      "reported_counts": {
+        "total_tests": 69,
+        "passed": 69,
+        "failed": 0,
+        "skipped": 0
+      },
+      "fulltest_summary": {
+        "duration": 271.86620831489563,
+        "run_timestamp": "2026-10-12T15:41:25.990670",
+        "suites_failed": 0,
+        "suites_passed": 1,
+        "tests_failed": 0,
+        "tests_passed": 68,
+        "total_suites": 1,
+        "total_tests": 68
+      },
+      "deploy_counts": {
+        "total": 1,
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0
+      },
+      "native_observation": {
+        "container": "nftsim",
+        "version": "1.0.2",
+        "machine": "x86_64",
+        "status": "passed",
+        "observed_at": "2026-10-12T15:41:26.053949+00:00",
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38271284459",
+        "recipe_sha256": "ec91bedfbcf0440b38a7a4d995c896020a3fe808109e803768d06511db43c17e",
+        "image_id": "sha256:ec181f736966c5fb9e828af5a8d1dc3d4fa1be8246063bd1592835b899f1dcb3",
+        "candidate_sha256": "50194a5b9baf3643e678baf3be0d17489edaebe6b5562d26598bd4d83d1b5577"
+      },
+      "report_sha256": "c5a677b80cb8f5dd1cef250f5db22e800611796d686ec108cfe28e461ef118a5",
+      "reviewed_cases": [
+        {
+          "duration": 192.18815541267395,
+          "message": "OK",
+          "name": "EIRS TMS simulation",
+          "return_code": 0,
+          "status": "passed",
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "duration": 7.489566802978516,
+          "message": "OK",
+          "name": "EIRS coupling ramp",
+          "return_code": 0,
+          "status": "passed",
+          "stderr": "",
+          "stdout": ""
+        },
+        {
+          "duration": 0.19711804389953613,
+          "message": "OK",
+          "name": "Coupling ramp test",
+          "return_code": 0,
+          "status": "passed",
+          "stderr": "/home/runner/_work/neurocontainers/neurocontainers/check/nftsim/test-output/fulltest-run-t6sx49cv/work/.test_nzy4cx07.sh: line 2: 12735 Aborted                 (core dumped) nftsim -i /app/configs/test_coupling_ramp.conf -o test_output/test-coupling-ramp.output 2>&1\n",
+          "stdout": "WARNING: Value of total simulation Time not divisible by Deltat.\n    It is STRONGLY RECOMMENDED that any times that you specify\n    in your configuration files be exact integer multiples of\n    Deltat. Due to the finite precision of floating-point numbers,\n    exact multiples are only possible for machine representable\n    values of Deltat. A simple means of achieving this is to use\n    powers of two for Deltat (eg. 2^-13 == 1.220703125e-04).\nterminate called after throwing an instance of 'std::length_error'\n  what():  vector::reserve\n"
+        },
+        {
+          "duration": 42.473899126052856,
+          "message": "OK",
+          "name": "EIRS BCM plasticity",
+          "return_code": 0,
+          "status": "passed",
+          "stderr": "WARNING: Value of total simulation Time not divisible by Deltat.\n    It is STRONGLY RECOMMENDED that any times that you specify\n    in your configuration files be exact integer multiples of\n    Deltat. Due to the finite precision of floating-point numbers,\n    exact multiples are only possible for machine representable\n    values of Deltat. A simple means of achieving this is to use\n    powers of two for Deltat (eg. 2^-13 == 1.220703125e-04).\nWARNING: Value of Tau not divisible by Deltat!\n  It is recommended that Tau be specified as an exact integer\n  multiple of Deltat. Your simulation will be run using:\n    Tau: 4.25000000000000031e-02\nWARNING: Value of Tau not divisible by Deltat!\n  It is recommended that Tau be specified as an exact integer\n  multiple of Deltat. Your simulation will be run using:\n    Tau: 4.25000000000000031e-02\nWARNING: Value of Tau not divisible by Deltat!\n  It is recommended that Tau be specified as an exact integer\n  multiple of Deltat. Your simulation will be run using:\n    Tau: 4.25000000000000031e-02\nWARNING: Value of Tau not divisible by Deltat!\n  It is recommended that Tau be specified as an exact integer\n  multiple of Deltat. Your simulation will be run using:\n    Tau: 4.25000000000000031e-02\nWARNING: Value of output Interval NOT divisible by Deltat.\n    It is STRONGLY RECOMMENDED that any times that you specify\n    Interval (ie, output sampling period) in your configuration files\n    be exact integer multiples of Deltat. Due to the finite precision\n    of floating-point numbers, exact multiples are only possible for machine representable\n    values of Deltat. A simple means of achieving this is to use\n    powers of two for Deltat (eg. 2^-13 == 1.220703125e-04).\n",
+          "stdout": ""
+        },
+        {
+          "duration": 0.13930034637451172,
+          "message": "OK",
+          "name": "PAS plasticity",
+          "return_code": 1,
+          "status": "passed",
+          "stderr": "",
+          "stdout": "WARNING: Value of total simulation Time not divisible by Deltat.\n    It is STRONGLY RECOMMENDED that any times that you specify\n    in your configuration files be exact integer multiples of\n    Deltat. Due to the finite precision of floating-point numbers,\n    exact multiples are only possible for machine representable\n    values of Deltat. A simple means of achieving this is to use\n    powers of two for Deltat (eg. 2^-13 == 1.220703125e-04).\nInvalid coupling type 'fCaP'.\n"
+        },
+        {
+          "duration": 0.12194705009460449,
+          "message": "OK",
+          "name": "Timestamped output",
+          "return_code": 0,
+          "status": "passed",
+          "stderr": "Error, cannot open file'/app/configs/stimuli-only_2026-10-12T154118.output' for output.\n",
+          "stdout": ""
+        },
+        {
+          "duration": 0.2879648208618164,
+          "message": "OK",
+          "name": "Finite corticothalamic time series",
+          "return_code": 0,
+          "status": "passed",
+          "stderr": "",
+          "stdout": "Finite corticothalamic time series validated\n"
+        }
+      ],
+      "unusual_exit": "PAS plasticity explicitly expects exit1 and missing fCaP diagnostic; it does not prove positive PAS functionality.",
+      "weak_negative_tests": [
+        "Invalid config file handling",
+        "Missing input flag value"
+      ]
+    }
+  },
+  "scope": "Fresh native Docker builds, SIF conversion, deploy and fulltest execution recovered from existing retained results. Reported 69/69 is not complete functionality: coupling-ramp abort and timestamp-output failure are masked by test commands. This workflow has no Dive step and these artifacts are not published releases.",
+  "root_report_crosscheck": {
+    "source_sha": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
+    "run_id": 38285990994,
+    "same_masked_errors": [
+      {
+        "duration": 0.17058038711547852,
+        "message": "OK",
+        "name": "Coupling ramp test",
+        "return_code": 0,
+        "status": "passed",
+        "stderr": "/home/runner/work/neurocontainers-arm64/neurocontainers-arm64/results/test-output/fulltest-run-pe3yklzj/work/.test_37uxil1j.sh: line 2: 10921 Aborted                 (core dumped) nftsim -i /app/configs/test_coupling_ramp.conf -o test_output/test-coupling-ramp.output 2>&1\n",
+        "stdout": "WARNING: Value of total simulation Time not divisible by Deltat.\n    It is STRONGLY RECOMMENDED that any times that you specify\n    in your configuration files be exact integer multiples of\n    Deltat. Due to the finite precision of floating-point numbers,\n    exact multiples are only possible for machine representable\n    values of Deltat. A simple means of achieving this is to use\n    powers of two for Deltat (eg. 2^-13 == 1.220703125e-04).\nterminate called after throwing an instance of 'std::length_error'\n  what():  vector::reserve\n"
+      },
+      {
+        "duration": 0.1243143081665039,
+        "message": "OK",
+        "name": "Timestamped output",
+        "return_code": 0,
+        "status": "passed",
+        "stderr": "Error, cannot open file'/app/configs/stimuli-only_2026-10-12T175101.output' for output.\n",
+        "stdout": ""
+      }
+    ]
+  },
+  "configuration_candidate": {
+    "source_commit": "0bd35df203e9e713018ce94c45119f1c794d61a2",
+    "official_parameter_rename": "https://github.com/BrainDynamicsUSYD/nftsim/commit/c47418b60c73db33fc7cb1a08590f3e9cda126dc",
+    "official_old_example": "https://github.com/BrainDynamicsUSYD/nftsim/blob/0bd35df203e9e713018ce94c45119f1c794d61a2/configs/test_coupling_ramp.conf",
+    "official_cli": "https://github.com/BrainDynamicsUSYD/nftsim/blob/0bd35df203e9e713018ce94c45119f1c794d61a2/src/main.cpp#L77",
+    "ramp_change": "Copy the actual bundled example into a writable test directory; require exactly one Ramp - nus: token and rename only that token to documented Ramp - nu:. Keep every numerical parameter, 900nodes, 0.15s and 0.0001 timestep unchanged. Run the actual simulator with strict exit0 and require new nonempty finite time-series output, consistent columns and increasing timestamps. Existing EIRS coupling ramp already executes successfully with nu; this does not prove the corrected separate fixture until tested.",
+    "timestamp_change": "Copy the unchanged stimuli-only configuration into a fresh writable directory and run nftsim -i <copied-config> -t without -o. Require exactly one new nonempty output with ISO timestamp filename and real numeric samples. An explicit -o would override timestamp naming in the documented CLI and is therefore not a valid test of -t.",
+    "negative_contracts": "Replace the two Error handled shell fallbacks with actual documented nonzero exits and substantive diagnostics once observed; preserve negative-test intent. Retain exact PAS exit1/missing-fCaP assertion and every other scientific test.",
+    "provenance_limit": "Current suite checks vendor version and only the 40-hex format of source-commit; it does not record/assert the actual vendor source commit. Historical upstream rename is documented, not proof that every vendor source byte equals official0bd35df. No dependency/application-source patch proposed.",
+    "budget": "No recipe/test edits or dispatch before explicit renewed12-hour/max11 allowance. Eight accounted attempts now include two recovered external jobs and one earlier unstarted reservation; retain original start/deadline and all old proof. Three fresh jobs would bring total11. No claim of native success or automatic publication."
+  }
+}
