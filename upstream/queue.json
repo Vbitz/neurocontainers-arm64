@@ -5612,7 +5612,7 @@
       "candidate_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
       "started_at": "2026-10-13T15:53:00+00:00",
       "deadline": "2026-10-14T03:53:00+00:00",
-      "attempts": 4,
+      "attempts": 16,
       "run_id": 38493993950,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3610",
       "upstream_ci": {},
@@ -5642,8 +5642,8 @@
         "https://download.pytorch.org/whl/cpu/torch/",
         "https://pypi.org/pypi/brainles-hd-bet/0.0.11/json"
       ],
-      "arm64_attempts": 3,
-      "x86_64_attempts": 1,
+      "arm64_attempts": 9,
+      "x86_64_attempts": 7,
       "previous_infrastructure_blockers": [
         {
           "recorded_at": "2026-10-13T16:23:06.608668+00:00",
@@ -6236,7 +6236,7 @@
         "deadline": "2026-10-14T03:53:00+00:00"
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T04:09:07.954849+00:00",
+        "checked_at": "2026-10-17T04:35:09.125212+00:00",
         "source_sha": "c49672731f337d723e1762996b1800499eeedd91",
         "run_id": 38998886975,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38998886975",
@@ -6244,22 +6244,28 @@
         "conclusion": null,
         "jobs": [
           {
-            "id": 117297477563,
+            "job_id": 117297477563,
             "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+            "architecture": "x86_64",
+            "started_at": "2026-10-17T03:28:37Z",
             "status": "in_progress",
             "conclusion": null,
+            "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38998886975/job/117297477563",
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404"
             ],
             "active_steps": [
-              "Stage and build candidate"
+              "Run deploy and fulltest checks"
             ]
           },
           {
-            "id": 117297477614,
+            "job_id": 117297477614,
             "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+            "architecture": "aarch64",
+            "started_at": "2026-10-17T03:28:40Z",
             "status": "in_progress",
             "conclusion": null,
+            "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38998886975/job/117297477614",
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404-arm"
             ],
@@ -6276,6 +6282,401 @@
         "source_sha": "c49672731f337d723e1762996b1800499eeedd91",
         "reason": "Current upstream CBLAS/Torch feasibility experiment explicitly declares DIAGNOSTIC_BLOCKED/merge_eligible=false and intentionally fails the ARM SynthStrip diagnostic gate even if inference completes. Build/import feasibility is not a verified releasable scientific container.",
         "next_action": "Observe existing healthy jobs and retain evidence. Do not remove the gate, port the runtime, claim full scientific success, or merge this diagnostic experiment."
+      },
+      "attempt_accounting_history": [
+        {
+          "checked_at": "2026-10-17T04:26:24.548610+00:00",
+          "previous": {
+            "attempts": 4,
+            "arm64_attempts": 3,
+            "x86_64_attempts": 1,
+            "deadline": "2026-10-14T03:53:00+00:00",
+            "candidate_sha": "ee691ef32328c44654a8bef919fcdde69e20f142"
+          },
+          "reason": "Reconciled independently dispatched upstream candidate matrices after the original investigation expired; no new local dispatch."
+        }
+      ],
+      "external_attempt_audit": {
+        "recipe": "brainles-preprocessing",
+        "upstream_candidate_attempts_by_architecture": {
+          "aarch64": 7,
+          "x86_64": 7
+        },
+        "runs": [
+          {
+            "source_sha": "ee691ef32328c44654a8bef919fcdde69e20f142",
+            "run_id": 38499108197,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38499108197",
+            "run_status": "completed",
+            "run_conclusion": "failure",
+            "jobs": [
+              {
+                "job_id": 115641638716,
+                "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+                "architecture": "x86_64",
+                "started_at": "2026-10-14T02:04:47Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38499108197/job/115641638716",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "active_steps": []
+              },
+              {
+                "job_id": 115641638802,
+                "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+                "architecture": "aarch64",
+                "started_at": "2026-10-14T02:04:54Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38499108197/job/115641638802",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "active_steps": []
+              }
+            ]
+          },
+          {
+            "source_sha": "5fb559b31747d9d6b63175422689cf4018012445",
+            "run_id": 38936595839,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38936595839",
+            "run_status": "completed",
+            "run_conclusion": "failure",
+            "jobs": [
+              {
+                "job_id": 117093698364,
+                "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+                "architecture": "aarch64",
+                "started_at": "2026-10-16T17:02:59Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38936595839/job/117093698364",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "active_steps": []
+              },
+              {
+                "job_id": 117093698373,
+                "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+                "architecture": "x86_64",
+                "started_at": "2026-10-16T17:02:56Z",
+                "status": "completed",
+                "conclusion": "success",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38936595839/job/117093698373",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "active_steps": []
+              }
+            ]
+          },
+          {
+            "source_sha": "89fd10abae58b17ee2295dd54c1dfdbcf5876ca9",
+            "run_id": 38953525683,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38953525683",
+            "run_status": "completed",
+            "run_conclusion": "failure",
+            "jobs": [
+              {
+                "job_id": 117154268614,
+                "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+                "architecture": "aarch64",
+                "started_at": "2026-10-16T19:24:13Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38953525683/job/117154268614",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "active_steps": []
+              },
+              {
+                "job_id": 117154268664,
+                "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+                "architecture": "x86_64",
+                "started_at": "2026-10-16T19:24:11Z",
+                "status": "completed",
+                "conclusion": "success",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38953525683/job/117154268664",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "active_steps": []
+              }
+            ]
+          },
+          {
+            "source_sha": "21c0467f8ccd1455c52f461afc1a7bbbcfec4e94",
+            "run_id": 38965675075,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38965675075",
+            "run_status": "completed",
+            "run_conclusion": "failure",
+            "jobs": [
+              {
+                "job_id": 117191559326,
+                "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+                "architecture": "aarch64",
+                "started_at": "2026-10-16T20:55:33Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38965675075/job/117191559326",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "active_steps": []
+              },
+              {
+                "job_id": 117191559358,
+                "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+                "architecture": "x86_64",
+                "started_at": "2026-10-16T20:55:29Z",
+                "status": "completed",
+                "conclusion": "success",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38965675075/job/117191559358",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "active_steps": []
+              }
+            ]
+          },
+          {
+            "source_sha": "8b5149aaa63c8f865b259919877d518067ec6ba3",
+            "run_id": 38974455274,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38974455274",
+            "run_status": "completed",
+            "run_conclusion": "failure",
+            "jobs": [
+              {
+                "job_id": 117220493290,
+                "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+                "architecture": "aarch64",
+                "started_at": "2026-10-16T22:14:04Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38974455274/job/117220493290",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "active_steps": []
+              },
+              {
+                "job_id": 117220493357,
+                "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+                "architecture": "x86_64",
+                "started_at": "2026-10-16T22:13:59Z",
+                "status": "completed",
+                "conclusion": "success",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38974455274/job/117220493357",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "active_steps": []
+              }
+            ]
+          },
+          {
+            "source_sha": "5e339e17b45d2dcc8f01480ceadf74566a16fb53",
+            "run_id": 38984696531,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38984696531",
+            "run_status": "completed",
+            "run_conclusion": "failure",
+            "jobs": [
+              {
+                "job_id": 117253397417,
+                "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+                "architecture": "x86_64",
+                "started_at": "2026-10-17T00:05:30Z",
+                "status": "completed",
+                "conclusion": "success",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38984696531/job/117253397417",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "active_steps": []
+              },
+              {
+                "job_id": 117253397484,
+                "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+                "architecture": "aarch64",
+                "started_at": "2026-10-17T00:05:34Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38984696531/job/117253397484",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "active_steps": []
+              }
+            ]
+          },
+          {
+            "source_sha": "c49672731f337d723e1762996b1800499eeedd91",
+            "run_id": 38998886975,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38998886975",
+            "run_status": "in_progress",
+            "run_conclusion": null,
+            "jobs": [
+              {
+                "job_id": 117297477563,
+                "name": "candidate (brainles-preprocessing | 0.6.14 | x86_64)",
+                "architecture": "x86_64",
+                "started_at": "2026-10-17T03:28:37Z",
+                "status": "in_progress",
+                "conclusion": null,
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38998886975/job/117297477563",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "active_steps": [
+                  "Run deploy and fulltest checks"
+                ]
+              },
+              {
+                "job_id": 117297477614,
+                "name": "candidate (brainles-preprocessing_arm64 | 0.6.14 | aarch64)",
+                "architecture": "aarch64",
+                "started_at": "2026-10-17T03:28:40Z",
+                "status": "in_progress",
+                "conclusion": null,
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38998886975/job/117297477614",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "active_steps": [
+                  "Stage and build candidate"
+                ]
+              }
+            ]
+          }
+        ],
+        "policy": "Count every non-skipped candidate job reservation, retaining cancelled/unstarted attempts. Carried successes with identical run/name/start are not rebuilt attempts. These independent external jobs do not expand local authorization.",
+        "checked_at": "2026-10-17T04:26:24.548610+00:00",
+        "root_native_attempts": 2,
+        "total_recorded_attempts": 16,
+        "local_max_build_attempts": 6,
+        "original_deadline": "2026-10-14T03:53:00+00:00",
+        "note": "Original counters/clocks retained in history. Independent external work is observed, not authorization to dispatch or reset budgets. No newer root workflow runs exist after Oct15; no duplicated green native builds."
+      },
+      "external_current_source_evidence": {
+        "x86_64": {
+          "checked_at": "2026-10-17T04:30:01.395099+00:00",
+          "source_sha": "c49672731f337d723e1762996b1800499eeedd91",
+          "run_id": 38998886975,
+          "job_id": 117297477563,
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38998886975/job/117297477563",
+          "architecture": "x86_64",
+          "report": {
+            "schema_version": 3,
+            "recipe": "brainles-preprocessing",
+            "container": "brainles-preprocessing",
+            "variant": "",
+            "architecture": "x86_64",
+            "version": "0.6.14",
+            "build_date": "20261017",
+            "docker_archive": "brainles-preprocessing_0.6.14_20261017.docker.tar",
+            "sif": "brainles-preprocessing_0.6.14_20261017.simg",
+            "candidate_tag": "nd-candidate-brainles-preprocessing:c49672731f33",
+            "launcher": "preprocessor",
+            "pr_number": 3610,
+            "head_sha": "c49672731f337d723e1762996b1800499eeedd91",
+            "tests": {
+              "total": 19,
+              "passed": 19,
+              "failed": 0,
+              "skipped": 0,
+              "fulltest_total": 18,
+              "fulltest_passed": 18,
+              "fulltest_failed": 0,
+              "suites_total": 1,
+              "suites_passed": 1,
+              "passed_tests": [
+                "Simple Deploy Bins/Path Test",
+                "package imports",
+                "reports the packaged version",
+                "the preprocessor entry points import",
+                "the preprocessor console script runs",
+                "the hd-bet console script runs",
+                "the preprocessor atlas default is not a label",
+                "the SRI24 atlas is bundled",
+                "the atlas resolves without touching the network",
+                "the SynthStrip weights are bundled",
+                "SynthStrip extracts a brain on CPU",
+                "the SynthStrip extractor imports",
+                "runs outside HOME",
+                "HD-BET weights are bundled",
+                "brain extraction is configurable from the CLI",
+                "the brain extractor imports",
+                "Native dependency closure and actual CPU tensor operation",
+                "Both actual native registration backends",
+                "HD-BET CPU inference inside the read-only SIF"
+              ],
+              "failed_tests": []
+            },
+            "dive": {
+              "status": "success",
+              "failed_checks": [],
+              "inefficient_files": [
+                {
+                  "count": 4,
+                  "wasted_space": "2.7 MB",
+                  "path": "/var/cache/debconf/templates.dat"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "1.4 MB",
+                  "path": "/var/cache/debconf/templates.dat-old"
+                },
+                {
+                  "count": 4,
+                  "wasted_space": "808 kB",
+                  "path": "/var/log/dpkg.log"
+                },
+                {
+                  "count": 4,
+                  "wasted_space": "451 kB",
+                  "path": "/var/lib/dpkg/status"
+                },
+                {
+                  "count": 3,
+                  "wasted_space": "355 kB",
+                  "path": "/var/lib/dpkg/status-old"
+                }
+              ],
+              "efficiency_percent": 99.9416,
+              "wasted_bytes": 6267131,
+              "wasted_bytes_display": "6.3 MB",
+              "user_wasted_percent": 0.0791
+            }
+          },
+          "all_native_build_sif_deploy_fulltest_dive_manifest_gates": "success",
+          "actual_zero_exit_functional_commands": 18,
+          "actual_scientific_cases": {
+            "SynthStrip extracts a brain on CPU": {
+              "seconds": 10.311041593551636,
+              "assertion": "176784 foreground voxels; unchanged default CPU extraction"
+            },
+            "Both actual native registration backends": {
+              "seconds": 20.509799242019653,
+              "assertion": "ANTs/NiftyReg actual registration and nearest-neighbour transforms preserve every884736 voxel and geometry"
+            },
+            "HD-BET CPU inference inside the read-only SIF": {
+              "seconds": 10.776264429092407,
+              "assertion": "Nontrivial binary mask/every262144 masked voxel; unchanged input, physical geometry and all5 checkpoints"
+            }
+          },
+          "scope": "Synthetic runtime examples prove operation/output contracts only, not clinical accuracy, ARM functionality or merge eligibility. Original source/native evidence and explicit ARM diagnostic hold retained."
+        }
       }
     },
     {
@@ -31081,7 +31482,7 @@
       "candidate_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
       "started_at": "2026-10-13T07:35:00+00:00",
       "deadline": "2026-10-13T19:35:00+00:00",
-      "attempts": 4,
+      "attempts": 12,
       "run_id": 38374199970,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3580",
       "upstream_ci": {
@@ -31361,8 +31762,8 @@
         "https://git.fmrib.ox.ac.uk/fsl/avwutils/-/raw/master/fslsplit.cc",
         "https://git.fmrib.ox.ac.uk/fsl/avwutils/-/raw/master/fslmerge.cc"
       ],
-      "arm64_attempts": 3,
-      "x86_64_attempts": 1,
+      "arm64_attempts": 7,
+      "x86_64_attempts": 5,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38374199970",
       "candidate_history": [
         {
@@ -31449,7 +31850,7 @@
         "reason": "Corrected fulltest/current candidate source requires a fresh root native build plus both upstream architecture builds;2 remaining attempts cannot complete that three-build lifecycle. Original native62/62 source proof retained. No failed source merged or substituted old proof."
       },
       "external_continuation_observation": {
-        "checked_at": "2026-10-17T04:09:07.954849+00:00",
+        "checked_at": "2026-10-17T04:35:09.125212+00:00",
         "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
         "run_id": 39001037271,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271",
@@ -31457,28 +31858,32 @@
         "conclusion": null,
         "jobs": [
           {
-            "id": 117303854783,
+            "job_id": 117303854783,
             "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+            "architecture": "aarch64",
+            "started_at": "2026-10-17T04:02:30Z",
             "status": "in_progress",
             "conclusion": null,
+            "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271/job/117303854783",
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404-arm"
             ],
             "active_steps": [
-              "Stage and build candidate"
+              "Run deploy and fulltest checks"
             ]
           },
           {
-            "id": 117303854813,
+            "job_id": 117303854813,
             "name": "candidate (pydeface | 2.1.0 | x86_64)",
-            "status": "in_progress",
-            "conclusion": null,
+            "architecture": "x86_64",
+            "started_at": "2026-10-17T04:02:27Z",
+            "status": "completed",
+            "conclusion": "failure",
+            "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271/job/117303854813",
             "labels": [
               "blacksmith-8vcpu-ubuntu-2404"
             ],
-            "active_steps": [
-              "Create immutable candidate files"
-            ]
+            "active_steps": []
           }
         ],
         "dispatched_by_this_continuation": false,
@@ -31489,6 +31894,348 @@
         "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
         "reason": "Current independently revised fulltest explicitly adds Native ARM diagnosis requires review: unconditional exit1 with expected_exit_code0. Both candidate suites must fail this diagnostic review gate; scientific registration is explicitly not repaired/approved.",
         "next_action": "Retain actual diagnostic results and prior native62/62 separately. Do not remove/bypass the gate, claim current-source success, merge, or dispatch a duplicate. Await independently reviewed repair and all exact-source scientific/gate results."
+      },
+      "attempt_accounting_history": [
+        {
+          "checked_at": "2026-10-17T04:26:24.548610+00:00",
+          "previous": {
+            "attempts": 4,
+            "arm64_attempts": 3,
+            "x86_64_attempts": 1,
+            "deadline": "2026-10-13T19:35:00+00:00",
+            "candidate_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09"
+          },
+          "reason": "Reconciled independently dispatched upstream candidate matrices after the original investigation expired; no new local dispatch."
+        }
+      ],
+      "external_attempt_audit": {
+        "recipe": "pydeface",
+        "upstream_candidate_attempts_by_architecture": {
+          "aarch64": 5,
+          "x86_64": 5
+        },
+        "runs": [
+          {
+            "source_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
+            "run_id": 38379088144,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38379088144",
+            "run_status": "completed",
+            "run_conclusion": "failure",
+            "jobs": [
+              {
+                "job_id": 115234871366,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "architecture": "x86_64",
+                "started_at": "2026-10-13T09:50:08Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38379088144/job/115234871366",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "active_steps": []
+              },
+              {
+                "job_id": 115234871380,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "architecture": "aarch64",
+                "started_at": "2026-10-13T09:50:13Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38379088144/job/115234871380",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "active_steps": []
+              }
+            ]
+          },
+          {
+            "source_sha": "3bbafa6cec79d4d3e7ff6cdddceef0c145a7673c",
+            "run_id": 38938032965,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38938032965",
+            "run_status": "completed",
+            "run_conclusion": "failure",
+            "jobs": [
+              {
+                "job_id": 117098464426,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "architecture": "aarch64",
+                "started_at": "2026-10-16T17:13:58Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38938032965/job/117098464426",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "active_steps": []
+              },
+              {
+                "job_id": 117098464432,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "architecture": "x86_64",
+                "started_at": "2026-10-16T17:13:54Z",
+                "status": "completed",
+                "conclusion": "success",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38938032965/job/117098464432",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "active_steps": []
+              }
+            ]
+          },
+          {
+            "source_sha": "a3cd2eb0a42da42030d1547179b20dab066355a5",
+            "run_id": 38964677906,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38964677906",
+            "run_status": "completed",
+            "run_conclusion": "failure",
+            "jobs": [
+              {
+                "job_id": 117188178087,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "architecture": "aarch64",
+                "started_at": "2026-10-16T20:47:05Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38964677906/job/117188178087",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "active_steps": []
+              },
+              {
+                "job_id": 117188178123,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "architecture": "x86_64",
+                "started_at": "2026-10-16T20:47:02Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38964677906/job/117188178123",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "active_steps": []
+              }
+            ]
+          },
+          {
+            "source_sha": "103a7a59e0ce95ed62400681a62d6c396c44d3f4",
+            "run_id": 38990576851,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38990576851",
+            "run_status": "completed",
+            "run_conclusion": "failure",
+            "jobs": [
+              {
+                "job_id": 117271939835,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "architecture": "x86_64",
+                "started_at": "2026-10-17T01:22:57Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38990576851/job/117271939835",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "active_steps": []
+              },
+              {
+                "job_id": 117271939899,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "architecture": "aarch64",
+                "started_at": "2026-10-17T01:23:01Z",
+                "status": "completed",
+                "conclusion": "failure",
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/38990576851/job/117271939899",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "active_steps": []
+              }
+            ]
+          },
+          {
+            "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
+            "run_id": 39001037271,
+            "attempt": 1,
+            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271",
+            "run_status": "in_progress",
+            "run_conclusion": null,
+            "jobs": [
+              {
+                "job_id": 117303854783,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "architecture": "aarch64",
+                "started_at": "2026-10-17T04:02:30Z",
+                "status": "in_progress",
+                "conclusion": null,
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271/job/117303854783",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404-arm"
+                ],
+                "active_steps": [
+                  "Run deploy and fulltest checks"
+                ]
+              },
+              {
+                "job_id": 117303854813,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "architecture": "x86_64",
+                "started_at": "2026-10-17T04:02:27Z",
+                "status": "in_progress",
+                "conclusion": null,
+                "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271/job/117303854813",
+                "labels": [
+                  "blacksmith-8vcpu-ubuntu-2404"
+                ],
+                "active_steps": [
+                  "Run deploy and fulltest checks"
+                ]
+              }
+            ]
+          }
+        ],
+        "policy": "Count every non-skipped candidate job reservation, retaining cancelled/unstarted attempts. Carried successes with identical run/name/start are not rebuilt attempts. These independent external jobs do not expand local authorization.",
+        "checked_at": "2026-10-17T04:26:24.548610+00:00",
+        "root_native_attempts": 2,
+        "total_recorded_attempts": 12,
+        "local_max_build_attempts": 6,
+        "original_deadline": "2026-10-13T19:35:00+00:00",
+        "note": "Original counters/clocks retained in history. Independent external work is observed, not authorization to dispatch or reset budgets. No newer root workflow runs exist after Oct15; no duplicated green native builds."
+      },
+      "external_current_source_evidence": {
+        "x86_64": {
+          "checked_at": "2026-10-17T04:32:42.629774+00:00",
+          "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
+          "run_id": 39001037271,
+          "job_id": 117303854813,
+          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39001037271/job/117303854813",
+          "architecture": "x86_64",
+          "report": {
+            "schema_version": 3,
+            "recipe": "pydeface",
+            "container": "pydeface",
+            "variant": "",
+            "architecture": "x86_64",
+            "version": "2.1.0",
+            "build_date": "20261017",
+            "docker_archive": "pydeface_2.1.0_20261017.docker.tar",
+            "sif": "pydeface_2.1.0_20261017.simg",
+            "candidate_tag": "nd-candidate-pydeface:62f355c77b9b",
+            "launcher": "pydeface",
+            "pr_number": 3580,
+            "head_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
+            "tests": {
+              "total": 63,
+              "passed": 62,
+              "failed": 1,
+              "skipped": 0,
+              "fulltest_total": 62,
+              "fulltest_passed": 61,
+              "fulltest_failed": 1,
+              "suites_total": 1,
+              "suites_passed": 0,
+              "passed_tests": [
+                "Simple Deploy Bins/Path Test",
+                "pydeface version check",
+                "pydeface help",
+                "Basic defacing with default output",
+                "Defacing with custom output path",
+                "Defacing with force overwrite",
+                "Defacing with mutualinfo cost",
+                "Defacing with corratio cost",
+                "Defacing with normcorr cost",
+                "Defacing with normmi cost",
+                "Defacing with leastsq cost",
+                "Defacing with applyto single image",
+                "Defacing with nocleanup",
+                "Defacing with verbose output",
+                "Deface T2 image",
+                "FSL flirt version check",
+                "FSL flirt basic registration",
+                "FSL flirt with mutualinfo cost",
+                "FSL flirt apply transform",
+                "FSL convert_xfm invert"
+              ],
+              "failed_tests": [
+                "Native ARM diagnosis requires review"
+              ]
+            },
+            "dive": {
+              "status": "success",
+              "failed_checks": [],
+              "inefficient_files": [
+                {
+                  "count": 2,
+                  "wasted_space": "8.4 MB",
+                  "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial-updates_main_binary-amd64_Packages"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "7.7 MB",
+                  "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial-updates_main_i18n_Translation-en"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "7.3 MB",
+                  "path": "/usr/share/i18n/locales/C"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "7.2 MB",
+                  "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial_main_binary-amd64_Packages"
+                },
+                {
+                  "count": 2,
+                  "wasted_space": "6.6 MB",
+                  "path": "/var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_xenial-security_main_i18n_Translation-en"
+                }
+              ],
+              "efficiency_percent": 99.581,
+              "wasted_bytes": 93402306,
+              "wasted_bytes_display": "93 MB",
+              "user_wasted_percent": 0.5624
+            }
+          },
+          "overall_status": "failed-explicit-diagnostic-gate",
+          "passed_functional_cases": 61,
+          "actual_zero_exit_passed_functional_commands": 57,
+          "explicitly_asserted_unusual_exits": [
+            {
+              "test": "FSL fslsplit check",
+              "expected_exit_code": 1
+            },
+            {
+              "test": "FSL fslmerge check",
+              "expected_exit_code": 1
+            },
+            {
+              "test": "pydeface with missing input",
+              "expected_exit_code": 1
+            },
+            {
+              "test": "pydeface with invalid cost function",
+              "expected_exit_code": 1
+            }
+          ],
+          "expected_negative_traceback_cases": [
+            "pydeface with missing input",
+            "pydeface with invalid cost function"
+          ],
+          "full_mask_product_case_seconds": 40.9725124835968,
+          "metrics": {
+            "voxels": 5898240,
+            "removed": 1076215,
+            "retained": 4320339,
+            "nifti_quantization_bound": 0.010797647
+          },
+          "scope": "Actual current x86 registration/full mask product and version closure succeed. Complete suite and merge remain failed by deliberate review gate; ARM registration remains unproven. No clinical accuracy, architecture parity, root-source equivalence or published release claim."
+        }
       }
     },
     {
@@ -43074,8 +43821,8 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T04:16:43.090676+00:00",
-    "top_level_base_commit": "0c13e7e7f047f315627a20d6de1ae7e0d4f94de1",
+    "checked_at": "2026-10-17T04:35:09.125212+00:00",
+    "top_level_base_commit": "be9085fc36818c91996b5b5e6bbdbff51099ebf8",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
     "upstream_fork_main_sha": "64017cba950709ffdb667fd978dff34c57a2c5cf",
@@ -43098,6 +43845,32 @@
       "workshopdemo"
     ],
     "existing_pending_other_budget_question": "elastix",
-    "next_action": "Observe independently running BrainLes/PyDeface exact heads; review complete final reports and diagnostic gates. Pending explicit native-budget replies permit final root-source proof without repeating green upstream builds. No goal completion or blanket ARM-success claim."
+    "next_action": "Wait for existing external ARM jobs; retain explicit diagnostic gates and source-specific holds. Pending explicit native budget exceptions remain unanswered; no repeated green upstream/native builds.",
+    "live_external_jobs": [
+      {
+        "recipe": "brainles-preprocessing",
+        "run_id": 38998886975,
+        "job_id": 117297477614,
+        "source_sha": "c49672731f337d723e1762996b1800499eeedd91",
+        "status": "in_progress",
+        "conclusion": null,
+        "active_steps": [
+          "Stage and build candidate"
+        ]
+      },
+      {
+        "recipe": "pydeface",
+        "run_id": 39001037271,
+        "job_id": 117303854783,
+        "source_sha": "62f355c77b9b6d062815ba5e30c4adfef566d57e",
+        "status": "in_progress",
+        "conclusion": null,
+        "active_steps": [
+          "Run deploy and fulltest checks"
+        ]
+      }
+    ],
+    "last_goal_turn_classification": "progress",
+    "progress": "Reconciled every independent BrainLes/PyDeface candidate build attempt; reviewed current-source raw x86 scientific reports, strict exit contracts and native build gates; mirrored outcomes in issues/coverage. No own builds/agents."
   }
 }
