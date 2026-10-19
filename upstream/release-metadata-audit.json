@@ -4903,6 +4903,71 @@
         "actor": "kylemaps",
         "triggering_actor": "kylemaps"
       }
+    },
+    {
+      "recipe": "nftsim",
+      "promotion_run_id": 39229235022,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39229235022",
+      "status": "verified-published-metadata",
+      "source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+      "metadata": [
+        {
+          "architecture": "x86_64",
+          "path": "releases/nftsim/1.0.2.json",
+          "source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+          "metadata_ref": "adf856a8d4b52503bfb400e5335d3e6988680d10",
+          "metadata_commit_sha": "adf856a8d4b52503bfb400e5335d3e6988680d10",
+          "expected_build_date": "20261019",
+          "committed_build_dates": [
+            "20261019"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "sif": "nftsim_1.0.2_20261019.simg",
+          "sif_sha256": "09ba5a8b3658408c1dc278bd7d4c3e0df54514ab389941903599204f6c204f53",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/nftsim_1.0.2_20261019.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+        },
+        {
+          "architecture": "aarch64",
+          "path": "releases/nftsim_arm64/1.0.2.json",
+          "source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+          "metadata_ref": "adf856a8d4b52503bfb400e5335d3e6988680d10",
+          "metadata_commit_sha": "adf856a8d4b52503bfb400e5335d3e6988680d10",
+          "expected_build_date": "20261019",
+          "committed_build_dates": [
+            "20261019"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "sif": "nftsim_arm64_1.0.2_20261019.simg",
+          "sif_sha256": "fdd4792305807b5b3581eb4a97c821f5e93a38aea9d54b7ba995f7b806bada84",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/nftsim_arm64_1.0.2_20261019.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+        }
+      ],
+      "checked_at": "2026-10-19T09:35:59.653662+00:00",
+      "workflow_status": "completed",
+      "workflow_conclusion": "success",
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-nftsim-7553cfbf2c6da987bb73454b86e3359280ea7100)",
+          "status": "completed",
+          "conclusion": "success",
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-nftsim_arm64-7553cfbf2c6da987bb73454b86e3359280ea7100)",
+          "status": "completed",
+          "conclusion": "success",
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-19T09:35:59.653662+00:00"
     }
   ],
   "findings": [

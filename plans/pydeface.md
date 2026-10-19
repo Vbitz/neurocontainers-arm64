@@ -77,6 +77,10 @@ and existing NIfTI storage bound remain asserted. The native runner option in
 [PR #3709](https://github.com/neurodesk/neurocontainers/pull/3709) changes hardware
 selection without changing scientific tests or deadlines. Final source
 `c53d3b31980866f79fd3711e4e52a866f7b0569c` removes temporary diagnostics after this
-review while preserving all 61 scientific mappings. Its fresh native verification
-and both upstream architecture checks in [PR #3580](https://github.com/neurodesk/neurocontainers/pull/3580)
-are still required before release acceptance.
+review while preserving all 61 scientific mappings. It passes [62/62 fresh native checks](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39226549671),
+including all 61 fulltests and deployment, with zero failures/skips. Mutualinfo,
+normmi and T2 take 268/161/140 seconds within the unchanged 600/300/300-second
+limits. The existing [PR #3580](https://github.com/neurodesk/neurocontainers/pull/3580)
+now tests this exact final head on both architectures in
+[run 39231970600](https://github.com/neurodesk/neurocontainers/actions/runs/39231970600);
+those results and every required gate remain necessary before merge.

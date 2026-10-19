@@ -81,5 +81,32 @@
     "all_checks_passed": true,
     "native_github_label_available": true
   },
-  "scope": "Measurement source AA6 passes all61 actual scientific cases but deliberately fails its review gate. FinalC53 remains unverified until its own native/upstream jobs pass; no perf attribution or whole library-byte identity claim."
+  "scope": "Measurement source AA6 passes all61 actual scientific cases but deliberately fails its review gate. FinalC53 remains unverified until its own native/upstream jobs pass; no perf attribution or whole library-byte identity claim.",
+  "final_release_native_evidence": {
+    "source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+    "version": "2.1.0",
+    "run_id": 39226549671,
+    "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39226549671",
+    "counts": {
+      "total_tests": 62,
+      "passed": 62,
+      "failed": 0,
+      "skipped": 0
+    },
+    "fulltest_summary": {
+      "duration": 1236.8391995429993,
+      "run_timestamp": "2026-10-19T09:39:50.621534",
+      "suites_failed": 0,
+      "suites_passed": 1,
+      "tests_failed": 0,
+      "tests_passed": 61,
+      "total_suites": 1,
+      "total_tests": 61
+    },
+    "runner_labels": [
+      "ubuntu-24.04-arm"
+    ],
+    "command_exit_contracts": "58 exit0 checks including deploy; four explicit expected exit1 negatives; all61 scientific contracts unchanged."
+  },
+  "final_release_upstream_run": "https://github.com/neurodesk/neurocontainers/actions/runs/39231970600"
 }

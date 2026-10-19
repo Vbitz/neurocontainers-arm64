@@ -51,5 +51,7 @@ native ARM while preserving the x86 binary path. Source
 `ff8a87685a1a201bcd76ced4fc52495d8526d312` passes [34/34 native checks](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39219166368),
 including the existing registration/transform operations and strict native-library
 and version assertions. The fulltest shell variable avoids version substitution collisions.
-[PR #3710](https://github.com/neurodesk/neurocontainers/pull/3710) has passed upstream
-x86 testing; its ARM compilation is still running. Final upstream acceptance remains pending.
+[PR #3710](https://github.com/neurodesk/neurocontainers/pull/3710) is merged after
+[34/34 checks on each upstream architecture](https://github.com/neurodesk/neurocontainers/actions/runs/39224531819),
+with no failures or skips and both Dive/quality/release gates passing. The merged
+recipe matches the exact tested source. Automatic publication is audited separately.

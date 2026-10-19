@@ -14326,7 +14326,7 @@
       "port_files": [
         "recipes/elastix/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-elastix-20261012",
       "baseline_sha": "c62332c882b06c05d225cab2babd11d0290c2dd0",
       "candidate_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
@@ -14336,7 +14336,7 @@
       "run_id": 39219166368,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3710",
       "upstream_ci": {
-        "status": "in-progress",
+        "status": "passed",
         "head_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
         "expected_architectures": [
           "aarch64",
@@ -14347,10 +14347,180 @@
         "job_urls": {
           "x86_64": "https://github.com/neurodesk/neurocontainers/actions/runs/39224531819/job/117967604704",
           "aarch64": "https://github.com/neurodesk/neurocontainers/actions/runs/39224531819/job/117967604745"
-        }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "elastix",
+          "container": "elastix_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "5.3.1",
+          "build_date": "20261013",
+          "docker_archive": "elastix_arm64_5.3.1_20261013.docker.tar",
+          "sif": "elastix_arm64_5.3.1_20261013.simg",
+          "candidate_tag": "nd-candidate-elastix_arm64:ff8a87685a1a",
+          "launcher": null,
+          "pr_number": 3710,
+          "head_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
+          "tests": {
+            "total": 34,
+            "passed": 34,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 33,
+            "fulltest_passed": 33,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Direct deployed binaries resolve all libraries",
+              "elastix version check",
+              "elastix extended version",
+              "elastix help",
+              "transformix version check",
+              "transformix help",
+              "Rigid registration (quick test)",
+              "Rigid registration full",
+              "Affine registration",
+              "Similarity registration",
+              "Translation registration",
+              "BSpline nonrigid registration",
+              "Registration with NCC metric",
+              "Registration with MSD metric",
+              "Multi-stage registration (rigid then affine)",
+              "Single threaded registration",
+              "Multi-threaded registration",
+              "Self registration (identity test)",
+              "Apply transform to moving image"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 5,
+                "wasted_space": "3.5 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 5,
+                "wasted_space": "1.0 MB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 5,
+                "wasted_space": "632 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 4,
+                "wasted_space": "545 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 99.4633,
+            "wasted_bytes": 7495995,
+            "wasted_bytes_display": "7.5 MB",
+            "user_wasted_percent": 0.7291
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "elastix",
+          "container": "elastix",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "5.3.1",
+          "build_date": "20261013",
+          "docker_archive": "elastix_5.3.1_20261013.docker.tar",
+          "sif": "elastix_5.3.1_20261013.simg",
+          "candidate_tag": "nd-candidate-elastix:ff8a87685a1a",
+          "launcher": null,
+          "pr_number": 3710,
+          "head_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
+          "tests": {
+            "total": 34,
+            "passed": 34,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 33,
+            "fulltest_passed": 33,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Direct deployed binaries resolve all libraries",
+              "elastix version check",
+              "elastix extended version",
+              "elastix help",
+              "transformix version check",
+              "transformix help",
+              "Rigid registration (quick test)",
+              "Rigid registration full",
+              "Affine registration",
+              "Similarity registration",
+              "Translation registration",
+              "BSpline nonrigid registration",
+              "Registration with NCC metric",
+              "Registration with MSD metric",
+              "Multi-stage registration (rigid then affine)",
+              "Single threaded registration",
+              "Multi-threaded registration",
+              "Self registration (identity test)",
+              "Apply transform to moving image"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 3,
+                "wasted_space": "1.9 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "802 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "432 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "336 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 98.7539,
+            "wasted_bytes": 5099976,
+            "wasted_bytes_display": "5.1 MB",
+            "user_wasted_percent": 2.4065
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Review both upstream native candidate reports, all quality/Dive/gates; merge ownPR3710 only after passing. Native34/34 at exactff8 and clean mainmerge retain same recipe files.",
+      "merged_sha": "de600e937e7a0e850a664e65856a454fe1da2334",
+      "next_action": "Verify the automatic promotion, committed release metadata and public object availability against these tested candidate manifests. No manual promotion or successful-source rebuild.",
       "upstream_review": {
         "exists": true,
         "version": "5.3.1",
@@ -14517,7 +14687,35 @@
         },
         "merge_preflight_recipe_tree_identical": true
       },
-      "blocker_before_native_proof": "Four builds consumed. Corrected fulltest requires one root build plus two upstream architecture builds (3), exceeding the2 remaining within six-build limit. ARM application runtime is demonstrated; final corrected-test/PR lifecycle is unverified."
+      "blocker_before_native_proof": "Four builds consumed. Corrected fulltest requires one root build plus two upstream architecture builds (3), exceeding the2 remaining within six-build limit. ARM application runtime is demonstrated; final corrected-test/PR lifecycle is unverified.",
+      "merged_at": "2026-10-19T09:40:40Z",
+      "merged_recipe_tree_matches_tested_source": true,
+      "automatic_promotion": {
+        "checked_at": "2026-10-19T09:41:41.481930+00:00",
+        "run_id": 39231862022,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39231862022",
+        "source_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
+        "merge_sha": "de600e937e7a0e850a664e65856a454fe1da2334",
+        "status": "queued",
+        "conclusion": null,
+        "publication_verified": false,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-elastix-ff8a87685a1a201bcd76ced4fc52495d8526d312)",
+            "status": "in_progress",
+            "conclusion": null,
+            "active_steps": [
+              "Install promotion dependencies"
+            ]
+          },
+          {
+            "name": "publish (candidate-elastix_arm64-ff8a87685a1a201bcd76ced4fc52495d8526d312)",
+            "status": "queued",
+            "conclusion": null,
+            "active_steps": []
+          }
+        ]
+      }
     },
     {
       "recipe": "emuses",
@@ -14940,7 +15138,7 @@
         }
       ],
       "automatic_promotion": {
-        "checked_at": "2026-10-19T09:26:53.056848+00:00",
+        "checked_at": "2026-10-19T09:41:39.182581+00:00",
         "run_id": 39222129449,
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39222129449",
         "source_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
@@ -14954,7 +15152,7 @@
             "status": "in_progress",
             "conclusion": null,
             "active_steps": [
-              "Publish exact tested Docker archive to unique staging tags"
+              "Attach tested SIF to staged OCI images"
             ]
           },
           {
@@ -20497,7 +20695,35 @@
         "merged_sha": "1209f28fd0d8056bc41607be0311a73b285e06fb",
         "scope": "Original merged port retained separately from necessary runtime-correction followup."
       },
-      "merged_recipe_tree_matches_tested_source": true
+      "merged_recipe_tree_matches_tested_source": true,
+      "automatic_promotion": {
+        "checked_at": "2026-10-19T09:41:40.411431+00:00",
+        "run_id": 39230753923,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39230753923",
+        "source_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
+        "merge_sha": "b29baf127a8459263322001778323f9c6d879f82",
+        "status": "in_progress",
+        "conclusion": null,
+        "publication_verified": false,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-glmsingle-5f6354b958fdc037d036bbf0f210d7fa213437d9)",
+            "status": "in_progress",
+            "conclusion": null,
+            "active_steps": [
+              "Publish exact tested Docker archive to unique staging tags"
+            ]
+          },
+          {
+            "name": "publish (candidate-glmsingle_arm64-5f6354b958fdc037d036bbf0f210d7fa213437d9)",
+            "status": "in_progress",
+            "conclusion": null,
+            "active_steps": [
+              "Publish tested SIF to unique staging object keys"
+            ]
+          }
+        ]
+      }
     },
     {
       "recipe": "globus",
@@ -31557,7 +31783,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "aa4456e1e08e53203a95f9450f2963c85ca7851e",
-      "next_action": "Verify the automatic promotion, committed release metadata and public object availability against these tested candidate manifests. No manual promotion or successful-source rebuild.",
+      "next_action": "Native proof, own upstream PR/architecture tests and merge complete; automatic publication metadata/source/public-object checks verified. No successful image rebuild needed.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.2",
@@ -32323,22 +32549,20 @@
         }
       ],
       "automatic_promotion": {
-        "checked_at": "2026-10-19T09:26:51.905248+00:00",
+        "checked_at": "2026-10-19T09:35:59.653662+00:00",
         "run_id": 39229235022,
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39229235022",
         "source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
         "merge_sha": "aa4456e1e08e53203a95f9450f2963c85ca7851e",
-        "status": "in_progress",
-        "conclusion": null,
-        "publication_verified": false,
+        "status": "completed",
+        "conclusion": "success",
+        "publication_verified": true,
         "publish_jobs": [
           {
             "name": "publish (candidate-nftsim-7553cfbf2c6da987bb73454b86e3359280ea7100)",
-            "status": "in_progress",
-            "conclusion": null,
-            "active_steps": [
-              "Publish exact tested Docker archive to unique staging tags"
-            ]
+            "status": "completed",
+            "conclusion": "success",
+            "active_steps": []
           },
           {
             "name": "publish (candidate-nftsim_arm64-7553cfbf2c6da987bb73454b86e3359280ea7100)",
@@ -32347,6 +32571,71 @@
             "active_steps": []
           }
         ]
+      },
+      "release_metadata_audit": {
+        "recipe": "nftsim",
+        "promotion_run_id": 39229235022,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39229235022",
+        "status": "verified-published-metadata",
+        "source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+        "metadata": [
+          {
+            "architecture": "x86_64",
+            "path": "releases/nftsim/1.0.2.json",
+            "source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+            "metadata_ref": "adf856a8d4b52503bfb400e5335d3e6988680d10",
+            "metadata_commit_sha": "adf856a8d4b52503bfb400e5335d3e6988680d10",
+            "expected_build_date": "20261019",
+            "committed_build_dates": [
+              "20261019"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "sif": "nftsim_1.0.2_20261019.simg",
+            "sif_sha256": "09ba5a8b3658408c1dc278bd7d4c3e0df54514ab389941903599204f6c204f53",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/nftsim_1.0.2_20261019.simg",
+            "public_sif_head_status": 200,
+            "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+          },
+          {
+            "architecture": "aarch64",
+            "path": "releases/nftsim_arm64/1.0.2.json",
+            "source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+            "metadata_ref": "adf856a8d4b52503bfb400e5335d3e6988680d10",
+            "metadata_commit_sha": "adf856a8d4b52503bfb400e5335d3e6988680d10",
+            "expected_build_date": "20261019",
+            "committed_build_dates": [
+              "20261019"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "sif": "nftsim_arm64_1.0.2_20261019.simg",
+            "sif_sha256": "fdd4792305807b5b3581eb4a97c821f5e93a38aea9d54b7ba995f7b806bada84",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/nftsim_arm64_1.0.2_20261019.simg",
+            "public_sif_head_status": 200,
+            "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+          }
+        ],
+        "checked_at": "2026-10-19T09:35:59.653662+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-nftsim-7553cfbf2c6da987bb73454b86e3359280ea7100)",
+            "status": "completed",
+            "conclusion": "success",
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-nftsim_arm64-7553cfbf2c6da987bb73454b86e3359280ea7100)",
+            "status": "completed",
+            "conclusion": "success",
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-19T09:35:59.653662+00:00"
       }
     },
     {
@@ -35664,255 +35953,32 @@
       "port_files": [
         "recipes/pydeface/build.yaml"
       ],
-      "status": "native-running",
-      "branch": "arm64/pydeface-release-20261019",
+      "status": "upstream-running",
+      "branch": "arm64/upstream-pydeface-20261012",
       "baseline_sha": "b68a3ddde7d036ea095c91123d27903f0629a829",
       "candidate_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
       "started_at": "2026-10-13T07:35:00+00:00",
       "deadline": "2026-10-13T19:35:00+00:00",
-      "attempts": 38,
+      "attempts": 40,
       "run_id": 39226549671,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3580",
       "upstream_ci": {
-        "candidate_run_id": 38379088144,
-        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38379088144",
-        "failed_architecture_reviews": {
-          "x86_64": {
-            "report": {
-              "schema_version": 3,
-              "recipe": "pydeface",
-              "container": "pydeface",
-              "variant": "",
-              "architecture": "x86_64",
-              "version": "2.1.0",
-              "build_date": "20261013",
-              "docker_archive": "pydeface_2.1.0_20261013.docker.tar",
-              "sif": "pydeface_2.1.0_20261013.simg",
-              "candidate_tag": "nd-candidate-pydeface:7fb8e0ebfa9a",
-              "launcher": "pydeface",
-              "pr_number": 3580,
-              "head_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
-              "tests": {
-                "total": 62,
-                "passed": 61,
-                "failed": 1,
-                "skipped": 0,
-                "fulltest_total": 61,
-                "fulltest_passed": 60,
-                "fulltest_failed": 1,
-                "suites_total": 1,
-                "suites_passed": 0,
-                "passed_tests": [
-                  "Simple Deploy Bins/Path Test",
-                  "pydeface version check",
-                  "pydeface help",
-                  "Basic defacing with default output",
-                  "Defacing with custom output path",
-                  "Defacing with force overwrite",
-                  "Defacing with mutualinfo cost",
-                  "Defacing with corratio cost",
-                  "Defacing with normcorr cost",
-                  "Defacing with normmi cost",
-                  "Defacing with leastsq cost",
-                  "Defacing with applyto single image",
-                  "Defacing with nocleanup",
-                  "Defacing with verbose output",
-                  "Deface T2 image",
-                  "FSL flirt version check",
-                  "FSL flirt basic registration",
-                  "FSL flirt with mutualinfo cost",
-                  "FSL flirt apply transform",
-                  "FSL convert_xfm invert"
-                ],
-                "failed_tests": [
-                  "Exact architecture-specific runtime versions"
-                ]
-              },
-              "dive": {
-                "status": "success",
-                "failed_checks": [],
-                "inefficient_files": [
-                  {
-                    "count": 2,
-                    "wasted_space": "8.4 MB",
-                    "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial-updates_main_binary-amd64_Packages"
-                  },
-                  {
-                    "count": 2,
-                    "wasted_space": "7.7 MB",
-                    "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial-updates_main_i18n_Translation-en"
-                  },
-                  {
-                    "count": 2,
-                    "wasted_space": "7.3 MB",
-                    "path": "/usr/share/i18n/locales/C"
-                  },
-                  {
-                    "count": 2,
-                    "wasted_space": "7.2 MB",
-                    "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial_main_binary-amd64_Packages"
-                  },
-                  {
-                    "count": 2,
-                    "wasted_space": "6.6 MB",
-                    "path": "/var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_xenial-security_main_i18n_Translation-en"
-                  }
-                ],
-                "efficiency_percent": 99.581,
-                "wasted_bytes": 93402306,
-                "wasted_bytes_display": "93 MB",
-                "user_wasted_percent": 0.5624
-              }
-            },
-            "counts": {
-              "passed": 61,
-              "failed": 1,
-              "skipped": 0,
-              "total_tests": 62
-            },
-            "failed_tests": [
-              {
-                "duration": 0.08912515640258789,
-                "message": "Expected exit code 0, got 1",
-                "name": "Exact architecture-specific runtime versions",
-                "return_code": 1,
-                "status": "failed",
-                "stderr": "Expected exit code 0, got 1",
-                "stdout": ""
-              }
-            ],
-            "evidence_directory": "/tmp/pydeface-upstream-x86-reports"
-          },
-          "aarch64": {
-            "report": {
-              "schema_version": 3,
-              "recipe": "pydeface",
-              "container": "pydeface_arm64",
-              "variant": "arm64",
-              "architecture": "aarch64",
-              "version": "2.1.0",
-              "build_date": "20261013",
-              "docker_archive": "pydeface_arm64_2.1.0_20261013.docker.tar",
-              "sif": "pydeface_arm64_2.1.0_20261013.simg",
-              "candidate_tag": "nd-candidate-pydeface_arm64:7fb8e0ebfa9a",
-              "launcher": "pydeface",
-              "pr_number": 3580,
-              "head_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
-              "tests": {
-                "total": 62,
-                "passed": 59,
-                "failed": 3,
-                "skipped": 0,
-                "fulltest_total": 61,
-                "fulltest_passed": 58,
-                "fulltest_failed": 3,
-                "suites_total": 1,
-                "suites_passed": 0,
-                "passed_tests": [
-                  "Simple Deploy Bins/Path Test",
-                  "pydeface version check",
-                  "pydeface help",
-                  "Basic defacing with default output",
-                  "Defacing with custom output path",
-                  "Defacing with force overwrite",
-                  "Defacing with corratio cost",
-                  "Defacing with normcorr cost",
-                  "Defacing with leastsq cost",
-                  "Defacing with applyto single image",
-                  "Defacing with nocleanup",
-                  "Defacing with verbose output",
-                  "FSL flirt version check",
-                  "FSL flirt basic registration",
-                  "FSL flirt with mutualinfo cost",
-                  "FSL flirt apply transform",
-                  "FSL convert_xfm invert",
-                  "FSL fslstats basic",
-                  "FSL fslstats volume",
-                  "FSL fslstats robust range"
-                ],
-                "failed_tests": [
-                  "Defacing with mutualinfo cost",
-                  "Defacing with normmi cost",
-                  "Deface T2 image"
-                ]
-              },
-              "dive": {
-                "status": "success",
-                "failed_checks": [],
-                "inefficient_files": [
-                  {
-                    "count": 2,
-                    "wasted_space": "9.3 MB",
-                    "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
-                  },
-                  {
-                    "count": 4,
-                    "wasted_space": "2.7 MB",
-                    "path": "/var/cache/debconf/templates.dat"
-                  },
-                  {
-                    "count": 2,
-                    "wasted_space": "1.5 MB",
-                    "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
-                  },
-                  {
-                    "count": 2,
-                    "wasted_space": "1.4 MB",
-                    "path": "/var/cache/debconf/templates.dat-old"
-                  },
-                  {
-                    "count": 4,
-                    "wasted_space": "832 kB",
-                    "path": "/var/log/dpkg.log"
-                  }
-                ],
-                "efficiency_percent": 99.9122,
-                "wasted_bytes": 18148114,
-                "wasted_bytes_display": "18 MB",
-                "user_wasted_percent": 0.1501
-              }
-            },
-            "counts": {
-              "passed": 59,
-              "failed": 3,
-              "skipped": 0,
-              "total_tests": 62
-            },
-            "failed_tests": [
-              {
-                "duration": 600.0319681167603,
-                "message": "Timeout after 600s",
-                "name": "Defacing with mutualinfo cost",
-                "return_code": 0,
-                "status": "failed",
-                "stderr": "Timeout after 600s",
-                "stdout": ""
-              },
-              {
-                "duration": 300.10602355003357,
-                "message": "Timeout after 300s",
-                "name": "Defacing with normmi cost",
-                "return_code": 0,
-                "status": "failed",
-                "stderr": "Timeout after 300s",
-                "stdout": ""
-              },
-              {
-                "duration": 300.10607171058655,
-                "message": "Timeout after 300s",
-                "name": "Deface T2 image",
-                "return_code": 0,
-                "status": "failed",
-                "stderr": "Timeout after 300s",
-                "stdout": ""
-              }
-            ],
-            "evidence_directory": "/tmp/pydeface-upstream-arm-reports"
-          }
+        "status": "in-progress",
+        "head_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+        "expected_architectures": [
+          "aarch64",
+          "x86_64"
+        ],
+        "accounted_jobs": 2,
+        "candidate_run_id": 39231970600,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39231970600",
+        "requested_runner_labels": {
+          "aarch64": "ubuntu-24.04-arm",
+          "x86_64": "blacksmith-8vcpu-ubuntu-2404"
         }
       },
       "merged_sha": null,
-      "next_action": "Review exact source and actual native Docker/SIF/deploy/fulltest reports before focused upstream PR.",
+      "next_action": "Review both native upstream candidate reports/Dive/gates on this exact final head; merge existing PR3580 only when every required check passes.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.0",
@@ -35950,8 +36016,8 @@
         "https://git.fmrib.ox.ac.uk/fsl/avwutils/-/raw/master/fslsplit.cc",
         "https://git.fmrib.ox.ac.uk/fsl/avwutils/-/raw/master/fslmerge.cc"
       ],
-      "arm64_attempts": 21,
-      "x86_64_attempts": 17,
+      "arm64_attempts": 22,
+      "x86_64_attempts": 18,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39226549671",
       "candidate_history": [
         {
@@ -35999,8 +36065,10 @@
         ]
       },
       "native_evidence": {
-        "source_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
+        "source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
         "version": "2.1.0",
+        "run_id": 39226549671,
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39226549671",
         "counts": {
           "total_tests": 62,
           "passed": 62,
@@ -36008,8 +36076,8 @@
           "skipped": 0
         },
         "fulltest_summary": {
-          "duration": 1214.778742313385,
-          "run_timestamp": "2026-10-13T09:45:36.748510",
+          "duration": 1236.8391995429993,
+          "run_timestamp": "2026-10-19T09:39:50.621534",
           "suites_failed": 0,
           "suites_passed": 1,
           "tests_failed": 0,
@@ -36017,16 +36085,10 @@
           "total_suites": 1,
           "total_tests": 61
         },
-        "deploy_counts": {
-          "total": 1,
-          "passed": 1,
-          "failed": 0,
-          "skipped": 0
-        },
-        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38374199970",
         "runner_labels": [
           "ubuntu-24.04-arm"
-        ]
+        ],
+        "command_exit_contracts": "58 exit0 checks including deploy; four explicit expected exit1 negatives; all61 scientific contracts unchanged."
       },
       "pending_upstream_issue": 3580,
       "pr_number": 3580,
@@ -37419,7 +37481,279 @@
         "shell_syntax_valid": true,
         "proposal_sha256": "00563c3e75afd1dc86a53d70a3daa74fb82a6d7a37bb8fe17168009df6d331d7",
         "source_edit_and_commit_wait_for_native_measurement_review": true
-      }
+      },
+      "native_evidence_history": [
+        {
+          "source_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
+          "version": "2.1.0",
+          "counts": {
+            "total_tests": 62,
+            "passed": 62,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 1214.778742313385,
+            "run_timestamp": "2026-10-13T09:45:36.748510",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 61,
+            "total_suites": 1,
+            "total_tests": 61
+          },
+          "deploy_counts": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38374199970",
+          "runner_labels": [
+            "ubuntu-24.04-arm"
+          ]
+        }
+      ],
+      "upstream_ci_history": [
+        {
+          "candidate_run_id": 38379088144,
+          "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38379088144",
+          "failed_architecture_reviews": {
+            "x86_64": {
+              "report": {
+                "schema_version": 3,
+                "recipe": "pydeface",
+                "container": "pydeface",
+                "variant": "",
+                "architecture": "x86_64",
+                "version": "2.1.0",
+                "build_date": "20261013",
+                "docker_archive": "pydeface_2.1.0_20261013.docker.tar",
+                "sif": "pydeface_2.1.0_20261013.simg",
+                "candidate_tag": "nd-candidate-pydeface:7fb8e0ebfa9a",
+                "launcher": "pydeface",
+                "pr_number": 3580,
+                "head_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
+                "tests": {
+                  "total": 62,
+                  "passed": 61,
+                  "failed": 1,
+                  "skipped": 0,
+                  "fulltest_total": 61,
+                  "fulltest_passed": 60,
+                  "fulltest_failed": 1,
+                  "suites_total": 1,
+                  "suites_passed": 0,
+                  "passed_tests": [
+                    "Simple Deploy Bins/Path Test",
+                    "pydeface version check",
+                    "pydeface help",
+                    "Basic defacing with default output",
+                    "Defacing with custom output path",
+                    "Defacing with force overwrite",
+                    "Defacing with mutualinfo cost",
+                    "Defacing with corratio cost",
+                    "Defacing with normcorr cost",
+                    "Defacing with normmi cost",
+                    "Defacing with leastsq cost",
+                    "Defacing with applyto single image",
+                    "Defacing with nocleanup",
+                    "Defacing with verbose output",
+                    "Deface T2 image",
+                    "FSL flirt version check",
+                    "FSL flirt basic registration",
+                    "FSL flirt with mutualinfo cost",
+                    "FSL flirt apply transform",
+                    "FSL convert_xfm invert"
+                  ],
+                  "failed_tests": [
+                    "Exact architecture-specific runtime versions"
+                  ]
+                },
+                "dive": {
+                  "status": "success",
+                  "failed_checks": [],
+                  "inefficient_files": [
+                    {
+                      "count": 2,
+                      "wasted_space": "8.4 MB",
+                      "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial-updates_main_binary-amd64_Packages"
+                    },
+                    {
+                      "count": 2,
+                      "wasted_space": "7.7 MB",
+                      "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial-updates_main_i18n_Translation-en"
+                    },
+                    {
+                      "count": 2,
+                      "wasted_space": "7.3 MB",
+                      "path": "/usr/share/i18n/locales/C"
+                    },
+                    {
+                      "count": 2,
+                      "wasted_space": "7.2 MB",
+                      "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial_main_binary-amd64_Packages"
+                    },
+                    {
+                      "count": 2,
+                      "wasted_space": "6.6 MB",
+                      "path": "/var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_xenial-security_main_i18n_Translation-en"
+                    }
+                  ],
+                  "efficiency_percent": 99.581,
+                  "wasted_bytes": 93402306,
+                  "wasted_bytes_display": "93 MB",
+                  "user_wasted_percent": 0.5624
+                }
+              },
+              "counts": {
+                "passed": 61,
+                "failed": 1,
+                "skipped": 0,
+                "total_tests": 62
+              },
+              "failed_tests": [
+                {
+                  "duration": 0.08912515640258789,
+                  "message": "Expected exit code 0, got 1",
+                  "name": "Exact architecture-specific runtime versions",
+                  "return_code": 1,
+                  "status": "failed",
+                  "stderr": "Expected exit code 0, got 1",
+                  "stdout": ""
+                }
+              ],
+              "evidence_directory": "/tmp/pydeface-upstream-x86-reports"
+            },
+            "aarch64": {
+              "report": {
+                "schema_version": 3,
+                "recipe": "pydeface",
+                "container": "pydeface_arm64",
+                "variant": "arm64",
+                "architecture": "aarch64",
+                "version": "2.1.0",
+                "build_date": "20261013",
+                "docker_archive": "pydeface_arm64_2.1.0_20261013.docker.tar",
+                "sif": "pydeface_arm64_2.1.0_20261013.simg",
+                "candidate_tag": "nd-candidate-pydeface_arm64:7fb8e0ebfa9a",
+                "launcher": "pydeface",
+                "pr_number": 3580,
+                "head_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
+                "tests": {
+                  "total": 62,
+                  "passed": 59,
+                  "failed": 3,
+                  "skipped": 0,
+                  "fulltest_total": 61,
+                  "fulltest_passed": 58,
+                  "fulltest_failed": 3,
+                  "suites_total": 1,
+                  "suites_passed": 0,
+                  "passed_tests": [
+                    "Simple Deploy Bins/Path Test",
+                    "pydeface version check",
+                    "pydeface help",
+                    "Basic defacing with default output",
+                    "Defacing with custom output path",
+                    "Defacing with force overwrite",
+                    "Defacing with corratio cost",
+                    "Defacing with normcorr cost",
+                    "Defacing with leastsq cost",
+                    "Defacing with applyto single image",
+                    "Defacing with nocleanup",
+                    "Defacing with verbose output",
+                    "FSL flirt version check",
+                    "FSL flirt basic registration",
+                    "FSL flirt with mutualinfo cost",
+                    "FSL flirt apply transform",
+                    "FSL convert_xfm invert",
+                    "FSL fslstats basic",
+                    "FSL fslstats volume",
+                    "FSL fslstats robust range"
+                  ],
+                  "failed_tests": [
+                    "Defacing with mutualinfo cost",
+                    "Defacing with normmi cost",
+                    "Deface T2 image"
+                  ]
+                },
+                "dive": {
+                  "status": "success",
+                  "failed_checks": [],
+                  "inefficient_files": [
+                    {
+                      "count": 2,
+                      "wasted_space": "9.3 MB",
+                      "path": "/usr/lib/aarch64-linux-gnu/libcrypto.so.3"
+                    },
+                    {
+                      "count": 4,
+                      "wasted_space": "2.7 MB",
+                      "path": "/var/cache/debconf/templates.dat"
+                    },
+                    {
+                      "count": 2,
+                      "wasted_space": "1.5 MB",
+                      "path": "/usr/lib/aarch64-linux-gnu/libssl.so.3"
+                    },
+                    {
+                      "count": 2,
+                      "wasted_space": "1.4 MB",
+                      "path": "/var/cache/debconf/templates.dat-old"
+                    },
+                    {
+                      "count": 4,
+                      "wasted_space": "832 kB",
+                      "path": "/var/log/dpkg.log"
+                    }
+                  ],
+                  "efficiency_percent": 99.9122,
+                  "wasted_bytes": 18148114,
+                  "wasted_bytes_display": "18 MB",
+                  "user_wasted_percent": 0.1501
+                }
+              },
+              "counts": {
+                "passed": 59,
+                "failed": 3,
+                "skipped": 0,
+                "total_tests": 62
+              },
+              "failed_tests": [
+                {
+                  "duration": 600.0319681167603,
+                  "message": "Timeout after 600s",
+                  "name": "Defacing with mutualinfo cost",
+                  "return_code": 0,
+                  "status": "failed",
+                  "stderr": "Timeout after 600s",
+                  "stdout": ""
+                },
+                {
+                  "duration": 300.10602355003357,
+                  "message": "Timeout after 300s",
+                  "name": "Defacing with normmi cost",
+                  "return_code": 0,
+                  "status": "failed",
+                  "stderr": "Timeout after 300s",
+                  "stdout": ""
+                },
+                {
+                  "duration": 300.10607171058655,
+                  "message": "Timeout after 300s",
+                  "name": "Deface T2 image",
+                  "return_code": 0,
+                  "status": "failed",
+                  "stderr": "Timeout after 300s",
+                  "stdout": ""
+                }
+              ],
+              "evidence_directory": "/tmp/pydeface-upstream-arm-reports"
+            }
+          }
+        }
+      ]
     },
     {
       "recipe": "qmrlab",

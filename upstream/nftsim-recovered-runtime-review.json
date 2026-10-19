@@ -272,5 +272,26 @@
     "negative_contracts": "Replace the two Error handled shell fallbacks with actual documented nonzero exits and substantive diagnostics once observed; preserve negative-test intent. Retain exact PAS exit1/missing-fCaP assertion and every other scientific test.",
     "provenance_limit": "Current suite checks vendor version and only the 40-hex format of source-commit; it does not record/assert the actual vendor source commit. Historical upstream rename is documented, not proof that every vendor source byte equals official0bd35df. No dependency/application-source patch proposed.",
     "budget": "No recipe/test edits or dispatch before explicit renewed12-hour/max11 allowance. Eight accounted attempts now include two recovered external jobs and one earlier unstarted reservation; retain original start/deadline and all old proof. Three fresh jobs would bring total11. No claim of native success or automatic publication."
+  },
+  "followup_resolution": {
+    "source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+    "native_run_id": 39224036126,
+    "upstream_run_id": 39226115101,
+    "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3708",
+    "merge_sha": "aa4456e1e08e53203a95f9450f2963c85ca7851e",
+    "native_counts": {
+      "total": 69,
+      "passed": 69,
+      "failed": 0,
+      "skipped": 0
+    },
+    "each_upstream_architecture_counts": {
+      "total": 69,
+      "passed": 69,
+      "failed": 0,
+      "skipped": 0
+    },
+    "changes": "Correct shipped ramp nu spelling without numerical changes; run real timestamp mode in a fresh writable directory; assert finite outputs and actual negative exits. All68 active tests retained.",
+    "limits": "PAS fCaP remains an explicitly asserted unsupported-feature rejection; no positive PAS claim. Automatic publication not yet verified."
   }
 }
