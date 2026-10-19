@@ -14326,18 +14326,31 @@
       "port_files": [
         "recipes/elastix/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-elastix-20261012",
       "baseline_sha": "c62332c882b06c05d225cab2babd11d0290c2dd0",
       "candidate_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
       "started_at": "2026-10-12T21:38:36.616633+00:00",
       "deadline": "2026-10-13T09:38:36.616633+00:00",
-      "attempts": 5,
+      "attempts": 7,
       "run_id": 39219166368,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3710",
+      "upstream_ci": {
+        "status": "in-progress",
+        "head_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
+        "expected_architectures": [
+          "aarch64",
+          "x86_64"
+        ],
+        "accounted_jobs": 2,
+        "candidate_run_id": 39224531819,
+        "job_urls": {
+          "x86_64": "https://github.com/neurodesk/neurocontainers/actions/runs/39224531819/job/117967604704",
+          "aarch64": "https://github.com/neurodesk/neurocontainers/actions/runs/39224531819/job/117967604745"
+        }
+      },
       "merged_sha": null,
-      "next_action": "Review exact ff8a876 native run, then integrate only intended recipe/test files against current upstream before focused own PR.",
+      "next_action": "Review both upstream native candidate reports, all quality/Dive/gates; merge ownPR3710 only after passing. Native34/34 at exactff8 and clean mainmerge retain same recipe files.",
       "upstream_review": {
         "exists": true,
         "version": "5.3.1",
@@ -14363,8 +14376,8 @@
         "https://github.com/InsightSoftwareConsortium/ITK/releases/tag/v5.4.7",
         "https://github.com/Vbitz/neurocontainers-arm64/issues/92#issuecomment-5654152601"
       ],
-      "arm64_attempts": 5,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 6,
+      "x86_64_attempts": 1,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39219166368",
       "native_attempt_history": [
         {
@@ -14428,7 +14441,7 @@
           "source_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
           "attempt": 5,
           "dispatched_at": "2026-10-19T07:55:59.380014+00:00",
-          "status": "queued",
+          "status": "success",
           "hypothesis": "Correct shell variable collision while preserving scientific checks."
         }
       ],
@@ -14452,7 +14465,6 @@
         "corrected_source_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
         "correction": "Rename shell variable to actual_tool_version; verify resolved production substitution preserves the variable and exact-version pattern; schema/both generation/spelling/shell syntax passed. Corrected source has no runtime proof yet."
       },
-      "blocker": "Four builds consumed. Corrected fulltest requires one root build plus two upstream architecture builds (3), exceeding the2 remaining within six-build limit. ARM application runtime is demonstrated; final corrected-test/PR lifecycle is unverified.",
       "pending_budget_question": {
         "requested_at": "2026-10-15T07:28:28.836994+00:00",
         "requested_max_build_attempts": 7,
@@ -14480,7 +14492,32 @@
         "renewed_deadline": "2026-10-19T19:55:15.259911+00:00",
         "scientific_assertions_and_no_private_ports_preserved": true
       },
-      "status_before_authorized_continuation": "blocked-verification-budget"
+      "status_before_authorized_continuation": "blocked-verification-budget",
+      "pr_number": 3710,
+      "native_evidence": {
+        "source_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
+        "version": "5.3.1",
+        "run_id": 39219166368,
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39219166368",
+        "counts": {
+          "total_tests": 34,
+          "passed": 34,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "total_suites": 1,
+          "suites_passed": 1,
+          "suites_failed": 0,
+          "total_tests": 33,
+          "tests_passed": 33,
+          "tests_failed": 0,
+          "duration": 49.10760712623596,
+          "run_timestamp": "2026-10-19T08:36:39.470504"
+        },
+        "merge_preflight_recipe_tree_identical": true
+      },
+      "blocker_before_native_proof": "Four builds consumed. Corrected fulltest requires one root build plus two upstream architecture builds (3), exceeding the2 remaining within six-build limit. ARM application runtime is demonstrated; final corrected-test/PR lifecycle is unverified."
     },
     {
       "recipe": "emuses",
@@ -14903,13 +14940,34 @@
         }
       ],
       "automatic_promotion": {
+        "checked_at": "2026-10-19T08:37:49.051011+00:00",
         "run_id": 39222129449,
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39222129449",
-        "status": "queued-at-last-check",
         "source_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
         "merge_sha": "7cf6c602f64e008f6d2f89bfd29ab30b246cabd2",
-        "publication_verified": false
-      }
+        "status": "in_progress",
+        "conclusion": null,
+        "publication_verified": false,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-emuses-e35f92ad2553447ed86133a983ac12e5175d854a)",
+            "status": "in_progress",
+            "conclusion": null,
+            "active_steps": [
+              "Download candidate bundle without executing it"
+            ]
+          },
+          {
+            "name": "publish (candidate-emuses_arm64-e35f92ad2553447ed86133a983ac12e5175d854a)",
+            "status": "in_progress",
+            "conclusion": null,
+            "active_steps": [
+              "Publish exact tested Docker archive to unique staging tags"
+            ]
+          }
+        ]
+      },
+      "merged_recipe_tree_matches_tested_source": true
     },
     {
       "recipe": "epirecon",
@@ -19868,7 +19926,7 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "native-verified-awaiting-upstream-slot",
       "branch": "arm64/upstream-glmsingle-20261012",
       "baseline_sha": "b35e38baed8ba39f0ddc8707e0e98d52e32acf8a",
       "candidate_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
@@ -19955,7 +20013,7 @@
         }
       },
       "merged_sha": "1209f28fd0d8056bc41607be0311a73b285e06fb",
-      "next_action": "Review exact source and actual native Docker/SIF/deploy/fulltest reports before focused upstream PR.",
+      "next_action": "Open focused GLMsingle source/colormap followup PR when2slots free. Native all78passed; finalbody /tmp/glmsingle-followup-pr.md ready; no successful native rebuild.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.0",
@@ -19978,8 +20036,10 @@
         "unusual_exits": []
       },
       "native_evidence": {
-        "source_sha": "320da1fc522a1d9d8e574f648d543ae4cfe80ef7",
+        "source_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
         "version": "1.2.0",
+        "run_id": 39222097735,
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39222097735",
         "counts": {
           "total_tests": 78,
           "passed": 78,
@@ -19987,8 +20047,8 @@
           "skipped": 0
         },
         "fulltest_summary": {
-          "duration": 109.98272442817688,
-          "run_timestamp": "2026-10-12T17:26:29.853518",
+          "duration": 107.41349482536316,
+          "run_timestamp": "2026-10-19T08:27:46.196166",
           "suites_failed": 0,
           "suites_passed": 1,
           "tests_failed": 0,
@@ -20001,11 +20061,7 @@
           "passed": 1,
           "failed": 0,
           "skipped": 0
-        },
-        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38283250023",
-        "runner_labels": [
-          "ubuntu-24.04-arm"
-        ]
+        }
       },
       "pr_number": 3518,
       "external_progress": {
@@ -20106,6 +20162,36 @@
             "all_unusual_exits_explicitly_asserted": true,
             "unusual_exits": []
           }
+        },
+        {
+          "source_sha": "320da1fc522a1d9d8e574f648d543ae4cfe80ef7",
+          "version": "1.2.0",
+          "counts": {
+            "total_tests": 78,
+            "passed": 78,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 109.98272442817688,
+            "run_timestamp": "2026-10-12T17:26:29.853518",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 77,
+            "total_suites": 1,
+            "total_tests": 77
+          },
+          "deploy_counts": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38283250023",
+          "runner_labels": [
+            "ubuntu-24.04-arm"
+          ]
         }
       ],
       "resume_existing_upstream_pr_after_native": true,
@@ -20216,6 +20302,16 @@
             "After explicit renewed budget, validate/generate both variants and obtain one native root run plus two required upstream architecture jobs. Existing merged ownport3518 remains historical; any required corrective PR stays focused on this scientific followup."
           ],
           "not_done": "No recipe/test edits, source upgrade, container build, dispatch or policy-budget reset performed. Scientific/ARM success remains unproven."
+        },
+        "followup_native_verification": {
+          "source_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
+          "run_id": 39222097735,
+          "total": 78,
+          "passed": 78,
+          "failed": 0,
+          "skipped": 0,
+          "scope": "All77 fulltests pass, including real finite Turbo RGB checks256/64/2, exact PEP610 Git9b7f685/distribution1.2 identity and analytical known-amplitude GLM fitting plus savedmodel assertions. All existing model parameters/tolerances retained across the upstream33-commit source upgrade. Python3.8-compatible pip25.0.1 supplies required installation provenance; no scientific implementation patch.",
+          "upstream_pending": true
         }
       },
       "pending_budget_question": {
@@ -20267,7 +20363,7 @@
           "attempt": 8,
           "dispatched_at": "2026-10-19T08:20:37.599989+00:00",
           "hypothesis": "Prior native run passed all scientific and Turbo RGB checks but oldpip omitted direct_url.json. Official pip25.0.1 supportsPython3.8 and records PEP610 source identity. Same upstreamsource9b7f685 and all77 tests/tolerances retained; both generation/updatepolicy valid. Previous failed native run terminal; EMUSES upstreamjobs completed.",
-          "status": "queued"
+          "status": "success"
         }
       ],
       "prepared_next_candidate": {
@@ -20275,6 +20371,12 @@
         "reason": "Oldpip supplied no direct_url.json; use official pip25.0.1 requiringPython>=3.8 to record PEP610 Git identity. Sameupstreamsource/scientifictests retained.",
         "dispatched": true,
         "run_id": 39222097735
+      },
+      "previous_upstream_port": {
+        "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3518",
+        "pr_number": 3518,
+        "merged_sha": "1209f28fd0d8056bc41607be0311a73b285e06fb",
+        "scope": "Original merged port retained separately from necessary runtime-correction followup."
       }
     },
     {
@@ -31140,104 +31242,24 @@
         "recipes/nftsim/build.yaml"
       ],
       "status": "native-running",
-      "branch": "arm64/upstream-nftsim-current-proof-20261012",
+      "branch": "arm64/nftsim-integrated-20261019",
       "baseline_sha": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
-      "candidate_sha": "8cc67ffb3a87e5d0a62934d67d735b1233574599",
+      "candidate_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
       "started_at": "2026-10-12T12:46:00+00:00",
       "deadline": "2026-10-13T00:46:00+00:00",
-      "attempts": 10,
-      "run_id": 39221832476,
-      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3514",
+      "attempts": 13,
+      "run_id": 39224036126,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3708",
       "upstream_ci": {
-        "candidate_run_id": 38256071709,
-        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38256071709",
-        "aarch64": {
-          "schema_version": 3,
-          "recipe": "nftsim",
-          "container": "nftsim_arm64",
-          "variant": "arm64",
-          "architecture": "aarch64",
-          "version": "1.0.2",
-          "build_date": "20261012",
-          "docker_archive": "nftsim_arm64_1.0.2_20261012.docker.tar",
-          "sif": "nftsim_arm64_1.0.2_20261012.simg",
-          "candidate_tag": "nd-candidate-nftsim_arm64:06d8049e10fe",
-          "launcher": null,
-          "pr_number": 3514,
-          "head_sha": "06d8049e10fe7703f38ab55cd25b999cbf050abf",
-          "tests": {
-            "total": 69,
-            "passed": 68,
-            "failed": 1,
-            "skipped": 0,
-            "fulltest_total": 68,
-            "fulltest_passed": 67,
-            "fulltest_failed": 1,
-            "suites_total": 1,
-            "suites_passed": 0,
-            "passed_tests": [
-              "Simple Deploy Bins/Path Test",
-              "Help output",
-              "Help flag short form",
-              "Help flag alternative",
-              "Check config file exists",
-              "EIRS corticothalamic simulation",
-              "Verify EIRS output contains time series",
-              "EIRS burst simulation",
-              "EIRS AERP simulation",
-              "EIRS TMS simulation",
-              "EIRS coupling ramp",
-              "EIRS dendrite integral",
-              "EMIRS simulation",
-              "E cortical simulation",
-              "EI cortical simulation",
-              "E coupling matrix",
-              "E ERPs simulation",
-              "E ERPs all nodes",
-              "Stimuli only simulation",
-              "White noise stimulus test"
-            ],
-            "failed_tests": [
-              "EIRS BCM plasticity"
-            ]
-          },
-          "dive": {
-            "status": "success",
-            "failed_checks": [],
-            "inefficient_files": [
-              {
-                "count": 4,
-                "wasted_space": "2.7 MB",
-                "path": "/var/cache/debconf/templates.dat"
-              },
-              {
-                "count": 2,
-                "wasted_space": "1.4 MB",
-                "path": "/var/cache/debconf/templates.dat-old"
-              },
-              {
-                "count": 4,
-                "wasted_space": "825 kB",
-                "path": "/var/log/dpkg.log"
-              },
-              {
-                "count": 4,
-                "wasted_space": "479 kB",
-                "path": "/var/lib/dpkg/status"
-              },
-              {
-                "count": 3,
-                "wasted_space": "382 kB",
-                "path": "/var/lib/dpkg/status-old"
-              }
-            ],
-            "efficiency_percent": 98.6522,
-            "wasted_bytes": 6120070,
-            "wasted_bytes_display": "6.1 MB",
-            "user_wasted_percent": 2.2361
-          }
-        },
-        "x86_64_status": "cancelled-unstarted-after-known-ARM-timeout; attempt reservation retained"
+        "head_sha": "8cc67ffb3a87e5d0a62934d67d735b1233574599",
+        "status": "not-started-merge-conflict",
+        "expected_architectures": [
+          "aarch64",
+          "x86_64"
+        ],
+        "accounted_jobs": 2,
+        "reserved_jobs": 2,
+        "started_jobs": 0
       },
       "merged_sha": "517b0cabd8453256ef39daafdea63ee3cf670f94",
       "next_action": "Review exact source and actual native Docker/SIF/deploy/fulltest reports before focused upstream PR.",
@@ -31260,9 +31282,9 @@
       "source_archive_sha256": "7f61425f2f88c87f2416474e7630cd899e5508983082a1a540a92c6d9699538d",
       "vendor_manifest_digest": "sha256:db920c1b7d7bdd237480981a023d86723607a1d0b3781f7cfcb5f73e7be7c647",
       "preflight_note": "Vendor index amd64 only; official master still0bd35df. Generic CXXFLAGS override supported by unmodified Makefile. Source commit independently update-tracked, acquisition binding validated; x86 image/version untouched. All67 tests unchanged plus finite/monotonic EIRS output.",
-      "arm64_attempts": 7,
-      "x86_64_attempts": 3,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39221832476",
+      "arm64_attempts": 9,
+      "x86_64_attempts": 4,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39224036126",
       "runtime_review": {
         "outcome": "followup-required",
         "source_sha": "a4e1e854343618b78b84723e31846e6ac1c0c73d",
@@ -31340,6 +31362,14 @@
           "attempt": 10,
           "dispatched_at": "2026-10-19T08:18:23.035685+00:00",
           "hypothesis": "First native run established actual ramp/timestamp repairs and exit1 negatives; now fix shipped ramp example on both architectures, copy it unchanged in tests, assert original inputs and complete finite series, and require actual missing-config diagnostics. Align ignored legacy directive removal with upstream; retain68activefulltests. Prior failedrun terminal, no duplicate variant.",
+          "status": "success"
+        },
+        {
+          "source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+          "run_id": 39224036126,
+          "attempt": 13,
+          "dispatched_at": "2026-10-19T08:36:55.713375+00:00",
+          "hypothesis": "Resolve actual upstream build.yaml conflict on currentmain7cf6c602 while carrying only the two byte-identical tested recipe files from8cc. Preserve all other acceptedports/instructionblobs and all68activefulltests; verify exact integrated shared-builder context before fast-forwarding samePR3708 branch. No upstreamcandidatejob started; reservations are pending, not active builds.",
           "status": "queued"
         }
       ],
@@ -31354,8 +31384,10 @@
         ]
       },
       "native_evidence": {
-        "source_sha": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
+        "source_sha": "8cc67ffb3a87e5d0a62934d67d735b1233574599",
         "version": "1.0.2",
+        "run_id": 39221832476,
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39221832476",
         "counts": {
           "total_tests": 69,
           "passed": 69,
@@ -31363,8 +31395,8 @@
           "skipped": 0
         },
         "fulltest_summary": {
-          "duration": 386.5980956554413,
-          "run_timestamp": "2026-10-12T17:51:11.444043",
+          "duration": 385.2784848213196,
+          "run_timestamp": "2026-10-19T08:27:19.673335",
           "suites_failed": 0,
           "suites_passed": 1,
           "tests_failed": 0,
@@ -31377,13 +31409,9 @@
           "passed": 1,
           "failed": 0,
           "skipped": 0
-        },
-        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38285990994",
-        "runner_labels": [
-          "ubuntu-24.04-arm"
-        ]
+        }
       },
-      "pr_number": 3514,
+      "pr_number": 3708,
       "blocker": {
         "category": "runtime-test-masks-failures",
         "detail": "Missing upstream ARM result recovered at exact PR head with matching input footprint. Both architectures report69/69 but Coupling ramp test hides SIGABRT/std::length_error/vector::reserve and Timestamped output hides failure to write /app/configs. Same two failures occur in current root report. Complete runtime success remains unproven.",
@@ -31725,6 +31753,36 @@
               "ubuntu-24.04-arm"
             ]
           }
+        },
+        {
+          "source_sha": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
+          "version": "1.0.2",
+          "counts": {
+            "total_tests": 69,
+            "passed": 69,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 386.5980956554413,
+            "run_timestamp": "2026-10-12T17:51:11.444043",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 68,
+            "total_suites": 1,
+            "total_tests": 68
+          },
+          "deploy_counts": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          },
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38285990994",
+          "runner_labels": [
+            "ubuntu-24.04-arm"
+          ]
         }
       ],
       "reuse_existing_upstream_pr": true,
@@ -31903,6 +31961,35 @@
         "reason": "Apply the already-proven documented nu spelling to the shipped example at build time on both architectures, so users receive the repaired configuration; test copies it unchanged and asserts finite output plus original numerical inputs. Correct negative diagnostics to actual exit1 message. Match current upstream removal of ignored legacy build.yaml test directive; all68 active fulltests preserved.",
         "dispatched": true,
         "run_id": 39221832476
+      },
+      "previous_upstream_port": {
+        "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3514",
+        "pr_number": 3514,
+        "merged_sha": "517b0cabd8453256ef39daafdea63ee3cf670f94",
+        "scope": "Original merged port retained separately from necessary runtime-correction followup."
+      },
+      "pr_title": "Fix NFTsim ramp example and verify timestamped simulation outputs",
+      "current_runtime_correction": {
+        "source_sha": "8cc67ffb3a87e5d0a62934d67d735b1233574599",
+        "native_passed": true,
+        "scope": "All68 fulltests retained. Shipped900-node ramp at original0.15s/0.0001timestep runs exit0 with finite complete output; unchanged stimuli fixture produces a new timestamped finite12-second output in a writable directory. Both invalid-input cases assert actual exit1 and native diagnostic. PAS remains an explicit unavailable-fCaP rejection, not positive PAS functionality. Ordinary configuration/path/test fixes only; no source-library port.",
+        "upstream_pending": true
+      },
+      "upstream_pr_head_branch": "arm64/upstream-nftsim-current-proof-20261012",
+      "integration": {
+        "recipe": "nftsim",
+        "source_sha": "8cc67ffb3a87e5d0a62934d67d735b1233574599",
+        "base_sha": "7cf6c602f64e008f6d2f89bfd29ab30b246cabd2",
+        "candidate_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+        "branch": "arm64/nftsim-integrated-20261019",
+        "authored_paths": [
+          "recipes/nftsim/build.yaml",
+          "recipes/nftsim/fulltest.yaml"
+        ],
+        "recipe_tree_identical_to_source": true,
+        "protected_instruction_blobs_unchanged_from_main": true,
+        "protected_instruction_files_untouched": true,
+        "reason": "Resolve current upstream recipe conflict while retaining the existing single checkout and user instruction overlays."
       }
     },
     {
@@ -36886,7 +36973,25 @@
           "hypothesis": "Current unchanged PR head on native GitHub ubuntu24ARM tests concrete runner-throughput hypothesis: same build.yaml previously had normmi161s/T2137s versus current Blacksmith normmi>300s/T2261s. Preserve scientific inputs, all assertions/timeouts and deliberate diagnostic review gate. This measurement is not a pre-approved release or FSL source patch.",
           "status": "queued"
         }
-      ]
+      ],
+      "runner_option_pr": {
+        "url": "https://github.com/neurodesk/neurocontainers/pull/3709",
+        "number": 3709,
+        "base_sha": "7cf6c602f64e008f6d2f89bfd29ab30b246cabd2",
+        "candidate_sha": "956bc59b0007b34d9c9ef042a3524909dc5a83e3",
+        "branch": "ci/native-github-arm-20261019",
+        "changed_paths": [
+          ".github/workflows/pr-container-candidate.yml"
+        ],
+        "protected_instruction_files_untouched": true,
+        "validation": "actionlint;8actualexpression runner selections; YAML comparison proves only candidate runs-on changes. All timeouts/build/runtime/Dive/architecture/artifact gates unchanged.",
+        "scope": "OptionalnativeGitHubARM selector; same defaultpools/allscientifictimeouts/gates. Independent currentaa6rootmeasure stillrequired before removingdiagnostics; not scientificproof itself.",
+        "state": "MERGED",
+        "merge_sha": "da69a6107e0d04268cfa6a3db73ee895b7397d0b",
+        "merged_at": "2026-10-19T08:44:13Z",
+        "all_checks_passed": true,
+        "native_github_label_available": true
+      }
     },
     {
       "recipe": "qmrlab",
