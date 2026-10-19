@@ -14500,18 +14500,31 @@
       "port_files": [
         "recipes/emuses/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/upstream-emuses-20261012",
       "baseline_sha": "9545cba27a176c0c9af44c03fe23c9962e71e531",
       "candidate_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
       "started_at": "2026-10-13T02:14:00+00:00",
       "deadline": "2026-10-13T14:14:00+00:00",
-      "attempts": 3,
+      "attempts": 5,
       "run_id": 39219604100,
-      "pr_url": null,
-      "upstream_ci": null,
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3707",
+      "upstream_ci": {
+        "head_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
+        "expected_architectures": [
+          "aarch64",
+          "x86_64"
+        ],
+        "status": "in-progress",
+        "accounted_jobs": 2,
+        "candidate_run_id": 39220788043,
+        "job_urls": {
+          "aarch64": "https://github.com/neurodesk/neurocontainers/actions/runs/39220788043/job/117955431059",
+          "x86_64": "https://github.com/neurodesk/neurocontainers/actions/runs/39220788043/job/117955430932"
+        }
+      },
       "merged_sha": null,
-      "next_action": "Review exact source and actual native Docker/SIF/deploy/fulltest reports before focused upstream PR.",
+      "next_action": "Review both actual candidate reports and raw scientific outputs; require all checks/Dive before merge; no duplicate native rebuild.",
       "upstream_review": {
         "exists": true,
         "version": "1.3.0",
@@ -14525,15 +14538,15 @@
       "upstream_verification_mode": "image-port",
       "upstream_ci_runner_label": "ci-blacksmith-x86",
       "change_summary": "Enable current EMUSES1.3.0 ARM64 using the unchanged released production scientific pins and the official native PyTorch2.7.1 CPU wheel. Correct only the x86-flattened NVIDIA/Triton lock entries on ARM to follow exact published PyTorch platform markers; preserve complete x86 CUDA path. Remove HOME assignment, preserve both original tests while checking full CLI exit, and add exact package/dependency closure plus actual application nested UMAP/HDBSCAN training, input/output/model/plot checks and model reload/transform on well-separated synthetic groups. No GPU claim, implementation replacement or dependency source patch.",
-      "pr_title": "Enable EMUSES ARM64 and verify real UMAP clustering and model reload",
+      "pr_title": "Enable native ARM64 EMUSES and verify real model persistence",
       "primary_source_review": [
         "https://github.com/chrisfoulon/emuses/tree/v1.3.0",
         "https://github.com/chrisfoulon/emuses/blob/v1.3.0/emuses/tools/UMAP_utils.py",
         "https://github.com/chrisfoulon/emuses/blob/v1.3.0/requirements-prod.txt",
         "https://pypi.org/pypi/torch/2.7.1/json"
       ],
-      "arm64_attempts": 3,
-      "x86_64_attempts": 0,
+      "arm64_attempts": 4,
+      "x86_64_attempts": 1,
       "torch_platform_metadata_review": {
         "url": "https://pypi.org/pypi/torch/2.7.1/json",
         "arm_wheel": "torch-2.7.1-cp311-cp311-manylinux_2_28_aarch64.whl",
@@ -14648,7 +14661,7 @@
           ],
           "public_pipeline_review": "Current main UMAPStage forwards optim_dict to train_and_save_umap_optim_with_nested_clustering, which forwards the same config into the unchanged inner_optimize_hdbscan. A public entry-point switch alone does not repair value-form fallback. Released literal fixed parameters preserve the exact intended fixed operation and avoid that invalid raw dictionary argument.",
           "correction_to_prior_agent_note": "The earlier blanket prohibition on configuration-representation changes was an agent interpretation, not an AGENTS.md requirement. The upstream-supported literal encoding preserves the same resolved model parameters and fixed trial mode; no optimization-mode substitution or weakened scientific assertion is proposed. The upstream value-dictionary bug remains documented and unfixed; no claim that every config syntax works.",
-          "native_proof_status": "not-run; pure config resolution is not native model/runtime proof",
+          "native_proof_status": "verified at e35f92ad/run39219604100; all preserved scientific assertions pass",
           "budget_requirement": "Original12-hour window expired. Need explicit renewed12-hour window before recipe/test edits or dispatch. Preserve1used attempt and existing six-total cap; one native plus two upstream jobs would bring total to4, leaving2within existing cap.",
           "issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/94#issuecomment-6234455302"
         }
@@ -14714,9 +14727,33 @@
           "attempt": 3,
           "dispatched_at": "2026-10-19T07:59:28.491726+00:00",
           "hypothesis": "Previous attempt stopped during checkout because an abbreviated commit was interpreted as a branch/tag; dispatch the full immutable40-character commit. No recipe or scientific change from locally validated candidate; no image was built by failed setup.",
-          "status": "queued"
+          "status": "success"
         }
-      ]
+      ],
+      "native_evidence": {
+        "source_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
+        "run_id": 39219604100,
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39219604100",
+        "version": "1.3.0",
+        "counts": {
+          "total_tests": 5,
+          "passed": 5,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 36.286097288131714,
+          "run_timestamp": "2026-10-19T08:06:58.668958",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 4,
+          "total_suites": 1,
+          "total_tests": 4
+        },
+        "scientific_review": "All4 fulltests exit0; actual72-point UMAP/HDBSCAN fit, exact persistence/reload, finite transform and plots pass in22.125s, adjusted Rand1.0; pip check clean."
+      },
+      "pr_number": 3707
     },
     {
       "recipe": "epirecon",
@@ -19675,7 +19712,7 @@
         ]
       },
       "port_files": [],
-      "status": "native-running",
+      "status": "native-failed-correction-ready",
       "branch": "arm64/upstream-glmsingle-20261012",
       "baseline_sha": "b35e38baed8ba39f0ddc8707e0e98d52e32acf8a",
       "candidate_sha": "4709d2bd4a17c8417621acf1f8b504e7280578c2",
@@ -19762,7 +19799,7 @@
         }
       },
       "merged_sha": "1209f28fd0d8056bc41607be0311a73b285e06fb",
-      "next_action": "Review exact source and actual native Docker/SIF/deploy/fulltest reports before focused upstream PR.",
+      "next_action": "Dispatch prepared5f6354b9 after a slot frees; prior4709 actualcolormap/modeltests passed, new sourceprovenance check failed due missing PEP610 metadata in oldpip.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.0",
@@ -20059,9 +20096,21 @@
           "attempt": 7,
           "dispatched_at": "2026-10-19T08:00:17.876072+00:00",
           "hypothesis": "Install unmodified official source9b7f685 with upstream Turbo fix and tracked Git/version identity; require real finite RGB colormaps at three resolutions. Retain all77 test cases including existing model-fitting assertions and tolerances across33 upstream commits.",
-          "status": "queued"
+          "status": "failed-runtime",
+          "counts": {
+            "total": 78,
+            "passed": 77,
+            "failed": 1,
+            "skipped": 0
+          },
+          "first_error": "Only sourceprovenance check fails: json.loads(None) because oldpip did not record direct_url.json. Turbo and every model-fitting case pass."
         }
-      ]
+      ],
+      "prepared_next_candidate": {
+        "source_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
+        "reason": "Oldpip supplied no direct_url.json; use official pip25.0.1 requiringPython>=3.8 to record PEP610 Git identity. Sameupstreamsource/scientifictests retained.",
+        "dispatched": false
+      }
     },
     {
       "recipe": "globus",
@@ -30925,7 +30974,7 @@
       "port_files": [
         "recipes/nftsim/build.yaml"
       ],
-      "status": "native-running",
+      "status": "native-failed-correction-ready",
       "branch": "arm64/upstream-nftsim-current-proof-20261012",
       "baseline_sha": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
       "candidate_sha": "6989cbb2742d9355a3368c019237b0e64a7a7e2a",
@@ -31026,7 +31075,7 @@
         "x86_64_status": "cancelled-unstarted-after-known-ARM-timeout; attempt reservation retained"
       },
       "merged_sha": "517b0cabd8453256ef39daafdea63ee3cf670f94",
-      "next_action": "Review exact source and actual native Docker/SIF/deploy/fulltest reports before focused upstream PR.",
+      "next_action": "Dispatch prepared72e69c30 once a slot frees. Ramp/timestamp real finite output passed; only2negative diagnostic expectations mismatch, now corrected.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.2",
@@ -31111,7 +31160,14 @@
           "attempt": 9,
           "dispatched_at": "2026-10-19T07:59:05.786300+00:00",
           "hypothesis": "Correct only obsolete Ramp-nus parameter spelling in copied fixture, run timestamp mode without -o in a fresh writable directory, and require finite complete numeric outputs plus strict negative exits. All68 named tests and numerical workloads retained.",
-          "status": "queued"
+          "status": "failed-runtime",
+          "counts": {
+            "total": 69,
+            "passed": 67,
+            "failed": 2,
+            "skipped": 0
+          },
+          "first_error": "Only2negative output checks expected Error, formerly supplied by deleted fallback. Actual exit1 and Unable to open configuration file.; corrected72e69 preserves exit1."
         }
       ],
       "native_command_exit_review": {
@@ -31668,7 +31724,12 @@
         "renewed_deadline": "2026-10-19T19:55:15.259911+00:00",
         "scientific_assertions_and_no_private_ports_preserved": true
       },
-      "status_before_authorized_continuation": "failed-runtime"
+      "status_before_authorized_continuation": "failed-runtime",
+      "prepared_next_candidate": {
+        "source_sha": "72e69c30",
+        "reason": "Historical raw actual negative stdout is Unable to open configuration file.; Error was supplied by the removed masking echo. Tighten assertions to actual application diagnostic while preserving expected exit1. Current immutable run6989 still allowed to finish before retry.",
+        "dispatched": false
+      }
     },
     {
       "recipe": "niftyreg",
@@ -34985,14 +35046,14 @@
       "port_files": [
         "recipes/pydeface/build.yaml"
       ],
-      "status": "in-progress",
+      "status": "native-running",
       "branch": "arm64/upstream-pydeface-20261012",
       "baseline_sha": "b68a3ddde7d036ea095c91123d27903f0629a829",
-      "candidate_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
+      "candidate_sha": "aa6bb369db798d325e4d02b50a2200a02677cfbf",
       "started_at": "2026-10-13T07:35:00+00:00",
       "deadline": "2026-10-13T19:35:00+00:00",
-      "attempts": 20,
-      "run_id": 38374199970,
+      "attempts": 37,
+      "run_id": 39220575769,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3580",
       "upstream_ci": {
         "candidate_run_id": 38379088144,
@@ -35233,7 +35294,7 @@
         }
       },
       "merged_sha": null,
-      "next_action": "Reconcile exact current upstream recipe/source and existing runs; implement documented focused correction, then native proof and own focused upstream PR/checks.",
+      "next_action": "Review exact source and actual native Docker/SIF/deploy/fulltest reports before focused upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.0",
@@ -35271,9 +35332,9 @@
         "https://git.fmrib.ox.ac.uk/fsl/avwutils/-/raw/master/fslsplit.cc",
         "https://git.fmrib.ox.ac.uk/fsl/avwutils/-/raw/master/fslmerge.cc"
       ],
-      "arm64_attempts": 11,
-      "x86_64_attempts": 9,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38374199970",
+      "arm64_attempts": 20,
+      "x86_64_attempts": 17,
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39220575769",
       "candidate_history": [
         {
           "candidate_sha": "50dae77188b5f7f2d70fb7be598bd8d86693e291",
@@ -36446,7 +36507,212 @@
         "renewed_deadline": "2026-10-19T19:55:15.259911+00:00",
         "scientific_assertions_and_no_private_ports_preserved": true
       },
-      "status_before_authorized_continuation": "blocked-verification-budget"
+      "status_before_authorized_continuation": "blocked-verification-budget",
+      "new_performance_evidence": {
+        "reviewed_at": "2026-10-19T08:05:29.823375+00:00",
+        "current_source_sha": "aa6bb369db798d325e4d02b50a2200a02677cfbf",
+        "current_upstream_run": 39171738905,
+        "upstream_arm_fulltests": {
+          "passed": 60,
+          "failed": 2,
+          "total": 62,
+          "failures": [
+            "normmi300.03-second timeout",
+            "deliberate diagnostic review gate"
+          ],
+          "t2_pass_seconds": 261.5,
+          "mutualinfo_pass_seconds": 491.17
+        },
+        "historical_github_native_run": 38374199970,
+        "historical_github_native_source": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
+        "historical_github_native_timings": {
+          "normmi": 161.29770755767822,
+          "mutualinfo": 263.3919680118561,
+          "T2": 137.32934713363647
+        },
+        "build_recipe_identical_between_sources": true,
+        "limits_and_scientific_operations_unchanged": true,
+        "current_process_observation": "FSL main-thread CPU grows almost1:1 with wall time; secondary thread CPU stays0.08s. Loaded officialFSL6.0.7.23 binary1fe86d8/OpenBLAS0.3.33. Blacksmith ARM CPU part0xd0c,8CPU affinity. No causal BLAS oversubscription claim.",
+        "hypothesis": "Runner-dependent single-core throughput may explain roughly1.86x differences. Obtain current-source native GitHub timing proof without changing application/inputs/timeouts, then consider explicit optional GitHub ARM CI runner override. Old/current image bytes and full conda package closure are not assumed identical.",
+        "no_fsl_profile_attribution_claim": true
+      },
+      "external_additional_attempt_reconciliation": {
+        "checked_at": "2026-10-19T08:07:34.442391+00:00",
+        "prior_accounted_attempts": 20,
+        "additional_started_jobs": 16,
+        "runs": [
+          {
+            "run_id": 39171738905,
+            "source_sha": "aa6bb369db798d325e4d02b50a2200a02677cfbf",
+            "jobs": [
+              {
+                "id": 117807982448,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-18T22:28:45Z"
+              },
+              {
+                "id": 117807982504,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-18T22:28:48Z"
+              }
+            ]
+          },
+          {
+            "run_id": 39131651362,
+            "source_sha": "ba3911015741ea063fc2846274cbfd6e9ce23bae",
+            "jobs": [
+              {
+                "id": 117687949305,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-18T13:28:18Z"
+              },
+              {
+                "id": 117687949500,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-18T13:28:21Z"
+              }
+            ]
+          },
+          {
+            "run_id": 39122395165,
+            "source_sha": "09f3581f91c42c8cee78a884276f152ba8eb8456",
+            "jobs": [
+              {
+                "id": 117660517575,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-18T11:14:18Z"
+              },
+              {
+                "id": 117660517658,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-18T11:14:22Z"
+              }
+            ]
+          },
+          {
+            "run_id": 39100977333,
+            "source_sha": "754c63bb750c8e3145a8acffa0b03fd79fe12920",
+            "jobs": [
+              {
+                "id": 117597158941,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-18T05:34:48Z"
+              },
+              {
+                "id": 117597158956,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-18T05:34:52Z"
+              }
+            ]
+          },
+          {
+            "run_id": 39094543040,
+            "source_sha": "d06c5315c1421a08e3fbaad727e40c0c63b283d4",
+            "jobs": [
+              {
+                "id": 117578195135,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-18T03:42:31Z"
+              },
+              {
+                "id": 117578195136,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-18T03:42:34Z"
+              }
+            ]
+          },
+          {
+            "run_id": 39087639520,
+            "source_sha": "0ee784aa15eedceb9d6f7b55d1a602daece3e4fc",
+            "jobs": [
+              {
+                "id": 117557504170,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-18T01:45:57Z"
+              },
+              {
+                "id": 117557504181,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-18T01:46:00Z"
+              }
+            ]
+          },
+          {
+            "run_id": 39062209317,
+            "source_sha": "35b26a0b4cc732eb2674115138ef5ae225928f5e",
+            "jobs": [
+              {
+                "id": 117482371712,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-17T19:23:16Z"
+              },
+              {
+                "id": 117482371721,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-17T19:23:12Z"
+              }
+            ]
+          },
+          {
+            "run_id": 39053186802,
+            "source_sha": "6eeac06e7168a1e8cc633c52380ff0cb740c0baa",
+            "jobs": [
+              {
+                "id": 117455822853,
+                "name": "candidate (pydeface_arm64 | 2.1.0 | aarch64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-17T17:19:05Z"
+              },
+              {
+                "id": 117455822865,
+                "name": "candidate (pydeface | 2.1.0 | x86_64)",
+                "status": "completed",
+                "conclusion": "failure",
+                "started_at": "2026-10-17T17:19:01Z"
+              }
+            ]
+          }
+        ]
+      },
+      "native_attempt_history": [
+        {
+          "source_sha": "aa6bb369db798d325e4d02b50a2200a02677cfbf",
+          "run_id": 39220575769,
+          "attempt": 37,
+          "dispatched_at": "2026-10-19T08:07:48.991722+00:00",
+          "hypothesis": "Current unchanged PR head on native GitHub ubuntu24ARM tests concrete runner-throughput hypothesis: same build.yaml previously had normmi161s/T2137s versus current Blacksmith normmi>300s/T2261s. Preserve scientific inputs, all assertions/timeouts and deliberate diagnostic review gate. This measurement is not a pre-approved release or FSL source patch.",
+          "status": "queued"
+        }
+      ]
     },
     {
       "recipe": "qmrlab",
