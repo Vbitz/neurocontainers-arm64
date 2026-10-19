@@ -6104,3 +6104,25 @@ Checkpoint 2026-10-12T23:30:26.949600+00:00: {'excluded-by-user': 17, 'pending':
 - Final coverage refresh: tracking_issue.py --write updated and readbackverified issue#2; allfive rows Verified (native34/5/78/69/62 with0fail/skip). Snapshot/tmp/five-port-tracking-final-20261019.json and Markdown saved; no repeatedsourcebuilds. Forkmain fastforwarded toPyDefacemergee957afc7, Actionsdisabled. PyDefacepromotion39240107295 downloading bothtestedcandidatebundles; otherfour publicationmetadata/source/publicSIFaudits verified.
 
 - PyDeface publication checkpoint: both large testedbundle downloads completed (ARM18GB/x8623GB); ARM DockerandSIF staginguploads passed and SIF attachmentactive; x86 Dockerarchive publicationactive. Same automaticrun39240107295/source387, no rebuilding or manualpromotion. Allfive ownPRsmerged, botharchitectures0fail/skip. Finalmetadata/source/publicobjectaudit awaits workflowfinalization.
+
+- Automatic publication verified for pydeface: exact `38776086a2fc4382d193ad1d3e6de69fd00fc981`, [PR3580](https://github.com/neurodesk/neurocontainers/pull/3580), [promotion](https://github.com/neurodesk/neurocontainers/actions/runs/39240107295). Both publishers/finalization pass. Both committed release JSONs exactly match trusted previews; source/version/date/SIF identities match tested native reports. ARM fields explicitly identify aarch64/arm64/pydeface. Both public SIF HEAD requests return200; trusted manifests retain SIF checksums, public image bytes were not redownloaded. No manual promotion, generated release edit or image rebuild.
+
+## Five-recipe completion checkpoint — 2026-10-19T13:53:21.028819+00:00
+
+All five requested recipe implementations are verified and individually merged.
+
+| Recipe | ARM64 / x86 checks passed | Upstream PR | Automatic publication |
+|---|---:|---|---|
+| elastix | 34 / 34 | [#3710](https://github.com/neurodesk/neurocontainers/pull/3710) | [verified](https://github.com/neurodesk/neurocontainers/actions/runs/39231862022) |
+| emuses | 5 / 5 | [#3707](https://github.com/neurodesk/neurocontainers/pull/3707) | [verified](https://github.com/neurodesk/neurocontainers/actions/runs/39222129449) |
+| nftsim | 69 / 69 | [#3708](https://github.com/neurodesk/neurocontainers/pull/3708) | [verified](https://github.com/neurodesk/neurocontainers/actions/runs/39229235022) |
+| glmsingle | 78 / 78 | [#3711](https://github.com/neurodesk/neurocontainers/pull/3711) | [verified](https://github.com/neurodesk/neurocontainers/actions/runs/39230753923) |
+| pydeface | 62 / 62 | [#3580](https://github.com/neurodesk/neurocontainers/pull/3580) | [verified](https://github.com/neurodesk/neurocontainers/actions/runs/39240107295) |
+
+All five have zero failed/skipped fulltests, passing SIF/deploy, Dive, quality and release gates. Both architecture release JSONs match trusted manifests/previews and public SIF availability is verified. Source-specific proofs and timestamps are in upstream/queue.json and upstream/release-metadata-audit.json.
+
+PyDeface integrated source387 uses its actual upstream ubuntu-24.04-arm native proof. Original root C53 proof remains separate; no duplicate identical-context rebuild or test weakening. All AGENTS files and the accepted historical gitlink remain untouched. Fork main is fast-forwarded with Actions disabled.
+
+This completes only the requested five-recipe continuation; the original inventory goal remains open. Its other blockers and outstanding verification authorizations are preserved.
+
+Root checkpoint base: `30431a4e256e8737a9e5b3734d94af2c1b93e443`; fork main: `793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c`; accepted historical gitlink: `e74050df0e4881833ae5d8d82b4e0ef287a14179`. Local single checkout remains the clean PyDeface staging branch recorded above; all actual tested/merged source refs are preserved separately. Coverage issue#2 was refreshed/readback-verified after all five native outcomes; publication-only followup adds no new build results, so no duplicate tracker/build rerun.

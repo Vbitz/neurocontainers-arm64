@@ -104,3 +104,9 @@ build/test inputs are identical across the bot main merge, so no further duplica
 ARM rebuild is needed. This resolves the old diagnostic hold without changing any
 scientific input, assertion, timeout or tolerance. Automatic publication remains a
 separate metadata/source/object audit.
+
+Automatic publication is verified in [run 39240107295](https://github.com/neurodesk/neurocontainers/actions/runs/39240107295).
+Both committed release JSONs exactly match trusted previews and tested source/version/date/SIF
+identities. ARM metadata explicitly identifies `aarch64` / `arm64` / `pydeface`;
+both public SIFs return HTTP 200. Checksums are retained from the verified manifests,
+without redownloading public image bytes. This five-recipe continuation is complete.

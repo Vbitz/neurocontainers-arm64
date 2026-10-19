@@ -236,5 +236,52 @@
       "failed_tests": []
     },
     "old_diagnostic_hold_resolved": true
+  },
+  "automatic_publication_verified": {
+    "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+    "merge_sha": "e957afc7fb6c6030a65b7e092752c1db72d4ff81",
+    "promotion_run_id": 39240107295,
+    "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39240107295",
+    "metadata": [
+      {
+        "architecture": "aarch64",
+        "path": "releases/pydeface_arm64/2.1.0.json",
+        "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+        "metadata_ref": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
+        "metadata_commit_sha": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
+        "expected_build_date": "20261019",
+        "committed_build_dates": [
+          "20261019"
+        ],
+        "exists": true,
+        "current_candidate_date_committed": true,
+        "trusted_preview_matches": true,
+        "sif": "pydeface_arm64_2.1.0_20261019.simg",
+        "sif_sha256": "032330e101c9e1b1346af09e293c1c6f07c7b02a50faf0412bd21310210b5798",
+        "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/pydeface_arm64_2.1.0_20261019.simg",
+        "public_sif_head_status": 200,
+        "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+      },
+      {
+        "architecture": "x86_64",
+        "path": "releases/pydeface/2.1.0.json",
+        "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+        "metadata_ref": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
+        "metadata_commit_sha": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
+        "expected_build_date": "20261019",
+        "committed_build_dates": [
+          "20261019"
+        ],
+        "exists": true,
+        "current_candidate_date_committed": true,
+        "trusted_preview_matches": true,
+        "sif": "pydeface_2.1.0_20261019.simg",
+        "sif_sha256": "7fcbb6b73fe70cfe6b4debda47f793f41509c33e091f3e8fc5d69dad9ec58c36",
+        "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/pydeface_2.1.0_20261019.simg",
+        "public_sif_head_status": 200,
+        "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+      }
+    ],
+    "scope": "Trusted tested-manifest identities and committed metadata match; both public SIF HEAD200. No public bytes redownloaded, profiling attribution or reassignment of the older C53 root result."
   }
 }

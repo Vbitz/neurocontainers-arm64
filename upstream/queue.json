@@ -36328,7 +36328,7 @@
         "release_gate": "passed"
       },
       "merged_sha": "e957afc7fb6c6030a65b7e092752c1db72d4ff81",
-      "next_action": "Verify the automatic promotion, committed release metadata and public object availability against these tested candidate manifests. No manual promotion or successful-source rebuild.",
+      "next_action": "Native proof, own upstream PR/architecture tests and merge complete; automatic publication metadata/source/public-object checks verified. No successful image rebuild needed.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.0",
@@ -38214,30 +38214,26 @@
         "resolved_by": "All61 unchanged scientific test contracts pass on the demonstrated native resource class; temporary diagnostics removed, exact release head passes native and both upstream architectures. No profiling attribution is claimed."
       },
       "automatic_promotion": {
-        "checked_at": "2026-10-19T12:38:47.796661+00:00",
+        "checked_at": "2026-10-19T13:52:04.207742+00:00",
         "run_id": 39240107295,
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39240107295",
         "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
         "merge_sha": "e957afc7fb6c6030a65b7e092752c1db72d4ff81",
-        "status": "in_progress",
-        "conclusion": null,
-        "publication_verified": false,
+        "status": "completed",
+        "conclusion": "success",
+        "publication_verified": true,
         "publish_jobs": [
           {
             "name": "publish (candidate-pydeface_arm64-38776086a2fc4382d193ad1d3e6de69fd00fc981)",
-            "status": "in_progress",
-            "conclusion": null,
-            "active_steps": [
-              "Attach tested SIF to staged OCI images"
-            ]
+            "status": "completed",
+            "conclusion": "success",
+            "active_steps": []
           },
           {
             "name": "publish (candidate-pydeface-38776086a2fc4382d193ad1d3e6de69fd00fc981)",
-            "status": "in_progress",
-            "conclusion": null,
-            "active_steps": [
-              "Publish exact tested Docker archive to unique staging tags"
-            ]
+            "status": "completed",
+            "conclusion": "success",
+            "active_steps": []
           }
         ]
       },
@@ -38260,7 +38256,72 @@
         }
       ],
       "root_run_source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
-      "native_exact_head_proof_pipeline": "upstream PR container candidate on ubuntu-24.04-arm"
+      "native_exact_head_proof_pipeline": "upstream PR container candidate on ubuntu-24.04-arm",
+      "release_metadata_audit": {
+        "recipe": "pydeface",
+        "promotion_run_id": 39240107295,
+        "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39240107295",
+        "status": "verified-published-metadata",
+        "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+        "metadata": [
+          {
+            "architecture": "aarch64",
+            "path": "releases/pydeface_arm64/2.1.0.json",
+            "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+            "metadata_ref": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
+            "metadata_commit_sha": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
+            "expected_build_date": "20261019",
+            "committed_build_dates": [
+              "20261019"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "sif": "pydeface_arm64_2.1.0_20261019.simg",
+            "sif_sha256": "032330e101c9e1b1346af09e293c1c6f07c7b02a50faf0412bd21310210b5798",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/pydeface_arm64_2.1.0_20261019.simg",
+            "public_sif_head_status": 200,
+            "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+          },
+          {
+            "architecture": "x86_64",
+            "path": "releases/pydeface/2.1.0.json",
+            "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+            "metadata_ref": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
+            "metadata_commit_sha": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
+            "expected_build_date": "20261019",
+            "committed_build_dates": [
+              "20261019"
+            ],
+            "exists": true,
+            "current_candidate_date_committed": true,
+            "trusted_preview_matches": true,
+            "sif": "pydeface_2.1.0_20261019.simg",
+            "sif_sha256": "7fcbb6b73fe70cfe6b4debda47f793f41509c33e091f3e8fc5d69dad9ec58c36",
+            "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/pydeface_2.1.0_20261019.simg",
+            "public_sif_head_status": 200,
+            "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+          }
+        ],
+        "checked_at": "2026-10-19T13:52:04.207742+00:00",
+        "workflow_status": "completed",
+        "workflow_conclusion": "success",
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-pydeface_arm64-38776086a2fc4382d193ad1d3e6de69fd00fc981)",
+            "status": "completed",
+            "conclusion": "success",
+            "active_steps": []
+          },
+          {
+            "name": "publish (candidate-pydeface-38776086a2fc4382d193ad1d3e6de69fd00fc981)",
+            "status": "completed",
+            "conclusion": "success",
+            "active_steps": []
+          }
+        ],
+        "metadata_checked_at": "2026-10-19T13:52:04.207742+00:00"
+      }
     },
     {
       "recipe": "qmrlab",
@@ -50268,8 +50329,8 @@
   },
   "last_session_checkpoint": {
     "scope": "authorized-five-recipe-continuation",
-    "checked_at": "2026-10-19T12:38:48.497448+00:00",
-    "root_commit": "545573eb2bd91c9817f0aefaa2ff9c37ba4c00b3",
+    "checked_at": "2026-10-19T13:53:21.028819+00:00",
+    "root_commit": "30431a4e256e8737a9e5b3734d94af2c1b93e443",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "local_checkout_branch": "arm64/pydeface-release-stage-20261019",
     "local_checkout_sha": "d1f8582447541be77dbc48a243228698a5cda632",
@@ -50294,18 +50355,17 @@
     "prior_counts_preserved": true,
     "no_subagents": true,
     "AGENTS_files_untouched": true,
-    "next_action": "Observe PyDeface automatic promotion39240107295: ARM Docker/SIF uploads completed and SIF attachment active; x86 archive publication active. Both architecture tests62/62 and all5PRmerges complete; no more builds. Audit final JSON/manifests/publicSIF after finalize.",
+    "next_action": "Five-recipe continuation complete: all native/upstream runtime gates, individual merges and automatic publication audits verified. No additional builds for these five. Broader inventory and its outstanding blockers/verification approvals remain separate.",
     "overall_inventory_goal_complete": false,
-    "upstream_fork_main_sha": "e957afc7fb6c6030a65b7e092752c1db72d4ff81",
+    "upstream_fork_main_sha": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
     "verified_publication_recipes": [
+      "elastix",
       "emuses",
       "nftsim",
       "glmsingle",
-      "elastix"
+      "pydeface"
     ],
-    "active_promotion_runs": {
-      "pydeface": 39240107295
-    },
+    "active_promotion_runs": {},
     "coverage_tracker": {
       "url": "https://github.com/Vbitz/neurocontainers-arm64/issues/2",
       "command": "python3 scripts/tracking_issue.py --write --snapshot /tmp/five-port-tracking-final-20261019.json --output /tmp/five-port-tracking-final-20261019.md",
@@ -50480,7 +50540,7 @@
     ],
     "attempt_limit_waived": true,
     "active_root_runs": {},
-    "next_action": "Verify automatic PyDeface publication39240107295 against integrated387 manifests; four other exact-source publications verified. Refresh coverage and push final checkpoint. No additional successful-source builds.",
+    "next_action": "Five-recipe continuation complete: all native/upstream runtime gates, individual merges and automatic publication audits verified. No additional builds for these five. Broader inventory and its outstanding blockers/verification approvals remain separate.",
     "completed_merged_recipes": [
       "elastix",
       "emuses",
@@ -50489,7 +50549,31 @@
       "pydeface"
     ],
     "active_upstream_runs": {},
-    "awaiting_upstream_slots": []
+    "awaiting_upstream_slots": [],
+    "active_promotion_runs": {},
+    "verified_publication_recipes": [
+      "elastix",
+      "emuses",
+      "nftsim",
+      "glmsingle",
+      "pydeface"
+    ],
+    "outcome": {
+      "status": "complete-for-these-five",
+      "recorded_at": "2026-10-19T13:53:21.028819+00:00",
+      "tests_per_architecture": {
+        "elastix": 34,
+        "emuses": 5,
+        "nftsim": 69,
+        "glmsingle": 78,
+        "pydeface": 62
+      },
+      "failures": 0,
+      "skips": 0,
+      "all_individual_PRs_merged": true,
+      "all_automatic_publication_metadata_verified": true,
+      "original_inventory_goal_complete": false
+    }
   },
   "session_checkpoint_history": [
     {

@@ -5163,6 +5163,71 @@
         }
       ],
       "metadata_checked_at": "2026-10-19T09:57:36.971196+00:00"
+    },
+    {
+      "recipe": "pydeface",
+      "promotion_run_id": 39240107295,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39240107295",
+      "status": "verified-published-metadata",
+      "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/pydeface_arm64/2.1.0.json",
+          "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+          "metadata_ref": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
+          "metadata_commit_sha": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
+          "expected_build_date": "20261019",
+          "committed_build_dates": [
+            "20261019"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "sif": "pydeface_arm64_2.1.0_20261019.simg",
+          "sif_sha256": "032330e101c9e1b1346af09e293c1c6f07c7b02a50faf0412bd21310210b5798",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/pydeface_arm64_2.1.0_20261019.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/pydeface/2.1.0.json",
+          "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+          "metadata_ref": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
+          "metadata_commit_sha": "793c399ab8b6c2b37c67fc9bfe4cfaa344ab046c",
+          "expected_build_date": "20261019",
+          "committed_build_dates": [
+            "20261019"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "sif": "pydeface_2.1.0_20261019.simg",
+          "sif_sha256": "7fcbb6b73fe70cfe6b4debda47f793f41509c33e091f3e8fc5d69dad9ec58c36",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/pydeface_2.1.0_20261019.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+        }
+      ],
+      "checked_at": "2026-10-19T13:52:04.207742+00:00",
+      "workflow_status": "completed",
+      "workflow_conclusion": "success",
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-pydeface_arm64-38776086a2fc4382d193ad1d3e6de69fd00fc981)",
+          "status": "completed",
+          "conclusion": "success",
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-pydeface-38776086a2fc4382d193ad1d3e6de69fd00fc981)",
+          "status": "completed",
+          "conclusion": "success",
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-19T13:52:04.207742+00:00"
     }
   ],
   "findings": [
@@ -8957,5 +9022,49 @@
       ],
       "scope": "Independent later update exact-source publication. Original own-port/root evidence and historical publication remain separate."
     }
-  ]
+  ],
+  "latest_targeted_followup": {
+    "recorded_at": "2026-10-19T13:53:21.028819+00:00",
+    "recipes": [
+      "elastix",
+      "emuses",
+      "nftsim",
+      "glmsingle",
+      "pydeface"
+    ],
+    "proof_section": "merged_recipe_promotions",
+    "source_specific_publication_records": [
+      {
+        "recipe": "elastix",
+        "source_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
+        "promotion_run_id": 39231862022,
+        "evidence_checked_at": "2026-10-19T09:57:36.971196+00:00"
+      },
+      {
+        "recipe": "emuses",
+        "source_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
+        "promotion_run_id": 39222129449,
+        "evidence_checked_at": "2026-10-19T09:50:43.979875+00:00"
+      },
+      {
+        "recipe": "nftsim",
+        "source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+        "promotion_run_id": 39229235022,
+        "evidence_checked_at": "2026-10-19T09:35:59.653662+00:00"
+      },
+      {
+        "recipe": "glmsingle",
+        "source_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
+        "promotion_run_id": 39230753923,
+        "evidence_checked_at": "2026-10-19T09:49:15.058179+00:00"
+      },
+      {
+        "recipe": "pydeface",
+        "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+        "promotion_run_id": 39240107295,
+        "evidence_checked_at": "2026-10-19T13:52:04.207742+00:00"
+      }
+    ],
+    "scope": "Five source-specific followups. Each proof retains its own actual check timestamp; the older full-catalog snapshot date is preserved."
+  }
 }
