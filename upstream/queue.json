@@ -14326,18 +14326,18 @@
       "port_files": [
         "recipes/elastix/build.yaml"
       ],
-      "status": "blocked-verification-budget",
+      "status": "native-running",
       "branch": "arm64/upstream-elastix-20261012",
       "baseline_sha": "c62332c882b06c05d225cab2babd11d0290c2dd0",
       "candidate_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
       "started_at": "2026-10-12T21:38:36.616633+00:00",
       "deadline": "2026-10-13T09:38:36.616633+00:00",
-      "attempts": 4,
-      "run_id": 38325625311,
+      "attempts": 5,
+      "run_id": 39219166368,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Await explicit Elastix renewed12h/seven-total approval requestedOct15; preserve4used and olddeadline until response. Pushedff8a876 final version-output assertion correction remains untested. No native/root or upstream dispatch without authorization; no duplicate question.",
+      "next_action": "Review exact ff8a876 native run, then integrate only intended recipe/test files against current upstream before focused own PR.",
       "upstream_review": {
         "exists": true,
         "version": "5.3.1",
@@ -14363,9 +14363,9 @@
         "https://github.com/InsightSoftwareConsortium/ITK/releases/tag/v5.4.7",
         "https://github.com/Vbitz/neurocontainers-arm64/issues/92#issuecomment-5654152601"
       ],
-      "arm64_attempts": 4,
+      "arm64_attempts": 5,
       "x86_64_attempts": 0,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38325625311",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39219166368",
       "native_attempt_history": [
         {
           "run_id": 38312647658,
@@ -14422,6 +14422,14 @@
           "fixture_limitation": "Suite substitution rewrites $version_output as literal5.3.1_output. Thus the new raw version-string match is not valid independent evidence, although retained wrapper version checks show actual5.3.1. No claim that all assertions of this new test were effective.",
           "corrected_source_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
           "correction": "Rename shell variable to actual_tool_version; verify resolved production substitution preserves the variable and exact-version pattern; schema/both generation/spelling/shell syntax passed. Corrected source has no runtime proof yet."
+        },
+        {
+          "run_id": 39219166368,
+          "source_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
+          "attempt": 5,
+          "dispatched_at": "2026-10-19T07:55:59.380014+00:00",
+          "status": "queued",
+          "hypothesis": "Correct shell variable collision while preserving scientific checks."
         }
       ],
       "last_native_run_review": {
@@ -14450,11 +14458,29 @@
         "requested_max_build_attempts": 7,
         "requested_elapsed_hours": 12,
         "used_attempts": 4,
-        "answered": false,
+        "answered": true,
         "reviewable_correction_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
         "scope": "Elastix only; corrected native attempt5 then own upstream ARM/x86 jobs6and7. Retain all prior clocks/attempts/scientific assertions.",
-        "reason": "Prior native429bc011/run38325625311 passed34/34, but production suite substitution replaced $version_output with literal5.3.1_output. Pushed ff8a876 uses actual_tool_version and passed actual substitution/shell/schema/both generation/spelling. Current upstream still5.3.1; final corrected-source proof needs3jobs with2left, original window expired."
-      }
+        "reason": "Prior native429bc011/run38325625311 passed34/34, but production suite substitution replaced $version_output with literal5.3.1_output. Pushed ff8a876 uses actual_tool_version and passed actual substitution/shell/schema/both generation/spelling. Current upstream still5.3.1; final corrected-source proof needs3jobs with2left, original window expired.",
+        "answer": "User authorized continuation without attempt limits for these five recipes.",
+        "answered_at": "2026-10-19T07:55:15.259911+00:00"
+      },
+      "continuation_authorization": {
+        "authorized_at": "2026-10-19T07:55:15.259911+00:00",
+        "user_instruction": "Awesome. Those more possile 5 sound doable. Please work on getting them all going. Don't worry about the limits of attempts for them.",
+        "scope": [
+          "elastix",
+          "emuses",
+          "glmsingle",
+          "nftsim",
+          "pydeface"
+        ],
+        "attempt_limit": null,
+        "prior_attempts_preserved": 4,
+        "renewed_deadline": "2026-10-19T19:55:15.259911+00:00",
+        "scientific_assertions_and_no_private_ports_preserved": true
+      },
+      "status_before_authorized_continuation": "blocked-verification-budget"
     },
     {
       "recipe": "emuses",
@@ -14474,18 +14500,18 @@
       "port_files": [
         "recipes/emuses/build.yaml"
       ],
-      "status": "failed-runtime",
+      "status": "native-running",
       "branch": "arm64/upstream-emuses-20261012",
       "baseline_sha": "9545cba27a176c0c9af44c03fe23c9962e71e531",
-      "candidate_sha": "eb27b583b78c09e7202c5c8adfa6e5c4418c44a4",
+      "candidate_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
       "started_at": "2026-10-13T02:14:00+00:00",
       "deadline": "2026-10-13T14:14:00+00:00",
-      "attempts": 1,
-      "run_id": 38336405010,
+      "attempts": 3,
+      "run_id": 39219604100,
       "pr_url": null,
       "upstream_ci": null,
       "merged_sha": null,
-      "next_action": "Await explicit renewed12-hour window, retaining1used/six-total cap, to try unmodifiedv1.3.0 with documented literal fixed HDBSCAN8/4. Released pure helpers prove all resolved UMAP/HDBSCAN values and fixed classification identical. Preserve72points/seeds/trials/ARI>0.9/persistence/reload/plots/360s and all other assertions; fix source-declared missing pytest deps and exact distribution0.7.0 expectation. No upstream library patch or source upgrade needed for this proposal. Current value-form native failure stays documented; no native success is claimed before fresh full proof.",
+      "next_action": "Review exact source and actual native Docker/SIF/deploy/fulltest reports before focused upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.3.0",
@@ -14506,7 +14532,7 @@
         "https://github.com/chrisfoulon/emuses/blob/v1.3.0/requirements-prod.txt",
         "https://pypi.org/pypi/torch/2.7.1/json"
       ],
-      "arm64_attempts": 1,
+      "arm64_attempts": 3,
       "x86_64_attempts": 0,
       "torch_platform_metadata_review": {
         "url": "https://pypi.org/pypi/torch/2.7.1/json",
@@ -14530,7 +14556,7 @@
           "triton==3.3.1; platform_system == \"Linux\" and platform_machine == \"x86_64\""
         ]
       },
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38336405010",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39219604100",
       "first_actionable_error": "Released fixed-parameter HDBSCAN final-model construction passes dictionaries as integer parameters",
       "runtime_blocker": {
         "source_sha": "eb27b583b78c09e7202c5c8adfa6e5c4418c44a4",
@@ -14643,7 +14669,7 @@
       },
       "pending_budget_question": {
         "asked_at": "2026-10-17T13:31:28.856353+00:00",
-        "answered": false,
+        "answered": true,
         "requested_window_hours": 12,
         "requested_max_build_attempts": 6,
         "attempts_already_used": 1,
@@ -14652,8 +14678,45 @@
         "reason": "Released literal fixed-parameter encoding has identical pure resolution/trial classification and preserves all scientific assertions; candidate needs renewed elapsed window, no count increase. No recipe/test edit or build until explicit reply.",
         "proposal_issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/94#issuecomment-6234455302",
         "request_accepted_by_tool": true,
-        "tool_acceptance_is_not_user_approval": true
-      }
+        "tool_acceptance_is_not_user_approval": true,
+        "answer": "User authorized continuation without attempt limits for these five recipes.",
+        "answered_at": "2026-10-19T07:55:15.259911+00:00"
+      },
+      "continuation_authorization": {
+        "authorized_at": "2026-10-19T07:55:15.259911+00:00",
+        "user_instruction": "Awesome. Those more possile 5 sound doable. Please work on getting them all going. Don't worry about the limits of attempts for them.",
+        "scope": [
+          "elastix",
+          "emuses",
+          "glmsingle",
+          "nftsim",
+          "pydeface"
+        ],
+        "attempt_limit": null,
+        "prior_attempts_preserved": 1,
+        "renewed_deadline": "2026-10-19T19:55:15.259911+00:00",
+        "scientific_assertions_and_no_private_ports_preserved": true
+      },
+      "status_before_authorized_continuation": "failed-runtime",
+      "native_attempt_history": [
+        {
+          "source_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
+          "run_id": 39219395927,
+          "attempt": 2,
+          "dispatched_at": "2026-10-19T07:57:33.958571+00:00",
+          "hypothesis": "Released dev-lock pytest8.4.1/pytest-asyncio1.1.0 restore setup.py closure; actual distribution0.7.0 is distinct from release1.3.0. Documented literal HDBSCAN8/4 preserves every fixed model parameter/trial and scientific output assertion while avoiding raw-dictionary fallback.",
+          "status": "failed-setup",
+          "first_error": "Abbreviated source interpreted as branch/tag at checkout; no application build/test executed"
+        },
+        {
+          "source_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
+          "run_id": 39219604100,
+          "attempt": 3,
+          "dispatched_at": "2026-10-19T07:59:28.491726+00:00",
+          "hypothesis": "Previous attempt stopped during checkout because an abbreviated commit was interpreted as a branch/tag; dispatch the full immutable40-character commit. No recipe or scientific change from locally validated candidate; no image was built by failed setup.",
+          "status": "queued"
+        }
+      ]
     },
     {
       "recipe": "epirecon",
@@ -19612,14 +19675,14 @@
         ]
       },
       "port_files": [],
-      "status": "merged",
+      "status": "native-running",
       "branch": "arm64/upstream-glmsingle-20261012",
       "baseline_sha": "b35e38baed8ba39f0ddc8707e0e98d52e32acf8a",
-      "candidate_sha": "320da1fc522a1d9d8e574f648d543ae4cfe80ef7",
+      "candidate_sha": "4709d2bd4a17c8417621acf1f8b504e7280578c2",
       "started_at": "2026-10-12T13:59:00+00:00",
       "deadline": "2026-10-13T01:59:00+00:00",
-      "attempts": 6,
-      "run_id": 38283250023,
+      "attempts": 7,
+      "run_id": 39219698856,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3518",
       "upstream_ci": {
         "runtime_run_id": 38281486240,
@@ -19699,7 +19762,7 @@
         }
       },
       "merged_sha": "1209f28fd0d8056bc41607be0311a73b285e06fb",
-      "next_action": "Official README permits Git installation; unmodified upstream9b7f685 contains the colormap fix. Await explicit renewed12h/max9total preserving6used, then pin source coherently, remove masked Turbo fallback, align upstream package metadata1.2 and preserve/retest all model-fitting assertions. Full revision includes33commits, so no scientific equivalence assumed and no private patch.",
+      "next_action": "Review exact source and actual native Docker/SIF/deploy/fulltest reports before focused upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.0",
@@ -19713,9 +19776,9 @@
       },
       "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
       "upstream_verification_mode": "runtime-only",
-      "arm64_attempts": 4,
+      "arm64_attempts": 5,
       "x86_64_attempts": 2,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38283250023",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39219698856",
       "native_command_exit_review": {
         "source_sha": "320da1fc522a1d9d8e574f648d543ae4cfe80ef7",
         "all_unusual_exits_explicitly_asserted": true,
@@ -19964,13 +20027,41 @@
       },
       "pending_budget_question": {
         "asked_at": "2026-10-17T10:26:57.760724+00:00",
-        "answered": false,
+        "answered": true,
         "requested_max_build_attempts": 9,
         "requested_renewed_hours": 12,
         "preserve_used_attempts": 6,
         "source_fix_sha": "9b7f685100366fb79c222c37661924ea25d78743",
-        "reason": "Official Git-source installation is documented, so waiting for a new release tag was overrestrictive. Need source pin/full scientific followup with actual finite colormap output;33core-source commits require preserved model tests. Three jobs: one rootnative and two upstream. Original cap/deadline stay until explicit reply."
-      }
+        "reason": "Official Git-source installation is documented, so waiting for a new release tag was overrestrictive. Need source pin/full scientific followup with actual finite colormap output;33core-source commits require preserved model tests. Three jobs: one rootnative and two upstream. Original cap/deadline stay until explicit reply.",
+        "answer": "User authorized continuation without attempt limits for these five recipes.",
+        "answered_at": "2026-10-19T07:55:15.259911+00:00"
+      },
+      "continuation_authorization": {
+        "authorized_at": "2026-10-19T07:55:15.259911+00:00",
+        "user_instruction": "Awesome. Those more possile 5 sound doable. Please work on getting them all going. Don't worry about the limits of attempts for them.",
+        "scope": [
+          "elastix",
+          "emuses",
+          "glmsingle",
+          "nftsim",
+          "pydeface"
+        ],
+        "attempt_limit": null,
+        "prior_attempts_preserved": 6,
+        "renewed_deadline": "2026-10-19T19:55:15.259911+00:00",
+        "scientific_assertions_and_no_private_ports_preserved": true
+      },
+      "status_before_authorized_continuation": "merged",
+      "native_attempt_history": [
+        {
+          "source_sha": "4709d2bd4a17c8417621acf1f8b504e7280578c2",
+          "run_id": 39219698856,
+          "attempt": 7,
+          "dispatched_at": "2026-10-19T08:00:17.876072+00:00",
+          "hypothesis": "Install unmodified official source9b7f685 with upstream Turbo fix and tracked Git/version identity; require real finite RGB colormaps at three resolutions. Retain all77 test cases including existing model-fitting assertions and tolerances across33 upstream commits.",
+          "status": "queued"
+        }
+      ]
     },
     {
       "recipe": "globus",
@@ -30834,14 +30925,14 @@
       "port_files": [
         "recipes/nftsim/build.yaml"
       ],
-      "status": "failed-runtime",
+      "status": "native-running",
       "branch": "arm64/upstream-nftsim-current-proof-20261012",
       "baseline_sha": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
-      "candidate_sha": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
+      "candidate_sha": "6989cbb2742d9355a3368c019237b0e64a7a7e2a",
       "started_at": "2026-10-12T12:46:00+00:00",
       "deadline": "2026-10-13T00:46:00+00:00",
-      "attempts": 8,
-      "run_id": 38285990994,
+      "attempts": 9,
+      "run_id": 39219563492,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3514",
       "upstream_ci": {
         "candidate_run_id": 38256071709,
@@ -30935,7 +31026,7 @@
         "x86_64_status": "cancelled-unstarted-after-known-ARM-timeout; attempt reservation retained"
       },
       "merged_sha": "517b0cabd8453256ef39daafdea63ee3cf670f94",
-      "next_action": "Recovered old upstream ARM/x86 proof at a4e1e854; no duplicate run needed to fill evidence gap. Reported69/69 on both hides coupling-ramp abort and timestamp-output failure, also present in root04e report. Await explicit12-hour/max11 renewal (8accounted, including1unstarted reservation) before correcting documented nus-to-nu fixture syntax and timestamp writable location with strict real outputs, then native+both upstream verification. Preserve all scientific inputs/assertions and source-specific proof. Current candidate is not fully verified or published.",
+      "next_action": "Review exact source and actual native Docker/SIF/deploy/fulltest reports before focused upstream PR.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.2",
@@ -30955,9 +31046,9 @@
       "source_archive_sha256": "7f61425f2f88c87f2416474e7630cd899e5508983082a1a540a92c6d9699538d",
       "vendor_manifest_digest": "sha256:db920c1b7d7bdd237480981a023d86723607a1d0b3781f7cfcb5f73e7be7c647",
       "preflight_note": "Vendor index amd64 only; official master still0bd35df. Generic CXXFLAGS override supported by unmodified Makefile. Source commit independently update-tracked, acquisition binding validated; x86 image/version untouched. All67 tests unchanged plus finite/monotonic EIRS output.",
-      "arm64_attempts": 5,
+      "arm64_attempts": 6,
       "x86_64_attempts": 3,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38285990994",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39219563492",
       "runtime_review": {
         "outcome": "followup-required",
         "source_sha": "a4e1e854343618b78b84723e31846e6ac1c0c73d",
@@ -31013,6 +31104,14 @@
             ]
           },
           "review": "All68 positive/negative cases matched actual intent, including explicit unavailable-fCaP rejection1. Tighten the negative case to exact exit1/diagnostic, then verify newsource."
+        },
+        {
+          "source_sha": "6989cbb2742d9355a3368c019237b0e64a7a7e2a",
+          "run_id": 39219563492,
+          "attempt": 9,
+          "dispatched_at": "2026-10-19T07:59:05.786300+00:00",
+          "hypothesis": "Correct only obsolete Ramp-nus parameter spelling in copied fixture, run timestamp mode without -o in a fresh writable directory, and require finite complete numeric outputs plus strict negative exits. All68 named tests and numerical workloads retained.",
+          "status": "queued"
         }
       ],
       "native_command_exit_review": {
@@ -31543,15 +31642,33 @@
       },
       "pending_budget_question": {
         "asked_at": "2026-10-17T14:05:51.700425+00:00",
-        "answered": false,
+        "answered": true,
         "requested_window_hours": 12,
         "requested_max_build_attempts": 11,
         "attempts_already_used": 8,
         "original_deadline_unchanged": "2026-10-13T00:46:00+00:00",
         "request_accepted_by_tool": true,
         "tool_acceptance_is_not_user_approval": true,
-        "reason": "Recovered2old upstream jobs resolve evidence gap but expose two masked runtime failures. Same numerical ramp input with documented parameter spelling and unchanged timestamp fixture in a writable directory are concrete ordinary configuration corrections; native and both upstream gates need3jobs."
-      }
+        "reason": "Recovered2old upstream jobs resolve evidence gap but expose two masked runtime failures. Same numerical ramp input with documented parameter spelling and unchanged timestamp fixture in a writable directory are concrete ordinary configuration corrections; native and both upstream gates need3jobs.",
+        "answer": "User authorized continuation without attempt limits for these five recipes.",
+        "answered_at": "2026-10-19T07:55:15.259911+00:00"
+      },
+      "continuation_authorization": {
+        "authorized_at": "2026-10-19T07:55:15.259911+00:00",
+        "user_instruction": "Awesome. Those more possile 5 sound doable. Please work on getting them all going. Don't worry about the limits of attempts for them.",
+        "scope": [
+          "elastix",
+          "emuses",
+          "glmsingle",
+          "nftsim",
+          "pydeface"
+        ],
+        "attempt_limit": null,
+        "prior_attempts_preserved": 8,
+        "renewed_deadline": "2026-10-19T19:55:15.259911+00:00",
+        "scientific_assertions_and_no_private_ports_preserved": true
+      },
+      "status_before_authorized_continuation": "failed-runtime"
     },
     {
       "recipe": "niftyreg",
@@ -34868,7 +34985,7 @@
       "port_files": [
         "recipes/pydeface/build.yaml"
       ],
-      "status": "blocked-verification-budget",
+      "status": "in-progress",
       "branch": "arm64/upstream-pydeface-20261012",
       "baseline_sha": "b68a3ddde7d036ea095c91123d27903f0629a829",
       "candidate_sha": "7fb8e0ebfa9ab75061971dd8067f3836e1fc9a09",
@@ -35116,7 +35233,7 @@
         }
       },
       "merged_sha": null,
-      "next_action": "Exact326dc9ce/run39040375251 terminalARM60/63(normmi300.021s,T2300.018s,explicitreviewgate),x8662/63(onlyreviewgate). Full5898240voxel registered-mask product100.55s, geometry/immutability and mutualinfo573.25s/600 pass. Profiler now accepts requested SIGINT and decodes49preflight samples, but12[vdso] samples are unbound to captured objects; raw_capture=false/source_attribution unresolved. Need correct admitted actual profiling and concrete supported FSL/runtime/resource remedy plus renewed allowance before own edits/builds. Preserve20accounted attempts/original6cap/expiredwindow/reviewhold; no ignored DSOs, unbound attribution, private runtimeport, timeout/tolerance change or merge.",
+      "next_action": "Reconcile exact current upstream recipe/source and existing runs; implement documented focused correction, then native proof and own focused upstream PR/checks.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.0",
@@ -36313,7 +36430,23 @@
           "note": "Only diagnostic setup changed; all actual scientific test dictionaries, fixtures, timeouts, assertions and explicit review gate identical tod211. Prior raw results archived, not relabeled new-source proof.",
           "observation_issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/161#issuecomment-6233721041"
         }
-      ]
+      ],
+      "continuation_authorization": {
+        "authorized_at": "2026-10-19T07:55:15.259911+00:00",
+        "user_instruction": "Awesome. Those more possile 5 sound doable. Please work on getting them all going. Don't worry about the limits of attempts for them.",
+        "scope": [
+          "elastix",
+          "emuses",
+          "glmsingle",
+          "nftsim",
+          "pydeface"
+        ],
+        "attempt_limit": null,
+        "prior_attempts_preserved": 20,
+        "renewed_deadline": "2026-10-19T19:55:15.259911+00:00",
+        "scientific_assertions_and_no_private_ports_preserved": true
+      },
+      "status_before_authorized_continuation": "blocked-verification-budget"
     },
     {
       "recipe": "qmrlab",
@@ -48539,5 +48672,23 @@
     ],
     "transition_confirmed": true,
     "handoff_issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/2#issuecomment-6235986404"
+  },
+  "authorized_five_recipe_continuation": {
+    "recorded_at": "2026-10-19T08:00:56.308910+00:00",
+    "recipes": [
+      "elastix",
+      "emuses",
+      "nftsim",
+      "glmsingle",
+      "pydeface"
+    ],
+    "attempt_limit_waived": true,
+    "active_root_runs": {
+      "elastix": 39219166368,
+      "emuses": 39219604100,
+      "nftsim": 39219563492,
+      "glmsingle": 39219698856
+    },
+    "next_action": "Review native outcomes and prepare PyDeface supported performance correction while four remote builds run. No subagents or duplicate successful rebuilds."
   }
 }
