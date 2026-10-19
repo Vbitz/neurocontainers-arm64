@@ -38214,15 +38214,32 @@
         "resolved_by": "All61 unchanged scientific test contracts pass on the demonstrated native resource class; temporary diagnostics removed, exact release head passes native and both upstream architectures. No profiling attribution is claimed."
       },
       "automatic_promotion": {
-        "checked_at": "2026-10-19T10:49:08.107582+00:00",
+        "checked_at": "2026-10-19T10:58:40.976046+00:00",
         "run_id": 39240107295,
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39240107295",
         "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
         "merge_sha": "e957afc7fb6c6030a65b7e092752c1db72d4ff81",
-        "status": "queued",
+        "status": "in_progress",
         "conclusion": null,
         "publication_verified": false,
-        "publish_jobs": []
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-pydeface_arm64-38776086a2fc4382d193ad1d3e6de69fd00fc981)",
+            "status": "in_progress",
+            "conclusion": null,
+            "active_steps": [
+              "Download candidate bundle without executing it"
+            ]
+          },
+          {
+            "name": "publish (candidate-pydeface-38776086a2fc4382d193ad1d3e6de69fd00fc981)",
+            "status": "in_progress",
+            "conclusion": null,
+            "active_steps": [
+              "Download candidate bundle without executing it"
+            ]
+          }
+        ]
       },
       "resolved_external_merge_holds": [
         {
@@ -50251,8 +50268,8 @@
   },
   "last_session_checkpoint": {
     "scope": "authorized-five-recipe-continuation",
-    "checked_at": "2026-10-19T10:49:27.796009+00:00",
-    "root_commit": "cd36436b53a414de433d579f557b537c5daba43f",
+    "checked_at": "2026-10-19T10:58:41.601295+00:00",
+    "root_commit": "545573eb2bd91c9817f0aefaa2ff9c37ba4c00b3",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "local_checkout_branch": "arm64/pydeface-release-stage-20261019",
     "local_checkout_sha": "d1f8582447541be77dbc48a243228698a5cda632",
@@ -50279,7 +50296,7 @@
     "AGENTS_files_untouched": true,
     "next_action": "Verify automatic PyDeface publication39240107295 against integrated387 manifests; four other exact-source publications verified. Refresh coverage and push final checkpoint. No additional successful-source builds.",
     "overall_inventory_goal_complete": false,
-    "upstream_fork_main_sha": "de600e937e7a0e850a664e65856a454fe1da2334",
+    "upstream_fork_main_sha": "e957afc7fb6c6030a65b7e092752c1db72d4ff81",
     "verified_publication_recipes": [
       "emuses",
       "nftsim",
@@ -50288,6 +50305,13 @@
     ],
     "active_promotion_runs": {
       "pydeface": 39240107295
+    },
+    "coverage_tracker": {
+      "url": "https://github.com/Vbitz/neurocontainers-arm64/issues/2",
+      "command": "python3 scripts/tracking_issue.py --write --snapshot /tmp/five-port-tracking-final-20261019.json --output /tmp/five-port-tracking-final-20261019.md",
+      "updated_and_readback_verified": true,
+      "all_five_rows_verified": true,
+      "scope": "Latest native source-specific outcomes; architecture checkboxes and published-release claims retain documented independent semantics."
     }
   },
   "completed_publication_queue_reconciliation": {
