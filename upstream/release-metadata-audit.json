@@ -4968,6 +4968,201 @@
         }
       ],
       "metadata_checked_at": "2026-10-19T09:35:59.653662+00:00"
+    },
+    {
+      "recipe": "glmsingle",
+      "promotion_run_id": 39230753923,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39230753923",
+      "status": "verified-published-metadata",
+      "source_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/glmsingle_arm64/1.2.0.json",
+          "source_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
+          "metadata_ref": "8ffb686c16a5be4273549e1d7beb9ad909c6fe46",
+          "metadata_commit_sha": "8ffb686c16a5be4273549e1d7beb9ad909c6fe46",
+          "expected_build_date": "20261019",
+          "committed_build_dates": [
+            "20261019"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "sif": "glmsingle_arm64_1.2.0_20261019.simg",
+          "sif_sha256": "95f9bd063f867425790b56745ec77d281e91187215d7cb52e041a9735dda365e",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/glmsingle_arm64_1.2.0_20261019.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/glmsingle/1.2.0.json",
+          "source_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
+          "metadata_ref": "8ffb686c16a5be4273549e1d7beb9ad909c6fe46",
+          "metadata_commit_sha": "8ffb686c16a5be4273549e1d7beb9ad909c6fe46",
+          "expected_build_date": "20261019",
+          "committed_build_dates": [
+            "20261019"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "sif": "glmsingle_1.2.0_20261019.simg",
+          "sif_sha256": "312f9fdc9a801892963ef1d78446cde25331da78f4e1293451558267f4635474",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/glmsingle_1.2.0_20261019.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+        }
+      ],
+      "checked_at": "2026-10-19T09:49:15.058179+00:00",
+      "workflow_status": "completed",
+      "workflow_conclusion": "success",
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-glmsingle-5f6354b958fdc037d036bbf0f210d7fa213437d9)",
+          "status": "completed",
+          "conclusion": "success",
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-glmsingle_arm64-5f6354b958fdc037d036bbf0f210d7fa213437d9)",
+          "status": "completed",
+          "conclusion": "success",
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-19T09:49:15.058179+00:00"
+    },
+    {
+      "recipe": "emuses",
+      "promotion_run_id": 39222129449,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39222129449",
+      "status": "verified-published-metadata",
+      "source_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
+      "metadata": [
+        {
+          "architecture": "aarch64",
+          "path": "releases/emuses_arm64/1.3.0.json",
+          "source_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
+          "metadata_ref": "2df6784ff84499255364f5ba3ffe9d3c9fde6009",
+          "metadata_commit_sha": "2df6784ff84499255364f5ba3ffe9d3c9fde6009",
+          "expected_build_date": "20261019",
+          "committed_build_dates": [
+            "20261019"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "sif": "emuses_arm64_1.3.0_20261019.simg",
+          "sif_sha256": "c2699cb1047663b30c03606dde9cb8931351ed5e9153b6a7ac1080b6a27096f8",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/emuses_arm64_1.3.0_20261019.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+        },
+        {
+          "architecture": "x86_64",
+          "path": "releases/emuses/1.3.0.json",
+          "source_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
+          "metadata_ref": "2df6784ff84499255364f5ba3ffe9d3c9fde6009",
+          "metadata_commit_sha": "2df6784ff84499255364f5ba3ffe9d3c9fde6009",
+          "expected_build_date": "20261019",
+          "committed_build_dates": [
+            "20261019"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "sif": "emuses_1.3.0_20261019.simg",
+          "sif_sha256": "216596ececb77f69ed0be4dcf53cf8c5b8b5751f8bcaed6cf5f129e2fde96a0e",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/emuses_1.3.0_20261019.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+        }
+      ],
+      "checked_at": "2026-10-19T09:50:43.979875+00:00",
+      "workflow_status": "completed",
+      "workflow_conclusion": "success",
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-emuses-e35f92ad2553447ed86133a983ac12e5175d854a)",
+          "status": "completed",
+          "conclusion": "success",
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-emuses_arm64-e35f92ad2553447ed86133a983ac12e5175d854a)",
+          "status": "completed",
+          "conclusion": "success",
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-19T09:50:43.979875+00:00"
+    },
+    {
+      "recipe": "elastix",
+      "promotion_run_id": 39231862022,
+      "promotion_run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39231862022",
+      "status": "verified-published-metadata",
+      "source_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
+      "metadata": [
+        {
+          "architecture": "x86_64",
+          "path": "releases/elastix/5.3.1.json",
+          "source_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
+          "metadata_ref": "75f0b48fbe2ee5793a54369866ab7a17c88d294a",
+          "metadata_commit_sha": "75f0b48fbe2ee5793a54369866ab7a17c88d294a",
+          "expected_build_date": "20261013",
+          "committed_build_dates": [
+            "20261013"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "sif": "elastix_5.3.1_20261013.simg",
+          "sif_sha256": "406865720eff32a07d2896fcf2d4dd25dd515704796366ec878466bb0706ca90",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/elastix_5.3.1_20261013.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+        },
+        {
+          "architecture": "aarch64",
+          "path": "releases/elastix_arm64/5.3.1.json",
+          "source_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
+          "metadata_ref": "75f0b48fbe2ee5793a54369866ab7a17c88d294a",
+          "metadata_commit_sha": "75f0b48fbe2ee5793a54369866ab7a17c88d294a",
+          "expected_build_date": "20261013",
+          "committed_build_dates": [
+            "20261013"
+          ],
+          "exists": true,
+          "current_candidate_date_committed": true,
+          "trusted_preview_matches": true,
+          "sif": "elastix_arm64_5.3.1_20261013.simg",
+          "sif_sha256": "7fc03d81263e328cb035074f14792397b7f0c86f1c35c4edad70c0cbfea1d65c",
+          "public_sif_url": "https://neurocontainers.s3.us-east-2.amazonaws.com/elastix_arm64_5.3.1_20261013.simg",
+          "public_sif_head_status": 200,
+          "scope": "Committed JSON equals trusted preview; source/artifact identity matches native candidate report. Public HEAD200, no public image bytes redownloaded."
+        }
+      ],
+      "checked_at": "2026-10-19T09:57:36.971196+00:00",
+      "workflow_status": "completed",
+      "workflow_conclusion": "success",
+      "publish_jobs": [
+        {
+          "name": "publish (candidate-elastix-ff8a87685a1a201bcd76ced4fc52495d8526d312)",
+          "status": "completed",
+          "conclusion": "success",
+          "active_steps": []
+        },
+        {
+          "name": "publish (candidate-elastix_arm64-ff8a87685a1a201bcd76ced4fc52495d8526d312)",
+          "status": "completed",
+          "conclusion": "success",
+          "active_steps": []
+        }
+      ],
+      "metadata_checked_at": "2026-10-19T09:57:36.971196+00:00"
     }
   ],
   "findings": [

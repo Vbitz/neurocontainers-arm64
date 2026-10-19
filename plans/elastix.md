@@ -55,3 +55,8 @@ and version assertions. The fulltest shell variable avoids version substitution 
 [34/34 checks on each upstream architecture](https://github.com/neurodesk/neurocontainers/actions/runs/39224531819),
 with no failures or skips and both Dive/quality/release gates passing. The merged
 recipe matches the exact tested source. Automatic publication is audited separately.
+
+Automatic publication is now verified for this exact candidate in [promotion 39231862022](https://github.com/neurodesk/neurocontainers/actions/runs/39231862022).
+Both committed release JSONs match trusted previews and tested manifests; ARM
+architecture fields are explicit and both public SIF objects return HTTP 200.
+Checksums come from the verified manifests; public image bytes were not redownloaded.

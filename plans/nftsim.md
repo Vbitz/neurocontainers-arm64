@@ -64,3 +64,8 @@ with zero failures/skips and both image-quality checks passing. All 68 active
 fulltests remain. [Followup PR #3708](https://github.com/neurodesk/neurocontainers/pull/3708)
 is merged. PAS fCaP remains an explicit unsupported-feature rejection, not a positive
 PAS capability claim. Automatic release metadata is verified separately.
+
+Automatic publication is now verified for this exact candidate in [promotion 39229235022](https://github.com/neurodesk/neurocontainers/actions/runs/39229235022).
+Both committed release JSONs match trusted previews and tested manifests; ARM
+architecture fields are explicit and both public SIF objects return HTTP 200.
+Checksums come from the verified manifests; public image bytes were not redownloaded.

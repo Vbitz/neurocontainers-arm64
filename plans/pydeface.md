@@ -84,3 +84,9 @@ limits. The existing [PR #3580](https://github.com/neurodesk/neurocontainers/pul
 now tests this exact final head on both architectures in
 [run 39232288136](https://github.com/neurodesk/neurocontainers/actions/runs/39232288136);
 those results and every required gate remain necessary before merge.
+
+The upstream bot subsequently merged current main into the PR, producing
+`38776086a2fc4382d193ad1d3e6de69fd00fc981` and cancelling the earlier candidate jobs.
+PyDeface and all shared build/test inputs remain byte-identical. Replacement
+[upstream run 39233637142](https://github.com/neurodesk/neurocontainers/actions/runs/39233637142)
+verifies the integrated head; C53 native evidence remains bound to its original SHA.

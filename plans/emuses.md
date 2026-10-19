@@ -74,3 +74,8 @@ passes **5/5**, and [upstream ARM and x86](https://github.com/neurodesk/neurocon
 each pass **5/5**, with no failures/skips and both image-quality checks passing.
 [PR #3707](https://github.com/neurodesk/neurocontainers/pull/3707) is merged.
 Automatic publication is tracked separately; these tests alone do not assert publication.
+
+Automatic publication is now verified for this exact candidate in [promotion 39222129449](https://github.com/neurodesk/neurocontainers/actions/runs/39222129449).
+Both committed release JSONs match trusted previews and tested manifests; ARM
+architecture fields are explicit and both public SIF objects return HTTP 200.
+Checksums come from the verified manifests; public image bytes were not redownloaded.

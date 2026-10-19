@@ -108,5 +108,13 @@
     ],
     "command_exit_contracts": "58 exit0 checks including deploy; four explicit expected exit1 negatives; all61 scientific contracts unchanged."
   },
-  "final_release_upstream_run": "https://github.com/neurodesk/neurocontainers/actions/runs/39232288136"
+  "final_release_upstream_run": "https://github.com/neurodesk/neurocontainers/actions/runs/39233637142",
+  "automatic_main_integration": {
+    "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+    "prior_source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+    "base_sha": "de600e937e7a0e850a664e65856a454fe1da2334",
+    "author": "github-actions[bot]",
+    "recipe_and_shared_build_test_input_bytes_identical": true,
+    "prior_root_native_result_stays_bound_to_original_source": true
+  }
 }
