@@ -1,0 +1,85 @@
+{
+  "reviewed_at": "2026-10-19T09:01:24.466041+00:00",
+  "measurement": {
+    "source_sha": "aa6bb369db798d325e4d02b50a2200a02677cfbf",
+    "run_id": 39220575769,
+    "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39220575769",
+    "aggregate": {
+      "total_tests": 63,
+      "passed": 62,
+      "failed": 1,
+      "skipped": 0
+    },
+    "scientific_cases_passed": 61,
+    "all_actual_scientific_exits_match_contracts": true,
+    "only_failure": "Deliberate native diagnosis review gate, not scientific computation.",
+    "normmi_seconds": 179.46589398384094,
+    "T2_seconds": 154.33514070510864,
+    "mutualinfo_seconds": 283.34510564804077,
+    "unchanged_limits_seconds": {
+      "normmi": 300,
+      "T2": 300,
+      "mutualinfo": 600
+    },
+    "cpu_part": "0xd49",
+    "cpu_count": 4,
+    "flirt_sha256": "1fe86d868e0bf0781b8afb9c4f0689f0bdb3e49edf67795bee346f1a48c7c17c",
+    "same_flirt_executable_checksum_as_blacksmith": true,
+    "whole_dependency_closure_byte_identity_not_claimed": true,
+    "full_MRI_voxel_count": 5898240,
+    "mask_removed_voxels": 1076007,
+    "mask_retained_voxels": 4320559,
+    "NIfTI_storage_bound": 0.010797647,
+    "scientific_input_geometry_invariants_preserved": true,
+    "profiling_attribution_not_claimed": true,
+    "disposition": "Native resource-class remedy demonstrated. Temporary observer/reviewgate can be removed after this actual-science review, preserving all61 scientific definitions. Final release source must still pass native/upstream gates."
+  },
+  "release_candidate_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+  "release_contract_comparison": {
+    "source_sha": "aa6bb369db798d325e4d02b50a2200a02677cfbf",
+    "scientific_test_count": 61,
+    "all_61_mappings_identical_except_temporary_observer_env_setup": true,
+    "all_scientific_commands_outputs_validations_timeouts_preserved": true,
+    "all_other_suite_fields_unchanged": true,
+    "temporary_diagnostic_setup_wrappers_and_review_gate_removed_in_proposal_only": true,
+    "shell_syntax_valid": true,
+    "proposal_sha256": "00563c3e75afd1dc86a53d70a3daa74fb82a6d7a37bb8fe17168009df6d331d7",
+    "source_edit_and_commit_wait_for_native_measurement_review": true
+  },
+  "integration": {
+    "recipe": "pydeface",
+    "source_sha": "aa6bb369db798d325e4d02b50a2200a02677cfbf",
+    "base_sha": "da69a6107e0d04268cfa6a3db73ee895b7397d0b",
+    "candidate_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+    "branch": "arm64/pydeface-release-20261019",
+    "authored_paths": [
+      "recipes/pydeface/build.yaml",
+      "recipes/pydeface/fulltest.yaml"
+    ],
+    "recipe_tree_identical_to_source": false,
+    "recipe_tree_identical_to_staged_source": true,
+    "staged_source_sha": "d1f8582447541be77dbc48a243228698a5cda632",
+    "protected_instruction_blobs_unchanged_from_main": true,
+    "protected_instruction_files_untouched": true,
+    "reason": "Integrate reviewed diagnostic cleanup and native ARM runner option onto currentmain, preserving existingPR history and all scientific contracts."
+  },
+  "runner_option": {
+    "url": "https://github.com/neurodesk/neurocontainers/pull/3709",
+    "number": 3709,
+    "base_sha": "7cf6c602f64e008f6d2f89bfd29ab30b246cabd2",
+    "candidate_sha": "956bc59b0007b34d9c9ef042a3524909dc5a83e3",
+    "branch": "ci/native-github-arm-20261019",
+    "changed_paths": [
+      ".github/workflows/pr-container-candidate.yml"
+    ],
+    "protected_instruction_files_untouched": true,
+    "validation": "actionlint;8actualexpression runner selections; YAML comparison proves only candidate runs-on changes. All timeouts/build/runtime/Dive/architecture/artifact gates unchanged.",
+    "scope": "OptionalnativeGitHubARM selector; same defaultpools/allscientifictimeouts/gates. Independent currentaa6rootmeasure stillrequired before removingdiagnostics; not scientificproof itself.",
+    "state": "MERGED",
+    "merge_sha": "da69a6107e0d04268cfa6a3db73ee895b7397d0b",
+    "merged_at": "2026-10-19T08:44:13Z",
+    "all_checks_passed": true,
+    "native_github_label_available": true
+  },
+  "scope": "Measurement source AA6 passes all61 actual scientific cases but deliberately fails its review gate. FinalC53 remains unverified until its own native/upstream jobs pass; no perf attribution or whole library-byte identity claim."
+}

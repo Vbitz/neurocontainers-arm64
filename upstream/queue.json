@@ -14940,7 +14940,7 @@
         }
       ],
       "automatic_promotion": {
-        "checked_at": "2026-10-19T08:37:49.051011+00:00",
+        "checked_at": "2026-10-19T08:53:01.295655+00:00",
         "run_id": 39222129449,
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39222129449",
         "source_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
@@ -14959,11 +14959,9 @@
           },
           {
             "name": "publish (candidate-emuses_arm64-e35f92ad2553447ed86133a983ac12e5175d854a)",
-            "status": "in_progress",
-            "conclusion": null,
-            "active_steps": [
-              "Publish exact tested Docker archive to unique staging tags"
-            ]
+            "status": "completed",
+            "conclusion": "success",
+            "active_steps": []
           }
         ]
       },
@@ -31241,7 +31239,7 @@
       "port_files": [
         "recipes/nftsim/build.yaml"
       ],
-      "status": "native-running",
+      "status": "upstream-running",
       "branch": "arm64/nftsim-integrated-20261019",
       "baseline_sha": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
       "candidate_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
@@ -31251,18 +31249,23 @@
       "run_id": 39224036126,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3708",
       "upstream_ci": {
-        "head_sha": "8cc67ffb3a87e5d0a62934d67d735b1233574599",
-        "status": "not-started-merge-conflict",
+        "head_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+        "status": "in-progress",
         "expected_architectures": [
           "aarch64",
           "x86_64"
         ],
         "accounted_jobs": 2,
-        "reserved_jobs": 2,
-        "started_jobs": 0
+        "reserved_jobs": 0,
+        "started_jobs": 2,
+        "candidate_run_id": 39226115101,
+        "job_urls": {
+          "aarch64": "https://github.com/neurodesk/neurocontainers/actions/runs/39226115101/job/117972821268",
+          "x86_64": "https://github.com/neurodesk/neurocontainers/actions/runs/39226115101/job/117972821238"
+        }
       },
       "merged_sha": "517b0cabd8453256ef39daafdea63ee3cf670f94",
-      "next_action": "Review exact source and actual native Docker/SIF/deploy/fulltest reports before focused upstream PR.",
+      "next_action": "Exact integrated7553native69/69; samePR3708 branch fast-forwarded, both upstreamjobs started. Two existing reservations now actual; no additional count increase or duplicatePR.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.2",
@@ -31370,7 +31373,7 @@
           "attempt": 13,
           "dispatched_at": "2026-10-19T08:36:55.713375+00:00",
           "hypothesis": "Resolve actual upstream build.yaml conflict on currentmain7cf6c602 while carrying only the two byte-identical tested recipe files from8cc. Preserve all other acceptedports/instructionblobs and all68activefulltests; verify exact integrated shared-builder context before fast-forwarding samePR3708 branch. No upstreamcandidatejob started; reservations are pending, not active builds.",
-          "status": "queued"
+          "status": "success"
         }
       ],
       "native_command_exit_review": {
@@ -31384,10 +31387,10 @@
         ]
       },
       "native_evidence": {
-        "source_sha": "8cc67ffb3a87e5d0a62934d67d735b1233574599",
+        "source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
         "version": "1.0.2",
-        "run_id": 39221832476,
-        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39221832476",
+        "run_id": 39224036126,
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39224036126",
         "counts": {
           "total_tests": 69,
           "passed": 69,
@@ -31395,8 +31398,8 @@
           "skipped": 0
         },
         "fulltest_summary": {
-          "duration": 385.2784848213196,
-          "run_timestamp": "2026-10-19T08:27:19.673335",
+          "duration": 386.0983536243439,
+          "run_timestamp": "2026-10-19T08:48:46.929260",
           "suites_failed": 0,
           "suites_passed": 1,
           "tests_failed": 0,
@@ -31783,6 +31786,34 @@
           "runner_labels": [
             "ubuntu-24.04-arm"
           ]
+        },
+        {
+          "source_sha": "8cc67ffb3a87e5d0a62934d67d735b1233574599",
+          "version": "1.0.2",
+          "run_id": 39221832476,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39221832476",
+          "counts": {
+            "total_tests": 69,
+            "passed": 69,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 385.2784848213196,
+            "run_timestamp": "2026-10-19T08:27:19.673335",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 68,
+            "total_suites": 1,
+            "total_tests": 68
+          },
+          "deploy_counts": {
+            "total": 1,
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
         }
       ],
       "reuse_existing_upstream_pr": true,
@@ -35308,13 +35339,13 @@
         "recipes/pydeface/build.yaml"
       ],
       "status": "native-running",
-      "branch": "arm64/upstream-pydeface-20261012",
+      "branch": "arm64/pydeface-release-20261019",
       "baseline_sha": "b68a3ddde7d036ea095c91123d27903f0629a829",
-      "candidate_sha": "aa6bb369db798d325e4d02b50a2200a02677cfbf",
+      "candidate_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
       "started_at": "2026-10-13T07:35:00+00:00",
       "deadline": "2026-10-13T19:35:00+00:00",
-      "attempts": 37,
-      "run_id": 39220575769,
+      "attempts": 38,
+      "run_id": 39226549671,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3580",
       "upstream_ci": {
         "candidate_run_id": 38379088144,
@@ -35593,9 +35624,9 @@
         "https://git.fmrib.ox.ac.uk/fsl/avwutils/-/raw/master/fslsplit.cc",
         "https://git.fmrib.ox.ac.uk/fsl/avwutils/-/raw/master/fslmerge.cc"
       ],
-      "arm64_attempts": 20,
+      "arm64_attempts": 21,
       "x86_64_attempts": 17,
-      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39220575769",
+      "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39226549671",
       "candidate_history": [
         {
           "candidate_sha": "50dae77188b5f7f2d70fb7be598bd8d86693e291",
@@ -36971,6 +37002,14 @@
           "attempt": 37,
           "dispatched_at": "2026-10-19T08:07:48.991722+00:00",
           "hypothesis": "Current unchanged PR head on native GitHub ubuntu24ARM tests concrete runner-throughput hypothesis: same build.yaml previously had normmi161s/T2137s versus current Blacksmith normmi>300s/T2261s. Preserve scientific inputs, all assertions/timeouts and deliberate diagnostic review gate. This measurement is not a pre-approved release or FSL source patch.",
+          "status": "diagnostic-gate-only-failure"
+        },
+        {
+          "source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+          "run_id": 39226549671,
+          "attempt": 38,
+          "dispatched_at": "2026-10-19T08:58:01.101800+00:00",
+          "hypothesis": "CurrentAA6 nativeGitHub run proves all61 scientific checks within original600/300/300limits, sameFLIRTchecksum as slowerBlacksmith. Integrate currentmain including optionalnativeARMCIselector and remove only temporaryobserver/setup/reviewgate after actualmeasurementreview. All61 scientificmappings/inputs/assertions/timeouts and packagepins preserved; finalreleasehead requiresfreshnativeproof before samePR3580 update.",
           "status": "queued"
         }
       ],
@@ -36991,6 +37030,69 @@
         "merged_at": "2026-10-19T08:44:13Z",
         "all_checks_passed": true,
         "native_github_label_available": true
+      },
+      "measurement_review": {
+        "source_sha": "aa6bb369db798d325e4d02b50a2200a02677cfbf",
+        "run_id": 39220575769,
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39220575769",
+        "aggregate": {
+          "total_tests": 63,
+          "passed": 62,
+          "failed": 1,
+          "skipped": 0
+        },
+        "scientific_cases_passed": 61,
+        "all_actual_scientific_exits_match_contracts": true,
+        "only_failure": "Deliberate native diagnosis review gate, not scientific computation.",
+        "normmi_seconds": 179.46589398384094,
+        "T2_seconds": 154.33514070510864,
+        "mutualinfo_seconds": 283.34510564804077,
+        "unchanged_limits_seconds": {
+          "normmi": 300,
+          "T2": 300,
+          "mutualinfo": 600
+        },
+        "cpu_part": "0xd49",
+        "cpu_count": 4,
+        "flirt_sha256": "1fe86d868e0bf0781b8afb9c4f0689f0bdb3e49edf67795bee346f1a48c7c17c",
+        "same_flirt_executable_checksum_as_blacksmith": true,
+        "whole_dependency_closure_byte_identity_not_claimed": true,
+        "full_MRI_voxel_count": 5898240,
+        "mask_removed_voxels": 1076007,
+        "mask_retained_voxels": 4320559,
+        "NIfTI_storage_bound": 0.010797647,
+        "scientific_input_geometry_invariants_preserved": true,
+        "profiling_attribution_not_claimed": true,
+        "disposition": "Native resource-class remedy demonstrated. Temporary observer/reviewgate can be removed after this actual-science review, preserving all61 scientific definitions. Final release source must still pass native/upstream gates."
+      },
+      "upstream_pr_head_branch": "arm64/upstream-pydeface-20261012",
+      "release_integration": {
+        "recipe": "pydeface",
+        "source_sha": "aa6bb369db798d325e4d02b50a2200a02677cfbf",
+        "base_sha": "da69a6107e0d04268cfa6a3db73ee895b7397d0b",
+        "candidate_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+        "branch": "arm64/pydeface-release-20261019",
+        "authored_paths": [
+          "recipes/pydeface/build.yaml",
+          "recipes/pydeface/fulltest.yaml"
+        ],
+        "recipe_tree_identical_to_source": false,
+        "recipe_tree_identical_to_staged_source": true,
+        "staged_source_sha": "d1f8582447541be77dbc48a243228698a5cda632",
+        "protected_instruction_blobs_unchanged_from_main": true,
+        "protected_instruction_files_untouched": true,
+        "reason": "Integrate reviewed diagnostic cleanup and native ARM runner option onto currentmain, preserving existingPR history and all scientific contracts."
+      },
+      "release_cleanup_validation": {
+        "source_sha": "aa6bb369db798d325e4d02b50a2200a02677cfbf",
+        "scientific_test_count": 61,
+        "all_61_mappings_identical_except_temporary_observer_env_setup": true,
+        "all_scientific_commands_outputs_validations_timeouts_preserved": true,
+        "all_other_suite_fields_unchanged": true,
+        "temporary_diagnostic_setup_wrappers_and_review_gate_removed_in_proposal_only": true,
+        "shell_syntax_valid": true,
+        "proposal_sha256": "00563c3e75afd1dc86a53d70a3daa74fb82a6d7a37bb8fe17168009df6d331d7",
+        "source_edit_and_commit_wait_for_native_measurement_review": true
       }
     },
     {
@@ -48998,70 +49100,38 @@
     "scope": "Main agent continues alone; unlimited build-slot authorization remains separate."
   },
   "last_session_checkpoint": {
-    "checked_at": "2026-10-17T15:44:33.416600+00:00",
-    "top_level_base_commit": "aabdb476e0623742eaa38440df77a9cde2b2c658",
+    "scope": "authorized-five-recipe-continuation",
+    "checked_at": "2026-10-19T09:01:24.466041+00:00",
+    "root_commit": "1e04e8e529467a5c45a0d8f3b319745df6874f0f",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
-    "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
-    "upstream_fork_main_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
-    "inventory_status_counts": {
-      "excluded-by-user": 17,
-      "blocked-prerequisite": 2,
-      "merged": 100,
-      "blocked-verification-budget": 3,
-      "blocked-upstream": 3,
-      "failed-runtime": 3,
-      "blocked-infrastructure": 1
+    "local_checkout_branch": "arm64/pydeface-release-stage-20261019",
+    "local_checkout_sha": "d1f8582447541be77dbc48a243228698a5cda632",
+    "local_branch_purpose": "Single checkout stages validated PyDeface source while existing user instruction overlays remain untouched. Immutable tested/published candidate branches recorded separately.",
+    "active_root_runs": {
+      "pydeface": 39226549671
     },
-    "all_subagents_stopped": true,
-    "builds_dispatched": 0,
-    "pending_final_native_budget_questions": [
-      "tractseg",
-      "apptainer",
-      "gigaconnectome",
-      "julia",
-      "workshopdemo"
+    "active_upstream_runs": {
+      "elastix": 39224531819,
+      "nftsim": 39226115101
+    },
+    "awaiting_upstream_slots": [
+      "glmsingle"
     ],
-    "existing_pending_other_budget_question": "elastix",
-    "next_action": "Goal blocked, not complete, after three consecutive unchanged impasse turns. Await applicable existing budget replies or concrete upstream/prerequisite/resource changes; no live candidate jobs or eligible authorized recipe actions remain. Preserve129inventory/17userexcluded/112in-scope objective,100merged/12unresolved, current runtime/policy blockers, five exact-root gaps, two later active-test gaps and all source-specific proof. Explicit later resume starts a fresh audit without resetting recipe budgets.",
-    "live_external_jobs": [],
-    "last_goal_turn_classification": "no-progress",
-    "progress": "Current BrainLes9564 and PyDeface326 are terminal and raw-reviewed, with successful native scientific components preserved alongside actual failing gates. BrainLes18/19: SynthStrip all assertions39.51s before review refusal, Dive32.8833%>30 fails. PyDefaceARM60/63: normmi/T2300s timeouts plusreviewgate; x8662/63. Profiler49preflight samples with12unbound[vdso], no actual FSL capture/source attribution. No live jobs,20accounted attempts each/originalcaps/windows retained. Read-only BIDScoin/QuPath recipe preflights find no direct configuration contradiction but do not execute their added assertions.11budget recipe replies pending,66published/132catalog unchanged.",
-    "active_automatic_promotions": [],
-    "pending_budget_replies": [
-      "apptainer",
-      "bidscoin",
-      "elastix",
-      "emuses",
-      "gigaconnectome",
-      "glmsingle",
-      "julia",
-      "nftsim",
-      "qupath",
-      "tractseg",
-      "workshopdemo"
-    ],
-    "verified_published_recipe_count": 66,
-    "catalog_architecture_record_count": 132,
-    "total_pending_budget_questions": 11,
-    "pending_runtime_followup_budget_questions": [
-      "glmsingle",
-      "nftsim"
-    ],
-    "pending_new_recipe_window_questions": [
+    "completed_merged_recipes": [
       "emuses"
     ],
-    "pending_later_fulltest_budget_questions": [
-      "bidscoin",
-      "qupath"
+    "attempt_limits_waived_only_for": [
+      "elastix",
+      "emuses",
+      "nftsim",
+      "glmsingle",
+      "pydeface"
     ],
-    "current_fulltest_gaps": [
-      "bidscoin",
-      "qupath"
-    ],
-    "checkpoint_issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-6235010381",
-    "no_progress_reason": "All known candidate jobs are terminal and current PR heads unchanged. All remaining own recipe edits/dispatches need an existing unanswered bounded budget renewal or concrete upstream/prerequisite/resource change; no eligible authorized recipe action remains.",
-    "blocked_audit_consecutive_goal_turns": 3,
-    "goal_lifecycle_status": "blocked"
+    "prior_counts_preserved": true,
+    "no_subagents": true,
+    "AGENTS_files_untouched": true,
+    "next_action": "Review NFTsim both current-source upstream jobs and merge when allchecks/Dive pass; open readyGLMsingle when2slotsfree. Wait actualElastixcompile and PyDefacefinalnative without duplicate attempts.",
+    "overall_inventory_goal_complete": false
   },
   "completed_publication_queue_reconciliation": {
     "checked_at": "2026-10-17T11:12:16.974798+00:00",
@@ -49219,7 +49289,7 @@
     "handoff_issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/2#issuecomment-6235986404"
   },
   "authorized_five_recipe_continuation": {
-    "recorded_at": "2026-10-19T08:00:56.308910+00:00",
+    "recorded_at": "2026-10-19T09:01:24.466041+00:00",
     "recipes": [
       "elastix",
       "emuses",
@@ -49229,14 +49299,86 @@
     ],
     "attempt_limit_waived": true,
     "active_root_runs": {
-      "elastix": 39219166368,
-      "pydeface": 39220575769,
-      "nftsim": 39221832476,
-      "glmsingle": 39222097735
+      "pydeface": 39226549671
     },
-    "next_action": "Review four actual native runs; EMUSES individual PR3707 merged and automatic promotion awaits publication proof. No repeats of passing source merely for reporting.",
+    "next_action": "Review NFTsim both current-source upstream jobs and merge when allchecks/Dive pass; open readyGLMsingle when2slotsfree. Wait actualElastixcompile and PyDefacefinalnative without duplicate attempts.",
     "completed_merged_recipes": [
       "emuses"
+    ],
+    "active_upstream_runs": {
+      "elastix": 39224531819,
+      "nftsim": 39226115101
+    },
+    "awaiting_upstream_slots": [
+      "glmsingle"
     ]
-  }
+  },
+  "session_checkpoint_history": [
+    {
+      "checked_at": "2026-10-17T15:44:33.416600+00:00",
+      "top_level_base_commit": "aabdb476e0623742eaa38440df77a9cde2b2c658",
+      "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
+      "checkout_sha": "f2defa075813417c1624535ceed618fd0927ffdc",
+      "upstream_fork_main_sha": "067ab0cf6cd694c243b664327409cd1ef2d69300",
+      "inventory_status_counts": {
+        "excluded-by-user": 17,
+        "blocked-prerequisite": 2,
+        "merged": 100,
+        "blocked-verification-budget": 3,
+        "blocked-upstream": 3,
+        "failed-runtime": 3,
+        "blocked-infrastructure": 1
+      },
+      "all_subagents_stopped": true,
+      "builds_dispatched": 0,
+      "pending_final_native_budget_questions": [
+        "tractseg",
+        "apptainer",
+        "gigaconnectome",
+        "julia",
+        "workshopdemo"
+      ],
+      "existing_pending_other_budget_question": "elastix",
+      "next_action": "Goal blocked, not complete, after three consecutive unchanged impasse turns. Await applicable existing budget replies or concrete upstream/prerequisite/resource changes; no live candidate jobs or eligible authorized recipe actions remain. Preserve129inventory/17userexcluded/112in-scope objective,100merged/12unresolved, current runtime/policy blockers, five exact-root gaps, two later active-test gaps and all source-specific proof. Explicit later resume starts a fresh audit without resetting recipe budgets.",
+      "live_external_jobs": [],
+      "last_goal_turn_classification": "no-progress",
+      "progress": "Current BrainLes9564 and PyDeface326 are terminal and raw-reviewed, with successful native scientific components preserved alongside actual failing gates. BrainLes18/19: SynthStrip all assertions39.51s before review refusal, Dive32.8833%>30 fails. PyDefaceARM60/63: normmi/T2300s timeouts plusreviewgate; x8662/63. Profiler49preflight samples with12unbound[vdso], no actual FSL capture/source attribution. No live jobs,20accounted attempts each/originalcaps/windows retained. Read-only BIDScoin/QuPath recipe preflights find no direct configuration contradiction but do not execute their added assertions.11budget recipe replies pending,66published/132catalog unchanged.",
+      "active_automatic_promotions": [],
+      "pending_budget_replies": [
+        "apptainer",
+        "bidscoin",
+        "elastix",
+        "emuses",
+        "gigaconnectome",
+        "glmsingle",
+        "julia",
+        "nftsim",
+        "qupath",
+        "tractseg",
+        "workshopdemo"
+      ],
+      "verified_published_recipe_count": 66,
+      "catalog_architecture_record_count": 132,
+      "total_pending_budget_questions": 11,
+      "pending_runtime_followup_budget_questions": [
+        "glmsingle",
+        "nftsim"
+      ],
+      "pending_new_recipe_window_questions": [
+        "emuses"
+      ],
+      "pending_later_fulltest_budget_questions": [
+        "bidscoin",
+        "qupath"
+      ],
+      "current_fulltest_gaps": [
+        "bidscoin",
+        "qupath"
+      ],
+      "checkpoint_issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/186#issuecomment-6235010381",
+      "no_progress_reason": "All known candidate jobs are terminal and current PR heads unchanged. All remaining own recipe edits/dispatches need an existing unanswered bounded budget renewal or concrete upstream/prerequisite/resource change; no eligible authorized recipe action remains.",
+      "blocked_audit_consecutive_goal_turns": 3,
+      "goal_lifecycle_status": "blocked"
+    }
+  ]
 }
