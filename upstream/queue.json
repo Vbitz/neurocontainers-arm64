@@ -38214,7 +38214,7 @@
         "resolved_by": "All61 unchanged scientific test contracts pass on the demonstrated native resource class; temporary diagnostics removed, exact release head passes native and both upstream architectures. No profiling attribution is claimed."
       },
       "automatic_promotion": {
-        "checked_at": "2026-10-19T10:58:40.976046+00:00",
+        "checked_at": "2026-10-19T12:38:47.796661+00:00",
         "run_id": 39240107295,
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39240107295",
         "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
@@ -38228,7 +38228,7 @@
             "status": "in_progress",
             "conclusion": null,
             "active_steps": [
-              "Download candidate bundle without executing it"
+              "Attach tested SIF to staged OCI images"
             ]
           },
           {
@@ -38236,7 +38236,7 @@
             "status": "in_progress",
             "conclusion": null,
             "active_steps": [
-              "Download candidate bundle without executing it"
+              "Publish exact tested Docker archive to unique staging tags"
             ]
           }
         ]
@@ -50268,7 +50268,7 @@
   },
   "last_session_checkpoint": {
     "scope": "authorized-five-recipe-continuation",
-    "checked_at": "2026-10-19T10:58:41.601295+00:00",
+    "checked_at": "2026-10-19T12:38:48.497448+00:00",
     "root_commit": "545573eb2bd91c9817f0aefaa2ff9c37ba4c00b3",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "local_checkout_branch": "arm64/pydeface-release-stage-20261019",
@@ -50294,7 +50294,7 @@
     "prior_counts_preserved": true,
     "no_subagents": true,
     "AGENTS_files_untouched": true,
-    "next_action": "Verify automatic PyDeface publication39240107295 against integrated387 manifests; four other exact-source publications verified. Refresh coverage and push final checkpoint. No additional successful-source builds.",
+    "next_action": "Observe PyDeface automatic promotion39240107295: ARM Docker/SIF uploads completed and SIF attachment active; x86 archive publication active. Both architecture tests62/62 and all5PRmerges complete; no more builds. Audit final JSON/manifests/publicSIF after finalize.",
     "overall_inventory_goal_complete": false,
     "upstream_fork_main_sha": "e957afc7fb6c6030a65b7e092752c1db72d4ff81",
     "verified_publication_recipes": [
