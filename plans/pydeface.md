@@ -61,3 +61,22 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
 - Docker build, architecture verification, SIF conversion, deploy checks and
   the complete fulltest suite passed: **60 passed, 0 failed, 0 skipped**.
 - This candidate is ready for serial acceptance at the top-level submodule pin.
+
+## Current native measurements — 2026-10-19
+
+Current diagnostic source `aa6bb369db798d325e4d02b50a2200a02677cfbf` passes all
+**61 scientific cases** on [native GitHub ARM](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39220575769).
+Only the deliberately failing review gate remains, so the aggregate result is
+62/63 and is not a release pass. Normalized mutual information takes 179.466 seconds,
+T2 154.335 seconds and mutual information 283.345 seconds, within the unchanged
+300/300/600-second limits. The FLIRT executable checksum matches the slower
+Blacksmith run. No whole-library byte identity or sampled-profile attribution is claimed.
+
+The full 5,898,240-voxel registered-mask product, unchanged input, spatial geometry
+and existing NIfTI storage bound remain asserted. The native runner option in
+[PR #3709](https://github.com/neurodesk/neurocontainers/pull/3709) changes hardware
+selection without changing scientific tests or deadlines. Final source
+`c53d3b31980866f79fd3711e4e52a866f7b0569c` removes temporary diagnostics after this
+review while preserving all 61 scientific mappings. Its fresh native verification
+and both upstream architecture checks in [PR #3580](https://github.com/neurodesk/neurocontainers/pull/3580)
+are still required before release acceptance.

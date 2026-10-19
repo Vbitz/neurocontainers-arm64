@@ -47,3 +47,20 @@ accepted history without rerunning an unchanged recipe.
 The ARM path keeps the published x86_64 image unchanged and builds the public
 source with the ARM-compatible generic C++ flags. The numerical simulation and
 all existing runtime assertions passed on native Linux ARM64.
+
+## Current implementation verification — 2026-10-19
+
+Earlier passing counts included commands that masked a coupling-ramp crash and a
+failed timestamp-output write. Those counts did not verify these two capabilities.
+Source `7553cfbf2c6da987bb73454b86e3359280ea7100` corrects the shipped example's
+obsolete `nus` spelling to the documented `nu`, without changing numerical inputs.
+Timestamp testing runs the unchanged configuration in a fresh writable directory
+with actual `-t` semantics and no overriding `-o`. Both simulations must produce
+complete finite time-series output; invalid inputs require the real nonzero diagnostic.
+
+The integrated source passes [native ARM 69/69](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39224036126)
+and [upstream ARM and x86 69/69 each](https://github.com/neurodesk/neurocontainers/actions/runs/39226115101),
+with zero failures/skips and both image-quality checks passing. All 68 active
+fulltests remain. [Followup PR #3708](https://github.com/neurodesk/neurocontainers/pull/3708)
+is merged. PAS fCaP remains an explicit unsupported-feature rejection, not a positive
+PAS capability claim. Automatic release metadata is verified separately.

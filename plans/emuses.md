@@ -57,3 +57,20 @@ The verified candidate `685f5f4d9636d34aa8237646535d2a7dfc3a525d` remains an anc
 Current released EMUSES v1.3.0 builds natively on ARM64, converts to SIF and passes deploy plus original help/import tests, but strict runtime proof fails:3/5 aggregate,2/4 functional. pip check reports missing pytest/pytest-asyncio required by released setup.py (its embedded distribution version is0.7.0, distinct from release tag1.3.0). The actual nested UMAP/HDBSCAN pipeline fits the embedding and initial clusterer, then all-fixed documented parameter configuration fails when inner_optimize_hdbscan falls back to raw {value:...} dictionaries and passes them to final HDBSCAN instead of integers: ValueError: Min samples and min cluster size must be integers! Released clustering_utils.py lines223-256 confirm the cause. Other released helper API errors were also observed statically. Latest official release remainsv1.3.0; no directly applicable released fix found. This is an upstream application runtime defect, not evidence of an ARM64 compiler limitation. Adding packaging dependencies alone cannot repair scientific pipeline execution. Preserve the failing capability check and experimental branch; no application patch, substituted implementation, parameter-mode workaround or ignored error. Revisit with an official released correction for fixed-parameter final-model construction and complete dependency metadata, then retest actual outputs/model persistence.
 
 Evidence: https://github.com/Vbitz/neurocontainers-arm64/issues/94#issuecomment-6136957192; exact native run https://github.com/Vbitz/neurocontainers-arm64/actions/runs/38336405010.
+
+## Current implementation verification — 2026-10-19
+
+The CPU route is now verified at source `e35f92ad2553447ed86133a983ac12e5175d854a`.
+Restoring PyTorch's architecture markers removes only the flattened x86 NVIDIA/Triton
+requirements on ARM. The released scientific dependency pins remain. The recipe
+also installs the two declared requirements from the released development lock,
+and distinguishes distribution metadata `0.7.0` from release `1.3.0`.
+
+The supported literal HDBSCAN parameters preserve the same fixed values and trial
+mode. Actual 72-point UMAP/HDBSCAN fitting, finite transforms, accurate clustering,
+unchanged inputs, saved models/data/plots and exact reload assertions pass. The
+adjusted Rand score is 1.0. [Native ARM verification](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39219604100)
+passes **5/5**, and [upstream ARM and x86](https://github.com/neurodesk/neurocontainers/actions/runs/39220788043)
+each pass **5/5**, with no failures/skips and both image-quality checks passing.
+[PR #3707](https://github.com/neurodesk/neurocontainers/pull/3707) is merged.
+Automatic publication is tracked separately; these tests alone do not assert publication.

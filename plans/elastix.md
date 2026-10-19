@@ -43,3 +43,13 @@ Proceed to a bounded recipe-level experiment after resolving the exact inputs ab
 ## Verified implementation — 2026-09-14
 
 Candidate `41ddfbf5010657e0185ab1d7730b42149e8fb744` on `arm64/elastix-itk547` passed native ARM64 Docker build, SIF conversion, deploy checks, and all **33/33 fulltests** with no skips in [run 34842787062](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/34842787062). The route builds official ITK v5.4.7 and pinned Elastix 5.1.0 from source. The final runtime wrappers prepend `/opt/itk/lib` and the Elastix library directory so Apptainer fulltests remain functional when the host supplies `LD_LIBRARY_PATH`. This candidate descends from accepted pin `4911988c7900801c10f7fce39f143d301c8a3852` and is ready for serial integration.
+
+## Current native verification — 2026-10-19
+
+The updated route builds unmodified Elastix **5.3.1** with official ITK **5.4.7** on
+native ARM while preserving the x86 binary path. Source
+`ff8a87685a1a201bcd76ced4fc52495d8526d312` passes [34/34 native checks](https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39219166368),
+including the existing registration/transform operations and strict native-library
+and version assertions. The fulltest shell variable avoids version substitution collisions.
+[PR #3710](https://github.com/neurodesk/neurocontainers/pull/3710) has passed upstream
+x86 testing; its ARM compilation is still running. Final upstream acceptance remains pending.

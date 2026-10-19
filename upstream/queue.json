@@ -14940,7 +14940,7 @@
         }
       ],
       "automatic_promotion": {
-        "checked_at": "2026-10-19T08:53:01.295655+00:00",
+        "checked_at": "2026-10-19T09:26:53.056848+00:00",
         "run_id": 39222129449,
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39222129449",
         "source_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
@@ -14954,7 +14954,7 @@
             "status": "in_progress",
             "conclusion": null,
             "active_steps": [
-              "Download candidate bundle without executing it"
+              "Publish exact tested Docker archive to unique staging tags"
             ]
           },
           {
@@ -19924,94 +19924,201 @@
         ]
       },
       "port_files": [],
-      "status": "native-verified-awaiting-upstream-slot",
+      "status": "merged",
       "branch": "arm64/upstream-glmsingle-20261012",
       "baseline_sha": "b35e38baed8ba39f0ddc8707e0e98d52e32acf8a",
       "candidate_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
       "started_at": "2026-10-12T13:59:00+00:00",
       "deadline": "2026-10-13T01:59:00+00:00",
-      "attempts": 8,
+      "attempts": 10,
       "run_id": 39222097735,
-      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3518",
+      "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3711",
       "upstream_ci": {
-        "runtime_run_id": 38281486240,
-        "head_sha": "320da1fc522a1d9d8e574f648d543ae4cfe80ef7",
-        "tested_merge_sha": "a344c97a94d0aaaca62c32dca9a2f528b7fd7950",
-        "recipe_tree_matches_head": true,
-        "quality": "passed",
-        "release_gate": "passed",
-        "publication": "No image-input changes; verification builds are not release candidates.",
+        "status": "passed",
+        "head_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
+        "candidate_run_id": 39229011919,
+        "expected_architectures": [
+          "aarch64",
+          "x86_64"
+        ],
+        "accounted_jobs": 2,
+        "job_urls": {
+          "aarch64": "https://github.com/neurodesk/neurocontainers/actions/runs/39229011919/job/117982289628",
+          "x86_64": "https://github.com/neurodesk/neurocontainers/actions/runs/39229011919/job/117982289641"
+        },
         "aarch64": {
-          "runtime_observation": {
-            "container": "glmsingle_arm64",
-            "version": "1.2.0",
-            "machine": "aarch64",
-            "status": "passed",
-            "observed_at": "2026-10-12T17:13:44.459732+00:00",
-            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38281486240",
-            "recipe_sha256": "e140c49a8765c38e9d72fb608fa8708f0f70ad3715b21c1a96bdbbcf3b89aa8c",
-            "image_id": "sha256:b88b1ee459e069323e3af0c5ed65734a547e579b5ec00a659d0dcb6b1b41f5f6",
-            "candidate_sha256": "d655558c055baa1020462022a6053db883d8abaf811fb6ce53c68f6e69159d34"
-          },
-          "counts": {
-            "total_tests": 78,
+          "schema_version": 3,
+          "recipe": "glmsingle",
+          "container": "glmsingle_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.2.0",
+          "build_date": "20261019",
+          "docker_archive": "glmsingle_arm64_1.2.0_20261019.docker.tar",
+          "sif": "glmsingle_arm64_1.2.0_20261019.simg",
+          "candidate_tag": "nd-candidate-glmsingle_arm64:5f6354b958fd",
+          "launcher": "jupyter-lab",
+          "pr_number": 3711,
+          "head_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
+          "tests": {
+            "total": 78,
             "passed": 78,
             "failed": 0,
-            "skipped": 0
-          },
-          "fulltest_summary": {
-            "duration": 161.19957208633423,
-            "run_timestamp": "2026-10-12T17:13:44.337343",
-            "suites_failed": 0,
+            "skipped": 0,
+            "fulltest_total": 77,
+            "fulltest_passed": 77,
+            "fulltest_failed": 0,
+            "suites_total": 1,
             "suites_passed": 1,
-            "tests_failed": 0,
-            "tests_passed": 77,
-            "total_suites": 1,
-            "total_tests": 77
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Python version check",
+              "Check installed package metadata",
+              "Container labels check",
+              "Import glmsingle package",
+              "Import GLM_single class",
+              "Import hrf module",
+              "Import design module",
+              "Import ols module",
+              "Import utils module",
+              "Import cod module",
+              "Import ssq module",
+              "Import gmm module",
+              "Import check_inputs module",
+              "Import defaults module",
+              "NumPy import and version",
+              "SciPy import and version",
+              "NiBabel import and version",
+              "Scikit-learn import and version",
+              "Matplotlib import and version"
+            ],
+            "failed_tests": []
           },
-          "artifact_name": "recipe-check-glmsingle_arm64-a344c97a94d0aaaca62c32dca9a2f528b7fd7950",
-          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38281486240/job/114919791883",
-          "runner_labels": [
-            "blacksmith-8vcpu-ubuntu-2404-arm"
-          ]
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "3.5 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libapt-pkg.so.6.0.0"
+              },
+              {
+                "count": 2,
+                "wasted_space": "2.9 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libc-2.31.so"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.3 MB",
+                "path": "/usr/lib/aarch64-linux-gnu/libm-2.31.so"
+              }
+            ],
+            "efficiency_percent": 98.6425,
+            "wasted_bytes": 34210864,
+            "wasted_bytes_display": "34 MB",
+            "user_wasted_percent": 2.5403
+          }
         },
         "x86_64": {
-          "runtime_observation": {
-            "container": "glmsingle",
-            "version": "1.2.0",
-            "machine": "x86_64",
-            "status": "passed",
-            "observed_at": "2026-10-12T17:06:20.310474+00:00",
-            "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38281486240",
-            "recipe_sha256": "e140c49a8765c38e9d72fb608fa8708f0f70ad3715b21c1a96bdbbcf3b89aa8c",
-            "image_id": "sha256:b17d830a4f280c775fa332b39a38070ebd08b7b2567e5909cd6993c58f3e0880",
-            "candidate_sha256": "80f51d7ac7a559ce27ab2ca203e0cb450b690d0dc539fa8c8eda7b97d36c9cc0"
-          },
-          "counts": {
-            "total_tests": 78,
+          "schema_version": 3,
+          "recipe": "glmsingle",
+          "container": "glmsingle",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.2.0",
+          "build_date": "20261019",
+          "docker_archive": "glmsingle_1.2.0_20261019.docker.tar",
+          "sif": "glmsingle_1.2.0_20261019.simg",
+          "candidate_tag": "nd-candidate-glmsingle:5f6354b958fd",
+          "launcher": "jupyter-lab",
+          "pr_number": 3711,
+          "head_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
+          "tests": {
+            "total": 78,
             "passed": 78,
             "failed": 0,
-            "skipped": 0
-          },
-          "fulltest_summary": {
-            "duration": 78.04570651054382,
-            "run_timestamp": "2026-10-12T17:06:20.259072",
-            "suites_failed": 0,
+            "skipped": 0,
+            "fulltest_total": 77,
+            "fulltest_passed": 77,
+            "fulltest_failed": 0,
+            "suites_total": 1,
             "suites_passed": 1,
-            "tests_failed": 0,
-            "tests_passed": 77,
-            "total_suites": 1,
-            "total_tests": 77
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Python version check",
+              "Check installed package metadata",
+              "Container labels check",
+              "Import glmsingle package",
+              "Import GLM_single class",
+              "Import hrf module",
+              "Import design module",
+              "Import ols module",
+              "Import utils module",
+              "Import cod module",
+              "Import ssq module",
+              "Import gmm module",
+              "Import check_inputs module",
+              "Import defaults module",
+              "NumPy import and version",
+              "SciPy import and version",
+              "NiBabel import and version",
+              "Scikit-learn import and version",
+              "Matplotlib import and version"
+            ],
+            "failed_tests": []
           },
-          "artifact_name": "recipe-check-glmsingle-a344c97a94d0aaaca62c32dca9a2f528b7fd7950",
-          "job_url": "https://github.com/neurodesk/neurocontainers/actions/runs/38281486240/job/114919791770",
-          "runner_labels": [
-            "blacksmith-8vcpu-ubuntu-2404"
-          ]
-        }
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "4.1 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libc-2.31.so"
+              },
+              {
+                "count": 2,
+                "wasted_space": "3.9 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libapt-pkg.so.6.0.0"
+              },
+              {
+                "count": 2,
+                "wasted_space": "2.7 MB",
+                "path": "/usr/lib/x86_64-linux-gnu/libm-2.31.so"
+              },
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "2.2 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              }
+            ],
+            "efficiency_percent": 98.4032,
+            "wasted_bytes": 40871647,
+            "wasted_bytes_display": "41 MB",
+            "user_wasted_percent": 3.0568
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": "1209f28fd0d8056bc41607be0311a73b285e06fb",
-      "next_action": "Open focused GLMsingle source/colormap followup PR when2slots free. Native all78passed; finalbody /tmp/glmsingle-followup-pr.md ready; no successful native rebuild.",
+      "merged_sha": "b29baf127a8459263322001778323f9c6d879f82",
+      "next_action": "Verify the automatic promotion, committed release metadata and public object availability against these tested candidate manifests. No manual promotion or successful-source rebuild.",
       "upstream_review": {
         "exists": true,
         "version": "1.2.0",
@@ -20025,8 +20132,8 @@
       },
       "pr_plan": "Review individually for useful runtime fixes or functional test gaps; add a justified improvement, native-test the exact candidate, and open its own PR. Upstream source-only PRs need explicit current-candidate container test evidence.",
       "upstream_verification_mode": "runtime-only",
-      "arm64_attempts": 6,
-      "x86_64_attempts": 2,
+      "arm64_attempts": 7,
+      "x86_64_attempts": 3,
       "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39222097735",
       "native_command_exit_review": {
         "source_sha": "320da1fc522a1d9d8e574f648d543ae4cfe80ef7",
@@ -20061,7 +20168,7 @@
           "skipped": 0
         }
       },
-      "pr_number": 3518,
+      "pr_number": 3711,
       "external_progress": {
         "prior_observations": [
           {}
@@ -20193,7 +20300,7 @@
         }
       ],
       "resume_existing_upstream_pr_after_native": true,
-      "merged_at": "2026-10-12T17:16:55Z",
+      "merged_at": "2026-10-19T09:31:47Z",
       "release_metadata_audit": {
         "status": "not-applicable-test-only",
         "checked_at": "2026-10-12T17:28:18.999008+00:00",
@@ -20309,7 +20416,21 @@
           "failed": 0,
           "skipped": 0,
           "scope": "All77 fulltests pass, including real finite Turbo RGB checks256/64/2, exact PEP610 Git9b7f685/distribution1.2 identity and analytical known-amplitude GLM fitting plus savedmodel assertions. All existing model parameters/tolerances retained across the upstream33-commit source upgrade. Python3.8-compatible pip25.0.1 supplies required installation provenance; no scientific implementation patch.",
-          "upstream_pending": true
+          "upstream_pending": false
+        },
+        "followup_upstream_verification": {
+          "source_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
+          "run_id": 39229011919,
+          "each_architecture_total": 78,
+          "each_architecture_passed": 78,
+          "failed": 0,
+          "skipped": 0,
+          "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3711",
+          "merge_sha": "b29baf127a8459263322001778323f9c6d879f82",
+          "native_arm_runner_labels": [
+            "ubuntu-24.04-arm"
+          ],
+          "scope": "Actual Turbo RGB and all existing scientific fitting contracts pass; source provenance verified. Historical masked failure remains attributed to its old source."
         }
       },
       "pending_budget_question": {
@@ -20375,7 +20496,8 @@
         "pr_number": 3518,
         "merged_sha": "1209f28fd0d8056bc41607be0311a73b285e06fb",
         "scope": "Original merged port retained separately from necessary runtime-correction followup."
-      }
+      },
+      "merged_recipe_tree_matches_tested_source": true
     },
     {
       "recipe": "globus",
@@ -31239,7 +31361,7 @@
       "port_files": [
         "recipes/nftsim/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/nftsim-integrated-20261019",
       "baseline_sha": "04e422e90c9a06a5ce6d70ee4c60ff1625e75305",
       "candidate_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
@@ -31250,7 +31372,7 @@
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3708",
       "upstream_ci": {
         "head_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
-        "status": "in-progress",
+        "status": "passed",
         "expected_architectures": [
           "aarch64",
           "x86_64"
@@ -31262,10 +31384,180 @@
         "job_urls": {
           "aarch64": "https://github.com/neurodesk/neurocontainers/actions/runs/39226115101/job/117972821268",
           "x86_64": "https://github.com/neurodesk/neurocontainers/actions/runs/39226115101/job/117972821238"
-        }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "nftsim",
+          "container": "nftsim_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "1.0.2",
+          "build_date": "20261019",
+          "docker_archive": "nftsim_arm64_1.0.2_20261019.docker.tar",
+          "sif": "nftsim_arm64_1.0.2_20261019.simg",
+          "candidate_tag": "nd-candidate-nftsim_arm64:7553cfbf2c6d",
+          "launcher": null,
+          "pr_number": 3708,
+          "head_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+          "tests": {
+            "total": 69,
+            "passed": 69,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 68,
+            "fulltest_passed": 68,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Help output",
+              "Help flag short form",
+              "Help flag alternative",
+              "Check config file exists",
+              "EIRS corticothalamic simulation",
+              "Verify EIRS output contains time series",
+              "EIRS burst simulation",
+              "EIRS AERP simulation",
+              "EIRS TMS simulation",
+              "EIRS coupling ramp",
+              "EIRS dendrite integral",
+              "EMIRS simulation",
+              "E cortical simulation",
+              "EI cortical simulation",
+              "E coupling matrix",
+              "E ERPs simulation",
+              "E ERPs all nodes",
+              "Stimuli only simulation",
+              "White noise stimulus test"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 4,
+                "wasted_space": "2.7 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "825 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "479 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "382 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 98.6536,
+            "wasted_bytes": 6120955,
+            "wasted_bytes_display": "6.1 MB",
+            "user_wasted_percent": 2.2348
+          }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "nftsim",
+          "container": "nftsim",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "1.0.2",
+          "build_date": "20261019",
+          "docker_archive": "nftsim_1.0.2_20261019.docker.tar",
+          "sif": "nftsim_1.0.2_20261019.simg",
+          "candidate_tag": "nd-candidate-nftsim:7553cfbf2c6d",
+          "launcher": null,
+          "pr_number": 3708,
+          "head_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+          "tests": {
+            "total": 69,
+            "passed": 69,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 68,
+            "fulltest_passed": 68,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "Help output",
+              "Help flag short form",
+              "Help flag alternative",
+              "Check config file exists",
+              "EIRS corticothalamic simulation",
+              "Verify EIRS output contains time series",
+              "EIRS burst simulation",
+              "EIRS AERP simulation",
+              "EIRS TMS simulation",
+              "EIRS coupling ramp",
+              "EIRS dendrite integral",
+              "EMIRS simulation",
+              "E cortical simulation",
+              "EI cortical simulation",
+              "E coupling matrix",
+              "E ERPs simulation",
+              "E ERPs all nodes",
+              "Stimuli only simulation",
+              "White noise stimulus test"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 4,
+                "wasted_space": "2.5 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 3,
+                "wasted_space": "1.9 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "918 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "724 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "628 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 99.4131,
+            "wasted_bytes": 7368580,
+            "wasted_bytes_display": "7.4 MB",
+            "user_wasted_percent": 0.8293
+          }
+        },
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": "517b0cabd8453256ef39daafdea63ee3cf670f94",
-      "next_action": "Exact integrated7553native69/69; samePR3708 branch fast-forwarded, both upstreamjobs started. Two existing reservations now actual; no additional count increase or duplicatePR.",
+      "merged_sha": "aa4456e1e08e53203a95f9450f2963c85ca7851e",
+      "next_action": "Verify the automatic promotion, committed release metadata and public object availability against these tested candidate manifests. No manual promotion or successful-source rebuild.",
       "upstream_review": {
         "exists": true,
         "version": "1.0.2",
@@ -31415,17 +31707,6 @@
         }
       },
       "pr_number": 3708,
-      "blocker": {
-        "category": "runtime-test-masks-failures",
-        "detail": "Missing upstream ARM result recovered at exact PR head with matching input footprint. Both architectures report69/69 but Coupling ramp test hides SIGABRT/std::length_error/vector::reserve and Timestamped output hides failure to write /app/configs. Same two failures occur in current root report. Complete runtime success remains unproven.",
-        "revisit_when": "Explicit renewed12-hour/max11 allowance for documented same-input configuration/test corrections and fresh native plus upstream architecture verification; no private source port or weaker assertions.",
-        "application_native_arm_verified": true,
-        "upstream_x86_verified": true,
-        "upstream_arm_verified": true,
-        "publication_verified": false,
-        "upstream_arm_verification_scope": "Native execution/reported test contracts recovered; masked positive capabilities are not verified.",
-        "all_capabilities_verified": false
-      },
       "external_progress": {
         "revised_source": "febbdebb43a7932504a2ab15fbd49601f84f75d6",
         "run_id": 38270040430,
@@ -32021,6 +32302,51 @@
         "protected_instruction_blobs_unchanged_from_main": true,
         "protected_instruction_files_untouched": true,
         "reason": "Resolve current upstream recipe conflict while retaining the existing single checkout and user instruction overlays."
+      },
+      "merged_at": "2026-10-19T09:19:46Z",
+      "merged_recipe_tree_matches_tested_source": true,
+      "resolved_blockers": [
+        {
+          "resolved_source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+          "native_and_both_upstream_test_contracts_passed": true,
+          "historical_blocker": {
+            "category": "runtime-test-masks-failures",
+            "detail": "Missing upstream ARM result recovered at exact PR head with matching input footprint. Both architectures report69/69 but Coupling ramp test hides SIGABRT/std::length_error/vector::reserve and Timestamped output hides failure to write /app/configs. Same two failures occur in current root report. Complete runtime success remains unproven.",
+            "revisit_when": "Explicit renewed12-hour/max11 allowance for documented same-input configuration/test corrections and fresh native plus upstream architecture verification; no private source port or weaker assertions.",
+            "application_native_arm_verified": true,
+            "upstream_x86_verified": true,
+            "upstream_arm_verified": true,
+            "publication_verified": false,
+            "upstream_arm_verification_scope": "Native execution/reported test contracts recovered; masked positive capabilities are not verified.",
+            "all_capabilities_verified": false
+          }
+        }
+      ],
+      "automatic_promotion": {
+        "checked_at": "2026-10-19T09:26:51.905248+00:00",
+        "run_id": 39229235022,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39229235022",
+        "source_sha": "7553cfbf2c6da987bb73454b86e3359280ea7100",
+        "merge_sha": "aa4456e1e08e53203a95f9450f2963c85ca7851e",
+        "status": "in_progress",
+        "conclusion": null,
+        "publication_verified": false,
+        "publish_jobs": [
+          {
+            "name": "publish (candidate-nftsim-7553cfbf2c6da987bb73454b86e3359280ea7100)",
+            "status": "in_progress",
+            "conclusion": null,
+            "active_steps": [
+              "Publish exact tested Docker archive to unique staging tags"
+            ]
+          },
+          {
+            "name": "publish (candidate-nftsim_arm64-7553cfbf2c6da987bb73454b86e3359280ea7100)",
+            "status": "completed",
+            "conclusion": "success",
+            "active_steps": []
+          }
+        ]
       }
     },
     {
@@ -49111,14 +49437,13 @@
       "pydeface": 39226549671
     },
     "active_upstream_runs": {
-      "elastix": 39224531819,
-      "nftsim": 39226115101
+      "elastix": 39224531819
     },
-    "awaiting_upstream_slots": [
-      "glmsingle"
-    ],
+    "awaiting_upstream_slots": [],
     "completed_merged_recipes": [
-      "emuses"
+      "emuses",
+      "nftsim",
+      "glmsingle"
     ],
     "attempt_limits_waived_only_for": [
       "elastix",
@@ -49303,15 +49628,14 @@
     },
     "next_action": "Review NFTsim both current-source upstream jobs and merge when allchecks/Dive pass; open readyGLMsingle when2slotsfree. Wait actualElastixcompile and PyDefacefinalnative without duplicate attempts.",
     "completed_merged_recipes": [
-      "emuses"
+      "emuses",
+      "nftsim",
+      "glmsingle"
     ],
     "active_upstream_runs": {
-      "elastix": 39224531819,
-      "nftsim": 39226115101
+      "elastix": 39224531819
     },
-    "awaiting_upstream_slots": [
-      "glmsingle"
-    ]
+    "awaiting_upstream_slots": []
   },
   "session_checkpoint_history": [
     {
