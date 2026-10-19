@@ -82,5 +82,5 @@ including all 61 fulltests and deployment, with zero failures/skips. Mutualinfo,
 normmi and T2 take 268/161/140 seconds within the unchanged 600/300/300-second
 limits. The existing [PR #3580](https://github.com/neurodesk/neurocontainers/pull/3580)
 now tests this exact final head on both architectures in
-[run 39231970600](https://github.com/neurodesk/neurocontainers/actions/runs/39231970600);
+[run 39232288136](https://github.com/neurodesk/neurocontainers/actions/runs/39232288136);
 those results and every required gate remain necessary before merge.

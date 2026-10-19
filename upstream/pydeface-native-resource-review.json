@@ -108,5 +108,5 @@
     ],
     "command_exit_contracts": "58 exit0 checks including deploy; four explicit expected exit1 negatives; all61 scientific contracts unchanged."
   },
-  "final_release_upstream_run": "https://github.com/neurodesk/neurocontainers/actions/runs/39231970600"
+  "final_release_upstream_run": "https://github.com/neurodesk/neurocontainers/actions/runs/39232288136"
 }

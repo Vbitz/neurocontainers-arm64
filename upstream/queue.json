@@ -14691,7 +14691,7 @@
       "merged_at": "2026-10-19T09:40:40Z",
       "merged_recipe_tree_matches_tested_source": true,
       "automatic_promotion": {
-        "checked_at": "2026-10-19T09:41:41.481930+00:00",
+        "checked_at": "2026-10-19T09:44:23.959134+00:00",
         "run_id": 39231862022,
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39231862022",
         "source_sha": "ff8a87685a1a201bcd76ced4fc52495d8526d312",
@@ -14705,7 +14705,7 @@
             "status": "in_progress",
             "conclusion": null,
             "active_steps": [
-              "Install promotion dependencies"
+              "Attach tested SIF to staged OCI images"
             ]
           },
           {
@@ -15138,7 +15138,7 @@
         }
       ],
       "automatic_promotion": {
-        "checked_at": "2026-10-19T09:41:39.182581+00:00",
+        "checked_at": "2026-10-19T09:44:20.401071+00:00",
         "run_id": 39222129449,
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39222129449",
         "source_sha": "e35f92ad2553447ed86133a983ac12e5175d854a",
@@ -20697,7 +20697,7 @@
       },
       "merged_recipe_tree_matches_tested_source": true,
       "automatic_promotion": {
-        "checked_at": "2026-10-19T09:41:40.411431+00:00",
+        "checked_at": "2026-10-19T09:44:22.701191+00:00",
         "run_id": 39230753923,
         "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39230753923",
         "source_sha": "5f6354b958fdc037d036bbf0f210d7fa213437d9",
@@ -20711,16 +20711,14 @@
             "status": "in_progress",
             "conclusion": null,
             "active_steps": [
-              "Publish exact tested Docker archive to unique staging tags"
+              "Attach tested SIF to staged OCI images"
             ]
           },
           {
             "name": "publish (candidate-glmsingle_arm64-5f6354b958fdc037d036bbf0f210d7fa213437d9)",
-            "status": "in_progress",
-            "conclusion": null,
-            "active_steps": [
-              "Publish tested SIF to unique staging object keys"
-            ]
+            "status": "completed",
+            "conclusion": "success",
+            "active_steps": []
           }
         ]
       }
@@ -35970,11 +35968,24 @@
           "x86_64"
         ],
         "accounted_jobs": 2,
-        "candidate_run_id": 39231970600,
-        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39231970600",
+        "candidate_run_id": 39232288136,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39232288136",
         "requested_runner_labels": {
           "aarch64": "ubuntu-24.04-arm",
           "x86_64": "blacksmith-8vcpu-ubuntu-2404"
+        },
+        "base_sha": "de600e937e7a0e850a664e65856a454fe1da2334",
+        "job_urls": {
+          "aarch64": "https://github.com/neurodesk/neurocontainers/actions/runs/39232288136/job/117992975292",
+          "x86_64": "https://github.com/neurodesk/neurocontainers/actions/runs/39232288136/job/117992975146"
+        },
+        "actual_runner_labels": {
+          "aarch64": [
+            "ubuntu-24.04-arm"
+          ],
+          "x86_64": [
+            "blacksmith-8vcpu-ubuntu-2404"
+          ]
         }
       },
       "merged_sha": null,
@@ -37752,6 +37763,22 @@
               "evidence_directory": "/tmp/pydeface-upstream-arm-reports"
             }
           }
+        }
+      ],
+      "upstream_detection_history": [
+        {
+          "run_id": 39231970600,
+          "source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+          "outcome": "candidate-matrix-skipped",
+          "base_sha": "fe19a9e1d3fbe3dd22a9aa84f0d787aa952a6df7",
+          "reason": "Long-lived PR event retained stale base and classified previously merged recipe/workflow paths as mixed changes. No container jobs ran. Reopening same PR refreshed base to actual main de600e93 without source edits or duplicate image builds."
+        },
+        {
+          "run_id": 39232170448,
+          "source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+          "outcome": "candidate-matrix-skipped",
+          "base_sha": "fe19a9e1d3fbe3dd22a9aa84f0d787aa952a6df7",
+          "reason": "First reopened event retained stale payload despite refreshed PR API. Second reopen after API refresh produced actual two-architecture candidate matrix; no images built by skipped events."
         }
       ]
     },
@@ -49761,23 +49788,22 @@
   },
   "last_session_checkpoint": {
     "scope": "authorized-five-recipe-continuation",
-    "checked_at": "2026-10-19T09:01:24.466041+00:00",
-    "root_commit": "1e04e8e529467a5c45a0d8f3b319745df6874f0f",
+    "checked_at": "2026-10-19T09:44:47.983113+00:00",
+    "root_commit": "c115008cc77af4e27c62e33d8171e09d21b327b6",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "local_checkout_branch": "arm64/pydeface-release-stage-20261019",
     "local_checkout_sha": "d1f8582447541be77dbc48a243228698a5cda632",
     "local_branch_purpose": "Single checkout stages validated PyDeface source while existing user instruction overlays remain untouched. Immutable tested/published candidate branches recorded separately.",
-    "active_root_runs": {
-      "pydeface": 39226549671
-    },
+    "active_root_runs": {},
     "active_upstream_runs": {
-      "elastix": 39224531819
+      "pydeface": 39232288136
     },
     "awaiting_upstream_slots": [],
     "completed_merged_recipes": [
       "emuses",
       "nftsim",
-      "glmsingle"
+      "glmsingle",
+      "elastix"
     ],
     "attempt_limits_waived_only_for": [
       "elastix",
@@ -49789,8 +49815,9 @@
     "prior_counts_preserved": true,
     "no_subagents": true,
     "AGENTS_files_untouched": true,
-    "next_action": "Review NFTsim both current-source upstream jobs and merge when allchecks/Dive pass; open readyGLMsingle when2slotsfree. Wait actualElastixcompile and PyDefacefinalnative without duplicate attempts.",
-    "overall_inventory_goal_complete": false
+    "next_action": "Review exactC53 PyDeface upstream ARM/x86 reports and every gate, merge existingPR3580 if allpositive; finish automatic publication audits for the five. No passed-source rebuilds.",
+    "overall_inventory_goal_complete": false,
+    "upstream_fork_main_sha": "de600e937e7a0e850a664e65856a454fe1da2334"
   },
   "completed_publication_queue_reconciliation": {
     "checked_at": "2026-10-17T11:12:16.974798+00:00",
@@ -49957,17 +49984,16 @@
       "pydeface"
     ],
     "attempt_limit_waived": true,
-    "active_root_runs": {
-      "pydeface": 39226549671
-    },
-    "next_action": "Review NFTsim both current-source upstream jobs and merge when allchecks/Dive pass; open readyGLMsingle when2slotsfree. Wait actualElastixcompile and PyDefacefinalnative without duplicate attempts.",
+    "active_root_runs": {},
+    "next_action": "Review exactC53 PyDeface upstream ARM/x86 reports and every gate, merge existingPR3580 if allpositive; finish automatic publication audits for the five. No passed-source rebuilds.",
     "completed_merged_recipes": [
       "emuses",
       "nftsim",
-      "glmsingle"
+      "glmsingle",
+      "elastix"
     ],
     "active_upstream_runs": {
-      "elastix": 39224531819
+      "pydeface": 39232288136
     },
     "awaiting_upstream_slots": []
   },
