@@ -90,3 +90,17 @@ The upstream bot subsequently merged current main into the PR, producing
 PyDeface and all shared build/test inputs remain byte-identical. Replacement
 [upstream run 39233637142](https://github.com/neurodesk/neurocontainers/actions/runs/39233637142)
 verifies the integrated head; C53 native evidence remains bound to its original SHA.
+
+## Upstream acceptance — 2026-10-19
+
+[PR #3580](https://github.com/neurodesk/neurocontainers/pull/3580) is merged at
+`e957afc7fb6c6030a65b7e092752c1db72d4ff81`. Exact integrated candidate
+`38776086a2fc4382d193ad1d3e6de69fd00fc981` passes
+[62/62 on both native ARM64 and x86](https://github.com/neurodesk/neurocontainers/actions/runs/39233637142),
+including all 61 scientific tests, with no failures/skips and both Dive/quality/release
+gates passing. The integrated ARM proof is its actual upstream `ubuntu-24.04-arm` job;
+the earlier root workflow proof stays separately bound to C53. PyDeface and shared
+build/test inputs are identical across the bot main merge, so no further duplicate
+ARM rebuild is needed. This resolves the old diagnostic hold without changing any
+scientific input, assertion, timeout or tolerance. Automatic publication remains a
+separate metadata/source/object audit.

@@ -116,5 +116,125 @@
     "author": "github-actions[bot]",
     "recipe_and_shared_build_test_input_bytes_identical": true,
     "prior_root_native_result_stays_bound_to_original_source": true
+  },
+  "integrated_head_native_evidence": {
+    "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+    "version": "2.1.0",
+    "run_id": 39233637142,
+    "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39233637142/job/117997815672",
+    "pipeline": "upstream PR container candidate; exact integrated head on native GitHub ARM",
+    "runner_labels": [
+      "ubuntu-24.04-arm"
+    ],
+    "counts": {
+      "total_tests": 62,
+      "passed": 62,
+      "failed": 0,
+      "skipped": 0
+    },
+    "fulltest_summary": {
+      "total_tests": 61,
+      "tests_passed": 61,
+      "tests_failed": 0,
+      "total_suites": 1,
+      "suites_passed": 1,
+      "suites_failed": 0
+    },
+    "dive": "passed",
+    "root_workflow_evidence_source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+    "root_workflow_evidence_run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39226549671",
+    "scope": "Exact integrated source built Docker/SIF and passed deploy/fulltest natively in upstream candidate workflow. Earlier root workflow62/62 remains separately bound to C53. Bot merge changes only independent recipes/release metadata; no additional identical-context ARM rebuild."
+  },
+  "nonduplication_review": {
+    "checked_at": "2026-10-19T10:45:52.504251+00:00",
+    "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+    "exact_head_native_and_x86_reports_verified": true,
+    "only_bot_merge_changed_paths": [
+      "recipes/elastix/build.yaml",
+      "recipes/elastix/fulltest.yaml",
+      "recipes/glmsingle/build.yaml",
+      "recipes/glmsingle/fulltest.yaml",
+      "recipes/nftsim/build.yaml",
+      "recipes/nftsim/fulltest.yaml",
+      "releases/nftsim/1.0.2.json",
+      "releases/nftsim_arm64/1.0.2.json"
+    ],
+    "original_root_result_not_reassigned": true,
+    "decision": "Reuse actual integrated native upstream verification and separately retain original root workflow proof; no repeated ARM rebuild needed."
+  },
+  "upstream_acceptance": {
+    "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+    "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3580",
+    "merge_sha": "e957afc7fb6c6030a65b7e092752c1db72d4ff81",
+    "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39233637142",
+    "ARM_counts": {
+      "total": 62,
+      "passed": 62,
+      "failed": 0,
+      "skipped": 0,
+      "fulltest_total": 61,
+      "fulltest_passed": 61,
+      "fulltest_failed": 0,
+      "suites_total": 1,
+      "suites_passed": 1,
+      "passed_tests": [
+        "Simple Deploy Bins/Path Test",
+        "pydeface version check",
+        "pydeface help",
+        "Basic defacing with default output",
+        "Defacing with custom output path",
+        "Defacing with force overwrite",
+        "Defacing with mutualinfo cost",
+        "Defacing with corratio cost",
+        "Defacing with normcorr cost",
+        "Defacing with normmi cost",
+        "Defacing with leastsq cost",
+        "Defacing with applyto single image",
+        "Defacing with nocleanup",
+        "Defacing with verbose output",
+        "Deface T2 image",
+        "FSL flirt version check",
+        "FSL flirt basic registration",
+        "FSL flirt with mutualinfo cost",
+        "FSL flirt apply transform",
+        "FSL convert_xfm invert"
+      ],
+      "failed_tests": []
+    },
+    "x86_counts": {
+      "total": 62,
+      "passed": 62,
+      "failed": 0,
+      "skipped": 0,
+      "fulltest_total": 61,
+      "fulltest_passed": 61,
+      "fulltest_failed": 0,
+      "suites_total": 1,
+      "suites_passed": 1,
+      "passed_tests": [
+        "Simple Deploy Bins/Path Test",
+        "pydeface version check",
+        "pydeface help",
+        "Basic defacing with default output",
+        "Defacing with custom output path",
+        "Defacing with force overwrite",
+        "Defacing with mutualinfo cost",
+        "Defacing with corratio cost",
+        "Defacing with normcorr cost",
+        "Defacing with normmi cost",
+        "Defacing with leastsq cost",
+        "Defacing with applyto single image",
+        "Defacing with nocleanup",
+        "Defacing with verbose output",
+        "Deface T2 image",
+        "FSL flirt version check",
+        "FSL flirt basic registration",
+        "FSL flirt with mutualinfo cost",
+        "FSL flirt apply transform",
+        "FSL convert_xfm invert"
+      ],
+      "failed_tests": []
+    },
+    "old_diagnostic_hold_resolved": true
   }
 }

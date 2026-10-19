@@ -36124,7 +36124,7 @@
       "port_files": [
         "recipes/pydeface/build.yaml"
       ],
-      "status": "upstream-running",
+      "status": "merged",
       "branch": "arm64/upstream-pydeface-20261012",
       "baseline_sha": "b68a3ddde7d036ea095c91123d27903f0629a829",
       "candidate_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
@@ -36134,7 +36134,7 @@
       "run_id": 39226549671,
       "pr_url": "https://github.com/neurodesk/neurocontainers/pull/3580",
       "upstream_ci": {
-        "status": "in-progress",
+        "status": "passed",
         "head_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
         "candidate_run_id": 39233637142,
         "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39233637142",
@@ -36154,10 +36154,181 @@
         "job_urls": {
           "aarch64": "https://github.com/neurodesk/neurocontainers/actions/runs/39233637142/job/117997815672",
           "x86_64": "https://github.com/neurodesk/neurocontainers/actions/runs/39233637142/job/117997815832"
-        }
+        },
+        "x86_64": {
+          "schema_version": 3,
+          "recipe": "pydeface",
+          "container": "pydeface",
+          "variant": "",
+          "architecture": "x86_64",
+          "version": "2.1.0",
+          "build_date": "20261019",
+          "docker_archive": "pydeface_2.1.0_20261019.docker.tar",
+          "sif": "pydeface_2.1.0_20261019.simg",
+          "candidate_tag": "nd-candidate-pydeface:38776086a2fc",
+          "launcher": "pydeface",
+          "pr_number": 3580,
+          "head_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+          "tests": {
+            "total": 62,
+            "passed": 62,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 61,
+            "fulltest_passed": 61,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "pydeface version check",
+              "pydeface help",
+              "Basic defacing with default output",
+              "Defacing with custom output path",
+              "Defacing with force overwrite",
+              "Defacing with mutualinfo cost",
+              "Defacing with corratio cost",
+              "Defacing with normcorr cost",
+              "Defacing with normmi cost",
+              "Defacing with leastsq cost",
+              "Defacing with applyto single image",
+              "Defacing with nocleanup",
+              "Defacing with verbose output",
+              "Deface T2 image",
+              "FSL flirt version check",
+              "FSL flirt basic registration",
+              "FSL flirt with mutualinfo cost",
+              "FSL flirt apply transform",
+              "FSL convert_xfm invert"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 2,
+                "wasted_space": "8.4 MB",
+                "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial-updates_main_binary-amd64_Packages"
+              },
+              {
+                "count": 2,
+                "wasted_space": "7.7 MB",
+                "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial-updates_main_i18n_Translation-en"
+              },
+              {
+                "count": 2,
+                "wasted_space": "7.3 MB",
+                "path": "/usr/share/i18n/locales/C"
+              },
+              {
+                "count": 2,
+                "wasted_space": "7.2 MB",
+                "path": "/var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_xenial_main_binary-amd64_Packages"
+              },
+              {
+                "count": 2,
+                "wasted_space": "6.6 MB",
+                "path": "/var/lib/apt/lists/security.ubuntu.com_ubuntu_dists_xenial-security_main_i18n_Translation-en"
+              }
+            ],
+            "efficiency_percent": 99.581,
+            "wasted_bytes": 93402306,
+            "wasted_bytes_display": "93 MB",
+            "user_wasted_percent": 0.5624
+          }
+        },
+        "aarch64": {
+          "schema_version": 3,
+          "recipe": "pydeface",
+          "container": "pydeface_arm64",
+          "variant": "arm64",
+          "architecture": "aarch64",
+          "version": "2.1.0",
+          "build_date": "20261019",
+          "docker_archive": "pydeface_arm64_2.1.0_20261019.docker.tar",
+          "sif": "pydeface_arm64_2.1.0_20261019.simg",
+          "candidate_tag": "nd-candidate-pydeface_arm64:38776086a2fc",
+          "launcher": "pydeface",
+          "pr_number": 3580,
+          "head_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+          "tests": {
+            "total": 62,
+            "passed": 62,
+            "failed": 0,
+            "skipped": 0,
+            "fulltest_total": 61,
+            "fulltest_passed": 61,
+            "fulltest_failed": 0,
+            "suites_total": 1,
+            "suites_passed": 1,
+            "passed_tests": [
+              "Simple Deploy Bins/Path Test",
+              "pydeface version check",
+              "pydeface help",
+              "Basic defacing with default output",
+              "Defacing with custom output path",
+              "Defacing with force overwrite",
+              "Defacing with mutualinfo cost",
+              "Defacing with corratio cost",
+              "Defacing with normcorr cost",
+              "Defacing with normmi cost",
+              "Defacing with leastsq cost",
+              "Defacing with applyto single image",
+              "Defacing with nocleanup",
+              "Defacing with verbose output",
+              "Deface T2 image",
+              "FSL flirt version check",
+              "FSL flirt basic registration",
+              "FSL flirt with mutualinfo cost",
+              "FSL flirt apply transform",
+              "FSL convert_xfm invert"
+            ],
+            "failed_tests": []
+          },
+          "dive": {
+            "status": "success",
+            "failed_checks": [],
+            "inefficient_files": [
+              {
+                "count": 3,
+                "wasted_space": "1.9 MB",
+                "path": "/var/cache/debconf/templates.dat"
+              },
+              {
+                "count": 2,
+                "wasted_space": "1.4 MB",
+                "path": "/var/cache/debconf/templates.dat-old"
+              },
+              {
+                "count": 4,
+                "wasted_space": "830 kB",
+                "path": "/var/log/dpkg.log"
+              },
+              {
+                "count": 4,
+                "wasted_space": "509 kB",
+                "path": "/var/lib/dpkg/status"
+              },
+              {
+                "count": 3,
+                "wasted_space": "422 kB",
+                "path": "/var/lib/dpkg/status-old"
+              }
+            ],
+            "efficiency_percent": 99.9685,
+            "wasted_bytes": 5281261,
+            "wasted_bytes_display": "5.3 MB",
+            "user_wasted_percent": 0.0437
+          }
+        },
+        "scientific_and_dive_reports_verified": true,
+        "quality": "passed",
+        "release_gate": "passed"
       },
-      "merged_sha": null,
-      "next_action": "Let exact387 upstream native ARM/x86 jobs finish; then run build-arm64.yml on387 for integrated exact-source root proof, preserving passed upstream results. No concurrent duplicate ARM attempt.",
+      "merged_sha": "e957afc7fb6c6030a65b7e092752c1db72d4ff81",
+      "next_action": "Verify the automatic promotion, committed release metadata and public object availability against these tested candidate manifests. No manual promotion or successful-source rebuild.",
       "upstream_review": {
         "exists": true,
         "version": "2.1.0",
@@ -36244,10 +36415,14 @@
         ]
       },
       "native_evidence": {
-        "source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+        "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
         "version": "2.1.0",
-        "run_id": 39226549671,
-        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39226549671",
+        "run_id": 39233637142,
+        "run_url": "https://github.com/neurodesk/neurocontainers/actions/runs/39233637142/job/117997815672",
+        "pipeline": "upstream PR container candidate; exact integrated head on native GitHub ARM",
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ],
         "counts": {
           "total_tests": 62,
           "passed": 62,
@@ -36255,19 +36430,17 @@
           "skipped": 0
         },
         "fulltest_summary": {
-          "duration": 1236.8391995429993,
-          "run_timestamp": "2026-10-19T09:39:50.621534",
-          "suites_failed": 0,
-          "suites_passed": 1,
-          "tests_failed": 0,
+          "total_tests": 61,
           "tests_passed": 61,
+          "tests_failed": 0,
           "total_suites": 1,
-          "total_tests": 61
+          "suites_passed": 1,
+          "suites_failed": 0
         },
-        "runner_labels": [
-          "ubuntu-24.04-arm"
-        ],
-        "command_exit_contracts": "58 exit0 checks including deploy; four explicit expected exit1 negatives; all61 scientific contracts unchanged."
+        "dive": "passed",
+        "root_workflow_evidence_source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+        "root_workflow_evidence_run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39226549671",
+        "scope": "Exact integrated source built Docker/SIF and passed deploy/fulltest natively in upstream candidate workflow. Earlier root workflow62/62 remains separately bound to C53. Bot merge changes only independent recipes/release metadata; no additional identical-context ARM rebuild."
       },
       "pending_upstream_issue": 3580,
       "pr_number": 3580,
@@ -36327,12 +36500,6 @@
           "diff_deletions": 8
         },
         "observation_issue_comment_url": "https://github.com/Vbitz/neurocontainers-arm64/issues/161#issuecomment-6235046499"
-      },
-      "external_merge_hold": {
-        "checked_at": "2026-10-17T14:24:19.855650+00:00",
-        "source_sha": "326dc9ce8ff8842399c5d8f4a0b021e9f302c627",
-        "reason": "Current independently revised fulltest explicitly adds Native ARM diagnosis requires review: unconditional exit1 with expected_exit_code0. Both candidate suites must fail this diagnostic review gate; scientific registration is explicitly not repaired/approved.",
-        "next_action": "Retain actual diagnostic results and prior native62/62 separately. Do not remove/bypass the gate, claim current-source success, merge, or dispatch a duplicate. Await independently reviewed repair and all exact-source scientific/gate results."
       },
       "attempt_accounting_history": [
         {
@@ -37691,6 +37858,32 @@
           "runner_labels": [
             "ubuntu-24.04-arm"
           ]
+        },
+        {
+          "source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+          "version": "2.1.0",
+          "run_id": 39226549671,
+          "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39226549671",
+          "counts": {
+            "total_tests": 62,
+            "passed": 62,
+            "failed": 0,
+            "skipped": 0
+          },
+          "fulltest_summary": {
+            "duration": 1236.8391995429993,
+            "run_timestamp": "2026-10-19T09:39:50.621534",
+            "suites_failed": 0,
+            "suites_passed": 1,
+            "tests_failed": 0,
+            "tests_passed": 61,
+            "total_suites": 1,
+            "total_tests": 61
+          },
+          "runner_labels": [
+            "ubuntu-24.04-arm"
+          ],
+          "command_exit_contracts": "58 exit0 checks including deploy; four explicit expected exit1 negatives; all61 scientific contracts unchanged."
         }
       ],
       "upstream_ci_history": [
@@ -37987,7 +38180,70 @@
         "author": "github-actions[bot]",
         "recipe_and_shared_build_test_input_bytes_identical": true,
         "prior_root_native_result_stays_bound_to_original_source": true
-      }
+      },
+      "root_workflow_evidence": {
+        "source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+        "version": "2.1.0",
+        "run_id": 39226549671,
+        "run_url": "https://github.com/Vbitz/neurocontainers-arm64/actions/runs/39226549671",
+        "counts": {
+          "total_tests": 62,
+          "passed": 62,
+          "failed": 0,
+          "skipped": 0
+        },
+        "fulltest_summary": {
+          "duration": 1236.8391995429993,
+          "run_timestamp": "2026-10-19T09:39:50.621534",
+          "suites_failed": 0,
+          "suites_passed": 1,
+          "tests_failed": 0,
+          "tests_passed": 61,
+          "total_suites": 1,
+          "total_tests": 61
+        },
+        "runner_labels": [
+          "ubuntu-24.04-arm"
+        ],
+        "command_exit_contracts": "58 exit0 checks including deploy; four explicit expected exit1 negatives; all61 scientific contracts unchanged."
+      },
+      "merged_at": "2026-10-19T10:48:38Z",
+      "merged_recipe_tree_matches_tested_source": true,
+      "external_merge_hold_resolution": {
+        "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+        "resolved_by": "All61 unchanged scientific test contracts pass on the demonstrated native resource class; temporary diagnostics removed, exact release head passes native and both upstream architectures. No profiling attribution is claimed."
+      },
+      "automatic_promotion": {
+        "checked_at": "2026-10-19T10:49:08.107582+00:00",
+        "run_id": 39240107295,
+        "url": "https://github.com/neurodesk/neurocontainers/actions/runs/39240107295",
+        "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+        "merge_sha": "e957afc7fb6c6030a65b7e092752c1db72d4ff81",
+        "status": "queued",
+        "conclusion": null,
+        "publication_verified": false,
+        "publish_jobs": []
+      },
+      "resolved_external_merge_holds": [
+        {
+          "historical_hold": {
+            "checked_at": "2026-10-17T14:24:19.855650+00:00",
+            "source_sha": "326dc9ce8ff8842399c5d8f4a0b021e9f302c627",
+            "reason": "Current independently revised fulltest explicitly adds Native ARM diagnosis requires review: unconditional exit1 with expected_exit_code0. Both candidate suites must fail this diagnostic review gate; scientific registration is explicitly not repaired/approved.",
+            "next_action": "Retain actual diagnostic results and prior native62/62 separately. Do not remove/bypass the gate, claim current-source success, merge, or dispatch a duplicate. Await independently reviewed repair and all exact-source scientific/gate results."
+          },
+          "resolved_source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+          "resolution": {
+            "source_sha": "38776086a2fc4382d193ad1d3e6de69fd00fc981",
+            "resolved_by": "All61 unchanged scientific test contracts pass on the demonstrated native resource class; temporary diagnostics removed, exact release head passes native and both upstream architectures. No profiling attribution is claimed."
+          },
+          "actual_native_source_run": "https://github.com/neurodesk/neurocontainers/actions/runs/39233637142/job/117997815672",
+          "upstream_run": "https://github.com/neurodesk/neurocontainers/actions/runs/39233637142",
+          "merged_pr": "https://github.com/neurodesk/neurocontainers/pull/3580"
+        }
+      ],
+      "root_run_source_sha": "c53d3b31980866f79fd3711e4e52a866f7b0569c",
+      "native_exact_head_proof_pipeline": "upstream PR container candidate on ubuntu-24.04-arm"
     },
     {
       "recipe": "qmrlab",
@@ -49995,22 +50251,21 @@
   },
   "last_session_checkpoint": {
     "scope": "authorized-five-recipe-continuation",
-    "checked_at": "2026-10-19T09:44:47.983113+00:00",
-    "root_commit": "c115008cc77af4e27c62e33d8171e09d21b327b6",
+    "checked_at": "2026-10-19T10:49:27.796009+00:00",
+    "root_commit": "cd36436b53a414de433d579f557b537c5daba43f",
     "accepted_historical_gitlink": "e74050df0e4881833ae5d8d82b4e0ef287a14179",
     "local_checkout_branch": "arm64/pydeface-release-stage-20261019",
     "local_checkout_sha": "d1f8582447541be77dbc48a243228698a5cda632",
     "local_branch_purpose": "Single checkout stages validated PyDeface source while existing user instruction overlays remain untouched. Immutable tested/published candidate branches recorded separately.",
     "active_root_runs": {},
-    "active_upstream_runs": {
-      "pydeface": 39233637142
-    },
+    "active_upstream_runs": {},
     "awaiting_upstream_slots": [],
     "completed_merged_recipes": [
+      "elastix",
       "emuses",
       "nftsim",
       "glmsingle",
-      "elastix"
+      "pydeface"
     ],
     "attempt_limits_waived_only_for": [
       "elastix",
@@ -50022,9 +50277,18 @@
     "prior_counts_preserved": true,
     "no_subagents": true,
     "AGENTS_files_untouched": true,
-    "next_action": "Let exact387 upstream native ARM/x86 jobs finish; then run build-arm64.yml on387 for integrated exact-source root proof, preserving passed upstream results. No concurrent duplicate ARM attempt.",
+    "next_action": "Verify automatic PyDeface publication39240107295 against integrated387 manifests; four other exact-source publications verified. Refresh coverage and push final checkpoint. No additional successful-source builds.",
     "overall_inventory_goal_complete": false,
-    "upstream_fork_main_sha": "de600e937e7a0e850a664e65856a454fe1da2334"
+    "upstream_fork_main_sha": "de600e937e7a0e850a664e65856a454fe1da2334",
+    "verified_publication_recipes": [
+      "emuses",
+      "nftsim",
+      "glmsingle",
+      "elastix"
+    ],
+    "active_promotion_runs": {
+      "pydeface": 39240107295
+    }
   },
   "completed_publication_queue_reconciliation": {
     "checked_at": "2026-10-17T11:12:16.974798+00:00",
@@ -50192,16 +50456,15 @@
     ],
     "attempt_limit_waived": true,
     "active_root_runs": {},
-    "next_action": "Let exact387 upstream native ARM/x86 jobs finish; then run build-arm64.yml on387 for integrated exact-source root proof, preserving passed upstream results. No concurrent duplicate ARM attempt.",
+    "next_action": "Verify automatic PyDeface publication39240107295 against integrated387 manifests; four other exact-source publications verified. Refresh coverage and push final checkpoint. No additional successful-source builds.",
     "completed_merged_recipes": [
+      "elastix",
       "emuses",
       "nftsim",
       "glmsingle",
-      "elastix"
+      "pydeface"
     ],
-    "active_upstream_runs": {
-      "pydeface": 39233637142
-    },
+    "active_upstream_runs": {},
     "awaiting_upstream_slots": []
   },
   "session_checkpoint_history": [
